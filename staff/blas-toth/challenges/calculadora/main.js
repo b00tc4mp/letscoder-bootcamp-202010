@@ -1,6 +1,6 @@
-var memory = ''
-var auxiliar
-var operation
+var memory = '';
+var auxiliar;
+var operation;
 
 var button7 = document.getElementById("7");
 
@@ -10,7 +10,7 @@ function number7() {
 
         var display = document.querySelector(".display");
 
-        memory += 7
+        memory += 7;
 
         display.innerText = memory;
 
@@ -24,7 +24,7 @@ function number8() {
 
         var display = document.querySelector(".display");
 
-        memory += 8
+        memory += 8;
 
         display.innerText = memory;
 
@@ -38,7 +38,7 @@ function number9() {
 
         var display = document.querySelector(".display");
 
-        memory += 9
+        memory += 9;
 
         display.innerText = memory;
 
@@ -52,7 +52,7 @@ function number6() {
 
         var display = document.querySelector(".display");
 
-        memory += 6
+        memory += 6;
 
         display.innerText = memory;
 
@@ -66,7 +66,7 @@ function number5() {
 
         var display = document.querySelector(".display");
 
-        memory += 5
+        memory += 5;
 
         display.innerText = memory;
 
@@ -80,7 +80,7 @@ function number4() {
 
         var display = document.querySelector(".display");
 
-        memory += 4
+        memory += 4;
 
         display.innerText = memory;
 
@@ -94,7 +94,7 @@ function number3() {
 
         var display = document.querySelector(".display");
 
-        memory += 3
+        memory += 3;
 
         display.innerText = memory;
 
@@ -108,7 +108,7 @@ function number2() {
 
         var display = document.querySelector(".display");
 
-        memory += 2
+        memory += 2;
 
         display.innerText = memory;
 
@@ -122,7 +122,7 @@ function number1() {
 
         var display = document.querySelector(".display");
 
-        memory += 1
+        memory += 1;
 
         display.innerText = memory;
 
@@ -136,7 +136,7 @@ function number0() {
 
         var display = document.querySelector(".display");
 
-        memory += 0
+        memory += 0;
 
         display.innerText = memory;
 
@@ -149,7 +149,7 @@ buttonSlash.onclick = numberSlash;
 function numberSlash() {
         auxiliar = memory
 
-        memory = ''
+        memory = '';
 
         operation = '/'
 
@@ -174,9 +174,9 @@ buttonSubtract.onclick = numberSubtract;
 function numberSubtract() {
         auxiliar = memory
 
-        memory = ''
+        memory = '';
 
-        operation = '-'
+        operation = '-';
 
 }
 
@@ -185,11 +185,11 @@ var buttonMas = document.getElementById("mas");
 buttonMas.onclick = numberMas;
 
 function numberMas() {
-        auxiliar = memory
+        auxiliar = memory;
 
-        memory = ''
+        memory = '';
 
-        operation = '+'
+        operation = '+';
 }
 
 var buttonClear = document.getElementById("clear");
@@ -200,7 +200,7 @@ function numberClear() {
 
         var display = document.querySelector(".display");
 
-        memory = ""
+        memory = "";
 
         display.innerText = memory;
 
@@ -211,11 +211,11 @@ var buttonMulti = document.getElementById("multi");
 buttonMulti.onclick = numberMulti;
 
 function numberMulti() {
-        auxiliar = memory
+        auxiliar = memory;
 
-        memory = ''
+        memory = '';
 
-        operation = '*'
+        operation = '*';
 
 }
 
@@ -227,7 +227,7 @@ function numberPunto() {
 
         var display = document.querySelector(".display");
 
-        memory += "."
+        memory += ".";
 
         display.innerText = memory;
 
@@ -238,7 +238,7 @@ function numberPunto() {
 
 var buttonEqual = document.getElementById("equal");
 
-buttonEqual.onclick = equalSign
+buttonEqual.onclick = equalSign;
 
 function equalSign() {
 
@@ -248,15 +248,15 @@ function equalSign() {
         // TODO call calculate function
 
         if (operation === '+') {
-                result = Number(auxiliar) + Number(memory)
+                result = Number(auxiliar) + Number(memory);
         }else if (operation === '-') {
-                result = Number(auxiliar) - Number(memory)
+                result = Number(auxiliar) - Number(memory);
         }else if (operation === '/') {
-                result = Number(auxiliar) / Number(memory)
+                result = Number(auxiliar) / Number(memory);
         }else if (operation === '*'){
-                result = Number(auxiliar) * Number(memory)
+                result = Number(auxiliar) * Number(memory);
         }
 
-        display.innerText = result
+        display.innerText = result;
 
 }
