@@ -99,4 +99,4 @@ function checkStatus() {
 printStatus()
 
 function printStatus() {
-  var status = '' */
+ var status = '' } */
