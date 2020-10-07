@@ -24,10 +24,10 @@ var botonsuma = document.getElementById("boton+");
 boton7.onclick = funtcion () {
     numeros = numeros + "7"
     display.innerText = numeros
-    
+
 }
 
-function pepito(a, b) {
+function sum(a, b) {
     return a + b;
 }
 
