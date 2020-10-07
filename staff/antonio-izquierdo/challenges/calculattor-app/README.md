@@ -1,6 +1,5 @@
 # Calculator App
-
-Esta aplicación es una calculadora básica. Permite realizar las siguientes operaciones matemáticas: sumar, restar, multiplicar y dividir.
+This application is a basic calculator. It allows to carry out the following mathematical operations: add, subtract, multiply and divide.
 
 ## Technical Description
 - index.html
