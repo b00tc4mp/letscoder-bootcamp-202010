@@ -4,7 +4,6 @@
 
 
 h1 {
-
     border: 1.5px solid aquamarine;
     padding-block: 50px;
     background: rosybrown;
@@ -14,31 +13,24 @@ h1 {
     font-family: apple-system;
     letter-spacing: 2px;
     font-style: italic;
-  
     }
 
     .contenedor{
- 
         text-align: center;
         max-width: 1000px;
         border: 3px solid aqua;
         margin: auto;
         line-height: 50px;
         background: grey;
-        
-
 
     }
     .contenedor > button {
-
         display: block;
         padding: 0;
         color: :black;
         background:grey;
         box-shadow:2px 2px 10px black;
         height: 40px;
-      
-       
     }
     .calculadora {
         display: flex; 
@@ -59,8 +51,6 @@ h1 {
         line-height: 40px;
         background: grey;
         width: 240px;
-
-    
       }
 
       .igual{
@@ -75,10 +65,9 @@ h1 {
         line-height: 40px;
         background: grey;
         width: 240px;
-        
-
       }
+      
       .contenedor {
         display: grid;
         grid-template-columns: 60px 60px 60px 60px;
-      
+}
