@@ -10,8 +10,7 @@ param {number} colum. The colum which corresponds the symbol that is playing
 */
 
 var state = []
-   
-
+ 
 function getWiningPosition () { //TO DO CHECK IF ANY SYMBOL WINS, IN CASE YES RETURN X IN CASE NOTE, RETURN NULL
 
     if (table[0] === "X" && table [1]=== "X" && table [2]=== "X" || table[3] === "X" && table [4]=== "X" && table [5]=== "X" || 
