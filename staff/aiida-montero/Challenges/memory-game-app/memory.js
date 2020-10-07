@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	cardArray.sort(() => 0.5 - Math.random())
 
 	const grid = document.querySelector('.grid')
-	var cardsChosen = []
-	var cardsChosenId = []
-	const cardsWon = []
+	var cardsChosen = [];
+	var cardsChosenId = [];
+	const cardsWon = [];
 	var resultDisplay= document.querySelector("score")
 
 
@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			cards[optionTwoId].setAttribute('src', 'images/back.jpg')
 			alert('intenta de nuevo')
 		}
-		cardsChosen=[]
-		cardsChosenId = []
-		resultDisplay.textContent = cardsWon.length
+		cardsChosen=[];
+		cardsChosenId = [];
+		resultDisplay.textContent = cardsWon.length;
 		if(cardsWon.length===cardArray.length/2){
 			resultDisplay.textContent = "Felicidades, encontraste todos los pares."
 		}
