@@ -2,7 +2,7 @@
 
 ## Intro
 
-blah blah blah...
+This is an online calculator to +,-,*,/
 
 ![Alt Calculator](./calculator.png "Calculator App")
 
