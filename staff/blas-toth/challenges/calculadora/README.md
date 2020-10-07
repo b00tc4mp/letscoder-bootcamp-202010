@@ -8,7 +8,22 @@ This is an online calculator to +,-,*,/
 
 ## How it works
 
+## Functional Description
+
+### Use Cases
+![Alt Use Cases](./use-cases.jpg) "Use Cases"
+
+### Activities
+
+Operate with numbers and display result.
+
+![Alt Operate](./activity-diagram.jpg) "Operate Activity"
+
 ## Technical Description
+
+### Blocks
+
+![Alt Operate](./blocks.jpg) "Blocks"
 
 ### index.html
 
