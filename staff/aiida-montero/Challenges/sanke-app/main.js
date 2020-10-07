@@ -29,12 +29,5 @@ function onKeyDown (event) {
         speedX =  0
         speedY =  1
 }
-
-
-
-
-    
-
-
 }
 
