@@ -17,8 +17,8 @@ var imagenes = ["https://www.eltiempo.com/files/article_multimedia/uploads/2017/
     "https://www.eltiempo.com/files/article_multimedia/uploads/2017/11/28/5a1de02e4b411.jpeg",
     "https://i.pinimg.com/originals/62/c8/43/62c843c6aa813d0b955e1a0a14c10f26.jpg"]
 
-var status1 = null
-var status2 = null
+var status1 = null;
+var status2 = null;
 
 
 
