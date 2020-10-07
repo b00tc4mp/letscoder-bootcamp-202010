@@ -2,16 +2,12 @@
 box-sizing: border-box;
 font-weight: normal;
 font-family: sans-serif;
-
-
 }
 body{
     background:linear-gradient(to right, white, rgba(109, 109, 109, 0.795));
     margin: 0;
-    padding:0;
-    
+    padding:0;   
 }
-
 .calculadora {
     border: 2px solid black;
     max-width: 400px;
@@ -24,10 +20,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
-    grid-template-rows: repeat(5,1fr);
-    
-    
-    
+    grid-template-rows: repeat(5,1fr); 
 }
 .calculadora > button {
     cursor: pointer;
@@ -41,7 +34,6 @@ body{
 }
 .calculadora > button:hover {
     background-color: rgba(128, 128, 128, 0.6);
-
 }
 .display {
     background: none;
@@ -64,20 +56,14 @@ body{
     font-size:  40px;
     align-items: end;
     color: black;
-   
 }
 .display .numero-anterior{
     font-size: 20px;
     color: rgba(0,0,0,0.7);
-    
 }
-
 .igual {
     grid-column: span 3 ;
 }
 .back {
     font-size: 5px;
 }
-
-
-
