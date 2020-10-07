@@ -4,29 +4,24 @@
 
 Virtual calculator that develops the following operations: +, - , /, *
 
-![Alt Calculator](./calculator.png "Calculator App")
+![Alt Calculator](https://media.giphy.com/media/YqnXaLTb68GAJ8ZHFR/giphy.gif "Calculator App")
 
-## How it works
+## Functional Description
+
+### Use Cases
+
+![Alt Use Cases](./use-cases.jpg "Use Cases")
+
+### Activities
+
+Operate with numbers and display result.
+
+![Alt Operate activity](./activity-diagram.jpg "Operate activity")
 
 ## Technical Description
 
-### index.html
+### Blocks
 
-The app structure...
+![Alt Blocks](./blocks.jpg "Blocks")
 
-### style.css
-
-The styles...
-
-### main.js
-
-The main js code...
-
-### calculate.js
-
-The calculator logic...
-
-## Resources
-
-[Calculator wikipedia](https://en.wikipedia.org/wiki/Calculator)
-
+...
