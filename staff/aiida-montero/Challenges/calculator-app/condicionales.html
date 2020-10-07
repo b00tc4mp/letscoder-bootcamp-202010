@@ -16,7 +16,7 @@ HTML:
     <div>
         <section>
             <input id="operand-1" type="text" placeholder="Operando 1">
-            +
+            
             <input id="operand-2" type="text" placeholder="Operando 2">
 
             <button>=</button>
@@ -29,33 +29,3 @@ HTML:
 </body>
 
 </html>
-
-CSS:
-
-body {
-    text-align: center;
-}
-
-h1 {
-    display: inline-block;
-    font-family: 'Courier New', Courier, monospace;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: papayawhip;
-}
-
-section {
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: cornsilk;
-}
-
-JS:
-
-document.querySelector('button').onclick = function() {
-    document.querySelector('span').innerText = Number(document.querySelector('#operand-1').value) + Number(document.querySelector('#operand-2').value)
