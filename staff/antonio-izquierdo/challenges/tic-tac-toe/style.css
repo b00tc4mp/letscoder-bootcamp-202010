@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20vw 20vw 20vw;
+    width:60vw;
+    margin: 2rem top;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.grid button{
+    font-size: 15vw;
+    color: #05CBA6;
+    background:black;  ;
+    border: 3px solid #05CBA6  ;
+}
+
+.winMessage span{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30px;
+    background: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10vw;
+    color: #05CBA6;
+    font-weight: bold;
+    width: 60vw;
+    height: 13vw; 
+}
+
