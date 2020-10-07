@@ -3,7 +3,7 @@
 
 
 This is a basic web calculator app with all the normal functions.
-You can do sumas, restas, multiplicaciones y divisiones.
+You can do additions, subtractions, multiplications y divisions.
 ### Project Documents
 
 
