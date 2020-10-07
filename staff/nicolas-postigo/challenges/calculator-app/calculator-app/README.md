@@ -22,3 +22,5 @@ the app structure in terms of HTML is based on the head, and the body, which is 
 - JAVASCRIPT
 
 
+
+![](./calculator-app - uml.jpg)
