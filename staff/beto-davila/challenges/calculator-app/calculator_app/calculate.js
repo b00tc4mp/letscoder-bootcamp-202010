@@ -23,7 +23,6 @@ function n1() {
     var firstValue = document.getElementById("result").innerHTML; //Valor actual del display
     var secondValue = document.getElementById("n1").innerHTML; //Añadimos valor "1" con cada click
     document.getElementById("result").innerHTML = firstValue + secondValue; //concatenemos strings según valor anterior + añadido (secondValue)
-
 }
 
 function n2() {
