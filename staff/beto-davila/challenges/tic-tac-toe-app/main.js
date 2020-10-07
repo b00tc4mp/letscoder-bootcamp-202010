@@ -162,49 +162,46 @@ function handleCheckStatus() {
     if (board[0] === '✖' && board[1] === '✖' && board[2] === '✖' || board[3] === '✖' && board[4] === '✖' && board[5] === '✖' || board[6] === '✖' && board[7] === '✖' && board[8] === '✖') {
         displayScore.innerHTML = "Gana ✖!";
 
-        return;
+
     }
     else if (board[0] === '◯' && board[1] === '◯' && board[2] === '◯' || board[3] === '◯' && board[4] === '◯' && board[5] === '◯' || board[6] === '◯' && board[7] === '◯' && board[8] === '◯') {
         displayScore.innerHTML = "Gana ◯!";
 
-        return;
+
     }
     else if (board[0] === '✖' && board[3] === '✖' && board[6] === '✖' || board[1] === '✖' && board[4] === '✖' && board[7] === '✖' || board[2] === '✖' && board[5] === '✖' && board[8] === '✖') {
         displayScore.innerHTML = "Gana ✖!";
 
-        return;
+
     }
     else if (board[0] === '◯' && board[3] === '◯' && board[6] === '◯' || board[1] === '◯' && board[4] === '◯' && board[7] === '◯' || board[2] === '◯' && board[5] === '◯' && board[8] === '◯') {
         displayScore.innerHTML = "Gana ◯!";
 
-        return;
+
     }
     else if (board[0] === '✖' && board[4] === '✖' && board[8] === '✖' || board[2] === '✖' && board[4] === '✖' && board[6] === '✖') {
         displayScore.innerHTML = "Gana ✖!";
 
-        return;
+
     }
     else if (board[0] === '◯' && board[4] === '◯' && board[8] === '◯' || board[2] === '◯' && board[4] === '◯' && board[6] === '◯') {
         displayScore.innerHTML = "Gana ◯!";
 
-        return;
+
     } else {
 
-        handleTieGame ();
+        handleTieGame();
     }
-
-
-
 
 }
 
 
 function handleTieGame() {
-    var count = 0
-
+    var count = 0;
+    
     for (var i = 0; i < board.length; i++) {
         if (board[i] !== undefined) {
-            count++
+            count++;
         }
     }
 
@@ -229,5 +226,4 @@ resetButton.onclick = function () {
 
     }
 
-    return;
 }
