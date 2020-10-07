@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(11.jpg);
+    background-repeat: initial;
+    margin-left: 500px;
+    margin-bottom: -300px;
+    background-size:  3000px;
+}
+.title {
+    margin-left: 1500px;
+    font-style: inherit;
+    font-size: 500px;
+    color:white;
+
+
+}
+.grid {
+    display: grid;
+    grid-template-columns: 800px 800px 800px;
+    grid-template-rows: 800px 800px 800px;
+    margin-left: 1800px;
+    margin-top: 350px;
+
+
+}
+Button {
+    border-bottom: none;
+    background-color: springgreen;
+    font-size: 80px;
+    
+}
+
+.display {
+    width: 2400px;
+    height: 300px;
+    margin-left: 1800px;
+    background-color: blue;
+}
+
