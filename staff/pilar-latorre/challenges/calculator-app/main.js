@@ -1,10 +1,10 @@
-var buttons = document.querySelectorAll('button')
-var display = document.querySelector('.display')
+var buttons = document.querySelectorAll('button');
+var display = document.querySelector('.display');
 
-var current = ''
-var aux
-var operation
-var deleteNumbers = '' 
+var current = '';
+var aux;
+var operation;
+var deleteNumbers = '' ;
 
 buttons[1].onclick = function() {
     current = current + '7'
