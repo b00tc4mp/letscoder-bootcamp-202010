@@ -13,4 +13,4 @@ The user who wants to use it must click on a number, after clik again on the ope
 - Divide
 - Multiply
 ## Index.html
-The app structure is rectangle that inside, it has a structure of buttons taht corresponds with numbers and operations. Above the buttos there is a place in which area, the numbers are going to appear as soon as you press the botton.
+The app structure is rectangle that inside, it has a structure of buttons that corresponds with numbers and operations. Above the buttons, there is a place in which area, the numbers will appear as soon as you press the botton.
