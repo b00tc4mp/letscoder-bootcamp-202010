@@ -2,7 +2,7 @@
 
 ## Intro
 
-blah blah blah...
+Virtual calculator that develops the following operations: +, - , /, *
 
 ![Alt Calculator](./calculator.png "Calculator App")
 
