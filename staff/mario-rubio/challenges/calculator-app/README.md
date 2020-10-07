@@ -20,3 +20,14 @@ Pueden encadenarse varias operaciones seguidas.
 ### - style.css
 
 ### - main.js
+
+
+### Activities
+Operate with numbers and display result
+
+![Alt Operate activity](./Activities.jpg "Operate activity")
+
+## Technical Description
+### Blocks
+![Alt Blocks](./Blocks
+.jpg "Operate activity")
