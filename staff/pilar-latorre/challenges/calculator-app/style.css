@@ -3,9 +3,7 @@ body {
     background-size: cover;
 }
 
-
 .contenedor{
-
     border: 5px solid greenyellow;
     background-color: black;
     display: grid;
@@ -14,16 +12,13 @@ body {
     margin: 3.5vw auto;
     width: 25vw;
     height: 30vw;
-
 }
 
 button{
-
     font-size: 3vw;
 }
 
 .display,.equal {
-
     grid-column: 1/5;
 }
 
