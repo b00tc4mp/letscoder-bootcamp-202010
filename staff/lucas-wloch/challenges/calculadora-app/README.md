@@ -1,10 +1,10 @@
 # Calculator App
-## INTRO
+## INTRODUCTION
 
 
 This is a basic web calculator app with all the normal functions.
 You can do sumas, restas, multiplicaciones y divisiones.
-### documentacion del proyecto
+### Project Documents
 
 
 
@@ -24,4 +24,4 @@ It has four main components
 
 
 ## resources
-[link a google](google.com)
+[link to google](google.com)

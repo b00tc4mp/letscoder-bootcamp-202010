@@ -4,7 +4,6 @@
     font-family: sans-serif;*/
     /*font-size: 70px;*/
 }
-
 body {
     margin: 60px;
     padding:0;
@@ -14,7 +13,6 @@ body {
     justify-content: center;
     align-content: center;
     background: radial-gradient( rgb(95, 67, 24),rgb(247, 206, 118), rgb(66, 80, 15));
-    
 }
 .game-grid {
     display: flex;
@@ -47,7 +45,6 @@ body {
     border-radius: 20px;
     justify-content: space-arround;
     align-content: center;
-
 }
 .jugando{
     font-size: 20px;
@@ -60,7 +57,6 @@ body {
     /*width: span 4;*/
     justify-self: end;
     height: 90px;
-   
 }
 .tic-tac-toe-grid {
     background-color: rgba(255,255,255,0.7);
@@ -82,8 +78,6 @@ body {
     justify-self: flex-end;
     align-self: center;
     border-radius: 15px;
-    
-
 }
 .tic-tac-toe-grid > button {
     font-size: 70px;
