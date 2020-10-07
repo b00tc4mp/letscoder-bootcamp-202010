@@ -17,6 +17,10 @@ It´s really easy, you only have to press the number you want to add, multiply,.
 
 ## Technical Description
 
+### Blocks
+
+![Alt blocks](./blocks.jpg "Blocks")
+
 ### index.html
 
 The app structure appears in this file, 
