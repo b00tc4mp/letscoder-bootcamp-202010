@@ -37,7 +37,24 @@
         container2.style.display = "flex"
         container2.style.flexWrap = "wrap"
    
+        var container3 = document.createElement('div')
 
+        container3.style.flex 
+        container3.style.backgroundColor = 'tomato'
+        container3.style.width = '17.5vw'
+        container3.style.height = '100vh'
+        container3.style.display = "flex"
+        container3.style.flexWrap = "wrap"
+
+        var container4 = document.createElement('div')
+
+        container4.style.flex 
+        container4.style.backgroundColor = 'tomato'
+        container4.style.width = '52.5vw'
+        container4.style.height = '100vh'
+        container4.style.display = "flex"
+        container4.style.flexWrap = "wrap"
+   
 
         var item1 = document.createElement('div')
 
@@ -57,24 +74,36 @@
         item2.style.marginLeft = "3%"
 
 
+        var item3 = document.createElement('div')
+
+        item3.style.flex 
+        item3.style.backgroundColor = 'white'
+        item3.style.width = '95%'
+        item3.style.height = '35%'
+        item3.style.marginTop = "-25%"
+        item3.style.marginLeft = "3%"
 
 
-        var item5 = document.createElement('div')
 
-        item5.style.flex 
-        item5.style.backgroundColor = 'white'
-        item5.style.width = '95%'
-        item5.style.height = '35%'
-        item5.style.marginTop = "-25%"
-        item5.style.marginLeft = "3%"
+        var item4 = document.createElement('div')
+
+        item4.style.flex 
+        item4.style.backgroundColor = 'red'
+        item4.style.width = '95%'
+        item4.style.height = '15%'
+        item4.style.marginTop = "-25%"
+        item4.style.marginLeft = "3%"
+        item4.style.margin ="1%"
+        item4.style.marginTop = "-55%"
 
 
 
         container.append(container1)
         container.append(container2)
+
         container1.append(item1)
         container2.append(item2)
-        container2.append(item5)
+        container2.append(item3)
 
         document.body.append(container)
 
