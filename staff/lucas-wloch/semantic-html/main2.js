@@ -8,7 +8,6 @@ function hola(){
     for (var j = 0; j < numtab; j++){
         texto = texto.toString() + " " + tt.toString()
     }
-    
 }
 
 function printSemanticElements(elements) {
