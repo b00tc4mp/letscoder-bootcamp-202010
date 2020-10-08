@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- WARN this layout is obsolote and it does not respect the real purpose of the table elment -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    header
+    nav | main | aside
+    footer
+-->
+
+<body>
+    <style>
+        * {
+            border: 1px solid black;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <table style="box-sizing: border-box;height: 100vh;">
+        <tr>
+            <td style="width: 100vw; height: 10vh;" colspan="3">header</td>
+        </tr>
+        <tr>
+            <td style="width: 10vw;">nav</td>
+            <td>main</td>
+            <td style="width: 10vw;">aside</td>
+        </tr>
+        <tr>
+            <td style="width: 100vw; height: 10vh;" colspan="3">
+                footer
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
