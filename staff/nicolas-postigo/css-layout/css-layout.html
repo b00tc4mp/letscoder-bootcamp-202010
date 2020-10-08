@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.body.style.display = 'flex'
+        document.body.style.alignItems = 'center'
+        document.body.style.justifyContent = 'center'
+
+        var container = document.createElement('div')
+        
+        container.style.backgroundColor = 'tomato'
+        container.style.width = '70vw'
+        container.style.height = '200vh'
+        container.style.display = "flex"
+        container.style.flexWrap = "wrap"
+
+        var container1 = document.createElement('div')
+
+        container1.style.flex 
+        container1.style.backgroundColor = 'tomato'
+        container1.style.width = '17.5vw'
+        container1.style.height = '100vh'
+        container1.style.display = "flex"
+        container1.style.flexWrap = "wrap"
+
+        var container2 = document.createElement('div')
+
+        container2.style.flex 
+        container2.style.backgroundColor = 'tomato'
+        container2.style.width = '52.5vw'
+        container2.style.height = '100vh'
+        container2.style.display = "flex"
+        container2.style.flexWrap = "wrap"
+   
+
+
+        var item1 = document.createElement('div')
+
+        item1.style.flex 
+        item1.style.backgroundColor = 'blue'
+        item1.style.width = "95%"
+        item1.style.height = '72%'
+        item1.style.margin ="5%"
+
+        var item2 = document.createElement('div')
+
+        item2.style.flex 
+        item2.style.backgroundColor = 'gray'
+        item2.style.width = '95%'
+        item2.style.height = '35%'
+        item2.style.marginTop = "2.5%"
+        item2.style.marginLeft = "3%"
+
+
+
+
+        var item5 = document.createElement('div')
+
+        item5.style.flex 
+        item5.style.backgroundColor = 'white'
+        item5.style.width = '95%'
+        item5.style.height = '35%'
+        item5.style.marginTop = "-25%"
+        item5.style.marginLeft = "3%"
+
+
+
+        container.append(container1)
+        container.append(container2)
+        container1.append(item1)
+        container2.append(item2)
+        container2.append(item5)
+
+        document.body.append(container)
+
+
+    </script>
+</body>
+</html> 
