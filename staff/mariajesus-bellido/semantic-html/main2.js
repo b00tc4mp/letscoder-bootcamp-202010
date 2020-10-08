@@ -42,4 +42,3 @@ function printSemanticElements(elements, parentElement) {
 };
 
 printSemanticElements(children, 'BODY');
-jsls
