@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebuild the main grid layout from</title>
+</head>
+<body>
+    <script>
+        document.body.style.display = 'flex'
+        document.body.style.alignItems = 'center'
+        document.body.style.justifyContent = 'center'
+
+        var mainContainer = document.createElement('div')
+
+        mainContainer.style.backgroundColor = 'tomato'
+        mainContainer.style.width = '70vw'
+        mainContainer.style.height = '220vh'
+        mainContainer.style.display = 'flex'
+        mainContainer.style.flexWrap = 'wrap'
+        
+        var container1 = document.createElement('div')
+
+        container1.style.backgroundColor = 'black'
+        container1.style.width = '30%'
+        container1.style.height = '50vw'
+        container1.style.display = 'flex'
+        container1.style.display = 'wrap'
+        container1.style.margin = '2%'
+
+        mainContainer.append(container1)
+
+        var container2 = document.createElement('div')
+
+        container2.style.background = "tomato" //same bgc as mainContainer
+        container2.style.width = '60%'
+        container2.style.height = '50vw'
+        
+        container2.style.margin = '2%'
+
+        mainContainer.append(container2)
+
+        //second row starts
+
+        var container4 = document.createElement('div')
+
+        container4.style.background = "tomato" //same bgc as mainContainer
+        container4.style.width = '60%'
+        container4.style.height = '50vw'
+        
+        container4.style.margin = '2%'
+
+        mainContainer.append(container4)
+
+        var container3 = document.createElement('div')
+
+        container3.style.backgroundColor = 'green'
+        container3.style.width = '30%'
+        container3.style.height = '50vw'
+        container3.style.display = 'flex'
+        container3.style.display = 'wrap'
+        container3.style.margin = '2%'
+
+        mainContainer.append(container3)
+
+        var item3 = document.createElement('div')
+
+        item3.style.backgroundColor = 'pink'
+        
+        item3.style.height = '50%'
+        item3.style.marginBottom = '5px'
+        item3.style.flex
+
+       container4.append(item3)
+
+
+       var item4 = document.createElement('div')
+
+        item4.style.backgroundColor = 'grey'
+        
+        item4.style.height = '50%'
+        item4.style.marginBottom = '5px'
+        item4.style.flex
+
+       container4.append(item4)
+        //second row ends
+
+
+        var item1 = document.createElement('div')
+
+        item1.style.backgroundColor = 'greenyellow'
+       
+        item1.style.height = '50%'
+        item1.style.marginBottom = '5px'
+        item1.style.flex
+        
+        
+        container2.append(item1)
+
+        var item2 = document.createElement('div')
+
+        item2.style.backgroundColor = 'blue'
+        
+        item2.style.height = '48%'
+        item2.style.marginTop = '5px'
+        item2.style.flex
+
+        container2.append(item2) 
+
+        document.body.append(mainContainer) 
+        document.body.append(Container)
+    </script>
+    
+</body>
+</html>
