@@ -18,3 +18,14 @@ My first calculator app is only able to perform basic math operations. addition,
 ## Resources 
 
 [Calculator Wikipedia] (https://en.wikipedia.org/wiki/Calculator)
+
+## Functional description 
+
+### Use Cases
+
+![Alt Use Cases](./use-cases.jpg "Use Cases")
+
+### Activities 
+
+### Blocks 
+
