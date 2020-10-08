@@ -1,15 +1,26 @@
-var children = document.body.children
+var children = document.body.children;
 
-printSemanticElements(children)
+printSemanticElements(children);
 
 function printSemanticElements(elements) {
+
+
     for (var i = 0; i < elements.length; i++) {
-        var element = elements[i]
 
-        if (element.tagName !== 'DIV' && element.tagName !== 'SPAN' && element.tagName !== 'SCRIPT' && element.tagName !== 'NOSCRIPT' && element.tagName !== 'STYLE' && element.tagName !== 'IFRAME')
+        var element = elements[i];
 
-        console.log(element.tagName)
+        if (element.tagName !== 'DIV'
+            && element.tagName !== 'SPAN'
+            && element.tagName !== 'SCRIPT'
+            && element.tagName !== 'NOSCRIPT'
+            && element.tagName !== 'STYLE'
+            && element.tagName !== 'IFRAME')
 
-        printSemanticElements(element.children)
+            console.log(element.tagName);
+
     }
+
+
+printSemanticElements(element.children);
+
 }
