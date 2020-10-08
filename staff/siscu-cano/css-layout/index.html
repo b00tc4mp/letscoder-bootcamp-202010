@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid JS</title>
+</head>
+
+<body>
+    <script>
+        var gallery = document.createElement('div');
+
+        var galleryUp01 = document.createElement('div');
+        var galleryUp02 = document.createElement('div');
+        var galleryUp03 = document.createElement('div');
+
+        var galleryMiddle01 = document.createElement('div');
+        var galleryMiddle02 = document.createElement('div');
+        var galleryMiddle03 = document.createElement('div');
+
+        var galleryBottom01 = document.createElement('div');
+        var galleryBottom02 = document.createElement('div');
+        var galleryBottom03 = document.createElement('div');
+
+        galleryUp01.innerText = "Up 01";
+        galleryUp02.innerText = "Up 02";
+        galleryUp03.innerText = "Up 03";
+
+        galleryMiddle01.innerText = "Middle 01";
+        galleryMiddle02.innerText = "Middle 02";
+        galleryMiddle03.innerText = "Middle 03";
+
+        galleryBottom01.innerText = "Bottom 01";
+        galleryBottom02.innerText = "Bottom 02";
+        galleryBottom03.innerText = "Bottom 03";
+
+        // Append containers
+        document.body.append(gallery);
+        gallery.append(galleryUp01, galleryUp02, galleryUp03, galleryMiddle01, galleryMiddle02, galleryMiddle03, galleryBottom01, galleryBottom02, galleryBottom03);
+
+        // Styles common (html and body)
+        document.documentElement.style.height = '100%';
+        document.documentElement.style.margin = '0';
+        document.documentElement.style.padding = '0';
+        document.body.style.minHeight = '100%';
+
+        // Styles main container
+        gallery.style.display = 'grid';
+        gallery.style.gridTemplateColumns = 'repeat(5, 1fr)';
+        gallery.style.gridTemplateRows = 'repeat(12, 1fr)';
+        gallery.style.backgroundColor = '#ccc';
+        gallery.style.maxWidth = '80%';
+        gallery.style.minHeight = '100vh';
+        gallery.style.margin = '0 auto';
+
+        // Styles sub containers
+        galleryUp01.style.backgroundColor = 'moccasin';
+        galleryUp01.style.gridArea = '1 / 1 / 5 / 3';
+
+        galleryUp02.style.backgroundColor = 'palegreen';
+        galleryUp02.style.gridArea = '1 / 3 / 3 / 6';
+
+        galleryUp03.style.backgroundColor = 'lightblue';
+        galleryUp03.style.gridArea = '3 / 3 / 5 / 6';
+
+        galleryMiddle01.style.backgroundColor = 'tan';
+        galleryMiddle01.style.gridArea = '5 / 4 / 9 / 6';
+
+        galleryMiddle02.style.backgroundColor = 'pink';
+        galleryMiddle02.style.gridArea = '5 / 1 / 7 / 4';
+
+        galleryMiddle03.style.backgroundColor = 'yellow';
+        galleryMiddle03.style.gridArea = '7 / 1 / 9 / 4';
+
+        galleryBottom01.style.backgroundColor = 'aqua';
+        galleryBottom01.style.gridArea = '9 / 1 / 13 / 3';
+
+        galleryBottom02.style.backgroundColor = 'magenta';
+        galleryBottom02.style.gridArea = '9 / 3 / 11 / 6';
+
+        galleryBottom03.style.backgroundColor = 'black';
+        galleryBottom03.style.gridArea = '11 / 3 / 13 / 6';
+    </script>
+</body>
+
+</html>
