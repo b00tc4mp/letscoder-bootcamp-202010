@@ -1,13 +1,14 @@
-@mixin center-content-flex($display,$justifyContent,$alignItems)
+@mixin center-content($display,$justifyContent,$alignItems)
         display : $display
-        justifyContent : $justifyContent
-        alignItems : $alignItems
+        justify-content : $justifyContent
+        align-items : $alignItems
 @mixin create-grid($display,$gridTemplateColumns,$gridTemplateRows,$gap)
         display : $display
-        gridTemplateColumns : $gridTemplateColumns
-        gridTemplateRows : $gridTemplateRows
+        grid-template-columns : $gridTemplateColumns
+        grid-template-rows : $gridTemplateRows
         gap : $gap
 @mixin size($width,$height)
         width : $width
         height : $height
-$backgroundColor-container : '#63CDF1'
+$background-color-container : #63CDF1
+$background-color-container-item : #FAA82A
