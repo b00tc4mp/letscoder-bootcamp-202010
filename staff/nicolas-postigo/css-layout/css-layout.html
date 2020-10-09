@@ -69,7 +69,7 @@
         item2.style.flex 
         item2.style.backgroundColor = 'gray'
         item2.style.width = '95%'
-        item2.style.height = '35%'
+        item2.style.height = '30%'
         item2.style.marginTop = "2.5%"
         item2.style.marginLeft = "3%"
 
@@ -79,8 +79,8 @@
         item3.style.flex 
         item3.style.backgroundColor = 'white'
         item3.style.width = '95%'
-        item3.style.height = '35%'
-        item3.style.marginTop = "-25%"
+        item3.style.height = '30%'
+        item3.style.marginTop = "-15%"
         item3.style.marginLeft = "3%"
 
 
@@ -88,19 +88,41 @@
         var item4 = document.createElement('div')
 
         item4.style.flex 
-        item4.style.backgroundColor = 'red'
-        item4.style.width = '95%'
+        item4.style.backgroundColor = 'green'
+        item4.style.width = '65%'
         item4.style.height = '15%'
         item4.style.marginTop = "-25%"
         item4.style.marginLeft = "3%"
         item4.style.margin ="1%"
-        item4.style.marginTop = "-55%"
+        item4.style.marginTop = "-30%"
 
+        var item5 = document.createElement('div')
 
+        item5.style.flex 
+        item5.style.backgroundColor = 'yellow'
+        item5.style.width = '25%'
+        item5.style.height = '35%'
+        item5.style.marginTop = "-25%"
+        item5.style.marginLeft = "3%"
+        item5.style.margin ="1%"
+        item5.style.marginTop = "-30%"
+
+        var item6 = document.createElement('div')
+
+        item6.style.flex 
+        item6.style.backgroundColor = 'blue'
+        item6.style.width = '65%'
+        item6.style.height = '15%'
+        item6.style.marginTop = "-25%"
+        item6.style.marginLeft = "3%"
+        item6.style.margin ="1%"
+        item6.style.marginTop = "-38.5%"
 
         container.append(container1)
         container.append(container2)
-
+        container.append(item4)
+        container.append(item5)
+        container.append(item6)
         container1.append(item1)
         container2.append(item2)
         container2.append(item3)
