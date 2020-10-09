@@ -14,7 +14,7 @@ function printSemanticElements(elements, indent) {
 
     if ((element.tagName !== "DIV")&&(element.tagName !== "SPAN")&&(element.tagName !== "SCRIPT")&&(element.tagName !== "NOSCRIPT")&&(element.tagName !== "STYLE")&&(element.tagName !== "IFRAME"))
 
-            consol e.log(indentation + element.tagName)
+            console.log(indentation + element.tagName)
 
         printSemanticElements(element.children, indent + 1)
     }
