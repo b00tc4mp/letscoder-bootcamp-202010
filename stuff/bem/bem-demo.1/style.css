@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.alert {
+    border-radius: 1rem;
+    border-color: rgb(0, 145, 255);
+    border-width: .2rem;
+    border-style: solid;
+    background-color: rgb(176, 230, 252);
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 30vw;
+    text-align: right;
+    box-shadow: 0 0 .5rem slategray;
+}
+
+.alert__title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 145, 255);
+    text-align: left;
+}
+
+.alert__body {
+    font-family: Oswald;
+    text-align: justify;
+}
+
+.alert__button {
+    background-color: rgb(0, 145, 255);
+    color: white;
+    border-radius: .5rem;
+    border-style: none;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.alert--danger {
+    border-color: tomato;
+    background-color: rgb(250, 187, 176);
+}
+
+.alert--danger > .alert__title {
+    color: tomato;
+}
+
+.alert--danger > .alert__button {
+    background-color: tomato;
+}
+
+.alert--success {
+    border-color: rgb(140, 233, 0);
+    background-color: rgb(222, 252, 176);
+}
+
+.alert--success > .alert__title {
+    color:  rgb(140, 233, 0);
+}
+
+.alert--success > .alert__button {
+    background-color:  rgb(140, 233, 0);
+}
