@@ -4,15 +4,15 @@ var children = document.body.children;
 
 printSemanticElements(children)
 function printSemanticElements(elements, indent) {
-    if (indent === undefined) indent = 1
+    if (indent === undefined) indent = 1;
 
     for (var i = 0; i < elements.length; i++) {
-        var element = elements[i]
+        var element = elements[i];
         
 
-        var indentation = ''
+        var indentation = '';
 
-        for (var j = 0; j < indent; j++) indentation = indentation + '\t'
+        for (var j = 0; j < indent; j++) indentation = indentation + '\t';
         // TODO do not print tags DIV, SPAN, SCRIPT, NOSCRIPT, STYLE, IFRAME
         if (
         element.tagName == "DIV" ||
@@ -22,9 +22,9 @@ function printSemanticElements(elements, indent) {
         element.tagName == "IFRAME"
         ){
         }else {
-        console.log(element.tagName)
+        console.log(element.tagName);
         }
 
-        printSemanticElements(element.children, indentation + 1)
+        printSemanticElements(element.children, indentation + 1);
         }
     }
