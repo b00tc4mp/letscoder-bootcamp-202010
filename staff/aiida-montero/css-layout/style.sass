@@ -1,11 +1,8 @@
 
-@media only screen and (max-width: 600px) 
 @mixin item
-    background-color : brown
-    border: 2px solid white
-
-
-
+    background-color: greenyellow
+    border: 2px solid black
+   
 
 body
     display: flex
@@ -13,52 +10,110 @@ body
     justify-content: center
 
 .container
-    background-color: #979ea0
-    padding: 5px
-    margin: 2px
+    background-color: #61C9EA
     width: 70vw
     height: 200vh
     display: grid
     gap: 15px
-    grid-template-columns : 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: repeat (6,1fr)
     text-align: center
 
 .item1
-
-    grid-area : 1/1/3/1
+    
+    grid-area: 1/1/3/1
     @include item
-
+    
 .item2
 
-    grid-area : 1/2/1/4
+    grid-area: 1/2/1/4
     @include item
-
+        
 
 .item3
-    grid-area : 2/2/2/4
     @include item
+    grid-area: 2/2/2/4
 
 .item4
-    grid-area : 3/1/4/3
     @include item
+    grid-area: 3/1/4/3
 
 .item5
-    grid-area : 3/3/5/4
     @include item
+    grid-area: 3/3/5/4
 
 .item6
-    grid-area : 4/1/5/3
     @include item
+    grid-area: 4/1/5/3
 
 .item7
-    grid-area : 5/1/7/2 
     @include item
+    grid-area: 5/1/7/2
 
 .item8
-    grid-area: 5/2/6/4
     @include item
+    grid-area: 5/2/6/4
 
 .item9
-    grid-area: 6/2/7/4
     @include item
+    grid-area: 6/2/7/4
+    
+    
+@media screen and (max-width: 600px) 
+    @mixin item
+        background-color: greenyellow
+        border: 2px solid black
+   
+
+    body
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .container
+        background-color: #61C9EA
+        width: 70vw
+        height: 200vh
+        display: grid
+        gap: 15px
+        
+        grid-template-rows: repeat (9,1fr)
+        text-align: center
+
+    .item1
+    
+        grid-row: 1/2
+        @include item
+    
+    .item2
+
+        grid-row: 2/3
+        @include item
+        
+
+    .item3
+        @include item
+        grid-row: 3/4
+
+    .item4
+        @include item
+        grid-row: 4/5
+
+    .item5
+        @include item
+        grid-row: 5/6
+    .item6
+        @include item
+        grid-row: 6/7
+
+    .item7
+        @include item
+        grid-row: 7/8
+
+    .item8
+        @include item
+        grid-row: 8/9
+
+    .item9
+        @include item
+        grid-row: 9/10
