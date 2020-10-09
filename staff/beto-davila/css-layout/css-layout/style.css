@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    height: 250vh;
+    width: 75vw;
+    justify-content: center;
+}
+
+.container-utensilios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1rem;
+}
+
+.div-h {
+    background-color: beige;
+}
+
+.div-v {
+    background-color: beige;
+}
+
+
+
+
+
