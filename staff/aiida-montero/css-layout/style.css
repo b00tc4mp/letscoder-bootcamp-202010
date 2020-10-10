@@ -18,7 +18,38 @@ body {
   text-align: center;
   margin-left: 15vw;
   margin-right: 15vw;
+  margin-top: 5vw;
+  border-radius: 5px;
+}
+
+.containerdos {
+  padding: 10px;
+  background-color: #8f999c;
+  width: 70vw;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 6, 1fr;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
   margin-top: 8vw;
+  border-radius: 5px;
+}
+
+.containertres {
+  padding: 10px;
+  background-color: #8f999c;
+  width: 70vw;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 6, 1fr;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 8vw;
+  border-radius: 5px;
 }
 
 .cabecera {
@@ -30,6 +61,22 @@ body {
   align-items: center;
   position: fixed;
   text-align: center;
+  border-radius: 85px;
+}
+
+.section {
+  padding: 1px;
+  background-color: #8f999c;
+  width: 70vw;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 6, 1fr;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 9vw;
+  border-radius: 5px;
 }
 
 .bloques {
@@ -54,13 +101,18 @@ body {
 
 .login {
   color: black;
-  margin-left: 15vw;
+  margin-left: 1vw;
+  font-family: Dosis;
 }
 
 .social-networks {
   margin-left: 5vw;
   color: black;
   font-family: Dosis;
+}
+
+.fas {
+  color: white;
 }
 
 .compras {
@@ -102,56 +154,107 @@ button {
 
 .item1 {
   grid-area: 1/1/3/1;
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
 }
 
 .item2 {
   grid-area: 1/2/1/4;
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
 }
 
 .item3 {
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
   grid-area: 2/2/2/4;
 }
 
 .item4 {
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
   grid-area: 3/1/4/3;
 }
 
 .item5 {
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
   grid-area: 3/3/5/4;
 }
 
 .item6 {
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
   grid-area: 4/1/5/3;
 }
 
 .item7 {
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
   grid-area: 5/1/7/2;
 }
 
 .item8 {
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
   grid-area: 5/2/6/4;
 }
 
 .item9 {
-  background-color: brown;
+  background-color: RGB(205, 92, 92);
   border: 2px solid white;
+  border-radius: 5px;
   grid-area: 6/2/7/4;
+}
+
+.item10 {
+  background-color: RGB(205, 92, 92);
+  border: 2px solid white;
+  border-radius: 5px;
+  grid-area: 1/1/7/1;
+}
+
+.item11 {
+  background-color: RGB(205, 92, 92);
+  border: 2px solid white;
+  border-radius: 5px;
+  grid-area: 1/2/6/7;
+}
+
+.item12 {
+  background-color: RGB(205, 92, 92);
+  border: 2px solid white;
+  border-radius: 5px;
+  grid-area: 4/2/7/4;
+}
+
+.item13 {
+  background-color: RGB(205, 92, 92);
+  border: 2px solid white;
+  border-radius: 5px;
+  grid-area: 1/1/7/1;
+}
+
+.item14 {
+  background-color: RGB(205, 92, 92);
+  border: 2px solid white;
+  border-radius: 5px;
+  grid-area: 1/2/6/7;
+}
+
+.item15 {
+  background-color: RGB(205, 92, 92);
+  border: 2px solid white;
+  border-radius: 5px;
+  grid-area: 4/2/7/4;
 }
 
 @media screen and (max-width: 600px) {
