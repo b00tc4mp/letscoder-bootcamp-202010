@@ -67,17 +67,17 @@ container.style.margin = '0 auto';
 
 //ESTILOS CAJAS INTERIORES (COLORES DE FONDO)
 
-boxTopVertical.style.backgroundColor = '#FF5959';  //color rojizo 
-boxTopHorizontal01.style.backgroundColor = '#6199AF'; // color azulón grisáceo
-boxTopHorizontal02.style.backgroundColor = '#F6B436'; // color mostaza
+boxTopVertical.style.backgroundColor = "#4c5760";
+boxTopHorizontal01.style.backgroundColor = "#93a8ac";
+boxTopHorizontal02.style.backgroundColor = "#d7ceb2"; 
 
-boxMiddleVertical.style.backgroundColor = '#6199AF';  //color azulón grisáceo
-boxMiddleHorizontal01.style.backgroundColor = '#FF5959'; //color rojizo
-boxMiddleHorizontal02.style.backgroundColor = '#F6B436'; //color mostaza
+boxMiddleVertical.style.backgroundColor = "#a59e8c";  
+boxMiddleHorizontal01.style.backgroundColor = "#6635b"; 
+boxMiddleHorizontal02.style.backgroundColor = "#757083"; 
 
-boxBottomVertical.style.backgroundColor = '#FF5959'; //color rojizo 
-boxBottomHorizontal01.style.backgroundColor = '#6199AF'; //color azul grisáceo 
-boxBottomHorizontal02.style.backgroundColor = '#F6B436'; //color mostaza
+boxBottomVertical.style.backgroundColor = "#474056"; 
+boxBottomHorizontal01.style.backgroundColor = "#8a95a5"; 
+boxBottomHorizontal02.style.backgroundColor = "#b9c6ae"; 
 
 
 //ESTILOS CAJAS INTERIORES (grid area)
@@ -96,4 +96,9 @@ boxMiddleHorizontal02.style.gridArea = '7 / 1 / 9 / 4';
 boxBottomVertical.style.gridArea = '9 / 1 / 13 / 3'; 
 boxBottomHorizontal01.style.gridArea = '9 / 3 / 11 / 6'; 
 boxBottomHorizontal02.style.gridArea = '11 / 3 / 13 / 6'; 
+
+
+
+
+
 
