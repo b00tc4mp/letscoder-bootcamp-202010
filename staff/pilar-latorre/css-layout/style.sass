@@ -47,22 +47,20 @@ header
     background-color: #2A3B40 
 
 .login
-    margin-left: 13vw
+    margin-left: 8vw
 
 
 .social-network
     margin-left: 5vw
     button
-        width: 3vw
-        height: 3vw
+        font-size: 2vw
         background-color: #7465B2 
         color: black
 
 .troley-box
     margin-left: 1vw
     button
-        width: 5vw
-        height: 3vw
+        font-size: 2vw
         background-color: #7E3F6E
         color: white
 
@@ -71,7 +69,7 @@ header
     width: 70vw
     height: 200vh
     display: grid
-    gap: 15px
+    gap: 5px
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: repeat (6,1fr)
     text-align: center
@@ -117,17 +115,22 @@ header
     
     
 @media screen and (max-width: 600px) 
+    .ocultar
+        display: none
+            
     @mixin item
         background-color:#B99DA4  
         border: 2px solid black
         height: 17vh
-
 
     body
         display: flex
         align-items: center
         justify-content: center
         
+    .header
+        display: flex
+        justify-content: flex-start
 
     .container
         background-color: #E8A1DD  
