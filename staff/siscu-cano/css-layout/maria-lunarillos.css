@@ -220,12 +220,58 @@ body {
 }
 
 .footer__info {
-  border: 1px solid red;
+  min-height: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-.footer__info > img {
-  flex-basis: calc(50% - 20px);
+.footer__info > div {
+  display: flex;
+  flex-basis: calc(50%);
+  justify-content: center;
+  flex-direction: column;
+}
+.footer__info > div > img {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 100%;
+  padding: 2px;
+}
+.footer__contact > div:first-child {
+  text-align: center;
+  color: #ccc;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.footer__newsletter {
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+.footer__newsletter > p {
+  color: #ccc;
+}
+.footer__newsletter label {
+  color: #ccc;
+}
+.footer__about-us {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.footer__about-us ul {
+  padding: 0;
+  list-style: none;
+}
+.footer__about-us ul span {
+  display: block;
+}
+.footer__copyright {
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #ccc;
+  width: 100%;
+  padding: 6px 0px;
 }
 
 /*# sourceMappingURL=maria-lunarillos.css.map */
