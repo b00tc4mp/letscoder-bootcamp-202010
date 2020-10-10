@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap')
+
+@import config
+// @import config-hippie
+
+@import utils
+
+.dialog
+    +round-border(1rem, solid, .2rem, $color-normal)
+    background-color: $background-color-normal
+    padding: 1rem
+    margin: 1rem
+    max-width: 30vw
+    text-align: right
+    box-shadow: 0 0 .5rem slategray
+
+    &__title
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+        color: $color-normal
+        text-align: left
+
+    &__body
+        font-family: Oswald
+        text-align: justify
+
+    &--danger
+        border-color: $color-danger
+        background-color: $background-color-danger
+
+    &--danger > &__title
+        color: $color-danger
+
+    &--danger > &__button
+        background-color: $color-danger
+
+    &--success
+        border-color: $color-success
+        background-color: $background-color-success
+
+    &--success > &__title
+        color: $color-success
+
+    &--success > &__button
+        background-color: $color-success
+
+.button
+    background-color: $color-normal
+    color: $color-cancel
+    +round-border(.5rem, none, 0, transparent)
+    font-size: 1.2rem
+    padding: .5rem
+
+    &--cancel
+        background-color: $color-cancel
+        color: black
+
+    &--success
+        background-color: $color-success
+
+    &--danger
+        background-color: $color-danger
