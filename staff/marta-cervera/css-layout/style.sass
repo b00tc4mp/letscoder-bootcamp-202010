@@ -37,17 +37,22 @@ header
         border: 1px grey solid
         background-color: #F08080
         font-size: 20px
+        
 .carrito
     color:#008080
-    font-size: 15px
+    font-size: 1.5vw
+    background-color: white
+
 
 .farolillos
     color: #D2B48C
-    font-size: 15px
+    font-size: 1.5vw
+    background-color: white
     
 
 .bloque1
     background-color: #90EE90
+
 
 .bloque2
     background-color: #D3D3D3
@@ -128,6 +133,9 @@ body
     
 
 @media screen and (max-width: 600px) 
+    .tresbloques
+        display: none
+
     @mixin item
         background-color: red
         border: 2px solid black
@@ -137,6 +145,10 @@ body
     body
         display: flex
         align-items: center
+        justify-content: center
+
+    .header
+        display: flex
         justify-content: center
 
     .container

@@ -41,12 +41,14 @@ header {
 
 .carrito {
   color: #008080;
-  font-size: 15px;
+  font-size: 1.5vw;
+  background-color: white;
 }
 
 .farolillos {
   color: #D2B48C;
-  font-size: 15px;
+  font-size: 1.5vw;
+  background-color: white;
 }
 
 .bloque1 {
@@ -146,9 +148,18 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .tresbloques {
+    display: none;
+  }
+
   body {
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    display: flex;
     justify-content: center;
   }
 
