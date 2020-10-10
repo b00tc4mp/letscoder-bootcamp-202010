@@ -1,0 +1,10 @@
+
+.container {
+    width: "100vw";
+    height: "100vh";
+    background-color:red;
+    margin-left: "5px";
+    display: grid;
+    padding: 1vw;
+
+}
