@@ -23,8 +23,6 @@ if ((element.tagName != "DIV" ) && (element.tagName != "SPAN" ) && (element.tagN
            console.log(indentation + element.tagName)
 
        printSemanticElements(element.children, indent + 1)
-   }
-} 
 
 function printSemanticElements(elements, indent) {
    if (elements === undefined) elements = document.body.children
