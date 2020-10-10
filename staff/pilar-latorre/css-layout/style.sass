@@ -1,6 +1,5 @@
-
 @mixin item
-    background-color: greenyellow
+    background-color:#B99DA4  
     border: 2px solid black
    
 
@@ -8,9 +7,67 @@ body
     display: flex
     align-items: center
     justify-content: center
+    margin: 0px
+    padding: 0px
+    background-color: #634149 
+
+header
+    
+    text-align: center
+    width: 100vw
+    height: 10vh
+    background-color: #E8A1DD  
+    display: flex
+    align-items: flex-end
+    position: fixed
+
+.tresbloques
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    width: 180px
+    height: 60px    
+    margin: 0vw 0vw 0vw 15vw  
+    div
+        width: 60px
+        height: 60px
+        border-radius: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        &:hover
+            height: 120px
+
+.bloque1
+    background-color: #A1D6E8 
+
+.bloque2
+    background-color: #61838F 
+    
+.bloque3
+    background-color: #2A3B40 
+
+.login
+    margin-left: 13vw
+
+
+.social-network
+    margin-left: 5vw
+    button
+        width: 3vw
+        height: 3vw
+        background-color: #7465B2 
+        color: black
+
+.troley-box
+    margin-left: 1vw
+    button
+        width: 5vw
+        height: 3vw
+        background-color: #7E3F6E
+        color: white
 
 .container
-    background-color: #61C9EA
+    background-color: #E8A1DD  
     width: 70vw
     height: 200vh
     display: grid
@@ -18,6 +75,8 @@ body
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: repeat (6,1fr)
     text-align: center
+    margin: 6vw 15vw 0vw 15vw
+    padding: 10px
 
 .item1
     
@@ -25,11 +84,9 @@ body
     @include item
     
 .item2
-
     grid-area: 1/2/1/4
     @include item
         
-
 .item3
     @include item
     grid-area: 2/2/2/4
@@ -61,61 +118,30 @@ body
     
 @media screen and (max-width: 600px) 
     @mixin item
-        background-color: greenyellow
+        background-color:#B99DA4  
         border: 2px solid black
-        
-   
+        height: 17vh
+
 
     body
         display: flex
         align-items: center
         justify-content: center
+        
 
     .container
-        background-color: #61C9EA
-        width: 30vw
-        height: 70vw
-        display: grid
-        grid-template-columns: 1fr 
-        grid-template-rows: repeat (9,1fr)
+        background-color: #E8A1DD  
+        width: 70vw
+        height: 180vh
+        gap: 15px
+        display: flex
+        flex-direction: column
         text-align: center
+        justify-content: center
+        margin-top: 15vw
 
-    .item1
-        
-        grid-row: 1/2
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9
+                
         @include item
         
     
-    .item2
-
-        grid-row: 2/3
-        @include item
-        
-
-    .item3
-        @include item
-        grid-row: 3/4
-
-    .item4
-        @include item
-        grid-row: 4/5
-
-    .item5
-        @include item
-        grid-row: 5/6
-    .item6
-        @include item
-        grid-row: 6/7
-
-    .item7
-        @include item
-        grid-row: 7/8
-
-    .item8
-        @include item
-        grid-row: 8/9
-
-    .item9
-        @include item
-        grid-row: 9/10
-
