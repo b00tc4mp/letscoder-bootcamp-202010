@@ -45,6 +45,12 @@ body
        width: 60px
        height:60px
        border-radius: 20px
+       display: flex
+       align-items: center
+       justify-content: center
+       font-family: Dosis
+       
+
     
        &:hover
            height: 120px
@@ -65,14 +71,13 @@ body
 button
     color: black
     background-color: RGB(205, 92, 92)
-    font-size: 20px
-    border-radius: 5px
+    font-size: 3vw
+    border-radius: 1vw
     font-family: Dosis
 
 .carrito
     background-color: white
-    width: 60px
-    height: 60px
+    font-size: 3vw
     font-family: Dosis
     
 
@@ -81,8 +86,7 @@ button
 .number
     background-color: black
     color: white
-    width: 60px
-    height: 60px
+    font-size: 3vw
     font-family: Dosis
 
 
@@ -142,6 +146,8 @@ button
 
 
 @media screen and (max-width: 600px) 
+    .ocultar
+        display: none
     @mixin item
         background-color: brown
         border: 2px solid white
