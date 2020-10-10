@@ -1,34 +1,116 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap')
 @mixin item
-    background-color: greenyellow
-    border: 2px solid black
-   
+    background-color: brown
+    border: 2px solid white
+
 
 body
     display: flex
     align-items: center
     justify-content: center
+    padding: 0px
+    margin: 0px
 
 .container
-    background-color: #61C9EA
+    padding: 10px
+    background-color: #8f999c
     width: 70vw
     height: 200vh
     display: grid
-    gap: 15px
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: repeat (6,1fr)
     text-align: center
+    margin-left: 15vw
+    margin-right: 15vw
+    margin-top: 8vw
 
-.item1
+.cabecera
+    margin: 10px
+    background: grey
+    height: 10vh
+    width: 100vw
+    display: flex
+    align-items: center
+    position: fixed
+    text-align: center
+
+
+.bloques
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    width: 180px
+    height: 60px
+    margin: 0vw 0vw 0vw 15vw 
+    div
+       width: 60px
+       height:60px
+       border-radius: 20px
     
+       &:hover
+           height: 120px
+
+.login
+    color: black
+    margin-left: 15vw
+
+.social-networks
+    margin-left: 5vw
+    color: black
+    font-family: Dosis
+
+
+
+.compras
+    margin-left: 5vw
+button
+    color: black
+    background-color: RGB(205, 92, 92)
+    font-size: 20px
+    border-radius: 5px
+    font-family: Dosis
+
+.carrito
+    background-color: white
+    width: 60px
+    height: 60px
+    font-family: Dosis
+    
+
+
+
+.number
+    background-color: black
+    color: white
+    width: 60px
+    height: 60px
+    font-family: Dosis
+
+
+
+
+.bloque1
+    background-color: RGB(205, 92, 92)
+    
+   
+.bloque2
+    background-color: #C39BD3
+       
+
+.bloque3
+    background-color: white
+       
+    
+   
+.item1
+
     grid-area: 1/1/3/1
     @include item
-    
+
 .item2
 
     grid-area: 1/2/1/4
     @include item
-        
+
 
 .item3
     @include item
@@ -57,13 +139,14 @@ body
 .item9
     @include item
     grid-area: 6/2/7/4
-    
-    
+
+
 @media screen and (max-width: 600px) 
     @mixin item
-        background-color: greenyellow
-        border: 2px solid black
-   
+        background-color: brown
+        border: 2px solid white
+        height: 17vh
+
 
     body
         display: flex
@@ -71,49 +154,20 @@ body
         justify-content: center
 
     .container
-        background-color: #61C9EA
+        background-color: #4b4b4b
         width: 70vw
-        height: 200vh
-        display: grid
+        height: 180vh
         gap: 15px
-        
-        grid-template-rows: repeat (9,1fr)
-        text-align: center
-
-    .item1
+        display: flex
+        align-content: center
+        justify-content: center
+        flex-direction: column
+        margin-top: 15svw
     
-        grid-row: 1/2
-        @include item
+
     
-    .item2
 
-        grid-row: 2/3
-        @include item
-        
 
-    .item3
-        @include item
-        grid-row: 3/4
 
-    .item4
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9 
         @include item
-        grid-row: 4/5
-
-    .item5
-        @include item
-        grid-row: 5/6
-    .item6
-        @include item
-        grid-row: 6/7
-
-    .item7
-        @include item
-        grid-row: 7/8
-
-    .item8
-        @include item
-        grid-row: 8/9
-
-    .item9
-        @include item
-        grid-row: 9/10

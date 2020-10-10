@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
 body {
   display: flex;
   align-items: center;
@@ -56,34 +55,15 @@ body {
 .social-networks {
   margin-left: 5vw;
   color: black;
-  font-family: Dosis;
 }
-
-.compras {
-  margin-left: 5vw;
-}
-
-button {
+.social-networks a {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
   color: black;
   background-color: RGB(205, 92, 92);
-  font-size: 20px;
-  border-radius: 5px;
-  font-family: Dosis;
-}
-
-.carrito {
-  background-color: white;
-  width: 60px;
-  height: 60px;
-  font-family: Dosis;
-}
-
-.number {
-  background-color: black;
-  color: white;
-  width: 60px;
-  height: 60px;
-  font-family: Dosis;
+  font-size: 5px;
+  border-radius: 10px;
 }
 
 .bloque1 {
@@ -178,4 +158,4 @@ button {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css%C3%A7.map */
