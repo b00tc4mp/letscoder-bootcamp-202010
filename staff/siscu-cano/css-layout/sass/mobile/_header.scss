@@ -1,0 +1,28 @@
+body {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    &__logo {
+        display: none;
+    }
+    &__login {
+        margin-right: 20px;
+        >span {
+            display: none;
+        }
+    }
+    &__social {
+        display: none;
+    }
+    &__nav-desktop {
+        display: none;
+    }
+    &__nav-mobile {
+        margin-right: auto;
+    }
+}

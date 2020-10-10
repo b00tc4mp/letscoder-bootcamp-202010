@@ -1,0 +1,10 @@
+.footer {
+    &__info {
+        border: 1px solid red;
+        display: flex;
+        flex-flow: row wrap;
+        >img {
+            flex-basis: calc(50% - 20px);
+        }
+    }
+}
