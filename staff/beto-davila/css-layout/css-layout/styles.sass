@@ -1,20 +1,109 @@
 @media screen and (max-width: 700px)
 
-    @mixin item
+    @mixin item-color
         background-color: #49E5D0
+    @mixin primary-font
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+
+    .hide-mobile
+        display: none
 
     body
         display: flex
         align-items: center
         flex-direction: column
 
+    .header
+        position: fixed
+        height: 5vh
+        width: 100%
+        background-color: #F2F5F3
+        display: flex
+        justify-content: space-evenly
+        margin: auto 
+          
+        
+        &__cart
+            width: 3%
+            height: 100%
+            margin: auto 0
+            background-color: #D2D8D7
+
+            &--qt
+                width: 3%
+                height: 100%
+                margin: auto 0
+                background-color: #D2D8D7
+    .header2
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+
+        &__container
+            width: 50%
+            height: 100%
+            display: flex
+            align-content: center
+            justify-content: center
+            margin-top: 2.5rem
+            flex-wrap: wrap
+
+    .search 
+        height: 3.3vh
+    
+    .lupa
+        height: 4vh
+        border: none
+        width: 10%
+    
+    .img-logo-maria
+        width: 60%
+        height: 35%
+        background-color: #D2D8D7
+        margin: 0
+        text-align: center
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+
+    .slide
+        height: 35vh
+        width: 95vw
+        display: flex
+        flex-direction: column
+
+        &__img
+            display: flex
+            width: 100%
+            height: 80%
+            align-items: center
+            background-color: #C8F0E9
+        
+        &__button-ver-seccion
+            @include primary-font
+            border: none
+            padding: 15px
+            margin-left: 25px
+            font-weight: bold
+        
+        &__container-circles
+            display: flex
+            justify-content: space-between
+            background-color: #A6ADAC
+            height: 20%
+            width: 100%
+
+    a
+        text-decoration: none
+        padding: 15px
+
+
     .wrapper-container
         display: flex
         align-items: center
-        width: 100vw
-        height: 275vh
+        width: 95vw
         flex-direction: column
         background-color: #F6FAED
+        margin: 30px 0
 
     .logo
         height: 75px
@@ -23,37 +112,34 @@
         text-align: center
 
     .header__category
-        width: 30vw
+        width: 40vw
         height: 10vh
         justify-content: center
         padding: 1rem
 
     h3
-        font-family: Verdana, Geneva, Tahoma, sans-serif
+        @include primary-font
         color: black
         text-align: center
         border-top: 2px solid black
         border-bottom: 2px solid black
 
-    .container-category1
-        width: 55vw
-        height: 200vh
+    .container-utensilios
+        width: 50%
         display: grid
         gap: .5rem
         grid-template-rows: repeat(9,150px)
         text-align: center
 
-    .container-category2
-        width: 55vw
-        height: 150vh
+    .container-ingredientes
+        width: 50%
         display: grid
         gap: .5rem
         grid-template-rows: repeat(6,150px)
         text-align: center
 
-    .container-category3
-        width: 55vw
-        height: 100vh
+    .container-fiestas
+        width: 50%
         display: grid
         gap: .5rem
         grid-template-rows: repeat(3,150px)
@@ -61,50 +147,50 @@
 
     .container-description
         position: relative
-        top: 4.9rem
+        top: 4.5rem
         height: 10vh
         width: 27vw
         background-color: #C5F9DF
 
-    .container-description__description
-        color: #646665
-        justify-content: center
-        font-family: Verdana, Geneva, Tahoma, sans-serif
-        font-weight: bold
+        &__description
+            color: #646665
+            justify-content: center
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+            font-weight: bold
 
     .item1
         grid-row: 1/2
-        @include item
+        @include item-color
 
     .item2
-        @include item
+        @include item-color
         grid-row: 2/3
 
     .item3
-        @include item
+        @include item-color
         grid-row: 3/4
 
     .item4
-        @include item
+        @include item-color
         grid-row: 4/5
 
     .item5
-        @include item
+        @include item-color
         grid-row: 5/6
     .item6
-        @include item
+        @include item-color
         grid-row: 6/7
 
     .item7
-        @include item
+        @include item-color
         grid-row: 7/8
 
     .item8
-        @include item
+        @include item-color
         grid-row: 8/9
 
     .item9
-        @include item
+        @include item-color
         grid-row: 9/10
 
     .button-see-more
@@ -117,61 +203,122 @@
         font-size: 1rem
         margin: auto
 
-// @media screen and (min-width: 600px) and (max-width: 800px)    
 
 @media screen and (min-width: 701px)
 
-    @mixin item
+    @mixin item-color
         background-color: #49E5D0
+    @mixin primary-font
+        font-family: Verdana, Geneva, Tahoma, sans-serif
 
-
-    .header-top
+    
+    .header-container
+        display: flex
+        flex-direction: column
+    
+    .header
         position: fixed
         height: 5vh
-        width: 100vw
+        width: 100%
         background-color: #F2F5F3
         display: flex
-        justify-content: flex-end
+        justify-content: space-evenly
+
+
+        &__tag
+            position: relative
+            left: 110px
+            height: 8rem
+            width: 4rem
+            background-color: #D2D8D7
+
+            &--small
+                position: relative
+                left: 60px
+                height: 4rem
+                width: 4rem
+                background-color: #D2D8D7
+
+        &__social
+            width: 25%
+            margin: auto 10px
+        
+        &__cart
+            width: 3%
+            height: 100%
+            margin: auto 0
+            background-color: #D2D8D7
+
+            &--qt
+                text-align: center
+                width: 3%
+                height: 100%
+                margin: auto 0
+                background-color: #D2D8D7
 
     ul
         list-style-type: none
-    
-    .header-top__tag
-        position: relative
-        right: 600px
-        margin: 0 .2rem
-        height: 10rem
-        width: 5rem
+        
+    li
+        float: left
+        display: block
+        margin: auto 10px
+        @include primary-font
+        color: white
+        background-color: #56726D
+        padding: 2px
         cursor: pointer
+    
+    .header2
+        height: 40vh
+        width: 100%
+        margin-top: 35px
 
-    .blue-tag:hover, .yellow-tag:hover
-        height: 10rem
+        &__container
+            width: 100%
+            height: 60%
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-end
+            align-items: center
+            
+        &__buscar
+            width: 7rem
+            height: 2rem
+            background-color: #56726D
+            @include primary-font
+            margin: 0 10px
+            text-align: center
+            color: white
+
+        &__menu > a
+            padding: 15px
+            text-decoration: none
+            background-color: #56726D
+            font-size: 10px
+            color: white
+            @include primary-font
 
     
-    .red-tag
-        background-color: tomato
-    
-    .blue-tag
-        background-color: #2AA184
-        height: 5rem
-    
-    .yellow-tag
-        background-color: #FAB449
-        height: 5rem
+
+    .search 
+        height: 3.3vh
+
+    .lupa
+        height: 4vh
+        border: none
+        width: 5%
+        margin: 0 5px
 
     a 
         cursor: pointer
-        font-family: Verdana, Geneva, Tahoma, sans-serif
- 
-    a:hover
-        color: red
+        @include primary-font
+        margin: auto 10px
+        
 
-    .social-links
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        color: red
-        border: 1px solid black
+    a:hover
+            color: red
+
 
     .wrapper-container
         display: flex
@@ -194,13 +341,13 @@
         padding: 1rem
 
     h3
-        font-family: Verdana, Geneva, Tahoma, sans-serif
+        @include primary-font
         color: black
         text-align: center
         border-top: 2px solid black
         border-bottom: 2px solid black
 
-    .container-category1
+    .container-utensilios
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
@@ -208,7 +355,7 @@
         height: 200vh
         width: 75vw
 
-    .container-category2
+    .container-ingredientes
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: 1fr 1fr 1fr 1fr
@@ -216,7 +363,7 @@
         height: 200vh
         width: 75vw
 
-    .container-category3
+    .container-fiestas
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: 1fr 1fr
@@ -225,39 +372,39 @@
         width: 75vw
 
     .item1
-        @include item
+        @include item-color
         grid-area: 1 / 1 / 3 / 1
 
     .item2
-        @include item
+        @include item-color
         grid-area: 1 / 2 / 1 / 4
 
     .item3
-        @include item
+        @include item-color
         grid-area: 2 / 2 / 2 / 4
 
     .item4
-        @include item
+        @include item-color
         grid-area: 3 / 1 / 4 / 3
 
     .item5
-        @include item
+        @include item-color
         grid-area: 3 / 3 / 5 / 4
 
     .item6
-        @include item
+        @include item-color
         grid-area: 4 / 1 / 5 / 3
 
     .item7
-        @include item
+        @include item-color
         grid-area: 5 / 1 / 7 / 2
 
     .item8
-        @include item
+        @include item-color
         grid-area: 5 / 2 / 6 / 4
 
     .item9
-        @include item
+        @include item-color
         grid-area: 6 / 2 / 7 / 4
 
     .button-see-more
@@ -280,5 +427,5 @@
     .container-description__description
         color: #646665
         justify-content: center
-        font-family: Verdana, Geneva, Tahoma, sans-serif
+        @include primary-font
         font-weight: bold
