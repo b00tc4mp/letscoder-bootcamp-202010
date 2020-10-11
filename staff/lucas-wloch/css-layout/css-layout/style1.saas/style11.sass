@@ -1,0 +1,56 @@
+@import config
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+    +center-content(flex,center,center)
+    flex-direction: column
+    
+.section
+    background-color:  $backgroundColor-section
+    +center-content(flex,center,center)
+    flex-direction: column
+    +size(100vw,2417px)
+    +margin(0,0,auto,130px)
+
+
+.container
+    
+    
+    background-color: $backgroundColor-container
+    +create-grid(grid,1fr 1fr 1fr,repeat(6,1fr),13px)
+    +size(949px,2367px)
+    
+    
+    
+
+    &__item
+        +center-content(flex,center,center)
+        background-color: $backgroundColor-container-item
+        
+        +size(100%,auto)
+        border: 1px solid black
+.one
+    grid-area: 1/1/3/2
+.two
+    grid-area: 1/2/1/4
+.three
+    grid-area: 2/2/2/4
+.four
+    grid-area: 3/1/4/3
+.five
+    grid-area: 3/3/5/4
+.six
+    grid-area: 4/1/5/3
+.seven
+    grid-area: 5/1/7/2
+.eight
+    grid-area: 5/2/6/4
+.nine
+    grid-area: 6/2/7/4
+
+        
+       

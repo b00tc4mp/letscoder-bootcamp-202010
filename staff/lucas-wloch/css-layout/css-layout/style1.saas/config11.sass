@@ -1,0 +1,95 @@
+
+@mixin center-content($display,$justifyContent,$alignItems)
+        display : $display
+        justify-content : $justifyContent
+        align-items : $alignItems
+@mixin create-grid($display,$gridTemplateColumns,$gridTemplateRows,$gap)
+        display : $display
+        grid-template-columns : $gridTemplateColumns
+        grid-template-rows : $gridTemplateRows
+        gap : $gap
+@mixin size($width,$height)
+        width : $width
+        height : $height
+@mixin margin($margin-left,$margin-right,$margin-bottom,$margin-top)
+    margin-left: $margin-left
+    margin-right: $margin-right
+    margin-bottom: $margin-bottom
+    margin-top: $margin-top
+$backgroundColor-container : none
+
+$backgroundColor-container-item : White
+$backgroundColor-section: rgba(38, 136, 128, 0.20)
+@media(max-width: 768px)
+        .section
+                +size(100vw,1590px)
+        .container
+                +size(618px,1539px)
+                +create-grid(grid,1fr 1fr 1fr,repeat(6,1fr),13px)
+                align-Items: center
+                justify-content: center
+
+                &__item
+                        +size(auto,auto)
+
+
+        .one
+                grid-area: 1/1/3/2
+        .two
+                grid-area: 1/2/1/4
+        .three
+                grid-area: 2/2/2/4
+        .four
+                grid-area: 3/1/4/3
+        .five
+                grid-area: 3/3/5/4
+        .six
+                grid-area: 4/1/5/3
+        .seven
+                grid-area: 5/1/7/2
+        .eight
+                grid-area: 5/2/6/4
+        .nine
+                grid-area: 6/2/7/4
+@media(max-width: 1024px)
+        .section
+                +size(100vw,1796px)
+        .container
+                +size(750px,1746px)
+                +create-grid(grid,1fr 1fr 1fr,repeat(6,1fr),13px)
+                
+
+
+                &__item
+                        +size(auto,auto)
+
+
+        .one
+                grid-area: 1/1/3/2
+        .two
+                grid-area: 1/2/1/4
+        .three
+                grid-area: 2/2/2/4
+        .four
+                grid-area: 3/1/4/3
+        .five
+                grid-area: 3/3/5/4
+        .six
+                grid-area: 4/1/5/3
+        .seven
+                grid-area: 5/1/7/2
+        .eight
+                grid-area: 5/2/6/4
+        .nine
+                grid-area: 6/2/7/4
+@media(max-width: 665px)
+        .section
+                +size(100vw,300vh)
+        .container
+                +size(330px,1224px)
+                +create-grid(grid,1fr,repeat(9,1fr),9px)
+                align-Items: center
+                justify-content: center
+
+                &__item
+                        +size(325px,136px)
