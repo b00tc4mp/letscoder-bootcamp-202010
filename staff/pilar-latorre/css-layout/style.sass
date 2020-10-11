@@ -1,7 +1,6 @@
 @mixin item
     background-color:#B99DA4  
     border: 2px solid black
-   
 
 body
     display: flex
@@ -16,10 +15,12 @@ header
     text-align: center
     width: 100vw
     height: 10vh
-    background-color: #E8A1DD  
+    background-color: #634149   
     display: flex
     align-items: flex-end
     position: fixed
+
+
 
 .tresbloques
     display: grid
@@ -47,11 +48,17 @@ header
     background-color: #2A3B40 
 
 .login
-    margin-left: 8vw
+    margin-left: 3vw
+    color: white
 
+.men
+    margin-left: 5vw
+    font-size: 2vw
+    background-color: #7465B2 
+    color: black
 
 .social-network
-    margin-left: 5vw
+    margin-left: 9vw
     button
         font-size: 2vw
         background-color: #7465B2 
@@ -61,6 +68,22 @@ header
     margin-left: 1vw
     button
         font-size: 2vw
+        background-color: #7E3F6E
+        color: white
+.upcontainer
+    margin-top: 7vw
+    background-color: #E8A1DD  
+    width: 100vw
+    height: 20vh
+    border-radius: 3vw
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    padding-right: 20px
+    button
+        width: 5vw
+        height: 5vw
+        font-size: 3.5vw
         background-color: #7E3F6E
         color: white
 
@@ -73,7 +96,7 @@ header
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: repeat (6,1fr)
     text-align: center
-    margin: 6vw 15vw 0vw 15vw
+    margin: 4vw 15vw 0vw 15vw
     padding: 10px
 
 .item1
@@ -112,7 +135,69 @@ header
 .item9
     @include item
     grid-area: 6/2/7/4
+
+.container2
+    background-color: #E8A1DD  
+    width: 70vw
+    height: 150vh
+    display: grid
+    gap: 5px
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: repeat (3,1fr)
+    text-align: center
+    margin: 4vw 15vw 0vw 15vw
+    padding: 10px
+
+.item10
     
+    grid-area: 1/1/3/1
+    @include item
+    
+.item11
+    grid-area: 1/2/1/4
+    @include item
+        
+.item12
+    @include item
+    grid-area: 2/2/2/4
+
+.item13
+    @include item
+    grid-area: 3/1/4/3
+
+.item14
+    @include item
+    grid-area: 3/3/5/4
+
+.item15
+    @include item
+    grid-area: 4/1/5/3
+
+.container3
+    background-color: #E8A1DD  
+    width: 70vw
+    height: 70vh
+    display: grid
+    gap: 5px
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: repeat (2,1fr)
+    text-align: center
+    margin: 4vw 15vw 0vw 15vw
+    padding: 10px
+
+.item16
+    
+    grid-area: 1/1/3/1
+    @include item
+    
+.item17
+    grid-area: 1/2/1/4
+    @include item
+        
+.item18
+    @include item
+    grid-area: 2/2/2/4
+
     
 @media screen and (max-width: 600px) 
     .ocultar
@@ -142,8 +227,29 @@ header
         text-align: center
         justify-content: center
         margin-top: 15vw
+    .container2
+        background-color: #E8A1DD  
+        width: 70vw
+        height: 120vh
+        gap: 15px
+        display: flex
+        flex-direction: column
+        text-align: center
+        justify-content: center
+    .container3
+        background-color: #E8A1DD  
+        width: 70vw
+        height: 50vh
+        gap: 15px
+        display: flex
+        flex-direction: column
+        text-align: center
+        justify-content: center
 
-    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9
+        
+     
+
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12, .item13, .item14, .item15, .item16, .item17, .item18
                 
         @include item
         
