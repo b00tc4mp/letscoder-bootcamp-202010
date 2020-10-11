@@ -1,0 +1,9 @@
+.title {
+    @media (min-width: $breakpoint-desktop) {
+        &__items {
+            &__image {
+                display: block;
+            }
+        }
+    }
+}
