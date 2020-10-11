@@ -10,30 +10,34 @@
 
 <body>
     <header class="header">
+        <div class="header-fixed">
+            <img class="header-fixed__logo hide-mobile" src="https://via.placeholder.com/232x140?text=Logo" alt="Logo">
+            <div>
+                <div class="header-fixed__nav-mobile">
+                    <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Icono menu">
+                </div>
+                <a class="header-fixed__login" href="#">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Usuario">
+                    <span class="hide-mobile">Entra / Registate</span>
+                </a>
+                <div class="header-fixed__search-mobile">
+                    <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Icono search">
+                </div>
+                <div class="header-fixed__social hide-mobile">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Facebook">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Twitter">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Instagram">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Pinterest">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Youtube">
+                </div>
+                <div class="header-fixed__checkout">
+                    <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Carrito">
+                    <img src="https://via.placeholder.com/50x50?text=0" alt="Cesta numero items">
+                </div>
+            </div>
+        </div>
 
-        <img class="header__logo" src="https://via.placeholder.com/232x140?text=Logo" alt="Logo">
-        <div class="header__nav-mobile">
-            <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Icono menu">
-        </div>
-        <a class="header__login" href="#">
-            <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Usuario">
-            <span>Entra / Registate</span>
-        </a>
-        <div class="header__search-mobile">
-            <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Icono search">
-        </div>
-        <div class="header__social">
-            <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Facebook">
-            <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Twitter">
-            <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Instagram">
-            <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Pinterest">
-            <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Youtube">
-        </div>
-        <div class="header__checkout">
-            <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Carrito">
-            <img src="https://via.placeholder.com/50x50?text=0" alt="Cesta numero items">
-        </div>
-        <div class="header__nav-desktop">
+        <div class="header__nav-desktop hide-mobile">
             <div>
                 <img src="https://via.placeholder.com/135x30?text=Logo" alt="Novedades">
                 <img src="https://via.placeholder.com/135x30?text=Logo" alt="Ofertas">
@@ -50,9 +54,9 @@
     </header>
     <main>
         <div class="carousel">
-            <img class="carousel__arrow-left" src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icon arrow left">
+            <img class="carousel__arrow-left" src="https://img.icons8.com/9b9b9b/windows/27/full-image.png" alt="Icon arrow left">
             <img class="carousel__image" src="https://via.placeholder.com/1080x600?text=Carousel images" alt="Carousel images">
-            <img class="carousel__arrow-right" src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icon arrow right">
+            <img class="carousel__arrow-right" src="https://img.icons8.com/9b9b9b/windows/27/full-image.png" alt="Icon arrow right">
             <div class="carousel__items">
                 <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
                 <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
@@ -168,13 +172,13 @@
 
             <div class="grid-layout--type0">
                 <div class="grid-layout__up">
-                    <img src="https://via.placeholder.com/95x125?text=Carousel images" alt="TARTA DE LIMA Y ALBAHACA">
+                    <img src="https://via.placeholder.com/495x325?text=TARTA DE LIMA Y ALBAHACA" alt="TARTA DE LIMA Y ALBAHACA">
                 </div>
                 <div class="grid-layout__up">
-                    <img src="https://via.placeholder.com/95x125?text=Carousel images" alt="TARTA DE MANZANA VERDE Y FRESA">
+                    <img src="https://via.placeholder.com/495x325?text=TARTA DE MANZANA VERDE Y FRESA" alt="TARTA DE MANZANA VERDE Y FRESA">
                 </div>
                 <div class="grid-layout__up">
-                    <img src="https://via.placeholder.com/95x125?text=Carousel images" alt="TARTA DE QUESO DEL KAVA MARBELLA">
+                    <img src="https://via.placeholder.com/495x325?text=TARTA DE QUESO DEL KAVA MARBELLA" alt="TARTA DE QUESO DEL KAVA MARBELLA">
                 </div>
             </div>
 
@@ -183,12 +187,19 @@
 
         <section class="hide-mobile">
             <div class="title">
-                <img class="title__image" src="https://via.placeholder.com/95x125?text=Carousel images" alt="Image section">
+                <img class="title__image" src="https://via.placeholder.com/95x125?text=Nuestras marcas" alt="Nuestras marcas">
                 <h2 class="title__text">Nuestras marcas</h2>
             </div>
 
-            <div class="grid-layout">
-                <img src="https://via.placeholder.com/95x125?text=Carousel images" alt="Image section">
+            <div class="grid-layout--type0">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
             </div>
 
             <button class="button button--center">Ver mas</button>
@@ -196,16 +207,16 @@
     </main>
     <footer class="footer">
         <div class="footer__info">
-            <div class="box box1">
+            <div>
                 <img src="https://via.placeholder.com/270x122?text=Envío gratis" alt="Envío gratis">
             </div>
-            <div class="box box2">
+            <div>
                 <img src="https://via.placeholder.com/270x122?text=Envío 24-48h" alt="Envío 24-48h">
             </div>
-            <div class="box box3">
+            <div>
                 <img src="https://via.placeholder.com/270x122?text=Devoluciones" alt="Devoluciones">
             </div>
-            <div class="box box4">
+            <div>
                 <img src="https://via.placeholder.com/270x122?text=Contra reembolso" alt="Contra reembolso">
             </div>
         </div>
