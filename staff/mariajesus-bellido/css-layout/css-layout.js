@@ -1,3 +1,5 @@
+
+
 //CREAMOS CONTENEDOR Y CAJA CON document.createElement('div')
 
 //Creamos el contenedor principal
@@ -72,7 +74,7 @@ boxTopHorizontal01.style.backgroundColor = "#93a8ac";
 boxTopHorizontal02.style.backgroundColor = "#d7ceb2"; 
 
 boxMiddleVertical.style.backgroundColor = "#a59e8c";  
-boxMiddleHorizontal01.style.backgroundColor = "#6635b"; 
+boxMiddleHorizontal01.style.backgroundColor = "#77625c"; 
 boxMiddleHorizontal02.style.backgroundColor = "#757083"; 
 
 boxBottomVertical.style.backgroundColor = "#474056"; 
@@ -96,9 +98,5 @@ boxMiddleHorizontal02.style.gridArea = '7 / 1 / 9 / 4';
 boxBottomVertical.style.gridArea = '9 / 1 / 13 / 3'; 
 boxBottomHorizontal01.style.gridArea = '9 / 3 / 11 / 6'; 
 boxBottomHorizontal02.style.gridArea = '11 / 3 / 13 / 6'; 
-
-
-
-
 
 
