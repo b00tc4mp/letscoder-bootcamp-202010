@@ -1,44 +1,23 @@
-var children = document.body.children;
-var numtab = 0;
-var tag;
-var texto = "";
-var tt = "\t";
+var elements = document.body.children;
+ var count = -1;
 
-function hola(){
-    for (var j = 0; j < numtab; j++){
-        texto = texto.toString() + " " + tt.toString();
-    }
-    
-}
+ printSemanticElements(elements);
 
-function printSemanticElements(elements, parentElement) {
-    debugger
-    for (var i = 0; i < elements.length; i++) {
-        var element = elements[i];
-        var newParentElement = element.parentElement.tagName;
-        // TODO do not print tags DIV, SPAN, SCRIPT, NOSCRIPT, STYLE, IFRAME
-        if (element.tagName !== "DIV" 
-            && element.tagName !== "SPAN"
-            && element.tagName !== "SCRIPT"
-            && element.tagName !== "NOSCRIPT"
-            && element.tagName !== "STYLE"
-            && element.tagName !== "IFRAME"
-            && element.tagName !== "A"
-            && element.tagName !== "BR"
-            && element.tagName !== "HR"
-            ){
-                tag = element.tagName;
-                hola();
-                //console.log(hola());
-                console.log(texto + tag);
-                numtab++;
-            }
-            if(parentElement !== newParentElement){
-                texto = "";
-                numtab= 0; 
-            }
-        printSemanticElements(element.children, newParentElement);
-    };
-};
+ function printTabs(num) {
+     return "\t".repeat(num);
+ }
 
-printSemanticElements(children, 'BODY');
+ function printSemanticElements(elements) {
+     for (var i = 0; i < elements.length; i++) {
+         var element = elements[i];
+
+         // TODO do not print tags DIV, SPAN, SCRIPT, NOSCRIPT, STYLE, IFRAME
+         if ((element.tagName.toUpperCase() !== "DIV") && (element.tagName.toUpperCase() !== "SPAN") && (element.tagName.toUpperCase() !== "SCRIPT") && (element.tagName.toUpperCase() !== "NOSCRIPT") && (element.tagName.toUpperCase() !== "STYLE") && (element.tagName.toUpperCase() !== "IFRAME")) {
+
+             ++count;
+             console.log(printTabs(count) + element.tagName);
+             printSemanticElements(element.children);
+             --count;
+         }
+     }
+ } 
