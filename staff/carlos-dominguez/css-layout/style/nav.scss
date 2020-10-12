@@ -1,0 +1,27 @@
+.highligths {
+  margin: 5px;
+  align-self: flex-end;
+  .nuevos {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    div {
+      margin: 5px;
+      padding: 5px;
+    }
+    .ofertas {
+      background-color: rgb(144, 70, 241);
+      p {
+        color: white;
+        font-family: sans-serif;
+      }
+    }
+    .novedades {
+      background-color: rgb(248, 175, 58);
+      p {
+        color: white;
+        font-family: sans-serif;
+      }
+    }
+  }
+}
