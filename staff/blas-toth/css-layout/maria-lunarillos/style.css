@@ -1,0 +1,364 @@
+@media screen and (max-width: 400px) {
+  .pageContainer {
+    text-align: center;
+  }
+
+  .topStaticBar {
+    display: flex;
+    justify-content: space-around;
+    grid-area: topStaticBar;
+    background-color: #f8f8f8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+  }
+  .topStaticBar .hamburgerMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    font-size: 3em;
+    color: #FF5959;
+  }
+  .topStaticBar .social {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    width: 20vw;
+    font-size: 1.5em;
+  }
+  .topStaticBar #entraText {
+    display: none;
+  }
+  .topStaticBar .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    font-size: 3em;
+    color: grey;
+  }
+  .topStaticBar .shoppingCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    font-size: 3em;
+    color: grey;
+  }
+
+  nav {
+    grid-area: nav;
+    margin-top: 54px;
+    width: 100%;
+    height: 50px;
+    font-size: 1.8em;
+  }
+
+  .mainContainer {
+    text-align: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine";
+  }
+
+  .one {
+    grid-area: one;
+    background-color: #D7C5A2;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .two {
+    grid-area: two;
+    background-color: #9975A5;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .three {
+    grid-area: three;
+    background-color: #E15F61;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .four {
+    grid-area: four;
+    background-color: #B7D5D7;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .five {
+    grid-area: five;
+    background-color: #04BAD2;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .six {
+    grid-area: six;
+    background-color: #B69E8D;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .seven {
+    grid-area: seven;
+    background-color: #8d9394;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .eight {
+    grid-area: eight;
+    background-color: #8d9394;
+    border: solid 1px white;
+    height: 20vw;
+  }
+
+  .nine {
+    grid-area: nine;
+    background-color: #8d9394;
+    border: solid 1px white;
+    height: 20vw;
+  }
+}
+@media screen and (min-width: 401px) {
+  .pageContainer {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-tamplate-rows: repeat(2, 1fr);
+    grid-template-areas: "topStaticBar" "nav" "mainContainer";
+  }
+
+  .fixedPosBox {
+    position: fixed;
+    top: 230px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: solid 1px orange;
+    border-radius: 20px;
+  }
+
+  .topStaticBar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 50px;
+    grid-area: topStaticBar;
+  }
+  .topStaticBar .hamburgerMenu {
+    display: none;
+  }
+  .topStaticBar .bookmarks {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 70px;
+    margin-left: 90px;
+  }
+  .topStaticBar .bookmarks .bookmark1 {
+    width: 80px;
+    height: 130px;
+    background-color: #FF5959;
+  }
+  .topStaticBar .bookmarks .bookmark2 {
+    width: 80px;
+    height: 80px;
+    background-color: #6199AF;
+  }
+  .topStaticBar .bookmarks .bookmark2:hover {
+    height: 130px;
+  }
+  .topStaticBar .bookmarks .bookmark3 {
+    width: 80px;
+    height: 80px;
+    background-color: #F6B436;
+  }
+  .topStaticBar .bookmarks .bookmark3:hover {
+    height: 130px;
+  }
+  .topStaticBar .user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 35vw;
+    font-size: 1.5em;
+  }
+  .topStaticBar .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20vw;
+    font-size: 1.5em;
+  }
+  .topStaticBar .shoppingCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40px;
+    font-size: 1.5em;
+  }
+
+  nav {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    height: 250px;
+    grid-area: nav;
+  }
+  nav .maria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 250px;
+    font-weight: bolder;
+    font-size: 2.2em;
+  }
+  nav .iconMenu {
+    width: 50vw;
+    height: 250px;
+  }
+  nav .iconMenu .buttonUp {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+  }
+  nav .iconMenu .buttonUp .buttonUpWide1 {
+    margin-top: 50px;
+    width: 130px;
+    height: 30px;
+    background-color: #9FAA4D;
+  }
+  nav .iconMenu .buttonUp .buttonUpWide2 {
+    margin-top: 50px;
+    width: 130px;
+    height: 30px;
+    background-color: #8E789D;
+  }
+  nav .iconMenu .buttonUp .buttonUpWide3 {
+    margin-top: 50px;
+    width: 180px;
+    height: 28px;
+    background-color: #ffffff;
+    border: solid 1px grey;
+  }
+  nav .iconMenu .buttonDown {
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+  }
+  nav .iconMenu .buttonDown .buttonDownSquare1 {
+    margin-top: 35px;
+    width: 100px;
+    height: 100px;
+    background-color: #F2F2F2;
+  }
+  nav .iconMenu .buttonDown .buttonDownSquare2 {
+    margin-top: 35px;
+    width: 100px;
+    height: 100px;
+    background-color: #F2F2F2;
+  }
+  nav .iconMenu .buttonDown .buttonDownSquare3 {
+    margin-top: 35px;
+    width: 100px;
+    height: 100px;
+    background-color: #F2F2F2;
+  }
+  nav .iconMenu .buttonDown .buttonDownSquare4 {
+    margin-top: 35px;
+    width: 100px;
+    height: 100px;
+    background-color: #F2F2F2;
+  }
+  nav .iconMenu .buttonDown .buttonDownSquare5 {
+    margin-top: 35px;
+    width: 100px;
+    height: 100px;
+    background-color: #F95757;
+  }
+
+  .mainContainer {
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 85%;
+    height: 120vw;
+    text-align: center;
+    display: grid;
+    grid-area: mainContainer;
+    grid-gap: 10px;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "one two two" "one three three" "four four six" "five five six" "seven eight eight" "seven nine nine";
+  }
+
+  .one {
+    background-color: #D7C5A2;
+    border: solid 1px white;
+    grid-area: one;
+  }
+
+  .two {
+    background-color: #9975A5;
+    border: solid 1px white;
+    grid-area: two;
+  }
+
+  .three {
+    background-color: #E15F61;
+    border: solid 1px white;
+    grid-area: three;
+  }
+
+  .four {
+    background-color: #B7D5D7;
+    border: solid 1px white;
+    grid-area: four;
+  }
+
+  .five {
+    background-color: #04BAD2;
+    border: solid 1px white;
+    grid-area: five;
+  }
+
+  .six {
+    background-color: #B69E8D;
+    border: solid 1px white;
+    grid-area: six;
+  }
+
+  .seven {
+    background-color: #8d9394;
+    border: solid 1px white;
+    grid-area: seven;
+  }
+
+  .eight {
+    background-color: #8d9394;
+    border: solid 1px white;
+    grid-area: eight;
+  }
+
+  .nine {
+    background-color: #8d9394;
+    border: solid 1px white;
+    grid-area: nine;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
