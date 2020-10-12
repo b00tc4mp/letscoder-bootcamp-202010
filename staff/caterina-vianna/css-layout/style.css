@@ -1,0 +1,151 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+.header {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__logo {
+  margin-right: auto;
+  width: 60vw;
+}
+
+.header__right-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.header__login,
+.header__facebook-icon,
+.header__twitter-icon,
+.header__instagram-icon,
+.header__pinterest-icon,
+.header__youtube-icon,
+.header__cart-icon {
+  background-color: rgba(240, 255, 255, 0.219);
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section {
+  width: 60vw;
+  height: 200vh;
+  display: grid;
+  grid-template-areas:
+    "grid--one   grid--two    grid--two"
+    "grid--one   grid--three  grid--three"
+    "grid--four  grid--four   grid--five"
+    "grid--six   grid--six    grid--five"
+    "grid--seven grid--eight  grid--eight"
+    "grid--seven grid--nine   grid--nine";
+}
+
+.grid {
+  position: relative;
+  /*  border: 1px solid black; */
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  margin: 8px;
+  padding: 10px;
+}
+
+.grid--one {
+  grid-area: grid--one;
+}
+
+.grid--two {
+  grid-area: grid--two;
+}
+
+.grid--three {
+  grid-area: grid--three;
+}
+
+.grid--four {
+  grid-area: grid--four;
+}
+
+.grid--five {
+  grid-area: grid--five;
+}
+
+.grid--six {
+  grid-area: grid--six;
+}
+
+.grid--seven {
+  grid-area: grid--seven;
+}
+
+.grid--eight {
+  grid-area: grid--eight;
+}
+
+.grid--nine {
+  grid-area: grid--nine;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 60vw;
+    height: 200vh;
+    display: grid;
+    grid-template-areas:
+      "grid--one    grid--one    grid--one"
+      "grid--two    grid--two    grid--two"
+      "grid--three  grid--three  grid--three"
+      "grid--four   grid--four   grid--four"
+      "grid--five   grid--five   grid--five"
+      "grid--six    grid--six    grid--six"
+      "grid--seven  grid--seven  grid--seven"
+      "grid--eight  grid--eight  grid--eight"
+      "grid--nine   grid--nine   grid--nine";
+  }
+
+  .grid--one {
+    grid-area: grid--one;
+  }
+
+  .grid--two {
+    grid-area: grid--two;
+  }
+
+  .grid--three {
+    grid-area: grid--three;
+  }
+
+  .grid--four {
+    grid-area: grid--four;
+  }
+
+  .grid--five {
+    grid-area: grid--five;
+  }
+
+  .grid--six {
+    grid-area: grid--six;
+  }
+
+  .grid--seven {
+    grid-area: grid--seven;
+  }
+
+  .grid--eight {
+    grid-area: grid--eight;
+  }
+
+  .grid--nine {
+    grid-area: grid--nine;
+  }
+}
