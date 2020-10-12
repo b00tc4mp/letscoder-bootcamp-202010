@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maria-lunarillos.css">
+    <title>Maria Lunarillos Website (BEM + SASS)</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-fixed">
+            <img class="header-fixed__logo hide-mobile" src="https://via.placeholder.com/232x140?text=Logo" alt="Logo">
+            <div>
+                <div class="header-fixed__nav-mobile">
+                    <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Icono menu">
+                </div>
+                <a class="header-fixed__login" href="#">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Usuario">
+                    <span class="hide-mobile">Entra / Registate</span>
+                </a>
+                <div class="header-fixed__search-mobile">
+                    <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Icono search">
+                </div>
+                <div class="header-fixed__social hide-mobile">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Facebook">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Twitter">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Instagram">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Pinterest">
+                    <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icono Youtube">
+                </div>
+                <div class="header-fixed__checkout">
+                    <img src="https://img.icons8.com/cccccc/windows/50/full-image.png" alt="Carrito">
+                    <img src="https://via.placeholder.com/50x50?text=0" alt="Cesta numero items">
+                </div>
+            </div>
+        </div>
+
+        <div class="header__nav-desktop hide-mobile">
+            <div>
+                <img src="https://via.placeholder.com/135x30?text=Logo" alt="Novedades">
+                <img src="https://via.placeholder.com/135x30?text=Logo" alt="Ofertas">
+                <img src="https://via.placeholder.com/135x30?text=Logo" alt="Search">
+            </div>
+            <div>
+                <img src="https://img.icons8.com/cccccc/windows/100/full-image.png" alt="Utensilios">
+                <img src="https://img.icons8.com/cccccc/windows/100/full-image.png" alt="Ingredientes">
+                <img src="https://img.icons8.com/cccccc/windows/100/full-image.png" alt="Fiestas">
+                <img src="https://img.icons8.com/cccccc/windows/100/full-image.png" alt="Marcas">
+                <img src="https://img.icons8.com/cccccc/windows/100/full-image.png" alt="Blog">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="carousel">
+            <img class="carousel__arrow-left" src="https://img.icons8.com/9b9b9b/windows/27/full-image.png" alt="Icon arrow left">
+            <img class="carousel__image" src="https://via.placeholder.com/1080x600?text=Carousel images" alt="Carousel images">
+            <img class="carousel__arrow-right" src="https://img.icons8.com/9b9b9b/windows/27/full-image.png" alt="Icon arrow right">
+            <div class="carousel__items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+                <img src="https://img.icons8.com/cccccc/windows/13/full-image.png" alt="Icon items">
+            </div>
+        </div>
+
+        <section>
+            <div class="title">
+                <img class="title__image" src="https://via.placeholder.com/95x125?text=Carousel images" alt="Utensilios">
+                <h2 class="title__text">Utensilios</h2>
+            </div>
+
+            <div class="grid-layout--type3">
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=MOLDES DE REPOSTERÍA" alt="MOLDES DE REPOSTERÍA">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=UTENSILIOS BÁSICOS" alt="UTENSILIOS BÁSICOS">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=PEQUEÑO ELECTRODOMÉSTICO" alt="PEQUEÑO ELECTRODOMÉSTICO">
+                </div>
+                <div class="grid-layout__middle">
+                    <img src="https://via.placeholder.com/800x80?text=CÁPSULAS PARA MAGDALENAS" alt="CÁPSULAS PARA MAGDALENAS">
+                </div>
+                <div class="grid-layout__middle">
+                    <img src="https://via.placeholder.com/800x80?text=CAJAS Y BASES" alt="CAJAS Y BASES">
+                </div>
+                <div class="grid-layout__middle">
+                    <img src="https://via.placeholder.com/800x80?text=CORTADORES DE GALLETAS" alt="CORTADORES DE GALLETAS">
+                </div>
+                <div class="grid-layout__bottom">
+                    <img src="https://via.placeholder.com/800x80?text=CERÁMICA Y TEXTIL" alt="CERÁMICA Y TEXTIL">
+                </div>
+                <div class="grid-layout__bottom">
+                    <img src="https://via.placeholder.com/800x80?text=BANETONES PARA PAN" alt="BANETONES PARA PAN">
+                </div>
+                <div class="grid-layout__bottom">
+                    <img src="https://via.placeholder.com/800x80?text=TOPPERS Y FIGURITAS" alt="TOPPERS Y FIGURITAS">
+                </div>
+            </div>
+
+            <button class="button button--center">Ver más</button>
+        </section>
+
+        <section>
+            <div class="title">
+                <img class="title__image" src="https://via.placeholder.com/95x125?text=Carousel images" alt="Image section">
+                <h2 class="title__text">Ingredientes</h2>
+            </div>
+
+            <div class="grid-layout--type2">
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=FONDANT" alt="FONDANT">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=INGREDIENTES DE REPOSTERÍA" alt="INGREDIENTES DE REPOSTERÍA">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=IMPRESIÓN PERSONALIZADA" alt="IMPRESIÓN PERSONALIZADA">
+                </div>
+
+                <div class="grid-layout__bottom">
+                    <img src="https://via.placeholder.com/800x80?text=COLORANTES ALIMENTARIOS" alt="COLORANTES ALIMENTARIOS">
+                </div>
+                <div class="grid-layout__bottom">
+                    <img src="https://via.placeholder.com/800x80?text=PAPEL COMESTIBLE" alt="PAPEL COMESTIBLE">
+                </div>
+                <div class="grid-layout__bottom">
+                    <img src="https://via.placeholder.com/800x80?text=SPRINKLES Y PURPURINAS" alt="SPRINKLES Y PURPURINAS">
+                </div>
+            </div>
+
+            <button class="button button--center">Ver más</button>
+        </section>
+
+        <section>
+            <div class="title">
+                <img class="title__image" src="https://via.placeholder.com/95x125?text=Carousel images" alt="Image section">
+                <h2 class="title__text">Fiestas</h2>
+            </div>
+
+            <div class="grid-layout--type1">
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=FIESTAS TEMÁTICAS" alt="FIESTAS TEMÁTICAS">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=FIESTAS PERSONAJES" alt="FIESTAS PERSONAJES">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/800x80?text=ACCESORIOS PARA FIESTAS" alt="ACCESORIOS PARA FIESTAS">
+                </div>
+            </div>
+
+            <button class="button button--center">Ver más</button>
+        </section>
+
+        <section>
+            <div class="title">
+                <img class="title__image" src="https://via.placeholder.com/95x125?text=Carousel images" alt="Blog">
+                <h2 class="title__text">Blog</h2>
+                <h3 class="title__subtitle">Últimas entradas en el blog</h3>
+            </div>
+
+            <div class="grid-layout--type0">
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/495x325?text=TARTA DE LIMA Y ALBAHACA" alt="TARTA DE LIMA Y ALBAHACA">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/495x325?text=TARTA DE MANZANA VERDE Y FRESA" alt="TARTA DE MANZANA VERDE Y FRESA">
+                </div>
+                <div class="grid-layout__up">
+                    <img src="https://via.placeholder.com/495x325?text=TARTA DE QUESO DEL KAVA MARBELLA" alt="TARTA DE QUESO DEL KAVA MARBELLA">
+                </div>
+            </div>
+
+            <button class="button button--center">Ir al blog</button>
+        </section>
+
+        <section class="hide-mobile">
+            <div class="title">
+                <img class="title__image" src="https://via.placeholder.com/95x125?text=Nuestras marcas" alt="Nuestras marcas">
+                <h2 class="title__text">Nuestras marcas</h2>
+            </div>
+
+            <div class="grid-layout--type0">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+                <img src="https://via.placeholder.com/95x125?text=Marcas" alt="Marcas">
+            </div>
+
+            <button class="button button--center">Ver mas</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <div>
+                <img src="https://via.placeholder.com/270x122?text=Envío gratis" alt="Envío gratis">
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/270x122?text=Envío 24-48h" alt="Envío 24-48h">
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/270x122?text=Devoluciones" alt="Devoluciones">
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/270x122?text=Contra reembolso" alt="Contra reembolso">
+            </div>
+        </div>
+
+        <div class="footer__contact">
+            <div>
+                <p>Síguenos</p>
+                <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icon Facebook">
+                <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icon Twitter">
+                <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icon Instagram">
+                <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icon Pinterest">
+                <img src="https://img.icons8.com/cccccc/windows/27/full-image.png" alt="Icon Youtube">
+            </div>
+            <div class="footer__newsletter">
+                <p>Recibe las novedades en tu e-mail</p>
+                <form action="#">
+                    <input type="text" name="email">
+                    <p>
+                        <input type="checkbox" name="confirm" value="1">
+                        <label>Acepto la política de privacidad</label>
+                    </p>
+                    <button class="button button--center">Suscríbete</button>
+                </form>
+            </div>
+            <div class="footer__about-us">
+                <ul>
+                    <li>
+                        <img src="https://img.icons8.com/cccccc/windows/30/full-image.png" alt="Icono Email">
+                        <span>Contacto</span>
+                    </li>
+                    <li>
+                        <img src="https://img.icons8.com/cccccc/windows/30/full-image.png" alt="Icono Sobre nosotros">
+                        <span>Sobre nosotros</span>
+                    </li>
+                    <li>
+                        <img src="https://img.icons8.com/cccccc/windows/30/full-image.png" alt="Icono Condiciones de venta">
+                        <span>Condiciones de venta</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            Copyright ©2020 María Lunarillos
+        </div>
+    </footer>
+</body>
+
+</html>
