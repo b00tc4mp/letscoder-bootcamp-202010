@@ -1,0 +1,256 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  background: grey;
+  height: 10vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  position: fixed;
+  display: inline;
+}
+
+.social-networks {
+  width: 30vw;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
+}
+.social-networks div {
+  width: 5vw;
+  height: 5vh;
+}
+
+.tres-bloques {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: left;
+  justify-content: left;
+  width: 100px;
+  height: 60px;
+  margin-left: 4vw;
+}
+.tres-bloques div {
+  width: 60px;
+  height: 60px;
+}
+.tres-bloques div:hover {
+  height: 120px;
+}
+
+.bloque1 {
+  background: yellow;
+}
+
+.bloque2 {
+  background: red;
+}
+
+.bloque3 {
+  background: green;
+}
+
+.container {
+  background-color: #61C9EA;
+  width: 70vw;
+  height: 200vh;
+  display: grid;
+  gap: 15px;
+  margin-top: 20vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 6, 1fr;
+  text-align: center;
+}
+
+.item1 {
+  grid-area: 1/1/3/1;
+  background-color: greenyellow;
+  border: 2px solid black;
+}
+
+.item2 {
+  grid-area: 1/2/1/4;
+  background-color: greenyellow;
+  border: 2px solid black;
+}
+
+.item3 {
+  background-color: greenyellow;
+  border: 2px solid black;
+  grid-area: 2/2/2/4;
+}
+
+.item4 {
+  background-color: greenyellow;
+  border: 2px solid black;
+  grid-area: 3/1/4/3;
+}
+
+.item5 {
+  background-color: greenyellow;
+  border: 2px solid black;
+  grid-area: 3/3/5/4;
+}
+
+.item6 {
+  background-color: greenyellow;
+  border: 2px solid black;
+  grid-area: 4/1/5/3;
+}
+
+.item7 {
+  background-color: greenyellow;
+  border: 2px solid black;
+  grid-area: 5/1/7/2;
+}
+
+.item8 {
+  background-color: greenyellow;
+  border: 2px solid black;
+  grid-area: 5/2/6/4;
+}
+
+.item9 {
+  background-color: greenyellow;
+  border: 2px solid black;
+  grid-area: 6/2/7/4;
+}
+
+.item1__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item2__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item3__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item4__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item5__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item6__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item7__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item8__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.item9__textBoard {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background-color: #61C9EA;
+    width: 70vw;
+    height: 180vh;
+    display: grid;
+    gap: 15px;
+    margin-top: 20vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .item1 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item2 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item3 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item4 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item5 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item6 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item7 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item8 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+
+  .item9 {
+    height: 17vh;
+    background-color: greenyellow;
+    border: 2px solid black;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
