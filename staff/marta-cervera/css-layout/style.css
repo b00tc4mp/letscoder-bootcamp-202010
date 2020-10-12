@@ -191,7 +191,7 @@ header {
 .container3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-row: repeat 6, 1fr;
+  
   background-color: white;
   width: 70vw;
   height: 150vh;
