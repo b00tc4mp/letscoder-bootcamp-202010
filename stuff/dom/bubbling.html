@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        body, div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            cursor: pointer;
+        }
+
+        .one {
+            width: 30vw;
+            height: 30vh;
+            background-color: plum;
+        }
+
+        .two {
+            width: 10vw;
+            height: 10vh;
+            background-color: skyblue;
+        }
+    </style>
+    <div class="one">
+        1
+        <div class="two">
+            2
+            <button class="three">3</button>
+        </div>
+    </div>
+    <script>
+        var three = document.getElementsByClassName('three')[0]
+
+        // three.onclick = function(event) {
+        //     event.stopPropagation()
+            
+        //     console.log(3)
+        // }
+
+        three.addEventListener('click', function(event) {
+            // event.stopPropagation()
+
+            console.log(3)
+        })
+
+        var one = document.getElementsByClassName('one')[0]
+
+        // one.onclick = function() {
+        //     console.log(1)
+        // }
+
+        one.addEventListener('click', function(event) {
+            // event.stopPropagation()
+
+            console.log(1)
+        })
+
+        var two = document.getElementsByClassName('two')[0]
+
+        // two.onclick = function(event) {
+        //     // event.stopPropagation()
+
+        //     console.log(2)
+        // }
+
+        two.addEventListener('click', function(event) {
+            // event.stopPropagation()
+
+            console.log(2)
+        })
+    </script>
+</body>
+</html>
