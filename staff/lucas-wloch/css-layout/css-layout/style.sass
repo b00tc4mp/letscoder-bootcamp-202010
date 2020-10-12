@@ -1,0 +1,153 @@
+@import config
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body 
+    +center-content(flex,center,center)
+    flex-direction: column
+    
+.header
+    align-self: flex-start
+    position: fixed
+    top: 0
+    +size(100vw,50px)
+    +center-content(flex,space-between,center)
+    background-color: $backgroundColor-header
+    border: .5px solid black
+    padding: 2px 130px 2px 130px
+    
+        
+    &__icons
+        align-self: baseline
+        +center-content(flex,space-evenly,flex-start)
+        gap: 1px
+    &__icons > div:hover 
+        +size(80px,125px)
+        cursor: pointer
+
+    &__item
+        
+        &--red
+            background-color: red
+            +size(80px,125px)
+            border: 3px solid white
+            text-align: center
+        &--blue
+            background-color: blue
+            +size(70px,70px)
+            border: 3px solid white
+            text-align: center
+        &--green
+            background-color: green
+            +size(70px,70px)
+            border: 3px solid white
+            text-align: center
+            
+    &__right-section
+        +center-content(flex,flex-end,center)
+        +size(50vw,50px)
+        gap: 5px
+    
+    &__facebook-button, &__twitter-button, &__instagram-button, &__pinterest-button, &__youtube-button, &__cart-button
+        +size(40px,50px)
+        cursor: pointer
+        font: 20px normal sans-serif
+    &__login
+        cursor: pointer
+        font: 16px normal sans-serif
+    
+.titulo
+    border: 2px solid black
+    margin: 100px auto
+    padding: 40px
+.titulo > h1
+    font: 30px sans-serif bold
+.section
+    background-color:  $backgroundColor-section
+    +center-content(flex,flex-start,center)
+    flex-direction: column
+    +margin(0,0,auto,130px)
+    
+    &__icon
+        margin: 0
+        padding: 40px
+        +center-content(flex,center,center)
+    &__titulo
+        margin: 100px auto
+        padding: 0
+        border-top: 2px solid black
+        border-bottom: 2px solid black
+    &__titulo > h2
+        font: 30px sans-serif bold
+.container  
+    background-color: $backgroundColor-container
+    align-Items: center
+    justify-content: center
+    
+    &__item
+        +center-content(flex,center,center)
+        background-color: $backgroundColor-container-item
+        +size(100%,100%)
+        
+        border: 1px solid black
+
+.section-2
+    background-color:  $backgroundColor-section
+    +center-content(flex,flex-start,center)
+    flex-direction: column
+    +margin(0,0,auto,130px)
+    &__icon
+        margin: 0
+        padding: 40px
+        +center-content(flex,center,center)
+    &__titulo
+        margin: 100px auto
+        padding: 0
+        border-top: 2px solid black
+        border-bottom: 2px solid black
+    &__titulo > h2
+        font: 30px sans-serif bold
+.container-2
+    background-color: $backgroundColor-container
+    align-Items: center
+    justify-content: center
+    
+    &__item
+        +center-content(flex,center,center)
+        background-color: $backgroundColor-container-item
+        +size(100%,100%)
+        
+        border: 1px solid black
+.section-3
+    background-color:  $backgroundColor-section
+    +center-content(flex,flex-start,center)
+    flex-direction: column
+    +margin(0,0,auto,130px)
+    
+    &__icon
+        margin: 0
+        padding: 40px
+        +center-content(flex,center,center)
+    &__titulo
+        margin: 100px auto
+        padding: 0
+        border-top: 2px solid black
+        border-bottom: 2px solid black
+    &__titulo > h2
+        font: 30px sans-serif bold
+.container-3
+    background-color: $backgroundColor-container
+    align-Items: center
+    justify-content: center
+    
+    &__item
+        +center-content(flex,center,center)
+        background-color: $backgroundColor-container-item
+        +size(100%,100%)
+        
+        border: 1px solid black
+
+    
+
