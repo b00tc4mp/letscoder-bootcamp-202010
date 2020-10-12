@@ -23,7 +23,7 @@
     .header
         position: fixed
         height: 5vh
-        width: 100%
+        width: 90%
         background-color: #F2F5F3
         display: flex
         justify-content: space-evenly
@@ -31,14 +31,14 @@
 
         &__tag
             position: relative
-            left: 60px
+            left: 40px
             height: 8rem
             width: 4rem
             background-color: #D2D8D7
 
             &--small
                 position: relative
-                left: 20px
+                left: 45px
                 height: 4rem
                 width: 4rem
                 background-color: #D2D8D7
@@ -50,14 +50,14 @@
         &__cart
             width: 4%
             height: 100%
-            margin: 0 -30px
+            margin-right: 2px
             background-color: #D2D8D7
 
             &--qt
                 text-align: center
                 width: 4%
                 height: 100%
-                margin: auto 10px
+                margin: 0
                 background-color: #D2D8D7
 
     ul
@@ -120,8 +120,8 @@
     a 
         cursor: pointer
         @include primary-font
-        margin: 25px 0 2px
-        
+        margin: auto
+        padding: 0 5px
 
     a:hover
             color: red
@@ -136,16 +136,17 @@
             display: flex
             width: 100%
             height: 80%
-            align-items: center
             background-color: #C8F0E9
+            align-items: center
 
         
         &__button-ver-seccion
+            position: absolute
             @include primary-font
             border: none
             padding: 15px
-            margin-left: 45px
             font-weight: bold
+            margin-left: 10px
         
         &__container-circles
             display: flex
@@ -153,7 +154,7 @@
             background-color: #A6ADAC
             height: 20%
             width: 100%
-            padding: 0 300px
+            padding: 0 100px
 
         &__container-circles > a
             text-decoration: none
