@@ -12,6 +12,7 @@ body
     padding: 0px
     margin: 0px
 
+
 .container
     padding: 10px
     background-color: #8f999c
@@ -42,7 +43,7 @@ body
 
 .containertres
     padding: 10px
-    background-color: #8f999c
+    background-color: #cfc9c3
     width: 70vw
     height: 75vh
     display: grid
@@ -55,7 +56,7 @@ body
     border-radius:5px
 .cabecera
     margin: 10px
-    background: grey
+    background: #b6b5b3c5
     height: 10vh
     width: 100vw
     display: flex
@@ -63,20 +64,37 @@ body
     position: fixed
     text-align: center
     border-radius: 85px
-
 .section
-    padding: 1px
-    background-color: #8f999c
+    
+    padding: 1px 10px
+    background-color: white
     width: 70vw
     height: 35vh
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr
-    grid-template-rows: repeat (6,1fr)
+    display: flex
+    justify-content: space-between
     text-align: center
     margin-left: 15vw
     margin-right: 15vw
     margin-top: 9vw
     border-radius:5px
+    border:1px solid black
+    
+    h1 
+        font-size: 50px
+        margin-left: 50px
+        font-family: Dosis
+        justify-self: left
+        align-self: center
+        
+    div 
+        align-self: center
+        button 
+           align-self: center
+           padding: 5px
+           margin: 4px
+           
+    
+        
 
 .bloques
     display: grid
@@ -108,24 +126,43 @@ body
     color: black
     font-family: Dosis
 .fas
+    color: black
+
+.search
+    margin-top: 1vw
+    margin-left: 73vw
+    background-color: grey
+    display: inline-block
     color: white
+    font-family: Dosis
+
+
+.input
+    height: 10px
+    width: 10px
+.cook
+    color: black
+    width: 5vw
+    height: 5vw
+    margin: 0px
+    padding: 0px
+
 
 
 .compras
     margin-left: 5vw
 button
-    color: black
-    background-color: RGB(205, 92, 92)
+    color: white
+    background-color: white
     font-size: 3vw
     border-radius: 1vw
     font-family: Dosis
+    border-color: black
 
 .carrito
     background-color: white
     font-size: 3vw
     font-family: Dosis
-    
-
 
 
 .number
@@ -136,17 +173,17 @@ button
 
 
 
-
 .bloque1
-    background-color: RGB(205, 92, 92)
+    background-color: #FF5959
     
    
 .bloque2
-    background-color: #C39BD3
+    background-color: #6199AF
        
 
 .bloque3
-    background-color: white
+    background-color: #F6B436
+
        
     
    
@@ -214,12 +251,17 @@ button
     grid-area: 4/2/7/4
 
 @media screen and (max-width: 600px) 
+
+    .section
+        display: none
     .ocultar
+        display: none
+    .search
         display: none
     @mixin item
         background-color: brown
         border: 2px solid white
-        height: 17vh
+        height: 20vh
 
 
     body
@@ -237,11 +279,35 @@ button
         justify-content: center
         flex-direction: column
         margin-top: 15svw
+
+    .containerdos
+        background-color: #4b4b4b
+        width: 70vw
+        height: 70vh
+        gap: 15px
+        display: flex
+        align-content: center
+        justify-content: center
+        flex-direction: column
+        margin-top: 15svw
+
+    .containertres
+        background-color: #4b4b4b
+        width: 70vw
+        height: 70vh
+        gap: 15px
+        display: flex
+        align-content: center
+        justify-content: center
+        flex-direction: column
+        margin-top: 15svw
     
 
     
 
+    
 
 
-    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9 
+
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12, .item13, .item14, .item15
         @include item
