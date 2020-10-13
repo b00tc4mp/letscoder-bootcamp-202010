@@ -1,7 +1,7 @@
 function map(array, callback) {
 
 if (!(array instanceof Array)) throw new TypeError ( "array is not an array")
-if {typeof callback !=="function"} throw TypeError ("call back is not a function")
+if (typeof callback !=="function") throw new TypeError ("call back is not a function")
 
     var result = [];
     for (i = 0 ; i < array.length; i++) {

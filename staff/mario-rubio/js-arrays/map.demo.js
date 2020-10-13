@@ -1,4 +1,17 @@
-var inicial = [2, 4, 5, 8, 9];
-var result = map(inicial, function(elemento){
-    return elemento *2;
+console.log('DEMO map')
+
+var nums = [3, 4, 6, 8, 10]
+
+console.log('calculate reminder', nums)
+
+var result = map;
+map (nums, function (value){
+     var remainder = value % 3
+     if (remainder === 0) console.log(value)
+})
+
+console.log('return each item from array multiplied by 10', nums)
+
+map(nums, function(value){
+     console.log(value*10)
 })
