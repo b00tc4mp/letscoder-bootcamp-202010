@@ -1,21 +1,11 @@
-const array1 = [1, 2, 3, 4];
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-// 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer));
-// expected output: 10
-
-// 5 + 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer, 5));
-// expected output: 15
-
-
-var arr = [1, 2, 3, 4, 5]
-
-function reduce(arr, expression){
+function reduce(arr, expression, initial) {
+    var result = (initial === undefined) ? undefined : initial;
     for (var i = 0; i < arr.length; i++) {
-        
-        if (expression(arr[i])) return true
+        if (initial === undefined && i === 0) {
+            result = arr[i];
+        } else {
+            result = expression(result, arr[i], i, arr);
+        }
     }
-    return value = ""
+    return result;
 }

@@ -10,6 +10,13 @@ var expresion = map(arr, function(value) {
 
 console.log(expresion)
 
+try {
+    map(null, console.log)
+} catch (error) {
+    console.error(error)
+}
+
+console.log('should fail on argument 1 as array')
 
 
 
