@@ -7,7 +7,7 @@
 * The callback runs for each value in the array and returns each new value in the resulting array.
 **/
 
-var compis = [
+/* var compis = [
     {name: 'beto', color: 'red'},
     {name: 'caterina', color: 'violet'},
     {name: 'nico', color: 'yellow'},
@@ -17,6 +17,30 @@ var compis = [
 var compisColor = compis.map(function(compi) {
         return compi.color;
 });  
+
+*/
+
+nums = [1, 2, 3, 4, 5];
+
+function cubeOfNumber(element) {
+        return element ** 3;
+}
+
+
+var mapFunction = function map(callback, arr) {
+
+    var newArr = [];
+
+    for (var i = 0; i < arr.length ; i++) {
+
+        newArr[i] = callback(arr[i]);
+    }
+    
+    return newArr;
+    
+}
+
+mapFunction(cubeOfNumber, nums);
 
 
 
