@@ -12,7 +12,9 @@ var languages = [
     {name: 'japanese', flag: '🇯🇵', eu: false},
 ];
     
-var isEuropeanCountry = languages.every(function(language) {language.eu});
+var isEuropeanCountry = languages.every(function(language) {
+    language.eu
+});
 
     console.log('Are all european?', isEuropeanCountry);
 

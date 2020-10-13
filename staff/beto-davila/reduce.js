@@ -7,12 +7,40 @@
 
 
 var languages = [
-    {name: 'spanish', flag: '🇪🇸', people: 5},
-    {name: 'french', flag: '🇫🇷', people: 12},
-    {name: 'german', flag: '🇩🇪', people: 32},
-    {name: 'italian', flag: '🇮🇹', people: 2},
-    {name: 'japanese', flag: '🇯🇵', people: 13}
+    {
+        name: 'spanish', 
+        flag: '🇪🇸', 
+        people: 5
+    },
+
+    {   name: 'french', 
+        flag: '🇫🇷', 
+        people: 12
+    },
+    {
+        name: 'german', 
+        flag: '🇩🇪', 
+        people: 32 
+    },
+    {
+        name: 'italian', 
+        flag: '🇮🇹', 
+        people: 0
+    },
+    {
+        name: 'japanese', 
+        flag: '🇯🇵', 
+        people: 13
+    }
 ];
 
-var totalPeople = languages.reduce(function(acc, language) {
-    return acc + language.people;}, 0);
+var totalPeople = languages.reduce(function(accumulator, language) {
+    if (language.people > 0) {
+        return accumulator + language.people;
+    } else {
+        return accumulator;
+    }
+     
+}, 0);
+
+    console.log(totalPeople);
