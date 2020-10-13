@@ -1,17 +1,12 @@
 console.log('DEMO map')
 
-var nums = [3, 4, 6, 8, 10]
+var vals = [1,2,3,4,5,6,7,8,9];
 
-console.log('calculate reminder', nums)
+console.log('multiply numbers*3 in array', vals)
 
-var result = map;
-map (nums, function (value){
-     var remainder = value % 3
-     if (remainder === 0) console.log(value)
-})
+var output = map (vals,function(value){return value*3});
 
-console.log('return each item from array multiplied by 10', nums)
+console.log (output);
 
-map(nums, function(value){
-     console.log(value*10)
-})
+var hola =map (vals,function(value){return 10-value})
+console.log (hola)
