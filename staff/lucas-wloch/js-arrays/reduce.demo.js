@@ -21,8 +21,8 @@ console.log('DEMO REDUCE')
 var arr = [3, 4, 5, 6, 7]
 
 var total = reduce(arr, function(a,b){
-    return a+ 2*b
-    },-68)
+    return a + 2*b
+    },10)
 
 console.log(total)
 
