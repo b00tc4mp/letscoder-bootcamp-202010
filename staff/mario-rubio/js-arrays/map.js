@@ -11,5 +11,8 @@ function map(arr, expression){
     return newarr
 }
 
+
+
+
 var hola = map([0, 2, 4, 6, 8, 10], function(value){return value + 2});
 console.log(hola)
