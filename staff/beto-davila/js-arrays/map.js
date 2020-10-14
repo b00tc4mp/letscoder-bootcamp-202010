@@ -19,15 +19,13 @@ var compisColor = compis.map(function(compi) {
 });  
 
 */
-
 nums = [1, 2, 3, 4, 5];
 
-function cubeOfNumber(element) {
-        return element ** 3;
-}
 
+var mapFunction = function (callback, arr) {
 
-var mapFunction = function map(callback, arr) {
+    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a Function.');
+    if (!(arr instanceof Array)) throw new TypeError(arr + ' is not an Array.');
 
     var newArr = [];
 
@@ -40,7 +38,19 @@ var mapFunction = function map(callback, arr) {
     
 }
 
+function cubeOfNumber(element) {
+    return element ** 3;
+}
+
 mapFunction(cubeOfNumber, nums);
+
+/*
+try {
+    mapFunction(cubeOfNumber, null);
+} catch (error) {
+    console.error(error);
+}
+*/
 
 
 
