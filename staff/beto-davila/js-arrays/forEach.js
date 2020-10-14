@@ -12,6 +12,7 @@ var forEachFunction = function (arr, callback) {
 
         callback(item);
     }
+
 }
 
 function sayHello(name) {

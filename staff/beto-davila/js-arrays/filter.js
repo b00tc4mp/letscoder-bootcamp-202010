@@ -4,7 +4,6 @@ var names = ['alberto', 'aida', 'marta', 'margarita', 'manu', 'pilar', 'lucas', 
 
 function filter(callback, arr) {
     
-    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a Function.');
     if (!(arr instanceof Array)) throw new TypeError(arr + ' is not an Array.');
 
     var newArr = [];
