@@ -3,7 +3,6 @@ var array = ['cerdo', 'gallina', 'perro', 'oveja'];
 
 function push(arr, element) {
 
-    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a Function.');
     if (!(arr instanceof Array)) throw new TypeError(arr + ' is not an Array.');
 
     arr[arr.length] = element;
