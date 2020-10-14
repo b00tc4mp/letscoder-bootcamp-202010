@@ -1,10 +1,9 @@
-var values = []
-function every(array, condition){
-    for(let i=0; i<array.length;i++){
-        element = array[i]
-        var value = condition(element);
-        values.push(value)
+function every(array, callback){
+    if(!(array instanceof Array)) throw new TypeError(array + " is not an array")
+    if(typeof callback !== "function") throw new TypeError(callback + " is not a fuction")
+    for (var i = 0; i < array.length; i++) {
+        
+        if (!callback(array[i])) return false
     }
-    
-
+    return true
 }
