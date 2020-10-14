@@ -32,7 +32,7 @@ var movies = [
    {name: 'Dangal', country: 'India'},
    {name: 'El hoyo', country: 'Spain'},
    {name: 'Amelie', country: 'France'}
-]
+];
 
 var someFunction = function some(arr, callback) {
 
@@ -43,21 +43,23 @@ var someFunction = function some(arr, callback) {
   
        if (callback(arr[i])) {
 
-         return true
+         return true;
        }
-    } 
-    return false
+
+   } 
+    return false;
 }
 
 function isSpanishMovie(movie) {
 
 
    if (movie.country === 'Spain') {
-      return true
+      return true;
+
    } else {
 
-    return false
+    return false;
    }
 }
 
-someFunction(movies, isSpanishMovie)
+someFunction(movies, isSpanishMovie);
