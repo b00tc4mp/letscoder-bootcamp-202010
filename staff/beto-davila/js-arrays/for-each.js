@@ -1,5 +1,3 @@
-var names = ['aida','alberto','nico','caterina','toño'];
-
 
 var forEachFunction = function (arr, callback) {  
     
@@ -14,17 +12,3 @@ var forEachFunction = function (arr, callback) {
     }
 
 }
-
-function sayHello(name) { // DEMO
-
-    console.log('Hello ' + name);
-}
-
-forEachFunction(names, sayHello);
-
-/*
-try {
-    forEach(callback, null);
-} catch (error) {
-    console.error(error);
-*/
