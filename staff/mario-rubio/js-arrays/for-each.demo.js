@@ -37,3 +37,7 @@ var hola = forEach( [2,4,6,8],function(value){
     var result = arr[i*5]
 })
 console.log(result)
+
+
+
+
