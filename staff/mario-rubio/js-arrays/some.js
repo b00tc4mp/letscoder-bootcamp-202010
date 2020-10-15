@@ -1,17 +1,11 @@
-console.log ("DEMO some")
-
-nums = [1, 4, 5, 7, 20]
-
-console.log ("show if some value of array is 7")
-var result= some;
-
 function some(array,callback) {
+    if (!(arr instanceof Array)) throw new TypeError ( arr + " is not an array")
+    if (typeof expression !== "function") throw new TypeError (expression + " is not a function")
     result = []
     for (var i =0; i<array.lnegth; i++){
     result = callback(array [i],[i])
     }
     return result
 
-   
-   
+      
 }
