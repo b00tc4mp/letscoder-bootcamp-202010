@@ -4,19 +4,23 @@ var arr = [1,2,3,4]
 
 console.log('return true or false, all the numbers on the array are is higger than 0' , arr)
 
-var expresion = every(arr, function(value) {
+var result = every(arr, function(value) {
     return value > 0
 })
 
-console.log(expresion)
+console.log(result)
+
+
+
+
 
 console.log('return true or false, all the numbers on the array are is higger than 3' , arr)
 
-var expresion = every(arr, function(value) {
+var result = every(arr, function(value) {
     return value > 3
 })
 
-console.log(expresion)
+console.log(result)
 
 console.log('should fail on argument null as array')
 
