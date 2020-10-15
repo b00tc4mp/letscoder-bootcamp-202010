@@ -1,25 +1,22 @@
 
-// Not complete. Needs to be reviewed.
+var ingredients = ['salt', 'oil', 'vinegar', 'tomato', 'broccoli'];
 
-var ingredients = ['salt', 'oil', 'viengar', 'tomato', 'broccoli'];
+function buildingPop(arr) {
+     
 
-function pop(arr) {
+    var element = arr[arr.length - 1];
 
     for (var i = 0; i < arr.length; i++) { 
         
-        if (i = arr.length) {
+        if  (i == arr.length - 1) {
 
             arr.length = arr.length - 1;
 
-            return arr[i];
+            return element;
 
         }       
     }
+    
 }
 
-function removeIngredient(ingredient) {
-
-    return 'Bye, bye' + ingredient;
-}
-
-pop(ingredients, removeIngredient);
+buildingPop(ingredients);

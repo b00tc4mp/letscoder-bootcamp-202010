@@ -15,7 +15,7 @@ var forEachFunction = function (arr, callback) {
 
 }
 
-function sayHello(name) {
+function sayHello(name) { // DEMO
 
     console.log('Hello ' + name);
 }
