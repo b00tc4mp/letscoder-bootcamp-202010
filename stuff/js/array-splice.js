@@ -91,7 +91,7 @@ function splice() {
         var itemsLength = arguments.length - 3
 
         debugger
-        // TODO add if-else to check whether deleteCount < itemsLength (in this case the following for loop does not apply) [1]
+        // TODO add if-else to check whether deleteCount < itemsLength (in this case the following for loop does not apply), otherwise this for-loop does not stop [1]
         for (var i = start + deleteCount; i < array.length; i++)
             array[i - (deleteCount - itemsLength)] = array[i]
 
