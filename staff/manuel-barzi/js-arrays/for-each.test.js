@@ -34,26 +34,26 @@ console.assert(result[2] === 6)
 
 console.log('should fail on argument null as array')
 
-var _error
+var fail
 
 try {
     forEach(null, function() {})
 } catch (error) {
-    _error = error
+    fail = error
 }
 
-console.assert(_error !== undefined)
-console.assert(_error.message === 'null is not an array')
+console.assert(fail !== undefined, 'error should be defined')
+console.assert(fail.message === 'null is not an array', 'error message should match')
 
 console.log('should fail on argument 1 as array')
 
-var _error
+var fail
 
 try {
     forEach(1, function() {})
 } catch (error) {
-    _error = error
+    fail = error
 }
 
-console.assert(_error !== undefined)
-console.assert(_error.message === '1 is not an array')
+console.assert(fail !== undefined, 'error should be defined')
+console.assert(fail.message === '1 is not an array', 'error message should match')
