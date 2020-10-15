@@ -17,3 +17,8 @@ console.log('return de result of 10-each value of de array', vals)
 var hola =map (vals,function(value){return 10-value})
 console.log (hola)
 
+
+console.log('return the result of the value of de array plus 2', vals)
+
+var hola = map([0, 2, 4, 6, 8, 10], function(value){return value + 2});
+console.log(hola)

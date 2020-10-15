@@ -1,5 +1,5 @@
 ["casa", "jardin", "puerta"].find (function (array, callback){
-    //debugger 
+    
  return array === "jardin"
          })
 function find(array, callback) {
