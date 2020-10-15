@@ -24,17 +24,19 @@
 //     console.log(value * 10)
 // })
 
-forEach([1, 2, 3], function(value){
-    console.log(value * 2)
-})
+// forEach([1, 2, 3], function(value){
+//     console.log(value * 2)
+// })
 
-forEach([1, 2, 3], console.log)
-1
-2
-3
+// forEach([1, 2, 3], console.log)
+// 1
+// 2
+// 3
 
-var arr = [2,6,8,12]
+// var arr = [2,6,8,12]
 
-forEach(arr,function(value){
-    document.write( (value + 10) + " corresponde al nuevo valor de " + value + "  ")
-})
+// forEach(arr,function(value){
+//     document.write( (value + 10) + " corresponde al nuevo valor de " + value + "  ")
+// })
+
+
