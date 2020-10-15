@@ -17,19 +17,6 @@ function find(callback, arr) {
     }
 }
 
-function isFromTheNineties (year) {  // DEMO
-
-    if (year < 2000 && year > 1989) {
-
-        return true;
-    } else {
-
-    return false;
-    }
-}
-
-find(isFromTheNineties, years); 
-
 /*
 try {
     find(callback, null);

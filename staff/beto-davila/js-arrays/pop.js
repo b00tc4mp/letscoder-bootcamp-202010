@@ -1,8 +1,6 @@
 
-var ingredients = ['salt', 'oil', 'vinegar', 'tomato', 'broccoli'];
-
 function buildingPop(arr) {
-     
+    if (!(arr instanceof Array)) throw new TypeError(arr + ' is not an Array.'); 
 
     var element = arr[arr.length - 1];
 
@@ -12,11 +10,8 @@ function buildingPop(arr) {
 
             arr.length = arr.length - 1;
 
-            return element;
 
         }       
     }
-    
+    return element;
 }
-
-buildingPop(ingredients);
