@@ -7,28 +7,28 @@ forEach(nums, function(value){
     result.push (value*5)
 })
 
-console.assert(nums.length === result.length)
+console.assert(nums.length === result.length) // se pide que afirme mediante T o F lo que está entre ()
 
 for(var i=0; i<nums.length; i++)
-    console.assert(result[i]===nums[i]*5)
+    console.assert(result[i]===nums[i]*5) //se comprueba cada elemento del array result (indicando su index) sea igual al elemento del array*5 
 
 
 
 
 
-var fail = undefined
 
 console.log ('should fail when passing a null as an array')
-    
+var fail = undefined
+
 try{
-    forEach (null, function(value){
-    result.push(value*8)
+    forEach (null, function(value){ //provocamos el erros indicando null, que es diferente al primer argumento del array en su definición (que sería array. Indicado en línea 1 del archivo for.each, y en la linea 2 pone la definición de cómo se indica el error)
+    result.push(value*5) //en esta comprobación no sería relevante porque el error salta con el null
 })
-} catch(error){
-    fail = error
+} catch(error){ //al detectar el null en try, lo manda al catch. Este error lo percibe pq se lo indicamos en la línea 2 del archivo for each (TypeError)
+    fail = error // hace q el error apunte a fail y le asigna el valor indefinido
 }
 
-console.assert (!(fail === undefined))
+console.assert (!(fail === undefined)) //pedimos que nos afirme si fail es undefined, pero fail = error = y este error sí que está definido, luego (!(false))=true: se confirma mediante el asser q es cierto
 
 ////////////////////////////////////////
 

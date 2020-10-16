@@ -10,6 +10,8 @@ var result = reduce(nums, function(accum, element) {
 
 console.log(result)
 
+
+
 var cart = [{ name: 'levis', price: 60 }, { name: 'jacket', price: 100 }, { name: 'cool socks', price: 15}]
 
 console.log('calculates the total price from cart', cart)
