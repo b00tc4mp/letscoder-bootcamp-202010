@@ -68,3 +68,55 @@ p
 {n: "N"}
 o
 {n: "N"}
+
+// 5
+
+//function changeValue(ref) { ref = 2 }
+
+var changeValue = function(ref) { ref = 2 }
+
+var a = 1
+
+changeValue(a)
+
+a
+1
+
+// 6
+
+var changeValue = function(ref) { ref = 2 }
+
+var a = {}
+
+changeValue(a)
+
+a
+{}
+
+// 7
+
+var changeValue = function(ref) { ref.n = 2 }
+
+var a = {}
+
+changeValue(a)
+
+a
+{n: 2}
+
+// 8
+
+var a = {}
+undefined
+var b = a
+undefined
+b.p = 1
+1
+a
+{p: 1}
+b
+{p: 1}
+window.a
+{p: 1}
+window.b
+{p: 1}
