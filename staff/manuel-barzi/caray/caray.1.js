@@ -2,9 +2,9 @@ function Caray() {
     this.length = 0
 }
 
-Caray.prototype.push = function () {
-    for (var i = 0; i < arguments.length; i++) {
-        this[this.length] = arguments[i]
+Caray.prototype.push = function (element) {
+    if (element !== undefined) {
+        this[this.length] = element
 
         this.length++
     }
@@ -18,11 +18,4 @@ Caray.prototype.forEach = function (callback) {
 
         callback(element, index, this)
     }
-}
-
-Caray.prototype.every = function(callback) {
-    for (var i = 0; i < this.length; i++)
-        if (!callback(this[i])) return false
-
-    return true
 }
