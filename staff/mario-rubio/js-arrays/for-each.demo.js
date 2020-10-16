@@ -2,7 +2,7 @@ console.log('DEMO forEach')
 
 var nums = [1, 2, 3, 4, 5]
 
-
+/*
 console.log('calculate the remainer by 2 of each item from array', nums)
 
 var result = []
@@ -30,13 +30,15 @@ forEach(arr, function(value){
 
 })
 
+*/
+array = [2,4,6,8]
+console.log('multiply each item *5', array)
 
-console.log('multiply each item *5', nums)
 
 var hola = forEach( [2,4,6,8],function(value){
-    var result = arr[i*5]
+    console.log(value*5)
 })
-console.log(result)
+
 
 
 
