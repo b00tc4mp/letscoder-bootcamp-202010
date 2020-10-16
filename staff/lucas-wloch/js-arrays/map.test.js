@@ -10,9 +10,14 @@ console.assert(nums.length === result.length, "falla si el array que tira map ti
 for(var i=0;i<nums.length;i++)
     console.assert(result[i]=== nums[i].toString(), "no funciona el mapeado")
 
+///////////////////////////////////////////////////
+console.log("multiply values * 2 from array",nums)
+var result2 = map(nums,function(value){return value*2})
 
+console.assert(nums.length === result.length,"falla si el array que tira map tiene diferente longitud que en inicial")
+for(var i=0;i<nums.length;i++)
+    console.assert(result2[i] === (nums[i]*2), "no funciona el mapeado")
 ////////////////////////////
-
 var fail = undefined
 
 console.log("should fail on undefined argument as a function")
