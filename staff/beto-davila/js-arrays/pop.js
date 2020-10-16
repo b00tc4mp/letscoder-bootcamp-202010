@@ -1,4 +1,6 @@
 
+console.log('This is a function that recreates the pop method');
+
 function buildingPop(arr) {
     if (!(arr instanceof Array)) throw new TypeError(arr + ' is not an Array.'); 
 
