@@ -9,7 +9,7 @@ console.log('TEST Caray.prototype.every()');
     c[2] = 'marta'
     c[3] = 'caterina'
     c.length = 4
-    
+
     var iterations = 0
 
     var result = c.every(function (name) {
@@ -31,7 +31,7 @@ console.log('TEST Caray.prototype.every()');
     c[2] = 'marta'
     c[3] = 'caterina'
     c.length = 4
-    
+
     var iterations = 0
 
     var result = c.every(function (name) {
@@ -42,5 +42,25 @@ console.log('TEST Caray.prototype.every()');
 
     console.assert(result === false, 'should result be false')
     console.assert(iterations === 3, 'should iterations count be 3')
+})();
+
+(function () {
+    console.log(' should fail on non-function callback')
+
+    var callback = [1, true, 'string', null, undefined, {}].random()
+
+    var c = new Caray
+
+    var fail
+
+    try {
+        c.every(callback)
+    } catch(error) {
+        fail = error
+    }
+
+    //console.assert(fail != undefined, 'should fail be defined')
+    console.assert(fail, 'should fail be defined')
+    console.assert(fail instanceof TypeError, 'should fail be instance of TypeError')
 })();
 
