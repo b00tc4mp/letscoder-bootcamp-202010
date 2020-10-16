@@ -4,16 +4,15 @@ var newArray = array.map(function(value) {
 })
 console.log(newArray) */
 
-var array = ["one","two","three"]
-var newArray = []
+var array = ["one", "two", "three"];
+var newArray = [];
 
 function newArrayP(argumento) {
-    return argumento + "!"
+  return argumento + "!";
 }
 
-for (var i=0; i< array.length; i++) {
-    newArray[i] = newArrayP(array[i])
+for (var i = 0; i < array.length; i++) {
+  newArray[i] = newArrayP(array[i]);
 }
 
-console.log(newArray)
-
+console.log(newArray);
