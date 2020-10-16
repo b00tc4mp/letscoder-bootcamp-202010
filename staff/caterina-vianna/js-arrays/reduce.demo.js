@@ -33,13 +33,13 @@ var languages = [
     }
 ];
 
-var totalPeople = languages.reduce(function(accumulator, language) {
-    if (language.people > 0) {
-        return accumulator + language.people;
+var totalName = languages.reduce(function(accumulator, language) {
+    if (language.name) {
+        return accumulator + language.name;
     } else {
         return accumulator;
     }
      
-}, 0);
+},0);
 
-    console.log(totalPeople);
+    console.log(totalName);
