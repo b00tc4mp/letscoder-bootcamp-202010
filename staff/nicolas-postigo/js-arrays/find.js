@@ -22,7 +22,7 @@ function reduce (array, callback, acumulado){
                         acumulado[i]}
                 }
             }    
-}
+
 
 console.log(result)
 

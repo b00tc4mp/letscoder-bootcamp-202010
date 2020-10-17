@@ -64,6 +64,7 @@ Caray.prototype.map = function (callback) {
     return result
 } 
 Caray.prototype.some = function (callback){
+if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function')
     for (var i = 0; i < this.length; i++){
         if (callback(this[i])){
             return true;
@@ -71,3 +72,38 @@ Caray.prototype.some = function (callback){
     }
     return false;
 }
+
+Caray.prototype.find = function find (callback){
+    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function')
+    for(i=0; i < this.length; i++){
+        if(callback(this[i])){
+            return this[i];
+        }
+    }
+    return undefined;
+}
+
+Caray.prototype.filter = function filter(callback) {
+    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function')
+    var result = new Caray
+    for (var i = 0; i < this.length; i++) {
+        var value = this[i]
+
+        if (callback(value)) result.push(value)
+    }
+
+    return result
+}
+
+
+Caray.prototype.findIndex = function findIndex(callback) {
+    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a function')
+   
+    
+    for (var i = 0; i < this.length; i++){
+            if(callback(this[i])){
+                return this[i];
+            }
+        }
+        return -1
+    }
