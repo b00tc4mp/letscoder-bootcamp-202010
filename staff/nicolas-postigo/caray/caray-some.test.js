@@ -19,12 +19,17 @@ console.assert(iterations === 3, 'should iterations count be 3')
 })();
 
 
+(function(){
+    console.log(" should trhow an error if callback  s not a fuction")
 
+    var weather = new Caray ("rain", "sun", "wind");
 
+    var fail;
 
+    try {
+        weather.some("pepito");
+    } catch (error) {
+        fail = error;
+    }
 
-
-
-
-
-
+    })();

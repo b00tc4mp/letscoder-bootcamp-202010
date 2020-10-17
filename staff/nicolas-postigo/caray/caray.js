@@ -11,6 +11,7 @@ function Caray() {
             this.length = 1
         }
         
+    
     } else if (arguments.length > 1) { 
         for (var i = 0; i < arguments.length; i++){
             this[i] = arguments[i];

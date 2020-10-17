@@ -3,12 +3,7 @@ console.log('TEST Caray.prototype.every()');
 (function () {
     console.log(' should return true for pilar, aida, marta and caterina, checking they contain the letter a')
 
-    var c = new Caray
-    c[0] = 'pilar'
-    c[1] = 'aida'
-    c[2] = 'marta'
-    c[3] = 'caterina'
-    c.length = 4
+    var c = new Caray("pilar", "aida", "marta", "caterina")
 
     var iterations = 0
 
