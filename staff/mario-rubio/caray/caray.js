@@ -83,9 +83,28 @@ Caray.prototype.filter = function filter(callback) {
 
     for (var i = 0; i < this.length; i++) {
         var value = this[i]
-
+    /*para comparar la longitud del array inicial con el array final
+    if (callback(this[i])){
+        result[result.length] = this [i];
+        result.length++;
+    */
+    
         if (callback(value)) result.push(value)
     }
 
     return result
 }
+
+Caray.prototype.find = function find(callback){
+    
+    if (typeof callback !== "function") throw new TypeError (callback + " is not a function");
+    
+        for (var i=0; i<this.length; i++){
+        if (callback(this [i])) {
+            return this[i];
+    }
+   
+}  
+return undefined
+}       
+
