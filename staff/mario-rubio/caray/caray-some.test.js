@@ -18,7 +18,7 @@ console.log('TEST Caray.prototype.some()');
 
 console.assert(result === true, 'should result be true')
 console.assert(iterations === 2, 'should iterations count be 2')
-console.assert (weather.length === 3, "should weather.length be 3")
+console.assert(weather.length === 3, "should weather.length be 3")
 })();
 
 (function(){
