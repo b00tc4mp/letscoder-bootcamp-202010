@@ -9,20 +9,15 @@ function Caray() {
             this[0] = argument
             this.length = 1
         }
-    
-    
-    // TODO } else if (arguments.length > 1) {
-    } else if (arguments.length>1){
-        
-        for (var i=0; i<arguments.length; i++){
-            this[i] = arguments[i];
 
+    } else if (arguments.length>1){
+            for (var i=0; i<arguments.length; i++){
+            this[i] = arguments[i];
         }
-       
-        
+               
         this.length = arguments.length;
-    }
-    else this.length=0
+    
+    } else this.length=0
     
 }
 
@@ -63,6 +58,33 @@ Caray.prototype.map = function (callback) {
 
         result[index] = callback(element, index, this)
         result.length++
+    }
+
+    return result
+}
+
+Caray.prototype.some = function some (callback) {
+
+    if (typeof callback !== "function") throw new TypeError (callback + " is not a function")
+    
+    for (var i =0; i<this.length; i++){
+    if (callback(this [i])) return true
+    }
+    return false
+
+      
+}
+
+Caray.prototype.filter = function filter(callback) {
+    
+    if (typeof callback !== "function") throw new TypeError (callback + " is not a function")
+    
+    var result = new Caray
+
+    for (var i = 0; i < this.length; i++) {
+        var value = this[i]
+
+        if (callback(value)) result.push(value)
     }
 
     return result
