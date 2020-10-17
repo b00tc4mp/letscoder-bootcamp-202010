@@ -52,4 +52,3 @@ console.log (" Should create a Caray of a length bigger than 1 when it receives 
 
 
 })();
-// TODO test constructor for multiple arguments
