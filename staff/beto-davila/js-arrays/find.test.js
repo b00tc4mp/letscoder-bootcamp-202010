@@ -14,7 +14,7 @@ function isFromTheNineties (year) {
 
     } else {
 
-        return false;
+        return undefined;
     }
 }
 

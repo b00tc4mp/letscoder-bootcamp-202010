@@ -1,6 +1,4 @@
-
 var names = ['alberto', 'aida', 'marta', 'margarita', 'manu', 'pilar', 'lucas', 'federico'];
-
 
 function filter(callback, arr) {
     
@@ -8,28 +6,14 @@ function filter(callback, arr) {
 
     var newArr = [];
 
-    for (var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) 
+         if (callback(arr[i])) newArr[newArr.length] = arr[i];
     
-        if (callback(arr[i])) {
-
-        newArr.push(arr[i]);
-
-        }
-
-    }
-    return newArr
+    return newArr;
 }
 
     function longNames(name) {
-        
-        if (name.length > 7) {
-
-            return true;
-
-        }else{
-
-            return false;
-        }
+        if (name.length > 7) return name;
+        return false;
     }
-
 filter(longNames, names);

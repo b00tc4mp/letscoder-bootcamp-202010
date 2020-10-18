@@ -4,7 +4,6 @@
  * It returns Boolean when first positive match is found.
  */
 
-
  /*
 var movies = [
     {name: 'Intouchables', country: 'France'},
@@ -40,26 +39,18 @@ var someFunction = function some(arr, callback) {
    if (!(arr instanceof Array)) throw new TypeError(arr + ' is not an Array.');
     
    for (var i = 0; i < arr.length; i++) {
-  
        if (callback(arr[i])) {
-
          return true;
        }
-
    } 
     return false;
 }
 
 function isSpanishMovie(movie) {
-
-
    if (movie.country === 'Spain') {
       return true;
-
    } else {
-
     return false;
    }
 }
-
 someFunction(movies, isSpanishMovie);
