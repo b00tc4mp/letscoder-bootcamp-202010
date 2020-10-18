@@ -61,3 +61,20 @@ console.log('TEST Caray.prototype.map()');
     for (var i = 0; i < c.length; i++)
         console.assert(result[i] === c[i] * 10)
 })();
+
+(function(){
+    console.log(' should fail on non-function callback');
+
+    var pepe = new Caray (undefined,1,false,null);
+
+    var fail;
+
+    try {
+        pepe.map(33);
+    } catch (error) {
+        fail = error;
+    }
+console.assert(fail instanceof TypeError, "should be a TypeError");
+console.assert(fail.message === "33 is not a function", "the error message is not correct");
+
+})();

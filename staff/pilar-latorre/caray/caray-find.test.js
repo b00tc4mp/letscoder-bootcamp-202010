@@ -60,7 +60,7 @@ try {
     fail = error;
 }
 console.assert(fail instanceof TypeError, "should be a TypeError");
-console.assert(fail.message === "12 is not a function", "the error message is not correct")
+console.assert(fail.message === "12 is not a function", "the error message is not correct");
 
 
 })();

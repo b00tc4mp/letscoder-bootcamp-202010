@@ -13,7 +13,7 @@ console.log('TEST Caray.Prototype.forEach()');
         result.length++;
     })
 
-    console.assert(result.length === 5, "should the value length be 5");
+    console.assert(result.length === 5, "should the result length be 5");
 
     for (var i = 0; i < result.length; i++) {
         console.assert(result[i] === numbers[i] * 10, result[i] + " should equal " + numbers[i] * 10);
@@ -35,6 +35,8 @@ console.log('TEST Caray.Prototype.forEach()');
         result[result.length] = position + ": " + value + " de mierda";
         result.length++;
     })
+
+    console.log(result)
 
     console.assert(result.length === 6, "should the result length 6");
     
