@@ -2,7 +2,7 @@ console.log('DEMO FOR EVERY')
 
 console.log('return true or false if all the item accomplish the condition')
 
-var arr = [1,2,3,4]
+var arr = []
 
 var expresion = every(arr, function(value) {
     return value > 0

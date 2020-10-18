@@ -2,16 +2,16 @@ console.log('DEMO FOR SOME')
 
 console.log('return true or false if one the item accomplish the condition')
 
-var arr = [1, 2, 3, 4, 5]
+var arr = ["Toño", "Blas", "Carlos", "Siscu"]
 
-var expresion = some(arr, function(value) {
-    return value > 0
+var result = some(arr, function(value) {
+    return value.includes("i")
 })
 
-console.log(expresion)
+console.log(result)
 
-var expresion = some(arr, function(value) {
-    return value > 6
+var result = some(arr, function(value) {
+    return value.includes("e")
 })
 
-console.log(expresion)
+console.log(result)
