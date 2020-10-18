@@ -1,20 +1,30 @@
+function reduce(array, callback, initialValue) {
 
-console.log("REDUCE (w/for) - Guessing out how old they are all together")
+    if (!(array instanceof Array)) throw new TypeError(array + ' is not an array'); 
+    if (typeof callback !== 'function') throw new TypeError (callback + ' is not a function'); 
 
-const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+    if (initialValue !== undefined) {
+        var accum = initialValue;
 
+        for (var index = 0; index< array.length; index++) {
 
+            var element = array[index];
 
-//Queremos averiguar la edad total del grupo -array-
+            accum = callback(accum, element, index, array);
+ 
+        }
 
-//Con el for
+        return accum 
+    } else {
 
+        var accum = array[0]; 
 
+        for (var index = 1; index < array.length; index++) {
 
-ageSum = 0; 
+            var element = array[index]; 
 
-for (var i = 0; i < ages.length; i++)
-{ageSum += ages[i]}; 
-
-console.log(ageSum); 
-
+            accum = callback(accum, element, index, array); 
+        }
+        return accum 
+    }
+}
