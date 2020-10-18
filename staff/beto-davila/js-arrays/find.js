@@ -1,5 +1,5 @@
-var years = [2002, 1986, 2005, 1999, 2020, 1998]; 
 
+console.log('Returns the value of the first element in the provided array that satisfies the provided testing function.')
 
 function find(callback, arr) {
 

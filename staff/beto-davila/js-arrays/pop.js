@@ -1,4 +1,3 @@
-
 console.log('This is a function that recreates the pop method');
 
 function buildingPop(arr) {
@@ -8,11 +7,8 @@ function buildingPop(arr) {
 
     for (var i = 0; i < arr.length; i++) { 
         
-        if  (i == arr.length - 1) {
-
+        if  (i === arr.length - 1) {
             arr.length = arr.length - 1;
-
-
         }       
     }
     return element;
