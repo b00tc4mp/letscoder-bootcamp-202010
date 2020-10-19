@@ -30,3 +30,4 @@ console.assert(
   fail !== undefined,
   "fail es undefined, entonces no funciona este test"
 );
+console.assert(fail.message === "undefined is not a function");
