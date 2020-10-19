@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="title">Hello World App</h1>
+
+    <section class="user-action">
+        <button class="btn">Register</button> or <button class="btn">Login</button>
+    </section>
+
+    <section class="user-register hidden">
+        <h2 class="sub-title">Register</h2>
+
+        <form>
+            <input type="text" name="fullname" placeholder="full name" _required>
+            <input type="email" name="email" placeholder="e-mail" required>
+            <input type="password" name="password" placeholder="password" required>
+            <input type="password" name="repassword" placeholder="repeat password" required>
+            <button class="btn">Register</button>
+        </form>
+    </section>
+
+    <section class="user-register__confirmation hidden">
+        User <em>registered successfully</em>, proceed to: <button class="btn">Login</button>.
+    </section>
+
+    <section class="user-login hidden">
+        <h2 class="sub-title">Login</h2>
+
+        <form>
+            <input type="email" name="email" placeholder="e-mail" required>
+            <input type="password" name="password" placeholder="password" required>
+            <button class="btn">Login</button>
+        </form>
+    </section>
+
+    <section class="hidden">
+        <h2 class="sub-title">Welcome to Hello World App!</h2>
+    </section>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
