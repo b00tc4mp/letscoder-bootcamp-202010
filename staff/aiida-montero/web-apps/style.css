@@ -1,0 +1,47 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.off {
+  display: none;
+}
+
+body {
+  background-image: url(./foto_1.png);
+  background-position: center;
+  text-align: center;
+  border: 1px solid white;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: #3498DB;
+}
+
+h2 {
+  color: black;
+  font-size: 25px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline;
+  background-color: white;
+}
+
+.register {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.login {
+  background-color: white;
+  color: black;
+  font-family: "Lucida Sans";
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
