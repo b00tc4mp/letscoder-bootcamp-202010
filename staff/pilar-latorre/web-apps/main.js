@@ -53,13 +53,14 @@ var users = [];
         if (!fullname.trim().length) throw new Error('full name is empty or blank')
 
         if (!email.trim().length) throw new Error('e-mail is empty or blank')
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
+
 
         if (!password.trim().length) throw new Error('password is empty or blank')
 
         if (!repassword.trim().length) throw new Error('repeat password is empty or blank')
 
-        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
-
+      
         if (password !== repassword) throw new Error('passwords do not match')
 
         var user = {
@@ -108,18 +109,47 @@ var users = [];
         
         var inputs = document.querySelectorAll('input')
         
+
         var email = inputs[4].value
         var password = inputs[5].value
 
-        if(users[0].email !== email) throw new Error ('this email do not match with any user')
-        if(users[0].password !== password) throw new Error ('wrong password')
+         //if(users[0].email !== email) throw new Error ('this email do not match with any user')
+        ///if(users[0].password !== password) throw new Error ('wrong password')
+        
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
+        if (!email.trim().length) throw new Error('e-mail is empty or blank')
+        if (!password.trim().length) throw new Error('password is empty or blank')
+
+
+        var user = users.find(function(user){
+            return user.email === email && user.password === password
+
+        })
+
+        if (!user) throw new Error('wrong credentials')
+   
+        var sections = document.querySelectorAll('section')
+   
+        var login = sections[3]
+            
+        login.classList.add('off')
+
+        var welcome= sections[4]
+
+        welcome.classList.remove('off')
+        
+        var h1 = document.querySelector("h1")
+        var hello = h1
+        hello.classList.add('hello')
+
 
     }   
+    
 
 })();
 
 //welcome page
-(function(){
+/*(function(){
     var login = document.querySelectorAll("button")[4]
 
     login.onclick = (function(){
@@ -141,4 +171,4 @@ var users = [];
     });
 
 
-})();
+})();*/
