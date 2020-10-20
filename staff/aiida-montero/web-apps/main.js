@@ -1,106 +1,104 @@
-var users = []; 
-
-// options
 (function () {
-        var register = document.querySelector('button')
+    var title = document.querySelector('.title')
 
-        register.onclick = function () {
-            var options = document.querySelector('section')
+    title.onclick = function () {
+        var sections = document.querySelectorAll('section')
 
-            options.classList.add('off')
+        for (var i = 0; i < sections.length; i++)
+            sections[i].classList.add('off')
 
-            var register = document.querySelectorAll('section')[1]
+        var home = document.querySelector('.home')
 
-            register.classList.remove('off')
-        }
-    })();
+        home.classList.remove('off')
+    }
+})();
+
+// home
+(function () {
+    var home = document.querySelector('.home')
+
+    var register = home.querySelector('.home__register')
+
+    register.onclick = function () {
+        home.classList.add('off')
+
+        var register = document.querySelector('.register')
+
+        register.classList.remove('off')
+    }
+
+    var login = home.querySelector('.home__login')
+
+    login.onclick = function () {
+        home.classList.add('off')
+
+        var login = document.querySelector('.login')
+
+        login.classList.remove('off')
+    }
+})();
 
 // register
 (function () {
-    var register = document.querySelector('form')
+    var register = document.querySelector('.register')
 
-    register.onsubmit = function(event) {
+    var form = register.querySelector('.register__form')
+
+    form.onsubmit = function (event) {
         event.preventDefault()
 
-        var inputs = document.querySelectorAll('input')
+        var inputs = form.querySelectorAll('input')
 
         var fullname = inputs[0].value
         var email = inputs[1].value
         var password = inputs[2].value
         var repassword = inputs[3].value
 
-        if (!fullname.trim().length) throw new Error('full name is empty or blank')
-
-        if (!email.trim().length) throw new Error('e-mail is empty or blank')
-
-        if (!password.trim().length) throw new Error('password is empty or blank')
-
-        if (!repassword.trim().length) throw new Error('repeat password is empty or blank')
-
-        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
-
-        if (password !== repassword) throw new Error('passwords do not match')
-
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
-
-        users.push(user)
-
-        var sections = document.querySelectorAll('section')
-
-        var register = sections[1]
+        registerUser(fullname, email, password, repassword)
 
         register.classList.add('off')
 
-        var confirm = sections[2]
+        var confirm = document.querySelector('.register-confirm')
 
         confirm.classList.remove('off')
     }
 })();
 
 // register confirm
-(function() {
-    var login = document.querySelectorAll('button')[3]
+(function () {
+    var confirm = document.querySelector('.register-confirm')
 
-    login.onclick = function() {
-        var sections = document.querySelectorAll('section')
+    var login = confirm.querySelector('.register-confirm__login')
 
-        var confirm = sections[2]
-
+    login.onclick = function () {
         confirm.classList.add('off')
 
-        var login = sections[3]
+        var login = document.querySelector('.login')
 
         login.classList.remove('off')
     }
 })();
 
-// TODO login 
-(function() {
-    var login = document.querySelectorAll('form')[1]
+// login
+(function () {
+    var login = document.querySelector('.login')
 
-    login.onsubmit = function(event) {
-        event.preventDefault();
+    var form = login.querySelector('.login__form')
 
-        var inputs = document.querySelectorAll('input')
-        var email = inputs[4].value
-        var password = inputs[5].value
+    form.onsubmit = function (event) {
+        event.preventDefault()
 
-        if (users[0].email !== email) throw new Error('e-mails dont match')
-        if (users[0].password !== password) throw new Error('passwords dont match')
-    }
-})();
+        var inputs = form.querySelectorAll('input')
 
-(function() {
-    var login = document.querySelectorAll('button')[4]
-    login.onclick = function(){
-        var sections = document.querySelectorAll('section')
-        var login = sections[3]
+        var email = inputs[0].value
+        var password = inputs[1].value
+
+        authenticateUser(email, password)
+
         login.classList.add('off')
-        var welcome = sections[4]
+
+        var welcome = document.querySelector('.welcome')
+
         welcome.classList.remove('off')
-    } 
-})();
+    }
+})(); 

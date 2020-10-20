@@ -1,47 +1,70 @@
-* {
-  padding: 0px;
-  margin: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+body {
+  color: white;
+  background-image: url(./foto_1.png);
+  background-position: center;
+  text-align: center;
+  border: 1px solid white;
+  font-family: Roboto Condensed;
+}
+
+button {
+  border-style: none;
+}
+button:focus {
+  outline: 0;
 }
 
 .off {
   display: none;
 }
 
-body {
-  background-image: url(./foto_1.png);
-  background-position: center;
-  text-align: center;
-  border: 1px solid white;
+.title {
+  font-family: Bebas Neue;
 }
 
-h1 {
+.home {
+  border: 1px solid skyblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.home__register {
+  background-color: skyblue;
   color: white;
-  text-align: center;
-  background-color: #3498DB;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
 }
-
-h2 {
-  color: black;
-  font-size: 25px;
-  border: 1px solid white;
-  border-radius: 5px;
-  display: inline;
-  background-color: white;
+.home__login {
+  border-style: solid;
+  border-color: skyblue;
+  background-color: transparent;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
+}
+.home__login:hover {
+  background-color: #E9F6FD;
 }
 
 .register {
-  background-color: white;
-  color: black;
-  font-size: 15px;
-  border-radius: 5px;
+  background-color: skyblue;
+  border-radius: 5rem 0 5rem 0;
+}
+
+.register-confirm {
+  background-color: skyblue;
+  border-radius: 5rem 0 5rem 0;
 }
 
 .login {
-  background-color: white;
-  color: black;
-  font-family: "Lucida Sans";
-  font-size: 15px;
-  border-radius: 5px;
+  background-color: skyblue;
+  border-radius: 5rem 0 5rem 0;
+}
+
+.welcome {
+  background-color: skyblue;
+  border-radius: 5rem 0 5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
