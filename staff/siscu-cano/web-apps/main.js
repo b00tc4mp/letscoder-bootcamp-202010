@@ -77,17 +77,18 @@ var users = [];
         if (!email.trim().length) throw new Error('e-mail is empty or blank')
         if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
 
-        var userFound = users.find(user => user.email === email);
+        var userFound = users.find(
+            function(user) {
+                return user.email === email && user.password === password;
+            });
         if (userFound) {
-            if (userFound.password === password) {
-                var sections = document.querySelectorAll('section');
-                var login = sections[3];
-                var app = sections[4];
-                login.classList.add('hidden')
-                app.classList.remove('hidden');
-            } else throw new Error('Password is wrong!');
+            var sections = document.querySelectorAll('section');
+            var login = sections[3];
+            var app = sections[4];
+            login.classList.add('hidden')
+            app.classList.remove('hidden');
         } else {
-            throw new Error('Email not registered!');
+            throw new Error('Email not registered or password is wrong!');
         }
     }
 
