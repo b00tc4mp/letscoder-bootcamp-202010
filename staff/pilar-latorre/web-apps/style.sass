@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap')
+    
 *
     padding: 0px
     margin: 0px
+    font-family: 'Chilanka', cursive
+
+button
+    border-style: none
     
+
 .off 
     display: none
 
@@ -21,17 +29,21 @@ body
     grid-template-rows: repeat(2,1fr)
 
 h1  
+    font-family: 'Abel', sans-serif
     color: white
     padding-top: 50vh
-    font-size: 10vw
+    font-size: 10vw  
     
-.register
+.home
     margin-bottom: 10vw
-    button
+    &__register
+        font-size: x-large
+        background-color: #5295F6
+    &__login
         font-size: x-large
         background-color: #5295F6
 
-.userinfo
+.userInfo
     display: grid
     grid-template-rows: repeat(3, 1fr)
     padding-bottom: 2vw
@@ -39,7 +51,7 @@ h1
         font-size: large
     button
         background-color: #5295F6
-#proceedtologin
+.proceedtologin
      color: white
      margin-bottom: 10vw
      font-size: xx-large

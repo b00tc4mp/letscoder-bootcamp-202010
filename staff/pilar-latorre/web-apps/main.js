@@ -1,15 +1,30 @@
-var users = []; 
+//home
+
+(function(){
+    var title = document.querySelector('h1')
+
+    title.onclick = function(){
+        var sections = document.querySelectorAll('section')
+
+        for (var i = 0; i < sections.length; i++)
+            sections[i].classList.add('off')
+        
+            sections[0].classList.remove('off')
+    }
+
+})();
+
 
 // options
 (function () {
-        var register = document.querySelector('button')
+        var register = document.querySelector('.home__register')
 
         register.onclick = function () {
-            var options = document.querySelector('section')
+            var home = document.querySelector('.home')
 
-            options.classList.add('off')
+            home.classList.add('off')
 
-            var register = document.querySelectorAll('section')[1]
+            var register = document.querySelector('.registerPage')
 
             register.classList.remove('off')
         }
@@ -17,17 +32,15 @@ var users = [];
 
 //user already register
 (function () {
-    var login = document.querySelectorAll('button')[1]
+    var login = document.querySelector('.home__login')
 
     login.onclick = function(){
 
-    var sections = document.querySelectorAll('section')
+    var sections = document.querySelector('.home')
 
-    var login = sections[0]
+    sections.classList.add('off')
 
-    login.classList.add('off')
-
-    var confirm = sections[3]
+    var confirm = document.querySelector('.loginPage')
 
     confirm.classList.remove('off')
 
@@ -38,7 +51,7 @@ var users = [];
 
 // register
 (function () {
-    var register = document.querySelector('form')
+    var register = document.querySelector('.userInfo')
 
     register.onsubmit = function (event) {
         event.preventDefault()
@@ -50,34 +63,13 @@ var users = [];
         var password = inputs[2].value
         var repassword = inputs[3].value
 
-        if (!fullname.trim().length) throw new Error('full name is empty or blank')
+        registerUser(fullname,email,password,repassword)
 
-        if (!email.trim().length) throw new Error('e-mail is empty or blank')
-        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
+        var registerPage = document.querySelector('.registerPage')    
 
+        registerPage.classList.add('off')
 
-        if (!password.trim().length) throw new Error('password is empty or blank')
-
-        if (!repassword.trim().length) throw new Error('repeat password is empty or blank')
-
-      
-        if (password !== repassword) throw new Error('passwords do not match')
-
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
-
-        users.push(user)
-
-        var sections = document.querySelectorAll('section')
-
-        var register = sections[1]
-
-        register.classList.add('off')
-
-        var confirm = sections[2]
+        var confirm = document.querySelector('.proceedtologin')
 
         confirm.classList.remove('off')
     }
@@ -85,16 +77,14 @@ var users = [];
 
 // register confirm
 (function() {
-    var login = document.querySelectorAll('button')[3]
+    var login = document.querySelector('.login__confirm')
 
     login.onclick = function() {
-        var sections = document.querySelectorAll('section')
-
-        var confirm = sections[2]
+        var confirm = document.querySelector('.proceedtologin')
 
         confirm.classList.add('off')
 
-        var login = sections[3]
+        var login = document.querySelector('.loginPage')
 
         login.classList.remove('off')
     }
@@ -102,7 +92,7 @@ var users = [];
 // login 
 (function(){
 
-    var login = document.querySelectorAll('form')[1]
+    var login = document.querySelector('.login')
 
     login.onsubmit = function(event){   
         event.preventDefault()
@@ -113,28 +103,16 @@ var users = [];
         var email = inputs[4].value
         var password = inputs[5].value
 
+        authenticateUser(email,password)
          //if(users[0].email !== email) throw new Error ('this email do not match with any user')
         ///if(users[0].password !== password) throw new Error ('wrong password')
         
-        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
-        if (!email.trim().length) throw new Error('e-mail is empty or blank')
-        if (!password.trim().length) throw new Error('password is empty or blank')
-
-
-        var user = users.find(function(user){
-            return user.email === email && user.password === password
-
-        })
-
-        if (!user) throw new Error('wrong credentials')
    
-        var sections = document.querySelectorAll('section')
-   
-        var login = sections[3]
+        var sections = document.querySelector('.loginPage')
             
-        login.classList.add('off')
+        sections.classList.add('off')
 
-        var welcome= sections[4]
+        var welcome= document.querySelector('.welcomePage')
 
         welcome.classList.remove('off')
         

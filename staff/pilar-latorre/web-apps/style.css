@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 * {
   padding: 0px;
   margin: 0px;
+  font-family: "Chilanka", cursive;
+}
+
+button {
+  border-style: none;
 }
 
 .off {
@@ -24,37 +31,42 @@ body {
 }
 
 h1 {
+  font-family: "Abel", sans-serif;
   color: white;
   padding-top: 50vh;
   font-size: 10vw;
 }
 
-.register {
+.home {
   margin-bottom: 10vw;
 }
-.register button {
+.home__register {
+  font-size: x-large;
+  background-color: #5295F6;
+}
+.home__login {
   font-size: x-large;
   background-color: #5295F6;
 }
 
-.userinfo {
+.userInfo {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   padding-bottom: 2vw;
 }
-.userinfo input, .userinfo button {
+.userInfo input, .userInfo button {
   font-size: large;
 }
-.userinfo button {
+.userInfo button {
   background-color: #5295F6;
 }
 
-#proceedtologin {
+.proceedtologin {
   color: white;
   margin-bottom: 10vw;
   font-size: xx-large;
 }
-#proceedtologin button {
+.proceedtologin button {
   font-size: large;
   background-color: #5295F6;
 }
