@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Oleo+Script&display=swap");
+* {
+  background: #fafafa;
+}
+
+.off {
+  display: none;
+}
+
+h1 {
+  font-family: "Oleo Script", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-page button {
+  width: 75vw;
+  height: 6vh;
+  margin: 1vw auto;
+  border: 1px solid #B3B3B3;
+  color: #7e7d7d;
+  font-size: 14px;
+}
+
+#log-in {
+  border: 0px solid white;
+  background: #95D5FE;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */
