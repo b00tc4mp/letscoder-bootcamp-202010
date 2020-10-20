@@ -17,14 +17,14 @@ body {
   font-family: sans-serif;
 }
 
-h1 {
+.title {
   padding: .5rem;
   border-bottom: 1px solid black;
   width: 95%;
   margin: auto;
 }
 
-.options {
+.home {
   padding: 1rem;
   margin: auto 1rem;
 }
@@ -33,15 +33,15 @@ h2 {
   padding: 1rem;
 }
 
-h4 {
+.login-error__message {
   width: 95%;
   margin: auto;
   padding: 1rem;
 }
 
-.registration {
-  width: 50%;
-  height: 35vh;
+.register {
+  width: 40%;
+  height: 45vh;
   margin: 1rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,14 +69,14 @@ p {
   padding: .5rem;
 }
 
-.login-page {
+.login {
   width: 90%;
   margin: auto 1rem;
 }
 
-.button {
+button {
   border: none;
-  padding: .3rem;
+  padding: .4rem;
   margin: .3rem;
   border-radius: 5px;
   cursor: pointer;
