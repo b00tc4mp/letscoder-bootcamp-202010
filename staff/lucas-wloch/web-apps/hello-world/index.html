@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="main-container">
+
+        <h1 class="title">Hello World App</h1>
+    
+        <section class="options">
+            <button class="options__register">Register</button> or <button class="options__login">Login</button>
+        </section>
+    
+        <section class="register off">
+            <h2>Register</h2>
+            <form class="register__form">
+                <input class="register__name" type="text" name="fullname" placeholder="full name" required>
+                <input class="register__email" type="email" name="email" placeholder="e-mail" required>
+                <input class="register__password" type="password" name="password" placeholder="password" required>
+                <input class="register__repassword" type="password" name="repassword" placeholder="repeat password" required>
+                <button>Register</button>
+            </form>
+        </section>
+    
+        <section class="confirm off">
+            User registered successfully, proceed to <button class="confirm__login">Login</button>.
+        </section>
+    
+        <section class="login off">
+            <h2>Login</h2>
+            <h3 class="login__h3 off">Incorrect credentials. Try again</h3>
+            <form class="login__form">
+                <input class="login__email" type="email" name="email" placeholder="e-mail" required>
+                <input class="login__password" type="password" name="password" placeholder="password" required>
+                <button>Login</button>
+            </form>
+        </section>
+        
+        <section class="welcome off">
+            <h2>Welcome to Hello World App!!</h2>
+            <h3 class="welcome__h3 off"></h3>
+        </section>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./logic.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
