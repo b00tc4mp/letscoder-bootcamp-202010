@@ -1,8 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
 * {
     box-sizing: border-box;
     padding: 0;
     &:focus {
         outline: none;
+    }
+}
+
+@keyframes movement {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 560px 0px;
     }
 }
 
@@ -16,15 +26,19 @@ body {
     max-width: 80%;
     margin: 0 auto;
     background: #fff;
+    font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    background-image: url("https://i.stack.imgur.com/b7z29.png");
+    animation: movement 10s linear infinite;
+    background-color: #BFDFEC;
+    background-repeat: repeat-x;
 }
 
 .title {
     text-align: center;
     display: inline-block;
-    color: #b3b3b3;
+    color: #fff;
     text-shadow: 2px 2px #00000014;
     font-size: 2.4rem;
-    font-family: monospace;
     margin: 30px;
     position: relative;
     left: 50%;
@@ -37,19 +51,18 @@ body {
     margin-top: 0;
     text-shadow: 2px 2px #00000014;
     font-size: 1.4rem;
-    font-family: monospace;
 }
 
 %box {
     position: relative;
     background: #F2F2F2;
-    border: 1px solid #ccc;
+    border: 1px solid #8ebed2;
     box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
     border-radius: 3px/6px;
     padding: 20px;
     &:before {
         content: "";
-        box-shadow: rgb(0 0 0 / 14%) 0 5px 3px;
+        box-shadow: rgb(142 193 218 / 41%) 0 5px 3px;
         position: absolute;
         top: 0px;
         bottom: 0px;
@@ -64,6 +77,7 @@ body {
     align-items: center;
     justify-content: center;
     @extend %box;
+    margin-top: 70px;
     margin-bottom: 30px;
     button:first-child {
         margin-right: 20px;
@@ -75,6 +89,7 @@ body {
 
 .user-register {
     @extend %box;
+    margin-top: 70px;
     margin-bottom: 30px;
     form {
         display: flex;
@@ -84,21 +99,25 @@ body {
     input {
         margin-bottom: 20px;
     }
-    &__confirmation {
-        em {
-            color: #04a027;
-        }
-        @extend %box;
-        margin-bottom: 30px;
-        button {
-            margin: 20px 0 0 0;
-        }
+}
+
+.user-confirmation {
+    em {
+        color: #04a027;
+        font-weight: bold;
+    }
+    @extend %box;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    button {
+        margin: 20px 0 0 0;
     }
 }
 
 .user-login {
     @extend %box;
     margin-bottom: 30px;
+    margin-top: 70px;
     form {
         display: flex;
         flex-wrap: wrap;
@@ -107,6 +126,12 @@ body {
     input {
         margin-bottom: 20px;
     }
+}
+
+.web-app {
+    @extend %box;
+    margin-bottom: 30px;
+    margin-top: 70px;
 }
 
 .btn {

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,6 +7,14 @@
   outline: none;
 }
 
+@keyframes movement {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 560px 0px;
+  }
+}
 html {
   height: 100%;
   max-height: 100%;
@@ -16,15 +25,19 @@ body {
   max-width: 80%;
   margin: 0 auto;
   background: #fff;
+  font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  background-image: url("https://i.stack.imgur.com/b7z29.png");
+  animation: movement 10s linear infinite;
+  background-color: #BFDFEC;
+  background-repeat: repeat-x;
 }
 
 .title {
   text-align: center;
   display: inline-block;
-  color: #b3b3b3;
+  color: #fff;
   text-shadow: 2px 2px #00000014;
   font-size: 2.4rem;
-  font-family: monospace;
   margin: 30px;
   position: relative;
   left: 50%;
@@ -37,20 +50,19 @@ body {
   margin-top: 0;
   text-shadow: 2px 2px #00000014;
   font-size: 1.4rem;
-  font-family: monospace;
 }
 
-.user-login, .user-register__confirmation, .user-register, .user-action {
+.web-app, .user-login, .user-confirmation, .user-register, .user-action {
   position: relative;
   background: #F2F2F2;
-  border: 1px solid #ccc;
+  border: 1px solid #8ebed2;
   box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
   border-radius: 3px/6px;
   padding: 20px;
 }
-.user-login:before, .user-register__confirmation:before, .user-register:before, .user-action:before {
+.web-app:before, .user-login:before, .user-confirmation:before, .user-register:before, .user-action:before {
   content: "";
-  box-shadow: rgba(0, 0, 0, 0.14) 0 5px 3px;
+  box-shadow: rgba(142, 193, 218, 0.41) 0 5px 3px;
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -63,6 +75,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 70px;
   margin-bottom: 30px;
 }
 .user-action button:first-child {
@@ -73,6 +86,7 @@ body {
 }
 
 .user-register {
+  margin-top: 70px;
   margin-bottom: 30px;
 }
 .user-register form {
@@ -83,18 +97,22 @@ body {
 .user-register input {
   margin-bottom: 20px;
 }
-.user-register__confirmation {
+
+.user-confirmation {
   margin-bottom: 30px;
+  margin-top: 70px;
 }
-.user-register__confirmation em {
+.user-confirmation em {
   color: #04a027;
+  font-weight: bold;
 }
-.user-register__confirmation button {
+.user-confirmation button {
   margin: 20px 0 0 0;
 }
 
 .user-login {
   margin-bottom: 30px;
+  margin-top: 70px;
 }
 .user-login form {
   display: flex;
@@ -103,6 +121,11 @@ body {
 }
 .user-login input {
   margin-bottom: 20px;
+}
+
+.web-app {
+  margin-bottom: 30px;
+  margin-top: 70px;
 }
 
 .btn {
