@@ -1,8 +1,10 @@
+var users = [{ fullname: 'Pepito Grillo', email: 'pepigri@mail.com', password: '123123123' }];
+
 // home
-(function () {
+(function() {
     var title = document.querySelector('.title')
 
-    title.onclick = function () {
+    title.onclick = function() {
         var sections = document.querySelectorAll('section')
 
         for (var i = 0; i < sections.length; i++)
@@ -17,7 +19,7 @@
 // home
 (function () {
     var home = document.querySelector('.home')
-
+    
     var register = home.querySelector('.home__register')
 
     register.onclick = function () {
@@ -55,7 +57,27 @@
         var password = inputs[2].value
         var repassword = inputs[3].value
 
-        registerUser(fullname, email, password, repassword)
+        if (!fullname.trim().length) throw new Error('full name is empty or blank')
+
+        if (!email.trim().length) throw new Error('e-mail is empty or blank')
+
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
+        
+        if (!password.trim().length) throw new Error('password is empty or blank')
+
+        if (!repassword.trim().length) throw new Error('repeat password is empty or blank')
+
+        if (password !== repassword) throw new Error('passwords do not match')
+
+        var user = {
+            fullname: fullname,
+            email: email,
+            password: password
+        }
+
+        // TODO check whether user already exists! in case yes, throw an error
+
+        users.push(user)
 
         register.classList.add('off')
 
@@ -94,7 +116,17 @@
         var email = inputs[0].value
         var password = inputs[1].value
 
-        authenticateUser(email, password)
+        if (!email.trim().length) throw new Error('e-mail is empty or blank')
+
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
+
+        if (!password.trim().length) throw new Error('password is empty or blank')
+
+        var user = users.find(function(user) {
+            return user.email === email && user.password === password
+        })
+
+        if (!user) throw new Error('wrong credentials')
 
         login.classList.add('off')
 
