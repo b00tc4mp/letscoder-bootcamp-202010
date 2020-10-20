@@ -33,9 +33,14 @@ h1 {
   color: white;
 }
 
-.register {
-  font-size: xx-large;
+.home {
   margin-bottom: 15vh;
+}
+.home__register {
+  font-size: xx-large;
+}
+.home__login {
+  font-size: xx-large;
 }
 
 .registerUser {
@@ -49,12 +54,12 @@ h1 {
   text-shadow: -1px 0 1px #444;
 }
 
-#proceedLogin {
+.proceedLogin {
   color: white;
   font-size: xx-large;
   padding-bottom: 10vh;
 }
-#proceedLogin button {
+.proceedLogin button {
   font-size: xx-large;
 }
 

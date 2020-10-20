@@ -1,30 +1,45 @@
 var users = []; 
 
+//Home
+
+(function() {
+    var title = document.querySelector('h1')
+
+    title.onclick = function() {
+        var sections = document.querySelectorAll('section')
+
+        for (var i = 0; i < sections.length; i++)
+            sections[i].classList.add('off')
+
+            sections[0].classList.remove('off')
+    }
+})();
+
+
 // options
 (function () {
-        var register = document.querySelector('button')
+        var register = document.querySelector('.home__register')
 
         register.onclick = function () {
-            var options = document.querySelector('section')
+            var home = document.querySelector('.home')
 
-            options.classList.add('off')
+            home.classList.add('off')
 
-            var register = document.querySelectorAll('section')[1]
+            var registerPage = document.querySelector('.registerPage')
 
-            register.classList.remove('off')
+            registerPage.classList.remove('off')
         }
     })();
     //User already registered, go to login
     (function (){
-        var login = document.querySelectorAll('button')[1]
+        var login = document.querySelector('.home__login')
 
         login.onclick = function (){
-            var sections = document.querySelectorAll('section')
+            var home = document.querySelector('.home')
 
-            var loginOption = sections[0]
-            loginOption.classList.add('off')
+            home.classList.add('off')
 
-            var login = sections [3]
+            var login = document.querySelector('.loginUser')
             login.classList.remove('off')
 
 
@@ -34,9 +49,11 @@ var users = [];
 
 // register
 (function () {
-    var register = document.querySelector('form')
+    var register = document.querySelector('.registerPage')
 
-    register.onsubmit = function (event) {
+    var form = document.querySelector('.registerPage__registerUser')
+
+    form.onsubmit = function (event) {
         event.preventDefault()
 
         var inputs = document.querySelectorAll('input')
@@ -46,62 +63,39 @@ var users = [];
         var password = inputs[2].value
         var repassword = inputs[3].value
 
-        if (!fullname.trim().length) throw new Error('full name is empty or blank')
 
-        if (!email.trim().length) throw new Error('e-mail is empty or blank')
+        registerUser(fullname, email, password, repassword)
 
-        if (!password.trim().length) throw new Error('password is empty or blank')
+        var registerPage = document.querySelector('.registerPage')
 
-        if (!repassword.trim().length) throw new Error('repeat password is empty or blank')
+        registerPage.classList.add('off')
 
-        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
+        var proceedLogin = document.querySelector('.proceedLogin')
 
-        if (password !== repassword) throw new Error('passwords do not match')
-
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
-
-        users.push(user)
-
-        var sections = document.querySelectorAll('section')
-
-        var register = sections[1]
-
-        register.classList.add('off')
-
-        var confirm = sections[2]
-
-        confirm.classList.remove('off')
+        proceedLogin.classList.remove('off')
     }
 })();
 
 // register confirm
 (function() {
-    var login = document.querySelectorAll('button')[3]
+    var login = document.querySelector('.proceedLogin__loginButton')
 
     login.onclick = function() {
-        var sections = document.querySelectorAll('section')
+        var proceedLogin = document.querySelector('.proceedLogin')
+        proceedLogin.classList.add('off')
 
-        var confirm = sections[2]
-
-        confirm.classList.add('off')
-
-        var login = sections[3]
-
+        var login = document.querySelector('.loginUser')
         login.classList.remove('off')
     }
 })();
 
-// TODO login
-
+// login
 (function(){
 
-    var login = document.querySelectorAll('form')[1];
+    var form = document.querySelector('.login');
 
-        login.onsubmit = function(event) {
+    form.onsubmit = function(event) {
+
         event.preventDefault()
 
         var inputs = document.querySelectorAll('input')
@@ -109,31 +103,21 @@ var users = [];
         var email = inputs[4].value
         var password = inputs[5].value
 
+        authenticateUser(email, password)
 
-        if (users[0].email !== email) throw new Error ('This e-mail is not an e-mail registered')
-        if (users[0].password !== password) throw new Error ('wrong password')
-    }
-})();
+        var login = document.querySelector('.loginUser')
+                
+        login.classList.add('off')
+                
+        var welcome = document.querySelector('.welcome')
+                
+        welcome.classList.remove('off')
 
-
-// Login confirmed go to Welcome
-(function(){
-
-    var login = document.querySelectorAll('button')[4]
-
-    login.onclick = function() {
-        var sections = document.querySelectorAll('section')
-        var h1 = document.querySelector('h1')
         
+ 
+        var h1 = document.querySelector('h1')
+            
         var hello = h1
         hello.classList.add('hello')
-
-        var login = sections[3]
-
-        login.classList.add('off')
-
-        var welcome = sections[4]
-
-        welcome.classList.remove('off')
     }
-})()
+})();
