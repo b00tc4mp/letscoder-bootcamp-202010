@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    &:focus {
+        outline: none;
+    }
+}
+
+@keyframes movement {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 560px 0px;
+    }
+}
+
+html {
+    height: 100%;
+    max-height: 100%;
+}
+
+body {
+    height: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    background-image: url("images/sky.png");
+    animation: movement 10s linear infinite;
+    background-color: #BFDFEC;
+    background-repeat: repeat-x;
+}
+
+.title {
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    text-shadow: 2px 2px #00000014;
+    font-size: 2.4rem;
+    margin: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub-title {
+    display: block;
+    color: #b3b3b3;
+    margin-top: 0;
+    text-shadow: 2px 2px #00000014;
+    font-size: 1.4rem;
+}
+
+%box {
+    position: relative;
+    background: #F2F2F2;
+    border: 1px solid #8ebed2;
+    box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+    border-radius: 3px/6px;
+    padding: 20px;
+    &:before {
+        content: "";
+        box-shadow: rgb(142 193 218 / 41%) 0 5px 3px;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        z-index: -1
+    }
+}
+
+.user-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %box;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    &__register {
+        margin-right: 20px;
+    }
+    &__login {
+        margin-left: 20px;
+    }
+    &_banana {
+        position: absolute;
+        top: -79px;
+        max-width: 100%;
+        width: 5rem;
+    }
+}
+
+.user-register {
+    @extend %box;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    input {
+        margin-bottom: 20px;
+    }
+}
+
+.user-confirmation {
+    em {
+        color: #04a027;
+        font-weight: bold;
+    }
+    @extend %box;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    button {
+        margin: 20px 0 0 0;
+    }
+}
+
+.user-login {
+    @extend %box;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    input {
+        margin-bottom: 20px;
+    }
+}
+
+.web-app {
+    @extend %box;
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+
+.btn {
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#D8D9DB), color-stop(80%, #fff), to(#FDFDFD));
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 0 #CECFD1;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #cacaca;
+    box-shadow: inset 3px 3px 3px #0000001a;
+    border-radius: 3px/6px;
+}
+
+// Desktop
+@media (min-width: 600px) {
+    .user-register {
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        input:nth-child(1) {
+            flex-basis: calc(50% - 5px);
+        }
+        input:nth-child(2) {
+            flex-basis: calc(50% - 5px);
+            margin-left: 10px;
+        }
+        input:nth-child(3) {
+            flex-basis: calc(50% - 5px);
+        }
+        input:nth-child(4) {
+            flex-basis: calc(50% - 5px);
+            margin-left: 10px;
+        }
+    }
+}
+
+// Desktop big sze
+@media (min-width: 1024px) {
+    body {
+        max-width: 1024px;
+    }
+}
+
+.hidden {
+    display: none
+}

@@ -9,45 +9,49 @@
 </head>
 
 <body>
-    <h1 class="title">Hello World App</h1>
+    <main>
+        <h1 class="title">Hello World App</h1>
 
-    <section class="user-action">
-        <button class="user-action__register btn">Register</button> or <button class="user-action__login btn">Login</button>
-    </section>
+        <section class="user-action">
+            <img class="user-action_banana" src="images/banana.gif" alt="">
+            <button class="user-action__register btn">Register</button> or <button class="user-action__login btn">Login</button>
+        </section>
 
-    <section class="user-register hidden">
-        <h2 class="sub-title">Register</h2>
+        <section class="user-register hidden">
+            <h2 class="sub-title">Register</h2>
 
-        <form class="user-register__form">
-            <input class="user-register__fullname" type="text" name="fullname" placeholder="full name" _required>
-            <input class="user-register__email" type="email" name="email" placeholder="e-mail" required>
-            <input class="user-register__password" type="password" name="password" placeholder="password" required>
-            <input class="user-register__repassword" type="password" name="repassword" placeholder="repeat password" required>
-            <button class="btn">Register</button>
-        </form>
-    </section>
+            <form class="user-register__form">
+                <input class="user-register__fullname" type="text" name="fullname" placeholder="full name" _required>
+                <input class="user-register__email" type="email" name="email" placeholder="e-mail" required>
+                <input class="user-register__password" type="password" name="password" placeholder="password" required>
+                <input class="user-register__repassword" type="password" name="repassword" placeholder="repeat password" required>
+                <button class="btn">Register</button>
+            </form>
+        </section>
 
-    <section class="user-confirmation hidden">
-        User <em>registered successfully</em>, proceed to: <button class="user-confirmation__login btn">Login</button>.
-    </section>
+        <section class="user-confirmation hidden">
+            User <em>registered successfully</em>, proceed to: <button class="user-confirmation__login btn">Login</button>.
+        </section>
 
-    <section class="user-login hidden">
-        <h2 class="sub-title">Login</h2>
+        <section class="user-login hidden">
+            <h2 class="sub-title">Login</h2>
 
-        <form class="user-login__form">
-            <input class="user-login__email" type="email" name="email" placeholder="e-mail" required>
-            <input class="user-login__password" type="password" name="password" placeholder="password" required>
-            <button class="btn">Login</button>
-        </form>
-    </section>
+            <form class="user-login__form">
+                <input class="user-login__email" type="email" name="email" placeholder="e-mail" required>
+                <input class="user-login__password" type="password" name="password" placeholder="password" required>
+                <button class="btn">Login</button>
+            </form>
+        </section>
 
-    <section class="web-app hidden">
-        <h2 class="sub-title">Welcome to Hello World App!</h2>
-    </section>
+        <section class="web-app hidden">
+            <h2 class="sub-title">Welcome to Hello World App!</h2>
+        </section>
 
-    <script src="./data.js"></script>
-    <script src="./logic.js"></script>
-    <script src="./main.js"></script>
+        <script src="./js/data.js"></script>
+        <script src="./js//logic.js"></script>
+        <script src="./js/main.js"></script>
+    </main>
+
 </body>
 
 </html>

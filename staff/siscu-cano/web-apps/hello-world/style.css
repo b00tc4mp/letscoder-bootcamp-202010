@@ -26,7 +26,7 @@ body {
   margin: 0 auto;
   background: #fff;
   font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  background-image: url("https://i.stack.imgur.com/b7z29.png");
+  background-image: url("images/sky.png");
   animation: movement 10s linear infinite;
   background-color: #BFDFEC;
   background-repeat: repeat-x;
@@ -72,17 +72,24 @@ body {
 }
 
 .user-action {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 70px;
   margin-bottom: 30px;
 }
-.user-action button:first-child {
+.user-action__register {
   margin-right: 20px;
 }
-.user-action button:last-child {
+.user-action__login {
   margin-left: 20px;
+}
+.user-action_banana {
+  position: absolute;
+  top: -79px;
+  max-width: 100%;
+  width: 5rem;
 }
 
 .user-register {
