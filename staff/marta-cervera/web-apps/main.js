@@ -1,21 +1,22 @@
+(function(){
+    //title
+    mountTitle(".title", function(){
+        var sections = document.querySelectprAll("section")
+        for(var i=0; i < sections.length; i++)
+        sections[i].classList.add("off")
 
-// title
-(function() {
-    var title = document.querySelector('.title')
+        var home= document.querySelector(".home")
 
-    title.onclick = function() {
-        var sections = document.querySelectorAll('section')
+        home.classList.remove("off")
+    })
+})
 
-        for (var i = 0; i < sections.length; i++)
-            sections[i].classList.add('off')
-
-        var home = document.querySelector('.home')
-
-        home.classList.remove('off')
-    }
-})();
 
 // home
+
+mountHome(".home", function(){
+    var home= 
+})
 (function () {
     var home = document.querySelector('.home')
 

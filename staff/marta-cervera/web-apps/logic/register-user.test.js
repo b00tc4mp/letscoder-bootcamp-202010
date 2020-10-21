@@ -61,7 +61,7 @@
         }
 
         console.assert(fail instanceof TypeError, 'should error be defined and an instance of TypeError')
-        console.assert(fail.message === fullname + ' is not a full name', 'should error message match expected')
+        console.assert(fail.message === fullname + ' is not a full name','should error message match expected')
     })();
 
     (function () {

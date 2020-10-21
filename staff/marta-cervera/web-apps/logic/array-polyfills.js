@@ -13,4 +13,11 @@ if (typeof Array.prototype.shuffle === 'undefined')
     Array.prototype.shuffle = function () {
         for (var i = 0; i < this.length; i++) {
             var current = this[i]
-        }}
+
+            var index = this.randomIndex()
+
+            this[i] = this[index]
+
+            this[index] = current
+        }
+    }

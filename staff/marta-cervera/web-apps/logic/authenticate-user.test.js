@@ -26,6 +26,57 @@
 
         console.assert(!fail, 'should not fail on authenticate')
     })();
+(function(){
+    console.log(" should fail on non-exisiting user")
+
+    var email = "johndoe-" + "Math.random() + @mail.com"
+    var password = "pass-" + Math.random()
+
+    var fail
+
+    try{
+        authenticateUser(email,password)
+
+    } catch(error) {
+        fail= error
+    }
+    console.assert(fail instanceof Error, " error should be defined and instance of Error")
+    console.assert(fail.message, " wrong credentials")
+
+
+})();
+
+(function(){
+    console.log( " should fail on a wrdon email")
+
+    var fullname = "John Doe" + Math.random()
+    var email = "johndoe-" + Math.random() + "@mail.com"
+    var password = "pass-" + Math.random()
+
+    var user = {
+        fullname: fullname,
+        email: email,
+        password: password
+    }
+
+    users.push(user)
+
+    var fail
+    try{
+        authenticateUser("wrong-" + email, password)
+    } catch(error){
+        fail=error
+    }
+
+    console.assert(fail instanceof Error, " error should be defined and instance of Error")
+    console.assert(fail.message, "wrong credentials")
+})();
+
+
+
+
+
+
 
 
 })();
