@@ -37,16 +37,28 @@
     var confirm = document.querySelector('.user-confirmation');
 
     registerForm.onsubmit = function(event) {
+        var fail;
+        var errorBoxContainer = document.querySelector('.error-message');
+        var errorBoxMessage = document.querySelector('.error-message__inner');
         var fullname = document.querySelector('.user-register__fullname').value;
         var email = document.querySelector('.user-register__email').value;
         var password = document.querySelector('.user-register__password').value;
         var repassword = document.querySelector('.user-register__repassword').value;
 
         event.preventDefault();
-        registerUser(fullname, email, password, repassword);
 
-        register.classList.add('hidden');
-        confirm.classList.remove('hidden');
+        try {
+            registerUser(fullname, email, password, repassword);
+            register.classList.add('hidden');
+            confirm.classList.remove('hidden');
+        } catch (error) {
+            fail = error;
+        }
+
+        if (fail) {
+            errorBoxContainer.classList.remove('hidden');
+            errorBoxMessage.innerHTML = fail;
+        }
     }
 })();
 
@@ -67,16 +79,28 @@
     var login = document.querySelector('.user-login__form');
 
     login.onsubmit = function(event) {
+        var fail;
+        var errorBoxContainer = document.querySelector('.error-message');
+        var errorBoxMessage = document.querySelector('.error-message__inner');
         var email = document.querySelector('.user-login__email').value;
         var password = document.querySelector('.user-login__password').value;
         var login = document.querySelector('.user-login');
         var app = document.querySelector('.web-app');
         event.preventDefault();
 
-        authenticateUser(email, password);
+        try {
+            authenticateUser(email, password);
+            login.classList.add('hidden');
+            app.classList.remove('hidden');
+        } catch (error) {
+            fail = error;
+        }
 
-        login.classList.add('hidden');
-        app.classList.remove('hidden');
+        if (fail) {
+            errorBoxContainer.classList.remove('hidden');
+            errorBoxMessage.innerHTML = fail;
+        }
+
     }
 
 })();
