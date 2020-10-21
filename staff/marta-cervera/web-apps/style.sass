@@ -1,50 +1,55 @@
-* 
-    padding: 0px
-    margin: 0px
+// @@ -0,0 +1,53 @@
+// @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap')
+
+*
+    // border: 1px solid black  
+    font-family: 'Franklin Gothic Medium'
+body
+    background-image: url(./hello-world1)
+button
+    border-style: none  
+
+    &:focus
+        outline:0
+
 .off 
     display: none
 
-body
-    display: grid
-    background-image: url(./hello.world3.jpg)
-    background-position: center
-    border: 1px solid white
+.title
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 
-h1 
-    color: black
+.home
+    border: 1px solid 
+    padding: 1rem
+    border-radius: 1rem
     text-align: center
-    background-color:#F4A460
 
-h2
-    color: black
-    font-size: 25px
-    border: 1px solid black
-    border-radius:5px
-    display: inline
-    background-color: #9FE2C2 
-    
+    &__register
+        background-color: #4e9cb6
+        color: white
+        border-radius: 5px
+        padding: .4rem
+
+    &__login
+        border-style: solid
+        border-color: #FFB6C1
+        background-color: transparent
+        border-radius: 5px
+        padding: .4rem
+
+        &:hover
+            background-color: #E9F6FD
 
 .register
-    background-color: #D3D3D3
-    color: black
-    font-size: 35px
-    border-radius: 5px
-    margin-left: 10vw
+    background-color: red
 
+.register-confirm
+    background-color: #E9F6FD
 
 .login
-    background-color:#F0F8FF
-    color: black
-    font-family:'Lucida Sans'
-    font-size: 35px
-    border-radius: 5px
-    margin-left: 12vw
+    background-color: salmon
 
-.section1
-    align-content: center
-    align-items: center
-    margin-left: 25vw
+.welcome
+    background-color: plum
 
-
-
-    
