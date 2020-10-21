@@ -1,9 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 * {
   font-family: "Franklin Gothic Medium";
 }
 
 body {
-  background-image: url(./hello-world1);
+  background-image: url(./foto1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Architects Daughter", cursive;
 }
 
 button {
@@ -22,30 +31,36 @@ button:focus {
 }
 
 .home {
-  border: 1px solid;
-  padding: 1rem;
+  border: 5px solid;
+  padding: 2rem;
   border-radius: 1rem;
   text-align: center;
+  color: #E59EF3;
 }
 .home__register {
   background-color: #4e9cb6;
   color: white;
   border-radius: 5px;
   padding: 0.4rem;
+  font-size: 25px;
+}
+.home__register:hover {
+  background-color: #F0A8DD;
 }
 .home__login {
   border-style: solid;
   border-color: #FFB6C1;
-  background-color: transparent;
+  background-color: #F48DD8;
   border-radius: 5px;
   padding: 0.4rem;
+  font-size: 25px;
 }
 .home__login:hover {
   background-color: #E9F6FD;
 }
 
 .register {
-  background-color: red;
+  background-color: #F08080;
 }
 
 .register-confirm {

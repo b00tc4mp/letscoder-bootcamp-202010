@@ -1,4 +1,4 @@
-(function(){
+(function () {
     //title
     mountTitle(".title", function(){
         var sections = document.querySelectorAll("section")
@@ -15,13 +15,13 @@
         var home = document.querySelector(".home")
         home.classList.add("off")
 
-        var register = document.querySelector(".home")
+    
         
-        home.classList.add("off")
+        
 
         var register = document.querySelector(".register")
 
-        register.classList.add("off")
+        register.classList.remove("off")
     
 }, function () {
     var home = document.querySelector('.home')
@@ -34,24 +34,24 @@
 })
     
     //register
-    mountRegister(".register", function(fullname, email, password, repassword){
+    mountRegister(".register", function(fullname, email, password, repassword) {
         registerUser(fullname,email,password,repassword)
     
-    var register = home.querySelector('.register')
+    var register = document.querySelector('.register')
     
     register.classList.add("off")
     var confirm = document.querySelector(".register-confirm")
     confirm.classList.remove("off")
 
-    
+    })
     //register confirm
     mountRegisterConfirm(".register-confirm", function () {
-        var confirm = documetn.querySelector(".register-confirm")
-        confirm.classList.add ("off")
+        var confirm = document.querySelector(".register-confirm")
+        confirm.classList.add("off")
 
         var login = document.querySelector(".login")
 
-        login.classList.remove ("off")
+        login.classList.remove("off")
     })
     
     //// login
@@ -61,9 +61,9 @@
         var login = document.querySelector(".login")
         login.classList.add("off")
         var welcome = document.querySelector(".welcome")
-        welcome.classList.remove(off)
+        welcome.classList.remove("off")
 
 
     })
-})();
+    })();
 
