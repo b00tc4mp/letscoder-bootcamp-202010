@@ -100,11 +100,8 @@
         text.innerText = 'Welcome ' + user.fullname + ', good to see you again!';
         text.classList.remove('off');
         
-
         limpiarLogin();
-        
     })
     
-
 })();    
 
