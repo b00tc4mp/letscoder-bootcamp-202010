@@ -19,7 +19,8 @@
 
         <section class="user-action">
             <img class="user-action_banana" src="images/banana.gif" alt="">
-            <button class="user-action__register btn">Register</button> or <button class="user-action__login btn">Login</button>
+            <button class="user-action__register btn">Register</button> or <button
+                class="user-action__login btn">Login</button>
         </section>
 
         <section class="user-register hidden">
@@ -29,13 +30,15 @@
                 <input class="user-register__fullname" type="text" name="fullname" placeholder="full name" _required>
                 <input class="user-register__email" type="email" name="email" placeholder="e-mail" required>
                 <input class="user-register__password" type="password" name="password" placeholder="password" required>
-                <input class="user-register__repassword" type="password" name="repassword" placeholder="repeat password" required>
+                <input class="user-register__repassword" type="password" name="repassword" placeholder="repeat password"
+                    required>
                 <button class="btn">Register</button>
             </form>
         </section>
 
         <section class="user-confirmation hidden">
-            User <em>registered successfully</em>, proceed to: <button class="user-confirmation__login btn">Login</button>.
+            User <em>registered successfully</em>, proceed to: <button
+                class="user-confirmation__login btn">Login</button>.
         </section>
 
         <section class="user-login hidden">
@@ -52,11 +55,19 @@
             <h2 class="sub-title">Welcome to Hello World App!</h2>
         </section>
 
-        <script src="./js/data.js"></script>
-        <script src="./js/logic/register-user.js"></script>
-        <script src="./js/logic/authenticate-user.js"></script>
-        <script src="./js/main.js"></script>
     </main>
+    <script src="./js/data.js"></script>
+
+    <script src="./js/logic/register-user.js"></script>
+    <script src="./js/logic/authenticate-user.js"></script>
+
+    <script src="./js/components/title.js"></script>
+    <script src="./js/components/home.js"></script>
+    <script src="./js/components/register.js"></script>
+    <script src="./js/components/register-confirm.js"></script>
+    <script src="./js/components/login.js"></script>
+
+    <script src="./js/main.js"></script>
 
 </body>
 
