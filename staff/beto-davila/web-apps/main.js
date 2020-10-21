@@ -1,7 +1,7 @@
 
 // Back to home page
 (function () {
-  var home = document.getElementById("home");
+  var home = document.querySelector('.home')
   var sections = document.querySelectorAll("section");
   var title = document.querySelector("h1");
 
@@ -19,20 +19,20 @@
 
   var home = document.querySelector('.home');  
   var register = home.querySelector('.home__register');
+  var login = home.querySelector('.home__login');
 
   register.onclick = function () {
     home.classList.add('off');
     var register = document.querySelector('.register');
-
     register.classList.remove('off');
   }
-  var login = home.querySelector('.home__login');
 
   login.onclick = function () {
-      home.classList.add('.off');
+      home.classList.add('off');
       var login = document.querySelector('.login');
       login.classList.remove('off');
   }
+
 })();
 
 
@@ -40,14 +40,12 @@
 
 (function () {
   var register = document.querySelector(".register");
-
   var form = register.querySelector(".register__form");
 
   form.onsubmit = function (event) {
-    event.preventDefault(); // Clicking on the submit button, prevents it from submitting a form
+    event.preventDefault(); // Clicking on the submit button, prevents it from submitting the form by default
 
     var inputs = document.querySelectorAll("input");
-
     var fullname = inputs[0].value;
     var email = inputs[1].value;
     var password = inputs[2].value;
@@ -55,14 +53,11 @@
 
     registerUser(fullname, email, password, repassword);
 
-
-    var sections = document.querySelectorAll("section");
-
-    var register = sections[1];
+    var register = document.querySelector('.register');
 
     register.classList.add("off");
 
-    var confirm = sections[2];
+    var confirm = document.querySelector('.login');
 
     confirm.classList.remove("off");
 
@@ -70,6 +65,7 @@
 
     message.classList.remove("off");
   };
+
 })();
 
 // register confirmation
@@ -92,30 +88,28 @@
 
 
 // Login form
-
 (function () {
-  var login = document.querySelectorAll("button")[1];
+  var login = document.querySelector('.login__btn');
 
   login.onclick = function () {
-    var sections = document.querySelectorAll("section");
+    var loginScreen = document.querySelector('.login');
 
-    var loginScreen = sections[2];
+    loginScreen.classList.remove('off');
 
-    loginScreen.classList.remove("off");
+    var home = document.querySelector('.home');
 
-    var options = sections[0];
-
-    options.classList.add("off");
+    home.classList.add('off');
   };
 })();
 
-// Result after login
+// Login submit
 
 (function() {
-    
-    var login = document.querySelector('.login__form');
-    
 
+    var login = document.querySelector('.login__form');
+    var loginSection = document.querySelector('.login');
+    var welcome = document.querySelector('.welcome');
+    
     login.onsubmit = function(event) {
         event.preventDefault();
         var input = document.querySelectorAll('input');
@@ -123,6 +117,10 @@
         var password = input[5].value;
         
         authenticateUser(email, password);
+
+        welcome.classList.remove('off');
+        loginSection.classList.add('off');      
+
     }
 
 })(); 
