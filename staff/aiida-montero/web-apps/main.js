@@ -1,3 +1,4 @@
+// home
 (function () {
     var title = document.querySelector('.title')
 
@@ -54,13 +55,17 @@
         var password = inputs[2].value
         var repassword = inputs[3].value
 
-        registerUser(fullname, email, password, repassword)
+        try {
+            registerUser(fullname, email, password, repassword)
 
-        register.classList.add('off')
+            register.classList.add('off')
 
-        var confirm = document.querySelector('.register-confirm')
+            var confirm = document.querySelector('.register-confirm')
 
-        confirm.classList.remove('off')
+            confirm.classList.remove('off')
+        } catch (error) {
+            alert(error.message)
+        }
     }
 })();
 
@@ -93,12 +98,16 @@
         var email = inputs[0].value
         var password = inputs[1].value
 
-        authenticateUser(email, password)
+        try {
+            authenticateUser(email, password)
 
-        login.classList.add('off')
+            login.classList.add('off')
 
-        var welcome = document.querySelector('.welcome')
+            var welcome = document.querySelector('.welcome')
 
-        welcome.classList.remove('off')
+            welcome.classList.remove('off')
+        } catch (error) {
+            alert(error.message)
+        }
     }
-})(); 
+})();

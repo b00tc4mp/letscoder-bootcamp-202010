@@ -1,4 +1,3 @@
-
 (function () {
     console.log('TEST registerUser()');
 
@@ -246,4 +245,4 @@
     })();
 
     // TODO implement more unit test cases
-})(); 
+})();
