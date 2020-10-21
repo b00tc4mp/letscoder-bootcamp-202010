@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1 class = "">Hello World App</h1>
+    <h1 class = "title">Hello World App</h1>
 
     <section class="home">
         <button class="home__register">Register</button> or <button class="home__login">Login</button>
@@ -18,7 +18,7 @@
     <section class="registerPage off">
         <!--<h2>Register</h2>-->
     
-        <form class="registerPage__registerUser">
+        <form class="registerInfo">
             <input type="text" name="fullname" placeholder="full name" _required>
             <input type="email" name="email" placeholder="e-mail" required>
             <input type="password" name="password" placeholder="password" required>
@@ -27,7 +27,7 @@
         </form>
     </section>
 
-    <section class="proceedLogin off">
+    <section class="registerConfirm off">
         User registered successfully, proceed to <button class="proceedLogin__loginButton">Login</button>.
     </section>
 
@@ -45,7 +45,16 @@
         <h2>Welcome to Hello World App!</h2>
     </section>
     <script src="./data.js"></script>
-    <script src="./logic.js"></script>
+
+    <script src="./logic/register-user.js"></script>
+    <script src="./logic/authenticate-user.js"></script>
+
+    <script src="./components/home.js"></script>
+    <script src="./components/options.js"></script>
+    <script src="./components/register.js"></script>
+    <script src="./components/register-confirm.js"></script>
+    <script src="./components/login.js"></script>
+    
     <script src="./main.js"></script>
 </body>
 
