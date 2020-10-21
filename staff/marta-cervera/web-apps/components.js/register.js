@@ -1,0 +1,4 @@
+function mountRegister (selector, OnRegister) {
+
+    
+}
