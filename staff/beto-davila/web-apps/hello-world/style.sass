@@ -1,0 +1,79 @@
+$primary-color: #F4F8DB
+$primary-font: sans-serif
+$font-color: #262C05
+$button-color: #AEB299
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    
+.off
+    position: absolute
+    visibility: hidden
+    display: none
+
+body
+    color: $font-color
+    background-color: $primary-color
+    font-family: $primary-font
+
+.title
+    padding: .5rem
+    border-bottom: 1px solid black
+    width: 95%
+    margin: auto
+
+.home
+    padding: 1rem
+    margin: auto 1rem
+
+h2
+    padding: 1rem
+
+.register
+    width: 50%
+    height: 60vh
+    margin: 1rem auto
+    overflow: auto
+    display: flex
+    flex-direction: column
+    background-color:#EBEEE5
+    align-items: center
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4)
+
+    &__img
+        //width: 105px
+        //height: 55px
+        border-radius: 50%
+        max-width: 50%
+        height: auto
+        opacity: .6
+
+input
+    margin: .5rem
+
+p
+    font-size: .7rem
+    padding: .5rem
+
+.login
+    width: 90%
+    margin: auto .5rem
+
+.login-error__message
+    width: 95%
+    margin: auto
+    padding: 1rem
+
+
+.btn
+    border: none
+    padding: .4rem
+    margin: .3rem
+    border-radius: 5px
+    cursor: pointer
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+    background-color: $button-color
+    color: white
+

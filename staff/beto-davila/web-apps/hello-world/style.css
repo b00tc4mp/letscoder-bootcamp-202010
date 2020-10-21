@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.off {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+body {
+  color: #262C05;
+  background-color: #F4F8DB;
+  font-family: sans-serif;
+}
+
+.title {
+  padding: .5rem;
+  border-bottom: 1px solid black;
+  width: 95%;
+  margin: auto;
+}
+
+.home {
+  padding: 1rem;
+  margin: auto 1rem;
+}
+
+h2 {
+  padding: 1rem;
+}
+
+.register {
+  width: 50%;
+  height: 60vh;
+  margin: 1rem auto;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #EBEEE5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.register__img {
+  border-radius: 50%;
+  max-width: 50%;
+  height: auto;
+  opacity: .6;
+}
+
+input {
+  margin: .5rem;
+}
+
+p {
+  font-size: .7rem;
+  padding: .5rem;
+}
+
+.login {
+  width: 90%;
+  margin: auto .5rem;
+}
+
+.login-error__message {
+  width: 95%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.btn {
+  border: none;
+  padding: .4rem;
+  margin: .3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #AEB299;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
