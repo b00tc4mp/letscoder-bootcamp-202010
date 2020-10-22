@@ -30,7 +30,16 @@ body {
   grid-template-rows: repeat(2, 1fr);
 }
 
-h1 {
+h2 {
+  color: white;
+  font-size: 5vw;
+}
+
+.hello {
+  display: none;
+}
+
+.title {
   font-family: "Abel", sans-serif;
   color: white;
   padding-top: 50vh;
@@ -80,15 +89,6 @@ h1 {
 }
 .login input {
   font-size: large;
-}
-
-h2 {
-  color: white;
-  font-size: 5vw;
-}
-
-.hello {
-  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
