@@ -15,6 +15,7 @@ function mountLogin( selector, onLogin) {
             onLogin(email, password)
 
         } catch(error){
+            
             alert(error.message)
         }
     }

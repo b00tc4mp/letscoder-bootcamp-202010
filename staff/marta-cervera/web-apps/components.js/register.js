@@ -15,7 +15,9 @@ function mountRegister(selector, OnRegister) {
 
         try {
             OnRegister(fullname, email, password, repassword)
+
         } catch (error) {
+            
             alert(error.message)
         }
     }
