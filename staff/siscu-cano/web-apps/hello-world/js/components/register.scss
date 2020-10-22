@@ -1,0 +1,13 @@
+.user-register {
+    @extend %box;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    input {
+        margin-bottom: 20px;
+    }
+}

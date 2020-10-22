@@ -1,0 +1,12 @@
+.user-confirmation {
+    em {
+        color: #04a027;
+        font-weight: bold;
+    }
+    @extend %box;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    button {
+        margin: 20px 0 0 0;
+    }
+}

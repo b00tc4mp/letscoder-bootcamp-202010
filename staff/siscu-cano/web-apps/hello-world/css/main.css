@@ -1,4 +1,94 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
+.web-app, .user-register, .user-confirmation, .user-login, .user-action {
+  position: relative;
+  background: #F2F2F2;
+  border: 1px solid #8ebed2;
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;
+  padding: 20px;
+}
+.web-app:before, .user-register:before, .user-confirmation:before, .user-login:before, .user-action:before {
+  content: "";
+  box-shadow: rgba(142, 193, 218, 0.41) 0 5px 3px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.user-action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.user-action__register {
+  margin-right: 20px;
+}
+.user-action__login {
+  margin-left: 20px;
+}
+.user-action_banana {
+  position: absolute;
+  top: -79px;
+  max-width: 100%;
+  width: 5rem;
+}
+
+.user-login {
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.user-login form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.user-login input {
+  margin-bottom: 20px;
+}
+
+.user-confirmation {
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.user-confirmation em {
+  color: #04a027;
+  font-weight: bold;
+}
+.user-confirmation button {
+  margin: 20px 0 0 0;
+}
+
+.user-register {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.user-register form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.user-register input {
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  text-shadow: 2px 2px #00000014;
+  font-size: 2.4rem;
+  margin: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -32,102 +122,12 @@ body {
   background-repeat: repeat-x;
 }
 
-.title {
-  text-align: center;
-  display: inline-block;
-  color: #fff;
-  text-shadow: 2px 2px #00000014;
-  font-size: 2.4rem;
-  margin: 30px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .sub-title {
   display: block;
   color: #b3b3b3;
   margin-top: 0;
   text-shadow: 2px 2px #00000014;
   font-size: 1.4rem;
-}
-
-.web-app, .user-login, .user-confirmation, .user-register, .user-action {
-  position: relative;
-  background: #F2F2F2;
-  border: 1px solid #8ebed2;
-  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
-  border-radius: 3px/6px;
-  padding: 20px;
-}
-.web-app:before, .user-login:before, .user-confirmation:before, .user-register:before, .user-action:before {
-  content: "";
-  box-shadow: rgba(142, 193, 218, 0.41) 0 5px 3px;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
-
-.user-action {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 70px;
-  margin-bottom: 30px;
-}
-.user-action__register {
-  margin-right: 20px;
-}
-.user-action__login {
-  margin-left: 20px;
-}
-.user-action_banana {
-  position: absolute;
-  top: -79px;
-  max-width: 100%;
-  width: 5rem;
-}
-
-.user-register {
-  margin-top: 70px;
-  margin-bottom: 30px;
-}
-.user-register form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.user-register input {
-  margin-bottom: 20px;
-}
-
-.user-confirmation {
-  margin-bottom: 30px;
-  margin-top: 70px;
-}
-.user-confirmation em {
-  color: #04a027;
-  font-weight: bold;
-}
-.user-confirmation button {
-  margin: 20px 0 0 0;
-}
-
-.user-login {
-  margin-bottom: 30px;
-  margin-top: 70px;
-}
-.user-login form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.user-login input {
-  margin-bottom: 20px;
 }
 
 .web-app {
