@@ -2,52 +2,51 @@
     console.log('TEST registerUser()');
 
     (function () {
-        console.log(' should succeed on new user')
-
         var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
         var repassword = password
 
-        registerUser(fullname, email, password, repassword)
+        registerUser(fullname, email, password, repassword, function (error) {
+            console.log(' should succeed on new user')
 
-        var user = users.find(function (user) { return user.email === email })
-
-        console.assert(user, 'new user should be registered')
+            console.assert(!error, 'should not fail')
+        })
     })();
 
     (function () {
-        console.log(' should fail on already existing user')
-
         var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
         var repassword = password
 
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
+        var xhr = new XMLHttpRequest
+
+        xhr.onreadystatechange = function () {
+            console.log(' should fail on already existing user')
+
+            if (this.readyState == 4)
+                if (this.status === 201) {
+                    registerUser(fullname, email, password, repassword, function (error) {
+                        console.assert(error instanceof Error, 'should error be instanceof Error')
+                        console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected')
+                    })
+                } else {
+                    console.error('should not reach this point')
+                }
         }
 
-        users.push(user)
+        xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users')
 
-        var fail
+        xhr.setRequestHeader('Content-type', 'application/json')
 
-        try {
-            registerUser(fullname, email, password, repassword)
-        } catch (error) {
-            fail = error
-        }
-
-        console.assert(fail, 'should error be defined')
-        console.assert(fail.message === 'user already exists', 'should error message match expected')
+        xhr.send('{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }')
     })();
 
     (function () {
         console.log(' should fail on non-string full name')
 
-        var fullname = [1, true, null, undefined, {}, [], function() {}, new Date].random()
+        var fullname = [1, true, null, undefined, {}, [], function () { }, new Date].random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
         var repassword = password
