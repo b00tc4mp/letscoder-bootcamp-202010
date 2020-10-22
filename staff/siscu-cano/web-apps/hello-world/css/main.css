@@ -185,8 +185,10 @@ input {
   border-left-color: #d9534f;
   background-color: #ffdbda;
 }
-.error-message strong {
-  color: #d9534f;
+.error-message img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 @media (min-width: 600px) {
