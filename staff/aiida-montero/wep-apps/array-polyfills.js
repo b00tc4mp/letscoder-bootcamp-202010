@@ -22,4 +22,4 @@ if (typeof Array.prototype.shuffle === 'undefined')
         }
     }
 
-// ... more polyfills here on 
+// ... more polyfills here on

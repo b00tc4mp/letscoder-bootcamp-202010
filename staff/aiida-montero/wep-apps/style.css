@@ -22,10 +22,6 @@ button:focus {
   display: none;
 }
 
-.title {
-  font-family: Shadows Into Light;
-}
-
 .home {
   border: 1px solid skyblue;
   padding: 1rem;
@@ -51,6 +47,10 @@ button:focus {
   background-color: #E9F6FD;
 }
 
+.title {
+  font-family: Shadows Into Light;
+}
+
 .register {
   background-color: skyblue;
   border-radius: 5rem 0 5rem 0;
@@ -58,12 +58,6 @@ button:focus {
 }
 
 .register-confirm {
-  background-color: skyblue;
-  border-radius: 5rem 0 5rem 0;
-  font-family: Turret Road;
-}
-
-.login {
   background-color: skyblue;
   border-radius: 5rem 0 5rem 0;
   font-family: Turret Road;
