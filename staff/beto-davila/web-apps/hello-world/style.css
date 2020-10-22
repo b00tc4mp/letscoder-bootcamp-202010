@@ -13,8 +13,11 @@
 
 body {
   color: #262C05;
-  background-color: #F4F8DB;
   font-family: sans-serif;
+  background-image: url("./img/background-img.jpg");
+  background-size: cover;
+  background-color: black;
+  background-repeat: repeat;
 }
 
 .title {
@@ -72,6 +75,21 @@ p {
 .login {
   width: 90%;
   margin: auto .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login__img {
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 20%;
+  opacity: .5;
+  margin: .5rem;
 }
 
 .login-error__message {

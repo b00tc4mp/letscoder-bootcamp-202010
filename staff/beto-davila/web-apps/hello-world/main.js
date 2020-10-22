@@ -1,127 +1,63 @@
-
-// Back to home page
 (function () {
-  var home = document.querySelector('.home')
-  var sections = document.querySelectorAll("section");
-  var title = document.querySelector("h1");
 
-  title.onclick = function () {
+// title behavior setup
+  mountTitle('.title', function () {
+    var sections = document.querySelectorAll("section");
+
     for (var i = 0; i < sections.length; i++) {
-      sections[i].classList.add("off");
-      home.classList.remove("off");
+      sections[i].classList.add("off"); // off all sections
+
+      var home = document.querySelector(".home");
+      home.classList.remove("off"); // 'turnin on' home
     }
-  }
+  });
 
-})();
+// 'Home' behavior setup on clicking buttons
+mountHome('.home', function() {
+    //onRegister
+    var home = document.querySelector(".home");
+    home.classList.add("off");
 
-// Home Page register or login
-(function () {
+    var register = document.querySelector(".register");
+    register.classList.remove("off");
 
-  var home = document.querySelector('.home');  
-  var register = home.querySelector('.home__register');
-  var login = home.querySelector('.home__login');
+}, function () {
+    //onLogin
+    var home = document.querySelector(".home");
+    home.classList.add("off");
 
-  register.onclick = function () {
-    home.classList.add('off');
-    var register = document.querySelector('.register');
-    register.classList.remove('off');
-  }
+    var login = document.querySelector(".login");
+    login.classList.remove("off");
+});
 
-  login.onclick = function () {
-      home.classList.add('off');
-      var login = document.querySelector('.login');
-      login.classList.remove('off');
-  }
-
-})();
-
-
-// Register form
-
-(function () {
-  var login = document.querySelector('.login');
-  var register = document.querySelector('.register');
-  var formRegister = register.querySelector('.register__form');
-  var formLogin = login.querySelector('.login__form');
-  
-
-  formRegister.onsubmit = function (event) {
-    event.preventDefault(); // Clicking on the submit button, prevents it from submitting the form by default
-
-    var inputs = document.querySelectorAll("input");
-    var fullname = inputs[0].value;
-    var email = inputs[1].value;
-    var password = inputs[2].value;
-    var repassword = inputs[3].value;
-
+// Register form visual behavior after calling the registerUser function
+  mountRegister('.register', function(fullname, email, password, repassword){
     registerUser(fullname, email, password, repassword);
+    var register = document.querySelector(".register");
+    register.classList.add("off"); // off the register section
 
-    var register = document.querySelector('.register');
+    var confirm = document.querySelector(".login");
+    confirm.classList.remove("off"); // turning on the login section
+  })  
+      
+// register confirmation visual behavior
+  mountRegisterConfirm('.register-confirm', function () {
+    var confirm = document.querySelector('.register-confirm');
+    confirm.classList.add('off'); // off the register-confirm section
 
-    register.classList.add("off");
+    var login = document.querySelector('.login');
+    login.classList.remove('off'); // turning on the login section
+  });
 
-    var confirm = document.querySelector('.login');
 
-    confirm.classList.remove("off");
+// Visual behavior of the login section after calling authenticateUser
+    mountLogin('.login', function(email, password) {
+      authenticateUser(email, password);
+      var login = document.querySelector('.login');
+      login.classList.add('off'); // turning off the login section after auth
 
-    var message = formLogin.querySelector('.login__message');
-
-    message.classList.remove("off");
-  };
+      var welcome = document.querySelector('.welcome');
+      welcome.classList.remove('off'); // Turning on the welcome section
+  })
 
 })();
-
-// register confirmation
-
-(function () {
-  var login = document.querySelector('.login');
-  var form = login.querySelector('.login__form');
-  var loginBtn = form.querySelector('.login__btn');
-
-  loginBtn.onclick = function () {
-    var confirm = document.querySelector('.login');
-
-    confirm.classList.add("off");
-
-    var welcome = document.querySelector('.welcome');
-    welcome.classList.remove("off");
-  };
-})();
-
-
-// Login form
-(function () {
-  var login = document.querySelector('.login__btn');
-
-  login.onclick = function () {
-    var loginScreen = document.querySelector('.login');
-
-    loginScreen.classList.remove('off');
-
-    var home = document.querySelector('.home');
-
-    home.classList.add('off');
-  };
-})();
-
-// Login submit
-
-(function() {
-
-    var login = document.querySelector('.login__form');
-    var loginSection = document.querySelector('.login');
-    var welcome = document.querySelector('.welcome');
-    
-    login.onsubmit = function(event) {
-        event.preventDefault();
-        var input = document.querySelectorAll('input');
-        var email = input[4].value;
-        var password = input[5].value;
-        
-        authenticateUser(email, password);
-
-        welcome.classList.remove('off');
-        loginSection.classList.add('off');      
-    }
-
-})(); 

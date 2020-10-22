@@ -25,7 +25,7 @@
             fail = error;
         }
 
-        console.assert(!fail, 'the user should log in properly');
+        console.assert(!fail, 'should not throw error');
 
     })();
 

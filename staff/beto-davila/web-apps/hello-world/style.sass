@@ -15,8 +15,12 @@ $button-color: #AEB299
 
 body
     color: $font-color
-    background-color: $primary-color
+    //background-color: $primary-color
     font-family: $primary-font
+    background-image: url('./img/background-img.jpg')
+    background-size: cover
+    background-color: black
+    background-repeat: repeat
 
 .title
     padding: .5rem
@@ -60,6 +64,16 @@ p
 .login
     width: 90%
     margin: auto .5rem
+    display: flex
+    flex-direction: column
+
+    &__img
+        max-width: 50%
+        max-height: 50%
+        border-radius: 20%
+        opacity: .5
+        margin: .5rem
+        
 
 .login-error__message
     width: 95%
