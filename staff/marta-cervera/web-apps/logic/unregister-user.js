@@ -1,5 +1,4 @@
-
-function authenticateUser(email, password,callback) {
+(function unregisterUser(email,password,callback){
     if (typeof email !== 'string') throw new TypeError(email + ' is not an e-mail')
 
     if (!email.trim().length) throw new Error('e-mail is empty or blank')
@@ -13,23 +12,5 @@ function authenticateUser(email, password,callback) {
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 
 
-   var xhr = new XMLHttpRequest
 
-   xhr.onreadystatechange = function () {
-       if (this.readyStage == 4)
-        if(this.status === 200) {
-            
-            var response = JSON.parse(this.responseText)
-
-            callback(undefined,response.token)
-
-        } else {
-            callback(new Error(response.error))
-        }
-   }
-   xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth')
-
-    xhr.setRequestHeader('Content-type', 'application/json')
-
-    xhr.send('{ "username": "' + email + '", "password": "' + password + '" }')
-}
+})

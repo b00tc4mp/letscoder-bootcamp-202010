@@ -1,4 +1,4 @@
-function registerUser(fullname,email, password,repassword){
+function registerUser(fullname,email, password,repassword, callback ){
     if( typeof fullname!== "string") throw new TypeError ("fullname" + "is not a full name")
 
     if (!fullname.trim().length) throw new Error ('fullname is empty or blank')
@@ -19,26 +19,23 @@ function registerUser(fullname,email, password,repassword){
 
     if (password !== repassword) throw new Error('passwords don\'t match')
 
-    var user = users.find(function(user) {
-        return user.email === email
+    var xhr = new XMLHttpRequest
 
-    })
-        
-    if (user) throw new Error('user already exists')
+    xhr.onreadystatechange = function () {
+        if (this.readyState == 4)
+            if(this.status === 201)
+            callback()
+        else{
+            var response = JSON.parse(this.responseText)
 
-    user = {
-        fullname: fullname,
-        email: email,
-        password: password
+            callback(new Error(response.error))
+        }
     }
 
-    users.push(user)
+ xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users') 
+
+ xhr.setRequestHeader('Content')
+
+ xhr.send('{"fullname":"'+fullname+'","username":"'+ email + '","password": "'+password+'"}')
+
 }
-
-
-
-
-
-
-
-

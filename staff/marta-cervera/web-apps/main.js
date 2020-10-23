@@ -25,7 +25,7 @@
 }, function () {
         var home = document.querySelector('.home')
 
-        home.classList.add('off') //funcion que apaga una cosa y enciende otra, el off es una clase, y que hace lo apaga de la pantalla
+        home.classList.add('off') 
 
         var login = document.querySelector(".login")
 
@@ -34,6 +34,7 @@
     
     //register
     mountRegister(".register", function(fullname, email, password, repassword) {
+
         registerUser(fullname,email,password,repassword)
     
         var register = document.querySelector('.register')
@@ -58,6 +59,7 @@
     
     //// login
     mountLogin(".login", function(email, password){
+        
         authenticateUser(email,password)
 
         var login = document.querySelector(".login")

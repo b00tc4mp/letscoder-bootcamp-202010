@@ -1,4 +1,4 @@
-function mountRegisterConfirm( selector, onLogin) {
+function mountRegisterConfirm(selector, onLogin) {
 
     var confirm = document.querySelector(selector)
 
