@@ -11,14 +11,6 @@ button:focus {
   outline: 0;
 }
 
-.off {
-  display: none;
-}
-
-.title {
-  font-family: Bebas Neue;
-}
-
 .access {
   border: 1px solid skyblue;
   padding: 1rem;
@@ -42,6 +34,10 @@ button:focus {
   background-color: #E9F6FD;
 }
 
+.title {
+  font-family: Bebas Neue;
+}
+
 .register {
   background-color: red;
 }
@@ -58,4 +54,4 @@ button:focus {
   background-color: plum;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=index.css.map */

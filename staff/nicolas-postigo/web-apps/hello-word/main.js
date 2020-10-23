@@ -1,64 +1,49 @@
 (function () {
+    // root
+    var root = document.getElementById("root")
 
-    // onload
-
-    var root = documnet.getElementById("root");
     // title
-   var title = mountTitle(function () {
-        var sections = document.querySelectorAll('section')
-
-        for (var i = 0; i < sections.length; i++)
-            sections[i].classList.add('off')
-
-        var access = document.querySelector('.access')
-
-        access.classList.remove('off')
-        root.append(title)
+    var title = mountTitle(function () {
+        root.lastChild.replaceWith(access)
     })
+
+    root.append(title)
 
     // access
     var access = mountAccess(function () {
-        
-    root.lastChild.replaceWith(register)
-
+        access.replaceWith(register)
     }, function () {
-
-    root.lastChild.replaceWith(login)
-
+        access.replaceWith(login)
     })
-    
-    root.append(access);
+
+    root.append(access)
+
     // register
-    var register = mountRegister( function (fullname, email, password, repassword) {
-        registerUser(fullname, email, password, repassword, function(error){
-            if (error){
-                alert(error.message);
-            } else{
-                root.lastChild.replaceWith(confirm);
-            }
-
-        });
-
-    });
+    var register = mountRegister(function (fullname, email, password, repassword) {
+        registerUser(fullname, email, password, repassword, function (error) {
+            if (error)
+                alert(error.message)
+            else register.replaceWith(confirm)
+        })
+    })
 
     // register confirm
     var confirm = mountRegisterConfirm(function () {
-
-        root.lastChild.replaceWith(login)
- 
-    });
+        confirm.replaceWith(login)
+    })
 
     // login
     var login = mountLogin(function (email, password) {
-        authenticateUser(email, password, function(error, token){
-            if (error){ 
+        authenticateUser(email, password, function (error, token) {
+            if (error)
                 alert(error.message)
-            } else {
-                root.lastChild.replaceWith(welcome)
+            else {
+                // TODO call api to retrieve user, and then show welcome with user info
+                login.replaceWith(welcome)
             }
+        })
+    })
 
-        }
-
-    )});
-    var welcome = mountWelcome();
+    // welcome
+    var welcome = mountWelcome()
 })();

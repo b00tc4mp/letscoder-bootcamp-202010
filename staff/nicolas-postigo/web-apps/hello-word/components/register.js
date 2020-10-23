@@ -1,11 +1,7 @@
 function mountRegister(onRegister) {
-
-
-    var temp = document.createElement("div")
-
-
-    temp.innerHTML = `<section class="register">
+    var container = mountContainer(`<section class="register">
     <h2>Register</h2>
+
     <form class="register__form">
         <input type="text" name="fullname" placeholder="full name" _required>
         <input type="email" name="email" placeholder="e-mail" required>
@@ -13,12 +9,11 @@ function mountRegister(onRegister) {
         <input type="password" name="repassword" placeholder="repeat password" required>
         <button>Register</button>
     </form>
-</section>`
+</section>`)
 
-    var container = temp.firstChild
+    var form = container.querySelector('.register__form')
 
-    var form = register.querySelector('.register__form')
-
+    // form.addEventListener('submit', function(event) { ... })
     form.onsubmit = function (event) {
         event.preventDefault()
 
@@ -35,5 +30,6 @@ function mountRegister(onRegister) {
             alert(error.message)
         }
     }
-    return container;
+
+    return container
 }
