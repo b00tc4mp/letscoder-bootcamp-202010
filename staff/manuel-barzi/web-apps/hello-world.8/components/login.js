@@ -1,5 +1,7 @@
-function mountLogin(container, onLogin) {
-    var form = container.querySelector('.login__form')
+function mountLogin(selector, onLogin) {
+    var login = document.querySelector(selector)
+
+    var form = login.querySelector('.login__form')
 
     form.onsubmit = function (event) {
         event.preventDefault()

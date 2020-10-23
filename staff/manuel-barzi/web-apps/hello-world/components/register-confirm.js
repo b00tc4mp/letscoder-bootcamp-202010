@@ -1,7 +1,5 @@
-function mountRegisterConfirm(selector, onLogin) {
-    var confirm = document.querySelector(selector)
-
-    var login = confirm.querySelector('.register-confirm__login')
+function mountRegisterConfirm(container, onLogin) {
+    var login = container.querySelector('.register-confirm__login')
 
     login.onclick = onLogin
 }
