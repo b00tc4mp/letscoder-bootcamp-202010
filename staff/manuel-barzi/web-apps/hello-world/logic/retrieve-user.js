@@ -12,7 +12,7 @@ function retrieveUser(token, callback) {
             if (this.status === 200) {
                 var response = JSON.parse(this.responseText)
 
-                callback(undefined, response)
+                callback(null, response)
             } else {
                 var response = JSON.parse(this.responseText)
 

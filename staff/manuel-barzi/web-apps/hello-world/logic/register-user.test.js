@@ -10,7 +10,30 @@
         registerUser(fullname, email, password, repassword, function (error) {
             console.log(' should succeed on new user')
 
-            console.assert(!error, 'should not fail')
+            console.assert(error === null, 'should error be null')
+
+            call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+                '{ "username": "' + email + '", "password" : "' + password + '" }',
+                function (status, response) {
+                    console.assert(status === 200, 'should status be 200')
+
+                    var res = JSON.parse(response)
+
+                    var token = res.token
+
+                    call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                        {
+                            'Authorization': 'Bearer ' + token,
+                            'Content-type': 'application/json'
+                        },
+                        '{ "password": "' + password + '" }',
+                        function (status, response) {
+                            console.assert(status === 204, 'should status be 204')
+                            console.assert(response.length === 0, 'should response be empty')
+                        }
+                    )
+                }
+            )
         })
     })();
 
@@ -20,27 +43,45 @@
         var password = 'pass-' + Math.random()
         var repassword = password
 
-        var xhr = new XMLHttpRequest
-
-        xhr.onreadystatechange = function () {
-            console.log(' should fail on already existing user')
-
-            if (this.readyState == 4)
-                if (this.status === 201) {
+        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                if (status === 201) {
                     registerUser(fullname, email, password, repassword, function (error) {
+                        console.log(' should fail on already existing user')
+
                         console.assert(error instanceof Error, 'should error be instanceof Error')
                         console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected')
+
+                        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+                            '{ "username": "' + email + '", "password" : "' + password + '" }',
+                            function (status, response) {
+                                console.assert(status === 200, 'should status be 200')
+
+                                var res = JSON.parse(response)
+
+                                var token = res.token
+
+                                call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                    {
+                                        'Authorization': 'Bearer ' + token,
+                                        'Content-type': 'application/json'
+                                    },
+                                    '{ "password": "' + password + '" }',
+                                    function (status, response) {
+                                        console.assert(status === 204, 'should status be 204')
+                                        console.assert(response.length === 0, 'should response be empty')
+                                    }
+                                )
+                            }
+                        )
                     })
                 } else {
                     console.error('should not reach this point')
                 }
-        }
-
-        xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users')
-
-        xhr.setRequestHeader('Content-type', 'application/json')
-
-        xhr.send('{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }')
+            }
+        )
     })();
 
     (function () {

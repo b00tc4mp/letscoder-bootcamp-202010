@@ -23,31 +23,22 @@
         registerUser(fullname, email, password, repassword, function (error) {
             if (error)
                 alert(error.message)
-            else {
-                register.classList.add('off')
-
-                confirm.classList.remove('off')
-            }
+            else register.replaceWith(confirm)
         })
     })
 
     // register confirm
     var confirm = mountRegisterConfirm(function () {
-        confirm.classList.add('off')
-
-        login.classList.remove('off')
+        confirm.replaceWith(login)
     })
 
     // login
     var login = mountLogin(function (email, password) {
-        authenticateUser(email, password, function(error, token) {
+        authenticateUser(email, password, function (error, token) {
             if (error)
                 alert(error.message)
-            else {
-                login.classList.add('off')
-        
-                welcome.classList.remove('off')
-            }
+            else
+                login.replaceWith(welcome)
         })
     })
 

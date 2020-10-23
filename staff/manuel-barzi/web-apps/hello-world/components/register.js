@@ -1,4 +1,4 @@
-function mountRegister(container, onRegister) {
+function mountRegister(onRegister) {
     var temp = document.createElement('div')
 
     temp.innerHTML = `<section class="register">
