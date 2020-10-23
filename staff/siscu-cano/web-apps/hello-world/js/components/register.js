@@ -12,8 +12,7 @@ function mountRegister(onRegister) {
     </form>
 </section>`);
 
-console.log(container);
-console.log(container.querySelector('.register__form'));
+
     var form = container.querySelector('.register__form');
 
     form.onsubmit = function (event) {

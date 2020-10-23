@@ -9,21 +9,19 @@ function authenticateUser(email, password, callback) {
 
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 
-    var xhr = new XMLHttpRequest
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4)
-            if (this.status === 200) {
-                var response = JSON.parse(this.responseText)
-
-                callback(null, response.token)
-            } else {
-                var response = JSON.parse(this.responseText)
-
-                callback(new Error(response.error))
+    call('POST',
+        'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+        { 'Content-type': 'application/json' },
+        '{ "username": "' + email + '", "password": "' + password + '" }',
+        function (status, response) {
+            if (status === 200) {
+                var res = JSON.parse(response)
+                callback(null, res.token)
             }
-    }
-
-    xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth')
-    xhr.setRequestHeader('Content-type', 'application/json')
-    xhr.send('{ "username": "' + email + '", "password": "' + password + '" }')
+            else {
+                var res = JSON.parse(response)
+                callback(new Error(res.error))
+            }
+        }
+    )
 }

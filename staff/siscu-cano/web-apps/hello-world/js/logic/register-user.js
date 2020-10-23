@@ -36,22 +36,3 @@ function registerUser(fullname, email, password, repassword, callback) {
         }
     )
 }
-
-    // var xhr = new XMLHttpRequest
-
-    // xhr.onreadystatechange = function () {
-    //     if (this.readyState == 4)
-    //         if (this.status === 201)
-    //             callback()
-    //         else {
-    //             var response = JSON.parse(this.responseText)
-
-    //             callback(new Error(response.error))
-    //         }
-    // }
-
-    // xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users')
-
-    // xhr.setRequestHeader('Content-type', 'application/json')
-
-    // xhr.send('{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }')
