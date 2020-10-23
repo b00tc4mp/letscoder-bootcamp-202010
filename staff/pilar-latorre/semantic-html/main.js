@@ -16,7 +16,7 @@ function printSemanticElements(elements, indent) {
 
             console.log(indentation + element.tagName)
 
-        printSemanticElements(element.children, indent + 1)
+        printSemanticElements(element.children, indent + 1)  
     }
 }
 
