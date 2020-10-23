@@ -1,5 +1,4 @@
 
-
 function authenticateUser(email, password,callback) {
     if (typeof email !== 'string') throw new TypeError(email + ' is not an e-mail')
 
@@ -18,7 +17,7 @@ function authenticateUser(email, password,callback) {
         if(this.readyState == 4)
         if(this.status === 200)
 
-        callback(undefined,this.responsetokken)
+        callback(undefined,this.responsetoken)
 
         else{
             var response = JSON.parse(this.responseText)
@@ -33,6 +32,7 @@ function authenticateUser(email, password,callback) {
 
     xhr.send('{"username": "' + email + '", "password": "' + password + '"}')
     console.log('{"username": "' + email + '", "password": "' + password + '"}')
+
 
 }
 
