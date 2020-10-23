@@ -4,6 +4,8 @@ function modifyUser(parameter,token, callback) {
     if (!token.trim().length) throw new Error('token is empty or blank')
 
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
+
+    //if (typeof parameter !== 'object') throw new TypeError(parameter + ' is not an object')
     
     var xhr = new XMLHttpRequest
 
