@@ -9,7 +9,7 @@ function registerUser(fullname, email, password, repassword, callback) {
     if (typeof password !== 'string') throw new TypeError ( password + 'is not a password')
     if (!password.trim().length) throw new Error('password is empty or blank')
 
-    if (typeof repassword !== 'string') throw new TypeError ( repassword + 'is not a password repeat')
+    if (typeof repassword !== 'string') throw new TypeError ( repassword + ' is not a password repeat')
     if (!repassword.trim().length) throw new Error('repeat password is empty or blank')
 
 

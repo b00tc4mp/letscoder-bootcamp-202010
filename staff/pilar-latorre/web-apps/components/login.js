@@ -5,15 +5,15 @@ function mountLogin(selector, onLogin){
         event.preventDefault()
 
         var inputs = document.querySelectorAll('input')
-    
+
         var email = inputs[4].value
         var password = inputs[5].value
         try {
-        
+
             onLogin(email,password)
         } catch (error) {
             alert(error.message)
         }
     }
-        
+
 };

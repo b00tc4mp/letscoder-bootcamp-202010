@@ -8,7 +8,7 @@ function authenticateUser(email, password, callback) {
     if (typeof password !== 'string') throw new TypeError ( password + 'is not a password')
     if (!password.trim().length) throw new Error('password is empty or blank')
 
-    if(typeof callback !== 'function') throw new TypeError ( callback + 'is not a callback');
+    if(typeof callback !== 'function') throw new TypeError ( callback + ' is not a callback');
 
     var xhr = new XMLHttpRequest
 
