@@ -1,4 +1,4 @@
-function mountHome(onRegister, onLogin) {
+function mountAccess(onRegister, onLogin) {
     var temp = document.createElement("div");
 
     temp.innerHTML = `<section class="access">
