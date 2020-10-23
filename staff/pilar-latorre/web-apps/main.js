@@ -1,41 +1,29 @@
 (function () {
+    // root
+
+    var root = document.getElementById('root')
+    
     //title
 
-    mountTitle('.title', function () {
-        var sections = document.querySelectorAll('section');
-
-        for (var i = 0; i < sections.length; i++)
-            sections[i].classList.add('off');
-;
-        sections[0].classList.remove('off');
-
-        var home = document.querySelector('.home');
-        home.classList.remove('off');
+    var title = mountTitle( function () {
+        root.lastChild.replaceWith(access)
 
     });
 
+    root.append(title)
 
-    // home
+
+    // access
 
 
-    mountHome('.home', function () {
-
-        var home = document.querySelector('.home')
-        home.classList.add('off')
-
-        var register = document.querySelector('.registerPage')
-
-        register.classList.remove('off')
-
-    }, function () {
-        var sections = document.querySelector('.home')
-
-        sections.classList.add('off')
-
-        var confirm = document.querySelector('.loginPage')
-
-        confirm.classList.remove('off')
+    var access = mountAccess(function () {
+        access.replaceWith(register)
+    }, function(){
+        access.replaceWith(login)
     })
+
+    root.append(access)
+       
 
 
     // register

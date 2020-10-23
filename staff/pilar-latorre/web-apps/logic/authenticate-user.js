@@ -17,7 +17,7 @@ function authenticateUser(email, password, callback) {
             if (this.status ===200){
                 var response = JSON.parse(this.responseText)
 
-                callback(undefined, response.token)
+                callback(null, response.token)
             }else{
                 var response = JSON.parse(this.responseText)
 

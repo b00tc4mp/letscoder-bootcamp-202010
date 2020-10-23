@@ -10,7 +10,7 @@ function unregisterUser(password,token, callback) {
     xhr.onreadystatechange = function () {
         if (this.readyState == 4)
             if (this.status === 204) {
-                callback()
+                callback(null)
             
             } else {
                 var response = JSON.parse(this.responseText)

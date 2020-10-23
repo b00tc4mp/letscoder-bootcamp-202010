@@ -22,7 +22,7 @@ function registerUser(fullname, email, password, repassword, callback) {
     xhr.onreadystatechange = function () {
         if (this.readyState == 4)
             if (this.status === 201)
-                callback()
+                callback(null)
             else {
                 var response = JSON.parse(this.responseText)
 

@@ -1,5 +1,12 @@
-function mountTitle(selector, onHome){
-    var title = document.querySelector(selector);
+function mountTitle(onHome){
+    var temp = document.createElement('div')
+    
+    temp.innerHTML= '<h1 class="title">World App</h1>'
 
-    title.onclick = onHome;
+    var container = temp.firstChild
+
+    container.onclick = onHome
+
+    return container
+
 }
