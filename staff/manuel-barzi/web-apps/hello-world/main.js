@@ -1,31 +1,25 @@
 (function () {
+    // root
+    var root = document.getElementById('root')
+
     // title
-    mountTitle('.title', function () {
-        var sections = document.querySelectorAll('section')
-
-        for (var i = 0; i < sections.length; i++)
-            sections[i].classList.add('off')
-
-        home.classList.remove('off')
+    var title = mountTitle(function () {
+        root.lastChild.replaceWith(access)
     })
 
-    // home
-    var home = document.querySelector('.home')
+    root.append(title)
 
-    mountHome(home, function () {
-        home.classList.add('off')
-
-        register.classList.remove('off')
+    // access
+    var access = mountAccess(function () {
+        access.replaceWith(register)
     }, function () {
-        home.classList.add('off')
-
-        login.classList.remove('off')
+        access.replaceWith(login)
     })
+
+    root.append(access)
 
     // register
-    var register = document.querySelector('.register')
-
-    mountRegister(register, function (fullname, email, password, repassword) {
+    var register = mountRegister(function (fullname, email, password, repassword) {
         registerUser(fullname, email, password, repassword, function (error) {
             if (error)
                 alert(error.message)
@@ -38,28 +32,25 @@
     })
 
     // register confirm
-    var confirm = document.querySelector('.register-confirm')
-
-    mountRegisterConfirm(confirm, function () {
+    var confirm = mountRegisterConfirm(function () {
         confirm.classList.add('off')
 
         login.classList.remove('off')
     })
 
     // login
-    var login = document.querySelector('.login')
-
-    mountLogin(login, function (email, password) {
+    var login = mountLogin(function (email, password) {
         authenticateUser(email, password, function(error, token) {
             if (error)
                 alert(error.message)
             else {
                 login.classList.add('off')
         
-                var welcome = document.querySelector('.welcome')
-        
                 welcome.classList.remove('off')
             }
         })
     })
+
+    // welcome
+    var welcome = mountWelcome()
 })();

@@ -11,26 +11,30 @@ button:focus {
   outline: 0;
 }
 
-.access {
+.off {
+  display: none;
+}
+
+.home {
   border: 1px solid skyblue;
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
 }
-.access__register {
+.home__register {
   background-color: skyblue;
   color: white;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
 }
-.access__login {
+.home__login {
   border-style: solid;
   border-color: skyblue;
   background-color: transparent;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
 }
-.access__login:hover {
+.home__login:hover {
   background-color: #E9F6FD;
 }
 
