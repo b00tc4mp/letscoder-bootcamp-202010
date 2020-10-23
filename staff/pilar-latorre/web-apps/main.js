@@ -29,55 +29,39 @@
     // register
 
 
-    mountRegister('.userInfo', function (fullname, email, password, repassword) {
+    var register =mountRegister(function (fullname, email, password, repassword) {
+        registerUser(fullname, email, password, repassword, function(error){
+            if(error)
+                alert(error.message)
+            else register.replaceWith(confirm)
 
-        registerUser(fullname, email, password, repassword)
-
-        var registerPage = document.querySelector('.registerPage')
-
-        registerPage.classList.add('off')
-
-        var confirm = document.querySelector('.proceedtologin')
-
-        confirm.classList.remove('off')
+        })
 
     })
 
     // register confirm
 
-    mountRegisterConfirm('.login__confirm', function () {
-        var confirm = document.querySelector('.proceedtologin')
-
-        confirm.classList.add('off')
-
-        var login = document.querySelector('.loginPage')
-
-        login.classList.remove('off')
-
+    var confirm = mountRegisterConfirm(function () {
+        confirm.replaceWith(login)
     })
 
     // login 
 
+    var login = mountLogin(function(email,password){
+            authenticateUser(email, password, function(error, token){
+                if(error)
+                    alert(error.message)
+                else{
+                    //TODO call api to retrieve user, and then show welcome with user info
+                    login.replaceWith(welcome)
+                }
+
+            })
+
+        })
+
+    //welcome
     
-    mountLogin('.login',function(email,password){
-            
-            authenticateUser(email, password)
-
-
-            var sections = document.querySelector('.loginPage')
-
-            sections.classList.add('off')
-
-            var welcome = document.querySelector('.welcomePage')
-
-            welcome.classList.remove('off')
-
-            var title = document.querySelector('.title')
-            var hello = title
-            hello.classList.add('hello')
-
-    })
-
-
+    var welcome = mountWelcome()
 })();
 

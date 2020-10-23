@@ -10,10 +10,6 @@ button {
   border-style: none;
 }
 
-.off {
-  display: none;
-}
-
 body {
   background-image: url(./foto1.png);
   background-size: contain;
@@ -46,14 +42,14 @@ h2 {
   font-size: 10vw;
 }
 
-.home {
+.access {
   margin-bottom: 10vw;
 }
-.home__register {
+.access__register {
   font-size: x-large;
   background-color: #5295F6;
 }
-.home__login {
+.access__login {
   font-size: x-large;
   background-color: #5295F6;
 }
@@ -89,6 +85,11 @@ h2 {
 }
 .login input {
   font-size: large;
+}
+
+.welcome {
+  color: white;
+  font-size: 5vw;
 }
 
 /*# sourceMappingURL=index.css.map */

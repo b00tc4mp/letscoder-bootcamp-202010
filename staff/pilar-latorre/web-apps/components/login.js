@@ -1,7 +1,17 @@
-function mountLogin(selector, onLogin){
+function mountLogin(onLogin){
+    var container = mountContainer (`<section class="loginPage">
+    <h2>Login</h2>
 
-    var login = document.querySelector(selector)
-    login.onsubmit = function (event) {
+    <form class="login">
+        <input type="email" name="email" placeholder="e-mail" required>
+        <input type="password" name="password" placeholder="password" required>
+        <button>Login</button>
+    </form>
+</section>`)
+
+    var form = container.querySelector('.login')
+    
+    form.onsubmit = function (event) {
         event.preventDefault()
 
         var inputs = document.querySelectorAll('input')
@@ -9,11 +19,10 @@ function mountLogin(selector, onLogin){
         var email = inputs[4].value
         var password = inputs[5].value
         try {
-
             onLogin(email,password)
         } catch (error) {
             alert(error.message)
         }
     }
-
+    return container
 };
