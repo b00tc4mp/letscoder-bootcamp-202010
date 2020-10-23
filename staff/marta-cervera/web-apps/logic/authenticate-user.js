@@ -21,9 +21,11 @@ function authenticateUser(email, password,callback) {
             
             var response = JSON.parse(this.responseText)
 
-            callback(undefined,response.token)
+            callback(null,response.token)
 
         } else {
+            var response = JSON.parse(this.responseText)
+            
             callback(new Error(response.error))
         }
    }

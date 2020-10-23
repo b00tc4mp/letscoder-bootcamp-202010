@@ -1,14 +1,14 @@
-function modifyUser(token,callback,data) {
+function modifyUser(data,token,callback) {
     if (typeof data !== "string") throw new TypeError("data is not a string")
 
     if(typeof token !== "string") throw new TypeError("token is not a string")
 
-
+    //callbak
  var xhr = new XMLHttpRequest
 
  xhr.onreadystatechange = function() {
      if(this.readyState ==4)
-        if(this.status ===202)//204
+        if(this.status ===204)
         callback()
 
     else {
@@ -21,7 +21,7 @@ function modifyUser(token,callback,data) {
    
     xhr.open('PATCH', 'https://b00tc4mp.herokuapp.com/api/v2/users')
     
-    xhr.send('authorisation', 'bearer')
+    xhr.set('authorisation', 'bearer' + token)
 
     xhr.setRequestHeader( 'Content-type', 'application/json')
 

@@ -32,10 +32,10 @@ function registerUser(fullname,email, password,repassword, callback ){
         }
     }
 
- xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users') 
+    xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users') 
 
- xhr.setRequestHeader('Content')
+    xhr.setRequestHeader('Content')
 
- xhr.send('{"fullname":"'+fullname+'","username":"'+ email + '","password": "'+password+'"}')
+    xhr.send('{"fullname":"'+fullname+'","username":"'+ email + '","password": "'+password+'"}')
 
 }

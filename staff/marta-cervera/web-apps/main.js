@@ -1,76 +1,66 @@
 (function () {
+    // root
+    var root = document.getElementById('root')
+
     //title
-    mountTitle(".title", function(){
-        var sections = document.querySelectorAll("section")
-        
-        for(var i=0; i < sections.length; i++)
-        
-        sections[i].classList.add("off")
-
-        var home= document.querySelector(".home")
-
-        home.classList.remove("off")
-    })
-    // home
-
-    mountHome(".home", function(){
-        var home = document.querySelector(".home")
-
-        home.classList.add("off")
-
-        var register = document.querySelector(".register")
-
-        register.classList.remove("off")
+    var title = mountTitle(function() {
+        root.lastChild.replaceWith(access)
     
-}, function () {
-        var home = document.querySelector('.home')
 
-        home.classList.add('off') 
+    })
 
-        var login = document.querySelector(".login")
+    root.append(title)
 
-        login.classList.remove('off')
-})
+    //access
+
+    var access = mountAccess(function () {
+        access.replaceWith(register)
+    }, function() {
+        access.replaceWith(login)
+    })
+
+    root.append(access)
+
     
     //register
-    mountRegister(".register", function(fullname, email, password, repassword) {
 
-        registerUser(fullname,email,password,repassword)
-    
-        var register = document.querySelector('.register')
-    
-        register.classList.add("off")
+    var access = mountRegister(function(fullname, email, password, repassword) {
+
+            registerUser(fullname,email,password,repassword, function(error) {
+                if(error)
+                    alert(error.message)
+                else register.replaceWith(confirm)
+            })   
         
-        var confirm = document.querySelector(".register-confirm")
-       
-        confirm.classList.remove("off")
-
     })
+
     //register confirm
-    mountRegisterConfirm(".register-confirm", function () {
-        var confirm = document.querySelector(".register-confirm")
-        
-        confirm.classList.add("off")
-
-        var login = document.querySelector(".login")
-
-        login.classList.remove("off")
-    })
     
-    //// login
-    mountLogin(".login", function(email, password){
-        
-        authenticateUser(email,password)
-
-        var login = document.querySelector(".login")
-        
-        login.classList.add("off")
-        
-        var welcome = document.querySelector(".welcome")
-       
-        welcome.classList.remove("off")
-
-
+    var confirm = mountRegisterConfirm( function () {
+               
+        confirm.replaceWith(login)
+    
     })
+
+    //// login
+
+    var login = mountLogin(function(email, password){
+        
+        authenticateUser(email,password, function(error, token) {
+            if (error)
+                alert(eror)
+            else {
+                login.replaceWith(welcome)
+            }
+
+        }) 
+    })
+
+    //welcome
+
+    var welcome = mountWelcome ()
+
+
+   
     })();
 
