@@ -1,4 +1,6 @@
-registerUser("fullname", "email@email.es", "123", "123", function(error){
-    if (!error) alert("ok, user registered!")
-    else alert('ERROR! ' + error.message);
+registerUser('Ga To', 'ga@to.com', '123', '123', function(error) {
+    console.log('DEMO registerUser()')
+    
+    if (!error) console.log('ok, perfect, user registered! ,)')
+    else console.error('ERROR! ' + error.message) 
 })

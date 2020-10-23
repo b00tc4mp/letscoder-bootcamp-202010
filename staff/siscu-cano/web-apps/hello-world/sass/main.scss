@@ -3,7 +3,7 @@
 @import 'box.scss';
 
 // Components
-@import '../js/components/home.scss';
+@import '../js/components/access.scss';
 @import '../js/components/login.scss';
 @import '../js/components/register-confirm.scss';
 @import '../js/components/register.scss';
@@ -53,11 +53,7 @@ body {
 
 
 
-.web-app {
-    @extend %box;
-    margin-bottom: 30px;
-    margin-top: 70px;
-}
+
 
 .btn {
     -webkit-appearance: none;
@@ -117,7 +113,7 @@ input {
 
 // Desktop
 @media (min-width: 600px) {
-    .user-register {
+    .register {
         form {
             display: flex;
             flex-wrap: wrap;

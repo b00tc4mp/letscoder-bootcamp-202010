@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
-.web-app, .user-register, .user-confirmation, .user-login, .user-action {
+.web-app, .register, .register-confirm, .login, .access {
   position: relative;
   background: #F2F2F2;
   border: 1px solid #8ebed2;
@@ -7,7 +7,7 @@
   border-radius: 3px/6px;
   padding: 20px;
 }
-.web-app:before, .user-register:before, .user-confirmation:before, .user-login:before, .user-action:before {
+.web-app:before, .register:before, .register-confirm:before, .login:before, .access:before {
   content: "";
   box-shadow: rgba(142, 193, 218, 0.41) 0 5px 3px;
   position: absolute;
@@ -18,7 +18,7 @@
   z-index: -1;
 }
 
-.user-action {
+.access {
   position: relative;
   display: flex;
   align-items: center;
@@ -26,54 +26,54 @@
   margin-top: 70px;
   margin-bottom: 30px;
 }
-.user-action__register {
+.access__register {
   margin-right: 20px;
 }
-.user-action__login {
+.access__login {
   margin-left: 20px;
 }
-.user-action_banana {
+.access_banana {
   position: absolute;
   top: -79px;
   max-width: 100%;
   width: 5rem;
 }
 
-.user-login {
+.login {
   margin-bottom: 30px;
   margin-top: 70px;
 }
-.user-login form {
+.login form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-.user-login input {
+.login input {
   margin-bottom: 20px;
 }
 
-.user-confirmation {
+.register-confirm {
   margin-bottom: 30px;
   margin-top: 70px;
 }
-.user-confirmation em {
+.register-confirm em {
   color: #04a027;
   font-weight: bold;
 }
-.user-confirmation button {
+.register-confirm button {
   margin: 20px 0 0 0;
 }
 
-.user-register {
+.register {
   margin-top: 70px;
   margin-bottom: 30px;
 }
-.user-register form {
+.register form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-.user-register input {
+.register input {
   margin-bottom: 20px;
 }
 
@@ -192,22 +192,22 @@ input {
 }
 
 @media (min-width: 600px) {
-  .user-register form {
+  .register form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .user-register input:nth-child(1) {
+  .register input:nth-child(1) {
     flex-basis: calc(50% - 5px);
   }
-  .user-register input:nth-child(2) {
+  .register input:nth-child(2) {
     flex-basis: calc(50% - 5px);
     margin-left: 10px;
   }
-  .user-register input:nth-child(3) {
+  .register input:nth-child(3) {
     flex-basis: calc(50% - 5px);
   }
-  .user-register input:nth-child(4) {
+  .register input:nth-child(4) {
     flex-basis: calc(50% - 5px);
     margin-left: 10px;
   }
