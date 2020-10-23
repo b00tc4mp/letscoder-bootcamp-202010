@@ -55,7 +55,7 @@ body
 
 .cabecera 
     margin: 12px 
-    background: #b6b5b3
+    background: #8c7284
     height: 10vh 
     width: 100vw 
     display: flex 
@@ -79,11 +79,12 @@ body
     border: 1px solid black 
 
     h1 
-        font-size: 50px 
+        font-size: 60px 
         margin-left: 50px 
         font-family: Montserrat, sans-serif
         justify-self: left
         align-self: center 
+        font-weight: 900
 
     div 
         align-self: center
@@ -115,13 +116,15 @@ body
     color: black 
     margin-left: 1vw 
     font-family: Montserrat, sans-serif
+    font-weight: 500
+    font-size: 20px
 
 .social-networks 
     margin-left: 5vw 
-    color: black 
+    color: blue 
     font-family: Montserrat, sans-serif
 .fas
-    color: black 
+    color: #8c7284 
 
 .search
     margin-top: 1vw
@@ -220,6 +223,72 @@ button
 
 .item12 
     grid-area: 4/2/7/4
+    @include item 
+
+.item13 
+    grid-area: 1/1/7/1
+    @include item 
+
+.item14 
+    grid-area: 1/2/6/7
+    @include item 
+
+.item15
+    grid-area: 4/2/7/4
+    @iclude item 
+
+@media screen and (max-width: 600px)
+
+    .section 
+        display: none
+    .ocultar 
+        display: none
+    .search 
+        display: none 
+    @mixin item 
+        background-color: #d1b1c8
+        border: 2px solid white 
+        height: 20vh 
+
+    body 
+        display: flex 
+        align-items: center 
+        justify-content: center 
+    
+    .container 
+        background-color: #b1b7d1
+        width: 70vw 
+        height: 180vh 
+        gap: 15px 
+        display: flex 
+        align-content: center
+        justify-content: center
+        flex-direction: column 
+        margin-top: 15svw
+
+    .container02
+        background-color: #b1b7d1
+        width: 70vw 
+        height: 70vh 
+        gap: 15px 
+        display: flex
+        align-content: center 
+        justify-content: center
+        flex-direction: column
+        margin-top: 15svw 
+
+    .container03 
+        background-color: #b1b7d1 
+        width: 70vw 
+        height: 70vh 
+        gap: 15px 
+        display: flex
+        align-content: center 
+        justify-content: center 
+        flex-direction: column 
+        margin-top: 15svw 
+
+.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12, .item13, .item14, .item15 
     @include item 
 
 
