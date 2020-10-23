@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 95%;
+  margin: auto;
+  min-height: 70%;
+}
+
+.off {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+body {
+  color: #262C05;
+  font-family: sans-serif;
+  background-image: url("./img/background-img.jpg");
+  background-size: cover;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+
+input {
+  margin: 0.5rem;
+}
+
+p {
+  font-size: 0.7rem;
+  padding: 0.5rem;
+}
+
+.btn {
+  margin: auto 0.5rem;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 0 1rem 0 1rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #AEB299;
+  color: white;
+}
+
+.home {
+  padding: 2rem;
+  margin: auto;
+}
+
+.title {
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid black;
+  width: 85%;
+  margin: auto;
+}
+
+.register {
+  width: 60%;
+  height: 60vh;
+  margin: 1rem auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #EBEEE5;
+  align-items: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+.register__img {
+  border-radius: 50%;
+  max-width: 50%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.login {
+  width: 90%;
+  margin: auto 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.login__img {
+  max-width: 30%;
+  max-height: 50%;
+  border-radius: 20%;
+  opacity: 0.5;
+  margin: 0.5rem;
+}
+
+.login-error__message {
+  width: 95%;
+  margin: auto;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=index.css.map */

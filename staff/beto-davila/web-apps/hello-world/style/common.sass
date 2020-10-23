@@ -1,0 +1,47 @@
+$primary-color: #F4F8DB
+$primary-font: sans-serif
+$font-color: #262C05
+$button-color: #AEB299
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    max-width: 95%
+    margin: auto
+    min-height: 70%
+
+.off
+    position: absolute
+    visibility: hidden
+    display: none
+
+body
+    color: $font-color
+    //background-color: $primary-color
+    font-family: $primary-font
+    background-image: url('./img/background-img.jpg')
+    background-size: cover
+    background-color: white
+    background-repeat: no-repeat
+    
+
+input
+    margin: .5rem
+
+p
+    font-size: .7rem
+    padding: .5rem
+
+
+.btn
+    margin: auto .5rem
+    border: none
+    padding: .4rem
+    border-radius: 0 1rem 0 1rem
+    cursor: pointer
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+    background-color: $button-color
+    color: white

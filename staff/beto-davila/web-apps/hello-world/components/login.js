@@ -11,9 +11,9 @@ function mountLogin(selector, onLogin) {
         var password = inputs[1].value;
 
         try {
-            onLogin(email, password);
+            onLogin(email, password); // call authenticateUser
         } catch (error) {
-            alert(error.message);
+            alert(error.message);  // response if something went wrong
         }
     }
 }

@@ -1,6 +1,6 @@
 (function () {
 
-// title behavior setup
+// title visual behavior 
   mountTitle('.title', function () {
     var sections = document.querySelectorAll("section");
 
@@ -8,7 +8,7 @@
       sections[i].classList.add("off"); // off all sections
 
       var home = document.querySelector(".home");
-      home.classList.remove("off"); // 'turnin on' home
+      home.classList.remove("off"); // 'turning on' home
     }
   });
 
