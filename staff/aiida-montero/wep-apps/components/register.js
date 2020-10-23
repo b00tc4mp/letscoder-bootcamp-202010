@@ -1,7 +1,5 @@
-function mountRegister(selector, onRegister) {
-    var register = document.querySelector(selector)
-
-    var form = register.querySelector('.register__form')
+function mountRegister(container, onRegister) {
+    var form = container.querySelector('.register__form')
 
     form.onsubmit = function (event) {
         event.preventDefault()
