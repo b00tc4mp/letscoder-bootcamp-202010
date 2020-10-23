@@ -1,7 +1,11 @@
 function mountAccess(onRegister, onLogin) {
-    var container = mountContainer(`<section class="access">
+    var temp = document.createElement('div')
+
+    temp.innerHTML = `<section class="access">
     <button class="access__register">Register</button> or <button class="access__login">Login</button>
-</section>`)
+</section>`
+
+    var container = temp.firstChild
 
     var register = container.querySelector('.access__register')
 

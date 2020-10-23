@@ -1,5 +1,7 @@
 function mountRegister(onRegister) {
-    var container = mountContainer(`<section class="register">
+    var temp = document.createElement('div')
+
+    temp.innerHTML = `<section class="register">
     <h2>Register</h2>
 
     <form class="register__form">
@@ -9,11 +11,12 @@ function mountRegister(onRegister) {
         <input type="password" name="repassword" placeholder="repeat password" required>
         <button>Register</button>
     </form>
-</section>`)
+</section>`
+
+    var container = temp.firstChild
 
     var form = container.querySelector('.register__form')
 
-    // form.addEventListener('submit', function(event) { ... })
     form.onsubmit = function (event) {
         event.preventDefault()
 

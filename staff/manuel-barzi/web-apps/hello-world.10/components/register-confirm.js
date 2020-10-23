@@ -1,11 +1,14 @@
 function mountRegisterConfirm(onLogin) {
-    var container = mountContainer(`<section class="register-confirm">
+    var temp = document.createElement('div')
+
+    temp.innerHTML = `<section class="register-confirm">
     User registered successfully, proceed to <button class="register-confirm__login">Login</button>.
-</section>`)
+</section>`
+
+    var container = temp.firstChild
 
     var login = container.querySelector('.register-confirm__login')
 
-    // login.addEventListener('click', onLogin)
     login.onclick = onLogin
 
     return container

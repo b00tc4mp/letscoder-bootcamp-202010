@@ -1,3 +1,5 @@
+
+
 function authenticateUser(email, password, callback) {
     if (typeof email !== 'string') throw new TypeError(email + ' is not an e-mail')
 

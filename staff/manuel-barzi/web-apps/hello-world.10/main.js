@@ -37,10 +37,8 @@
         authenticateUser(email, password, function (error, token) {
             if (error)
                 alert(error.message)
-            else {
-                // TODO call api to retrieve user, and then show welcome with user info
+            else
                 login.replaceWith(welcome)
-            }
         })
     })
 
