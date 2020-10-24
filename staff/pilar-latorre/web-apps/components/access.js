@@ -1,5 +1,5 @@
 function mountAccess(onRegister, onLogin){
-    var container = mountContainer(` <section class="access">
+    var container = mountContainer(`<section class="access">
     <button class="access__register">Register</button> or <button class="access__login">Login</button>
 </section>`)
     
@@ -7,7 +7,7 @@ function mountAccess(onRegister, onLogin){
     
     register.onclick = onRegister;
    
-    var login = access.querySelector('.access__login');
+    var login = container.querySelector('.access__login');
 
     login.onclick = onLogin;
 
