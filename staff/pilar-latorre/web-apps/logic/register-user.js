@@ -19,20 +19,21 @@ function registerUser(fullname, email, password, repassword, callback) {
 
     var xhr = new XMLHttpRequest
 
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4)
-            if (this.status === 201)
+    call('POST',
+        'https://b00tc4mp.herokuapp.com/api/v2/users',
+        {'Content-type': 'application/json'},
+        '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }',
+        function (status, response) {
+            if (status === 201)
                 callback(null)
             else {
-                var response = JSON.parse(this.responseText)
+                var res = JSON.parse(response)
 
-                callback(new Error(response.error))
+                callback(new Error(res.error))
             }
-    }
+        }
 
-    xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users')
+    )
+}
 
-    xhr.setRequestHeader('Content-type', 'application/json')
-
-    xhr.send('{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }')
-} 
+   

@@ -16,8 +16,8 @@ function mountLogin(onLogin){
 
         var inputs = document.querySelectorAll('input')
 
-        var email = inputs[4].value
-        var password = inputs[5].value
+        var email = inputs[0].value
+        var password = inputs[1].value
         try {
             onLogin(email,password)
         } catch (error) {

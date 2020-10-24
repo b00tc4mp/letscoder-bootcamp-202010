@@ -46,14 +46,22 @@
     })
 
     // login 
-
+   
     var login = mountLogin(function(email,password){
             authenticateUser(email, password, function(error, token){
                 if(error)
                     alert(error.message)
                 else{
-                    //TODO call api to retrieve user, and then show welcome with user info
-                    login.replaceWith(welcome)
+                    retrieveUser(token, function(error,resp){
+                        if(!error){
+                        var username = resp.fullname
+                        var welcome = mountWelcome(username)
+                        login.replaceWith(welcome)
+
+                    }else
+                        alert(error.message)
+                     
+                    })   
                 }
 
             })
@@ -62,6 +70,6 @@
 
     //welcome
     
-    var welcome = mountWelcome()
+    
 })();
 
