@@ -1,4 +1,17 @@
-function mountLogin(container, onLogin) {
+function mountLogin(onLogin) {
+    var temp = document.createElement('div')
+
+    temp.innerHTML = `<section class="login">
+    <h2>Login</h2>
+
+    <form class="login__form">
+        <input type="email" name="email" placeholder="e-mail" required>
+        <input type="password" name="password" placeholder="password" required>
+        <button>Login</button>
+    </form>
+</section>`
+
+    var container = temp.firstChild
 
     var form = container.querySelector('.login__form')
 
@@ -16,4 +29,6 @@ function mountLogin(container, onLogin) {
             alert(error.message)
         }
     }
+
+    return container
 }

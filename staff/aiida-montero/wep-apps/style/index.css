@@ -18,10 +18,6 @@ button:focus {
   outline: 0;
 }
 
-.off {
-  display: none;
-}
-
 .home {
   border: 1px solid skyblue;
   padding: 1rem;
