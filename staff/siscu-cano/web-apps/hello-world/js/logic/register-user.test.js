@@ -7,9 +7,9 @@
         var password = 'pass-' + Math.random()
         var repassword = password
 
-        registerUser(fullname, email, password, repassword, function (error) {
-            console.log(' should succeed on new user')
+        console.log(' should succeed on new user (Test1)')
 
+        registerUser(fullname, email, password, repassword, function (error) {
             console.assert(error === null, 'should error be null')
 
             call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
@@ -28,8 +28,11 @@
                         },
                         '{ "password": "' + password + '" }',
                         function (status, response) {
-                            console.assert(status === 204, 'should status be 204')
-                            console.assert(response.length === 0, 'should response be empty')
+                            if (status === 204) {
+                                console.log(' \t Deleted the user registered for the test (Test1 registerUser)')   
+                            } else {
+                                console.log('Could not delete the user registered for the test (Test1 registerUser)')
+                            }
                         }
                     )
                 }
@@ -49,7 +52,7 @@
             function (status, response) {
                 if (status === 201) {
                     registerUser(fullname, email, password, repassword, function (error) {
-                        console.log(' should fail on already existing user')
+                        console.log(' should fail on already existing user (Test2)')
 
                         console.assert(error instanceof Error, 'should error be instanceof Error')
                         console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected')
@@ -70,8 +73,11 @@
                                     },
                                     '{ "password": "' + password + '" }',
                                     function (status, response) {
-                                        console.assert(status === 204, 'should status be 204')
-                                        console.assert(response.length === 0, 'should response be empty')
+                                        if (status === 204) {
+                                            console.log(' \t Deleted the user registered for the test (Test2 registerUser)')   
+                                        } else {
+                                            console.log('Could not delete the user registered for the test (Test2 registerUser)')
+                                        }
                                     }
                                 )
                             }
@@ -85,7 +91,7 @@
     })();
 
     (function () {
-        console.log(' should fail on non-string full name')
+        console.log(' should fail on non-string full name (Test3)')
 
         var fullname = [1, true, null, undefined, {}, [], function () { }, new Date].random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
@@ -105,7 +111,7 @@
     })();
 
     (function () {
-        console.log(' should fail on empty or blank full name')
+        console.log(' should fail on empty or blank full name (Test4)')
 
         var fullname = ['', ' ', '\t', '\n'].random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
@@ -125,7 +131,7 @@
     })();
 
     (function () {
-        console.log(' should fail on non-string email')
+        console.log(' should fail on non-string email (Test5)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = [1, true, null, undefined, {}, [], function () { }, new Date].random()
@@ -145,7 +151,7 @@
     })();
 
     (function () {
-        console.log(' should fail on empty or blank email')
+        console.log(' should fail on empty or blank email (Test6)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = ['', ' ', '\t', '\n'].random()
@@ -165,7 +171,7 @@
     })();
 
     (function () {
-        console.log(' should fail invalid email')
+        console.log(' should fail invalid email (Test7)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = ['john-doe#mail.com', '@mail.com', 'johh-doe@mail', 'john-doe@'].random()
@@ -185,7 +191,7 @@
     })();
 
     (function () {
-        console.log(' should fail on non-string password')
+        console.log(' should fail on non-string password (Test8)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
@@ -205,7 +211,7 @@
     })();
 
     (function () {
-        console.log(' should fail on empty or blank password')
+        console.log(' should fail on empty or blank password (Test9)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
@@ -225,7 +231,7 @@
     })();
 
     (function () {
-        console.log(' should fail on non-string password repeat')
+        console.log(' should fail on non-string password repeat (Test10)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
@@ -245,7 +251,7 @@
     })();
 
     (function () {
-        console.log(' should fail on empty or blank password repeat')
+        console.log(' should fail on empty or blank password repeat (Test11)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
@@ -265,7 +271,7 @@
     })();
 
     (function () {
-        console.log(' should fail non-matching passwords')
+        console.log(' should fail non-matching passwords (Test12)')
 
         var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'

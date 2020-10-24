@@ -24,9 +24,9 @@
                             '{ "password": "' + password + '" }',
                             function (status, response) {
                                 if (status === 204) {
-                                    console.log(' \t Deleted the user registered for the test (Test1)')   
+                                    console.log(' \t Deleted the user registered for the test (Test1 authenticateUser)')   
                                 } else {
-                                    console.log('Could not delete the user registered for the test (Test1)')
+                                    console.log('Could not delete the user registered for the test (Test1 authenticateUser)')
                                 }
                             }
                         )
@@ -79,9 +79,9 @@
                                     '{ "password": "' + password + '" }',
                                     function (status, response) {
                                         if (status === 204) {
-                                            console.log(' \t Deleted the user registered for the test (Test3)')   
+                                            console.log(' \t Deleted the user registered for the test (Test3 authenticateUser)')   
                                         } else {
-                                            console.log('Could not delete the user registered for the test (Test3)')
+                                            console.log('Could not delete the user registered for the test (Test3 authenticateUser)')
                                         }
                                     }
                                     )
@@ -128,9 +128,9 @@
                                 '{ "password": "' + password + '" }',
                                 function (status, response) {
                                     if (status === 204) {
-                                        console.log(' \t Deleted the user registered for the test (Test4)')   
+                                        console.log(' \t Deleted the user registered for the test (Test4 authenticateUser)')   
                                     } else {
-                                        console.log('Could not delete the user registered for the test (Test4)')
+                                        console.log('Could not delete the user registered for the test (Test4 authenticateUser)')
                                     }
                                 }
                                 )
