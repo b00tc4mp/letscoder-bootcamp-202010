@@ -11,4 +11,9 @@ function (status, response) {
 
 // 2
 
-call('GET', 'https://pluscoders.com', {}, '', function(status, response) { console.log(status, response) }) 
+call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', 
+{undefined}, 
+'', 
+function(status, response) 
+{ console.log(status, response)
+}) 

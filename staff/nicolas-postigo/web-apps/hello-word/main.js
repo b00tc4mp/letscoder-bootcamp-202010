@@ -39,11 +39,22 @@
                 alert(error.message)
             else {
                 // TODO call api to retrieve user, and then show welcome with user info
-                login.replaceWith(welcome)
-            }
-        })
-    })
+                retrieveUser(token, function(error, user){
+                    if (error === null){
+                        var name = user.name
+                        welcome.innerHTML = '<h2>"Welcome ' + name + ' to Hello World App!"</h2>'
+                    }
 
+                  login.replaceWith(welcome)
+                }
+                
+                  
+                )}
+            
+            
+        })
+    });
     // welcome
-    var welcome = mountWelcome()
+    var welcome = mountWelcome() 
+    
 })();
