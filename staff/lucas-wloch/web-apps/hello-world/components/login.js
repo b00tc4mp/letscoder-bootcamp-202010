@@ -1,6 +1,15 @@
-function mountLogin(selector, onLogin){
-    var login = document.querySelector(selector);
-    var form = document.querySelector('.login__form');
+function mountLogin(onLogin){
+    var container = mountContainer(`<section class="login">
+    <h2>Login</h2>
+    <h3 class="login__h3 off"></h3>
+    <form class="login__form">
+        <input class="login__email" type="email" name="email" placeholder="e-mail" required>
+        <input class="login__password" type="password" name="password" placeholder="password" required>
+        <button>Login</button>
+    </form>
+</section>`)
+    
+    var form = container.querySelector('.login__form');
 
     form.onsubmit = function(event){
         event.preventDefault();
@@ -13,9 +22,10 @@ function mountLogin(selector, onLogin){
             onLogin(email,password);
 
         } catch (error) {
-            var reTry = document.querySelector('.login__h3');
+            var reTry = container.querySelector('.login__h3');
             reTry.innerText = error;
             reTry.classList.remove('off');
         };
     };
+    return container;
 }

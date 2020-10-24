@@ -8,13 +8,34 @@
         
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
-        
-        var user = {
-            email: email,
-            password: password
-        };
 
-        users.push(user);
+        call('POST','https://b00tc4mp.herokuapp.com/api/v2/users',
+        {'Content-type':'application/json'},
+        '{"username": "'+email+'", "password": "'+password+'"}',function(status,response){
+            console.assert(status === 201, 'status should be 201');
+            if(status === 201){
+                authenticater(email,password,function(error,token){
+                    
+                })
+                call('POST','https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+                {'Content-type':'application/json'},
+                '{"username": "'+email+'", "password": "'+password+'"}',function(status,response){
+                    console.assert(status === 200, 'status should be 200');
+                    var res = JSON.parse(response);
+                    var token = res.token;
+                    call('DELETE','https://b00tc4mp.herokuapp.com/api/v2/users',
+                    {'Authorization':'Bearer '+token,'Content-type':'application/json'},
+                    '{"password": "'+password+'"}', function(status,response){
+                        console.assert(status === 204, 'status should be 204');
+                        console.assert(response.length === 0, 'response should be empty');
+                    })
+                })
+            }
+            
+        })
+        
+        
+        
     
         var fail;
     

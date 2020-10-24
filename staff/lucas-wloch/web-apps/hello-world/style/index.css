@@ -13,18 +13,11 @@ body {
   background-color: #048b75;
 }
 
-.title {
-  font-family: architects daughter;
-  font-weight: bolder;
-  font-size: 3rem;
-  cursor: pointer;
-}
-
 button {
   cursor: pointer;
 }
 
-.main-container {
+#root {
   width: fit-content;
   height: 100%;
   padding: 10px;
@@ -43,8 +36,15 @@ section {
   text-align: start;
 }
 
-.options {
+.access {
   text-align: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+.title {
+  font-family: architects daughter;
+  font-weight: bolder;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */

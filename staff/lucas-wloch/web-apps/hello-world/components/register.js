@@ -1,6 +1,17 @@
-function mountRegister(selector,onRegister){
-    var register = document.querySelector(selector)
-    var form = document.querySelector('.register__form');
+function mountRegister(onRegister){
+    var container = mountContainer(`<section class="register">
+    <h2>Register</h2>
+    <h3 class="register__h3"></h3>
+    <form class="register__form">
+        <input class="register__name" type="text" name="fullname" placeholder="full name" required>
+        <input class="register__email" type="email" name="email" placeholder="e-mail" required>
+        <input class="register__password" type="password" name="password" placeholder="password" required>
+        <input class="register__repassword" type="password" name="repassword" placeholder="repeat password" required>
+        <button>Register</button>
+    </form>
+</section>`);
+    
+    var form = container.querySelector('.register__form');
 
     form.onsubmit = function(event){
         event.preventDefault();
@@ -16,9 +27,10 @@ function mountRegister(selector,onRegister){
             onRegister(fullname,email,password,repassword);
         } catch (error){
             
-            var _error = document.querySelector('.register__h3');
+            var _error = container.querySelector('.register__h3');
             _error.innerText = error;
             _error.classList.remove('off');
         };
     };
+    return container;
 }

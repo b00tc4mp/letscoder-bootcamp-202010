@@ -2,42 +2,64 @@
     console.log('TEST registerUser()');
 
     (function(){
-        console.log(' should succeed on adding new user')
-    
+        
         var fullname = 'John Doe ' + Math.random();
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
-    
-        registerUser(fullname,email,password,password);
-    
-        var user = users.find(function(user){return user.email === email});
-    
-        console.assert(user,'new user should be registered');
+        
+        registerUser(fullname,email,password,password,function(error){
+            console.log(' should succeed on adding new user');
+            console.assert(error === null, 'error should be null');
+
+            call('POST','https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+            {"Content-type": "application/json"},'{"username": "'+email+'", "password": "'+password+'"}',
+            function(status,response){
+                console.assert(status === 200, 'status should be 200');
+
+                var res = JSON.parse(response);
+                var token = res.token;
+                 call('DELETE','https://b00tc4mp.herokuapp.com/api/v2/users',
+                 {'Authorization':'bearer '+token, 'Content-type': 'application/json'},
+                 '{"password": "'+password+'"}',function(status,response){
+                     console.assert(status === 204, 'status should be 204');
+                     console.assert(response.length === 0 , 'response should be empty')
+                 })
+            })
+        });
     })();
     
     (function(){
-        console.log(' should fail on already existing user');
-    
+        
         var fullname = 'John Doe ' + Math.random();
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
-    
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        };
-        users.push(user);
-        var fail = undefined;
-    
-        try{
-            registerUser(fullname,email,password,password);
-        }catch(error){
-            fail= error;
-        };
-    
-        console.assert(fail, 'fail should be defined');
-        console.assert(fail.message === 'user already exists', 'error messages should match');
+        var repassword = password
+        
+        call('POST','https://b00tc4mp.herokuapp.com/api/v2/users',
+        {'Content-type': 'application/json'},
+        '{"fullname": "'+fullname+'", "username": "'+email+'","password": "'+password+'"}',
+        function(status,response){
+            console.assert(status === 201,'status should be 201');
+                registerUser(fullname,email,password,repassword,function(error){
+                    console.log(' should fail on already existing user');
+                    console.assert(error instanceof Error, 'error should be an instance of error');
+                    console.assert(error.message === 'user with username "' + email + '" already exists', 'error message should match expected');
+                    
+                    call('POST','https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+                    {'Content-type':'application/json'},
+                    '{"username": "'+email+'", "password": "'+password+'"}',function(status,response){
+                        console.assert(status === 200, 'status should be 200');
+                        var res = JSON.parse(response);
+                        var token = res.token;
+                        call('DELETE','https://b00tc4mp.herokuapp.com/api/v2/users',
+                        {'Authorization':'Bearer '+token, 'Content-type':'application/json'},
+                        '{"password": "'+password+'"}', function(status,response){
+                            console.assert(status=== 204, 'status should be 204');
+                            console.assert(response.length === 0, 'response should be empty');
+                        })
+                    })
+                })
+        })
     })();
     
     (function(){

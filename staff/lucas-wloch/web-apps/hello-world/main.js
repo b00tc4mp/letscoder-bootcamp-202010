@@ -1,107 +1,142 @@
 (function(){
-    function limpiarLogin(){
-        /// vacio los campos luego de autentificar al user 
-        var form = document.querySelector('.login__form');
-        var inputs = form.querySelectorAll('input');
-        for(var i = 0; i < inputs.length; i++){
-            inputs[i].value = '';
-        }
-        var _error = document.querySelector('.login__h3');
-        _error.innerHTML = '';
-    }
-    function limpiarRegister(){
-        var form = document.querySelector('.register__form');
-        var inputs = form.querySelectorAll('input');
-        for(var i = 0; i < inputs.length; i++){
-            inputs[i].value = '';
-        }
-        var _error = document.querySelector('.register__h3');
-        _error.innerText = '';
-    }
+    // function limpiarLogin(){
+    //     /// vacio los campos luego de autentificar al user 
+    //     var form = document.querySelector('.login__form');
+    //     var inputs = form.querySelectorAll('input');
+    //     for(var i = 0; i < inputs.length; i++){
+    //         inputs[i].value = '';
+    //     }
+    //     var _error = document.querySelector('.login__h3');
+    //     _error.innerHTML = '';
+    // }
+    // function limpiarRegister(){
+    //     var form = document.querySelector('.register__form');
+    //     var inputs = form.querySelectorAll('input');
+    //     for(var i = 0; i < inputs.length; i++){
+    //         inputs[i].value = '';
+    //     }
+    //     var _error = document.querySelector('.register__h3');
+    //     _error.innerText = '';
+    // }
+    // onload
+
+    var root = document.getElementById('root');
+
     //title 
-    mountTitle('.title',function(){
-        var sections = document.querySelectorAll('section');
     
-        for(var i=0; i < sections.length; i++){
-            sections[i].classList.add('off');
-        };
-        var home = document.querySelector('.home');
-        home.classList.remove('off');
+    var title = mountTitle(function(){
+        root.lastChild.replaceWith(access);
         
-        limpiarLogin();
-        limpiarRegister();
+        
+        // limpiarLogin();
+        // limpiarRegister();
         
     })
     
+    root.append(title)
     
-    //Panel Options (home)
+    
+    
+    //Panel Options (access)
     //al elegir register muestra el panel de registro y oculta el de options
     //al elegir login muestra el panel de login y oculta el de options
     
         
-    mountHome('.home',function(){
-        var home = document.querySelector('.home');
-        home.classList.add('off');
     
-        var register = document.querySelector('.register');
-        register.classList.remove('off');
+    var access = mountAccess(function(){
+        access.replaceWith(register)
     },function(){
-        var home = document.querySelector('.home');
-        home.classList.add('off');
-    
-        var login = document.querySelector('.login');
-        login.classList.remove('off');
+        access.replaceWith(login)
     });
-    
+    root.append(access)
     
     
     //panel de registro.. 
     //al rellenar todos los campos y darle register se cargara un nuevo usuario en users
     //tambien se ocultara este panel y se mostrara el panel de registrado exitosamente
-    
         
-    mountRegister('.register', function(fullname,email,password,repassword){
-        registerUser(fullname,email,password,repassword);
     
-        var register = document.querySelector('.register');
-        register.classList.add('off');
-        var confirm = document.querySelector('.confirm');
-        confirm.classList.remove('off');
-        
-        limpiarRegister();
+    var register = mountRegister(function(fullname,email,password,repassword){
+        registerUser(fullname,email,password,repassword,function(error){
+            if(error){
+                // alert(error.message);
+                var texto = register.querySelector('.register__h3')
+                texto.innerText = error.message;
+            }else {
+                register.replaceWith(confirm);
+                // limpiarRegister();
+            }; 
+        });
     });
-    
     
     //Register Corfirm panel
     //este panel muestra que te registraste correctamente y tiene un boton para ir al panel de login
     
-    mountRegisterConfirm('.confirm', function(){
-        var confirm = document.querySelector('.confirm');
-        confirm.classList.add('off');
-        var login = document.querySelector('.login');
-        login.classList.remove('off');
-    })
-    
-    
+    var confirm = mountRegisterConfirm(function(){
+        confirm.replaceWith(login)
+    });
     
     //Login Panel
     //al rellenar todos los campos y darle logi se comprobara si el usuario esta registrado
-    //si el usuario se registro previamente tambien se ocultara este panel y se mostrara la pantalla de bienbenido a Hello World App
+    //si el usuario se registro previamente tambien se ocultara este panel y se mostrara la pantalla de bienbenido a Hello World App      
     
+    var token1
+    var login = mountLogin(function(email,password){
         
-    mountLogin('.login', function(email,password){
-        var user = authenticateUser(email,password);
-            
-        var login = document.querySelector('.login');
-        login.classList.add('off');
-        var welcome = document.querySelector('.welcome');
-        welcome.classList.remove('off');
-        var text = document.querySelector('.welcome__h3');
-        text.innerText = 'Welcome ' + user.fullname + ', good to see you again!';
-        text.classList.remove('off');
-        
-        limpiarLogin();
+        authenticateUser(email,password, function(error,token){
+            if(error){
+                var reTry = login.querySelector('.login__h3');
+                reTry.innerText = error.message;
+                reTry.classList.remove('off');
+            } else {
+                
+                retrieveUser(token, function(error, user){
+                    if (error === null){
+                        var name = user.name
+                        // welcome.innerHTML = '<h3>"Welcome ' + name + ', good to see you again!"</h3>'
+                        // welcome.innerHTML = `<h3>"Welcome "` + name + `", good to see you again!"</h3>`
+                        welcome.querySelector('h3').innerText = "Welcome " + name + ", good to see you again!"
+                    }
+                    
+                })
+                login.replaceWith(welcome)
+                root.append(profile);
+                // limpiarLogin();
+            };
+        });
     })
-    
-})();    
 
+    // welcome
+ 
+    var welcome = mountWelcome();
+
+    //  profile
+
+    var profile = mountProfile(function(){
+        var login1 = mountLogin(function(email,password){
+            
+            authenticateUser(email,password, function(error,token){
+                if(error){
+                    var reTry = login.querySelector('.login__h3');
+                    reTry.innerText = error.message;
+                    reTry.classList.remove('off');
+                } else {
+                    var token = token
+                    retrieveUser(token, function(error, user){
+                        if (error === null){
+                            responseDisplay.innerHTML = user;
+                        }
+                        
+                    })
+                    
+                    login1.replaceWith(responseDisplay)
+                    // limpiarLogin();
+                };
+            });
+        });root.append(login1);
+
+    });
+    var responseDisplay = mountDisplay();
+
+
+})();
