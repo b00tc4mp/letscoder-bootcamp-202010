@@ -13,10 +13,11 @@ function authenticateUser(email, password,callback) {
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 
 
-   var xhr = new XMLHttpRequest
+   
 
    xhr.onreadystatechange = function () {
        if (this.readyStage == 4)
+
         if(this.status === 200) {
             
             var response = JSON.parse(this.responseText)
@@ -25,11 +26,11 @@ function authenticateUser(email, password,callback) {
 
         } else {
             var response = JSON.parse(this.responseText)
-            
+
             callback(new Error(response.error))
         }
    }
-   xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth')
+    xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth')
 
     xhr.setRequestHeader('Content-type', 'application/json')
 

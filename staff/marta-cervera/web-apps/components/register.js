@@ -1,6 +1,6 @@
 function mountRegister(OnRegister) {
 
-    var container = mountContainer(`<section class="register off">
+    var container = mountContainer(`<section class="register">
     <h2>Register</h2>
 
     <form class="register__form">
@@ -12,10 +12,10 @@ function mountRegister(OnRegister) {
     </form>
     </section>`)
 
-    var form = container.querySelector('.register__form')
+        var form = container.querySelector('.register__form')
 
-    form.onsubmit = function(event) {
-        event.preventDefault()
+        form.onsubmit = function(event) {
+            event.preventDefault()
           
         var inputs = form.querySelectorAll("input")
 

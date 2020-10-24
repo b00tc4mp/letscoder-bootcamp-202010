@@ -21,7 +21,7 @@ function modifyUser(data,token,callback) {
    
     xhr.open('PATCH', 'https://b00tc4mp.herokuapp.com/api/v2/users')
     
-    xhr.set('authorisation', 'bearer' + token)
+    xhr.set('authorisation', 'Bearer ' + token)
 
     xhr.setRequestHeader( 'Content-type', 'application/json')
 

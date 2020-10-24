@@ -4,6 +4,7 @@
 
     //title
     var title = mountTitle(function() {
+
         root.lastChild.replaceWith(access)
     
 
@@ -24,7 +25,7 @@
     
     //register
 
-    var access = mountRegister(function(fullname, email, password, repassword) {
+    var register = mountRegister(function(fullname, email, password, repassword) {
 
             registerUser(fullname,email,password,repassword, function(error) {
                 if(error)

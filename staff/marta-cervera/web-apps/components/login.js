@@ -1,6 +1,5 @@
 function mountLogin(onLogin) {
-    var temp = createElement("div")
-    temp.innerHTML = ` <section class="login off">
+    var container= mountContainer(`<section class="login">
     <h2>Login</h2>
 
     <form class="login__form">
@@ -8,14 +7,12 @@ function mountLogin(onLogin) {
         <input type="password" name="password" placeholder="password" required>
         <button>Login</button>
     </form>
-</section>
-`
-    var container= temp.firstChild
+</section>`)
 
-    var form = login.querySelector (".login__form")
+     var form = container.querySelector(".login__form")
 
-    form.onsubmit = function (event) {      // el onsubmit se dispara cuando todos los campos del formulario estan bien escritos
-        event.preventDefault()
+        form.onsubmit = function (event) {      // el onsubmit se dispara cuando todos los campos del formulario estan bien escritos
+             event.preventDefault()
 
         var inputs = form.querySelectorAll("input")
 

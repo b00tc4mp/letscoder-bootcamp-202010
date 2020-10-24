@@ -9,11 +9,13 @@
         var password = 'pass-' + Math.random()
         var repassword = password
 
-        registerUser(fullname, email, password, repassword)
+        registerUser(fullname, email, password, repassword,function(error) {
+            console.log( " should succeed on a new ruser")
 
-        var user = users.find(function (user) { return user.email === email })
+            console.assert(error === null, "should error be null")
+                })
 
-        console.assert(user, 'new user should be registered')
+       
     })();
 
     (function () {
