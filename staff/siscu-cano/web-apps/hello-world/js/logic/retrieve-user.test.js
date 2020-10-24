@@ -51,7 +51,7 @@
     })();
 
     (function () {
-        console.log(' should fail retrieve if token not exist (Test1)')
+        console.log(' should fail retrieve if token not exist (Test2)')
         var token =  (Math.random() * 1000).toString();
     
         retrieveUser(token, function(error, user) {
@@ -60,4 +60,48 @@
         })
                                
     })();
+
+    (function () {
+        console.log(' should fail retrieve if token not string (Test3)')
+        var token =  (Math.random() * 1000);
+        var fail
+        try {
+            retrieveUser(token)
+        } catch (error) {
+            fail = error
+        }
+        console.assert(fail instanceof TypeError, 'should error be defined and instance of Error')
+        console.assert(fail.message === token + ' is not a token')
+                               
+    })();
+
+    (function () {
+        console.log(' should fail when token is empty or blank (Test4)')
+        var token = ['', ' ', '\t', '\n'].random()
+        var fail
+        try {
+            retrieveUser(token)
+        } catch (error) {
+            fail = error
+        }
+        console.assert(fail instanceof Error, 'should error be defined and an instance of Error')
+        console.assert(fail.message === 'token is empty or blank', 'should error message match expected')
+                               
+    })();
+
+    (function () {
+        console.log(' should fail when callback is not a function (Test5)')
+        var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjkzZmMwNTAxYmZkNjAwMTc3ZTI0ZTAiLCJpYXQiOjE2MDM1NjA5MzIsImV4cCI6MTYwMzU2NDUzMn0.fFh73uXSkBT4jpqf6Lgz-_dG_X6A3KzD-dEp51MPlks";
+        var callback = [1, true, null, undefined, {}, [], new Date].random()
+
+        try {
+            retrieveUser(token, callback)
+        } catch (error) {
+            fail = error
+        }
+        console.assert(fail instanceof TypeError, 'should error be defined and an instance of TypeError')
+        console.assert(fail.message === callback + ' is not a callback', 'should error message match expected')
+                               
+    })();
+
 })();
