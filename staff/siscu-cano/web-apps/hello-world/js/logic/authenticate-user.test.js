@@ -57,28 +57,47 @@
     (function () {
         console.log(' should fail on wrong password')
 
-        var fullname = 'John Doe ' + Math.random()
-        var email = 'johndoe-' + Math.random() + '@mail.com'
+        var fullname = 'John lol ' + Math.random()
+        var email = 'johnlol-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
 
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
-
-        users.push(user)
-
-        var fail
-
-        try {
-            authenticateUser(email, password + '-wrong')
-        } catch(error) {
-            fail = error
-        }
-
-        console.assert(fail instanceof Error, 'should error be defined and instance of Error')
-        console.assert(fail.message, 'wrong credentials')
+        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                if (status === 201) {
+                    authenticateUser(email, 'password', function (error, token) {
+                        console.assert(error instanceof Error, 'should error be defined and instance of Error')
+                        console.assert(error.message, 'username and/or password wrong')
+                        call('POST',
+                        'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+                        { 'Content-type': 'application/json' },
+                        '{ "username": "' + email + '", "password": "' + password + '" }',
+                        function (status, response) {
+                            if (status === 200) {
+                                var res = JSON.parse(response)
+                                call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                    {
+                                        'Authorization': 'Bearer ' + res.token,
+                                        'Content-type': 'application/json'
+                                    },
+                                    '{ "password": "' + password + '" }',
+                                    function (status, response) {
+                                        console.assert(status === 204, 'should status be 204')
+                                        console.assert(response.length === 0, 'should response be empty')
+                                    }
+                                    )
+                            }
+                            else {
+                                console.error('should not reach this point')
+                            }
+                        }
+                    )
+                    })
+                } else {
+                    console.error('should not reach this point')
+                }
+        })
     })();
 
     (function () {
