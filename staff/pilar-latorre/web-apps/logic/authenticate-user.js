@@ -9,17 +9,36 @@ function authenticateUser(email, password, callback) {
     if (!password.trim().length) throw new Error('password is empty or blank')
 
     if(typeof callback !== 'function') throw new TypeError ( callback + ' is not a callback');
-
-    var xhr = new XMLHttpRequest
-
-    xhr.onreadystatechange = function (){
-        if (this.readyState ==4)
-            if (this.status ===200){
-                var response = JSON.parse(this.responseText)
+    
+    call('POST',
+    'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+    {'Content-type': 'application/json'},
+    '{ "username": "' + email + '", "password": "' + password + '" }',
+    function (){
+                if (status ===200){
+                var response = JSON.parse(responseText)
 
                 callback(null, response.token)
             }else{
-                var response = JSON.parse(this.responseText)
+                var res = JSON.parse(responseText)
+
+                callback(new Error(res.error))
+
+            }
+        }
+    )
+}
+  
+
+    /*var xhr = new XMLHttpRequest
+    xhr.onreadystatechange = function (){
+        if (this.readyState ==4)
+            if (this.status ===200){
+                var response = JSON.parse(responseText)
+
+                callback(null, response.token)
+            }else{
+                var response = JSON.parse(responseText)
 
                 callback(new Error(response.error))
 
@@ -31,3 +50,4 @@ function authenticateUser(email, password, callback) {
 
     xhr.send('{ "username": "' + email + '", "password": "' + password + '" }')
 }
+ */
