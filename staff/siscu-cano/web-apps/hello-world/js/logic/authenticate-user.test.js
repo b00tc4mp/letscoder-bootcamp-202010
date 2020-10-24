@@ -3,28 +3,37 @@
 
     (function () {
         console.log(' should succeed on existing user')
-
-        var fullname = 'John Doe ' + Math.random()
-        var email = 'johndoe-' + Math.random() + '@mail.com'
+        var fullname = 'John Mama ' + Math.random()
+        var email = 'johnmama-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
 
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
+        console.log(' should succeed on new user')
 
-        users.push(user)
-
-        var fail
-
-        try {
-            authenticateUser(email, password)
-        } catch(error) {
-            fail = error
-        }
-
-        console.assert(!fail, 'should not fail on authenticate')
+        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                if (status === 201) {
+                    authenticateUser(email, password, function (error, token) {
+                        console.assert(!error, 'should not return error when authenticating with existing user')
+                        console.assert(token, 'should return a token when authenticating')
+                        console.assert(typeof token === 'string', 'should returned token of type string')
+                        call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                            {
+                                'Authorization': 'Bearer ' + token,
+                                'Content-type': 'application/json'
+                            },
+                            '{ "password": "' + password + '" }',
+                            function (status, response) {
+                                console.assert(status === 204, 'should status be 204')
+                                console.assert(response.length === 0, 'should response be empty')
+                            }
+                        )
+                    })
+                } else {
+                    console.error('should not reach this point')
+                }
+        })
     })();
 
     (function () {

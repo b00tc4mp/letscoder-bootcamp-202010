@@ -1,4 +1,4 @@
-registerUser('Ga To', 'ga@to.com', '123', '123', function(error) {
+registerUser('Paca Garte', 'paca@garte.com', '123', '123', function(error) {
     console.log('DEMO registerUser()')
     
     if (!error) console.log('ok, perfect, user registered! ,)')
