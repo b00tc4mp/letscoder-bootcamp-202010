@@ -14,14 +14,12 @@ function authenticateUser(email, password, callback) {
     'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
     {'Content-type': 'application/json'},
     '{ "username": "' + email + '", "password": "' + password + '" }',
-    function (){
+        function (status, response){
                 if (status ===200){
-                var response = JSON.parse(responseText)
-
-                callback(null, response.token)
-            }else{
-                var res = JSON.parse(responseText)
-
+                var resText = JSON.parse(response)
+                callback(null, resText.token)
+                }else{
+                var res = JSON.parse(response)
                 callback(new Error(res.error))
 
             }

@@ -1,4 +1,4 @@
-modifyUser({city: "Huesca"},'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjkxNTE5MzJkMjE3YzAwMTc2ZDhiNzQiLCJpYXQiOjE2MDMzOTMzNTAsImV4cCI6MTYwMzM5Njk1MH0.dtKgUdqyR22iltIfexiSZW0VHUy-FUHNqRluDiK1v4w',function(error){
+modifyUser('{"city": "NewYork"}','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjkxOWUxYTdjYTQ3OTAwMTcxYWM2ZTAiLCJpYXQiOjE2MDM2MjU0NDksImV4cCI6MTYwMzYyOTA0OX0.ez_86v7pOIfoHZzLKGmw9xYawrqP5XsntMlBpbW_ueo',function(error){
     console.log('DEMO modifyUser()')
        
     if (!error) console.log('ok, perfect, the user has been updated! ,)')

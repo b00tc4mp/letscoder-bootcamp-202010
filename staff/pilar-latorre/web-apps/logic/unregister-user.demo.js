@@ -1,4 +1,4 @@
-unregisterUser('374637','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjkxNTE5MzJkMjE3YzAwMTc2ZDhiNzQiLCJpYXQiOjE2MDMzOTUzNDksImV4cCI6MTYwMzM5ODk0OX0.KvLfftq6-EXyIQjr_zaZjoAjW3G3LEUHTfroftSUHiY',function(error){
+unregisterUser('123456789','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Zjk1YTZjNTk1ZGUxODAwMTcxYmI0YzUiLCJpYXQiOjE2MDM2NDMyMTIsImV4cCI6MTYwMzY0NjgxMn0.at2S5sUvRPi43Qttni0OgDSETkU6FCDXEKNnkW-NJ30',function(error){
     console.log('DEMO unregisterUser()')
        
     if (!error) console.log('ok, perfect, the user has been deleted! ,)')

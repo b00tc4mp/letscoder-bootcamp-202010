@@ -2,46 +2,86 @@
     console.log('TEST registerUser()');
 
     (function () {
-        console.log(' should succeed on new user');
+        var fullname = 'John Doe ' + Math.random()
+        var email = 'johndoe-' + Math.random() + '@mail.com'
+        var password = 'pass-' + Math.random()
+        var repassword = password
 
-        var fullname = 'John Doe ' + Math.random();
-        var email = 'johndoe-' + Math.random() + '@mail.com';
-        var password = 'pass-' + Math.random();
-        var repassword = password;
+        registerUser(fullname, email, password, repassword, function (error) {
+            console.log(' should succeed on new user')
 
-        registerUser(fullname, email, password, repassword);
+            console.assert(error === null, 'should error be null')
 
-        var user = users.find(function (user) { return user.email === email });
+            call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+                '{ "username": "' + email + '", "password" : "' + password + '" }',
+                function (status, response) {
+                    console.assert(status === 200, 'should status be 200')
 
-        console.assert(user, 'new user should be registered');
+                    var res = JSON.parse(response)
+
+                    var token = res.token
+
+                    call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                        {
+                            'Authorization': 'Bearer ' + token,
+                            'Content-type': 'application/json'
+                        },
+                        '{ "password": "' + password + '" }',
+                        function (status, response) {
+                            console.assert(status === 204, 'should status be 204')
+                            console.assert(response.length === 0, 'should response be empty')
+                        }
+                    )
+                }
+            )
+        })
     })();
 
     (function () {
-        console.log(' should fail on already existing user');
+        var fullname = 'John Doe ' + Math.random()
+        var email = 'johndoe-' + Math.random() + '@mail.com'
+        var password = 'pass-' + Math.random()
+        var repassword = password
 
-        var fullname = 'John Doe ' + Math.random();
-        var email = 'johndoe-' + Math.random() + '@mail.com';
-        var password = 'pass-' + Math.random();
-        var repassword = password;
+        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                if (status === 201) {
+                    registerUser(fullname, email, password, repassword, function (error) {
+                        console.log(' should fail on already existing user')
 
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        };
+                        console.assert(error instanceof Error, 'should error be instanceof Error')
+                        console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected')
 
-        users.push(user);
+                        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+                            '{ "username": "' + email + '", "password" : "' + password + '" }',
+                            function (status, response) {
+                                console.assert(status === 200, 'should status be 200')
 
-        var fail;
+                                var res = JSON.parse(response)
 
-        try {
-            registerUser(fullname, email, password, repassword);
-        } catch (error) {
-            fail = error;
-        }
+                                var token = res.token
 
-        console.assert(fail, 'should error be defined');
-        console.assert(fail.message === 'user already exists', 'should error message match expected');
+                                call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                    {
+                                        'Authorization': 'Bearer ' + token,
+                                        'Content-type': 'application/json'
+                                    },
+                                    '{ "password": "' + password + '" }',
+                                    function (status, response) {
+                                        console.assert(status === 204, 'should status be 204')
+                                        console.assert(response.length === 0, 'should response be empty')
+                                    }
+                                )
+                            }
+                        )
+                    })
+                } else {
+                    console.error('should not reach this point')
+                }
+            }
+        )
     })();
 
     (function () {
@@ -198,13 +238,12 @@
         var fail;
 
         try {
-            registerUser(fullname, email, password, repassword);
+            registerUser(fullname, email, password, repassword, function(){});
         } catch (error) {
             fail = error;
         }
-
         console.assert(fail instanceof TypeError, 'should error be defined and instace of TypeError');
-        console.assert(fail.message === repassword + 'is not a password repeat', ' should error message match expected');
+        console.assert(fail.message === repassword + ' is not a password repeat', ' should error message match expected');
 
     })();
 
