@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+p {
+  text-align: center;
+  background-color: aliceblue;
+  padding: 70px 40px;
+  border: 5px solid white;
+  border-radius: 40px 40px;
+  font-size: 40px;
+}
+.buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
