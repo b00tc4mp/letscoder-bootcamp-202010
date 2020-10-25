@@ -8,6 +8,16 @@ if (typeof Array.prototype.random === 'undefined')
     Array.prototype.random = function () {
         return this[this.randomIndex()]
     }
+    if (typeof Array.prototype.randomIndex === 'undefined')
+    Array.prototype.randomIndex = function () {
+        return Math.floor(Math.random() * this.length)
+    }
+
+
+if (typeof Array.prototype.random === 'undefined')
+    Array.prototype.random = function () {
+        return this[this.randomIndex()]
+    }
 
 if (typeof Array.prototype.shuffle === 'undefined')
     Array.prototype.shuffle = function () {

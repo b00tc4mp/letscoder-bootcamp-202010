@@ -1,5 +1,8 @@
-function mountTitle(selector, onHome) {
-    var title = document.querySelector(selector)
+function mountTitle(onAccess) {
 
-    title.onclick = onHome
-}; 
+    var container = mountContainer(`<h1 class="title">Hello World App</h1>`)
+    
+    container.onclick = onAccess
+
+    return container
+}
