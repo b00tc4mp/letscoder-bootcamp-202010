@@ -1,4 +1,4 @@
-function retrieveAllUser(token, callback) {
+function retrieveAllUsers(token, callback) {
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
     
     if (!token.trim().length) throw new Error('token is empty or blank')
