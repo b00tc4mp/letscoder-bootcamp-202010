@@ -3,11 +3,13 @@
 @import 'box.scss';
 
 // Components
+@import '../js/components/error-message.scss';
 @import '../js/components/access.scss';
 @import '../js/components/login.scss';
 @import '../js/components/register-confirm.scss';
 @import '../js/components/register.scss';
 @import '../js/components/title.scss';
+@import '../js/components/welcome.scss';
 
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
 * {
@@ -92,24 +94,6 @@ input {
     border-radius: 3px/6px;
 }
 
-.error-message {
-    width: 80%;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-left-width: 5px;
-    border-radius: 3px;
-    border-color: #e09a9a;
-    margin: 10px auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    border-left-color: #d9534f;
-    background-color: rgb(255 219 218);
-    img {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 8px;
-    }
-}
 
 // Desktop
 @media (min-width: 600px) {

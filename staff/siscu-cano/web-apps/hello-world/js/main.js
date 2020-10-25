@@ -21,8 +21,10 @@
     // register
     var register = mountRegister(function (fullname, email, password, repassword) {
         registerUser(fullname, email, password, repassword, function (error) {
-            if (error)
-                alert(error.message)
+            if (error) {
+                var errorMessage = showErrorMessage(error.message);
+                root.appendChild(errorMessage);
+            }
             else register.replaceWith(confirm)
         })
     })
@@ -35,18 +37,21 @@
     // login
     var login = mountLogin(function (email, password) {
         authenticateUser(email, password, function (error, token) {
-            if (error)
-                alert(error.message)
-            else {
-                retrieveUser(token, function(error, response){
-                    if(!error) {
+            if (error) {
+                var errorMessage = showErrorMessage(error.message);
+                root.appendChild(errorMessage);
+            } else {
+                retrieveUser(token, function (error, response) {
+                    if (!error) {
                         login.replaceWith(mountWelcome(response.username));
                     } else {
-                        alert(error.message);
+                        var errorMessage = showErrorMessage(error.message);
+                        root.appendChild(errorMessage);
                     }
                 })
             }
         })
     })
+
 
 })();
