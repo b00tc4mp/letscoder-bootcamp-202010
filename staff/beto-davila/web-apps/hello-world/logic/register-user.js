@@ -11,36 +11,35 @@ function registerUser(fullname, email, password, repassword, callback) {
     if (password !== repassword) throw new Error('passwords do not match');
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback');
 
-      
+    /*  
     var xhr = new XMLHttpRequest;
 
     xhr.onreadystatechange = function() {
-      if (this.readyState == 4) {
-        if (status === 201) {
-          callback(); // If successful register, do not return anything
-        } else {
-          var response = JSON.parse(this.responseText); // catch the error and return it on text message
-          callback(new Error(response.error));
+      if (this.readyState == 4)
+          if (status === 201) 
+              callback(null); // no error
+          else {
+            var response = JSON.parse(this.responseText);
+            callback(new Error(response.error));
         }
-      }
     }
 
     xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users');
     xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.send('{"fullname": "' + fullname + '", "username:" "' + email + '", "password": "' + password + '", "repassword": "' + repassword + '"}');
-    
-    
-    /*
-    var user = users.find(function(user) {return user.email === email});
-  
-      if (user) throw new Error('The user is being used already'); 
+    xhr.send('{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '", "repassword": "' + repassword + '" }');
+    */
 
-        user = {
-            fullname: fullname,
-            email: email,
-            password: password
-          };
+   call ('POST', 
+   'https://b00tc4mp.herokuapp.com/api/v2/users', 
+   { 'Content-type': 'application/json' }, 
+   '{ "fullname": " '+ fullname +' ", "username": " '+ email +' ", "password": " '+ password +' ", "repassword": " '+ repassword +' "}', 
+   function(status, response) {
+        if (status === 201)
+            callback(null)
+        else {
+            var res = JSON.parse(response);
 
-      users.push(user); 
-      */    
+            callback(new Error(res.error));
+        }
+    });
 }

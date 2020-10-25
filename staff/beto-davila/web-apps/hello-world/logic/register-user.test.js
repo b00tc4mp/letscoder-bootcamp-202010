@@ -2,46 +2,90 @@
     console.log('Test registerUser()');
 
     (function () {
-        console.log(' should succeed a new user');
 
         var fullname = 'John Doe' + Math.random();
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
+        var repassword = password;
 
-        registerUser(fullname ,email, password, password);
+        registerUser(fullname ,email, password, repassword, function(error) {
+            console.log('should succeed on new user');
 
-        var user = users.find(function(user) { return user.email === email && user.password === password });
+            console.assert(error === null, 'should error be null');
+            
+            // auth
+            call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', 
+            { 'Content-type': 'application/json' }, 
+            '{ "username": "' + email + '", "password": "' + password + '"}',
+            function(status, response) {
+                console.assert(status === 200, 'should status be 200');
 
-        console.assert(user, 'new user should be registered');
+                var res = JSON.parse(response);
 
+                var token = res.token;
+                // delete
+                call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                {
+                    'Authorization': 'Bearer' + token,
+                    'Content-type': 'application/json'
+                },
+                '{ "password": "' + password + '" }',
+                function(status, response) {
+                    console.assert(status === 204, 'should status be 204');
+                    console.assert(response.length === 0, 'should response be empty');
+                });
+            });
+            
+        });
     })();
 
     (function () {
-        console.log(' should fail on already existing user');
 
         var fullname = 'John Doe' + Math.random();
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
+        var repassword = password;
 
-        user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        };
 
-        users.push(user);
+        call('POST', 'https://b00tc4amp.herokuapp.com/api/v2/users',
+        { 'Content-type': 'application/json' },
+        '{ "fullname": "'+ fullname + '", "username": "'+ email + '", "password": "'+ password + '", "repassword": "'+ repassword + '" }',
+        function(status) {
+            if (status === 201) {
+                registerUser(fullname, email, password, repassword, function(error) {
+                    console.log(' should fail on already existing user');
 
-        var fail;
+                    console.assert(error instanceof Error, 'should error be instaceof Error');
+                    console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected');
 
-          try {
-              registerUser(fullname, email, password, password);
-          }
-          catch (error) {
-              fail = error;
-          }
+                    call('POST', 'https://b00tc4amp.herokuapp.com/api/v2/users/auth', 
+                    {'Content-type': 'application/json'}, 
+                    '{"username": "' + email + '", "password": "' + password + '"}', 
+                    function(status, response) {
+                        console.assert(status === 200, 'should status be 200');
 
-          console.assert(fail, 'should error be defined');
-          console.assert(fail.message === 'The user is being used already', 'should error message match expected error');
+                        var res = JSON.parse(response);
+
+                        var token = res.token;
+
+                        call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                         {
+                             'Authorization': 'Bearer' + token,
+                             'Content-type': 'application/json'
+                         }, 
+                         '{"password": "' + password + '"}', 
+                        function(status, response){
+                            console.assert(status === 204, 'should status be 204');
+                            console.assert(response.length === 0, 'should response be empty');
+                        });
+
+                    });
+                })
+            } else {
+                console.error('should not reach this point');
+            }
+        }
+        )
     })();
 
     (function () {

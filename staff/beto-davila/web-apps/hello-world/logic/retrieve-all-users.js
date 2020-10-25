@@ -8,7 +8,7 @@ function retrieveAllUsers(token, callback) {
     xhr.onreadystatechange = function() {
         if (this.readyState == 4);
             if (this.status === 200) {
-                var response = JSON.parse(this.responseText);
+                var response = JSON.parse(this.responseText); //parsing the JSON response
                 callback(undefined, response); 
 
             } else {

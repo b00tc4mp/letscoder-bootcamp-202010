@@ -1,63 +1,81 @@
 (function () {
+  // root
+  var root = document.getElementById("root");
 
-// title visual behavior 
-  mountTitle('.title', function () {
-    var sections = document.querySelectorAll("section");
-
+  // title visual behavior
+  var title = mountTitle(function () {
+    var sections = document.querySelectorAll('section');
     for (var i = 0; i < sections.length; i++) {
-      sections[i].classList.add("off"); // off all sections
-
-      var home = document.querySelector(".home");
-      home.classList.remove("off"); // 'turning on' home
+      sections[i].replaceWith(access);
     }
   });
 
-// 'Home' behavior setup on clicking buttons
-mountHome('.home', function() {
-    //onRegister
-    var home = document.querySelector(".home");
-    home.classList.add("off");
+  root.append(title);
 
-    var register = document.querySelector(".register");
-    register.classList.remove("off");
+  // 'Access' behavior setup on clicking buttons
+  var access = mountAccess(function () {
+      access.replaceWith(register);
+    }, function () {
+      access.replaceWith(login);
+    });
 
-}, function () {
-    //onLogin
-    var home = document.querySelector(".home");
-    home.classList.add("off");
+    root.append(access);
 
-    var login = document.querySelector(".login");
-    login.classList.remove("off");
-});
-
-// Register form visual behavior after calling the registerUser function
-  mountRegister('.register', function(fullname, email, password, repassword){
-    registerUser(fullname, email, password, repassword);
-    var register = document.querySelector(".register");
-    register.classList.add("off"); // off the register section
-
-    var confirm = document.querySelector(".login");
-    confirm.classList.remove("off"); // turning on the login section
-  })  
-      
-// register confirmation visual behavior
-  mountRegisterConfirm('.register-confirm', function () {
-    var confirm = document.querySelector('.register-confirm');
-    confirm.classList.add('off'); // off the register-confirm section
-
-    var login = document.querySelector('.login');
-    login.classList.remove('off'); // turning on the login section
+  
+  // Register form visual behavior after calling the registerUser function
+  var register = mountRegister(function (fullname, email, password, repassword) {
+    registerUser(fullname, email, password, repassword, function (error) {
+      if (error) {
+        alert(error.message);
+      } else {
+        register.replaceWith(confirm);
+      }
+    });
   });
 
 
-// Visual behavior of the login section after calling authenticateUser
-    mountLogin('.login', function(email, password) {
-      authenticateUser(email, password);
-      var login = document.querySelector('.login');
-      login.classList.add('off'); // turning off the login section after auth
+  // register confirmation visual behavior
+  var confirm = mountRegisterConfirm(function () {
+    confirm.replaceWith(login);
+  });
 
-      var welcome = document.querySelector('.welcome');
-      welcome.classList.remove('off'); // Turning on the welcome section
-  })
+
+  // Visual behavior of the login section after calling authenticateUser
+  var login = mountLogin(function (email, password) {
+    authenticateUser(email, password, function (error, token) {
+      if (error) {
+        alert(error.message);
+      } else {
+        // TODO
+        retrieveUser(token, function (error, user){
+          if (error) alert(error.message);
+          else {
+            var fullname = user.fullname;
+            welcome.querySelector('h4').innerText = 'Welcome, ' + fullname + '!, be confortable ;)';
+          }
+        });
+        login.replaceWith(welcome); // turning off 'login' after successful auth and retrieving
+      } 
+    });
+  });
+  
+  var welcome = mountWelcome(function() {
+    unregisterUser(password, token, function(error) {
+      if (error) {
+        alert(error.message);
+      } else {
+        console.log('unregistered user');
+      }
+    })
+  }, 
+  function () {
+    modifyUser(token, update, function(error, user) {
+      if (error) {
+        alert(error.message); 
+      } else {
+        console.log(user);
+      }
+    })
+  });
 
 })();

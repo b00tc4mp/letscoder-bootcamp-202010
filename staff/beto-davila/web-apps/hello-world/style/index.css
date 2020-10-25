@@ -5,15 +5,7 @@
 }
 
 html {
-  max-width: 95%;
   margin: auto;
-  min-height: 70%;
-}
-
-.off {
-  position: absolute;
-  visibility: hidden;
-  display: none;
 }
 
 body {
@@ -22,7 +14,7 @@ body {
   background-image: url("./img/background-img.jpg");
   background-size: cover;
   background-color: white;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 input {
@@ -45,53 +37,87 @@ p {
   color: white;
 }
 
-.home {
-  padding: 2rem;
-  margin: auto;
+.access {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .title {
+  display: flex;
+  justify-content: center;
   padding: 0.5rem;
   border-bottom: 0.1rem solid black;
   width: 85%;
   margin: auto;
 }
 
+.title > h1 {
+  text-align: center;
+}
+
 .register {
-  width: 60%;
-  height: 60vh;
-  margin: 1rem auto;
+  width: 40%;
+  margin: 1.5rem auto;
   overflow: auto;
   display: flex;
   flex-direction: column;
   background-color: #EBEEE5;
   align-items: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 0;
+}
+.register__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .register__img {
   border-radius: 50%;
   max-width: 50%;
   height: auto;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
-.login {
-  width: 90%;
-  margin: auto 0.5rem;
+.login__img {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  opacity: 0.5;
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  font-weight: lighter;
+}
+.login__form {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-.login__img {
-  max-width: 30%;
-  max-height: 50%;
-  border-radius: 20%;
-  opacity: 0.5;
-  margin: 0.5rem;
+
+.login > h2 {
+  text-align: center;
+  padding: 0.5rem;
 }
 
-.login-error__message {
-  width: 95%;
-  margin: auto;
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome__unregister {
+  align-self: flex-start;
+  margin: 0.5rem 1rem;
+}
+.welcome__update {
+  align-self: flex-start;
+  margin: 0.5rem 1rem;
+}
+
+.welcome > h4 {
   padding: 1rem;
 }
 

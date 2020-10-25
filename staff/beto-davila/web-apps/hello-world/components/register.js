@@ -1,14 +1,25 @@
-
 // Mounting the 'register form' that calls onRegister function when submitting the register form.
-function mountRegister(selector, onRegister) {
-    var register = document.querySelector(selector);
+function mountRegister(onRegister) {
 
-    var form = register.querySelector('.register__form');
+  var container = mountContainer(`<section class="register">
+    <h2>Register</h2>
+    <img class='register__img' src="./style/img/registration.jpeg" alt="register-img">
+        <p>Create your account, It´s free and only takes a minute</p>
+        <form class="register__form" action="">
+            <input type="text" name="fullname" placeholder="full name" required>
+            <input type="email" name="email" placeholder="e-email" required>
+            <input type="password" name="password" placeholder="password" required>
+            <input type="password" name="repassword" placeholder="repeat password" required>
+            <button class="register__btn btn" type="submit">Register</button>
+        </form>
+</section>`);
 
-    form.onsubmit = function(event) {
+    var form = container.querySelector(".register__form");
+
+    form.onsubmit = function (event) {
         event.preventDefault();
 
-        var inputs = form.querySelectorAll('input');
+        var inputs = form.querySelectorAll("input");
 
         var fullname = inputs[0].value;
         var email = inputs[1].value;
@@ -20,5 +31,7 @@ function mountRegister(selector, onRegister) {
         } catch (error) {
             alert(error.message);
         }
-    }
+  };
+
+  return container;
 }

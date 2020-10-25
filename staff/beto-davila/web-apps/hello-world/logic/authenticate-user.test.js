@@ -3,19 +3,9 @@
     console.log('Test authenticateUser()');
 
     (function () {
-        console.log(' should succeed on existing user');
 
-        var fullname = 'John Doe' + Math.random();
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
-
-        user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        };
-
-        users.push(user);
 
         var fail;
 
@@ -26,6 +16,25 @@
         }
 
         console.assert(!fail, 'should not throw error');
+
+
+        // TODO with call tool for API requests
+
+        call('POST', 
+        'https://b00tc4mp.herokuapp.com/api/v2/users/auth', 
+        { 'Content-type': 'application/json' }, 
+        '{ "username": "' + email + '", "password": "' + password + '" }', 
+        function(status, response) {
+             if (status === 200) {
+                 var res = JSON.parse(response);
+                 callback(null, res.token);
+                 console.log(' should succeed on existing user');
+             } else {
+                 var res = JSON.parse(response);
+                 callback(new Error(res.error));
+             }
+         });
+
 
     })();
 

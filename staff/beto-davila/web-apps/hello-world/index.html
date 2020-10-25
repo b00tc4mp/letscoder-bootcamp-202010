@@ -7,58 +7,24 @@
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-    <h1 class="title">Hello World App</h1>
+    <div id="root"></div>
 
-    <section class="home">
-        <button class="home__register btn">Register</button> or <button class="home__login btn">Login</button>
-    </section>
+    <script src="./utils/call.js"></script>
 
-    <section class="register off">
-        <h2>Register</h2>
-        <img class='register__img' src="./style/img/registration.jpeg" alt="register-img">
-            <p>Create your account, It´s free and only takes a minute</p>
-            <form class="register__form" action="">
-                <input type="text" name="fullname" placeholder="full name" required>
-                <input type="email" name="email" placeholder="e-email" required>
-                <input type="password" name="password" placeholder="password" required>
-                <input type="password" name="repassword" placeholder="repeat password" required>
-                <button class="register__btn btn" type="submit">Register</button>
-            </form>
-    </section>
-
-    <section class="register-confirm off">
-        <p>User registered successfully, proceed to <button class="register-confirm__login btn">Login</button></p>
-    </section>
-
-
-    <section class="login off">
-        <h2>Login</h2>
-        <img class="login__img" src="./style/img/login.jpeg" alt="login-img">
-            <form class="login__form" action="">
-                <p class="login__message off">Please, log in with your recently created user</p>
-                <input type="email" name="email" placeholder="e-email" required>
-                <input type="password" name="password" placeholder="password" required>
-                <button class="login__btn btn">Login</button>
-            </form>
-    </section>
-
-    <section class="welcome off">
-        <h2>Welcome!, be confortable ;)</h2>
-    </section>
-
-    <section class="login-error off">
-        <h4 class="login-error__message">Sorry, your email or password is not valid. Get back to the <a href="#">main</a> registration form or try to log in again</h4>
-    </section>
-
-    <script src="./data.js"></script>
     <script src="./logic/authenticate-user.js"></script>
     <script src="./logic/register-user.js"></script>
+    <script src="./logic/retrieve-user.js"></script>
+    <script src="./logic/modify-user.js"></script>
+    <script src="./logic/unregister-user.js"></script>
+    <script src="./logic/modify-user.js"></script>
 
+    <script src="./components/container.js"></script>
     <script src="./components/title.js"></script>
-    <script src="./components/home.js"></script>
+    <script src="./components/access.js"></script>
     <script src="./components/login.js"></script>
     <script src="./components/register-confirm.js"></script>
     <script src="./components/register.js"></script>
+    <script src="./components/welcome.js"></script>
 
     <script src="./main.js"></script>
 </body>
