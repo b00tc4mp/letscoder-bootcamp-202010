@@ -19,7 +19,7 @@
                 var res = JSON.parse(response);
                 var token = res.token;
                  call('DELETE','https://b00tc4mp.herokuapp.com/api/v2/users',
-                 {'Authorization':'bearer '+token, 'Content-type': 'application/json'},
+                 {'Authorization':'Bearer '+token, 'Content-type': 'application/json'},
                  '{"password": "'+password+'"}',function(status,response){
                      console.assert(status === 204, 'status should be 204');
                      console.assert(response.length === 0 , 'response should be empty')
