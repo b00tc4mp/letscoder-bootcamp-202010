@@ -3,6 +3,5 @@ function mountWelcome() {
     <h2></h2>
 </section>`)
 
-
-    return container 
+return container
 }
