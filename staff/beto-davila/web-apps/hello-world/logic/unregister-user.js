@@ -26,8 +26,7 @@ function unregisterUser(password, token, callback) { // required to pass a token
 
     call('DELETE', 
     'https://b00tc4mp.herokuapp.com/api/v2/users/', 
-    { 'Content-type': 'application/json' },
-    { 'Authorization': 'Bearer ' + token }, 
+    { 'Content-type': 'application/json', 'Authorization': 'Bearer ' + token }, 
     '{"password": "' + password + '"}', 
     function(status, response) {
          if (status === 204) {

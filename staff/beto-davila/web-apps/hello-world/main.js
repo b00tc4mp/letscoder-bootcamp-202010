@@ -4,7 +4,7 @@
 
   // title visual behavior
   var title = mountTitle(function () {
-    var sections = document.querySelectorAll('section');
+    var sections = document.querySelectorAll("section");
     for (var i = 0; i < sections.length; i++) {
       sections[i].replaceWith(access);
     }
@@ -13,17 +13,24 @@
   root.append(title);
 
   // 'Access' behavior setup on clicking buttons
-  var access = mountAccess(function () {
+  var access = mountAccess(
+    function () {
       access.replaceWith(register);
-    }, function () {
+    },
+    function () {
       access.replaceWith(login);
-    });
+    }
+  );
 
-    root.append(access);
+  root.append(access);
 
-  
   // Register form visual behavior after calling the registerUser function
-  var register = mountRegister(function (fullname, email, password, repassword) {
+  var register = mountRegister(function (
+    fullname,
+    email,
+    password,
+    repassword
+  ) {
     registerUser(fullname, email, password, repassword, function (error) {
       if (error) {
         alert(error.message);
@@ -33,12 +40,10 @@
     });
   });
 
-
   // register confirmation visual behavior
   var confirm = mountRegisterConfirm(function () {
     confirm.replaceWith(login);
   });
-
 
   // Visual behavior of the login section after calling authenticateUser
   var login = mountLogin(function (email, password) {
@@ -46,36 +51,42 @@
       if (error) {
         alert(error.message);
       } else {
-        // TODO
-        retrieveUser(token, function (error, user){
+        retrieveUser(token, function (error, user) {
           if (error) alert(error.message);
           else {
             var fullname = user.fullname;
-            welcome.querySelector('h4').innerText = 'Welcome, ' + fullname + '!, be confortable ;)';
+            welcome.querySelector("h4").innerText =
+              "Welcome, " + fullname + "!, be confortable ;)";
           }
         });
         login.replaceWith(welcome); // turning off 'login' after successful auth and retrieving
-      } 
+      }
     });
   });
-  
-  var welcome = mountWelcome(function() {
-    unregisterUser(password, token, function(error) {
+
+  var welcome = mountWelcome(function () {
+    welcome.replaceWith(deletion);
+  });
+
+  // mountUpdateUser(function(field, value) {
+  // TODO
+  // });
+
+  var deletion = mountConfirmDelete(function (email, password) { 
+    authenticateUser(email, password, function (error, token) {
       if (error) {
         alert(error.message);
       } else {
-        console.log('unregistered user');
+        unregisterUser(password, token, function (error) {
+          if (error) alert(error.message);
+          else {
+            alert("The user was successfully unregistered");
+          }
+        });
       }
-    })
-  }, 
-  function () {
-    modifyUser(token, update, function(error, user) {
-      if (error) {
-        alert(error.message); 
-      } else {
-        console.log(user);
-      }
-    })
+    });
+    deletion.replaceWith(access);
   });
+
 
 })();

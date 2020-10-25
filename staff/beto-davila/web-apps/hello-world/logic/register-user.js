@@ -32,7 +32,7 @@ function registerUser(fullname, email, password, repassword, callback) {
    call ('POST', 
    'https://b00tc4mp.herokuapp.com/api/v2/users', 
    { 'Content-type': 'application/json' }, 
-   '{ "fullname": " '+ fullname +' ", "username": " '+ email +' ", "password": " '+ password +' ", "repassword": " '+ repassword +' "}', 
+   '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '", "repassword": "' + repassword + '"}', 
    function(status, response) {
         if (status === 201)
             callback(null)

@@ -13,7 +13,7 @@
 
             console.assert(error === null, 'should error be null');
             
-            // auth
+            // auth to get token
             call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', 
             { 'Content-type': 'application/json' }, 
             '{ "username": "' + email + '", "password": "' + password + '"}',
@@ -23,7 +23,8 @@
                 var res = JSON.parse(response);
 
                 var token = res.token;
-                // delete
+
+                // delete recently created user
                 call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                 {
                     'Authorization': 'Bearer' + token,
@@ -52,10 +53,11 @@
         '{ "fullname": "'+ fullname + '", "username": "'+ email + '", "password": "'+ password + '", "repassword": "'+ repassword + '" }',
         function(status) {
             if (status === 201) {
+                debugger
                 registerUser(fullname, email, password, repassword, function(error) {
                     console.log(' should fail on already existing user');
 
-                    console.assert(error instanceof Error, 'should error be instaceof Error');
+                    console.assert(error instanceof Error, 'should error be instanceof Error');
                     console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected');
 
                     call('POST', 'https://b00tc4amp.herokuapp.com/api/v2/users/auth', 
