@@ -77,4 +77,64 @@
                                
     })();
 
+
+    (function () {
+        console.log(' should user be deleted successfully (Test6)')
+        var fullname = 'John Delete ' + Math.random()
+        var email = 'johnDelete-' + Math.random() + '@delete.com'
+        var password = 'pass-' + Math.random()
+
+           call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                if (status === 201) {
+                        call('POST',
+                        'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+                        { 'Content-type': 'application/json' },
+                        '{ "username": "' + email + '", "password": "' + password + '" }',
+                        function (status, response) {
+                            if (status === 200) {
+                                var res = JSON.parse(response)
+                                unregisterUser(res.token, password,  function(error) {
+                                    console.assert(!error, 'should not return error when user was deleted')
+                                
+                                call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                    {
+                                        'Authorization': 'Bearer ' + res.token
+                                    },
+                                    undefined,
+                                    function (status, res) {
+                                        console.assert(status !== 200, 'should status be different to 200')
+                                    }
+                                    )
+                                })
+                            }
+                            else {
+                                console.error('should not reach this point')
+                            }
+                        }
+                    )
+                } else {
+                    console.error('should not reach this point')
+                }
+        })
+    })();
+
+
+    (function () {
+        console.log(' should fail on unregistered user if token no valid (Test7)')
+        
+        var token = (Math.random() * 1000).toString();
+        var password = 'pass-' + Math.random()
+
+        unregisterUser(token, password,  function(error) {
+            console.assert(error instanceof Error, 'should error be defined and an instance of Error')
+            console.assert(error.message === 'invalid token', 'should error message match expected')
+        })
+    })();
+
+
+
+
 })();
