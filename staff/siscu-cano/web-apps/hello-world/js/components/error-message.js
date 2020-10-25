@@ -3,6 +3,5 @@ function showErrorMessage(msg) {
     <img src="./images/error_icon.svg" width="24" height="24" alt="Icon error"><span class="error-message__inner">${msg}</span>
 </section>`);
 
-    //container.onclick = onHome;
     return container;
 }

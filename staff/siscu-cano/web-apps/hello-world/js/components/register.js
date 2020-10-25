@@ -34,29 +34,3 @@ function mountRegister(onRegister) {
 
     return container
 }
-
-
-
-// TODO
-    // registerForm.onsubmit = function(event) {
-    //     var fail;
-    //     var errorBoxContainer = document.querySelector('.error-message');
-    //     var errorBoxMessage = document.querySelector('.error-message__inner');
-    //     var fullname = document.querySelector('.register__fullname').value;
-    //     var email = document.querySelector('.register__email').value;
-    //     var password = document.querySelector('.register__password').value;
-    //     var repassword = document.querySelector('.register__repassword').value;
-
-    //     event.preventDefault();
-
-    //     try {
-    //         onRegister(fullname, email, password, repassword);
-    //     } catch (error) {
-    //         fail = error;
-    //     }
-
-    //     if (fail) {
-    //         errorBoxContainer.classList.remove('hidden');
-    //         errorBoxMessage.innerHTML = fail;
-    //     }
-    // }
