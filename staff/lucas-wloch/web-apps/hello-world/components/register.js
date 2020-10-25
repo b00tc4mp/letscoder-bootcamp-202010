@@ -25,11 +25,15 @@ function mountRegister(onRegister){
     
         try{
             onRegister(fullname,email,password,repassword);
+            for(var i = 0; i < inputs.length; i++){
+                inputs[i].value = '';
+            }
+            var _error = container.querySelector('.register__h3');
+            _error.innertext = '';
         } catch (error){
             
             var _error = container.querySelector('.register__h3');
             _error.innerText = error;
-            _error.classList.remove('off');
         };
     };
     return container;

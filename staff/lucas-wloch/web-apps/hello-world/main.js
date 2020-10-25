@@ -1,28 +1,14 @@
 (function(){
-    // function limpiarLogin(){
-    //     /// vacio los campos luego de autentificar al user 
-    //     var form = document.querySelector('.login__form');
-    //     var inputs = form.querySelectorAll('input');
-    //     for(var i = 0; i < inputs.length; i++){
-    //         inputs[i].value = '';
-    //     }
-    //     var _error = document.querySelector('.login__h3');
-    //     _error.innerHTML = '';
-    // }
-    // function limpiarRegister(){
-    //     var form = document.querySelector('.register__form');
-    //     var inputs = form.querySelectorAll('input');
-    //     for(var i = 0; i < inputs.length; i++){
-    //         inputs[i].value = '';
-    //     }
-    //     var _error = document.querySelector('.register__h3');
-    //     _error.innerText = '';
-    // }
-    // onload
+
 
     var root = document.getElementById('root');
 
     //title 
+    function reset(){
+       root.innerHTML = '';
+        root.append(title);
+        root.append(access); 
+    }
     
     var title = mountTitle(function(){
         root.innerHTML = '';
@@ -83,7 +69,7 @@
     //si el usuario se registro previamente tambien se ocultara este panel y se mostrara la pantalla de bienbenido a Hello World App      
     
     var token1
-    var login = mountLogin(function(email,password){
+    var login = mountLogin('Login',function(email,password){
         
         authenticateUser(email,password, function(error,token){
             if(error){
@@ -114,8 +100,9 @@
     var welcome = mountWelcome();
 
     //  profile
+    //on retrieve
     var profile = mountProfile(function(){
-        var login = mountLogin(function(email,password){
+        var login = mountLogin('Search info',function(email,password){
             
             authenticateUser(email,password,function(error,token){
                 if (error){
@@ -136,15 +123,19 @@
                     login.replaceWith(responseDisplay)
                 }
             })
-        }); root.append(login)
+        }); 
+        //chequeo primero cuantos paneles hay en la pantalla
+        for (var i = 3; i < root.children.length;i++){
+            root.children[i].remove();
+        }
+        root.append(login)
     },//on update
     function(){
-        var login = mountLogin(function(email,password){
+        var login = mountLogin('Update info',function(email,password){
             authenticateUser(email,password,function(error,token){
                 if (error){
                     var retry = login.querySelector('.login__h3');
                     reTry.innerText = error.message;
-                    reTry.classList.remove('off');
                 } else {
                     var token = token
                     var updateProfile = mountUpdate(function(characteristic,value){
@@ -161,12 +152,18 @@
                     login.replaceWith(updateProfile)
                 }
             })
-        });root.append(login)
+        });
+        
+        for (var i = 3; i < root.children.length;i++){
+            root.children[i].remove();
+        }
+        root.append(login)
+        
 
        
     },//on delete
     function(){
-        var login = mountLogin(function(email,password){
+        var login = mountLogin('Delete account',function(email,password){
             var password = password
             authenticateUser(email,password,function(error,token){
                 if (error){
@@ -179,15 +176,22 @@
                     unRegisterUser(token,password, function(response){
                         if (error === null){
                             responseDisplay.innerText = 'Ok, user deleted succesfully!'
+                            reset()
+                            root.append(responseDisplay)
                         } else {
                             responseDisplay.innerText = error.message
+                            root.append(responseDisplay)
                         }
                     })
-                    login.replaceWith(responseDisplay)
+                    
                     
                 }
             })
-        }); root.append(login)
+        }); 
+        for (var i = 3; i < root.children.length;i++){
+            root.children[i].remove();
+        }
+        root.append(login)
     });
 
     
