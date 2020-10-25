@@ -1,8 +1,8 @@
 (function () {
-    console.log('TEST retrieveUser()');
+    console.log('TEST retrieveAllUsers()');
 
     (function () {
-        console.log(' should retrieve user data if the user we tested already existed (Test1)')
+        console.log(' should retrieve all users (Test1)')
         var fullname = 'John Retrieve ' + Math.random()
         var email = 'johnRetrieve-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
@@ -19,7 +19,7 @@
                         function (status, response) {
                             if (status === 200) {
                                 var res = JSON.parse(response)
-                                retrieveUser(res.token, function(error, user) {
+                                retrieveAllUsers(res.token, function(error, user) {
                                     console.assert(!error, 'should not return error when retrieve with existing user')
                                     console.assert(user, 'should return a user when retrieve')
                                 })
@@ -31,9 +31,9 @@
                                     '{ "password": "' + password + '" }',
                                     function (status, response) {
                                         if (status === 204) {
-                                            console.log(' \t Deleted the user registered for the test (Test1 retrieveUser)')   
+                                            console.log(' \t Deleted the user registered for the test (Test1 retrieveAllUsers)')   
                                         } else {
-                                            console.log('Could not delete the user registered for the test (Test1 retrieveUser)')
+                                            console.log('Could not delete the user registered for the test (Test1 retrieveAllUsers)')
                                         }
                                     }
                                     )
@@ -50,10 +50,10 @@
     })();
 
     (function () {
-        console.log(' should fail retrieve if token not exist (Test2)')
+        console.log(' should fail retrieve of all users if token not exist (Test2)')
         var token =  (Math.random() * 1000).toString();
     
-        retrieveUser(token, function(error, user) {
+        retrieveAllUsers(token, function(error, user) {
             console.assert(error instanceof Error, 'should error be defined and instance of Error')
             console.assert(error.message, 'invalid token')
         })
@@ -61,11 +61,11 @@
     })();
 
     (function () {
-        console.log(' should fail retrieve if token not string (Test3)')
+        console.log(' should fail on retrieve all users if token not string (Test3)')
         var token =  (Math.random() * 1000);
         var fail
         try {
-            retrieveUser(token)
+            retrieveAllUsers(token)
         } catch (error) {
             fail = error
         }
@@ -79,7 +79,7 @@
         var token = ['', ' ', '\t', '\n'].random()
         var fail
         try {
-            retrieveUser(token)
+            retrieveAllUsers(token)
         } catch (error) {
             fail = error
         }
@@ -94,7 +94,7 @@
         var callback = [1, true, null, undefined, {}, [], new Date].random()
 
         try {
-            retrieveUser(token, callback)
+            retrieveAllUsers(token, callback)
         } catch (error) {
             fail = error
         }
