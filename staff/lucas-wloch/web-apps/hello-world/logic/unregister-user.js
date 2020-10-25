@@ -1,4 +1,4 @@
-function unregisterUser(token,password,callback){
+function unRegisterUser(token,password,callback){
     if( typeof token !== 'string') throw new TypeError(token + ' is not a token');
     if(!token.trim().length) throw new Error('token is empty or blank');
     if( typeof password !== 'string') throw new TypeError(password + ' is not a password');

@@ -1,6 +1,6 @@
 function mountDisplay(){
     
-    var container = mountContainer(`<div class="display"></div>`);
+    var container = mountContainer(`<section class="display"></section>`);
 
     return container
 }

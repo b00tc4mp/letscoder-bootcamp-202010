@@ -25,7 +25,9 @@
     //title 
     
     var title = mountTitle(function(){
-        root.lastChild.replaceWith(access);
+        root.innerHTML = '';
+        root.append(title);
+        root.append(access);
         
         
         // limpiarLogin();
@@ -92,7 +94,8 @@
                 
                 retrieveUser(token, function(error, user){
                     if (error === null){
-                        var name = user.name
+                        var name = user.fullname
+                        // welcome.append('Welcome ' + name + ', good to see you again!')
                         // welcome.innerHTML = '<h3>"Welcome ' + name + ', good to see you again!"</h3>'
                         // welcome.innerHTML = `<h3>"Welcome "` + name + `", good to see you again!"</h3>`
                         welcome.querySelector('h3').innerText = "Welcome " + name + ", good to see you again!"
@@ -111,32 +114,86 @@
     var welcome = mountWelcome();
 
     //  profile
-
     var profile = mountProfile(function(){
-        var login1 = mountLogin(function(email,password){
+        var login = mountLogin(function(email,password){
             
-            authenticateUser(email,password, function(error,token){
-                if(error){
-                    var reTry = login.querySelector('.login__h3');
+            authenticateUser(email,password,function(error,token){
+                if (error){
+                    var retry = login.querySelector('.login__h3');
                     reTry.innerText = error.message;
                     reTry.classList.remove('off');
                 } else {
                     var token = token
-                    retrieveUser(token, function(error, user){
+                    retrieveUser(token,function(error,user){
                         if (error === null){
-                            responseDisplay.innerHTML = user;
+                            var userInfo = '';
+                            for (var key in user){
+                                userInfo += key + ' : ' + user[key] + '\n'
+                            }
+                            responseDisplay.innerText = userInfo;
                         }
-                        
+                    })
+                    login.replaceWith(responseDisplay)
+                }
+            })
+        }); root.append(login)
+    },//on update
+    function(){
+        var login = mountLogin(function(email,password){
+            authenticateUser(email,password,function(error,token){
+                if (error){
+                    var retry = login.querySelector('.login__h3');
+                    reTry.innerText = error.message;
+                    reTry.classList.remove('off');
+                } else {
+                    var token = token
+                    var updateProfile = mountUpdate(function(characteristic,value){
+                        modifyUser(token,function(error){
+                            if (error === null){
+                                responseDisplay.innerText = 'Ok, user updated succesfully!'
+                            }else {
+                                responseDisplay.innerText = error.message
+                            }
+                        },'{"'+characteristic+'": "'+value+'"}');
+                        updateProfile.replaceWith(responseDisplay);
                     })
                     
-                    login1.replaceWith(responseDisplay)
-                    // limpiarLogin();
-                };
-            });
-        });root.append(login1);
+                    login.replaceWith(updateProfile)
+                }
+            })
+        });root.append(login)
 
+       
+    },//on delete
+    function(){
+        var login = mountLogin(function(email,password){
+            var password = password
+            authenticateUser(email,password,function(error,token){
+                if (error){
+                    var retry = login.querySelector('.login__h3');
+                    reTry.innerText = error.message;
+                    reTry.classList.remove('off');
+                } else {
+                    var token = token
+                    
+                    unRegisterUser(token,password, function(response){
+                        if (error === null){
+                            responseDisplay.innerText = 'Ok, user deleted succesfully!'
+                        } else {
+                            responseDisplay.innerText = error.message
+                        }
+                    })
+                    login.replaceWith(responseDisplay)
+                    
+                }
+            })
+        }); root.append(login)
     });
+
+    
+    
     var responseDisplay = mountDisplay();
+    
 
 
 })();
