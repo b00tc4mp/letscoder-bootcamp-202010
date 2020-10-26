@@ -20,6 +20,13 @@
                     var res = JSON.parse(response)
 
                     var token = res.token
+                    call ('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users',{'Authorization': 'Bearer ' + token},'', 
+                    function(status,response){
+                        console.assert(status === 200, 'should status be 200')
+                        var user = JSON.parse(response)
+                        console.assert(user.fullname === fullname, " should fullname match")
+                        console.assert(user.username === email, ' should username match the e-mail')
+                    })
 
                     call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                         {

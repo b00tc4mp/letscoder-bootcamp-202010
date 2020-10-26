@@ -2,7 +2,7 @@
     console.log('TEST authenticateUser()');
 
     (function () {
-        console.log(' should succed on existing user');
+        
 
         var fullname = 'John Doe' + Math.random();
         var email = 'johndoe-' + Math.random() + '@mail.com';
@@ -15,8 +15,10 @@
             function (status, response) {
                 if (status === 201)
                     authenticateUser(email, password, function (error, token) {
+                        console.log(' should succed on existing user');
                         console.assert(!error, ' should not return error when we authenticate with an existing user')
                         console.assert(token, ' should return token when we authenticate')
+                        console.assert(token.length>0, " should token length be bigger than 0")
                         console.assert(typeof token === 'string', ' should return a string token')
                         call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                             {
@@ -41,12 +43,14 @@
     })();
 
     (function () {
-        console.log(' should fail on non-existing user');
+        
 
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
 
         authenticateUser(email, password + '-wrong', function (error) {
+            console.log(' should fail on non-existing user');
+
             console.assert(error instanceof Error, 'should  error be defined and instace of Error');
             console.assert(error.message === 'username and/or password wrong', 'should error message match expected');
 
@@ -64,7 +68,7 @@
         var fail
 
         try {
-            authenticateUser(email, password);
+            authenticateUser(email, password, function(){});
         } catch (error) {
             fail = error;
         }
@@ -82,7 +86,7 @@
         var fail
 
         try {
-            authenticateUser(email, password);
+            authenticateUser(email, password, function(){});
         } catch (error) {
             fail = error;
         }
@@ -103,7 +107,7 @@
         var fail;
 
         try {
-            authenticateUser(email, password);
+            authenticateUser(email, password, function(){});
         } catch (error) {
             fail = error;
         }
@@ -124,7 +128,7 @@
         var fail
 
         try {
-            authenticateUser(email, password);
+            authenticateUser(email, password, function(){});
         } catch (error) {
             fail = error;
         }
@@ -145,7 +149,7 @@
         var fail
 
         try {
-            authenticateUser(email, password);
+            authenticateUser(email, password, function(){});
         } catch (error) {
             fail = error;
         }
