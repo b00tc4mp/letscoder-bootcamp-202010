@@ -2,101 +2,139 @@
     console.log('TEST authenticateUser()');
 
     (function () {
-        console.log(' should succeed on existing user')
-
-        var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
 
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
+        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                console.assert(status === 201, 'should status be 201')
+                console.assert(response.length === 0, 'should response be empty')
 
-        users.push(user)
+                authenticateUser(email, password, function (error, token) {
+                    console.log(' should succeed on existing user')
 
-        var fail
+                    console.assert(error === null, 'should error be null')
+                    // console.assert(token, 'should token exist')
+                    console.assert(typeof token === 'string', 'should token be a string')
+                    console.assert(token.length > 0, 'should token length be greater than 0')
 
-        try {
-            authenticateUser(email, password)
-        } catch(error) {
-            fail = error
-        }
-
-        console.assert(!fail, 'should not fail on authenticate')
+                    call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                        {
+                            'Authorization': 'Bearer ' + token,
+                            'Content-type': 'application/json'
+                        },
+                        '{ "password": "' + password + '" }',
+                        function (status, response) {
+                            console.assert(status === 204, 'should status be 204')
+                            console.assert(response.length === 0, 'should response be empty')
+                        }
+                    )
+                })
+            })
     })();
 
     (function () {
-        console.log(' should fail on non-existing user')
-
         var email = 'johndoe-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
 
-        var fail
+        authenticateUser(email, password, function (error, token) {
+            console.log(' should fail on non-existing user')
 
-        try {
-            authenticateUser(email, password)
-        } catch(error) {
-            fail = error
-        }
+            console.assert(error instanceof Error, 'should error be defined')
+            console.assert(error.message, 'username and/or password wrong')
 
-        console.assert(fail instanceof Error, 'should error be defined and instance of Error')
-        console.assert(fail.message, 'wrong credentials')
+            console.assert(token === undefined, 'should token be undefined')
+        })
     })();
 
     (function () {
-        console.log(' should fail on wrong password')
-
-        var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
 
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
+        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                console.assert(status === 201, 'should status be 201')
+                console.assert(response.length === 0, 'should response be empty')
 
-        users.push(user)
+                authenticateUser(email, password + '-wrong', function (error, token) {
+                    console.log(' should fail on wrong password')
 
-        var fail
+                    console.assert(error instanceof Error, 'should error be defined')
+                    console.assert(error.message, 'username and/or password wrong')
 
-        try {
-            authenticateUser(email, password + '-wrong')
-        } catch(error) {
-            fail = error
-        }
+                    console.assert(token === undefined, 'should token be undefined')
 
-        console.assert(fail instanceof Error, 'should error be defined and instance of Error')
-        console.assert(fail.message, 'wrong credentials')
+                    call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+                        '{ "username": "' + email + '", "password" : "' + password + '" }',
+                        function (status, response) {
+                            console.assert(status === 200, 'should status be 200')
+
+                            var res = JSON.parse(response)
+
+                            var token = res.token
+
+                            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                {
+                                    'Authorization': 'Bearer ' + token,
+                                    'Content-type': 'application/json'
+                                },
+                                '{ "password": "' + password + '" }',
+                                function (status, response) {
+                                    console.assert(status === 204, 'should status be 204')
+                                    console.assert(response.length === 0, 'should response be empty')
+                                }
+                            )
+                        })
+                })
+            })
     })();
 
     (function () {
-        console.log(' should fail on wrong email')
-
-        var fullname = 'John Doe ' + Math.random()
         var email = 'johndoe-' + Math.random() + '@mail.com'
         var password = 'pass-' + Math.random()
 
-        var user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        }
+        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+            { 'Content-type': 'application/json' },
+            '{ "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+                console.assert(status === 201, 'should status be 201')
+                console.assert(response.length === 0, 'should response be empty')
 
-        users.push(user)
+                authenticateUser('wrong-' + email, password, function (error, token) {
+                    console.log(' should fail on wrong e-mail')
 
-        var fail
+                    console.assert(error instanceof Error, 'should error be defined')
+                    console.assert(error.message, 'username and/or password wrong')
 
-        try {
-            authenticateUser('wrong-' + email, password)
-        } catch(error) {
-            fail = error
-        }
+                    console.assert(token === undefined, 'should token be undefined')
 
-        console.assert(fail instanceof Error, 'should error be defined and instance of Error')
-        console.assert(fail.message, 'wrong credentials')
+                    call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+                        '{ "username": "' + email + '", "password" : "' + password + '" }',
+                        function (status, response) {
+                            console.assert(status === 200, 'should status be 200')
+
+                            var res = JSON.parse(response)
+
+                            var token = res.token
+
+                            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                {
+                                    'Authorization': 'Bearer ' + token,
+                                    'Content-type': 'application/json'
+                                },
+                                '{ "password": "' + password + '" }',
+                                function (status, response) {
+                                    console.assert(status === 204, 'should status be 204')
+                                    console.assert(response.length === 0, 'should response be empty')
+                                }
+                            )
+                        })
+                })
+            })
     })();
 
     (function () {
@@ -108,7 +146,7 @@
         var fail
 
         try {
-            authenticateUser(email, password)
+            authenticateUser(email, password, function () { })
         } catch (error) {
             fail = error
         }
@@ -126,7 +164,7 @@
         var fail
 
         try {
-            authenticateUser(email, password)
+            authenticateUser(email, password, function () { })
         } catch (error) {
             fail = error
         }
@@ -144,7 +182,7 @@
         var fail
 
         try {
-            authenticateUser(email, password)
+            authenticateUser(email, password, function () { })
         } catch (error) {
             fail = error
         }
@@ -162,7 +200,7 @@
         var fail
 
         try {
-            authenticateUser(email, password)
+            authenticateUser(email, password, function () { })
         } catch (error) {
             fail = error
         }
@@ -180,13 +218,33 @@
         var fail
 
         try {
-            authenticateUser(email, password)
+            authenticateUser(email, password, function () { })
         } catch (error) {
             fail = error
         }
 
         console.assert(fail instanceof Error, 'should error be defined and an instance of TypeError')
         console.assert(fail.message === 'password is empty or blank', 'should error message match expected')
+    })();
+
+    (function () {
+        console.log(' should fail on non-function callback')
+
+        var email = 'johndoe-' + Math.random() + '@mail.com'
+        var password = 'pass-' + Math.random()
+
+        var callback = [1, true, null, undefined, {}, [], 'string', new Date].random()
+
+        var fail
+
+        try {
+            authenticateUser(email, password, callback)
+        } catch (error) {
+            fail = error
+        }
+
+        console.assert(fail instanceof TypeError, 'should error be defined and an instance of TypeError')
+        console.assert(fail.message === callback + ' is not a callback', 'should error message match expected')
     })();
 
     // TODO implement unit test cases

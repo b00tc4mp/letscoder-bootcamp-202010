@@ -108,7 +108,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -128,7 +128,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -148,7 +148,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -168,7 +168,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -188,7 +188,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -208,7 +208,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -228,7 +228,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -248,7 +248,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -268,7 +268,7 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
@@ -288,13 +288,35 @@
         var fail
 
         try {
-            registerUser(fullname, email, password, repassword)
+            registerUser(fullname, email, password, repassword, function() {})
         } catch (error) {
             fail = error
         }
 
         console.assert(fail instanceof Error, 'should error be defined and an instance of TypeError')
         console.assert(fail.message === 'passwords don\'t match', 'should error message match expected')
+    })();
+
+    (function () {
+        console.log(' should fail on non-function callback')
+
+        var fullname = 'John Doe ' + Math.random()
+        var email = 'johndoe-' + Math.random() + '@mail.com'
+        var password = 'pass-' + Math.random()
+        var repassword = password
+
+        var callback = [1, true, null, undefined, {}, [], 'string', new Date].random()
+
+        var fail
+
+        try {
+            registerUser(fullname, email, password, repassword, callback)
+        } catch (error) {
+            fail = error
+        }
+
+        console.assert(fail instanceof TypeError, 'should error be defined and an instance of TypeError')
+        console.assert(fail.message === callback + ' is not a callback', 'should error message match expected')
     })();
 
     // TODO implement more unit test cases
