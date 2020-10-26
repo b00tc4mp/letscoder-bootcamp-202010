@@ -3,23 +3,23 @@
     var root = document.getElementById('root')
 
     // title
-    var title = new Title(function () {
-        root.lastChild.replaceWith(access.container)
+    var title = mountTitle(function () {
+        root.lastChild.replaceWith(access)
     })
 
-    root.append(title.container)
+    root.append(title)
 
     // access
-    var access = new Access(function () {
+    var access = mountAccess(function () {
         access.replaceWith(register)
     }, function () {
         access.replaceWith(login)
     })
 
-    root.append(access.container)
+    root.append(access)
 
     // register
-    var register = new Register(function (fullname, email, password, repassword) {
+    var register = mountRegister(function (fullname, email, password, repassword) {
         registerUser(fullname, email, password, repassword, function (error) {
             if (error)
                 alert(error.message)
@@ -28,12 +28,12 @@
     })
 
     // register confirm
-    var confirm = new RegisterConfirm(function () {
+    var confirm = mountRegisterConfirm(function () {
         confirm.replaceWith(login)
     })
 
     // login
-    var login = new Login(function (email, password) {
+    var login = mountLogin(function (email, password) {
         authenticateUser(email, password, function (error, token) {
             if (error)
                 alert(error.message)
@@ -45,5 +45,5 @@
     })
 
     // welcome
-    var welcome = new Welcome()
+    var welcome = mountWelcome()
 })();

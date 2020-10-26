@@ -1,5 +1,5 @@
 function Register(onRegister) {
-    Component.call(this, `<section class="register">
+    var container = mountContainer(`<section class="register">
     <h2>Register</h2>
 
     <form class="register__form">
@@ -11,7 +11,7 @@ function Register(onRegister) {
     </form>
 </section>`)
 
-    var form = this.container.querySelector('.register__form')
+    var form = container.querySelector('.register__form')
 
     // form.addEventListener('submit', function(event) { ... })
     form.onsubmit = function (event) {
@@ -30,7 +30,6 @@ function Register(onRegister) {
             alert(error.message)
         }
     }
-}
 
-Register.prototype = Object.create(Component.prototype)
-Register.prototype.constructor = Register
+    this.container = container
+}

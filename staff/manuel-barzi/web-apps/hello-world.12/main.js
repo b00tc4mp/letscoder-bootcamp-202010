@@ -11,9 +11,9 @@
 
     // access
     var access = new Access(function () {
-        access.replaceWith(register)
+        access.container.replaceWith(register.container)
     }, function () {
-        access.replaceWith(login)
+        access.container.replaceWith(login.container)
     })
 
     root.append(access.container)
@@ -23,13 +23,13 @@
         registerUser(fullname, email, password, repassword, function (error) {
             if (error)
                 alert(error.message)
-            else register.replaceWith(confirm)
+            else register.container.replaceWith(confirm.container)
         })
     })
 
     // register confirm
     var confirm = new RegisterConfirm(function () {
-        confirm.replaceWith(login)
+        confirm.container.replaceWith(login.container)
     })
 
     // login
@@ -39,7 +39,7 @@
                 alert(error.message)
             else {
                 // TODO call api to retrieve user, and then show welcome with user info
-                login.replaceWith(welcome)
+                login.container.replaceWith(welcome.container)
             }
         })
     })

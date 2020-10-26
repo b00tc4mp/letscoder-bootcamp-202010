@@ -1,7 +1,8 @@
-function mountTitle(onHome) {
-    var container = mountContainer('<h1 class="title">Hello World App</h1>')
+function Title(onHome) {
+    Component.call(this, '<h1 class="title">Hello World App</h1>')
 
-    container.onclick = onHome
-
-    return container
+    this.container.onclick = onHome
 }
+
+Title.prototype = Object.create(Component.prototype)
+Title.prototype.constructor = Title

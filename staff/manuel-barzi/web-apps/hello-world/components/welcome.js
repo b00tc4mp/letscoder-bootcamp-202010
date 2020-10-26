@@ -1,7 +1,8 @@
-function mountWelcome() {
-    var container = mountContainer(`<section class="welcome">
+function Welcome() {
+    Component.call(this, `<section class="welcome">
     <h2>Welcome to Hello World App!</h2>
 </section>`)
-
-    return container
 }
+
+Welcome.prototype = Object.create(Component.prototype)
+Welcome.prototype.constructor = Welcome
