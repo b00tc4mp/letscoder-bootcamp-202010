@@ -12,7 +12,8 @@
 
             console.assert(error === null, 'should error be null')
 
-            call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+            call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+                { 'Content-type': 'application/json' },
                 '{ "username": "' + email + '", "password" : "' + password + '" }',
                 function (status, response) {
                     console.assert(status === 200, 'should status be 200')
@@ -21,15 +22,28 @@
 
                     var token = res.token
 
-                    call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
-                        {
-                            'Authorization': 'Bearer ' + token,
-                            'Content-type': 'application/json'
-                        },
-                        '{ "password": "' + password + '" }',
+                    call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                        { Authorization: 'Bearer ' + token },
+                        '',
                         function (status, response) {
-                            console.assert(status === 204, 'should status be 204')
-                            console.assert(response.length === 0, 'should response be empty')
+                            console.assert(status === 200, 'should status be 200')
+
+                            var user = JSON.parse(response)
+
+                            console.assert(user.fullname === fullname, 'should full name match')
+                            console.assert(user.username === email, 'should username match the e-mail')
+
+                            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                {
+                                    Authorization: 'Bearer ' + token,
+                                    'Content-type': 'application/json'
+                                },
+                                '{ "password": "' + password + '" }',
+                                function (status, response) {
+                                    console.assert(status === 204, 'should status be 204')
+                                    console.assert(response.length === 0, 'should response be empty')
+                                }
+                            )
                         }
                     )
                 }
@@ -47,39 +61,38 @@
             { 'Content-type': 'application/json' },
             '{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '" }',
             function (status, response) {
-                if (status === 201) {
-                    registerUser(fullname, email, password, repassword, function (error) {
-                        console.log(' should fail on already existing user')
+                console.assert(status === 201, 'should status be 201')
+                console.assert(response.length === 0, 'should response be empty')
 
-                        console.assert(error instanceof Error, 'should error be instanceof Error')
-                        console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected')
+                registerUser(fullname, email, password, repassword, function (error) {
+                    console.log(' should fail on already existing user')
 
-                        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
-                            '{ "username": "' + email + '", "password" : "' + password + '" }',
-                            function (status, response) {
-                                console.assert(status === 200, 'should status be 200')
+                    console.assert(error instanceof Error, 'should error be instanceof Error')
+                    console.assert(error.message === 'user with username "' + email + '" already exists', 'should error message match expected')
 
-                                var res = JSON.parse(response)
+                    call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth', { 'Content-type': 'application/json' },
+                        '{ "username": "' + email + '", "password" : "' + password + '" }',
+                        function (status, response) {
+                            console.assert(status === 200, 'should status be 200')
 
-                                var token = res.token
+                            var res = JSON.parse(response)
 
-                                call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
-                                    {
-                                        'Authorization': 'Bearer ' + token,
-                                        'Content-type': 'application/json'
-                                    },
-                                    '{ "password": "' + password + '" }',
-                                    function (status, response) {
-                                        console.assert(status === 204, 'should status be 204')
-                                        console.assert(response.length === 0, 'should response be empty')
-                                    }
-                                )
-                            }
-                        )
-                    })
-                } else {
-                    console.error('should not reach this point')
-                }
+                            var token = res.token
+
+                            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                {
+                                    'Authorization': 'Bearer ' + token,
+                                    'Content-type': 'application/json'
+                                },
+                                '{ "password": "' + password + '" }',
+                                function (status, response) {
+                                    console.assert(status === 204, 'should status be 204')
+                                    console.assert(response.length === 0, 'should response be empty')
+                                }
+                            )
+                        }
+                    )
+                })
             }
         )
     })();
