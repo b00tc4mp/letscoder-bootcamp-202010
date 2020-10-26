@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAQUETACIÓN DE PARTE DE PAGINA WEB USANDO SOLO JAVASCRIPT</title>
+</head>
+<body>
+    <!-- change to grid -->
+    <script>
+        document.body.style.display = 'flex'
+        document.body.style.alignItems = 'center'
+        document.body.style.justifyContent = 'center'
+
+        var container = document.createElement('div')
+
+        container.style.backgroundColor = 'tomato'
+        container.style.width = '70vw'
+        container.style.height = '200vh'
+
+        var item1 = document.createElement('div')
+
+        item1.style.backgroundColor = 'red'
+        item1.style.width = '80%'
+        item1.style.height = '15%'
+        item1.style.float = 'right'
+
+
+        var item2 = document.createElement('div')
+
+        item2.style.backgroundColor = 'blue'
+        item2.style.width = '80%'
+        item2.style.height = '15%'
+        item2.style.float = 'right'
+
+        var item3 = document.createElement('div')
+
+        item3.style.backgroundColor = 'green'
+        item3.style.width = '20%'
+        item3.style.height = '30%'
+
+
+        var item4 = document.createElement('div')
+
+        item4.style.backgroundColor = 'orange'
+        item4.style.width = '20%'
+        item4.style.height = '40%'
+        item4.style.float = 'right'
+
+        var item5 = document.createElement('div')
+
+        item5.style.backgroundColor = 'yellow'
+        item5.style.width = '80%'
+        item5.style.height = '20%'
+
+        var item6 = document.createElement('div')
+
+        item6.style.backgroundColor = 'brown'
+        item6.style.width = '80%'
+        item6.style.height = '20%'
+
+        var item7 = document.createElement('div')
+
+        item7.style.backgroundColor = 'purple'
+        item7.style.width = '80%'
+        item7.style.height = '15%'
+        item7.style.float = 'right'
+
+        var item8 = document.createElement('div')
+
+        item8.style.backgroundColor = 'grey'
+        item8.style.width = '80%'
+        item8.style.height = '15%'
+        item8.style.float = 'right'
+
+
+        var item9 = document.createElement('div')
+
+        item9.style.backgroundColor = 'black'
+        item9.style.width = '20%'
+        item9.style.height = '30%'
+
+
+
+    container.append(item1, item2, item3, item4, item5, item6, item7, item8, item9)
+
+    document.body.append(container)
+    </script>
+</body>
+</html> 
