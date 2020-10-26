@@ -4,8 +4,14 @@
 
     (function () {
 
-        var email = 'johndoe-' + Math.random() + '@mail.com';
-        var password = 'pass-' + Math.random();
+        var email = "johndoe-" + Math.random() + "@mail.com";
+        var password = "pass-" + Math.random();
+
+        /*
+        1. Register first
+        2. Authenticate testing: result --> error, token
+        3. Deleting user at the end
+        */
 
         call('POST','https://b00tc4mp.herokuapp.com/api/v2/users',
         {'Content-type':'application/json'},
@@ -30,13 +36,11 @@
         });
 
     })();
-
+    //UPDATE TEST
     (function () {
 
         var email = 'johndoe-' + Math.random() + '@mail.com';
-        var password = 'pass-' + Math.random();
-
-    
+        var password = 'pass-' + Math.random();    
 
             authenticateUser(email, password, function(error, token) {
                 console.log(' should fail on non-existing user');
@@ -47,22 +51,13 @@
 
     })();
 
+    //UPDATE TEST
     (function () {
         console.log(' should fail on wrong password');
 
-        var fullname = 'John Doe' + Math.random();
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
 
-        user = {
-            fullname: fullname,
-            email: email,
-            password: password
-        };
-
-        users.push(user);
-
-        var fail;
 
         try {
             authenticateUser(email, password + '...');

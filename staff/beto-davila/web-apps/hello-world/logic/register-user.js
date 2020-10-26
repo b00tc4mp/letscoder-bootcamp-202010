@@ -11,24 +11,6 @@ function registerUser(fullname, email, password, repassword, callback) {
     if (password !== repassword) throw new Error('passwords do not match');
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback');
 
-    /*  
-    var xhr = new XMLHttpRequest;
-
-    xhr.onreadystatechange = function() {
-      if (this.readyState == 4)
-          if (status === 201) 
-              callback(null); // no error
-          else {
-            var response = JSON.parse(this.responseText);
-            callback(new Error(response.error));
-        }
-    }
-
-    xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users');
-    xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.send('{ "fullname": "' + fullname + '", "username": "' + email + '", "password": "' + password + '", "repassword": "' + repassword + '" }');
-    */
-
    call ('POST', 
    'https://b00tc4mp.herokuapp.com/api/v2/users', 
    { 'Content-type': 'application/json' }, 
@@ -38,7 +20,6 @@ function registerUser(fullname, email, password, repassword, callback) {
             callback(null)
         else {
             var res = JSON.parse(response);
-
             callback(new Error(res.error));
         }
     });

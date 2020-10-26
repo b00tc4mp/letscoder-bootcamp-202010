@@ -25,12 +25,7 @@
   root.append(access);
 
   // Register form visual behavior after calling the registerUser function
-  var register = mountRegister(function (
-    fullname,
-    email,
-    password,
-    repassword
-  ) {
+  var register = mountRegister(function (fullname, email, password, repassword) {
     registerUser(fullname, email, password, repassword, function (error) {
       if (error) {
         alert(error.message);
@@ -69,13 +64,15 @@
     welcome.replaceWith(update);
   });
 
+  //WIP
 
-
-   var update = mountUpdateUser(function(update) {
+  /* var update = mountUpdateUser(function(update) {
       modifyUser(token, update, callback) {
 
       }
    });
+   */
+
 
   var deletion = mountConfirmDelete(function (email, password) { 
     authenticateUser(email, password, function (error, token) {

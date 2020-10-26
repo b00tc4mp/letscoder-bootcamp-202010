@@ -7,35 +7,17 @@ function authenticateUser(email, password, callback) {
     if (!password.trim().length) throw new Error('password is empty or blank');
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback');
 
-  //  var xhr = new XMLHttpRequest;
-
-  //  xhr.onreadystatechange = function() {
-  //    if (this.readyState == 4) {
-  //      if (status === 200) {
-  //       var response = JSON.parse(this.responseText);
-  //        callback(null, response.token); // return a token if successful authentication
-  //      } else {
-  //        var response = JSON.parse(this.responseText);
-  //        callback(new Error(response.error)); // returning an error otherwise
-  //      }
-  //    }
-  //  }
-
-  //  xhr.open('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth');
-  //  xhr.setRequestHeader('Content-type', 'application/json');
-  //  xhr.send('{"username": "' + email + '", "password": "' + password + '"}');
-
-   call('POST', 
-   'https://b00tc4mp.herokuapp.com/api/v2/users/auth', 
-   { 'Content-type': 'application/json' }, 
-   '{ "username": "' + email + '", "password": "' + password + '" }', 
-   function(status, response) {
-        if (status === 200) {
-            var res = JSON.parse(response);
-            callback(null, res.token);
-        } else {
-            var res = JSON.parse(response);
-            callback(new Error(res.error));
-        }
-    });
+    call('POST', 
+    'https://b00tc4mp.herokuapp.com/api/v2/users/auth', 
+    { 'Content-type': 'application/json' }, 
+    '{ "username": "' + email + '", "password": "' + password + '" }', 
+    function(status, response) {
+            if (status === 200) {
+                var res = JSON.parse(response);
+                callback(null, res.token);
+            } else {
+                var res = JSON.parse(response);
+                callback(new Error(res.error));
+            }
+        });
 }
