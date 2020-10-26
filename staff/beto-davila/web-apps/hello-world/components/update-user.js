@@ -1,25 +1,25 @@
-function mountConfirmDelete (onDelete) {
+function mountUpdateUser(callback) {
 
-    var container = mountContainer(`<section class="delete">
-    <h5>Confirm for unregistering:</h5>
-    <form class="delete__form" action="">
-            <input type="email" name="email" placeholder="e-mail" required>
-            <input type="password" name="password" placeholder="password" required>
-            <button class="delete__btn btn">Confirm</button>
+    var container = mountContainer(`<section class="update">
+    <h5>Confirm the information you want to add to your profile:</h5>
+    <form class="update__form" action="">
+            <input type="text" name="field" placeholder="field">:
+            <input type="text" name="value" placeholder="value">
+            <button class="update__btn btn">Update</button>
     </form>
     </section>`);
 
-    var form = container.querySelector('.delete__form');
+    var form = container.querySelector('.update__form');
 
     form.onsubmit = function(event) {
         event.preventDefault();
         var inputs = form.querySelectorAll('input');
 
-        var email = inputs[0].value;
-        var password = inputs[1].value;
+        var field = inputs[0].value;
+        var value = inputs[1].value;
 
         try {
-            onDelete(email, password);
+            callback(field, value);
         } catch (error) {
             alert(error.message); 
         }

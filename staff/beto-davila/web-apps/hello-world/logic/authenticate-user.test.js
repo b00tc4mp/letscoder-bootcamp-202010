@@ -7,53 +7,43 @@
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
 
-        var fail;
+        call('POST','https://b00tc4mp.herokuapp.com/api/v2/users',
+        {'Content-type':'application/json'},
+        '{"username": "' + email + '", "password": "' + password + '"}',function(status,response){
+            console.assert(status === 201, 'status should be 201');
+            if(status === 201){
+                authenticateUser(email,password,function(error,token){
+                    console.log(' should succeed on existing user');
+                    console.assert(error === null, 'error should be null');
+                    console.assert(token !== undefined,'token should be defined');
+                    console.assert(token.length !== 0, 'token should not be empty');
+                    //var token = token;
+                    call('DELETE','https://b00tc4mp.herokuapp.com/api/v2/users',
+                    { 'Authorization': 'Bearer ' + token, 'Content-type' :'application/json' },
+                    '{"password": "' + password + '"}', function(status,response){
+                        console.assert(status === 204, 'status should be 204');
+                        console.assert(response.length === 0, 'response should be empty');
+                    });
+                });
+            }
 
-        try {
-            authenticateUser(email, password);
-        } catch(error) {
-            fail = error;
-        }
-
-        console.assert(!fail, 'should not throw error');
-
-
-        // TODO with call tool for API requests
-
-        call('POST', 
-        'https://b00tc4mp.herokuapp.com/api/v2/users/auth', 
-        { 'Content-type': 'application/json' }, 
-        '{ "username": "' + email + '", "password": "' + password + '" }', 
-        function(status, response) {
-             if (status === 200) {
-                 var res = JSON.parse(response);
-                 callback(null, res.token);
-                 console.log(' should succeed on existing user');
-             } else {
-                 var res = JSON.parse(response);
-                 callback(new Error(res.error));
-             }
-         });
-
+        });
 
     })();
 
     (function () {
-        console.log(' should fail on non-existing user');
 
         var email = 'johndoe-' + Math.random() + '@mail.com';
         var password = 'pass-' + Math.random();
 
-        var fail;
+    
 
-        try {
-            authenticateUser(email, password);
-        } catch(error) {
-            fail = error;
-        }
-
-        console.assert(fail instanceof Error, 'should error be defined and an instance of Error');
-        console.assert(fail.message, 'wrong credentials');
+            authenticateUser(email, password, function(error, token) {
+                console.log(' should fail on non-existing user');
+                console.assert(error, 'an error should be shown');
+                console.assert(token === undefined,'token should be undefined');
+                console.assert(error.message === 'wrong crendials', 'error message match should be expected')
+            });
 
     })();
 

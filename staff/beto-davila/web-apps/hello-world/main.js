@@ -48,9 +48,8 @@
   // Visual behavior of the login section after calling authenticateUser
   var login = mountLogin(function (email, password) {
     authenticateUser(email, password, function (error, token) {
-      if (error) {
-        alert(error.message);
-      } else {
+      if (error) alert(error.message);
+      else {
         retrieveUser(token, function (error, user) {
           if (error) alert(error.message);
           else {
@@ -66,11 +65,17 @@
 
   var welcome = mountWelcome(function () {
     welcome.replaceWith(deletion);
+  }, function() {
+    welcome.replaceWith(update);
   });
 
-  // mountUpdateUser(function(field, value) {
-  // TODO
-  // });
+
+
+   var update = mountUpdateUser(function(update) {
+      modifyUser(token, update, callback) {
+
+      }
+   });
 
   var deletion = mountConfirmDelete(function (email, password) { 
     authenticateUser(email, password, function (error, token) {

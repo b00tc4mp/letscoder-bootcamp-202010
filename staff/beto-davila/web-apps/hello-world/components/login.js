@@ -1,5 +1,5 @@
 // Mounting the login function that calls the authenticateUser after submitting the form
-function mountLogin(onLogin) {
+function mountLogin(callback) {
 
     var container = mountContainer(`<section class="login">
     <h2>Login</h2>
@@ -21,7 +21,7 @@ function mountLogin(onLogin) {
         var password = inputs[1].value;
 
         try {
-            onLogin(email, password); // call authenticateUser
+            callback(email, password); // call authenticateUser
         } catch (error) {
             alert(error.message);  // response if something went wrong
         }
