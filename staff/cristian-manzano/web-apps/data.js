@@ -1,1 +1,0 @@
-var users = [{fullname: 'Cristian Manzano', email: 'mr.cristian95@gmail.com', password: '123'}];

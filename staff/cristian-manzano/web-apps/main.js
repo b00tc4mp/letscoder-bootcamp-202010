@@ -1,92 +1,109 @@
-//Home
+(function () { 
+    // root
 
-(function() {
-
-    mountHome('.title', function() {
-
-            var sections = document.querySelectorAll('section')
+    var root = document.getElementById('root')
         
-            for (var i = 0; i < sections.length; i++)
-                sections[i].classList.add('off')
-        
-                sections[0].classList.remove('off')
+    //Title
+    var title = mountTitle(function () {
+        root.innerHTML = ''
+        root.append(title);
+        root.append(access);
+
     })
 
+    root.append(title)
 
 
+    // access
 
-
-
-// options
-
-    mountOptions ('.home', function () {
-    
-    var home = document.querySelector('.home')
-    
-    home.classList.add('off')
-    
-    var registerPage = document.querySelector('.registerPage')
-    
-    registerPage.classList.remove('off')
-
-}, 
-
-function() {
-    
-    var home = document.querySelector('.home')
-    
-    home.classList.add('off')
-
-    var login = document.querySelector('.loginUser')
-    login.classList.remove('off')
+    var access = mountAccess(function () {
+        access.replaceWith(register)
+    }, function () {
+        access.replaceWith(login)
     })
+
+    root.append(access)
+
+
 
 // register
+ 
+    var register = mountRegister (function (fullname, email, password, repassword) {
 
-    mountRegister ('.registerPage', function (fullname, email, password, repassword) {
+        registerUser(fullname, email, password, repassword, function (error){
+            if (error)
+                alert(error.message)
+            else register.replaceWith(proceedLogin)         
+        })
+    })
 
-        registerUser(fullname, email, password, repassword)
-
-        var registerPage = document.querySelector('.registerPage')
-
-        registerPage.classList.add('off')
-
-        var proceedLogin = document.querySelector('.registerConfirm')
-
-        proceedLogin.classList.remove('off')
-    });
 
 // register confirm
 
-    mountRegisterConfirm('.proceedLogin__loginButton', function(){
+    var proceedLogin = mountRegisterConfirm(function(){
     
-    var proceedLogin = document.querySelector('.registerConfirm')
-    proceedLogin.classList.add('off')
-
-    var login = document.querySelector('.loginUser')
-    login.classList.remove('off')
+        proceedLogin.replaceWith(login)
 });
 
 // login
 
     
-    mountLogin ('.login', function(email, password){
-    
-    authenticateUser(email, password)
-    
-    var login = document.querySelector('.loginUser')
-            
-    login.classList.add('off')
-            
-    var welcome = document.querySelector('.welcome')
-            
-    welcome.classList.remove('off')
-    
-    var title = document.querySelector('.title')
+    var login = mountLogin (function(email, password){
+        authenticateUser(email, password, function(error, token){
+            if (error)
+                alert(error.message)
+            else {
+
+                retrieveUser(token, function(error, user){
+                    if (!error) { 
+                        var username = user.fullname
+                        welcome.querySelector('h2').innerText = 'welcome '+ username + ' , good to see you again'
+
+                        /*var text = document.createElement('h2')
+                        text.innerText = 'welcome '+ username + ' , good to see you again'
+                        welcome.append(text)*/
+                    }
+                    })
+                   
+                login.replaceWith(welcome)
+            }
+        })
+    });
+
+
+
+    // welcome
+
+    var welcome = mountWelcome(function() {
+        console.log('72')
+        var login = mountLogin(function(email, password){
+            var password = password 
+            console.log('75')
+            authenticateUser(email, password, function(error, token){
+                if (error){
+                    console.log('78')
+                alert(error.message)
+            }   else {
+                console.log('81')
+                var token = token
+                unregisterUser(password, token, function(error){
+                    if (error){
+                        console.log('84')
+                        alert(error.message)
+                    }else { 
+                        console.log('88')
+                        console.log('user unregistered OK!')
+                        root.innerHTML = ''
+                        root.append(title);
+                        root.append(access);
+                        //welcome.replaceWith(access)
+                        //login.replaceWith(access)
+                    }
+            });
+            };
+        });
+    });
+    root.append(login)
+});
         
-    var hello = title
-    hello.classList.add('hello')
-
-})
-
-})()
+})();
