@@ -209,10 +209,3 @@ console.log(candelaria.__proto__.__proto__.constructor)
 console.log(mary.__proto__.constructor)
 console.log(mary.__proto__.__proto__.constructor)
 console.log(mary.__proto__.__proto__.__proto__.constructor)
-
-
-
-
-
-
-
