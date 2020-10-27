@@ -13,6 +13,11 @@ body {
 
 button {
   border-style: none;
+  border-radius: 80rem 8rem 3rem 12rem;
+  font-size: 18px;
+  font-family: Shadows Into Light;
+  border: px solid black
+
 }
 button:focus {
   outline: 0;
@@ -48,9 +53,11 @@ button:focus {
 }
 
 .register {
-  background-color: skyblue;
-  border-radius: 5rem 0 5rem 0;
+  border-radius: 10rem 10rem 50rem 50rem;
   font-family: Turret Road;
+  color:black;
+  background-image: url(./foto_4.jpg);
+  
 }
 
 .register-confirm {
