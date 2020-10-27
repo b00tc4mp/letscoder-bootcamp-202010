@@ -35,11 +35,7 @@ class App extends React.Component {
         authenticateUser(email, password, function (error, token) {
             if (error) return alert(error.message)
 
-            retrieveUser(token, function(error, user) {
-                if (error) return alert(error.message)
-
-                this.setState({ view: 'welcome', name: user.fullname })
-            }.bind(this))
+            this.setState({ view: 'welcome' })
         }.bind(this))
     }
 
@@ -55,7 +51,7 @@ class App extends React.Component {
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
-            {this.state.view === 'welcome' && <Welcome name={this.state.name} />}
+            {this.state.view === 'welcome' && <Welcome />}
         </>
     }
 }

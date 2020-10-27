@@ -1,5 +1,5 @@
-function Welcome() {
+function Welcome(props) {
     return <section className="welcome">
-        <h2>Welcome to Hello World App!</h2>
+        <h2>Welcome {props.name}!</h2>
     </section>
 }
