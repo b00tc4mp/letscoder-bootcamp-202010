@@ -9,7 +9,6 @@ class App extends React.Component {
         this.handleGoToHome = this.handleGoToHome.bind(this)
         this.handleRegister = this.handleRegister.bind(this)
         this.handleLogin = this.handleLogin.bind(this)
-        //this.handleGoToWelcome = this.handleGoToWelcome.bind(this)
     }
 
     handleGoToRegister() {
@@ -24,11 +23,6 @@ class App extends React.Component {
         this.setState({ view: 'access' })
     }
 
-    handleGoToWelcome(){
-        this.setState({ view: 'welcome'})
-
-    }
-
     handleRegister(fullname, email, password, repassword) {
         registerUser(fullname, email, password, repassword, function (error) {
             if (error) return alert(error.message)
@@ -37,19 +31,18 @@ class App extends React.Component {
         }.bind(this))
     }
 
-    handleLogin(email,password){
-        authenticateUser(email,password, function(error, token){
-            if (error) return alert (error.message)
+    handleLogin(email, password) {
+        authenticateUser(email, password, function (error, token) {
+            if (error) return alert(error.message)
 
-        
+            retrieveUser(token, function(error, user) {
+                if (error) return alert(error.message)
 
-            this.setState({ view: 'welcome'})
-
+                this.setState({ view: 'welcome', name: user.fullname })
+            }.bind(this))
         }.bind(this))
-
     }
 
-    
     render() {
         return <>
             <Title onHome={this.handleGoToHome} />
@@ -58,11 +51,11 @@ class App extends React.Component {
 
             {this.state.view === 'register' && <Register onRegister={this.handleRegister} />}
 
-            {this.state.view === 'login' && <Login onLogin={this.handleLogin}/>}
+            {this.state.view === 'login' && <Login onLogin={this.handleLogin} />}
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
-            {this.state.view === 'welcome' && <Welcome/>}
+            {this.state.view === 'welcome' && <Welcome name={this.state.name} />}
         </>
     }
 }
