@@ -8,7 +8,7 @@ class App extends React.Component {
         this.handleGoToLogin = this.handleGoToLogin.bind(this)
         this.handleGoToHome = this.handleGoToHome.bind(this)
         this.handleRegister = this.handleRegister.bind(this)
-        this.handleLogin= this.handleLogin.bind(this)
+        this.handleLogin = this.handleLogin.bind(this)
     }
 
     handleGoToRegister() {
@@ -31,12 +31,15 @@ class App extends React.Component {
         }.bind(this))
     }
 
-    handleLogin(email, password){
-       
-        authenticateUser(email,password, function (error,token){
+    handleLogin(email, password) {
+        authenticateUser(email, password, function (error, token) {
             if (error) return alert(error.message)
-        
-            this.setState({view: 'welcome'})
+
+            retrieveUser(token, function(error, user) {
+                if (error) return alert(error.message)
+
+                this.setState({ view: 'welcome', name: user.fullname })
+            }.bind(this))
         }.bind(this))
     }
 
@@ -48,11 +51,11 @@ class App extends React.Component {
 
             {this.state.view === 'register' && <Register onRegister={this.handleRegister} />}
 
-            {this.state.view === 'login' && <Login  onLogin = {this.handleLogin} />}
+            {this.state.view === 'login' && <Login onLogin={this.handleLogin} />}
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
-            {this.state.view === 'welcome' && <Welcome />}
+            {this.state.view === 'welcome' && <Welcome name={this.state.name} />}
         </>
     }
-} 
+}

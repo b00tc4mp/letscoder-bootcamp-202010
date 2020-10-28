@@ -1,6 +1,1 @@
-const { func } = require("prop-types");
-
-reactDOM.render(
-    <Welcome ></Welcome>,
-document.getElementById('root')
-)
+ReactDOM.render(<Welcome />, document.getElementById('root'))

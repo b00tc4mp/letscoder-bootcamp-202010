@@ -1,8 +1,3 @@
-ReactDOM.render(
-    <Register
-        onRegister={function (fullname, email, password, resspasword) {
-            console.log(fullname, email, password, resspasword)
-        }}
-    />,
-    document.getElementById('root')
-)
+ReactDOM.render(<Register onRegister={function(fullname, email, password, repassword) {
+    console.log('register', fullname, email, password, repassword)
+}} />, document.getElementById('root'))
