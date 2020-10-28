@@ -9,7 +9,10 @@ class App extends React.Component {
         this.handleGoToHome = this.handleGoToHome.bind(this)
         this.handleRegister = this.handleRegister.bind(this)
         this.handleLogin = this.handleLogin.bind(this)
-        this.handleSearch = this.handleSearch.bind(this)
+        this.handleSearchGoogle = this.handleSearchGoogle.bind(this)
+        this.handleSearchVehicles = this.handleSearchVehicles.bind(this)
+        this.handleGoToProfile = this.handleGoToProfile.bind(this)
+        this.handleModifyUser = this.handleModifyUser.bind(this)
     }
 
     handleGoToRegister() {
@@ -36,19 +39,43 @@ class App extends React.Component {
         authenticateUser(email, password, function (error, token) {
             if (error) return alert(error.message)
 
-            retrieveUser(token, function(error, user) {
+            this.setState({ token })
+
+            retrieveUser(token, function (error, user) {
                 if (error) return alert(error.message)
 
-                this.setState({ view: 'home', name: user.fullname })
+                this.setState({ view: 'home', user })
             }.bind(this))
         }.bind(this))
     }
 
-    handleSearch(query) {
-        searchInGoogle(query, function(error, results) {
+    handleSearchGoogle(query) {
+        searchInGoogle(query, function (error, googleResults) {
             if (error) return alert(error.message)
+            this.setState({ googleResults })
+        }.bind(this))
+    }
 
-            this.setState({ results })
+    handleSearchVehicles(query){
+        searchVehicles(query,function (error,vehiclesResults){
+            if(error) return alert(error.message)
+            this.setState({vehiclesResults})
+        }.bind(this))
+    }
+
+    handleGoToProfile() {
+        this.setState({ subview: 'profile' })
+    }
+
+    handleModifyUser(fullname, image) {
+        modifyUser(this.state.token, { fullname, image }, function (error) {
+            if (error) alert(error.message)
+
+            retrieveUser(this.state.token, function (error, user) {
+                if (error) return alert(error.message)
+
+                this.setState({ user })
+            }.bind(this))
         }.bind(this))
     }
 
@@ -65,10 +92,17 @@ class App extends React.Component {
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
             {this.state.view === 'home' && <>
-                <Welcome name={this.state.name} />
-                <Search onSearch={this.handleSearch}/>
-                
-                {this.state.results && <Results items={this.state.results} />}
+                {this.state.user && <Welcome name={this.state.user.fullname} image={this.state.user.image} />}
+
+                <button onClick={this.handleGoToProfile}>Profile</button>
+
+                {this.state.subview === 'profile' && <Profile onModify={this.handleModifyUser} fullname={this.state.user.fullname} image={this.state.user.image} />}
+
+                <Search placeholder = {"google"} onSearch={this.handleSearchGoogle}/>
+                <Search placeholder = {"hotwheels"} onSearch = {this.handleSearchVehicles}/>
+
+                {this.state.googleResults && <GoogleResults items={this.state.googleResults} />}
+                {this.state.vehiclesResults && <VehiclesResults items ={this.state.vehiclesResults}/>}
             </>}
         </>
     }

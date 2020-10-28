@@ -13,30 +13,25 @@ body {
 
 button {
   border-style: none;
-  border-radius: 80rem 8rem 3rem 12rem;
-  font-size: 18px;
-  font-family: Shadows Into Light;
-  border: px solid black
-
 }
 button:focus {
   outline: 0;
 }
 
-.home {
+.access {
   border: 1px solid skyblue;
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
 }
-.home__register {
+.access__register {
   background-color: skyblue;
   color: white;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
   font-family: Turret Road;
 }
-.home__login {
+.access__login {
   border-style: solid;
   border-color: skyblue;
   background-color: transparent;
@@ -46,6 +41,7 @@ button:focus {
 }
 .home__login:hover {
   background-color: #E9F6FD;
+  cursor: pointer;
 }
 
 .title {
@@ -53,20 +49,12 @@ button:focus {
 }
 
 .register {
-  border-radius: 10rem 10rem 50rem 50rem;
-  font-family: Turret Road;
-  color:black;
-  background-image: url(./foto_4.jpg);
-  
-}
-
-.register-confirm {
   background-color: skyblue;
   border-radius: 5rem 0 5rem 0;
   font-family: Turret Road;
 }
 
-.login {
+.register-confirm {
   background-color: skyblue;
   border-radius: 5rem 0 5rem 0;
   font-family: Turret Road;
@@ -76,6 +64,29 @@ button:focus {
   background-color: skyblue;
   border-radius: 5rem 0 5rem 0;
   font-family: Turret Road;
+}
+
+.login__button {
+  background-color: orange;
+  border-style: none;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__input {
+  margin: 0.5rem;
+}
+.login__input:focus {
+  outline-color: orange;
+}
+.welcome__image {
+  width: 10vw;
 }
 
 /*# sourceMappingURL=index.css.map */
