@@ -2,14 +2,13 @@ class App extends React.Component {
     constructor() {
         super()
 
-        this.state = { view: 'home' }
+        this.state = { view: 'access' }
 
         this.handleGoToRegister = this.handleGoToRegister.bind(this)
         this.handleGoToLogin = this.handleGoToLogin.bind(this)
         this.handleGoToHome = this.handleGoToHome.bind(this)
         this.handleRegister = this.handleRegister.bind(this)
         this.handleLogin = this.handleLogin.bind(this)
-        this.handleSearch = this.handleSearch.bind(this)
     }
 
     handleGoToRegister() {
@@ -39,16 +38,8 @@ class App extends React.Component {
             retrieveUser(token, function(error, user) {
                 if (error) return alert(error.message)
 
-                this.setState({ view: 'home', name: user.fullname })
+                this.setState({ view: 'welcome', name: user.fullname })
             }.bind(this))
-        }.bind(this))
-    }
-
-    handleSearch(query) {
-        searchInGoogle(query, function(error, results) {
-            if (error) return alert(error.message)
-
-            this.setState({ results })
         }.bind(this))
     }
 
@@ -64,12 +55,7 @@ class App extends React.Component {
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
-            {this.state.view === 'home' && <>
-                <Welcome name={this.state.name} />
-                <Search onSearch={this.handleSearch}/>
-                
-                {this.state.results && <Results items={this.state.results} />}
-            </>}
+            {this.state.view === 'welcome' && <Welcome name={this.state.name} />}
         </>
     }
 }
