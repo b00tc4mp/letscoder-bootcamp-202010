@@ -84,12 +84,13 @@ class App extends React.Component {
         {this.state.view === 'welcome' && <Welcome name={this.state.name} />}
 
         {this.state.view === 'home' && (
-          <>
+          <main>
             <Welcome name={this.state.name} />
-            <Search onSearch={this.handleSearch} />
-
-            {this.state.results && <Results items={this.state.results} />}
-          </>
+            <aside className="search">
+              <Search onSearch={this.handleSearch} />
+              {this.state.results && <Results items={this.state.results} />}
+            </aside>
+          </main>
         )}
       </>
     );

@@ -110,11 +110,68 @@
 
 .web-app {
   margin-bottom: 30px;
-  margin-top: 70px;
+  margin-top: 0;
 }
 .web-app img {
   max-width: 100%;
   width: 100%;
+}
+
+.search__form {
+  border: 1px solid #3aafdb;
+  background: #9cc7db;
+  display: flex;
+  padding: 20px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.search__input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #3093c0;
+  box-shadow: inset 4px 3px 9px 1px #bebebe;
+}
+.search__reset {
+  flex: 0;
+  padding: 4px;
+}
+.search__reset:hover {
+  cursor: pointer;
+}
+.search__submit {
+  flex: 0;
+  padding: 4px;
+}
+.search__submit:hover {
+  cursor: pointer;
+}
+
+.result {
+  list-style: none;
+}
+.result > li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #aec7d2;
+}
+.result__title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #3d687c;
+}
+.result__url {
+  background: #7bb2ca;
+  color: #fff;
+  font-family: monospace;
+  font-size: 0.7rem;
+  padding: 2px 4px;
+  border-radius: 7px;
+  margin: 0px 2px;
+  word-break: break-all;
+  text-decoration: none;
+}
+.result__preview {
+  font-size: 0.8rem;
 }
 
 * {
@@ -146,8 +203,13 @@ body {
   font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   background-image: url("../images/sky.png");
   animation: movement 10s linear infinite;
-  background-color: #BFDFEC;
+  background-color: #bfdfec;
   background-repeat: repeat-x;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 .sub-title {
@@ -174,11 +236,11 @@ body {
   cursor: pointer;
   width: 150px;
   height: 40px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#D8D9DB), color-stop(80%, #fff), to(#FDFDFD));
-  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#d8d9db), color-stop(80%, #fff), to(#fdfdfd));
+  background-image: linear-gradient(to top, #d8d9db 0%, #fff 80%, #fdfdfd 100%);
   border-radius: 30px;
-  border: 1px solid #8F9092;
-  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 0 #CECFD1;
+  border: 1px solid #8f9092;
+  box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1, 0 -6px 4px #fefefe, inset 0 0 3px 0 #cecfd1;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   font-family: "Source Sans Pro", sans-serif;
@@ -196,6 +258,18 @@ input {
 }
 
 @media (min-width: 600px) {
+  main {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  main > section {
+    flex: 1;
+  }
+  main > aside {
+    flex: 0;
+    width: 260px;
+  }
+
   .register form {
     display: flex;
     flex-wrap: wrap;

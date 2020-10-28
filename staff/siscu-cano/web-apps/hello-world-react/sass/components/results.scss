@@ -1,0 +1,26 @@
+.result {
+  list-style: none;
+  & > li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #aec7d2;
+  }
+  &__title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #3d687c;
+  }
+  &__url {
+    background: #7bb2ca;
+    color: #fff;
+    font-family: monospace;
+    font-size: 0.7rem;
+    padding: 2px 4px;
+    border-radius: 7px;
+    margin: 0px 2px;
+    word-break: break-all;
+    text-decoration: none;
+  }
+  &__preview {
+    font-size: 0.8rem;
+  }
+}

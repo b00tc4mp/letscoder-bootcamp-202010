@@ -23,7 +23,8 @@ describe('SPEC authenticateUser()', function () {
     });
 
     it('should succeed on authenticate', function (done) {
-      authenticateUser(email, password, function (error, token) {
+      authenticateUser(email, password, function (error, newToken) {
+        token = newToken;
         expect(error).toBeNull();
         expect(token.length).toBeGreaterThan(0);
         expect(token).toBeInstanceOf(String);
@@ -31,7 +32,7 @@ describe('SPEC authenticateUser()', function () {
       });
     });
 
-    afterEach(function () {
+    afterEach(function (done) {
       call(
         'DELETE',
         'https://b00tc4mp.herokuapp.com/api/v2/users',
@@ -43,6 +44,7 @@ describe('SPEC authenticateUser()', function () {
         function (status, response) {
           expect(status).toBe(204);
           expect(response.length).toBe(0);
+          done();
         },
       );
     });
