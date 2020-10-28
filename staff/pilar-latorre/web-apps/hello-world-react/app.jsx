@@ -9,6 +9,9 @@ class App extends React.Component {
         this.handleGoToHome = this.handleGoToHome.bind(this)
         this.handleRegister = this.handleRegister.bind(this)
         this.handleLogin = this.handleLogin.bind(this)
+        this.handleSearch = this.handleSearch.bind(this)
+        
+
     }
 
     handleGoToRegister() {
@@ -38,9 +41,17 @@ class App extends React.Component {
             retrieveUser(token, function(error, user) {
                 if (error) return alert(error.message)
 
-                this.setState({ view: 'welcome', name: user.fullname })
+                this.setState({ view: 'home', user})
             }.bind(this))
         }.bind(this))
+    }
+    handleSearch(query){
+        searchInGoogle(query, function(error, results){
+            if (error) return alert (error.message)
+
+            this.setState({results})
+        }.bind(this))
+
     }
 
     render() {
@@ -55,7 +66,12 @@ class App extends React.Component {
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
-            {this.state.view === 'welcome' && <Welcome name={this.state.name} />}
-        </>
+            {this.state.view === 'home' && <>
+                {<Welcome name= {this.state.user.fullname}/>}
+                <Search onSearch={this.handleSearch}/>
+                {this.state.results && <Results items ={this.state.results}/>}
+            
+         </>   }
+         </>
     }
 }
