@@ -60,7 +60,7 @@ describe("SPEC unregisterUser()", function () {
       });
     });
   });
-
+  //------------------------------------------------------------------------------------------
   describe("when user not exists (token random)", function () {
     let password, token;
 
@@ -77,4 +77,85 @@ describe("SPEC unregisterUser()", function () {
       });
     });
   });
+  //------------------------------------------------------------------------------------------
+  describe("when token is wrong (token not string)", function () {
+    let password, token;
+
+    beforeEach(function () {
+      token = [1, true, null, undefined, {}, [], new Date()].random();
+      password = "MyPass" + Math.random();
+    });
+
+    it("should fail when token is different to string", function () {
+      expect(function () {
+        unregisterUser(token, password, function () {});
+      }).toThrowError(TypeError, `${token} is not a token`);
+    });
+  });
+  //------------------------------------------------------------------------------------------
+
+  describe("when token is wrong (token empty or blank)", function () {
+    let password, token;
+
+    beforeEach(function () {
+      token = ["", " ", "\t", "\n"].random();
+      password = "MyPass" + Math.random();
+    });
+
+    it("should fail when token is empty or blank", function () {
+      expect(function () {
+        unregisterUser(token, password, function () {});
+      }).toThrowError(Error, `${token} is empty or blank`);
+    });
+  });
+  //------------------------------------------------------------------------------------------
+
+  describe("when password is wrong (password not string)", function () {
+    let password, token;
+
+    beforeEach(function () {
+      password = [1, true, null, undefined, {}, [], new Date()].random();
+      token = (Math.random() * 1000).toString();
+    });
+
+    it("should fail when password is different to string", function () {
+      expect(function () {
+        unregisterUser(token, password, function () {});
+      }).toThrowError(TypeError, `${password} is not a password`);
+    });
+  });
+  //------------------------------------------------------------------------------------------
+
+  describe("when password is wrong (password empty or blank)", function () {
+    let password, token;
+
+    beforeEach(function () {
+      token = (Math.random() * 1000).toString();
+      password = ["", " ", "\t", "\n"].random();
+    });
+
+    it("should fail when password is empty or blank", function () {
+      expect(function () {
+        unregisterUser(token, password, function () {});
+      }).toThrowError(Error, `${password} is empty or blank`);
+    });
+  });
+  //------------------------------------------------------------------------------------------
+
+  describe("when callback is not a function", function () {
+    let password, token, callback;
+
+    beforeEach(function () {
+      token = (Math.random() * 1000).toString();
+      callback = [1, true, null, undefined, {}, [], new Date()].random();
+      password = "MyPass" + Math.random();
+    });
+
+    it("should fail when callback is not a callback", function () {
+      expect(function () {
+        unregisterUser(token, password, callback);
+      }).toThrowError(TypeError, `${callback} is not a callback`);
+    });
+  });
+  //------------------------------------------------------------------------------------------
 });

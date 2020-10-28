@@ -66,6 +66,7 @@ describe("SPEC retrieveUser()", function () {
       );
     });
   });
+  //------------------------------------------------------------------------------------------
 
   describe("when user does not exist (but existed before)", function () {
     let fullname, email, password, token;
@@ -117,6 +118,7 @@ describe("SPEC retrieveUser()", function () {
         }
       );
     });
+    //------------------------------------------------------------------------------------------
 
     it("should fail on right token", function (done) {
       retrieveUser(token, function (error, user) {
@@ -136,6 +138,7 @@ describe("SPEC retrieveUser()", function () {
       });
     });
   });
+  //------------------------------------------------------------------------------------------
 
   describe("when token is not a string", function () {
     let token;
@@ -159,6 +162,7 @@ describe("SPEC retrieveUser()", function () {
       }).toThrowError(TypeError, `${token} is not a token`);
     });
   });
+  //------------------------------------------------------------------------------------------
 
   describe("when token is empty or blank", function () {
     let token;
@@ -173,6 +177,7 @@ describe("SPEC retrieveUser()", function () {
       }).toThrowError(Error, "token is empty or blank");
     });
   });
+  //------------------------------------------------------------------------------------------
 
   describe("when callback is not a function", function () {
     let token, callback;
@@ -187,4 +192,5 @@ describe("SPEC retrieveUser()", function () {
       }).toThrowError(TypeError, `${callback} is not a callback`);
     });
   });
+  //------------------------------------------------------------------------------------------
 });
