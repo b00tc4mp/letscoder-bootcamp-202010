@@ -81,7 +81,7 @@ describe('SPEC unregisterUser()', function () {
 
     beforeEach(function () {
       token = [1, true, null, undefined, {}, [], new Date()].random();
-      password = 'MyPass' + Math.random();
+      password = 'MyPass' + random();
     });
 
     it('should fail when token is different to string', function () {
@@ -97,7 +97,7 @@ describe('SPEC unregisterUser()', function () {
 
     beforeEach(function () {
       token = ['', ' ', '\t', '\n'].random();
-      password = 'MyPass' + Math.random();
+      password = 'MyPass' + random();
     });
 
     it('should fail when token is empty or blank', function () {
@@ -113,7 +113,7 @@ describe('SPEC unregisterUser()', function () {
 
     beforeEach(function () {
       password = [1, true, null, undefined, {}, [], new Date()].random();
-      token = (Math.random() * 1000).toString();
+      token = (random() * 1000).toString();
     });
 
     it('should fail when password is different to string', function () {
@@ -128,7 +128,7 @@ describe('SPEC unregisterUser()', function () {
     let password, token;
 
     beforeEach(function () {
-      token = (Math.random() * 1000).toString();
+      token = (random() * 1000).toString();
       password = ['', ' ', '\t', '\n'].random();
     });
 
@@ -144,9 +144,9 @@ describe('SPEC unregisterUser()', function () {
     let password, token, callback;
 
     beforeEach(function () {
-      token = (Math.random() * 1000).toString();
+      token = (random() * 1000).toString();
       callback = [1, true, null, undefined, {}, [], new Date()].random();
-      password = 'MyPass' + Math.random();
+      password = 'MyPass' + random();
     });
 
     it('should fail when callback is not a callback', function () {

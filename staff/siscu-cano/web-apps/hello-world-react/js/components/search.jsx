@@ -1,15 +1,20 @@
 function Search(props) {
   return (
     <form
+      className="search"
       onSubmit={function (event) {
         event.preventDefault();
         var query = event.target.query.value;
         props.onSearch(query);
       }}
     >
-      <input type="text" name="query" />
-      <button type="reset">✖️</button>
-      <button type="submit">🔍</button>
+      <input className="search__input" type="text" name="query" />
+      <button className="search__reset" type="reset">
+        ✖️
+      </button>
+      <button className="search__submit" type="submit">
+        🔍
+      </button>
     </form>
   );
 }

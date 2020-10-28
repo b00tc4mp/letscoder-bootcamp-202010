@@ -6,7 +6,7 @@ describe('SPEC retrieveUser()', function () {
 
     beforeEach(function (done) {
       fullname = `fullname-${random()}`;
-      email = `email-${random()}@mail.com`;
+      email = `email-${random()}@retrieve.com`;
       password = `password-${random()}`;
 
       call(
@@ -73,7 +73,7 @@ describe('SPEC retrieveUser()', function () {
 
     beforeEach(function (done) {
       fullname = `fullname-${random()}`;
-      email = `email-${random()}@mail.com`;
+      email = `email-${random()}@retrieve.com`;
       password = `password-${random()}`;
 
       call(
