@@ -12,30 +12,38 @@ button:focus {
 }
 
 .access {
-  border: 1px solid skyblue;
-  padding: 1rem;
-  border-radius: 1rem;
   text-align: center;
 }
 .access__register {
-  background-color: skyblue;
-  color: white;
+  background-color: orange;
+  color: black;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
 }
+.access__register:hover {
+  cursor: pointer;
+}
 .access__login {
   border-style: solid;
-  border-color: skyblue;
+  border-color: orange;
   background-color: transparent;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
 }
 .access__login:hover {
-  background-color: #E9F6FD;
+  background-color: orange;
+  cursor: pointer;
 }
 
 .title {
   font-family: Bebas Neue;
+}
+.title:hover {
+  cursor: pointer;
+}
+.title__world {
+  background-color: orange;
+  font-size: 5rem;
 }
 
 .register {
@@ -47,11 +55,28 @@ button:focus {
 }
 
 .login {
-  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__input {
+  margin: 0.5rem;
+}
+.login__input:focus {
+  outline-color: orange;
+}
+.login__button {
+  background-color: orange;
+  border-style: none;
+  padding: 0.2rem;
+  margin: 0.5rem;
 }
 
 .welcome {
   background-color: plum;
+}
+.welcome__image {
+  width: 10vw;
 }
 
 /*# sourceMappingURL=index.css.map */
