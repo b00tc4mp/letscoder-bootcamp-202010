@@ -1,7 +1,5 @@
 function Login(props) {
     return <section className="login">
-        <h2>Login</h2>
-
         <form className="login__form" onSubmit={
             function (event) {
                 event.preventDefault()
@@ -16,9 +14,9 @@ function Login(props) {
                 }
             }
         }>
-            <input type="email" name="email" placeholder="e-mail" required />
-            <input type="password" name="password" placeholder="password" required />
-            <button>Login</button>
+            <input className="login__input" type="email" name="email" placeholder="e-mail" required />
+            <input className="login__input" type="password" name="password" placeholder="password" required />
+            <button className="login__button">Login</button>
         </form>
     </section>
 }
