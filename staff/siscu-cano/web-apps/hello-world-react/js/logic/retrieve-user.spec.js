@@ -1,7 +1,7 @@
-describe("SPEC retrieveUser()", function () {
+describe('SPEC retrieveUser()', function () {
   const { random } = Math;
 
-  describe("when user already exists", function () {
+  describe('when user already exists', function () {
     let fullname, email, password, token;
 
     beforeEach(function (done) {
@@ -10,18 +10,18 @@ describe("SPEC retrieveUser()", function () {
       password = `password-${random()}`;
 
       call(
-        "POST",
-        "https://b00tc4mp.herokuapp.com/api/v2/users",
-        { "Content-type": "application/json" },
+        'POST',
+        'https://b00tc4mp.herokuapp.com/api/v2/users',
+        { 'Content-type': 'application/json' },
         JSON.stringify({ fullname, username: email, password }),
         function (status, response) {
           expect(status).toBe(201);
           expect(response.length).toBe(0);
 
           call(
-            "POST",
-            "https://b00tc4mp.herokuapp.com/api/v2/users/auth",
-            { "Content-type": "application/json" },
+            'POST',
+            'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+            { 'Content-type': 'application/json' },
             JSON.stringify({ username: email, password }),
             function (status, response) {
               token = JSON.parse(response).token;
@@ -30,13 +30,13 @@ describe("SPEC retrieveUser()", function () {
               expect(token.length).toBeGreaterThan(0);
 
               done();
-            }
+            },
           );
-        }
+        },
       );
     });
 
-    it("should succeed on right token", function (done) {
+    it('should succeed on right token', function (done) {
       retrieveUser(token, function (error, user) {
         expect(error).toBeNull();
 
@@ -52,23 +52,23 @@ describe("SPEC retrieveUser()", function () {
 
     afterEach(function () {
       call(
-        "DELETE",
-        "https://b00tc4mp.herokuapp.com/api/v2/users",
+        'DELETE',
+        'https://b00tc4mp.herokuapp.com/api/v2/users',
         {
           Authorization: `Bearer ${token}`,
-          "Content-type": "application/json",
+          'Content-type': 'application/json',
         },
         JSON.stringify({ password }),
         function (status, response) {
           expect(status).toBe(204);
           expect(response.length).toBe(0);
-        }
+        },
       );
     });
   });
   //------------------------------------------------------------------------------------------
 
-  describe("when user does not exist (but existed before)", function () {
+  describe('when user does not exist (but existed before)', function () {
     let fullname, email, password, token;
 
     beforeEach(function (done) {
@@ -77,18 +77,18 @@ describe("SPEC retrieveUser()", function () {
       password = `password-${random()}`;
 
       call(
-        "POST",
-        "https://b00tc4mp.herokuapp.com/api/v2/users",
-        { "Content-type": "application/json" },
+        'POST',
+        'https://b00tc4mp.herokuapp.com/api/v2/users',
+        { 'Content-type': 'application/json' },
         JSON.stringify({ fullname, username: email, password }),
         function (status, response) {
           expect(status).toBe(201);
           expect(response.length).toBe(0);
 
           call(
-            "POST",
-            "https://b00tc4mp.herokuapp.com/api/v2/users/auth",
-            { "Content-type": "application/json" },
+            'POST',
+            'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+            { 'Content-type': 'application/json' },
             JSON.stringify({ username: email, password }),
             function (status, response) {
               expect(status).toBe(200);
@@ -99,11 +99,11 @@ describe("SPEC retrieveUser()", function () {
               expect(token.length).toBeGreaterThan(0);
 
               call(
-                "DELETE",
-                "https://b00tc4mp.herokuapp.com/api/v2/users",
+                'DELETE',
+                'https://b00tc4mp.herokuapp.com/api/v2/users',
                 {
                   Authorization: `Bearer ${token}`,
-                  "Content-type": "application/json",
+                  'Content-type': 'application/json',
                 },
                 JSON.stringify({ password }),
                 function (status, response) {
@@ -111,20 +111,20 @@ describe("SPEC retrieveUser()", function () {
                   expect(response.length).toBe(0);
 
                   done();
-                }
+                },
               );
-            }
+            },
           );
-        }
+        },
       );
     });
     //------------------------------------------------------------------------------------------
 
-    it("should fail on right token", function (done) {
+    it('should fail on right token', function (done) {
       retrieveUser(token, function (error, user) {
         expect(error).toBeInstanceOf(Error);
 
-        var [, payload] = token.split(".");
+        var [, payload] = token.split('.');
 
         var json = atob(payload);
 
@@ -140,23 +140,14 @@ describe("SPEC retrieveUser()", function () {
   });
   //------------------------------------------------------------------------------------------
 
-  describe("when token is not a string", function () {
+  describe('when token is not a string', function () {
     let token;
 
     beforeEach(function () {
-      token = [
-        1,
-        true,
-        null,
-        undefined,
-        {},
-        [],
-        function () {},
-        new Date(),
-      ].random();
+      token = [1, true, null, undefined, {}, [], function () {}, new Date()].random();
     });
 
-    it("should fail on non-string token", function () {
+    it('should fail on non-string token', function () {
       expect(function () {
         retrieveUser(token, function () {});
       }).toThrowError(TypeError, `${token} is not a token`);
@@ -164,29 +155,29 @@ describe("SPEC retrieveUser()", function () {
   });
   //------------------------------------------------------------------------------------------
 
-  describe("when token is empty or blank", function () {
+  describe('when token is empty or blank', function () {
     let token;
 
     beforeEach(function () {
-      token = ["", " ", "\t", "\n"].random();
+      token = ['', ' ', '\t', '\n'].random();
     });
 
-    it("should fail on empty or blank token", function () {
+    it('should fail on empty or blank token', function () {
       expect(function () {
         retrieveUser(token, function () {});
-      }).toThrowError(Error, "token is empty or blank");
+      }).toThrowError(Error, 'token is empty or blank');
     });
   });
   //------------------------------------------------------------------------------------------
 
-  describe("when callback is not a function", function () {
+  describe('when callback is not a function', function () {
     let token, callback;
     beforeEach(function () {
       token =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjkzZmMwNTAxYmZkNjAwMTc3ZTI0ZTAiLCJpYXQiOjE2MDM1NjA5MzIsImV4cCI6MTYwMzU2NDUzMn0.fFh73uXSkBT4jpqf6Lgz-_dG_X6A3KzD-dEp51MPlks";
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjkzZmMwNTAxYmZkNjAwMTc3ZTI0ZTAiLCJpYXQiOjE2MDM1NjA5MzIsImV4cCI6MTYwMzU2NDUzMn0.fFh73uXSkBT4jpqf6Lgz-_dG_X6A3KzD-dEp51MPlks';
       callback = [1, true, null, undefined, {}, [], new Date()].random();
     });
-    it("should fail on no function callback", function () {
+    it('should fail on no function callback', function () {
       expect(function () {
         retrieveUser(token, callback, function () {});
       }).toThrowError(TypeError, `${callback} is not a callback`);
