@@ -1,7 +1,6 @@
-// const random = Math.random
-const { random } = Math;
-
 describe("SPEC retrieveUser()", function () {
+  const { random } = Math;
+
   describe("when user already exists", function () {
     let fullname, email, password, token;
 
