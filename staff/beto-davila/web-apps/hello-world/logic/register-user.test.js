@@ -93,19 +93,13 @@
       var fail;
 
       try {
-        registerUser(fullname, email, password, repassword);
+        registerUser(fullname, email, password, repassword, function(){});
       } catch (error) {
         fail = error;
       }
 
-      console.assert(
-        fail instanceof TypeError,
-        "should error be defined and a instance of a TypeError"
-      );
-      console.assert(
-        fail.message === fullname + " is not a fullname",
-        "should error message match expected error"
-      );
+      console.assert(fail instanceof TypeError, "should error be defined and a instance of a TypeError");
+      console.assert(fail.message === fullname + " is not a fullname", "should error message match expected error");
     })();
 
     (function () {
@@ -118,7 +112,7 @@
       var fail;
 
       try {
-        registerUser(fullname, email, password, password);
+        registerUser(fullname, email, password, password, function(){});
       } catch (error) {
         fail = error;
       }
@@ -143,7 +137,7 @@
       var fail;
 
       try {
-        registerUser(fullname, email, password, password);
+        registerUser(fullname, email, password, password, function(){});
       } catch (error) {
         fail = error;
       }
@@ -168,7 +162,7 @@
       var fail;
 
       try {
-        registerUser(fullname, email, password, password);
+        registerUser(fullname, email, password, password, function(){});
       } catch (error) {
         fail = error;
       }

@@ -1,8 +1,9 @@
 function mountContainer(template) {
 
-    var node = document.createElement("div");
-    var container = node.firstChild;
-    node.innerHTML = template;
+    var temp = document.createElement("div");
+    temp.innerHTML = template;
+
+    var container = temp.firstChild;
 
     return container;
 
