@@ -1,6 +1,6 @@
-registerUser('Ga To', 'ga@to.com', '123', '123', function(error) {
+registerUser("Rosa Melano", "rosamelano@mail.com", "123123123", "123123123", function(error){
     console.log('DEMO registerUser()')
-    
-    if (!error) console.log('ok, perfect, user registered! ,)')
-    else console.error('ERROR! ' + error.message) 
+
+    if (!error) console.log('OK, user succesfully registered!')
+    else console.error('ERROR!' + error.message)
 })

@@ -1,6 +1,6 @@
-retrieveUser('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjkxOWUxYTdjYTQ3OTAwMTcxYWM2ZTAiLCJpYXQiOjE2MDMzODAwNjgsImV4cCI6MTYwMzM4MzY2OH0.FNAZAZLCrriw_5kX4cI6cBgeuBzc2gkwcoGyR09wx0g', function(error, user) {
-    console.log('DEMO retriveUser()')
+retrieveUser('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Zjk0MzIyOGI1ZmFlNTAwMTdmNTM2ODIiLCJpYXQiOjE2MDM2MjQ0MDQsImV4cCI6MTYwMzYyODAwNH0.IfgB-z0O6mw4dWGiHdAw8lyRtzqbC43VPLsXDG6ObRQ', function(error, user) {
+    console.log('DEMO retrieveUser()')
 
     if (error) console.error(error)
     else console.log(user)
-})
+}) 
