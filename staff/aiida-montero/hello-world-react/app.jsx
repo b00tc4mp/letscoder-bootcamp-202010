@@ -57,9 +57,9 @@ class App extends React.Component {
     }
 
     handleSearchVehicles(query){
-        searchVehicles(query,function (error,vehiclesResults){
+        searchVehicles(query,function (error,vehicles){
             if(error) return alert(error.message)
-            this.setState({vehiclesResults})
+            this.setState({vehicles})
         }.bind(this))
     }
 
@@ -102,7 +102,7 @@ class App extends React.Component {
                 <Search placeholder = {"hotwheels"} onSearch = {this.handleSearchVehicles}/>
 
                 {this.state.googleResults && <GoogleResults items={this.state.googleResults} />}
-                {this.state.vehiclesResults && <VehiclesResults items ={this.state.vehiclesResults}/>}
+                {this.state.vehicles && <Vehicles items ={this.state.vehicles}/>}
             </>}
         </>
     }
