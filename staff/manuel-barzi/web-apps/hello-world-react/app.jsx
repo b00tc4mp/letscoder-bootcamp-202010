@@ -12,6 +12,7 @@ class App extends React.Component {
         this.handleGoToProfile = this.handleGoToProfile.bind(this)
         this.handleModifyUser = this.handleModifyUser.bind(this)
         this.handleSearchVehicles = this.handleSearchVehicles.bind(this)
+        //this.handleGoToVehicle = this.handleGoToVehicle.bind(this)
     }
 
     handleGoToRegister() {
@@ -68,14 +69,24 @@ class App extends React.Component {
         searchVehicles(query, function (error, vehicles) {
             if (error) return alert(error.message)
 
-            vehicles = vehicles.map(({ name: title, thumbnail: image }) => ({ title, image }))
+            vehicles = vehicles.map(({ id, name: title, thumbnail: image, price }) => ({ id, title, image, price }))
 
-            this.setState({ vehicles })
+            this.setState({ vehicles, vehicle: undefined })
         }.bind(this))
     }
 
+    handleGoToVehicle = vehicleId => {
+        retrieveVehicle(vehicleId, (error, vehicle) => {
+            if (error) return alert(error.message)
+
+            const { id, name: title, year, description: preview, price, url, image } = vehicle
+
+            this.setState({ vehicle: { id, title, year, preview, price, url, image } })
+        })
+    }
+
     render() {
-        const { state: { view, subview, user, results, vehicles }, handleGoToHome, handleGoToLogin, handleGoToProfile, handleGoToRegister, handleLogin, handleModifyUser, handleRegister, handleSearch, handleSearchVehicles } = this
+        const { state: { view, subview, user, vehicles, vehicle }, handleGoToHome, handleGoToLogin, handleGoToProfile, handleGoToRegister, handleLogin, handleModifyUser, handleRegister, handleSearchVehicles, handleGoToVehicle } = this
 
         return <>
             <Title onHome={handleGoToHome} />
@@ -99,7 +110,9 @@ class App extends React.Component {
 
                 <Search onSearch={handleSearchVehicles} />
 
-                {vehicles && <Results items={vehicles} />}
+                {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} />}
+
+                { vehicle && <Detail item={vehicle} currency="$" />}
             </>}
         </>
     }

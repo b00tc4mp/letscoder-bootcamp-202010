@@ -79,4 +79,8 @@ button:focus {
   width: 10vw;
 }
 
+.results__item:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=index.css.map */
