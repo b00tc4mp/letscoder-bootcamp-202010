@@ -1,9 +1,9 @@
-function Results(props) {
+function Results({ items }) {
     return <ul>
-        {props.items.map(item => <li key={item.url}>
-            {item.url ? <a href={item.url}><h2>{item.title}</h2></a> : <h2>{item.title}</h2>}
-            {item.preview && <p>{item.preview}</p>}
-            {item.image && <img src={item.image} />}
+        {items.map(({ title, url, preview, image }) => <li key={url}>
+            {url ? <a href={url}><h2>{title}</h2></a> : <h2>{title}</h2>}
+            {preview && <p>{preview}</p>}
+            {image && <img src={image} />}
         </li>)}
     </ul>
 }
