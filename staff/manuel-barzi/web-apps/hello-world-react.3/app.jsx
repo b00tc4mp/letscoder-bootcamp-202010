@@ -2,7 +2,7 @@ class App extends React.Component {
     constructor() {
         super()
 
-        this.state = { view: 'home' }
+        this.state = { view: 'access' }
 
         this.handleGoToRegister = this.handleGoToRegister.bind(this)
         this.handleGoToLogin = this.handleGoToLogin.bind(this)
@@ -110,14 +110,7 @@ class App extends React.Component {
 
                 <Search onSearch={this.handleSearchVehicles} />
 
-                {this.state.vehicles && <Results items={this.state.vehicles.map(vehicle => {
-                    var item = {
-                        title: vehicle.name,
-                        image: vehicle.thumbnail
-                    }
-
-                    return item
-                })} />}
+                {this.state.vehicles && <ul>{this.state.vehicles.map(vehicle => <li>{vehicle.name}</li>)}</ul>}
             </>}
         </>
     }
