@@ -15,6 +15,7 @@ function Search(props) {
       <button className="search__submit" type="submit">
         🔍
       </button>
+      <button onClick={props.onSearchInGoogle}></button>
     </form>
   );
 }

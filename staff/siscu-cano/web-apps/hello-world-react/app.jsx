@@ -2,7 +2,7 @@ class App extends React.Component {
   constructor() {
     super();
 
-    this.state = { view: 'home' };
+    this.state = { view: 'access', searchGoogle: true };
 
     this.handleGoToRegister = this.handleGoToRegister.bind(this);
     this.handleGoToLogin = this.handleGoToLogin.bind(this);
@@ -10,6 +10,7 @@ class App extends React.Component {
     this.handleRegister = this.handleRegister.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handlerSearchInGoogle = this.handlerSearchInGoogle.bind(this);
   }
 
   handleGoToRegister() {
@@ -50,22 +51,38 @@ class App extends React.Component {
           function (error, user) {
             if (error) return alert(error.message);
 
-            this.setState({ view: 'welcome', name: user.fullname });
+            this.setState({ view: 'home', name: user.fullname });
           }.bind(this),
         );
       }.bind(this),
     );
   }
 
-  handleSearch(query) {
-    searchInGoogle(
-      query,
-      function (error, results) {
-        if (error) return alert(error.message);
+  handlerSearchInGoogle() {
+    this.setState({
+      searchGoogle: !this.state.searchGoogle,
+    });
+  }
 
-        this.setState({ results });
-      }.bind(this),
-    );
+  handleSearch(query) {
+    this.state.searchGoogle &&
+      searchInGoogle(
+        query,
+        function (error, results) {
+          if (error) return alert(error.message);
+
+          this.setState({ results });
+        }.bind(this),
+      );
+    !this.state.searchGoogle &&
+      searchInHotWheels(
+        query,
+        function (error, results) {
+          if (error) return alert(error.message);
+
+          this.setState({ results });
+        }.bind(this),
+      );
   }
 
   render() {
@@ -87,8 +104,8 @@ class App extends React.Component {
           <main>
             <Welcome name={this.state.name} />
             <aside className="search">
-              <Search onSearch={this.handleSearch} />
-              {this.state.results && <Results items={this.state.results} />}
+              <Search onSearch={this.handleSearch} onSearchInGoogle={this.handlerSearchInGoogle} />
+              {this.state.results && <Results items={this.state.results} searchGoogle={this.state.searchGoogle} />}
             </aside>
           </main>
         )}
