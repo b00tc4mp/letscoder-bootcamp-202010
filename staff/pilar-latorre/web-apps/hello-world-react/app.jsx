@@ -12,6 +12,7 @@ class App extends React.Component {
         this.handleSearch = this.handleSearch.bind(this)
         this.handleGoToProfile = this.handleGoToProfile.bind(this)
         this.handleModifyUser = this.handleModifyUser.bind(this)
+        this.handleSearchVehicles = this.handleSearchVehicles.bind(this)
     }
 
     handleGoToRegister() {
@@ -49,7 +50,7 @@ class App extends React.Component {
     }
 
     handleSearch(query) {
-        searchVehicles(query, function (error, results) {
+        searchInGoogle(query, function (error, results) {
             if (error) return alert(error.message)
 
             this.setState({ results })
@@ -72,6 +73,14 @@ class App extends React.Component {
         }.bind(this))
     }
 
+    handleSearchVehicles(query) {
+        searchVehicles(query, function(error, vehicles) {
+            if (error) return alert(error.message)
+
+            this.setState({ vehicles })
+        }.bind(this))
+    }
+
     render() {
         return <>
             <Title onHome={this.handleGoToHome} />
@@ -91,9 +100,23 @@ class App extends React.Component {
 
                 {this.state.subview === 'profile' && <Profile onModify={this.handleModifyUser} fullname={this.state.user.fullname} image={this.state.user.image} />}
 
+                <h2>Google</h2>
+
                 <Search onSearch={this.handleSearch} />
 
                 {this.state.results && <Results items={this.state.results} />}
+
+                <h2>Vehicles</h2>
+
+                <Search onSearch={this.handleSearchVehicles} />
+
+                {this.state.vehicles && <Results items={this.state.vehicles.map(vehicle => {
+                    var item = {
+                        title: vehicle.name,
+                        image: vehicle.thumbnail
+                    }
+                    return item
+                })} />}
             </>}
         </>
     }
