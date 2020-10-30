@@ -8,6 +8,14 @@ class Home extends Component {
 
     }
 
+    componentWillMount() {
+        retrieveUser(this.props.token, (error, user) => {
+            if (error) return alert(error.message)
+
+            this.setState({ user })
+        })
+    }
+
     handleGoToProfile = () => {
         this.setState({ subview: 'profile' })
     }
@@ -24,9 +32,9 @@ class Home extends Component {
         })
     }
 
-    handleSearchVehicles = (query) => {
+    handleSearchVehicles = query => {
         try {
-            searchVehicles(query, (error, vehicles) => {
+            searchVehicles(this.props.token,query, (error, vehicles) => {
                 if (error) return alert(error.message)
 
                 vehicles = vehicles.map(({ id, name: title, thumbnail: image, price }) => ({ id, title, image, price }))
@@ -51,7 +59,13 @@ class Home extends Component {
         })
     }
 
+    handleLike = vehicleId => {
+        toggleLikeVehicle(this.props.token, vehicleId, error => {
+            if (error) return alert(error.message)
 
+            this.handleSearchVehicles(this.state.query)
+        })
+    }
 
 
     render() {

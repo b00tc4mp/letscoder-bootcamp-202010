@@ -5,6 +5,11 @@ return <ul className="results">
         {preview && <p>{preview}</p>}
         {image && <img src={image} />}
         {price && <span>{price} {currency}</span>}
+        {<button onClick={event => {
+            event.stopPropagation()
+
+            onLike(id)
+        }}>{like ? '❤️' : '♡'} </button>}
         
 
 

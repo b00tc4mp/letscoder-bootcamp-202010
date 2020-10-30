@@ -12,9 +12,21 @@ function searchVehicles(query, callback) {
     call('GET', `https://b00tc4mp.herokuapp.com/api/hotwheels/vehicles?q=${query}`,
         {}, '', function (status, response) {
             if (status === 200) {
-                const res = JSON.parse(response)
+                const vehicles = JSON.parse(response)
 
-                callback(null, res)
+                call('GET', 'https://b000tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, '',
+                    (status,response) => {
+                        if (status === 200){
+                            const { likes = [] } = JSON.parse(response)
+
+                            vehicles.forEach(vehicle => vehicle.like = likes.includes(vehicle.id))
+
+                            callback(null, vehicles)
+                        }
+                        
+                    })
+
+               
 
             } else callback(new Error('sorry, cannot search :('))
 

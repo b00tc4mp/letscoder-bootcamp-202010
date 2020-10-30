@@ -43,7 +43,7 @@ class App extends Component {
     
    
     render() {
-        const { state: { view, user }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
+        const { state: { view, user, token }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
         return <>
             <Title onHome={this.handleGoToAccess} />
 
@@ -55,7 +55,7 @@ class App extends Component {
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
-            {view === 'home' && <Home user={user} />}
+            {view === 'home' && <Home token={token} />}
 
            
         </>
