@@ -5,30 +5,39 @@ function searchVehicles(query, callback) {
 
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback');
 
-    call('GET', `https://b00tc4mp.herokuapp.com/api/hotwheels/vehicles?q=${query}`, {}, '',
-        (status, response) => {
-            if (status === 200) {
+    // call('GET', `https://b00tc4mp.herokuapp.com/api/hotwheels/vehicles?q=${query}`, {}, '',
+    //     (status, response) => {
+    //         if (status === 200) {
 
-                var res = JSON.parse(response);
+    //             const res = JSON.parse(response);
 
-                var doc = new DOMParser().parseFromString(response, "text/html");
+    //             const doc = new DOMParser().parseFromString(response, "text/html");
 
-                const results = doc.querySelectorAll('pre')
+    //             const results = doc.querySelectorAll('pre')
 
-                Array.prototype.map.call(results, result => {
-                    const thumbnail = result.thumbnail;
+    //             Array.prototype.map.call(results, vehicle => {
+    //                 const thumbnail = vehicle.thumbnail;
 
-                    const name = result.name;
+    //                 const name = vehicle.name;
 
-                    const price = result.price;
+    //                 const price = vehicle.price;
 
-                    return { thumbnail, name, price } // return obj
-                })
+    //                 return { thumbnail, name, price } // return obj
+    //             })
 
-                // returns the results to the callback 'Results'
-                callback(null, res);
-            } else callback(new Error('sorry, cannot search :('));
-        });
+    //             // returns the results to the callback 'Results'
+    //             callback(null, res);
+    //         } else callback(new Error('sorry, cannot search :('));
+    //     });
+
+    call('GET', `https://b00tc4mp.herokuapp.com/api/hotwheels/vehicles?q=${query}`,
+    {}, '', function (status, response) {
+        if (status === 200) {
+            const res = JSON.parse(response) 
+
+            callback(null, res)
+        } else callback(new Error('sorry, cannot search :('))
+    })
 
 
 }

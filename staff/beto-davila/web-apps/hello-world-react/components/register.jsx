@@ -1,3 +1,5 @@
+// Displays the resgister form. Gets the user inputs for registration and pass them to the callback 'handleRegister' when submitting the form.
+
 function Register(props) {
     return <section className="register">
     <h3>Register</h3>
