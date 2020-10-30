@@ -1,1 +1,0 @@
-ReactDOM.render(<Profile onModify={console.log} />, document.getElementById('root'))
