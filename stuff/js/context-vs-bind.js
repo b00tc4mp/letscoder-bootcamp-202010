@@ -127,3 +127,36 @@ salute('hello')
 o.salute = salute
 
 o.salute('hi')
+
+// 4
+
+window.name = 'Window'
+
+o = { name: 'O' }
+
+var print = () => console.log(this.name)
+
+print()
+
+o.print = print
+
+o.print()
+
+VM13815:5 Window
+VM13815:5 Window
+undefined
+window.name = 'Window'
+
+o = { name: 'O' }
+
+//var print = () => console.log(this.name)
+var print = function() { console.log(this.name) }
+
+print()
+
+o.print = print
+
+o.print()
+
+VM13888:6 Window
+VM13888:6 O
