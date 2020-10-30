@@ -1,1 +1,0 @@
-{"version":3,"file":"productModel.js","sourceRoot":"","sources":["../../src/models/productModel.ts"],"names":[],"mappings":";;;;;;AACA,0EAA6C;AAEhC,QAAA,OAAO,GAAG;IACrB,OAAO,EAAE,GAAG,EAAE;QACZ,OAAO,IAAI,OAAO,CAAC,CAAC,OAAO,EAAE,MAAM,EAAE,EAAE;YACrC,OAAO,CAAC,uBAAQ,CAAC,CAAC;QACpB,CAAC,CAAC,CAAC;IACL,CAAC;CACF,CAAC;AACF,kBAAe,eAAO,CAAC"}
