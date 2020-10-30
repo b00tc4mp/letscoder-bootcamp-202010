@@ -7,10 +7,12 @@ function Search({ onSearch }) {
 
         onSearch(query)
     }}>
-        <input type="text" name="query" />
+        <input type="text" name="query" required />
         <button type="reset">✖️</button>
         <button type="submit">🔍</button>
         
     </form>
 
 }
+
+

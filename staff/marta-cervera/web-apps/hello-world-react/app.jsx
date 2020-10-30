@@ -37,7 +37,7 @@ class App extends Component {
 
                 this.setState({ view: 'home', user})
             })
-        })
+        })//se ha bindedado automaticamente, el bind aputnaba al scope, transifeiren de fuera hacia dentro el this, de manera automatica
     }
 
     
@@ -54,6 +54,8 @@ class App extends Component {
             {this.state.view === 'login' && <Login onLogin={this.handleLogin} />}
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
+
+            {view === 'home' && <Home user={user} />}
 
            
         </>

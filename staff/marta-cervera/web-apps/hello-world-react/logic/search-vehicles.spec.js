@@ -20,3 +20,4 @@ describe('SPEC searchVehicles()', function(){
         })
     })
 })
+

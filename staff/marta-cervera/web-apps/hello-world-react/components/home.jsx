@@ -8,7 +8,7 @@ class Home extends Component {
 
     }
 
-    handleGoToProfile() {
+    handleGoToProfile = () => {
         this.setState({ subview: 'profile' })
     }
 
@@ -43,6 +43,10 @@ class Home extends Component {
         retrieveVehicle(vehicleId, (error, vehicle) => {
             if (error) return alert(error.message)
 
+            const { id, name: title, year, description: preview, price, url, image } = vehicle
+
+            this.setState({ vehicle: { id, title, year, preview, price, url, image } })
+
 
         })
     }
@@ -51,10 +55,10 @@ class Home extends Component {
 
 
     render() {
-        const { state: { subview, vehicles, vehicle }, props: { user },handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoTOVehicle } = this
+        const { state: { subview, vehicles, vehicle }, props: { user }, handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoToVehicle } = this
 
-        return<> 
-              
+        return <>
+
             {user && <Welcome name={user.fullname} image={user.image} />}
 
             <button onClick={handleGoToProfile}>Profile</button>
@@ -63,13 +67,13 @@ class Home extends Component {
 
             <h2>Vehicles</h2>
 
-            <Search onSearch={handleSearchVehicles} />                     
-                   
+            <Search onSearch={handleSearchVehicles} />
 
-            {!vehicle && vehicle && <Results items={vehicles} currency="$" OnItem={handleGoToVehicle} />}
-            {vehicle && <Detail item={vehicle} currency= "$ " />}
+            {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} />}
 
-        
+            { vehicle && <Detail item={vehicle} currency="$" />}
+
+
         </>
     }
 }
