@@ -1,16 +1,19 @@
-import Http from "http";
-import { getProducts } from "./controllers/productController";
-
-const server = Http.createServer((req, res) => {
-  if (req.url === "/api/products" && req.method === "GET") {
-    getProducts(req, res);
-  } else {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "text/html");
-    res.write("<h1>Hello World</h1>");
-    res.end();
-  }
+import net from "net";
+const server = net.createServer();
+server.on("connection", (socket) =>{
+  const remote = socket.remoteAddress+":"+socket.remotePort;
+  console.log("Nueva conexion realizada");
+  socket.on("data", (a)=>{
+    console.log("Data from %s: %s", remote, a);
+    socket.write("Hello World! "+d);
+  });
+  socket.once("close", ()=>{
+    console.log("Conexion %s: cerrada", remote);
+  });
+  socket.on("error", (err)=>{
+    console.log("Connection %s error %s", remote, err.message);
+  });
 });
-
-const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => console.log(`Hello Word with port ${PORT}`));
+server.listen(5000, ()=>{
+  console.log("Servidor escuchando en 5000");
+})
