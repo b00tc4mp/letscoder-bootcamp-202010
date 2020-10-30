@@ -6,16 +6,24 @@ class Home extends Component {
 
         this.state = {}
     }
+    
+    componentWillMount() {
+        retrieveUser(this.props.token, (error, user) => {
+            if (error) return alert(error.message)
 
-    handleGoToProfile() {
+            this.setState({ user })
+        })    
+    }
+
+    handleGoToProfile = () => {
         this.setState({ subview: 'profile' })
     }
 
     handleModifyUser = (fullname, image) => {
-        modifyUser(this.state.token, { fullname, image }, error => {
+        modifyUser(this.props.token, { fullname, image }, error => {
             if (error) alert(error.message)
 
-            retrieveUser(this.state.token, (error, user) => {
+            retrieveUser(this.props.token, (error, user) => {
                 if (error) return alert(error.message)
 
                 this.setState({ user })
@@ -23,14 +31,14 @@ class Home extends Component {
         })
     }
 
-    handleSearchVehicles = (query) => {
+    handleSearchVehicles = query => {
         try {
-            searchVehicles(query, (error, vehicles) => {
+            searchVehicles(this.props.token, query, (error, vehicles) => {
                 if (error) return alert(error.message)
 
-                vehicles = vehicles.map(({ id, name: title, thumbnail: image, price }) => ({ id, title, image, price }))
+                vehicles = vehicles.map(({ id, name: title, thumbnail: image, price, like }) => ({ id, title, image, price, like }))
     
-                this.setState({ vehicles, vehicle: undefined })
+                this.setState({ vehicles, vehicle: undefined, query })
         })
         } catch ({ message }) {
             alert(message)
@@ -47,8 +55,16 @@ class Home extends Component {
         })
     }    
 
+    handleLike = vehicleId => {
+        toggleLikeVehicle(this.props.token, vehicleId, error => {
+            if (error) return alert(error.message)
+
+            this.handleSearchVehicles(this.state.query)
+        })
+    }
+
     render() {
-        const { state: { subview, vehicles, vehicle }, props: { user }, handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoToVehicle } = this
+        const { state: { subview, vehicles, vehicle, user }, handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoToVehicle, handleLike } = this
 
         return <>
                 {user && <Welcome name={user.fullname} image={user.image} />}
@@ -61,7 +77,7 @@ class Home extends Component {
 
                 <Search onSearch={handleSearchVehicles} />
 
-                {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} />}
+                {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} onLike={handleLike} />}
 
                 { vehicle && <Detail item={vehicle} currency="$" />}       
 
