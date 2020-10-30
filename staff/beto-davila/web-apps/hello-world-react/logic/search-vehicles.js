@@ -1,43 +1,31 @@
-function searchVehicles(query, callback) {
-    if (typeof query !== 'string') throw new TypeError(query + ' is not a query');
+function searchVehicles(token, query, callback) {
+    if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
-    if (!query.trim().length) throw new Error('query is empty or blank');
+    if (!token.trim().length) throw new Error('token is empty or blank')
 
-    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback');
+    if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
-    // call('GET', `https://b00tc4mp.herokuapp.com/api/hotwheels/vehicles?q=${query}`, {}, '',
-    //     (status, response) => {
-    //         if (status === 200) {
+    if (!query.trim().length) throw new Error('query is empty or blank')
 
-    //             const res = JSON.parse(response);
+    if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 
-    //             const doc = new DOMParser().parseFromString(response, "text/html");
-
-    //             const results = doc.querySelectorAll('pre')
-
-    //             Array.prototype.map.call(results, vehicle => {
-    //                 const thumbnail = vehicle.thumbnail;
-
-    //                 const name = vehicle.name;
-
-    //                 const price = vehicle.price;
-
-    //                 return { thumbnail, name, price } // return obj
-    //             })
-
-    //             // returns the results to the callback 'Results'
-    //             callback(null, res);
-    //         } else callback(new Error('sorry, cannot search :('));
-    //     });
-
+    // calling vehicles API providing a query to get the 'vehicles' object (once converted from JSON)
     call('GET', `https://b00tc4mp.herokuapp.com/api/hotwheels/vehicles?q=${query}`,
-    {}, '', function (status, response) {
-        if (status === 200) {
-            const res = JSON.parse(response) 
+        {}, '', function (status, response) {
+            if (status === 200) {
+                const vehicles = JSON.parse(response)
 
-            callback(null, res)
-        } else callback(new Error('sorry, cannot search :('))
-    })
+                // calling users API to retrieve the 'likes' array
+                call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, '',
+                    (status, response) => {
+                        if (status === 200) {
+                            const { likes = [] } = JSON.parse(response)
 
+                            vehicles.forEach(vehicle => vehicle.like = likes.includes(vehicle.id)) // forEach vehicle we find out if it was 'liked' (includes array method) wherein it´ll be true and will have a 'red heart'.
 
+                            callback(null, vehicles)
+                        }
+                    })
+            } else callback(new Error('sorry, cannot search :('))
+        })
 }

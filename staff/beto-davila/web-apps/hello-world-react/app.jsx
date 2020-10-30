@@ -20,11 +20,11 @@ class App extends Component {
         this.setState({ view: 'access' }) // re-renders on clicking the title to show the 'access' section
     }
 
-    handleRegister = (fullname, email, password, repassword) => {           // calls registerUser passing inputs
+    handleRegister = (fullname, email, password, repassword) => {           // calls registerUser passing user inputs
         registerUser(fullname, email, password, repassword, error => {      // registerUser logic
             if (error) return alert(error.message)
 
-            this.setState({ view: 'register-confirm' }) // if no error changes state -> register-confirm Section
+            this.setState({ view: 'register-confirm' }) // if no error, setState.
         })
     }
 
@@ -32,18 +32,12 @@ class App extends Component {
         authenticateUser(email, password, (error, token) => {
             if (error) return alert(error.message)
 
-            this.setState({ token })
-
-            retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
-
-                this.setState({ view: 'home', user })
-            })
+            this.setState({ token, view: 'home' })
         })
     }
 
     render() {
-        const { state: { view, user }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
+        const { state: { view, token }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
 
         return <>
 
@@ -57,7 +51,7 @@ class App extends Component {
 
             {view === 'register-confirm' && <RegisterConfirm onLoginSection={handleGoToLogin} />}
 
-            {view === 'home' && <Home user={user} />}
-        </>
+            {view === 'home' && <Home token={token} />} 
+        </>  // 'Home' gets the user through props
     }
 }
