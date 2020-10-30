@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Turret+Road:wght@200;300;800&display=swap");
-body {
-  color: white;
-  background-image: url(./foto_1.png);
-  background-position: center;
-  text-align: center;
-  border: 1px solid white;
-  font-family: Shadows Into Light;
+* {
+  font-family: Roboto Condensed;
 }
 
 button {
@@ -19,74 +12,100 @@ button:focus {
 }
 
 .access {
-  border: 1px solid skyblue;
-  padding: 1rem;
-  border-radius: 1rem;
   text-align: center;
 }
 .access__register {
-  background-color: skyblue;
-  color: white;
+  background-color: #4fafd1;
+  color: black;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
-  font-family: Turret Road;
+}
+.access__register:hover {
+  cursor: pointer;
 }
 .access__login {
   border-style: solid;
-  border-color: skyblue;
+  border-color: #4fafd1;
   background-color: transparent;
   border-radius: 1rem 0 1rem 0;
   padding: 0.4rem;
-  font-family: Turret Road;
 }
-.home__login:hover {
-  background-color: #E9F6FD;
+.access__login:hover {
+  background-color: #4fafd1;
   cursor: pointer;
 }
 
 .title {
-  font-family: Shadows Into Light;
+  font-family: Bebas Neue;
+  text-align: center;
+}
+.title:hover {
+  cursor: pointer;
+}
+.title__world {
+  background-color: #4fafd1;
+  font-size: 4.1rem;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .register {
-  background-color: skyblue;
-  border-radius: 5rem 0 5rem 0;
-  font-family: Turret Road;
+  background-image: url(https://cdn.pixabay.com/photo/2016/04/06/08/50/gears-1311171_960_720.jpg);
+  text-align: center;
+  border-radius: 20rem 20rem 50rem 50rem;
+  flex-direction: column;
 }
-
-.register-confirm {
-  background-color: skyblue;
-  border-radius: 5rem 0 5rem 0;
-  font-family: Turret Road;
+.register__input {
+  margin: 0.5rem;
 }
-
-.welcome {
-  background-color: skyblue;
-  border-radius: 5rem 0 5rem 0;
-  font-family: Turret Road;
+.register__input:focus {
+  outline-color: orange;
 }
-
-.login__button {
+.register__button {
   background-color: orange;
   border-style: none;
   padding: 0.2rem;
   margin: 0.5rem;
 }
 
+.register-confirm {
+  background-color: #4fafd1;
+  text-align: center;
+}
 
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(https://cdn.pixabay.com/photo/2016/04/06/08/50/gears-1311171_960_720.jpg);
+  border-radius: 20rem 20rem 50rem 50rem;
 }
 .login__input {
   margin: 0.5rem;
 }
 .login__input:focus {
-  outline-color: orange;
+  outline-color: #4fafd1;
+}
+.login__button {
+  background-color: white;
+  border: 1px solid #4fafd1;
+  padding: 0.2rem;
+  margin: 0.5rem;
+  border-radius: 1rem 0rem 1rem;
+  font-size: 1rem;
+}
+
+.welcome {
+  background-color: #4fafd1;
+  text-align: center;
+  border-radius: 20rem 20rem 50rem 50rem;
 }
 .welcome__image {
   width: 10vw;
+}
+
+.results__item:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

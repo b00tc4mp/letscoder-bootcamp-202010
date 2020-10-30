@@ -1,14 +1,13 @@
-function Login(props) {
+function Login({ onLogin }) {
     return <section className="login">
         <form className="login__form" onSubmit={
             function (event) {
                 event.preventDefault()
 
-                var email = event.target.email.value
-                var password = event.target.password.value
+                const { target: { email: { value: email }, password: { value: password } } } = event
 
                 try {
-                    props.onLogin(email, password)
+                    onLogin(email, password)
                 } catch (error) {
                     alert(error.message)
                 }

@@ -1,18 +1,18 @@
-function Profile(props) {
-    return <>
+function Profile({ fullname, image, onModify }) {
+    return <section className = "profile">
         <h2>Profile</h2>
-        <form onSubmit={function (event) {
+        <form className = "profile" onSubmit=
+        {function (event) {
             event.preventDefault()
 
-            const fullname = event.target.fullname.value
-            const image = event.target.image.value
+            const { target: { fullname: { value: fullname }, image: { value: image } } } = event
 
-            props.onModify(fullname, image)
+            onModify(fullname, image)
         }}>
-            <input type="text" name="fullname" placeholder="full name" defaultValue={props.fullname} />
-            <input type="text" name="image" placeholder="image url" defaultValue={props.image} />
+            <input type="text" name="fullname" placeholder="full name" defaultValue={fullname} />
+            <input type="text" name="image" placeholder="image url" defaultValue={image} />
 
             <button>Save</button>
         </form>
-    </>
+    </section>
 }
