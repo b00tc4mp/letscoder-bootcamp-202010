@@ -1,17 +1,15 @@
-function Register(props) {
+function Register({onRegister}) {
     return <section className="register">
         <h2>Register</h2>
 
         <form className="register__form" onSubmit={function (event) {
             event.preventDefault()
 
-            var fullname = event.target.fullname.value
-            var email = event.target.email.value
-            var password = event.target.password.value
-            var repassword = event.target.repassword.value
+            const { target: { fullname: {value: fullname}, email: { vaule: email}, password: { value: password}, repassword: { value: repassword} } } = event
+
 
             try {
-                props.onRegister(fullname, email, password, repassword)
+                onRegister(fullname, email, password, repassword)
             } catch (error) {
                 alert(error.message)
             }

@@ -12,8 +12,9 @@ function modifyUser(data,token,callback) {
  
  
  call('PATCH',
- 'https://b00tc4mp.herokuapp.com/api/v2/users',¨
- {'Authorization': 'Bearer ' + token, 'Content-type':'application/json' },
+ 'https://b00tc4mp.herokuapp.com/api/v2/users',
+ {'Authorization': 'Bearer ' + token,
+  'Content-type':'application/json' },
  data,
  function(status,response) {
      if (status === 204){
@@ -22,13 +23,6 @@ function modifyUser(data,token,callback) {
 
     var res= JSON.parse(response)
     callback(new Error(res.error))
- }
-
-
-
- 
- 
- 
 }
-
-
+}
+)

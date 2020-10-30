@@ -1,51 +1,51 @@
-class App extends React.Component {
-    constructor() {
+const { Component } = React
+
+class App extends Component {
+    constructor () {
         super()
 
         this.state = { view: 'access' }
-
-        this.handleGoToRegister = this.handleGoToRegister.bind(this)
-        this.handleGoToLogin = this.handleGoToLogin.bind(this)
-        this.handleGoToHome = this.handleGoToHome.bind(this)
-        this.handleRegister = this.handleRegister.bind(this)
-        this.handleLogin = this.handleLogin.bind(this)
     }
 
-    handleGoToRegister() {
+
+    handleGoToRegister = () => {
         this.setState({ view: 'register' })
     }
 
-    handleGoToLogin() {
+    handleGoToLogin = () => {
         this.setState({ view: 'login' })
     }
 
-    handleGoToHome() {
+    handleGoToAccess = () => {
         this.setState({ view: 'access' })
     }
 
-    handleRegister(fullname, email, password, repassword) {
-        registerUser(fullname, email, password, repassword, function (error) {
+    handleRegister = (fullname, email, password, repassword) => {
+        registerUser(fullname, email, password, repassword, error => {
             if (error) return alert(error.message)
 
             this.setState({ view: 'register-confirm' })
-        }.bind(this))
+        })
     }
 
-    handleLogin(email, password) {
-        authenticateUser(email, password, function (error, token) {
+    handleLogin = (email, password) => {
+        authenticateUser(email, password,(error, token) => {
             if (error) return alert(error.message)
 
-            retrieveUser(token, function(error, user) {
+            retrieveUser(token,(error, user)=>{
                 if (error) return alert(error.message)
 
-                this.setState({ view: 'welcome', name: user.fullname })
-            }.bind(this))
-        }.bind(this))
+                this.setState({ view: 'home', user})
+            })
+        })
     }
 
+    
+   
     render() {
+        const { state: { view, user }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
         return <>
-            <Title onHome={this.handleGoToHome} />
+            <Title onHome={this.handleGoToAccess} />
 
             {this.state.view === 'access' && <Access onRegister={this.handleGoToRegister} onLogin={this.handleGoToLogin} />}
 
@@ -55,7 +55,7 @@ class App extends React.Component {
 
             {this.state.view === 'register-confirm' && <RegisterConfirm onLogin={this.handleGoToLogin} />}
 
-            {this.state.view === 'welcome' && <Welcome name={this.state.name} />}
+           
         </>
     }
 }

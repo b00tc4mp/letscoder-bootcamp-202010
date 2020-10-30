@@ -110,7 +110,7 @@ describe (' when a user already exists', function () {
 
         })
       
-      console.log("out",token)
+    console.log("out",token)
 
        it('should fail on an already existing user', function (done) {
     console.log("it", token)
@@ -135,23 +135,30 @@ describe (' when a user already exists', function () {
             expect(status).toBe(204)
             expect(response.length).toBe(0)
             done()
-        }
+            }
         
         )
         
     })
 })
+describe('should fail on non-string full name')
+    let fullname, email, password, token
 
-    /* description('should fail on empty or blank fullname')
-
-    let fullname, email, password, token 
-
-    beforeEach( function() {
+    befoerEach(function() {
         fullname = `fullname-${random()}`
         email = `email-${random()}@mail.com`
-        password = `password-${random()}
-    })
- */
-  
+        password = `password-${random()}`        
 
-    
+    })
+    it('should fail o non-string full name', function(){
+        registerUser(fullname,email, password, repassword, function(error){
+            expect(error).toBeNull()
+
+        })
+    })
+    afterEach(function() {
+        call('POST')
+    })
+ 
+
+
