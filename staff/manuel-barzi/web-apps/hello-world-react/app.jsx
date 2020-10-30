@@ -4,7 +4,9 @@ class App extends Component {
     constructor() {
         super()
 
-        this.state = { view: 'access' }
+        const { token } = sessionStorage
+
+        this.state = { view: token ? 'home' : 'access', token }
     }
 
     handleGoToRegister = () => {
@@ -16,7 +18,8 @@ class App extends Component {
     }
 
     handleGoToAccess = () => {
-        this.setState({ view: 'access' })
+        if (!this.state.token)
+            this.setState({ view: 'access' })
     }
 
     handleRegister = (fullname, email, password, repassword) => {
@@ -32,14 +35,24 @@ class App extends Component {
             if (error) return alert(error.message)
 
             this.setState({ token, view: 'home' })
+
+            sessionStorage.token = token
         })
     }
 
+    handleLogout = () => {
+        delete sessionStorage.token
+
+        this.setState({ token: undefined, view: 'access' })
+    }
+
     render() {
-        const { state: { view, user, token }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
+        const { state: { view, token }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister, handleLogout } = this
 
         return <>
             <Title onHome={handleGoToAccess} />
+
+            {token && <button onClick={handleLogout}>Logout</button>}
 
             {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} />}
 
