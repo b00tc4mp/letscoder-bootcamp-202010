@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: bold;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #048b75;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  width: fit-content;
+  height: 100%;
+  padding: 10px;
+}
+
+.off {
+  display: none;
+}
+
+section {
+  padding: 30px;
+  border: 2px solid green;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: rgba(83, 114, 37, 0.911);
+  text-align: start;
+}
+
+.access {
+  border: 1px solid skyblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.access__register {
+  background-color: skyblue;
+  color: white;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
+}
+.access__login {
+  border-style: solid;
+  border-color: skyblue;
+  background-color: transparent;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
+}
+.access__login:hover {
+  background-color: #E9F6FD;
+}
+
+.title {
+  font-family: Bebas Neue;
+}
+
+.results__item:hover {
+  cursor: pointer;
+}
+
+.welcome {
+  background-color: acuamarine;
+}
+.welcome__image {
+  width: 150px;
+}
+
+/*# sourceMappingURL=index.css.map */
