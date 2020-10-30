@@ -31,12 +31,18 @@ class App extends Component {
         authenticateUser(email, password, (error, token) => {
             if (error) return alert(error.message)
 
-            this.setState({ token, view: 'home' })
+            this.setState({ token })
+
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
+
+                this.setState({ view: 'home', user })
+            })
         })
     }
 
     render() {
-        const { state: { view, user, token }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
+        const { state: { view, user }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
 
         return <>
             <Title onHome={handleGoToAccess} />
@@ -49,7 +55,7 @@ class App extends Component {
 
             {view === 'register-confirm' && <RegisterConfirm onLogin={handleGoToLogin} />}
 
-            {view === 'home' && <Home token={token} />}
+            {view === 'home' && <Home user={user} />}
         </>
     }
 }

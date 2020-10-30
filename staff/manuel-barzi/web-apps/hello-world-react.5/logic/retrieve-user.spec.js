@@ -1,8 +1,11 @@
-describe('SPEC searchVehicles()', () => {
-    describe('when query gives results', () => {
-        let fullname, email, password, token, query
+// const random = Math.random
+const { random } = Math
 
-        beforeEach(done => {
+describe('SPEC retrieveUser()', function () {
+    describe('when user already exists', function () {
+        let fullname, email, password, token
+
+        beforeEach(function (done) {
             fullname = `fullname-${random()}`
             email = `email-${random()}@mail.com`
             password = `password-${random()}`
@@ -25,8 +28,6 @@ describe('SPEC searchVehicles()', () => {
 
                             expect(token.length).toBeGreaterThan(0)
 
-                            query = ['red', 'blue', 'green', 'pink', 'black'].random()
-
                             done()
                         }
                     )
@@ -34,23 +35,15 @@ describe('SPEC searchVehicles()', () => {
             )
         })
 
-        it('should succeed on matching query', function (done) {
-            searchVehicles(token, query, function (error, vehicles) {
+        it('should succeed on right token', function (done) {
+            retrieveUser(token, function (error, user) {
                 expect(error).toBeNull()
 
-                expect(vehicles).toBeDefined()
-                expect(vehicles).toBeInstanceOf(Array)
-                expect(vehicles.length).toBeGreaterThan(0)
+                expect(user).toBeInstanceOf(Object)
+                expect(user.fullname).toBe(fullname)
+                expect(user.username).toBe(email)
 
-                vehicles.forEach(vehicle => {
-                    const { id, name, thumbnail, price, like } = vehicle
-
-                    expect(id).toBeOfType('string')
-                    expect(name).toBeOfType('string')
-                    expect(thumbnail).toBeOfType('string')
-                    expect(price).toBeOfType('number')
-                    expect(like).toBeFalse()
-                })
+                expect(true).toBeTrue()
 
                 done()
             })
@@ -71,10 +64,10 @@ describe('SPEC searchVehicles()', () => {
         })
     })
 
-    describe('when query gives no results', () => {
-        let fullname, email, password, token, query
+    describe('when user does not exist (but existed before)', function () {
+        let fullname, email, password, token
 
-        beforeEach(done => {
+        beforeEach(function (done) {
             fullname = `fullname-${random()}`
             email = `email-${random()}@mail.com`
             password = `password-${random()}`
@@ -97,39 +90,69 @@ describe('SPEC searchVehicles()', () => {
 
                             expect(token.length).toBeGreaterThan(0)
 
-                            query = ['asdfasd', 'asdfasdf', 'ljklajsdf', 'añsdflkj'].random()
+                            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                {
+                                    Authorization: `Bearer ${token}`,
+                                    'Content-type': 'application/json'
+                                },
+                                JSON.stringify({ password }),
+                                function (status, response) {
+                                    expect(status).toBe(204)
+                                    expect(response.length).toBe(0)
 
-                            done()
+                                    done()
+                                }
+                            )
                         }
                     )
                 }
             )
         })
 
-        it('should succeed providing no results (empty array) on non-matching query', function (done) {
-            searchVehicles(token, query, function (error, vehicles) {
-                expect(error).toBeNull()
+        it('should fail on right token', function (done) {
+            retrieveUser(token, function (error, user) {
+                expect(error).toBeInstanceOf(Error)
 
-                expect(vehicles).toBeDefined()
-                expect(vehicles).toBeInstanceOf(Array)
-                expect(vehicles.length).toBe(0)
+                var [, payload] = token.split('.')
+
+                var json = atob(payload)
+
+                var obj = JSON.parse(json)
+
+                var { sub: id } = obj
+
+                expect(error.message).toBe(`user with id "${id}" does not exist`)
 
                 done()
             })
         })
+    })
 
-        afterEach(function () {
-            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
-                {
-                    Authorization: `Bearer ${token}`,
-                    'Content-type': 'application/json'
-                },
-                JSON.stringify({ password }),
-                function (status, response) {
-                    expect(status).toBe(204)
-                    expect(response.length).toBe(0)
-                }
-            )
+    describe('when token is not a string', function () {
+        let token
+
+        beforeEach(function () {
+            token = [1, true, null, undefined, {}, [], function () { }, new Date].random()
+        })
+
+        it('should fail on non-string token', function () {
+            expect(function () {
+                retrieveUser(token, function () { })
+            }).toThrowError(TypeError, `${token} is not a token`)
+        })
+    })
+
+    describe('when token is empty or blank', function () {
+        let token
+
+        beforeEach(function () {
+            token = ['', ' ', '\t', '\n'].random()
+        })
+
+        it('should fail on empty or blank token', function () {
+            expect(function () {
+                retrieveUser(token, function () { })
+            }).toThrowError(Error, 'token is empty or blank')
         })
     })
 })
