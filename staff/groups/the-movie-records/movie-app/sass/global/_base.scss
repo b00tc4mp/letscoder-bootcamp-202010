@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0px;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: $text_font;
+  font-weight: 100;
+  color: #5b5b5b;
+}
+
+@media (min-width: 600px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 250px;
+  }
+}
