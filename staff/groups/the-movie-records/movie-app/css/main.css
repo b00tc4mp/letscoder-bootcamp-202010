@@ -13,7 +13,16 @@ header {
     margin: 0 auto;
   }
 }
+.logo__icon {
+  margin-left: 15px;
+}
+
+.profile__icon {
+  margin-right: 15px;
+}
+
 .discover {
+  margin-top: 15px;
   height: 200px;
   background-image: url(https://image.freepik.com/foto-gratis/claqueta-palomitas-maiz-raya-cine-entradas-cine-escritorio-madera_23-2148188189.jpg);
   background-repeat: no-repeat;
@@ -23,7 +32,8 @@ header {
   font-family: "Special Elite";
   color: #1a1b20;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 .discover__search {
   margin: 0 auto;
@@ -38,48 +48,295 @@ header {
     height: 250px;
   }
 }
-.new-movies {
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container-new-movies {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-top: 30px;
 }
-.new-movies img {
+.container-new-movies h1 {
+  font-size: 20px;
+  margin-left: 25px;
+  font-family: "Special Elite";
+}
+.container-new-movies .carousel {
+  display: block;
   max-width: 100%;
-  height: 90px;
+  height: 200px;
+  background: #8daeb1;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 5px;
+  margin: 0;
+  white-space: nowrap;
+  /* border-top: 2px solid black;
+  border-bottom: 2px solid black; */
+}
+.container-new-movies .carousel .item {
+  display: inline-block;
+  width: 150px;
+  margin: 0 10px;
+  height: 200px;
+  background: no-repeat center center;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #dfdfdf;
+}
+.container-new-movies .carousel .item .item div {
+  width: 100%;
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  font-size: 9em;
+  color: red;
+}
+.container-new-movies .carousel .uno {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.container-new-movies .carousel .dos {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.container-new-movies .carousel .tres {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.container-new-movies .carousel .cuatro {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
 }
 
 @media (min-width: 600px) {
-  header {
+  .container-new-movies {
     max-width: 1200px;
     margin: 0 auto;
-  }
-
-  .new-movies img {
-    max-width: 100%;
-    height: 200px;
   }
 }
 .upcoming {
-  margin-top: 100px;
-  display: flex;
+  margin-top: 20px;
   align-items: center;
   justify-content: center;
 }
-.upcoming img {
+.upcoming h1 {
+  font-size: 20px;
+  margin-left: 25px;
+  font-family: "Special Elite";
+}
+.upcoming .carousel {
+  display: block;
   max-width: 100%;
-  height: 90px;
+  height: 200px;
+  background: #8daeb1;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 10px;
+  margin: 0;
+  white-space: nowrap;
+  /*  border-top: 2px solid black;
+   border-bottom: 2px solid black; */
+}
+.upcoming .carousel .item {
+  display: inline-block;
+  width: 150px;
+  margin: 0 10px;
+  height: 200px;
+  background: no-repeat center center;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #dfdfdf;
+}
+.upcoming .carousel .item .item div {
+  width: 100%;
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  font-size: 9em;
+  color: red;
+}
+.upcoming .carousel .uno {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.upcoming .carousel .dos {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.upcoming .carousel .tres {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.upcoming .carousel .cuatro {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
 }
 
 @media (min-width: 600px) {
-  header {
+  .upcoming {
     max-width: 1200px;
     margin: 0 auto;
   }
+}
+.detail {
+  border: 1px black solid;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 600px;
+}
+.detail figure {
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.detail img {
+  max-width: 100%;
+  margin-bottom: 25px;
+}
 
-  .upcoming img {
+@media (min-width: 600px) {
+  .detail {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .detail img {
     max-width: 100%;
-    height: 200px;
+    width: 40vw;
+    margin: 0 auto;
+  }
+  .detail figure {
+    flex-direction: row;
+  }
+
+  h2 {
+    text-align: left;
+    margin-left: 40px;
+  }
+
+  .video {
+    display: flex;
+    justify-content: right;
+    margin-left: 40px;
+  }
+}
+footer {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 50px;
+}
+
+@media (min-width: 600px) {
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+.register {
+  border: 1px solid #e00000;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+.register label {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.register h2 {
+  margin-top: 80px;
+  font-family: "Special Elite";
+}
+.register button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  font-family: "Special Elite";
+  border: none;
+  font-size: 20px;
+  border-radius: 1rem 0 1rem;
+  border: 3px solid #e00000;
+}
+
+@media (min-width: 600px) {
+  .register {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 800px;
+    height: 300px;
+  }
+
+  label {
+    display: block;
+    padding: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: "Special Elite";
+  }
+}
+.login {
+  border: 1px solid #e00000;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+.login label {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.login h2 {
+  margin-top: 80px;
+  font-family: "Special Elite";
+  margin-left: 20px;
+}
+.login button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  font-family: "Special Elite";
+  border: none;
+  font-size: 20px;
+  border-radius: 1rem 0 1rem;
+  border: 3px solid #e00000;
+}
+
+@media (min-width: 600px) {
+  .login {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 800px;
+    height: 300px;
+    margin-top: 50px;
+  }
+
+  label {
+    display: block;
+    padding: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: "Special Elite";
   }
 }
 

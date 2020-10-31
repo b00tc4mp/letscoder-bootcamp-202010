@@ -1,4 +1,5 @@
 .discover{
+    margin-top: 15px;
     height: 200px;
     background-image: url(https://image.freepik.com/foto-gratis/claqueta-palomitas-maiz-raya-cine-entradas-cine-escritorio-madera_23-2148188189.jpg);
     background-repeat: no-repeat;
@@ -7,7 +8,8 @@
             font-family: 'Special Elite';
             color: #1a1b20;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
+            padding-top: 20px;
         }
         &__search{
             margin: 0 auto;

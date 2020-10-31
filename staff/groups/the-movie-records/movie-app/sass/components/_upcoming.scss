@@ -1,24 +1,74 @@
 .upcoming{
-    margin-top: 100px;
-    display: flex;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
-    img{
-        max-width: 100%; 
-        height:90px;
+    h1 {
+        font-size: 20px;
+        margin-left: 25px;
+        font-family: 'Special Elite';
     }
-}
+    .carousel{
+        display: block;
+        max-width: 100%;
+        height: 200px;
+        background: #8daeb1;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 10px;
+        margin: 0;
+        white-space: nowrap;
+       /*  border-top: 2px solid black;
+        border-bottom: 2px solid black; */
+          .item{
+              display: inline-block;
+              width: 150px;
+              margin: 0 10px;
+              height: 200px;
+              background: no-repeat center center;
+              position: relative;
+              border-radius: 20px;
+              box-shadow: 0 0 10px #dfdfdf;
+              
+          .item div{
+              width: 100%;
+              top:10%;
+              position: absolute;
+              text-align: center;
+              font-size: 9em;
+              color: red;
+          }
+ 
+          
+         }
+         
+         .uno{
+             background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+             background-size: cover;
+         }
+         .dos{
+             background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+             background-size: cover;
+         }
+         .tres{
+             background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+             background-size: cover;
+         }
+         .cuatro{
+             background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+             background-size: cover;
+         }
+         
+ 
+     }
+ 
+     
+      
+ }
 
-@media (min-width:600px){
-    header{
+ @media (min-width:600px){
+    .upcoming{
         max-width: 1200px;
         margin: 0 auto;
     }
-    .upcoming{
-     
-        img{max-width: 100%; 
-            height: 200px
-
-        }
-    }
+    
 }

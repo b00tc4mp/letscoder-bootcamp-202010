@@ -1,0 +1,48 @@
+.detail{
+    border: 1px black solid;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    height: 600px;
+
+    figure{
+        display: flex;
+        align-content: flex-start;
+        flex-direction: column;
+
+    }
+
+    img{
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    
+}
+
+@media (min-width:600px){
+    .detail{
+        max-width: 1200px;
+        margin: 0 auto;
+        img{
+
+            max-width: 100%;
+            width: 40vw;
+            margin: 0 auto;
+        }
+        figure{
+            flex-direction: row;
+        }
+    }
+    h2{
+        text-align: left;
+        margin-left: 40px;
+       
+    }
+
+    .video{
+        display: flex;
+        justify-content: right;
+        margin-left: 40px;
+    }
+}
