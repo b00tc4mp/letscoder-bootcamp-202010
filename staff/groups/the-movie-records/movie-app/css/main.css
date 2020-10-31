@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&family=Special+Elite&display=swap");
+header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+
+@media (min-width: 600px) {
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.discover {
+  height: 200px;
+  background-image: url(https://image.freepik.com/foto-gratis/claqueta-palomitas-maiz-raya-cine-entradas-cine-escritorio-madera_23-2148188189.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.discover__title {
+  font-family: "Special Elite";
+  color: #1a1b20;
+  text-align: center;
+  margin-top: 30px;
+}
+.discover__search {
+  margin: 0 auto;
+  display: block;
+  margin-top: 40px;
+}
+
+@media (min-width: 600px) {
+  .discover {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 250px;
+  }
+}
+.new-movies {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-movies img {
+  max-width: 100%;
+  height: 90px;
+}
+
+@media (min-width: 600px) {
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .new-movies img {
+    max-width: 100%;
+    height: 200px;
+  }
+}
+.upcoming {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upcoming img {
+  max-width: 100%;
+  height: 90px;
+}
+
+@media (min-width: 600px) {
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .upcoming img {
+    max-width: 100%;
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
