@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1 class="title">
+                    The Bohemians
+                </h1>
+            </header>
+            
+            <h3 class="subtitle">Your app to search your favourite tracks</h3>
+            
+        <section class="access off">
+            <div class="button button__register">Register</div> or <div class="button button__login">Login</div>
+        </section>
 
-    <h1 class="title">
-        The Bohemians
-    </h1>
-
-    <h2 class="subTitle"></h2>
-
-    <section class="access">
-        <button class="access__register">Register</button> or <button class="access__login">Login</button>
-    </section>
-
-    <section class="register">
+    <section class="register off">
         <form class="register__form">
             <input type="text" name= "fullname" placeholder="full name" required>
             <input type="email" name= "email" placeholder="e-mail" required>
             <input type="password" name= "password" placeholder="password" required>
             <input type="password" name= "repassword" placeholder="repeat password" required>
-            <button>Register</button>
+            <div class="button button__submitRegister">Register</div>
+            <!-- <button>Register</button> -->
         </form>
     </section>
-
+    
     <section class="register-confirm off">
-        User register successfully, proceed to <button class="register-confirm__logic">Login</button>
+        User register successfully, proceed to <button class="register-confirm__login">Login</button>
     </section>
-
-    <section class="login">
+    
+    <section class="login off">
         <form class="login__form">
             <input type="email" name="email"placeholder="e-mail" required>
             <input type="password" name="password" placeholder="password" required>
-
+            <div class="button button__submitLogin">Login</div>
+            <!-- <button>Login</button> -->
         </form>
     </section>
+
+    <section class="welcome">
+        <h2>Welcome to The Bohemians</h2>
+
+    </section>
+
+    <section class="search">
+        <form class="search__form">
+            <input type="text" name="artist" placeholder="Search by Artist">
+            <input type="text" name="tracks" placeholder="Search by tracks">
+            <div class="button button__search">Search</div>
+        </form>
+
+    </section>
+
+    <!-- <footer>
+        <p>Copyright: Pilar Latorre & Cristian Manzano</p>
+    </footer> -->
+</main>
 
 </body>
 </html>
