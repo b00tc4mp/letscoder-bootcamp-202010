@@ -8,7 +8,7 @@
 
 ## How it works
 
-...
+......
 
 ## Technical Description
 
