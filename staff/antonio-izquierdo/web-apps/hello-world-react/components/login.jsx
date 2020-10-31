@@ -10,7 +10,7 @@ return <section className="login">
                 var password = event.target.password.value*/
 
                 try {
-                    props.onLogin(email, password)
+                    onLogin(email, password)
                 } catch (error) {
                     alert(error.message)
                 }
