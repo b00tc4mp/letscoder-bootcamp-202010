@@ -2,7 +2,7 @@ class App extends React.Component {
     constructor() {
         super()
 
-        this.state = { view: 'home' }
+        this.state = { view: 'access' }
 
         this.handleGoToRegister = this.handleGoToRegister.bind(this)
         this.handleGoToLogin = this.handleGoToLogin.bind(this)
