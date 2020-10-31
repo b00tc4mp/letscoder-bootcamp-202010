@@ -1,12 +1,12 @@
-function searchVehicles(query, callback) {
+function searchMovie(query, callback) {
     if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
     if (!query.trim().length) throw new Error('query is empty or blank')
 
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 
-    call('GET', `https://newsapi.org/v2/everything?q=${query}`,
-        {'X-Api-Key': '1a6cabf9d7414412ab980b5693d5764f'}, '', function (status, response) {
+    call('GET', `https://api.themoviedb.org/3/search/movie?api_key=e187746b7167e4886a5d0a2f1ead5a18&query=${query}`,
+        {}, '', function (status, response) {
             if (status === 200) {
                 const res = JSON.parse(response)
 
