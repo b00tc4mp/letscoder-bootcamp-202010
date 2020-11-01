@@ -17,7 +17,7 @@ function registerUser(fullname, email, password, repassword, callback) {
 
     if (!repassword.trim().length) throw new Error('password repeat is empty or blank')
 
-    if (password !== repassword) throw new Error('passwords don\'t match')
+    if (password !== repassword) throw new Error('passwords don\'t match');
 
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 

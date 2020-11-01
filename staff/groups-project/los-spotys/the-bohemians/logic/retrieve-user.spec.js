@@ -1,4 +1,4 @@
-const { random } = Math
+
 
 describe('SPEC retrieveUser()', function () {
     describe('when user already exists', function () {
