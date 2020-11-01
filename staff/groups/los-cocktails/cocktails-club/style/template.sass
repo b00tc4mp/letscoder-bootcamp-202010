@@ -1,2 +1,38 @@
+@import config
+*
+    border: 1px solid black
 body
+    // align-items: center
+    // justify-content: center
+    background-image: url('./images/mobile-background-image-iphone.jpg')
+    margin: 0 auto
+    text-align: center
+    // display: block
+    display: flex
+    justify-content: center
     align-items: center
+    flex-direction: column
+.logo
+    max-height: 20vw
+    max-width: 40vw
+    margin: 15vw auto 0 auto
+    
+.access
+    padding: 5vw
+    margin: 1vw 5vw 5vw 5vw
+    width: 45vw
+    display: flex
+    flex-direction: row
+    gap: 5px
+    &__register
+        +size(6.5rem,3rem)
+        padding: 2vw 4.5vw 2vw 4.5vw
+        border-radius: .5rem
+    &__login
+        +size(6.5rem,3rem)
+        padding: 2vw 5.5vw 2vw 5.5vw
+        border-radius: .5rem
+        background-color: transparentize(white,.9)
+        color: white
+
+    
