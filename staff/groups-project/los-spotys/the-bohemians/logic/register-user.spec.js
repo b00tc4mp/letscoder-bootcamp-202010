@@ -5,7 +5,7 @@ describe('SPEC registerUser()', function(){
         let fullname, email, password, repassword, token
 
         beforeEach(function(){
-            fullname = `fullname-${random()}`
+            fullname = `Pepito-${random()}`
             email = `email-${random()}@mail.com`
             password = `password-${random()}`
             repassword = password
