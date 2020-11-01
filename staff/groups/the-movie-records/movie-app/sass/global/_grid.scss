@@ -5,3 +5,9 @@
   align-items: stretch;
   list-style: none;
 }
+
+@media (min-width: 600px) {
+  .u-grid-items {
+    grid-gap: 10px;
+  }
+}

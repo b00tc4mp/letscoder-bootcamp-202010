@@ -10,16 +10,48 @@
     />
     <title>Home</title>
   </head>
-
-  <style></style>
   <body>
-    <header>
-      <div class="logo">Logo</div>
-      <div class="profile">Profile</div>
-    </header>
-    <main>
-      <style></style>
+    <!-- BEGIN Header Component-->
+    <header class="header">
+      <div class="header__logo"><i class="fa fa-film"></i>MovieRecords</div>
+      <!-- BEGIN Avatar Component-->
+      <div class="avatar">
+        <div class="avatar__initials">SG</div>
+        <img
+          class="avatar__image"
+          src="https://s3.amazonaws.com/uifaces/faces/twitter/c_southam/128.jpg"
+          alt="alt"
+        />
+        <div class="avatar__notifications">01</div>
+      </div>
+      <!-- END Avatar Component-->
 
+      <div class="search-wrapper">
+        <div class="input-holder">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Type to search"
+          />
+          <button class="search-icon" onclick="searchToggle(this, event);">
+            <span></span>
+          </button>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);"></span>
+      </div>
+    </header>
+    <!-- END Header Component-->
+    <main>
+      <!-- BEGIN Discover Component-->
+      <div class="discover">
+        <h1 class="discover__title">Bienvenidos a MovieRecord</h1>
+        <h2 class="discover__subtitle">
+          Si eres amante del cine, este es tu site. Explora ahora.
+        </h2>
+      </div>
+      <!-- END Discover Component-->
+
+      <!-- BEGIN Search Component-->
       <div class="search">
         <div class="search-content">
           <input
@@ -32,7 +64,10 @@
           </button>
         </div>
       </div>
+      <!-- END Search Component-->
 
+      <!-- BEGIN Card Component-->
+      <section class="u-p-h-20">
       <ul class="u-grid-items">
         <li>
           <article class="card">
@@ -203,7 +238,9 @@
         </li>
         </li>
       </ul>
+      </section>
+      <!-- END Card Component-->
     </main>
-    <footer></footer>
+    <footer>🎬 Copyright © - MovieRecord (Aida & Siscu) 🎬</footer>
   </body>
 </html>
