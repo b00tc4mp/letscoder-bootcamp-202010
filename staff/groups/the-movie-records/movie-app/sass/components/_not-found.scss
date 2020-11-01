@@ -9,9 +9,9 @@
 .not-found:before {
   content: "";
   position: absolute;
-  top: calc(50% - 173px);
+  top: calc(50% - 28px);
   background: #38383829;
-  padding: 98px;
+  padding: 46px;
   border-radius: 50%;
   display: block;
   width: 50px;
@@ -20,20 +20,34 @@
   transform: translate(-50%);
 }
 .not-found__message {
-  font-size: 3rem;
+  font-size: 2.3rem;
   text-align: center;
   color: #a1a1a1;
 }
 
 .not-found__wrapper {
-  height: 250px;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   width: 140px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0.5);
+}
+
+@media (min-width: 600px) {
+  .not-found {
+    &:before {
+      padding: 98px;
+      top: calc(50% - 173px);
+    }
+    &__wrapper {
+      transform: translateY(calc(50% - 102px));
+    }
+    &__message {
+      font-size: 3rem;
+    }
+  }
 }
 
 .not-found__head {
