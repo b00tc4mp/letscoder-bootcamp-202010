@@ -1,29 +1,30 @@
-.discover{
-    margin-top: 15px;
-    height: 200px;
-    background-image: url(https://image.freepik.com/foto-gratis/claqueta-palomitas-maiz-raya-cine-entradas-cine-escritorio-madera_23-2148188189.jpg);
-    background-repeat: no-repeat;
-    background-size: cover ;
-        &__title{
-            font-family: 'Special Elite';
-            color: #1a1b20;
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-        }
-        &__search{
-            margin: 0 auto;
-            display: block;
-            margin-top: 40px;
-        }
+.discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  background-image: url(../images/bg-discord.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 11px solid #2b577b;
+  text-align: center;
+  &__title {
+    font-family: "Special Elite";
+    color: #1a1b20;
+    text-align: center;
+    background: #fff;
+    padding: 10px 20px;
+  }
+  &__subtitle {
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+    background: rgb(255 255 255 / 72%);
+    padding: 10px 20px;
+    font-weight: 100;
+  }
+}
 
-
-}     
-
-@media (min-width:600px){
-    .discover{
-        max-width: 1200px;
-        margin: 0 auto;
-        height: 250px;
-    }
+@media (min-width: 600px) {
 }

@@ -4,44 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <title>Home</title>
-    
   </head>
   <body>
-    <header>
-      <div class="logo"><i class = " logo__icon fa fa-film fa-3x"></i></div>
-      <div class="profile"> <i class=" profile__icon fas fa-user-alt fa-3x"></i></div>
-    </header>
-    <main>
-      <div class="discover">
-        <h2 class="discover__title">Bienvenido a MOVIERECORD</h2>
-        <input class = "discover__search" type="text">
+    <!-- BEGIN Header Component-->
+    <header class="header">
+      <div class="header__logo"><i class="fa fa-film"></i>MovieRecords</div>
+      <!-- BEGIN Avatar Component-->
+      <div class="avatar">
+        <div class="avatar__initials">SG</div>
+        <img
+          class="avatar__image"
+          src="https://s3.amazonaws.com/uifaces/faces/twitter/c_southam/128.jpg"
+          alt="alt"
+        />
+        <div class="avatar__notifications">01</div>
       </div>
+      <!-- END Avatar Component-->
+
+      <div class="search-wrapper">
+        <div class="input-holder">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Type to search"
+          />
+          <button class="search-icon" onclick="searchToggle(this, event);">
+            <span></span>
+          </button>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);"></span>
+      </div>
+    </header>
+    <!-- END Header Component-->
+    <main>
+      <!-- BEGIN Discover Component-->
+      <div class="discover">
+        <h1 class="discover__title">Bienvenidos a MovieRecord</h1>
+        <h2 class="discover__subtitle">
+          Si eres amante del cine, este es tu site. Explora ahora.
+        </h2>
+      </div>
+      <!-- END Discover Component-->
+
+      <!-- BEGIN Search Component-->
+      <div class="search">
+        <div class="search-content">
+          <input
+            type="text"
+            class="search-content__input"
+            placeholder="¿Qué película quieres buscar?"
+          />
+          <button type="submit" class="search-content__submit">
+            <i class="search-content__icon fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <!-- END Search Component-->
+
       <div class="container-new-movies">
         <h1>New Movies</h1>
         <div class="carousel">
-         
-          <div class = "uno item"></div>  
-          <div class = "dos item"></div>
-          <div class = "tres item"></div>
-          <div class = "cuatro  item"></div>
-
-
+          <div class="uno item"></div>
+          <div class="dos item"></div>
+          <div class="tres item"></div>
+          <div class="cuatro item"></div>
         </div>
       </div>
       <div class="upcoming">
         <h1>Upcoming</h1>
         <div class="carousel">
-          <div class = "uno item"></div>  
-          <div class = "dos item"></div>
-          <div class = "tres item"></div>
-          <div class = "cuatro item"></div>
+          <div class="uno item"></div>
+          <div class="dos item"></div>
+          <div class="tres item"></div>
+          <div class="cuatro item"></div>
         </div>
-    </div>
+      </div>
     </main>
-    <footer></footer>
+    <footer>🎬 Copyright © - LetsCoders - MovieRecord (Aida & Siscu) 🎬</footer>
+    <script>
+      function searchToggle(obj, evt) {
+        var container = $(obj).closest(".search-wrapper");
+        if (!container.hasClass("active")) {
+          container.addClass("active");
+          evt.preventDefault();
+        } else if (
+          container.hasClass("active") &&
+          $(obj).closest(".input-holder").length == 0
+        ) {
+          container.removeClass("active");
+          // clear input
+          container.find(".search-input").val("");
+        }
+      }
+    </script>
   </body>
 </html>

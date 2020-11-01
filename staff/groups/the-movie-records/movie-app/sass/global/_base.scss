@@ -5,6 +5,8 @@
 }
 html {
   font-size: 62.5%;
+  background-image: url("../images/bg-movie-time.jpg");
+  background-size: cover;
 }
 body {
   box-sizing: border-box;
@@ -13,12 +15,18 @@ body {
   font-family: $text_font;
   font-weight: 100;
   color: #5b5b5b;
+  background-color: rgb(255 255 255 / 98%);
+  border-left: 4px solid #061b3a;
+  border-right: 4px solid #061b3a;
+  display: flex;
+  flex-direction: column;
+  & > main {
+    flex: 1 0 auto;
+  }
 }
-
 @media (min-width: 600px) {
-  main {
+  body {
     max-width: 1200px;
     margin: 0 auto;
-    height: 250px;
   }
 }

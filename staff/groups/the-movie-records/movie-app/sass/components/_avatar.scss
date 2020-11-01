@@ -1,0 +1,37 @@
+.avatar {
+  position: relative;
+  display: table;
+  height: 2.2em;
+  width: 2.2em;
+  background: #378fba;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px grey;
+  &__initials {
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    border: 2px solid #378fba;
+    max-width: 100%;
+    height: auto;
+  }
+  &__notifications {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: #378fba;
+    border-radius: 50%;
+    color: white;
+    font-size: calc(20px / 2);
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+  }
+}

@@ -1,16 +1,14 @@
-footer{
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid black;
-    margin-top: 50px;
-}
-
-@media (min-width:600px){
-    footer{
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 30px;
-    }
+footer {
+  flex: none;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 50px;
+  background: #000;
+  text-align: center;
+  display: block;
+  line-height: 30px;
+  color: #5c8baf;
 }
