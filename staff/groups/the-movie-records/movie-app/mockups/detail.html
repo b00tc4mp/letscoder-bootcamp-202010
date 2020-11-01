@@ -4,29 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <div class="logo"><i class = " logo__icon fa fa-film fa-3x"></i></div>
-      <div class="profile"> <i class=" profile__icon fas fa-user-alt fa-3x"></i></div>
+    <!-- BEGIN Header Component-->
+    <header class="header">
+      <div class="header__logo"><i class="fa fa-film"></i>MovieRecords</div>
+      <!-- BEGIN Avatar Component-->
+      <div class="avatar">
+        <div class="avatar__initials">SG</div>
+        <img
+          class="avatar__image"
+          src="https://s3.amazonaws.com/uifaces/faces/twitter/c_southam/128.jpg"
+          alt="alt"
+        />
+        <div class="avatar__notifications">01</div>
+      </div>
+      <!-- END Avatar Component-->
     </header>
+    <!-- END Header Component-->
     <main>
-      <div class="detail">
-        <h2>Titulo</h2>
-        <div class="like"></div>
-        <figure>
-          <img src= "https://images.squarespace-cdn.com/content/v1/50f6d8dfe4b0c4007db424a3/1395747967362-YRNHHTFR811FPLXC3J88/ke17ZwdGBToddI8pDm48kJRqFJ19D4P4EwsC9z3fiewUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dkV64dCjSK7Zaaf7dwPYPO_gHf_vjqrS5WJoq1nmwotrP7cJNZlDXbgJNE9ef52e8w/Captain-America-The-Winter-Soldier-2014-Poster-Wallpaper-1600x900.jpg"/>
-          <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis ab laboriosam nisi libero? Neque nostrum, ullam quibusdam fugit harum cupiditate quas nam sunt doloremque distinctio, rerum dolore nemo natus! </figcaption>
-        </figure>
-        
-       
-        <div class="video">
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/LuOLcuKVFwY?controls=0">
-        </iframe>
+      <!-- BEGIN Search Component-->
+      <div class="search">
+        <div class="search-content">
+          <input
+            type="text"
+            class="search-content__input"
+            placeholder="¿Qué película quieres buscar?"
+          />
+          <button type="submit" class="search-content__submit">
+            <i class="search-content__icon fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <!-- END Search Component-->
+
+      <!-- BEGIN Movie Component-->
+      <div class="movie">
+        <div class="movie__info">
+          <h1 class="movie__title">
+            Captain America's Bicentennial Battles (junio de 1976)
+          </h1>
+          <div class="movie__detail">
+            <div
+              class="movie__poster"
+              data-title="Capitan America"
+              data-description="Se enfrentan a un enemigo inesperado mientras intentan sacar a la luz una conspiración que pone en riesgo al mundo"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/6QBRnyvJHD7slOlX6aukvMwcEu.jpg"
+                alt="Meat"
+                width="300"
+              />
+            </div>
+            <div>
+              Capitán América, Viuda Negra y un nuevo aliado, Falcon, se
+              enfrentan a un enemigo inesperado mientras intentan sacar a la luz
+              una conspiración que pone en riesgo al mundo.
+            </div>
+          </div>
+        </div>
+
+        <div class="movie__trailer">
+          <div class="video-wrap">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/LuOLcuKVFwY?controls=0"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <!-- END Movie Component-->
       </div>
     </main>
-    <footer></footer>
+    <footer>🎬 Copyright © - MovieRecord (Aida & Siscu) 🎬</footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        console.log("DOM fully loaded and parsed");
+        document.querySelector(".movie__info").style.backgroundImage =
+          "url(https://images.squarespace-cdn.com/content/v1/50f6d8dfe4b0c4007db424a3/1395747967362-YRNHHTFR811FPLXC3J88/ke17ZwdGBToddI8pDm48kJRqFJ19D4P4EwsC9z3fiewUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dkV64dCjSK7Zaaf7dwPYPO_gHf_vjqrS5WJoq1nmwotrP7cJNZlDXbgJNE9ef52e8w/Captain-America-The-Winter-Soldier-2014-Poster-Wallpaper-1600x900.jpg)";
+      });
+    </script>
   </body>
 </html>

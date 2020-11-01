@@ -1,14 +1,13 @@
 footer {
   flex: none;
   display: flex;
-  height: 30px;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid black;
-  margin-top: 50px;
-  background: #000;
+  border-top: 5px solid #2c506d;
+  background: #2b577b;
   text-align: center;
   display: block;
   line-height: 30px;
-  color: #5c8baf;
+  color: #fdfdfd;
+  padding: 5px 0;
 }
