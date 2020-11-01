@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 * {
   box-sizing: border-box;
@@ -7,28 +7,39 @@
 }
 
 body {
-  background: linear-gradient(to right, rgba(255, 0, 0, 0), #d9f573);
-  color: #202120;
-  font-family: "Nunito Sans", sans-serif;
+  color: #bdb9b9;
+  font-family: "Roboto", sans-serif;
+}
+
+#root {
+  background-image: url("./background2.jpg");
+  background-color: transparent;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .title {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
-  margin: 0.5rem auto;
-  width: 95%;
-  background-color: #d7f7d3;
+  margin: auto;
   border-radius: 1rem;
-  font-family: "Anton", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #bdb9b9;
+  width: 90%;
+  font-size: 2rem;
 }
 .title__small {
-  font-size: 1.1rem;
-  margin-left: 0.5rem;
+  font-size: 0.8rem;
 }
 .title__app {
-  color: #165253;
-  text-shadow: 2px 2px #929d9e;
+  color: #489899;
 }
 
 .access {
@@ -36,7 +47,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 75%;
-  margin: auto;
+  margin: 5rem auto;
   flex-wrap: wrap;
 }
 .access__login {
@@ -56,13 +67,13 @@ body {
   padding: 2rem 0;
 }
 .register__subtitle {
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 0.8rem;
+  color: #bdb9b9;
 }
 .register__form {
   width: 75%;
   margin: auto;
-  background-color: #f6faf8;
   padding: 1rem;
   overflow: auto;
   border-radius: 1rem;
@@ -76,15 +87,28 @@ body {
   margin: auto;
 }
 
+.register-confirm {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 85%;
+  margin: 2rem auto;
+  color: #bdb9b9;
+}
+.register-confirm__thk {
+  font-size: 0.8rem;
+  padding: 1.5rem 0;
+}
+
 .btn {
   margin: 0.5rem;
   text-decoration: none;
   border-style: none;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 0.4rem;
-  background-color: #586A64;
-  color: white;
-  box-shadow: 3px 3px #929d9e;
+  background-color: #706d74;
+  color: #bdb9b9;
   cursor: pointer;
 }
 
@@ -114,21 +138,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-.home__hello {
-  padding: 0.5rem;
-  text-align: center;
+
+.carousel {
+  width: 100%;
+  height: 150px;
+  overflow: auto;
 }
-.home__hello--span {
-  font-size: 1rem;
-}
-.home__profile {
-  padding: 1rem;
-}
-.home__profile-title {
-  padding: 0.5rem;
-}
-.home__search {
-  padding: 1rem;
+.carousel__movie {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=index.css.map */

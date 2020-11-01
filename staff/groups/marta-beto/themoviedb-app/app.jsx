@@ -2,11 +2,11 @@ class App extends React.Component {
     constructor() {
         super()
 
-        this.state = {view: 'access'}
+        this.state = {view: 'register-confirm'}
 
     }
 
-    handleGoToHome = () => {
+    handleGoToAccess = () => {
         this.setState({view: 'access'})
     }
 
@@ -19,7 +19,7 @@ class App extends React.Component {
     }
 
     handleRegister = (fullname, email, password, repassword) => {
-        registerUser(fullname, email, password, repassword, (error) => {
+        registerUser(fullname, email, password, repassword, error => {
             if (error) return alert(error.message);
 
             this.setState({ view: 'register-confirm' });
@@ -31,21 +31,31 @@ class App extends React.Component {
         authenticateUser(email, password, (error, token) => {
             if (error) return alert(error.message);
 
-            this.setState({ view: 'home' });
+            this.setState({ token });
+
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message);
+
+                this.setState({view: 'home', user})
+            })
         })
     }
  
     render() {
+        const {state: {view, user}, handleGoToAccess, handleGoToLogin, handleRegister, handleLogin, handleGoToRegister} = this;
+
         return <>
-        <Title onAccess={this.handleGoToHome}/>
+        <Title onAccess={handleGoToAccess}/>
 
-        {this.state.view === 'access' && <Access onRegisterSection={this.handleGoToRegister} onLoginSection={this.handleGoToLogin} />}
+        {view === 'access' && <Access onRegisterSection={handleGoToRegister} onLoginSection={handleGoToLogin} />}
 
-        {this.state.view === 'register' && <Register onClick={this.handleRegister}/>}
+        {view === 'register' && <Register onRegister={handleRegister}/>}
 
-        {this.state.view === 'login' && <Login onClick={this.handleLogin}/>}
+        {view === 'register-confirm' && <RegisterConfirm onLoginSection={handleGoToLogin}/>}
 
-        {this.state.view === 'home' && <Home />}
+        {view === 'login' && <Login onLogin={handleLogin}/>}
+
+        {view === 'home' && <Home user={user}/>}
 
         </>
     }

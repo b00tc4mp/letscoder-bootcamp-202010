@@ -30,10 +30,10 @@ describe('SPEC retrieveMovie()', () => {
         let movieId;
 
         beforeEach(() => {
-            movieId = [835567732432432, 2346787687632, 654354645654, 8956768778623];
+            movieId = [8332432, 26787632, 654355654, 895676623];
         })
 
-        it('should succeed resulting in error on non-matching id', done => {
+        it('should result in error on non-matching id', done => {
             retrieveMovie(movieId, (error, movie) => {
                 expect(error).toBeDefined('The resource you requested could not be found.')
 

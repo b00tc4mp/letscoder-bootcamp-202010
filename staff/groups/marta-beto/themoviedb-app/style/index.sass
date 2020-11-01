@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap')
 
 $base-color: linear-gradient(to right, rgba(255,0,0,0), #d9f573)
-$font-color: #202120
-$font-main: 'Nunito Sans', sans-serif
-$font-title: 'Anton', sans-serif
+$font-color: #bdb9b9
+$font-main: 'Roboto', sans-serif
+$font-title: 'Roboto', sans-serif
 
 @media only screen and (max-width: 600px)
     
@@ -14,27 +14,38 @@ $font-title: 'Anton', sans-serif
     padding: 0
 
 body
-    background: $base-color
     color: $font-color
     font-family: $font-main
 
+#root
+    background-image: url('./background2.jpg')
+    background-color: transparent
+    height: 700px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+
 .title
+    padding: 1rem
+    display: flex
+    flex-wrap: wrap
     text-align: center
     padding: .5rem
     cursor: pointer
-    margin: .5rem auto
-    width: 95%
-    background-color: #d7f7d3
+    margin: auto
     border-radius: 1rem
     font-family: $font-title
+    color: $font-color
+    width: 90%
+    font-size: 2rem
+
 
     &__small
-        font-size: 1.1rem
-        margin-left: .5rem
+        font-size: .8rem
 
     &__app
-        color: #165253
-        text-shadow: 2px 2px #929d9e
+        color: #489899
 
 
 .access
@@ -42,7 +53,7 @@ body
     justify-content: center
     align-items: center
     width: 75%
-    margin: auto
+    margin: 5rem auto
     flex-wrap: wrap
 
     
@@ -62,13 +73,13 @@ body
     padding: 2rem 0
 
     &__subtitle
-        padding: .5rem
+        padding: 1rem
         font-size: .8rem
+        color: $font-color
 
     &__form
         width: 75%
         margin: auto
-        background-color: #f6faf8 
         padding: 1rem
         overflow: auto
         border-radius: 1rem
@@ -81,15 +92,27 @@ body
     &__btn
         margin: auto
 
+.register-confirm
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
+    width: 85%
+    margin: 2rem auto
+    color: $font-color
+
+    &__thk
+        font-size: .8rem
+        padding: 1.5rem 0
+
 .btn
     margin: .5rem
     text-decoration: none
     border-style: none
-    padding: .3rem
+    padding: .5rem
     border-radius: .4rem
-    background-color: #586A64
-    color: white
-    box-shadow: 3px 3px #929d9e
+    background-color: #706d74
+    color: $font-color
     cursor: pointer
 
 .login
@@ -117,21 +140,17 @@ body
     display: flex
     flex-direction: column
 
-    &__hello
-        padding: .5rem
-        text-align: center
 
-        &--span
-            font-size: 1rem
+.carousel
+    width: 100%
+    height: 150px
+    overflow: auto
 
-    &__profile
-        padding: 1rem
+    &__movie
+        display: inline-block
 
-        &-title
-            padding: .5rem
 
-    &__search
-        padding: 1rem
+    
 
 @media only screen and (min-width: 600px)
 
