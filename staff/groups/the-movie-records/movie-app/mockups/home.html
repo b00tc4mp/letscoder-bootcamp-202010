@@ -3,20 +3,179 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <div class="logo">Logo</div>
-      <div class="profile">Logo</div>
-    </header>
-    <main>
-      <div class="discover">
-        <div class="search"></div>
+    <!-- BEGIN Header Component-->
+    <header class="header">
+      <div class="header__logo"><i class="fa fa-film"></i>MovieRecords</div>
+      <!-- BEGIN Avatar Component-->
+      <div class="avatar">
+        <div class="avatar__initials">SG</div>
+        <img
+          class="avatar__image"
+          src="https://s3.amazonaws.com/uifaces/faces/twitter/c_southam/128.jpg"
+          alt="alt"
+        />
+        <div class="avatar__notifications">01</div>
       </div>
-      <div class="new-movies"></div>
-      <div class="upcoming"></div>
+      <!-- END Avatar Component-->
+    </header>
+    <!-- END Header Component-->
+    <main>
+      <!-- BEGIN Discover Component-->
+      <div class="discover">
+        <h1 class="discover__title">Bienvenidos a MovieRecord</h1>
+        <h2 class="discover__subtitle">
+          Si eres amante del cine, este es tu site. Explora ahora.
+        </h2>
+      </div>
+      <!-- END Discover Component-->
+
+      <!-- BEGIN Search Component-->
+      <div class="search">
+        <div class="search-content">
+          <input
+            type="text"
+            class="search-content__input"
+            placeholder="¿Qué película quieres buscar?"
+          />
+          <button type="submit" class="search-content__submit">
+            <i class="search-content__icon fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <!-- END Search Component-->
+
+      <div class="u-box">
+        <!-- BEGIN ScrollableCarrousel Component-->
+        <h1>🆕 New Movies</h1>
+        <div class="scrollable-carousel">
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- END ScrollableCarrousel Component-->
+
+      <div class="u-box">
+        <!-- BEGIN ScrollableCarrousel Component-->
+        <h1>🛬 Upcoming</h1>
+        <div class="scrollable-carousel">
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+          <div class="scrollable-carousel__item">
+            <img
+              src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- END ScrollableCarrousel Component-->
     </main>
-    <footer></footer>
+    <footer>🎬 Copyright © - MovieRecord (Aida & Siscu) 🎬</footer>
   </body>
 </html>

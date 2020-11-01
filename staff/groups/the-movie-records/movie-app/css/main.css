@@ -1,0 +1,677 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0px;
+}
+
+html {
+  font-size: 62.5%;
+  background-image: url("../images/bg-movie-time.jpg");
+  background-size: cover;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Itim", cursive;
+  font-weight: 100;
+  color: #5b5b5b;
+  background-color: rgba(255, 255, 255, 0.98);
+  border-left: 4px solid #061b3a;
+  border-right: 4px solid #061b3a;
+  display: flex;
+  flex-direction: column;
+}
+body > main {
+  flex: 1 0 auto;
+}
+
+@media (min-width: 600px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.u-grid-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  list-style: none;
+}
+
+.header {
+  flex: none;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background: #2b577b;
+}
+.header__logo {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 100;
+  margin-left: 20px;
+}
+.header__logo i {
+  margin-right: 10px;
+}
+.header .avatar {
+  margin-right: 10px;
+}
+
+.logo__icon {
+  margin-left: 15px;
+}
+
+.profile__icon {
+  margin-right: 15px;
+}
+
+.discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  background-image: url(../images/bg-discord.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 11px solid #2b577b;
+  text-align: center;
+}
+.discover__title {
+  font-family: "Special Elite";
+  color: #1a1b20;
+  text-align: center;
+  background: #fff;
+  padding: 10px 20px;
+}
+.discover__subtitle {
+  margin: 0 auto;
+  display: block;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 10px 20px;
+  font-weight: 100;
+}
+
+.upcoming {
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.upcoming h1 {
+  font-size: 20px;
+  margin-left: 25px;
+  font-family: "Special Elite";
+}
+.upcoming .carousel {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  background: #8daeb1;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 10px;
+  margin: 0;
+  white-space: nowrap;
+  /*  border-top: 2px solid black;
+   border-bottom: 2px solid black; */
+}
+.upcoming .carousel .item {
+  display: inline-block;
+  width: 150px;
+  margin: 0 10px;
+  height: 200px;
+  background: no-repeat center center;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #dfdfdf;
+}
+.upcoming .carousel .item .item div {
+  width: 100%;
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  font-size: 9em;
+  color: red;
+}
+.upcoming .carousel .uno {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.upcoming .carousel .dos {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.upcoming .carousel .tres {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.upcoming .carousel .cuatro {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+
+@media (min-width: 600px) {
+  .upcoming {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.card {
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 4px 4px 5px 0px #cacaca75;
+  transition: 0.25s;
+  border: 1px solid #d8d8d8;
+}
+.card header {
+  height: 150px;
+  width: 100%;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  border: 2px solid white;
+}
+.card-header__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  padding: 0;
+}
+.card-body {
+  padding: 15px;
+  background-color: #fff;
+  width: 100%;
+}
+.card-body__title {
+  font-family: "Noto Sans", sans-serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #378fba;
+}
+
+.search {
+  width: 100%;
+  margin: 0 0 30px 0px;
+  padding: 20px;
+  border-bottom: 4px solid #dadada;
+  position: relative;
+}
+.search:before {
+  position: absolute;
+  content: url(/images/arrow.png);
+  background-image: url(../images/bg-popcorn.png);
+  opacity: 0.2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.search-content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-content__input {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #5b5b5b;
+  box-shadow: 4px 4px 5px 0px #cacaca75;
+  border: 2px solid #d8d8d8;
+  border-right: 0;
+  font-size: 2rem;
+  font-family: "Itim", cursive;
+}
+.search-content__submit {
+  width: 83px;
+  height: 50px;
+  border: 1px solid #00b4cc;
+  background: #378fba;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.search-content__submit:focus {
+  outline: none;
+}
+.search-content__submit:hover {
+  background: #4c5b68;
+}
+
+.search-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.search-wrapper .input-holder {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-wrapper.active .input-holder {
+  width: 450px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
+}
+
+.search-wrapper .input-holder .search-input {
+  width: 100%;
+  height: 50px;
+  padding: 0px 70px 0 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Open Sans", Arial, Verdana;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+  transform: translate(0, 60px);
+  transition: all 0.3s cubic-bezier(0, 0.105, 0.035, 1.57);
+  transition-delay: 0.3s;
+}
+
+.search-wrapper.active .input-holder .search-input {
+  opacity: 1;
+  transform: translate(0, 10px);
+}
+
+.search-wrapper .input-holder .search-icon {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-wrapper.active .input-holder .search-icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.search-wrapper .input-holder .search-icon span {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.4s cubic-bezier(0.65, -0.6, 0.24, 1.65);
+}
+
+.search-wrapper.active .input-holder .search-icon span {
+  transform: rotate(-45deg);
+}
+
+.search-wrapper .input-holder .search-icon span::before,
+.search-wrapper .input-holder .search-icon span::after {
+  position: absolute;
+  content: "";
+}
+
+.search-wrapper .input-holder .search-icon span::before {
+  width: 4px;
+  height: 11px;
+  left: 9px;
+  top: 18px;
+  border-radius: 2px;
+  background: #fe5f55;
+}
+
+.search-wrapper .input-holder .search-icon span::after {
+  width: 14px;
+  height: 14px;
+  left: 0px;
+  top: 0px;
+  border-radius: 16px;
+  border: 4px solid #fe5f55;
+}
+
+.search-wrapper .close {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transition: all 0.3s cubic-bezier(0.285, -0.45, 0.935, 0.11);
+  transition-delay: 0.2s;
+}
+
+.search-wrapper.active .close {
+  right: -50px;
+  transform: rotate(45deg);
+  transition: all 0.6s cubic-bezier(0, 0.105, 0.035, 1.57);
+  transition-delay: 0.5s;
+}
+
+.search-wrapper .close::before,
+.search-wrapper .close::after {
+  position: absolute;
+  content: "";
+  background: #fe5f55;
+  border-radius: 2px;
+}
+
+.search-wrapper .close::before {
+  width: 5px;
+  height: 25px;
+  left: 10px;
+  top: 0px;
+}
+
+.search-wrapper .close::after {
+  width: 25px;
+  height: 5px;
+  left: 0px;
+  top: 10px;
+}
+
+.container-new-movies {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.container-new-movies h1 {
+  font-size: 20px;
+  margin-left: 25px;
+  font-family: "Special Elite";
+}
+.container-new-movies .carousel {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  background: #8daeb1;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 5px;
+  margin: 0;
+  white-space: nowrap;
+  /* border-top: 2px solid black;
+  border-bottom: 2px solid black; */
+}
+.container-new-movies .carousel .item {
+  display: inline-block;
+  width: 150px;
+  margin: 0 10px;
+  height: 200px;
+  background: no-repeat center center;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #dfdfdf;
+}
+.container-new-movies .carousel .item .item div {
+  width: 100%;
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  font-size: 9em;
+  color: red;
+}
+.container-new-movies .carousel .uno {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.container-new-movies .carousel .dos {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.container-new-movies .carousel .tres {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+.container-new-movies .carousel .cuatro {
+  background-image: url("https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg");
+  background-size: cover;
+}
+
+@media (min-width: 600px) {
+  .container-new-movies {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.detail {
+  border: 1px black solid;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 600px;
+}
+.detail figure {
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.detail img {
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 600px) {
+  .detail {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .detail img {
+    max-width: 100%;
+    width: 40vw;
+    margin: 0 auto;
+  }
+  .detail figure {
+    flex-direction: row;
+  }
+
+  h2 {
+    text-align: left;
+    margin-left: 40px;
+  }
+
+  .video {
+    display: flex;
+    justify-content: right;
+    margin-left: 40px;
+  }
+}
+footer {
+  flex: none;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 50px;
+  background: #000;
+  text-align: center;
+  display: block;
+  line-height: 30px;
+  color: #5c8baf;
+}
+
+.register {
+  border: 1px solid #e00000;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+.register label {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.register h2 {
+  margin-top: 80px;
+  font-family: "Special Elite";
+}
+.register button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  font-family: "Special Elite";
+  border: none;
+  font-size: 20px;
+  border-radius: 1rem 0 1rem;
+  border: 3px solid #e00000;
+}
+
+@media (min-width: 600px) {
+  .register {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 800px;
+    height: 300px;
+  }
+
+  label {
+    display: block;
+    padding: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: "Special Elite";
+  }
+}
+.login {
+  border: 1px solid #e00000;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+.login label {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.login h2 {
+  margin-top: 80px;
+  font-family: "Special Elite";
+  margin-left: 20px;
+}
+.login button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  font-family: "Special Elite";
+  border: none;
+  font-size: 20px;
+  border-radius: 1rem 0 1rem;
+  border: 3px solid #e00000;
+}
+
+@media (min-width: 600px) {
+  .login {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 800px;
+    height: 300px;
+    margin-top: 50px;
+  }
+
+  label {
+    display: block;
+    padding: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: "Special Elite";
+  }
+}
+.avatar {
+  position: relative;
+  display: table;
+  height: 2.2em;
+  width: 2.2em;
+  background: #378fba;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px grey;
+}
+.avatar__initials {
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+}
+.avatar__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  border: 2px solid #378fba;
+  max-width: 100%;
+  height: auto;
+}
+.avatar__notifications {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: #378fba;
+  border-radius: 50%;
+  color: white;
+  font-size: calc(20px / 2);
+  min-width: 20px;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */

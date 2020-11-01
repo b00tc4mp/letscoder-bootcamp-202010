@@ -1,0 +1,23 @@
+.header {
+  flex: none;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background: #2b577b;
+  &__logo {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 100;
+    margin-left: 20px;
+    i {
+      margin-right: 10px;
+    }
+  }
+  .avatar {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+}
