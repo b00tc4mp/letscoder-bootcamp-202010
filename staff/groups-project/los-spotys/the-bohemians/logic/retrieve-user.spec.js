@@ -1,307 +1,157 @@
-describe('SPEC registerUser()', function(){
-    describe('When user is new', function(){
-        let fullname, email, password, repassword, token
 
-        beforeEach(function(){
+
+describe('SPEC retrieveUser()', function () {
+    describe('when user already exists', function () {
+        let fullname, email, password, token
+
+        beforeEach(function (done) {
             fullname = `fullname-${random()}`
             email = `email-${random()}@mail.com`
             password = `password-${random()}`
-            repassword = password
 
+            call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                { 'Content-type': 'application/json' },
+                JSON.stringify({ fullname, username: email, password }),
+                function (status, response) {
+                    expect(status).toBe(201)
+                    expect(response.length).toBe(0)
+
+                    call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+                        { 'Content-type': 'application/json' },
+                        JSON.stringify({ username: email, password }),
+                        function (status, response) {
+                            expect(status).toBe(200)
+                            expect(response.length).toBeGreaterThan(0)
+
+                            token = JSON.parse(response).token
+
+                            expect(token.length).toBeGreaterThan(0)
+
+                            done()
+                        }
+                    )
+                }
+            )
         })
 
-        it('should succeed when user is new', function(done){
-            registerUser(fullname,email,password,repassword,function(error){
+        it('should succeed on right token', function (done) {
+            retrieveUser(token, function (error, user) {
                 expect(error).toBeNull()
 
-               done()
-            })
+                expect(user).toBeInstanceOf(Object)
+                expect(user.fullname).toBe(fullname)
+                expect(user.username).toBe(email)
 
-        })
-
-        afterEach(function(done){
-
-            call('POST','https://b00tc4mp.herokuapp.com/api/v2/users/auth',
-                {'Content-type' : 'application/json'},
-                JSON.stringify({username: email, password}),
-
-                function(status,response){
-                    expect(status).toBe(200)
-                    expect(response.length).toBeGreaterThan(0)
-
-                    token = JSON.parse(response).token
-
-                    expect(token.length).toBeGreaterThan(0)
-
-                    call ('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
-                    {
-                        Authorization: `Bearer ${token}`,
-                        'Content-type' : 'application/json'
-                    },
-                    JSON.stringify({password}),
-                    function(status,response){
-                        expect(status).toBe(204)
-                        expect(response.length).toBe(0)
-
-                    done()
-                    })
-                }
-            )    
-        })
-    })
-})
-describe('when user already exist', function(){
-    let fullname, email, password, repassword, token
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = `email-${random()}@mail.com`
-        password = `password-${random()}`
-        repassword = password
-
-        call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
-        { 'Content-type': 'application/json' },
-        JSON.stringify({ fullname, username: email, password }),
-        function (status, response) {
-            expect(status).toBe(201)
-            expect(response.length).toBe(0)
-
-            it('should fail on already existing user', function(done){
-
-            registerUser(fullname,email,password,repassword,function(error){
-                expect(error).toBeIntanceOf(TypeError)
-                expect(error.message).toEqual('user with username "' + email + '" already exists', 'should error message match expected')
+                expect(true).toBeTrue()
 
                 done()
-            }) 
-            })
-            afterEach(function(done){
-
-                call('POST','https://b00tc4mp.herokuapp.com/api/v2/users/auth',
-                    {'Content-type' : 'application/json'},
-                    JSON.stringify({username: email, password}),
-
-                    function(status,response){
-                        expect(status).toBe(200)
-                        expect(response.length).toBeGreaterThan(0)
-
-                        token = JSON.parse(response).token
-
-                        expect(token.length).toBeGreaterThan(0)
-
-                        call ('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
-                        {
-                            Authorization: `Bearer ${token}`,
-                            'Content-type' : 'application/json'
-                        },
-                        JSON.stringify({password}),
-                        function(status,response){
-                            expect(status).toBe(204)
-                            expect(response.length).toBe(0)
-
-                        done()
-                        })
-                    }
-                )    
             })
         })
-    })
-})  
 
-describe('when fullname is a non-string', function(){
-    let fullname,email,password,repassword
-
-    beforeEach(function(){
-        fullname = [1, true, null, undefined, {}, [], function () { }, new Date].random()
-        email = `email-${random()}@mail.com`
-        password = `password-${random()}`
-        repassword = password
-
-    })
-    it('should fail on non-string fullname', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `${fullname} is not a full name`)
+        afterEach(function () {
+            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                {
+                    Authorization: `Bearer ${token}`,
+                    'Content-type': 'application/json'
+                },
+                JSON.stringify({ password }),
+                function (status, response) {
+                    expect(status).toBe(204)
+                    expect(response.length).toBe(0)
+                }
+            )
         })
     })
-})
 
-describe('when fullname is a blank or empty', function(){
-    let fullname,email,password,repassword
+    describe('when user does not exist (but existed before)', function () {
+        let fullname, email, password, token
 
-    beforeEach(function(){
-        fullname = ['', ' ', '\t', '\n'].random()
-        email = `email-${random()}@mail.com`
-        password = `password-${random()}`
-        repassword = password
+        beforeEach(function (done) {
+            fullname = `fullname-${random()}`
+            email = `email-${random()}@mail.com`
+            password = `password-${random()}`
 
-    })
-    it('should fail on empty or blank full name', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `full name is empty or blank`)
+            call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                { 'Content-type': 'application/json' },
+                JSON.stringify({ fullname, username: email, password }),
+                function (status, response) {
+                    expect(status).toBe(201)
+                    expect(response.length).toBe(0)
+
+                    call('POST', 'https://b00tc4mp.herokuapp.com/api/v2/users/auth',
+                        { 'Content-type': 'application/json' },
+                        JSON.stringify({ username: email, password }),
+                        function (status, response) {
+                            expect(status).toBe(200)
+                            expect(response.length).toBeGreaterThan(0)
+
+                            token = JSON.parse(response).token
+
+                            expect(token.length).toBeGreaterThan(0)
+
+                            call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
+                                {
+                                    Authorization: `Bearer ${token}`,
+                                    'Content-type': 'application/json'
+                                },
+                                JSON.stringify({ password }),
+                                function (status, response) {
+                                    expect(status).toBe(204)
+                                    expect(response.length).toBe(0)
+
+                                    done()
+                                }
+                            )
+                        }
+                    )
+                }
+            )
+        })
+
+        it('should fail on right token', function (done) {
+            retrieveUser(token, function (error, user) {
+                expect(error).toBeInstanceOf(Error)
+
+                var [, payload] = token.split('.')
+
+                var json = atob(payload)
+
+                var obj = JSON.parse(json)
+
+                var { sub: id } = obj
+
+                expect(error.message).toBe(`user with id "${id}" does not exist`)
+
+                done()
+            })
         })
     })
-})
 
-describe('when email is non-string', function(){
-    let fullname,email,password,repassword
+    describe('when token is not a string', function () {
+        let token
 
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = [1, true, null, undefined, {}, [], function () { }, new Date].random()
-        password = `password-${random()}`
-        repassword = password
+        beforeEach(function () {
+            token = [1, true, null, undefined, {}, [], function () { }, new Date].random()
+        })
 
-    })
-    it('should fail on non-string email', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `${email} is not an e-mail`)
+        it('should fail on non-string token', function () {
+            expect(function () {
+                retrieveUser(token, function () { })
+            }).toThrowError(TypeError, `${token} is not a token`)
         })
     })
-})
 
-describe('when email is blank or empty', function(){
-    let fullname,email,password,repassword
+    describe('when token is empty or blank', function () {
+        let token
 
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = ['', ' ', '\t', '\n'].random()
-        password = `password-${random()}`
-        repassword = password
+        beforeEach(function () {
+            token = ['', ' ', '\t', '\n'].random()
+        })
 
-    })
-    it('should fail on a blank or emplty email', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `e-mail is empty or blank`)
+        it('should fail on empty or blank token', function () {
+            expect(function () {
+                retrieveUser(token, function () { })
+            }).toThrowError(Error, 'token is empty or blank')
         })
     })
-})
-
-describe('when email is not valid', function(){
-    let fullname,email,password,repassword
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = ['john-doe#mail.com', '@mail.com', 'johh-doe@mail', 'john-doe@'].random()
-        password = `password-${random()}`
-        repassword = password
-
-    })
-    it('should fail on a non valid email', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `invalid e-mail`)
-        })
-    })
-})
-
-describe('when password is a non-string', function(){
-    let fullname,email,password,repassword
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = `email-${random()}@mail.com`
-        password = [1, true, null, undefined, {}, [], function () { }, new Date].random()
-        repassword = `password-${random()}`
-
-    })
-    it('should fail on non-string password', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `${password} is not a password`)
-        })
-    })
-})
-
-describe('when password is empty or blank', function(){
-    let fullname,email,password,repassword
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = `email-${random()}@mail.com`
-        password = ['', ' ', '\t', '\n'].random()
-        repassword = `password-${random()}`
-
-    })
-    it('should fail on empty or blank password', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `password is empty or blank`)
-        })
-    })
-})
-
-describe('when re-password is a non-string', function(){
-    let fullname,email,password,repassword
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = `email-${random()}@mail.com`
-        password = `password-${random()}`
-        repassword = [1, true, null, undefined, {}, [], function () { }, new Date].random()
-
-    })
-    it('should fail on non-string password repeat', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `${repassword}is not a password repeat`)
-        })
-    })
-})
-
-describe('when re-password is empty or blank', function(){
-    let fullname,email,password,repassword
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = `email-${random()}@mail.com`
-        password = `password-${random()}`
-        repassword = ['', ' ', '\t', '\n'].random()
-
-    })
-    it('should fail on empty or blank password repeat', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `password repeat is empty or blank`)
-        })
-    })
-})
-describe('when password and re-password is not matching', function(){
-    let fullname,email,password,repassword
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = `email-${random()}@mail.com`
-        password = `password-${random()}`
-        repassword = password + '...'
-
-    })
-    it('should fail non-matching passwords', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,function(){
-            }).toThrowError(TypeError, `passwords don\'t match`)
-        })
-    })
-})
-describe('when callback is non-function', function(){
-    let fullname,email,password,repassword,callback
-
-    beforeEach(function(){
-        fullname = `fullname-${random()}`
-        email = `email-${random()}@mail.com`
-        password = `password-${random()}`
-        repassword = `password-${random()}`
-        callback = [1, true, null, undefined, {}, [], 'string', new Date].random()
-
-
-    })
-    it('should fail on non-function callback', function(){
-        expect(function(){
-            registerUser(fullname,email,password,repassword,callback,function(){
-            }).toThrowError(TypeError, `${callback}is not a callback`)
-        })
-    })
-})
+}) 
