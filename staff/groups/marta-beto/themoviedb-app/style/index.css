@@ -6,19 +6,13 @@
   padding: 0;
 }
 
-.off {
-  display: none;
-  position: absolute;
-  visibility: hidden;
-}
-
 body {
   background: linear-gradient(to right, rgba(255, 0, 0, 0), #d9f573);
   color: #202120;
   font-family: "Nunito Sans", sans-serif;
 }
 
-.Title {
+.title {
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
@@ -28,16 +22,16 @@ body {
   border-radius: 1rem;
   font-family: "Anton", sans-serif;
 }
-.Title__small {
+.title__small {
   font-size: 1.1rem;
   margin-left: 0.5rem;
 }
-.Title__app {
+.title__app {
   color: #165253;
   text-shadow: 2px 2px #929d9e;
 }
 
-.Access {
+.access {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,25 +39,14 @@ body {
   margin: auto;
   flex-wrap: wrap;
 }
-.Access__img {
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  opacity: 0.5;
-  margin: 1rem auto;
-  padding-bottom: 2rem;
-}
-.Access__img:hover {
-  opacity: 1;
-}
-.Access__login {
+.access__login {
   margin-left: 0.1rem;
 }
-.Access__register {
+.access__register {
   margin-right: 0.1rem;
 }
 
-.Register {
+.register {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,11 +55,11 @@ body {
   margin: auto;
   padding: 2rem 0;
 }
-.Register__subtitle {
+.register__subtitle {
   padding: 0.5rem;
   font-size: 0.8rem;
 }
-.Register__form {
+.register__form {
   width: 75%;
   margin: auto;
   background-color: #f6faf8;
@@ -86,10 +69,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-.Register__form > input {
+.register__form > input {
   margin: 0.2rem;
 }
-.Register__btn {
+.register__btn {
   margin: auto;
 }
 
@@ -105,7 +88,7 @@ body {
   cursor: pointer;
 }
 
-.Login {
+.login {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -114,37 +97,37 @@ body {
   margin: 2rem auto;
   padding: 1rem;
 }
-.Login__title {
+.login__title {
   padding: 1rem;
 }
-.Login__form {
+.login__form {
   display: flex;
   flex-direction: column;
 }
-.Login__form > input {
+.login__form > input {
   margin: 0.2rem;
 }
 
-.Home {
+.home {
   width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
-.Home__hello {
+.home__hello {
   padding: 0.5rem;
   text-align: center;
 }
-.Home__hello--span {
+.home__hello--span {
   font-size: 1rem;
 }
-.Home__profile {
+.home__profile {
   padding: 1rem;
 }
-.Home__profile-title {
+.home__profile-title {
   padding: 0.5rem;
 }
-.Home__search {
+.home__search {
   padding: 1rem;
 }
 

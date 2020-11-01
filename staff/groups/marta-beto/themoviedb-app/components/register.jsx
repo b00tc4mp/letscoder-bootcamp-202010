@@ -1,8 +1,8 @@
 function Register (props) {
-    return <section class="register off">
-    <h2 class="register__title">Register</h2>
-    <p class="register__subtitle">Register now! It's free and only will take you 10 seconds :)</p>
-    <form class="register__form" action="" onSubmit = { function (event) {
+    return <section className="register off">
+    <h2 className="register__title">Register</h2>
+    <p className="register__subtitle">Register now! It's free and only will take you 10 seconds :)</p>
+    <form className="register__form" action="" onSubmit = { function (event) {
         event.preventDefault();
 
         var fullname = event.target.fullname.value;
@@ -21,7 +21,7 @@ function Register (props) {
         <input type="password" name="password" placeholder="password" id="" required/>
         <input type="password" name="repassword" placeholder="Confirm password" required/>
         
-        <button class="register__btn btn" type="submit">Register</button>
+        <button className="register__btn btn" type="submit">Register</button>
     </form>
 </section>
 }

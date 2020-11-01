@@ -6,7 +6,7 @@ class App extends React.Component {
 
     }
 
-    handleGoTohome = () => {
+    handleGoToHome = () => {
         this.setState({view: 'access'})
     }
 
@@ -36,12 +36,17 @@ class App extends React.Component {
     }
  
     render() {
-        return <> <Title onHome={this.handleGoTohome}/>
-        { this.state.view === 'access' && <Access onRegister={this.handleGoToRegister} onLogin={this.handleGoToLogin} />}
+        return <>
+        <Title onAccess={this.handleGoToHome}/>
+
+        {this.state.view === 'access' && <Access onRegisterSection={this.handleGoToRegister} onLoginSection={this.handleGoToLogin} />}
 
         {this.state.view === 'register' && <Register onclick={this.handleRegister}/>}
 
         {this.state.view === 'login' && <Login onclick={this.handleLogin}/>}
+
+        <Home />
+
         </>
     }
 }

@@ -1,7 +1,6 @@
 function Access(props) {
-    return <section class="access">
-        <img class="access__img" src="./style/access-image.png" alt="" />
-        <button onclick={props.onRegisterSection} class="access__register btn">Register</button> or
-        <button onclick={props.onLoginSection} class="access__login btn">Login</button>
+    return <section className="access">
+        <button onClick={props.onRegisterSection} className="access__register btn">Register</button> or
+        <button onClick={props.onLoginSection} className="access__login btn">Login</button>
     </section>
 } 
