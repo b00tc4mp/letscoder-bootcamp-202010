@@ -57,7 +57,7 @@
 
         authenticateUser(email, password + '-wrong', function (error) {
             console.assert(error instanceof Error, 'should error be defined and an instance of Error');
-            console.assert(error.message === 'username and/or password wrong', 'should error message match expected');
+            console.assert(error.message === "username and/or password wrong", 'should error message match expected');
         });
     })();
 

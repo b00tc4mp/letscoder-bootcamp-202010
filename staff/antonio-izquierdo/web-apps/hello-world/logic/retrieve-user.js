@@ -13,9 +13,8 @@ function (status, response) {
     if (status === 200){ 
         var resText = JSON.parse(response)
         callback(null, resText)
-        var res = JSON.parse(response)
     }else {
-        callback(new Error(res.error))
+        callback(new Error(resText.error))
         }
     }
 )} 
