@@ -41,11 +41,11 @@ class App extends React.Component {
 
         {this.state.view === 'access' && <Access onRegisterSection={this.handleGoToRegister} onLoginSection={this.handleGoToLogin} />}
 
-        {this.state.view === 'register' && <Register onclick={this.handleRegister}/>}
+        {this.state.view === 'register' && <Register onClick={this.handleRegister}/>}
 
-        {this.state.view === 'login' && <Login onclick={this.handleLogin}/>}
+        {this.state.view === 'login' && <Login onClick={this.handleLogin}/>}
 
-        <Home />
+        {this.state.view === 'home' && <Home />}
 
         </>
     }
