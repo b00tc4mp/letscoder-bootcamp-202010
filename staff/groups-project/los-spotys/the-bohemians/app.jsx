@@ -12,7 +12,6 @@ class App extends Component {
         this.setState({ view: 'register' })
     }
 
-    // HandleGoToLogin same as app-Pilar-jsx
     handleGoToLogin = () => {
         this.setState({ view: 'login' })
     }
@@ -28,12 +27,20 @@ class App extends Component {
             this.setState({ view: 'register-confirm' })
         })
     }
+    handleLogin = (email, password) => {
+        authenticateUser(email, password, (error, token) => {
+            if (error) return alert(error.message)
+
+            this.setState({ view: 'Welcome'})
+
+        })
+    }
 
 
 
 
     render() {
-        const { state: {view, user }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister } = this
+        const { state: {view, user }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin } = this
 
         return <>
 
@@ -42,6 +49,13 @@ class App extends Component {
         {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} />}
 
         {view === 'register' && <Register onRegister={handleRegister} />}
+
+        {view === 'register-confirm' && <RegisterConfirm onLogin= {handleGoToLogin}/>}
+
+        {view === 'login' && <Login onLogin={handleLogin} />}
+
+        {user && <Welcome name={user.fullname} image={user.image} />}
+
 
         </>
 

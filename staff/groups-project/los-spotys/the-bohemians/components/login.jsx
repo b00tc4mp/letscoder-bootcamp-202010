@@ -15,7 +15,7 @@ function Login ({ onLogin }) {
         }>
             <input type="email" name="email"placeholder="e-mail" required/>
             <input type="password" name="password" placeholder="password" required/>
-            <div className="button button__submitLogin">Login</div>
+            <button className="button button__submitLogin">Login</button>
         </form>
     </section>
 }

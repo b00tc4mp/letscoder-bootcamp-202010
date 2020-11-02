@@ -17,7 +17,8 @@ function Register ({ onRegister }) {
         <input type="email" name= "email" placeholder="e-mail" required />
         <input type="password" name= "password" placeholder="password" required />
         <input type="password" name= "repassword" placeholder="repeat password" required />
-        <div className="button button__submitRegister">Register</div>
+        <button className="button button__submitRegister">Register</button>
+ 
     </form>
 </section>
 }
