@@ -3,7 +3,7 @@ function Login ({ onLogin }) {
     <h3 className="login__title">My account</h3>
     <img className="login__img" src="" alt="" />
     <div className="login__inputs">
-        <form className="login__form" action="" onSubmit= {function (event) {
+        <form className="login__form" action="" onSubmit= {(event) => {
             event.preventDefault();
             
             const { target: {email: {value: email}, password: {value: password}}} = event

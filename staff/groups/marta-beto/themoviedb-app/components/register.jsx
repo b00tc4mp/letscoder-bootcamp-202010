@@ -1,6 +1,5 @@
 function Register ({onRegister}) {
-    return <section className="register off">
-    <h2 className="register__title">Register</h2>
+    return <section className="register">
     <p className="register__subtitle">Register now! It's free and only will take you 10 seconds :)</p>
     <form className="register__form" action="" onSubmit = { function (event) {
         event.preventDefault();

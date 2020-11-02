@@ -4,7 +4,6 @@
 $base-color: linear-gradient(to right, rgba(255,0,0,0), #d9f573)
 $font-color: #bdb9b9
 $font-main: 'Roboto', sans-serif
-$font-title: 'Roboto', sans-serif
 
 @media only screen and (max-width: 600px)
     
@@ -29,20 +28,21 @@ body
 .title
     padding: 1rem
     display: flex
-    flex-wrap: wrap
+    flex-flow: column
     text-align: center
     padding: .5rem
     cursor: pointer
     margin: auto
     border-radius: 1rem
-    font-family: $font-title
+    font-family: $font-main
     color: $font-color
-    width: 90%
-    font-size: 2rem
+    width: 85%
+    font-size: 2.2rem
 
 
     &__small
         font-size: .8rem
+        margin-top: 2rem
 
     &__app
         color: #489899
@@ -110,10 +110,14 @@ body
     text-decoration: none
     border-style: none
     padding: .5rem
-    border-radius: .4rem
-    background-color: #706d74
     color: $font-color
     cursor: pointer
+    background-color: transparent
+    font-size: 1.1rem
+
+.btn:hover
+    color: #489899
+    font-size: 1.5rem
 
 .login
     display: flex
@@ -149,10 +153,53 @@ body
     &__movie
         display: inline-block
 
+.search
+
+    &__label
+        font-size: 1.1rem
+        margin-bottom: .2rem
+        text-transform: uppercase
+    
+    &__title
+        font-size: 1.6rem
+        padding: .5rem 2rem
+        line-height: 1.1rem
+        border-radius: 1.5rem
+        border: 1px solid #ddd
+        margin-bottom: 1rem
+
+    &__btn
+        background-color: rgba(0,0,0,0.75)
+        color: $font-color
+        padding: .5rem 1rem
+        border: 1px solid rgba(0,0,0,0.75)
+        border-radius: 20px
+        font-size: 1.4rem
+        cursor: pointer
+        transition: background-color 250ms
+
+    &__btn:hover
+        background-color: rgba(0,0,0,0.85)
 
     
 
 @media only screen and (min-width: 600px)
+
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+    
+.search
+    display: grid
+    grid-template-columns: auto 1fr auto
+    grid-gap: 1rem
+    align-items: center
+
+    &__title
+        margin-bottom: 0
 
 
 

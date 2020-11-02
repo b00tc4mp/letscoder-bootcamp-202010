@@ -1,13 +1,18 @@
-class App extends React.Component {
+const { Component } = React
+
+class App extends Component {
     constructor() {
         super()
 
-        this.state = {view: 'register-confirm'}
+        const {token} = sessionStorage
+
+        this.state = {view: token ? 'home' : 'home', token }
 
     }
 
     handleGoToAccess = () => {
-        this.setState({view: 'access'})
+        if (!this.state.token)
+            this.setState({view: 'access'})
     }
 
     handleGoToRegister = () => {
@@ -31,21 +36,25 @@ class App extends React.Component {
         authenticateUser(email, password, (error, token) => {
             if (error) return alert(error.message);
 
-            this.setState({ token });
+            this.setState({ token, view: 'home' });
 
-            retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message);
-
-                this.setState({view: 'home', user})
-            })
+            sessionStorage.token = token;
         })
+    }
+
+    handleLogout = () => {
+        delete sessionStorage.token
+
+        this.setState({ token: undefined, view: 'access'})
     }
  
     render() {
-        const {state: {view, user}, handleGoToAccess, handleGoToLogin, handleRegister, handleLogin, handleGoToRegister} = this;
+        const {state: {view, token}, handleGoToAccess, handleGoToLogin, handleRegister, handleLogin, handleGoToRegister, handleLogout} = this;
 
         return <>
         <Title onAccess={handleGoToAccess}/>
+
+        {token && <button onClick={handleLogout} className="logout btn">Logout</button>}
 
         {view === 'access' && <Access onRegisterSection={handleGoToRegister} onLoginSection={handleGoToLogin} />}
 
@@ -55,7 +64,7 @@ class App extends React.Component {
 
         {view === 'login' && <Login onLogin={handleLogin}/>}
 
-        {view === 'home' && <Home user={user}/>}
+        {view === 'home' && <Home token={token}/>}
 
         </>
     }
