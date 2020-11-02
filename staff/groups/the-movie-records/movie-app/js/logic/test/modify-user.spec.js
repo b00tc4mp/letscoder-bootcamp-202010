@@ -85,4 +85,80 @@ describe("SPEC modifyUser()", function () {
     });
   });
   //------------------------------------------------------------------------------------------
+
+  describe("when token and changes are ok", function () {
+    let token, changes, fullname, email, password;
+
+    beforeEach(function (done) {
+      fullname = "John Another " + random();
+      email = "john-another-" + random() + "@mail.com";
+      password = "pass-" + random();
+      changes = { fullname: "Pedrito", bithday: new Date("1990/1/1") };
+
+      call(
+        "POST",
+        "https://b00tc4mp.herokuapp.com/api/v2/users",
+        { "Content-type": "application/json" },
+        '{ "fullname": "' +
+          fullname +
+          '", "username": "' +
+          email +
+          '", "password": "' +
+          password +
+          '" }',
+        function (status) {
+          expect(status).toBe(201);
+          call(
+            "POST",
+            "https://b00tc4mp.herokuapp.com/api/v2/users/auth",
+            { "Content-type": "application/json" },
+            '{ "username": "' + email + '", "password": "' + password + '" }',
+            function (status, response) {
+              expect(status).toBe(200);
+              token = JSON.parse(response).token;
+              done();
+            }
+          );
+        }
+      );
+    });
+
+    it("should succeed on modify user", function (done) {
+      modifyUser(token, changes, function (error) {
+        expect(error).toBeNull();
+        call(
+          "GET",
+          "https://b00tc4mp.herokuapp.com/api/v2/users",
+          { Authorization: `Bearer ${token}` },
+          "",
+          (status, response) => {
+            expect(status).toBe(200);
+            const res = JSON.parse(response);
+            expect(res.fullname).toBe(changes.fullname);
+            expect(res.birthday).toBe(changes.birthday);
+            done();
+          }
+        );
+      });
+    });
+
+    afterEach(function (done) {
+      call(
+        "DELETE",
+        "https://b00tc4mp.herokuapp.com/api/v2/users",
+        {
+          Authorization: "Bearer " + token,
+          "Content-type": "application/json",
+        },
+        '{ "password": "' + password + '" }',
+        function (status, response) {
+          expect(status).toBe(204);
+          expect(response.length).toBe(0);
+
+          done();
+        }
+      );
+    });
+  });
+  //------------------------------------------------------------------------------------------
 });
