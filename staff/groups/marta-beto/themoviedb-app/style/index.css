@@ -14,7 +14,7 @@ body {
 #root {
   background-image: url("./background2.jpg");
   background-color: transparent;
-  height: 700px;
+  height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +37,7 @@ body {
 }
 .title__small {
   font-size: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .title__app {
   color: #489899;
@@ -141,44 +141,57 @@ body {
 .home {
   width: 90%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .carousel {
   width: 100%;
   height: 150px;
   overflow: auto;
+  white-space: nowrap;
+  width: 95%;
+  margin: 0.5rem auto;
+  height: 165px;
 }
 .carousel__movie {
   display: inline-block;
+  margin: 0 0.2rem;
 }
 
+.search {
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 .search__label {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   margin-bottom: 0.2rem;
   text-transform: uppercase;
 }
 .search__title {
-  font-size: 1.6rem;
-  padding: 0.5rem 2rem;
-  line-height: 1.1rem;
-  border-radius: 1.5rem;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  line-height: 0.5rem;
+  border-radius: 2rem;
   border: 1px solid #ddd;
   margin-bottom: 1rem;
 }
 .search__btn {
   background-color: rgba(0, 0, 0, 0.75);
   color: #bdb9b9;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   border: 1px solid rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
-  font-size: 1.4rem;
+  border-radius: 2rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 250ms;
 }
 .search__btn:hover {
   background-color: rgba(0, 0, 0, 0.85);
+}
+
+.logout__btn {
+  font-size: 0.8rem;
 }
 
 * {

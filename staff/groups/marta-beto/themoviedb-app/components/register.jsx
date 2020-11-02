@@ -1,7 +1,7 @@
 function Register ({onRegister}) {
     return <section className="register">
-    <p className="register__subtitle">Register now! It's free and only will take you 10 seconds :)</p>
-    <form className="register__form" action="" onSubmit = { function (event) {
+    {/* <p className="register__subtitle">Register now! It's free and only will take you 10 seconds :)</p> */}
+    <form className="register__form" onSubmit = { function (event) {
         event.preventDefault();
 
 

@@ -31,27 +31,36 @@ class Home extends Component {
         })
     }
 
-    handleSearchMovies = (query) => {
+    handleSearchMovies = query => {
         try {
         searchMovie(query, (error, movies) => {
             if (error) return alert(error.message)
 
-            // here goes the list of movies using map array method
+            movies = movies.map(({movieId, poster_path: url}) => ({movieId, url}))
 
-            this.setState({ movies })
+            this.setState({ movies, query })
         })
-        } catch ({message}) {
-            alert(message)
+        } catch (error) {
+            alert(error.message)
         }
     }
 
     handleGoToMovie = movieId => {
-        retrieveVehicle(movieId, (error, movie) => {
+        retrieveMovie(movieId, (error, movie) => {
             if (error) return alert(error.message)
 
-            const { } = movie // all the details from the movice we want to show (movie destructuring)
+            const {title, url, genre, date, like, description} = movie // all the details from the movice we want to show (movie destructuring)
 
-            this.setState({ movie: { } })
+            this.setState({subview: 'detail'}, {movie: {title, url, genre, date, like, description}})
+        })
+    }
+
+    handleTrendingMovies = () => {
+        showTrending(error, trending => {
+            if (error) return alert(error.message)
+
+            // TODO
+
         })
     }
 
@@ -67,7 +76,7 @@ class Home extends Component {
 
     render() {
 
-        const {state: {view, user, movies}, handleModifyUser, handleSearchMovies, handleGoToProfile} = this
+        const {state: {subview, view, user, movies, movie}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
@@ -75,11 +84,13 @@ class Home extends Component {
 
         {view === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} avatar={user.avatar}/>}
 
-        <Search />
+        <Search onSearch={handleSearchMovies}/>
 
         <Dropdown />
 
-        <Carousel />
+        <Carousel onMovie={movie}/>
+
+        {subview === 'detail' && movie && <Detail item={movie}/>}
 
         </>
     }

@@ -19,7 +19,7 @@ body
 #root
     background-image: url('./background2.jpg')
     background-color: transparent
-    height: 700px
+    height: 650px
     background-position: center
     background-repeat: no-repeat
     background-size: cover
@@ -42,7 +42,7 @@ body
 
     &__small
         font-size: .8rem
-        margin-top: 2rem
+        margin-top: .5rem
 
     &__app
         color: #489899
@@ -141,48 +141,59 @@ body
 .home
     width: 90%
     margin: auto
-    display: flex
-    flex-direction: column
 
 
 .carousel
     width: 100%
     height: 150px
     overflow: auto
+    white-space: nowrap
+    width: 95%
+    margin: .5rem auto
+    height: 165px
+
 
     &__movie
         display: inline-block
+        margin: 0 .2rem
 
 .search
+    max-width: 50%
+    margin: auto
+    display: flex
+    flex-wrap: wrap
 
     &__label
-        font-size: 1.1rem
+        font-size: .8rem
         margin-bottom: .2rem
         text-transform: uppercase
     
     &__title
-        font-size: 1.6rem
-        padding: .5rem 2rem
-        line-height: 1.1rem
-        border-radius: 1.5rem
+        font-size: .8rem
+        padding: .5rem
+        line-height: .5rem
+        border-radius: 2rem
         border: 1px solid #ddd
         margin-bottom: 1rem
 
     &__btn
         background-color: rgba(0,0,0,0.75)
         color: $font-color
-        padding: .5rem 1rem
+        padding: .5rem .8rem
         border: 1px solid rgba(0,0,0,0.75)
-        border-radius: 20px
-        font-size: 1.4rem
+        border-radius: 2rem
+        font-size: 1rem
         cursor: pointer
         transition: background-color 250ms
 
     &__btn:hover
         background-color: rgba(0,0,0,0.85)
 
-    
 
+.logout__btn
+    font-size: .8rem
+
+    
 @media only screen and (min-width: 600px)
 
 

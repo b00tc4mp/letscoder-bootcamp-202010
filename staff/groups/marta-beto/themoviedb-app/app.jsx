@@ -6,7 +6,7 @@ class App extends Component {
 
         const {token} = sessionStorage
 
-        this.state = {view: token ? 'home' : 'home', token }
+        this.state = {view: token ? 'home' : 'access', token }
 
     }
 
@@ -54,7 +54,7 @@ class App extends Component {
         return <>
         <Title onAccess={handleGoToAccess}/>
 
-        {token && <button onClick={handleLogout} className="logout btn">Logout</button>}
+        {token && <div className='logout'><button onClick={handleLogout} className="logout__btn btn">Logout</button></div>}
 
         {view === 'access' && <Access onRegisterSection={handleGoToRegister} onLoginSection={handleGoToLogin} />}
 

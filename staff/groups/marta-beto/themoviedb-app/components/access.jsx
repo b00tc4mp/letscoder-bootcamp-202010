@@ -1,6 +1,6 @@
-function Access(props) {
+function Access({onRegisterSection, onLoginSection}) {
     return <section className="access">
-        <button onClick={props.onRegisterSection} className="access__register btn">Register</button> or
-        <button onClick={props.onLoginSection} className="access__login btn">Login</button>
+        <button onClick={onRegisterSection} className="access__register btn">Register</button> or
+        <button onClick={onLoginSection} className="access__login btn">Login</button>
     </section>
 } 
