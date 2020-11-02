@@ -223,7 +223,7 @@ describe("SPEC authenticateUser()", function () {
     it("should fail on empty or blank email", function () {
       expect(function () {
         authenticateUser(email, password, function () {});
-      }).toThrowError(Error, `${email} is empty or blank`);
+      }).toThrowError(Error, `e-mail is empty or blank`);
     });
   });
   //------------------------------------------------------------------------------------------
@@ -282,7 +282,7 @@ describe("SPEC authenticateUser()", function () {
     it(" should fail on empty or blank password", function () {
       expect(function () {
         authenticateUser(email, password, function () {});
-      }).toThrowError(Error, `${password} is empty or blank`);
+      }).toThrowError(Error, `password is empty or blank`);
     });
   });
   //------------------------------------------------------------------------------------------
