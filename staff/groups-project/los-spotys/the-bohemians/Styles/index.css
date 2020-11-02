@@ -85,9 +85,15 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
+  flex-direction: column;
+  margin-left: 5%;
   margin-top: -13%;
   font-family: "Syne Mono", monospace;
   color: white;
+}
+.welcome img {
+  border-radius: 50%;
+  width: 10vw;
 }
 
 .search {

@@ -31,8 +31,13 @@ class App extends Component {
         authenticateUser(email, password, (error, token) => {
             if (error) return alert(error.message)
 
-            this.setState({ view: 'Welcome'})
+            this.setState({ token })
 
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
+
+                this.setState({ view: 'welcome', user })
+            })
         })
     }
 
