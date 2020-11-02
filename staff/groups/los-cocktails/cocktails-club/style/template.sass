@@ -1,6 +1,9 @@
 @import config
 *
-    border: 1px solid black
+    font-family: Open Sans
+    font-weight: 400
+    border: none
+
 body
     // align-items: center
     // justify-content: center
@@ -12,27 +15,62 @@ body
     justify-content: center
     align-items: center
     flex-direction: column
+
 .logo
     max-height: 20vw
     max-width: 40vw
     margin: 15vw auto 0 auto
-    
+
 .access
     padding: 5vw
     margin: 1vw 5vw 5vw 5vw
     width: 45vw
     display: flex
     flex-direction: row
-    gap: 5px
+    gap: 15px
+    justify-content: center
+
     &__register
-        +size(6.5rem,3rem)
-        padding: 2vw 4.5vw 2vw 4.5vw
-        border-radius: .5rem
+        padding: 2vw 8vw 2vw 8vw
+        border-radius: .8rem
+        font-size: 1rem
+        outline: none
+        transition: all 200ms ease
+        text-align: center
+
+        &:hover
+            color: white
+            background-color: transparentize(white,.9)
+
     &__login
-        +size(6.5rem,3rem)
-        padding: 2vw 5.5vw 2vw 5.5vw
-        border-radius: .5rem
+        padding: 2vw 9vw 2vw 9vw
+        border-radius: .8rem
         background-color: transparentize(white,.9)
         color: white
+        font-size: 1rem
+        white-space: nowrap
+        outline: none
+        transition: all 200ms ease
+        text-align: center
 
-    
+        &:hover
+            background-color: white
+            color: black
+
+    &__quote
+        color: white
+        font-family: 'Open Sans', sans-serif
+        font-weight: 300
+        font-size: 1.5rem
+
+        &--name
+            color: white
+            font-family: 'Open Sans', sans-serif
+            font-size: 1rem
+            float: right
+
+@media (max-width: 375)
+
+body
+    background-image: url('./images/cocktail-image.jpg')
+    background-size: 1200px

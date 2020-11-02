@@ -1,5 +1,7 @@
 * {
-  border: 1px solid black;
+  font-family: Open Sans;
+  font-weight: 400;
+  border: none;
 }
 
 body {
@@ -24,21 +26,52 @@ body {
   width: 45vw;
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 15px;
+  justify-content: center;
 }
 .access__register {
-  width: 6.5rem;
-  height: 3rem;
-  padding: 2vw 4.5vw 2vw 4.5vw;
-  border-radius: 0.5rem;
+  padding: 2vw 8vw 2vw 8vw;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 200ms ease;
+  text-align: center;
+}
+.access__register:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .access__login {
-  width: 6.5rem;
-  height: 3rem;
-  padding: 2vw 5.5vw 2vw 5.5vw;
-  border-radius: 0.5rem;
+  padding: 2vw 9vw 2vw 9vw;
+  border-radius: 0.8rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
+  font-size: 1rem;
+  white-space: nowrap;
+  outline: none;
+  transition: all 200ms ease;
+  text-align: center;
+}
+.access__login:hover {
+  background-color: white;
+  color: black;
+}
+.access__quote {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.access__quote--name {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  float: right;
+}
+
+body {
+  background-image: url("./images/cocktail-image.jpg");
+  background-size: 1200px;
 }
 
 /*# sourceMappingURL=template.css.map */
