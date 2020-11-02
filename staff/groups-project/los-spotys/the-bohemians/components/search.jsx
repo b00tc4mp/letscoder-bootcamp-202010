@@ -7,8 +7,16 @@ function Search({ onSearch }) {
         onSearch(query)
     }}>
 
-    <input type="text" name="artist" placeholder="Search by Artist" />
-    <input type="text" name="tracks" placeholder="Search by tracks" />
+
+    <label for = "music">Choose Track or Artist</label>
+    <select name="music" id="music"> 
+
+    <option value="Track">Track</option>
+    <option value="Artist">Artist</option>
+
+    </select>
+    <input type="submit"/>
+    <input type="text" name="artist" placeholder="Search" />
     <button type="reset">✖️</button>
     <button type="submit">Find</button>
 </form>
