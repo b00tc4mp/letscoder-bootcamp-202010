@@ -10,16 +10,18 @@ class App extends Component {
     }
 
     handleGoToRegister = () => {
-        this.setState({ view: 'register', error: undefined })
+        this.setState({ view: 'register' })
     }
 
     handleGoToLogin = () => {
-        this.setState({ view: 'login', error: undefined })
+        this.setState({ view: 'login' })
     }
 
     handleGoToAccess = () => {
-        if (!this.state.token)
-            this.setState({ view: 'access', error: undefined })
+        const { token } = sessionStorage
+
+        if (!token)
+            this.setState({ view: 'access' })
     }
 
     handleLogout = () => {
