@@ -47,7 +47,7 @@ button:focus {
 }
 
 .register {
-  background-color: red;
+  border: 1px solid orange;
 }
 
 .register-confirm {
@@ -81,6 +81,13 @@ button:focus {
 
 .results__item:hover {
   cursor: pointer;
+}
+
+.feedback--success {
+  color: green;
+}
+.feedback--error {
+  color: red;
 }
 
 /*# sourceMappingURL=index.css.map */

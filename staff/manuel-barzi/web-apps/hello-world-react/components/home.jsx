@@ -8,7 +8,9 @@ class Home extends Component {
     }
 
     componentWillMount() {
-        retrieveUser(this.props.token, (error, user) => {
+        const { token } = sessionStorage
+
+        retrieveUser(token, (error, user) => {
             if (error) return alert(error.message)
 
             this.setState({ user })
@@ -20,10 +22,12 @@ class Home extends Component {
     }
 
     handleModifyUser = (fullname, image) => {
-        modifyUser(this.props.token, { fullname, image }, error => {
+        const { token } = sessionStorage
+
+        modifyUser(token, { fullname, image }, error => {
             if (error) alert(error.message)
 
-            retrieveUser(this.props.token, (error, user) => {
+            retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
 
                 this.setState({ user })
@@ -32,8 +36,10 @@ class Home extends Component {
     }
 
     handleSearchVehicles = query => {
+        const { token } = sessionStorage
+
         try {
-            searchVehicles(this.props.token, query, (error, vehicles) => {
+            searchVehicles(token, query, (error, vehicles) => {
                 if (error) return alert(error.message)
 
                 vehicles = vehicles.map(({ id, name: title, thumbnail: image, price, like }) => ({ id, title, image, price, like }))
@@ -56,7 +62,9 @@ class Home extends Component {
     }
 
     handleLike = vehicleId => {
-        toggleLikeVehicle(this.props.token, vehicleId, error => {
+        const { token } = sessionStorage
+        
+        toggleLikeVehicle(token, vehicleId, error => {
             if (error) return alert(error.message)
 
             this.handleSearchVehicles(this.state.query)

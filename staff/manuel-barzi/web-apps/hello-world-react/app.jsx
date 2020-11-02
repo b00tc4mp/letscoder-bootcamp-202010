@@ -10,44 +10,32 @@ class App extends Component {
     }
 
     handleGoToRegister = () => {
-        this.setState({ view: 'register' })
+        this.setState({ view: 'register', error: undefined })
     }
 
     handleGoToLogin = () => {
-        this.setState({ view: 'login' })
+        this.setState({ view: 'login', error: undefined })
     }
 
     handleGoToAccess = () => {
         if (!this.state.token)
-            this.setState({ view: 'access' })
-    }
-
-    handleRegister = (fullname, email, password, repassword) => {
-        registerUser(fullname, email, password, repassword, error => {
-            if (error) return alert(error.message)
-
-            this.setState({ view: 'register-confirm' })
-        })
-    }
-
-    handleLogin = (email, password) => {
-        authenticateUser(email, password, (error, token) => {
-            if (error) return alert(error.message)
-
-            this.setState({ token, view: 'home' })
-
-            sessionStorage.token = token
-        })
+            this.setState({ view: 'access', error: undefined })
     }
 
     handleLogout = () => {
         delete sessionStorage.token
 
-        this.setState({ token: undefined, view: 'access' })
+        this.setState({ view: 'access' })
     }
 
+    handleRegisterSuccess = () => this.setState({ view: 'register-confirm' })
+
+    handleLoginSuccess = () => this.setState({ view: 'home' })
+
     render() {
-        const { state: { view, token }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister, handleLogout } = this
+        const { state: { view }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLoginSuccess, handleLogout, handleRegisterSuccess } = this
+
+        const { token } = sessionStorage
 
         return <>
             <Title onHome={handleGoToAccess} />
@@ -56,13 +44,13 @@ class App extends Component {
 
             {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} />}
 
-            {view === 'register' && <Register onRegister={handleRegister} />}
+            {view === 'register' && <Register onRegisterSuccess={handleRegisterSuccess} />}
 
-            {view === 'login' && <Login onLogin={handleLogin} />}
+            {view === 'login' && <Login onLoginSuccess={handleLoginSuccess} />}
 
             {view === 'register-confirm' && <RegisterConfirm onLogin={handleGoToLogin} />}
 
-            {view === 'home' && <Home token={token} />}
+            {view === 'home' && <Home />}
         </>
     }
 }
