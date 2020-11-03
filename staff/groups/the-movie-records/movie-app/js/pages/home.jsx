@@ -45,12 +45,12 @@ class Home extends Component {
       <NoResult />
     ) : (
       <>
-        <ResultList
+        {!this.state.resultMovie.id && <ResultList
           onList={this.__handleResult}
           onItem={this.__handleClickDetail}
           movies={this.state.resultSearch.results}
-        />
-        <Detail items={this.state.resultMovie} />
+        />}
+       {this.state.resultMovie.id && <Detail items={this.state.resultMovie}  />}
       </>
     );
   }

@@ -23,7 +23,8 @@ function Detail(props) {
             data-description={props.items.overview}
           >
             <img
-              src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${props.items.poster_path}`}
+              src={props.items.poster_path? `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${props.items.poster_path}` : "https://oij.org/wp-content/uploads/2016/05/placeholder.png"}
+
               alt="Meat"
               width="300"
             />
