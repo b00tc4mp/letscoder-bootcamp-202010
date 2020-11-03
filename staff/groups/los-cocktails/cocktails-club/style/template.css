@@ -26,6 +26,7 @@ body {
   width: 45vw;
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   gap: 5px;
   justify-content: center;
   font-size: 1rem;
@@ -46,12 +47,38 @@ body {
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
+=======
+  gap: 15px;
+  justify-content: center;
+}
+.access__register {
+  padding: 2vw 8vw 2vw 8vw;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 200ms ease;
+  text-align: center;
+}
+.access__register:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.access__login {
+  padding: 2vw 9vw 2vw 9vw;
+  border-radius: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+>>>>>>> b9cb068fbe37e85b6b7932ead657f2e01b3779d2
   white-space: nowrap;
   outline: none;
   transition: all 200ms ease;
   text-align: center;
+<<<<<<< HEAD
   vertical-align: middle;
   font-family: "Open Sans", sans-serif;
+=======
+>>>>>>> b9cb068fbe37e85b6b7932ead657f2e01b3779d2
 }
 .access__login:hover {
   background-color: white;
@@ -60,15 +87,23 @@ body {
 .access__quote {
   color: white;
   font-family: "Open Sans", sans-serif;
+<<<<<<< HEAD
   font-size: 1.5rem;
   font-weight: 300;
+=======
+  font-weight: 300;
+  font-size: 1.5rem;
+>>>>>>> b9cb068fbe37e85b6b7932ead657f2e01b3779d2
 }
 .access__quote--name {
   color: white;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   float: right;
+<<<<<<< HEAD
   font-weight: 300;
+=======
+>>>>>>> b9cb068fbe37e85b6b7932ead657f2e01b3779d2
 }
 
 body {
