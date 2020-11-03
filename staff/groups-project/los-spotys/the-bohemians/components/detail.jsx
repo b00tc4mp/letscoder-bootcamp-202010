@@ -4,10 +4,9 @@ function Detail({ song: {song, releaseDate, preListening, image, artist, album} 
     //const _title = <p>{song} {`${releaseDate? `(${releaseDate})`: ''}`}</p>
 
     return <section className="detail">
-        {song, releaseDate && <h2>{song} ({releaseDate}) </h2>}
-        {artist && <p>{artist}</p>}
+        {artist, song, releaseDate && <h2>{artist}, {song} ({releaseDate}) </h2>}
         {album && <p>{album}</p>}
         {image && <img src={image} />}
-        {preListening && <audio src={preListening} controls></audio>}
+        {preListening ?  <audio src={preListening} controls></audio> : <h2>There is no pre listening</h2>}
     </section>
 }

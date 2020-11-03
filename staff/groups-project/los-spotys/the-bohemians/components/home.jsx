@@ -20,7 +20,7 @@ class Home extends Component {
             searchMusic("BQCBKbH8X104utQm5b07hXZL9xAOmWYYt1Udaodv7oJCM6o9ngz_jHVBDeKsJQsKQceyE0aZ3mPELyFmiiOQjwCd04kJoY3y2AR96hKWnnSX964OtGddZys2HR6P7SmZPwE8449A2DMJeducZAZu4xjRad_UVxQ", type, query, (error, music) => {
                 if (error) return alert(error.message)
                 
-                music = music.map(({ name: song, id, preview_url: preListening, artists, album, popularity }) => ({ song, id, preListening, artist: artists[0].name ? artists[0].name : 'this song doesn´t have an artist', image: album.images[1].url ? album.images[1].url : 'http://hem.bredband.net/b477738/not-found.jpg', releaseDate: album.release_date}))
+                music = music.map(({ name: song, id, preview_url: preListening, artists, album }) => ({ song, id, preListening, artist: artists[0].name ? artists[0].name : 'this song doesn´t have an artist', image: album.images[1].url ? album.images[1].url : 'http://hem.bredband.net/b477738/not-found.jpg', releaseDate: album.release_date}))
 
                 
 
@@ -35,9 +35,9 @@ class Home extends Component {
         retrieveTrack("BQCBKbH8X104utQm5b07hXZL9xAOmWYYt1Udaodv7oJCM6o9ngz_jHVBDeKsJQsKQceyE0aZ3mPELyFmiiOQjwCd04kJoY3y2AR96hKWnnSX964OtGddZys2HR6P7SmZPwE8449A2DMJeducZAZu4xjRad_UVxQ", id, (error, track) => {
             if (error) return alert(error.message)
             {
-            let { id, name: song, preview_url: preListening, album, popularity, artists } = track
+            let { id, name: song, preview_url: preListening, album, artists } = track
                
-            this.setState({ track: { id, song, preListening, image: album.images[1].url, popularity, releaseDate: album.release_date, artist: artists.name, album: album.name } })
+            this.setState({ track: { id, song, preListening, image: album.images[1].url, releaseDate: album.release_date, artist: artists[0].name, album: album.name } })
             }
         })
     }
