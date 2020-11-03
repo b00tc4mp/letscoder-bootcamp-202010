@@ -5,29 +5,6 @@ function searchByName(name, callback) {
   if (typeof callback !== "function")
     throw new Error(callback + " is not a callback");
 
-<<<<<<< HEAD
-
-    call('GET',
-        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`,
-        {},
-        '',
-        function (status, response) {
-            if (status === 200){
-                var res = JSON.parse(response)
-                var results = res.drinks
-                if(results === null ) callback(new Error('Sorry, no results ;('))
-                else {
-                    results = results.map(({ idDrink: id, strDrink: name, strInstructions:instructions, strInstructionsES:instructionsES, strAlcoholic: alcoholic, strGlass: glass, strDrinkThumb:image, strIngredient1:ing1, strIngredient2:ing2, strIngredient3:ing3,strIngredient4:ing4, strIngredient5:ing5, strIngredient6:ing6, strIngredient7:ing7, strMeasure1:m1, strMeasure2:m2, strMeasure3:m3, strMeasure4:m4, strMeasure5:m5, strMeasure6:m6, strMeasure7:m7 }) => 
-                    ({id, name, instructions, instructionsES, alcoholic, glass, image, ing1, ing2, ing3, ing4, ing5, ing6, ing7, m1, m2, m3, m4, m5, m6, m7}))
-    
-                    callback(null, results) 
-                }
-            }else {
-                var res = JSON.parse(response)
-
-                callback(new Error(res.error))
-            }
-=======
   call(
     "GET",
     `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`,
@@ -88,7 +65,6 @@ function searchByName(name, callback) {
           );
           //destructuring del item
           callback(null, results);
->>>>>>> b9cb068fbe37e85b6b7932ead657f2e01b3779d2
         }
       } else {
         var response = JSON.parse(response);

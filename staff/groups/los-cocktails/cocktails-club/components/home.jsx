@@ -8,7 +8,6 @@ class Home extends Component {
         this.state = { }
     }
     
-<<<<<<< HEAD
 
     handleSearchByName = (query) => {
         searchByName(query, (error, results) => {
@@ -16,14 +15,6 @@ class Home extends Component {
             
             this.setState({ results })
         })
-=======
-    handleSearchByName = query => {
-        searchByName(query, (error, results) => {
-            if (error) return alert(error.message)
-
-            this.setState({ results })
-        } )
->>>>>>> b9cb068fbe37e85b6b7932ead657f2e01b3779d2
     }
     
     
