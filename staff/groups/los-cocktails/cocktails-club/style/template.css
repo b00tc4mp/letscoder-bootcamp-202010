@@ -1,5 +1,7 @@
 * {
-  border: 1px solid black;
+  font-family: Open Sans;
+  font-weight: 400;
+  border: none;
 }
 
 body {
@@ -25,20 +27,53 @@ body {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  justify-content: center;
+  font-size: 1rem;
 }
 .access__register {
-  width: 6.5rem;
-  height: 3rem;
-  padding: 2vw 4.5vw 2vw 4.5vw;
+  padding: 2vw 8vw 2vw 8vw;
   border-radius: 0.5rem;
+  outline: none;
+  transition: all 200ms ease;
+  font-family: "Open Sans", sans-serif;
+}
+.access__register:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 .access__login {
-  width: 6.5rem;
-  height: 3rem;
-  padding: 2vw 5.5vw 2vw 5.5vw;
+  padding: 2vw 8.5vw 2vw 8.5vw;
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
+  white-space: nowrap;
+  outline: none;
+  transition: all 200ms ease;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Open Sans", sans-serif;
+}
+.access__login:hover {
+  background-color: white;
+  color: black;
+}
+.access__quote {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.access__quote--name {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  float: right;
+  font-weight: 300;
+}
+
+body {
+  background-image: url("./images/cocktail-image.jpg");
+  background-size: 1200px;
 }
 
 /*# sourceMappingURL=template.css.map */

@@ -9,7 +9,8 @@ function searchByIngredient(name, callback){
         '',
         function (status, response) {
             if (status === 200){
-               var results = JSON.parse(response)
+                if (response.length === 0 ) return callback(new Error('no results found'))
+                var results = JSON.parse(response)
                 callback(null, results) 
             }else {
                 var res = JSON.parse(response)
