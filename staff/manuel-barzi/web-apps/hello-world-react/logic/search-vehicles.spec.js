@@ -34,7 +34,7 @@ describe('SPEC searchVehicles()', () => {
             )
         })
 
-        it('should succeed on matching query', function (done) {
+        it('should succeed on matching query', done => {
             searchVehicles(token, query, function (error, vehicles) {
                 expect(error).toBeNull()
 
@@ -56,7 +56,7 @@ describe('SPEC searchVehicles()', () => {
             })
         })
 
-        afterEach(function () {
+        afterEach(done => {
             call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                 {
                     Authorization: `Bearer ${token}`,
@@ -66,6 +66,8 @@ describe('SPEC searchVehicles()', () => {
                 function (status, response) {
                     expect(status).toBe(204)
                     expect(response.length).toBe(0)
+
+                    done()
                 }
             )
         })
@@ -106,7 +108,7 @@ describe('SPEC searchVehicles()', () => {
             )
         })
 
-        it('should succeed providing no results (empty array) on non-matching query', function (done) {
+        it('should succeed providing no results (empty array) on non-matching query', done => {
             searchVehicles(token, query, function (error, vehicles) {
                 expect(error).toBeNull()
 
@@ -118,7 +120,7 @@ describe('SPEC searchVehicles()', () => {
             })
         })
 
-        afterEach(function () {
+        afterEach(done => {
             call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                 {
                     Authorization: `Bearer ${token}`,
@@ -128,6 +130,8 @@ describe('SPEC searchVehicles()', () => {
                 function (status, response) {
                     expect(status).toBe(204)
                     expect(response.length).toBe(0)
+
+                    done()
                 }
             )
         })

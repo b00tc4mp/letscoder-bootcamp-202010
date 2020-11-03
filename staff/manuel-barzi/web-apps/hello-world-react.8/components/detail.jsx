@@ -1,4 +1,4 @@
-function Detail({ item: { id, title, year, url, preview, image, price, like }, currency, onLike }) {
+function Detail({ item: { title, year, url, preview, image, price }, currency }) {
     const _title = <h2>{title} {`${year? `(${year})`: ''}`}</h2>
 
     return <section className="detail">
@@ -6,10 +6,5 @@ function Detail({ item: { id, title, year, url, preview, image, price, like }, c
         {preview && <p>{preview}</p>}
         {image && <img src={image} />}
         {price && <span>{price} {currency}</span>}
-        {<button onClick={event => {
-                event.stopPropagation()
-                
-                onLike(id)
-            }}>{like ? '❤️' : '♡'}</button>}
     </section>
 }

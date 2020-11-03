@@ -1,6 +1,6 @@
-describe('SPEC retrieveVehicle()', () => {
-    describe('when the vehicle ids exist', () => {
-        let fullname, email, password, token, vehicleId
+describe('SPEC searchVehicles()', () => {
+    describe('when query gives results', () => {
+        let fullname, email, password, token, query
 
         beforeEach(done => {
             fullname = `fullname-${random()}`
@@ -25,7 +25,7 @@ describe('SPEC retrieveVehicle()', () => {
 
                             expect(token.length).toBeGreaterThan(0)
 
-                            vehicleId = ['FYG51', 'FYB61', 'FYF94', 'FYC12', 'FJV51'].random()
+                            query = ['red', 'blue', 'green', 'pink', 'black'].random()
 
                             done()
                         }
@@ -34,28 +34,29 @@ describe('SPEC retrieveVehicle()', () => {
             )
         })
 
-        it('should succeed on matching id', done => {
-            retrieveVehicle(token, vehicleId, (error, vehicle) => {
+        it('should succeed on matching query', function (done) {
+            searchVehicles(token, query, function (error, vehicles) {
                 expect(error).toBeNull()
 
-                expect(vehicle).toBeDefined()
+                expect(vehicles).toBeDefined()
+                expect(vehicles).toBeInstanceOf(Array)
+                expect(vehicles.length).toBeGreaterThan(0)
 
-                const { id, name, image, year, description, price, url, like } = vehicle
+                vehicles.forEach(vehicle => {
+                    const { id, name, thumbnail, price, like } = vehicle
 
-                expect(id).toBe(vehicleId)
-                expect(name).toBeOfType('string')
-                expect(image).toBeOfType('string')
-                expect(year).toBeOfType('number')
-                expect(description).toBeOfType('string')
-                expect(price).toBeOfType('number')
-                expect(url).toBeOfType('string')
-                expect(like).toBeFalse()
+                    expect(id).toBeOfType('string')
+                    expect(name).toBeOfType('string')
+                    expect(thumbnail).toBeOfType('string')
+                    expect(price).toBeOfType('number')
+                    expect(like).toBeFalse()
+                })
 
                 done()
             })
         })
 
-        afterEach(done => {
+        afterEach(function () {
             call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                 {
                     Authorization: `Bearer ${token}`,
@@ -65,15 +66,13 @@ describe('SPEC retrieveVehicle()', () => {
                 function (status, response) {
                     expect(status).toBe(204)
                     expect(response.length).toBe(0)
-
-                    done()
                 }
             )
         })
     })
 
-    describe('when the vehicle ids do not exist', () => {
-        let fullname, email, password, token, vehicleId
+    describe('when query gives no results', () => {
+        let fullname, email, password, token, query
 
         beforeEach(done => {
             fullname = `fullname-${random()}`
@@ -98,7 +97,7 @@ describe('SPEC retrieveVehicle()', () => {
 
                             expect(token.length).toBeGreaterThan(0)
 
-                            vehicleId = ['FABC', 'FXYZ', 'FJKL'].random()
+                            query = ['asdfasd', 'asdfasdf', 'ljklajsdf', 'añsdflkj'].random()
 
                             done()
                         }
@@ -107,17 +106,19 @@ describe('SPEC retrieveVehicle()', () => {
             )
         })
 
-        it('should succeed resulting in null on non-matching id', done => {
-            retrieveVehicle(token, vehicleId, (error, vehicle) => {
+        it('should succeed providing no results (empty array) on non-matching query', function (done) {
+            searchVehicles(token, query, function (error, vehicles) {
                 expect(error).toBeNull()
 
-                expect(vehicle).toBeNull()
+                expect(vehicles).toBeDefined()
+                expect(vehicles).toBeInstanceOf(Array)
+                expect(vehicles.length).toBe(0)
 
                 done()
             })
         })
 
-        afterEach(done => {
+        afterEach(function () {
             call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                 {
                     Authorization: `Bearer ${token}`,
@@ -127,8 +128,6 @@ describe('SPEC retrieveVehicle()', () => {
                 function (status, response) {
                     expect(status).toBe(204)
                     expect(response.length).toBe(0)
-
-                    done()
                 }
             )
         })

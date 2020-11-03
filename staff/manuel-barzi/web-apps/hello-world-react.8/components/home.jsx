@@ -52,14 +52,12 @@ class Home extends Component {
     }
 
     handleGoToVehicle = vehicleId => {
-        const { token } = sessionStorage
-
-        retrieveVehicle(token, vehicleId, (error, vehicle) => {
+        retrieveVehicle(vehicleId, (error, vehicle) => {
             if (error) return alert(error.message)
 
-            const { id, name: title, year, description: preview, price, url, image, like } = vehicle
+            const { id, name: title, year, description: preview, price, url, image } = vehicle
 
-            this.setState({ vehicle: { id, title, year, preview, price, url, image, like } })
+            this.setState({ vehicle: { id, title, year, preview, price, url, image } })
         })
     }
 
@@ -69,12 +67,7 @@ class Home extends Component {
         toggleLikeVehicle(token, vehicleId, error => {
             if (error) return alert(error.message)
 
-            const { state : { vehicle }} = this
-
-            if (vehicle)
-                this.handleGoToVehicle(vehicleId)
-            else
-                this.handleSearchVehicles(this.state.query)
+            this.handleSearchVehicles(this.state.query)
         })
     }
 
@@ -94,7 +87,7 @@ class Home extends Component {
 
             {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} onLike={handleLike} />}
 
-            { vehicle && <Detail item={vehicle} currency="$" onLike={handleLike} />}
+            { vehicle && <Detail item={vehicle} currency="$" />}
         </>
     }
 }
