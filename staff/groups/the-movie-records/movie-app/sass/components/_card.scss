@@ -1,6 +1,8 @@
 .card {
   width: 280px;
-  display: block;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   box-shadow: 4px 4px 5px 0px #cacaca75;
   transition: 0.25s;
@@ -21,6 +23,7 @@
     padding: 0;
   }
   &-body {
+    flex: 1;
     padding: 15px;
     background-color: #fff;
     width: 100%;
@@ -29,6 +32,12 @@
       margin-bottom: 10px;
       font-weight: bold;
       color: #378fba;
+    }
+    &__description {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 }
