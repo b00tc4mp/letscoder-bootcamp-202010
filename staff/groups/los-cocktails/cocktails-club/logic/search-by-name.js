@@ -12,9 +12,9 @@ function searchByName(name, callback) {
     "",
     function (status, response) {
       if (status === 200) {
-        var response = JSON.parse(response);
-        var results = response.drinks;
-        if (results === null) callback(new Error("Sorry, no results found"));
+        var res = JSON.parse(response);
+        var results = res.drinks;
+        if (results === null) callback(new Error("Sorry, no results found"), null);
         else {
           results = results.map(
             ({
@@ -22,7 +22,7 @@ function searchByName(name, callback) {
               strDrink: name,
               strInstructions: instructions,
               strInstructionsES: instructionsES,
-              strAcoholic: alcoholic,
+              strAlcoholic: alcoholic,
               strGlass: glass,
               strDrinkThumb: image,
               strIngredient1: ing1,

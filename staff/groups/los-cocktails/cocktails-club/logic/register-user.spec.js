@@ -79,7 +79,6 @@ describe('SPEC registerUser()', function(){
                     JSON.stringify({ username: email , password}),
                     function(status,response) {
                         expect(status).toBe(200)
-                        expect(response.length).toBeGreaterThan(0)
                         token = JSON.parse(response).token
                         
                         call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',

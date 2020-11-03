@@ -9,21 +9,17 @@ describe('SPEC searchByName()', function(){
             searchByName(name,function(error,results){
                 expect(error).toBeNull()
 
-                expect(results).toBeOfType("object");
-                expect(results.length).toBeGreaterThan(0);
-                
-                // var drinks = results.drinks
-                var { drinks } = results
+                expect(results).toBeOfType("object")
 
-                expect(drinks.length).toBeGreaterThan(0)
+                expect(results.length).toBeGreaterThan(0)
 
-                drinks.forEach( drink => {
-                    expect(idDrink).toBeOfType('string')
-                    expect(strDrink).toBeOfType('string')//nombre
-                    expect(strGlass).toBeOfType('string')
-                    expect(strInstructions).toBeOfType('string')
-                    expect(strAlcoholic).toBeOfType('string')
-                    expect(strDrinkThumb).toBeOfType('string')
+                results.forEach( ({ id, name, glass, instructions, alcoholic, image }) => {
+                    expect(id).toBeOfType('string')
+                    expect(name).toBeOfType('string')//nombre
+                    expect(glass).toBeOfType('string')
+                    expect(instructions).toBeOfType('string')
+                    expect(alcoholic).toBeOfType('string')
+                    expect(image).toBeOfType('string')
                     
                 })
 
@@ -39,15 +35,8 @@ describe('SPEC searchByName()', function(){
 
         it('should fail on non-matching cocktail/ coctails', function(){
             searchByName(name,function(error,results){
-                expect(error).toBeNull()
-
-                expect(results).toBeOfType("object")
-                expect(results.length).toBeGreaterThan(0)
-                
-                // var drinks = results.drinks
-                var { drinks } = results
-
-                expect(drinks).toBeNull()
+                expect(error).toBeDefined()
+                expect(results).toBeNull()
 
             })
         })

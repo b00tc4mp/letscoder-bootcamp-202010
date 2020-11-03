@@ -5,21 +5,17 @@ describe('SPEC searchRandomCocktail()', function(){
             searchRandomCocktail(function(error,results){
                 expect(error).toBeNull()
 
-                expect(results).toBeOfType('Object')
+                expect(results).toBeOfType('object')
+
                 expect(results.length).toBeGreaterThan(0)
                 
-                // var drinks = results.drinks
-                var { drinks } = results
-
-                expect(drinks.length).toBeGreaterThan(0)
-                
-                drinks.forEach( drink => {
-                    expect(idDrink).toBeOfType('string')
-                    expect(strDrink).toBeOfType('string')//nombre
-                    expect(strGlass).toBeOfType('string')
-                    expect(strInstructions).toBeOfType('string')
-                    expect(strAlcoholic).toBeOfType('string')
-                    expect(strDrinkThumb).toBeOfType('string')
+                results.forEach( ({ id, glass, name, instructions, alcoholic, image }) => {
+                    expect(id).toBeOfType('string')
+                    expect(name).toBeOfType('string')//nombre
+                    expect(glass).toBeOfType('string')
+                    expect(instructions).toBeOfType('string')
+                    expect(alcoholic).toBeOfType('string')
+                    expect(image).toBeOfType('string')
                     
                 })
 

@@ -10,17 +10,13 @@ describe('SPEC searchByIngredient()', function(){
                 expect(error).toBeNull()
 
                 expect(results).toBeOfType("object")
+
                 expect(results.length).toBeGreaterThan(0)
-                
-                // var drinks = results.drinks
-                var { drinks } = results
 
-                expect(drinks.length).toBeGreaterThan(0)
-
-                drinks.forEach( drink => {
-                    expect(idDrink).toBeOfType('string')
-                    expect(strDrink).toBeOfType('string')//nombre
-                    expect(strDrinkThumb).toBeOfType('string')
+                results.forEach( ({ id, name, image }) => {
+                    expect(id).toBeOfType('string')
+                    expect(name).toBeOfType('string')//nombre
+                    expect(image).toBeOfType('string')
                 })
 
                 done()
@@ -36,10 +32,10 @@ describe('SPEC searchByIngredient()', function(){
         it('should fail on non-matching ingredient', function(done){
             
             // try{
-                searchByIngredient(name,function(error,results){
-                    expect(error).toBeNull()
+                searchByIngredient(name,function(error){
+                    expect(error).toBeDefined()
     
-                    expect(results.length).toBe(0)})
+                    expect(error.message).toBe("no ingredient found")})
             //     })
 
             // } catch (error) {
