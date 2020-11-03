@@ -5,11 +5,20 @@ class Home extends Component {
     constructor(){
         super()
 
-        this.state = { }
+        this.state = {}
     }
     
+    componentWillMount = () => {
+        const { token } = sessionStorage
 
-    handleSearchByName = (query) => {
+        retrieveUser(token, (error, user) => {
+            if (error) return alert(error.message)
+
+            this.setState({ user })
+        })
+    }
+
+    handleSearchByName = query => {
         searchByName(query, (error, results) => {
             if (error) return alert(error.message)
             
@@ -18,23 +27,34 @@ class Home extends Component {
     }
 
     handleSearchRandomCocktail = () => {
-        searchRandomCocktail((error,results) => {
+        searchRandomCocktail( (error, results) => {
             if (error) return alert(error.message)
             
             this.setState({ results })
         })
     }
+
+    handleSearchByIngredient = query => {
+        searchByIngredient(query, (error, results) => {
+            if (error) return alert(error.message)
+            
+            this.setState({ results })
+        })
+    }
+
     
     
     render() {
-        const { props: { user, token }, state: { results } , handleSearchByName, handleSearchRandomCocktail } = this
+        const {state: { results, user } , handleSearchByIngredient, handleSearchByName, handleSearchRandomCocktail } = this
 
         return <>
-            <Welcome user={ user } />
+            { user &&  <Welcome user={ user } />}
 
             <SearchByName onSearch={handleSearchByName} />
 
             <SearchRandomCocktail onSearch={handleSearchRandomCocktail} />
+
+            <SearchByIngredient onSearch={handleSearchByIngredient} />
 
             { results  && <Results items={results} />}
 

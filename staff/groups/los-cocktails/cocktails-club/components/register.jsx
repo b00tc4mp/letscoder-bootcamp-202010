@@ -1,4 +1,38 @@
-function Register({onRegister, returnToLogin}){
+const { Component } = React
+
+class Register extends Component {
+  constructor(){
+    super()
+
+    this.state = {}
+  }
+
+  handleRegister = (fullname,email,password,repassword) => {
+    const {props: {onRegisterSuccess}} = this
+    try{
+      registerUser(fullname,email,password,repassword, error => {
+          if (error) return this.setState({error: error.message})
+  
+          authenticateUser(email, password, (error, token) => {
+              if (error) return this.setState({error: error.message})
+  
+              retrieveUser(token, (error,user) => {
+                  if (error) return this.setState({error: error.message})
+                  
+                  sessionStorage.token = token
+  
+                  onRegisterSuccess()
+              }) 
+          })
+      })
+    } catch (error) {
+      this.setState({error: error.message})
+    }
+}
+
+  render(){
+    const { props: { returnToLogin }, handleRegister } = this
+
 return <>
 <section className="register">
       <h2 className="register__h2">Register</h2>
@@ -10,7 +44,7 @@ return <>
               var password = event.target.password.value
               var repassword = event.target.repassword.value
 
-              onRegister(fullname,email,password,repassword)
+              handleRegister(fullname,email,password,repassword)
           }
       }>
         <p className="register__p">Fullname</p>
@@ -26,5 +60,8 @@ return <>
       <p className="register__p2">Have an account?<span className="register__span" onClick={returnToLogin}>Log in here</span></p>
     </section>
 </>
-
+  }
 }
+
+
+

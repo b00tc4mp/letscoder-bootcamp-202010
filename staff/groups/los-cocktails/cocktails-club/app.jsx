@@ -5,7 +5,9 @@ class App extends Component {
     constructor() {
         super()
 
-        this.state = { view: 'access' }
+        const { token } = sessionStorage
+
+        this.state = { view: token ? 'home' : 'access' }
 
     }
 
@@ -17,45 +19,31 @@ class App extends Component {
         this.setState( { view: 'login' } )
     }
 
-    handleLogin = (email, password) => {
-        authenticateUser(email, password, (error, token) => {
-            if (error) return alert(error.message)
+    handleGoToHome = () => {
+        this.setState({ view: 'home'})
+    }
 
-            retrieveUser(token, (error,user) => {
-                if (error) return alert(error.message)
-                
-                this.setState( { token, view: 'home', user } )
-            }) 
-        })
-    } 
+    handleLogout = () => {
+        delete sessionStorage.token
 
-    handleRegister = (fullname,email,password,repassword) => {
-        registerUser(fullname,email,password,repassword, error => {
-            if (error) return alert(error.message)
-
-            authenticateUser(email, password, (error, token) => {
-                if (error) return alert(error.message)
-
-                retrieveUser(token, (error,user) => {
-                    if (error) return alert(error.message)
-                    
-                    this.setState( { token, view: 'home', user } )
-                }) 
-            })
-        })
+        this.setState({ view: 'access' })
     }
 
     render() {
-        const {state: { view, user, token }, handleGoToRegister, handleGoToLogin, handleLogin, handleRegister } = this
+        const {state: { view }, handleLogout, handleGoToHome, handleGoToRegister, handleGoToLogin } = this
+        const { token } = sessionStorage
 
         return <>
+
+            {token && <button onClick={handleLogout}>Logout</button>}
+
             {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} /> }
 
-            {view === 'register' && <Register onRegister={handleRegister} returnToLogin={handleGoToLogin} />}
+            {view === 'register' && <Register onRegisterSuccess={handleGoToHome} returnToLogin={handleGoToLogin} />}
 
-            {view === 'login' && <Login onLogin={handleLogin} returnToRegister={handleGoToRegister} />}
+            {view === 'login' && <Login onLoginSuccess={handleGoToHome} returnToRegister={handleGoToRegister} />}
 
-            {view === 'home' && <Home user={ user } token={token} />}
+            {view === 'home' && <Home />}
 
         </>
     }
