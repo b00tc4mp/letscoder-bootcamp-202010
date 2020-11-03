@@ -1,23 +1,17 @@
 function Search({ onSearch }) {
-    return <form onSubmit={ function (event) {
+    return <form className = "searchTrack" onSubmit={ function (event) {
         event.preventDefault()
+
+        const type = 'track'
 
         var query = event.target.query.value
 
-        onSearch(query)
+        onSearch(type,query)
     }}>
 
 
-    <label for = "music">Choose Track or Artist</label>
-    <select name="music" id="music"> 
-
-    <option value="Track">Track</option>
-    <option value="Artist">Artist</option>
-
-    </select>
-    <input type="submit"/>
-    <input type="text" name="artist" placeholder="Search" />
-    <button type="reset">✖️</button>
-    <button type="submit">Find</button>
+    <input type="text" name="query" placeholder="Search" />
+    <button className = "button" type="reset">✖️</button>
+    <button className = "button" type="submit">Find</button>
 </form>
 }
