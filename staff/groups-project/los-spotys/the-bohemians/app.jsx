@@ -31,21 +31,17 @@ class App extends Component {
         authenticateUser(email, password, (error, token) => {
             if (error) return alert(error.message)
 
-            this.setState({ token })
-
-            retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
-
-                this.setState({ view: 'welcome', user })
-            })
+            
+            this.setState({ token, view: 'home' })
         })
+       
     }
 
 
 
 
     render() {
-        const { state: {view, user }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin } = this
+        const { state: {view, token }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin } = this
 
         return <>
 
@@ -59,7 +55,7 @@ class App extends Component {
 
         {view === 'login' && <Login onLogin={handleLogin} />}
 
-        {user && <Welcome name={user.fullname} image={user.image} />}
+        {view === 'home' && <Home token={token}/>}
 
 
         </>

@@ -101,9 +101,13 @@ header
     font-family: 'Syne Mono', monospace
     color: white
 
-    img
+    &__image
         border-radius: 50%
         width: 10vw
+
+    &__title
+        margin-top: 5%
+
 
 .search
     @include flexCenter
@@ -140,9 +144,31 @@ header
         grid-column: 1/3
         text-align: center
 
+.searchTrack
 
-.off
-    display: none
+    @include gridColumn
+    width: 50vw
+    margin-top: 10%
+    margin-left: 20%
+    
+    input 
+        font-size: large
+        grid-column: 1/3
+    button
+        font-size: large
+
+.results
+    display: grid
+    text-align: center
+    align-items: center
+    justify-items: center
+    color: white
+    font-family: 'Quicksand', sans-serif
+    font-size: medium
+  
+
+
+
 
         
 @media (min-width: 650px)
@@ -154,6 +180,9 @@ header
         color: white
 
         margin-left: 7%
+        &__title
+            margin-top: 5%
+            margin-left: -4%
 
     .subtitle
         @include flexLeft
@@ -191,5 +220,5 @@ header
         margin-top: 5%
         margin-left: 9%
 
-    .off
-        display: none
+    .searchTrack
+        margin-left: 3%
