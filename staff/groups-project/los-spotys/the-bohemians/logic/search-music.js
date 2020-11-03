@@ -24,7 +24,7 @@ Authorization: `Bearer ${token}`
 
 
 
-         callback(null, music.tracks.items[0].artists)
+         callback(null, music.tracks.items)
         
     } else callback(new Error('sorry, cannot search'))
 
