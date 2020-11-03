@@ -1,48 +1,24 @@
 
-function Slider (props){
+function Slider(props) {
 
   let posters = props && props.items && props.items.results && props.items.results.map(({ poster_path: image }) => {
     return { image };
   });
 
-   return(
-     
-     <div className="u-box">
-    <h1>{props.title}</h1>
-    <div className="scrollable-carousel">
+  return (
+
+    <div className="u-box">
+      <h1>{props.title}</h1>
+      <div className="scrollable-carousel">
 
 
-   {posters && posters.map(poster => { 
-    return <div className = "scrollable-carousel__item"> 
-              <img width='200' height='200' 
-              src={`https://image.tmdb.org/t/p/original${poster.image}`}></img>
-           </div>})}
-
-      <div className="scrollable-carousel__item">
-        <img
-          src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
-          alt=""
-        />
-      </div>
-      <div className="scrollable-carousel__item">
-        <img
-          src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
-          alt=""
-        />
-      </div>
-      <div className="scrollable-carousel__item">
-        <img
-          src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
-          alt=""
-        />
-      </div>
-      <div className="scrollable-carousel__item">
-        <img
-          src="https://pics.filmaffinity.com/Bloodshot-229984487-large.jpg"
-          alt=""
-        />
+        {posters && posters.map(poster => {
+          return <div className="scrollable-carousel__item">
+            <img 
+              src={`https://image.tmdb.org/t/p/w185/${poster.image}`}></img>
+          </div>
+        })}
       </div>
     </div>
-  </div>
-   )    
+  )
 }
