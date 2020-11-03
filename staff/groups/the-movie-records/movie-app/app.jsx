@@ -8,11 +8,11 @@ class App extends Component {
   render() {
     return (
       <>
-      <Header />
-      <main> <Home /></main>
-      <Footer /> 
-        
-      
+        <Header />
+        <main>
+          <Home />
+        </main>
+        <Footer />
       </>
     );
   }
