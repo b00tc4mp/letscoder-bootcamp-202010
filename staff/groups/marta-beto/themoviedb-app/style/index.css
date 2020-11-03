@@ -198,6 +198,12 @@ body {
   font-size: 0.8rem;
 }
 
+.detail__btn {
+  text-decoration: none;
+  border: none;
+  padding: 0.5rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

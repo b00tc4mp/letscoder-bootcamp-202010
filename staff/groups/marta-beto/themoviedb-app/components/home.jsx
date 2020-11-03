@@ -8,7 +8,9 @@ class Home extends Component {
     }
 
     componentWillMount = () => {
-        retrieveUser(this.props.token, (error, user) => {
+        const { token } = sessionStorage
+
+        retrieveUser(token, (error, user) => {
             if (error) return alert(error.message)
 
             retrieveTrendingMovies((error, trendingMovies) => {
@@ -24,10 +26,12 @@ class Home extends Component {
     }
 
     handleModifyUser = (fullname, image) => {
-        modifyUser(this.props.token, { fullname, image }, error => {
+        const {token} = sessionStorage
+
+        modifyUser(token, { fullname, image }, error => {
             if (error) alert(error.message)
 
-            retrieveUser(this.props.token, (error, user) => {
+            retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
 
                 this.setState({ user })
@@ -36,14 +40,15 @@ class Home extends Component {
     }
 
     handleSearchMovies = query => {
+        
         try {
         searchMovies(query, (error, movies) => {
             if (error) return alert(error.message)
-            const pathPoster = 'https://image.tmdb.org/t/p/w500';
+            const locationPath = 'https://image.tmdb.org/t/p/w500';
 
-            const searchMoviePosters = movies.map(movie => (pathPoster + movie.poster_path))
+            const moviesSearch = movies.map(({id, poster_path}) => ({id, image: locationPath + poster_path}))
 
-            this.setState({ searchMoviePosters, query })
+            this.setState({ moviesSearch, query })
         })
         } catch (error) {
             alert(error.message)
@@ -68,18 +73,22 @@ class Home extends Component {
     // }
 
     handleLike = movieId => {
-        toggleLikeMovie(this.props.token, movieId, error => {
+        const { token } = sessionStorage
+
+        toggleLikeMovie(token, movieId, error => {
             if (error) return alert(error.message)
 
-            this.handleSearchMovies(this.state.query)
+                searchMovieId(token, movieId, (error, movie) => {
+                    if (error) return alert(error.message)
+
+                    //this.setState({movie})
+                })
         })
     }
 
-
-
     render() {
 
-        const {state: {view, user, movie, trendingMovies, searchMoviePosters}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
+        const {state: {view, user, movie, trendingMovies, moviesSearch}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
@@ -91,13 +100,13 @@ class Home extends Component {
 
         <Dropdown />
 
-        {searchMoviePosters && <Carousel images={searchMoviePosters} title="Your search" onMovie={handleGoToMovie}/>}
+        {moviesSearch && <Carousel movies={moviesSearch} title="Your search" onMovie={handleGoToMovie}/>}
 
         {trendingMovies && <Carousel movies={trendingMovies} title="Trending movies" onMovie={handleGoToMovie}/>}
 
         {/* {moviesByGenre && <Carousel images={moviesByGenre} title="Selected genre" onMovie={movie}/>} */}
 
-        {movie && <Detail item={movie}/>}
+        {movie && <Detail item={movie} onLike={handleLike}/>}
 
         </>
     }

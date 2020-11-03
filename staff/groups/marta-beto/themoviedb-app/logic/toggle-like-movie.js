@@ -1,11 +1,9 @@
-const toggleLikeVehicle = (token, movieId, callback) => {
+const toggleLikeMovie = (token, movieId, callback) => {
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
     if (!token.trim().length) throw new Error('token is empty or blank')
 
-    if (typeof movieId !== 'string') throw new TypeError(movieId + ' is not a movieId')
-
-    if (!movieId.trim().length) throw new Error('movieId is empty or blank')
+    if (typeof movieId !== 'number') throw new TypeError(movieId + ' is not a movieId')
 
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 
