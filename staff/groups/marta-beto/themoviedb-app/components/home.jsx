@@ -8,9 +8,9 @@ class Home extends Component {
     }
 
     componentWillMount = () => {
-        const { token } = sessionStorage
+        //const { token } = sessionStorage
 
-        retrieveUser(token, (error, user) => {
+        retrieveUser(this.props.token, (error, user) => {
             if (error) return alert(error.message)
 
             retrieveTrendingMovies((error, trendingMovies) => {
@@ -26,9 +26,9 @@ class Home extends Component {
     }
 
     handleModifyUser = (fullname, image) => {
-        const {token} = sessionStorage
+        //const {token} = sessionStorage
 
-        modifyUser(token, { fullname, image }, error => {
+        modifyUser(this.props.token, { fullname, image }, error => {
             if (error) alert(error.message)
 
             retrieveUser(token, (error, user) => {
@@ -59,10 +59,11 @@ class Home extends Component {
     handleGoToMovie = movieId => {
         retrieveMovie(movieId, (error, movie) => {
             if (error) return alert(error.message)
+            const genre = movie.genres[0].name
             
-            const {id, title, poster_path: image, genre_ids: genreIds, release_date: date, overview} = movie // all the details from the movice we want to show (movie destructuring)
+            const {id, title, poster_path: image, release_date: date, overview, like} = movie // all the details from the movie we want to show (movie destructuring)
 
-            this.setState({movie: {id, title, image, genreIds, date, overview}})
+            this.setState({movie: {id, title, image, date, overview, like, genre}})
         })
     }
 
@@ -73,12 +74,12 @@ class Home extends Component {
     // }
 
     handleLike = movieId => {
-        const { token } = sessionStorage
+        //const { token } = sessionStorage
 
-        toggleLikeMovie(token, movieId, error => {
+        toggleLikeMovie(this.props.token, movieId, error => {
             if (error) return alert(error.message)
 
-                searchMovieId(token, movieId, (error, movie) => {
+                searchMovieId(this.props.token, movieId, (error, movie) => {
                     if (error) return alert(error.message)
 
                     //this.setState({movie})
