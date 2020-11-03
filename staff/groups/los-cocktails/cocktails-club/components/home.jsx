@@ -16,15 +16,25 @@ class Home extends Component {
             this.setState({ results })
         })
     }
+
+    handleSearchRandomCocktail = () => {
+        searchRandomCocktail((error,results) => {
+            if (error) return alert(error.message)
+            
+            this.setState({ results })
+        })
+    }
     
     
     render() {
-        const { props: { user, token }, state: { results } , handleSearchByName } = this
+        const { props: { user, token }, state: { results } , handleSearchByName, handleSearchRandomCocktail } = this
 
         return <>
             <Welcome user={ user } />
 
             <SearchByName onSearch={handleSearchByName} />
+
+            <SearchRandomCocktail onSearch={handleSearchRandomCocktail} />
 
             { results  && <Results items={results} />}
 
