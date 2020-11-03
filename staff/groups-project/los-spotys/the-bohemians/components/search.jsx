@@ -11,7 +11,7 @@ function Search({ onSearch }) {
 
 
     <input type="text" name="query" placeholder="Search" />
-    <button className = "button" type="reset">✖️</button>
-    <button className = "button" type="submit">Find</button>
+    <button className = "button button__reset" type="reset">Reset</button>
+    <button className = "button button__find" type="submit">Find</button>
 </form>
 }

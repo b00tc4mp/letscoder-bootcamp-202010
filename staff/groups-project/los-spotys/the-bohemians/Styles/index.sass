@@ -39,10 +39,13 @@ main
     min-height: 100vh
 
 
-header
-    height: 50vh
+.title
+    height: 5vh
     margin-left: 4%
     font-family: 'Syne Mono', monospace
+
+    &:hover
+        cursor: pointer
     
 
     
@@ -58,7 +61,7 @@ header
 .access
 
     @include flexCenter
-    margin-top: 15%
+    margin-top: 60%
     font-size: xx-large
     gap: 2rem
 
@@ -66,7 +69,7 @@ header
 
 .register
     @include flexCenter
-    margin-top: 10%
+    margin-top: 55%
 
     &__form
         @include gridColumn
@@ -79,12 +82,12 @@ header
     @include flexCenter
     font-size: large
     color: white
-    margin-top: 10%
+    margin-top: 60%
     font-family: 'Quicksand', sans-serif
 
 .login
     @include flexCenter
-    margin-top: 10%
+    margin-top: 60%
 
     &__form
         @include gridColumn
@@ -97,47 +100,53 @@ header
     flex-direction: column
     
     margin-left: 5%
-    margin-top: -13%
+    margin-top: 40%
     font-family: 'Syne Mono', monospace
     color: white
 
     &__image
-        border-radius: 50%
+        border-radius: 20%
+        opacity: 0.9
         width: 10vw
 
     &__title
         margin-top: 5%
 
 
-.search
-    @include flexCenter
-    margin-top: 12%
+.results 
+    margin-top: 5%
 
-    &__form
-        @include gridColumn
+.detail
+    color: white
+    font-family: 'Quicksand', sans-serif
+    margin-left: 5%
 
-        input
-            font-size: large    
-            margin: 3% 
-
-
+audio
+    border: 1px solid #2BB954
+    border-radius: 2em
+    color: #2BB954
 .button
     padding: 5px 10px
     border-radius: 1em
     font-size: x-large
-    background-color: #B08A53
+    background-color:#2BB954
     color: white
     font-family: 'Quicksand', sans-serif
     cursor: pointer
-
+    outline: none
 
     &:hover
         opacity: 0.5
     &:active
         opactiy: 0.25
 
-    &__login
-        background-color:#E9D5A0
+    &__login, &__submitLogin, &__reset
+        background-color: white
+        color: #2BB954
+        border: 1.5px solid #2BB954
+
+
+
     
     &__submitRegister, &__submitLogin, &__search
         font-size: large
@@ -148,8 +157,7 @@ header
 
     @include gridColumn
     width: 50vw
-    margin-top: 10%
-    margin-left: 20%
+    margin: 6% 0% 5% 25%
     
     input 
         font-size: large
@@ -162,9 +170,19 @@ header
     text-align: center
     align-items: center
     justify-items: center
+    list-style: none
+    gap: 3rem
     color: white
     font-family: 'Quicksand', sans-serif
     font-size: medium
+
+    &:hover
+        cursor: pointer
+
+    p
+        margin: 3% 0% 3% 0%
+
+    
   
 
 
@@ -175,7 +193,7 @@ header
 
     .welcome
         @include flexLeft
-        margin-top: -13%
+        margin-top: 40%
         font-family: 'Syne Mono', monospace
         color: white
 
@@ -190,35 +208,53 @@ header
         margin-left: 3%
 
         
-    .search
-        @include flexLeft
-        margin-top: 12%
-        margin-left: 3%
 
-        &__form
-            @include gridColumn
-
-            input
-                font-size: large    
-                margin: 3% 
 
     .login
         @include flexLeft
         margin-left: 9%
+        margin-top: 50%
     
     .register-confirm
         @include flexLeft
         margin-left: 7%
+        margin-top: 50%
 
     .register
         @include flexLeft
-        margin-top: 5%
+        margin-top: 50%
         margin-left: 7%
 
     .access
         @include flexLeft
-        margin-top: 5%
+        margin-top: 60%
         margin-left: 9%
 
-    .searchTrack
-        margin-left: 3%
+
+    
+    .detail
+        margin-left: 4%
+
+@media (min-width: 1000px)
+
+
+
+    .welcome
+        margin-top: 15%
+
+
+    .subtitle
+        margin-top: 10%
+
+    .login
+        margin-top: 40%
+    
+    .register-confirm
+        margin-top: 40%
+
+    .register
+        margin-top: 35%
+
+    .access
+        margin-top: 40%
+   

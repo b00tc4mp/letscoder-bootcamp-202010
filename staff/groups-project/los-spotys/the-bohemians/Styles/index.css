@@ -19,10 +19,13 @@ main {
   min-height: 100vh;
 }
 
-header {
-  height: 50vh;
+.title {
+  height: 5vh;
   margin-left: 4%;
   font-family: "Syne Mono", monospace;
+}
+.title:hover {
+  cursor: pointer;
 }
 
 .subtitle {
@@ -38,7 +41,7 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
-  margin-top: 15%;
+  margin-top: 60%;
   font-size: xx-large;
   gap: 2rem;
 }
@@ -47,7 +50,7 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 55%;
 }
 .register__form {
   display: grid;
@@ -63,7 +66,7 @@ header {
   justify-content: center;
   font-size: large;
   color: white;
-  margin-top: 10%;
+  margin-top: 60%;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -71,7 +74,7 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 60%;
 }
 .login__form {
   display: grid;
@@ -87,41 +90,44 @@ header {
   justify-content: center;
   flex-direction: column;
   margin-left: 5%;
-  margin-top: -13%;
+  margin-top: 40%;
   font-family: "Syne Mono", monospace;
   color: white;
 }
 .welcome__image {
-  border-radius: 50%;
+  border-radius: 20%;
+  opacity: 0.9;
   width: 10vw;
 }
 .welcome__title {
   margin-top: 5%;
 }
 
-.search {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-top: 12%;
+.results {
+  margin-top: 5%;
 }
-.search__form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+.detail {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 5%;
 }
-.search__form input {
-  font-size: large;
-  margin: 3%;
+
+audio {
+  border: 1px solid #2BB954;
+  border-radius: 2em;
+  color: #2BB954;
 }
 
 .button {
   padding: 5px 10px;
   border-radius: 1em;
   font-size: x-large;
-  background-color: #B08A53;
+  background-color: #2BB954;
   color: white;
   font-family: "Quicksand", sans-serif;
   cursor: pointer;
+  outline: none;
 }
 .button:hover {
   opacity: 0.5;
@@ -129,8 +135,10 @@ header {
 .button:active {
   opactiy: 0.25;
 }
-.button__login {
-  background-color: #E9D5A0;
+.button__login, .button__submitLogin, .button__reset {
+  background-color: white;
+  color: #2BB954;
+  border: 1.5px solid #2BB954;
 }
 .button__submitRegister, .button__submitLogin, .button__search {
   font-size: large;
@@ -142,8 +150,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 50vw;
-  margin-top: 10%;
-  margin-left: 20%;
+  margin: 6% 0% 5% 25%;
 }
 .searchTrack input {
   font-size: large;
@@ -158,9 +165,17 @@ header {
   text-align: center;
   align-items: center;
   justify-items: center;
+  list-style: none;
+  gap: 3rem;
   color: white;
   font-family: "Quicksand", sans-serif;
   font-size: medium;
+}
+.results:hover {
+  cursor: pointer;
+}
+.results p {
+  margin: 3% 0% 3% 0%;
 }
 
 @media (min-width: 650px) {
@@ -168,7 +183,7 @@ header {
     display: flex;
     align-content: left;
     justify-content: left;
-    margin-top: -13%;
+    margin-top: 40%;
     font-family: "Syne Mono", monospace;
     color: white;
     margin-left: 7%;
@@ -186,27 +201,12 @@ header {
     margin-left: 3%;
   }
 
-  .search {
-    display: flex;
-    align-content: left;
-    justify-content: left;
-    margin-top: 12%;
-    margin-left: 3%;
-  }
-  .search__form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .search__form input {
-    font-size: large;
-    margin: 3%;
-  }
-
   .login {
     display: flex;
     align-content: left;
     justify-content: left;
     margin-left: 9%;
+    margin-top: 50%;
   }
 
   .register-confirm {
@@ -214,13 +214,14 @@ header {
     align-content: left;
     justify-content: left;
     margin-left: 7%;
+    margin-top: 50%;
   }
 
   .register {
     display: flex;
     align-content: left;
     justify-content: left;
-    margin-top: 5%;
+    margin-top: 50%;
     margin-left: 7%;
   }
 
@@ -228,12 +229,37 @@ header {
     display: flex;
     align-content: left;
     justify-content: left;
-    margin-top: 5%;
+    margin-top: 60%;
     margin-left: 9%;
   }
 
-  .searchTrack {
-    margin-left: 3%;
+  .detail {
+    margin-left: 4%;
+  }
+}
+@media (min-width: 1000px) {
+  .welcome {
+    margin-top: 15%;
+  }
+
+  .subtitle {
+    margin-top: 10%;
+  }
+
+  .login {
+    margin-top: 40%;
+  }
+
+  .register-confirm {
+    margin-top: 40%;
+  }
+
+  .register {
+    margin-top: 35%;
+  }
+
+  .access {
+    margin-top: 40%;
   }
 }
 
