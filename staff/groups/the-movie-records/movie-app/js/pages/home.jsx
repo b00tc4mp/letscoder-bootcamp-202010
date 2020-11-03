@@ -21,7 +21,14 @@ componentWillMount() {
 
  __handleResult = (resultSearch) => {this.setState({resultSearch, searchUsed: true})}
  __renderResult (){
-     return this.state.resultSearch.results.length === 0 ? <p>no result</p> : <ResultList movies = {this.state.resultSearch.results} />
+     return this.state.resultSearch.results.length === 0 ? <NoResult /> : <ResultList movies = {this.state.resultSearch.results} />
+ }
+
+ __renderSlider(){
+     return <>
+        {this.state.newMovies  && <Slider title = "Cartelera de cine"  items = {this.state.newMovies}  />}
+        {this.state.upcomingMovies && <Slider title = "Novedades"  items = {this.state.upcomingMovies}  />} 
+     </>
  }
 /* handleNewMovies = () => {retrieveNewMovies (function(pages, language, callback))} */
 render(){
@@ -29,11 +36,12 @@ render(){
         <Header />
         <Discover />
         <Search  onResult = {this.__handleResult}/>
+    
 
        
-         {this.state.searchUsed ? this.__renderResult(): <p>form unpresend</p>}
-         {/* {this.state.newMovies && <Slider title = "Cartelera de cine"  items = {this.state.newMovies}  />} 
-         {this.state.upcomingMovies && <Slider title = "Novedades"  items = {this.state.upcomingMovies}  />}  */}
+         {this.state.searchUsed ? this.__renderResult(): this.__renderSlider()
+
+         }
         <Footer /> 
         </>
 
