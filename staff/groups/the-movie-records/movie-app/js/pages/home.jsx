@@ -33,7 +33,6 @@ componentWillMount() {
 /* handleNewMovies = () => {retrieveNewMovies (function(pages, language, callback))} */
 render(){
     return <>
-        <Header />
         <Discover />
         <Search  onResult = {this.__handleResult}/>
     
@@ -42,7 +41,7 @@ render(){
          {this.state.searchUsed ? this.__renderResult(): this.__renderSlider()
 
          }
-        <Footer /> 
+        
         </>
 
 

@@ -193,7 +193,9 @@ body > main {
 }
 .card {
   width: 280px;
-  display: block;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   box-shadow: 4px 4px 5px 0px #cacaca75;
   transition: 0.25s;
@@ -215,6 +217,7 @@ body > main {
   padding: 0;
 }
 .card-body {
+  flex: 1;
   padding: 15px;
   background-color: #fff;
   width: 100%;
@@ -224,6 +227,12 @@ body > main {
   margin-bottom: 10px;
   font-weight: bold;
   color: #378fba;
+}
+.card-body__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .search {
@@ -835,6 +844,7 @@ footer {
   font-size: 2.3rem;
   text-align: center;
   color: #a1a1a1;
+  height: 550px;
 }
 
 .not-found__wrapper {

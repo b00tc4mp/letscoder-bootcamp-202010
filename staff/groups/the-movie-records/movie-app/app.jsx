@@ -8,7 +8,10 @@ class App extends Component {
   render() {
     return (
       <>
-      <Home />  
+      <Header />
+      <main> <Home /></main>
+      <Footer /> 
+        
       
       </>
     );
