@@ -17,7 +17,7 @@ class Home extends Component {
 
     handleSearchMusic = (type, query) => {
         try {
-            searchMusic("BQApkFSI8EopxxFZR8-DsoE6zkZb7XzGSNWmoP06Uj49TCxrKTsAlh25_YOze-8eZQiUYe31DesHX9ljKZQ6IjTbBN3fZPXK0OTzyQtjbnhYQrxBtfeYZq8LXQkdEspAZNrK6IZ9tKt6zo5iOL-sP7FvhMNFytI", type, query, (error, music) => {
+            searchMusic("BQCBKbH8X104utQm5b07hXZL9xAOmWYYt1Udaodv7oJCM6o9ngz_jHVBDeKsJQsKQceyE0aZ3mPELyFmiiOQjwCd04kJoY3y2AR96hKWnnSX964OtGddZys2HR6P7SmZPwE8449A2DMJeducZAZu4xjRad_UVxQ", type, query, (error, music) => {
                 if (error) return alert(error.message)
                 
                 music = music.map(({ name: song, id, preview_url: preListening, artists, album, popularity }) => ({ song, id, preListening, artist: artists[0].name ? artists[0].name : 'this song doesn´t have an artist', image: album.images[1].url ? album.images[1].url : 'http://hem.bredband.net/b477738/not-found.jpg', releaseDate: album.release_date}))
@@ -32,7 +32,7 @@ class Home extends Component {
     }
 
     handleGoToTrack = (id) => {
-        retrieveTrack("BQApkFSI8EopxxFZR8-DsoE6zkZb7XzGSNWmoP06Uj49TCxrKTsAlh25_YOze-8eZQiUYe31DesHX9ljKZQ6IjTbBN3fZPXK0OTzyQtjbnhYQrxBtfeYZq8LXQkdEspAZNrK6IZ9tKt6zo5iOL-sP7FvhMNFytI", id, (error, track) => {
+        retrieveTrack("BQCBKbH8X104utQm5b07hXZL9xAOmWYYt1Udaodv7oJCM6o9ngz_jHVBDeKsJQsKQceyE0aZ3mPELyFmiiOQjwCd04kJoY3y2AR96hKWnnSX964OtGddZys2HR6P7SmZPwE8449A2DMJeducZAZu4xjRad_UVxQ", id, (error, track) => {
             if (error) return alert(error.message)
             {
             let { id, name: song, preview_url: preListening, album, popularity, artists } = track

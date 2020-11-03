@@ -99,19 +99,14 @@ header {
   margin-top: 5%;
 }
 
-.search {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-top: 12%;
+.results {
+  margin-top: 5%;
 }
-.search__form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.search__form input {
-  font-size: large;
-  margin: 3%;
+
+.detail {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 5%;
 }
 
 .button {
@@ -142,8 +137,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 50vw;
-  margin-top: 10%;
-  margin-left: 20%;
+  margin: 6% 0% 5% 25%;
 }
 .searchTrack input {
   font-size: large;
@@ -158,9 +152,14 @@ header {
   text-align: center;
   align-items: center;
   justify-items: center;
+  list-style: none;
+  gap: 3rem;
   color: white;
   font-family: "Quicksand", sans-serif;
   font-size: medium;
+}
+.results p {
+  margin: 3% 0% 3% 0%;
 }
 
 @media (min-width: 650px) {
@@ -184,22 +183,6 @@ header {
     justify-content: left;
     margin-top: 10%;
     margin-left: 3%;
-  }
-
-  .search {
-    display: flex;
-    align-content: left;
-    justify-content: left;
-    margin-top: 12%;
-    margin-left: 3%;
-  }
-  .search__form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .search__form input {
-    font-size: large;
-    margin: 3%;
   }
 
   .login {
@@ -232,8 +215,8 @@ header {
     margin-left: 9%;
   }
 
-  .searchTrack {
-    margin-left: 3%;
+  .detail {
+    margin-left: 4%;
   }
 }
 

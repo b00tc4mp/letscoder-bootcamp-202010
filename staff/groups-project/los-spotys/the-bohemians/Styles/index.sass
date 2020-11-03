@@ -109,16 +109,13 @@ header
         margin-top: 5%
 
 
-.search
-    @include flexCenter
-    margin-top: 12%
+.results 
+    margin-top: 5%
 
-    &__form
-        @include gridColumn
-
-        input
-            font-size: large    
-            margin: 3% 
+.detail
+    color: white
+    font-family: 'Quicksand', sans-serif
+    margin-left: 5%
 
 
 .button
@@ -148,8 +145,7 @@ header
 
     @include gridColumn
     width: 50vw
-    margin-top: 10%
-    margin-left: 20%
+    margin: 6% 0% 5% 25%
     
     input 
         font-size: large
@@ -162,9 +158,16 @@ header
     text-align: center
     align-items: center
     justify-items: center
+    list-style: none
+    gap: 3rem
     color: white
     font-family: 'Quicksand', sans-serif
     font-size: medium
+
+    p
+        margin: 3% 0% 3% 0%
+
+    
   
 
 
@@ -190,17 +193,7 @@ header
         margin-left: 3%
 
         
-    .search
-        @include flexLeft
-        margin-top: 12%
-        margin-left: 3%
 
-        &__form
-            @include gridColumn
-
-            input
-                font-size: large    
-                margin: 3% 
 
     .login
         @include flexLeft
@@ -220,5 +213,7 @@ header
         margin-top: 5%
         margin-left: 9%
 
-    .searchTrack
-        margin-left: 3%
+
+    
+    .detail
+        margin-left: 4%
