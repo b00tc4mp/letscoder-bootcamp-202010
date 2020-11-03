@@ -11,7 +11,11 @@ class Home extends Component {
         retrieveUser(this.props.token, (error, user) => {
             if (error) return alert(error.message)
 
-            this.setState({ user })
+            retrieveTrendingMovies((error, trendingMovies) => {
+                if (error) return alert(error.message)
+    
+                this.setState({trendingMovies, user})
+            })
         })
     }
 
@@ -33,36 +37,35 @@ class Home extends Component {
 
     handleSearchMovies = query => {
         try {
-        searchMovie(query, (error, movies) => {
+        searchMovies(query, (error, movies) => {
             if (error) return alert(error.message)
+            const pathPoster = 'https://image.tmdb.org/t/p/w500';
 
-            movies = movies.map(({movieId, poster_path: url}) => ({movieId, url}))
+            const searchMoviePosters = movies.map(movie => (pathPoster + movie.poster_path))
 
-            this.setState({ movies, query })
+            this.setState({ searchMoviePosters, query })
         })
         } catch (error) {
             alert(error.message)
         }
     }
 
+
     handleGoToMovie = movieId => {
         retrieveMovie(movieId, (error, movie) => {
             if (error) return alert(error.message)
+            
+            const {id, title, poster_path: image, genre_ids: genreIds, release_date: date, overview} = movie // all the details from the movice we want to show (movie destructuring)
 
-            const {title, url, genre, date, like, description} = movie // all the details from the movice we want to show (movie destructuring)
-
-            this.setState({subview: 'detail'}, {movie: {title, url, genre, date, like, description}})
+            this.setState({movie: {id, title, image, genreIds, date, overview}})
         })
     }
 
-    handleTrendingMovies = () => {
-        showTrending(error, trending => {
-            if (error) return alert(error.message)
-
-            // TODO
-
-        })
-    }
+    // handleOnGenre = genreId => {
+    //     retrieveMoviesByGenre(genreId, (error, movies) => {
+    //         // TODO
+    //     })
+    // }
 
     handleLike = movieId => {
         toggleLikeMovie(this.props.token, movieId, error => {
@@ -76,7 +79,7 @@ class Home extends Component {
 
     render() {
 
-        const {state: {subview, view, user, movies, movie}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
+        const {state: {view, user, movie, trendingMovies, searchMoviePosters}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
@@ -88,9 +91,13 @@ class Home extends Component {
 
         <Dropdown />
 
-        <Carousel onMovie={movie}/>
+        {searchMoviePosters && <Carousel images={searchMoviePosters} title="Your search" onMovie={handleGoToMovie}/>}
 
-        {subview === 'detail' && movie && <Detail item={movie}/>}
+        {trendingMovies && <Carousel movies={trendingMovies} title="Trending movies" onMovie={handleGoToMovie}/>}
+
+        {/* {moviesByGenre && <Carousel images={moviesByGenre} title="Selected genre" onMovie={movie}/>} */}
+
+        {movie && <Detail item={movie}/>}
 
         </>
     }
