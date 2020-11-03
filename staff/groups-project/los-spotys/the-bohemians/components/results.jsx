@@ -3,8 +3,9 @@ function Results({ music, onTrack }) {
         {music.map(({ artist, id, image, preListening, song }) => <li className="results__track" key={id} onClick={() => onTrack(id)}>
             {artist && <p>{artist}</p>}
             {song && <p>{song}</p>}
-            {preListening && <p>{preListening}</p>}
+            {preListening ? <a href= {preListening}><h2>Listen the song</h2></a> : <h2>no preListening</h2>}
             {image && <img src={image} />}
         </li>)}
     </ul>
 }
+
