@@ -31,11 +31,11 @@ class Register extends Component {
 }
 
   render(){
-    const { props: { returnToLogin }, handleRegister } = this
+    const { props: { returnToLogin }, state: { error }, handleRegister } = this
 
 return <>
 <section className="register">
-      <h2 className="register__h2">Register</h2>
+      <h2 className="register__h2">Sign Up</h2>
       <form className="register__form" onSubmit={
           function(event) {
               event.preventDefault()
@@ -55,7 +55,8 @@ return <>
         <input className="register__input" name="password" type="text" placeholder="********" />
         <p className="register__p">Repassword</p>
         <input className="register__input" name="repassword" type="text" placeholder="********" />
-        <button className="register__button">Register</button>
+        {error && <Feedback error={error } />}
+        <br/> <button className="register__button">Sign Up</button>
       </form>
       <p className="register__p2">Have an account?<span className="register__span" onClick={returnToLogin}>Log in here</span></p>
     </section>

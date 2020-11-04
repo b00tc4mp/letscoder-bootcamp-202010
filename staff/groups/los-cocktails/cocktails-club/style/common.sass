@@ -1,0 +1,80 @@
+
+*
+    font-family: Open Sans
+    font-weight: 400
+    border: none
+body
+    // align-items: center
+    // justify-content: center
+    background-image: url('./images/mobile-background-image-iphone.jpg')
+    
+    margin-top: 0
+    text-align: center
+    // display: block
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.access > button:hover
+    background-color: #fc8823
+    color: white
+
+
+
+
+
+
+
+        
+
+
+
+
+
+.logo
+    max-height: 20vw
+    max-width: 40vw
+    margin: 5vw auto 0 auto
+    
+
+
+
+
+@media (min-width: 400px)
+    body
+        background-image:  url('./images/cocktail-image.jpg')
+
+        background-repeat: no-repeat
+        background-color: black
+        
+
+        background-size: 1200px 
+    
+    .register
+        &__input
+            width: 28vw
+            height: 3vw
+            background-color: #efeff4
+            margin-left: 0
+            margin-right: 0
+            border-radius:10px
+            &::placeholder
+                color: black
+                font-weight: 550
+                padding-left: .5vw
+        &__p
+            display: flex
+            padding-left: 1vw
+            margin-bottom: 2px
+            font-size: .8rem
+            color: #8e8e93
+        &__button
+            width: 28vw
+            height: 3.8vw
+            background-color: black
+            color: white
+            border-radius: 10px
+            margin-top: 25px
+            font-size: 1.1rem
+    

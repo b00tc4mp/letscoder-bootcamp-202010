@@ -1,0 +1,279 @@
+* {
+  font-family: Open Sans;
+  font-weight: 400;
+  border: none;
+}
+
+body {
+  background-image: url("./images/mobile-background-image-iphone.jpg");
+  margin-top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.access > button:hover {
+  background-color: #fc8823;
+  color: white;
+}
+
+.logo {
+  max-height: 20vw;
+  max-width: 40vw;
+  margin: 5vw auto 0 auto;
+}
+
+@media (min-width: 400px) {
+  body {
+    background-image: url("./images/cocktail-image.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: 1200px;
+  }
+
+  .register__input {
+    width: 28vw;
+    height: 3vw;
+    background-color: #efeff4;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 10px;
+  }
+  .register__input::placeholder {
+    color: black;
+    font-weight: 550;
+    padding-left: 0.5vw;
+  }
+  .register__p {
+    display: flex;
+    padding-left: 1vw;
+    margin-bottom: 2px;
+    font-size: 0.8rem;
+    color: #8e8e93;
+  }
+  .register__button {
+    width: 28vw;
+    height: 3.8vw;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 1.1rem;
+  }
+}
+.access {
+  padding: 5vh;
+  margin: 5vw 15vw 0vw 15vw;
+  width: 45vw;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  font-size: 1rem;
+  align-items: center;
+}
+.access__register {
+  padding: 2vw 8.5vw 2vw 8.5vw;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 200ms ease;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.access__register:hover {
+  background-color: #fc8823;
+  color: white;
+}
+.access__login {
+  padding: 2vw 8.5vw 2vw 8.5vw;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  white-space: nowrap;
+  outline: none;
+  transition: all 200ms ease;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.access__login:hover {
+  background-color: #fc8823;
+  color: white;
+}
+.access__quote {
+  margin-top: 0;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.access__quote--name {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  float: right;
+  font-weight: 300;
+}
+
+.register {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 0.7rem;
+  padding: 20px;
+  padding-top: 5px;
+}
+.register__h2 {
+  margin: 0;
+  padding: 20px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.register__input {
+  width: 60vw;
+  height: 7vw;
+  background-color: #efeff4;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.5rem;
+}
+.register__input::placeholder {
+  color: black;
+  font-weight: 550;
+}
+.register__p {
+  display: flex;
+  padding-left: 2vw;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+  color: #8e8e93;
+}
+.register__button {
+  width: 60vw;
+  height: 7.5vw;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+.login {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 0.7rem;
+  padding: 20px;
+  padding-top: 5px;
+}
+.login__h2 {
+  margin: 0;
+  padding: 20px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.login__input {
+  width: 60vw;
+  height: 7vw;
+  background-color: #efeff4;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.5rem;
+}
+.login__input::placeholder {
+  color: black;
+  font-weight: 550;
+}
+.login__p {
+  display: flex;
+  padding-left: 2vw;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+  color: #8e8e93;
+}
+.login__button {
+  width: 60vw;
+  height: 7.5vw;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 1000px) {
+  .login {
+    width: 25vw;
+  }
+  .login__input {
+    width: 23vw;
+    height: 3vw;
+  }
+  .login__button {
+    width: 23vw;
+    height: 3vw;
+  }
+
+  .register {
+    width: 25vw;
+  }
+  .register__input {
+    width: 23vw;
+    height: 3vw;
+  }
+  .register__button {
+    width: 23vw;
+    height: 3vw;
+  }
+}
+@media (max-width: 999px) and (min-width: 550px) {
+  .login {
+    width: 28vw;
+  }
+  .login__input {
+    width: 25vw;
+    height: 4vw;
+  }
+  .login__button {
+    width: 25vw;
+    height: 4vw;
+  }
+
+  .register {
+    width: 28vw;
+  }
+  .register__input {
+    width: 25vw;
+    height: 4vw;
+  }
+  .register__button {
+    width: 25vw;
+    height: 4vw;
+  }
+}
+.results__li {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  border-radius: 30px;
+  gap: 30px;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.results__image {
+  float: left;
+}
+.results__p {
+  text-align: start;
+  margin-left: 20px;
+}
+
+.negrita {
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -24,7 +24,7 @@ class Login extends Component {
   }
 
   render(){
-    const { handleLogin, props: { returnToRegister } } = this
+    const { handleLogin,state: { error }, props: { returnToRegister } } = this
 
     return <> 
     <section className="login">
@@ -41,7 +41,8 @@ class Login extends Component {
             <input name="email" className="login__input" type="text" placeholder="email@example.com" />
             <p className="login__p" >Password</p>
             <input name="password" className="login__input" type="text" placeholder="********" />
-            <button className="login__button">Log In</button>
+            {error && <Feedback error={error} />}
+            <br/> <button className="login__button">Log In</button>
           </form>
           <p className="login__p2">Don't have an account <span onClick={returnToRegister} className="login__span">Register here</span></p>
         </section>

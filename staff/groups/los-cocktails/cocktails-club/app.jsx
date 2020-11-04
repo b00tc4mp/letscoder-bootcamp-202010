@@ -1,6 +1,7 @@
 const { Component } = React
 // const Component = React.Component
 
+
 class App extends Component {
     constructor() {
         super()
@@ -29,12 +30,22 @@ class App extends Component {
         this.setState({ view: 'access' })
     }
 
+    handleClickOnHome = () => {
+        const { state: { view } } = this
+        if( view === 'access' || view === 'register' || view === 'login' )
+            this.setState({ view: 'access' })
+        else this.setState({ view: 'home' })
+    }
+
     render() {
-        const {state: { view }, handleLogout, handleGoToHome, handleGoToRegister, handleGoToLogin } = this
+        const {state: { view }, handleLogout, handleGoToHome, handleGoToRegister, handleGoToLogin, handleClickOnHome } = this
         const { token } = sessionStorage
 
         return <>
+            
+            { view === 'home' || <Logo onHome={handleClickOnHome} />}
 
+            
             {token && <button onClick={handleLogout}>Logout</button>}
 
             {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} /> }

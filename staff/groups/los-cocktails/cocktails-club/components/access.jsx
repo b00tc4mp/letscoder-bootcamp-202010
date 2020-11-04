@@ -1,6 +1,6 @@
 function Access({ onRegister, onLogin}){
      return <><section className="access">
-      <button className="access__register" onClick={onRegister} >Register</button>
+      <button className="access__register" onClick={onRegister} >Sign In</button>
       <button className="access__login" onClick={onLogin}>Log In</button>
     </section>
     <p className="access__quote">
@@ -13,7 +13,7 @@ function Access({ onRegister, onLogin}){
 
 /* function Access(props){
      return <><section className="access">
-      <button className="access__register" onClick={props.onRegister} >Register</button>
+      <button className="access__register" onClick={props.onRegister} >Sing In</button>
       <button className="access__login">Log In</button>
     </section>
     <p className="access__quote">
