@@ -4,7 +4,7 @@ class Home extends Component {
     constructor() {
         super()
 
-        this.state = { subview: 'search' }
+        this.state = {}
     }
 
     componentWillMount() {
@@ -65,11 +65,11 @@ class Home extends Component {
 
     handleLike = vehicleId => {
         const { token } = sessionStorage
-
+        
         toggleLikeVehicle(token, vehicleId, error => {
             if (error) return alert(error.message)
 
-            const { state: { vehicle } } = this
+            const { state : { vehicle }} = this
 
             if (vehicle)
                 this.handleGoToVehicle(vehicleId)
@@ -78,41 +78,23 @@ class Home extends Component {
         })
     }
 
-    handleGoToLikes = () => {
-        const { token } = sessionStorage
-
-        retrieveLikedVehicles(token, (error, likedVehicles) => {
-            if (error) alert(error.message)
-
-            this.setState({ subview: 'likes', likedVehicles })
-        })
-    }
-
-    handleGoToSearch = () => this.setState({ subview: 'search' })
-
     render() {
-        const { state: { subview, vehicles, vehicle, user, likedVehicles }, handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoToVehicle, handleLike, handleGoToLikes, handleGoToSearch } = this
+        const { state: { subview, vehicles, vehicle, user }, handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoToVehicle, handleLike } = this
 
         return <>
             {user && <Welcome name={user.fullname} image={user.image} />}
 
-            <button onClick={handleGoToSearch}>Search</button>
-
-            <button onClick={handleGoToLikes}>Likes</button>
-
             <button onClick={handleGoToProfile}>Profile</button>
 
-            {subview === 'likes' && <Results items={likedVehicles} currency="$" />}
-
-            {subview === 'search' && <>
-                <Search onSearch={handleSearchVehicles} />
-
-                {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} onLike={handleLike} />}
-
-                { vehicle && <Detail item={vehicle} currency="$" onLike={handleLike} />}
-            </>}
-
             {subview === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} image={user.image} />}
+
+            <h2>Vehicles</h2>
+
+            <Search onSearch={handleSearchVehicles} />
+
+            {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} onLike={handleLike} />}
+
+            { vehicle && <Detail item={vehicle} currency="$" onLike={handleLike} />}
         </>
     }
 }

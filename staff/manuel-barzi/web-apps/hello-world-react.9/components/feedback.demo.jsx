@@ -1,0 +1,1 @@
+ReactDOM.render(<Feedback message="Hello, World!" level="error" />, document.getElementById('root'))

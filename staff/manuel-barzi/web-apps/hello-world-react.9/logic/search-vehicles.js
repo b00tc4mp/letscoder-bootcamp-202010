@@ -22,8 +22,8 @@ function searchVehicles(token, query, callback) {
                             vehicles.forEach(vehicle => vehicle.like = likes.includes(vehicle.id))
 
                             callback(null, vehicles)
-                        } else callback(new Error('sorry, cannot search :('))
+                        }
                     })
-            } else callback(new Error('sorry, cannot search vehicles :('))
+            } else callback(new Error('sorry, cannot search :('))
         })
 }
