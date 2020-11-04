@@ -30,7 +30,7 @@ function Detail(props) {
               width="300"
             />
           </div>
-          <div>{props.items.overview}</div>
+          <div className="movie__overview">{props.items.overview}</div>
         </div>
       </div>
 
