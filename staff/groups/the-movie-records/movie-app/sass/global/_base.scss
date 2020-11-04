@@ -28,6 +28,18 @@ body {
     flex-direction: column;
   }
 }
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: stretch;
+  & > main {
+    flex: 1;
+    &.section-login {
+      background: url("../../images/bg-login.png");
+    }
+  }
+}
 @media (min-width: 600px) {
   body {
     max-width: 1200px;

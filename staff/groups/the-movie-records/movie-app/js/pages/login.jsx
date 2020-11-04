@@ -1,4 +1,4 @@
-function Login({ onLogin }) {
+function Login({ onLogin, onGoToRegister }) {
   return (
     <section className="login">
       <form
@@ -35,6 +35,7 @@ function Login({ onLogin }) {
           required
         />
         <button className="login__button">Login</button>
+        <p onClick={onGoToRegister}>Register</p>
       </form>
     </section>
   );

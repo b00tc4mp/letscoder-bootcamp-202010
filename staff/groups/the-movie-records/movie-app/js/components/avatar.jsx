@@ -1,6 +1,11 @@
 function Avatar(props) {
+  const { token, onAvatar, onProfile } = props;
+  console.log(token);
   return (
-    <div className="avatar" onClick={() => props.onAvatar(true)}>
+    <div
+      className="avatar"
+      onClick={() => (token ? onProfile(true) : onAvatar(true))}
+    >
       <div className="avatar__initials">SG</div>
       <img
         className="avatar__image"
