@@ -1,7 +1,7 @@
-function retrieveTrack(token, id, callback) {
-    if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+function retrieveTrack(token, spotyToken, id, callback) {
+    if (typeof spotyToken !== 'string') throw new TypeError(spotyToken + ' is not a spotyToken')
 
-    if (!token.trim().length) throw new Error('token is empty or blank')
+    if (!spotyToken.trim().length) throw new Error('spotyToken is empty or blank')
 
     if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
 
@@ -13,16 +13,30 @@ function retrieveTrack(token, id, callback) {
     call('GET', `https://api.spotify.com/v1/tracks/${id}`,
     {Accept: "application/json",
     "Content-Type": "application/json",
-    Authorization: `Bearer ${token}` 
+    Authorization: `Bearer ${spotyToken}` 
     }, '', function(status, response) {
         if (status === 200) {
-            var track = JSON.parse(response)
+            let track = JSON.parse(response)
 
 
+            if (track)
+            call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, '',
+                (status, response) => {
+                    if (status === 200) {
+                        const { favourites = [] } = JSON.parse(response)
 
-            callback(null, track)
+                        track.favourite = favourites.includes(track.id)
+
+                        callback(null, track)
+                    }
+                })
+        else callback(null, track, type, query)
             
-        } else callback(new Error('sorry, cannot search'))
+        } else {
+            const { error } = JSON.parse
 
+            callback(new Error(error))
+            
+        }
     })
 }

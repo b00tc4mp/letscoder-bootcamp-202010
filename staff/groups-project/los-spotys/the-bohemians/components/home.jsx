@@ -20,6 +20,7 @@ class Home extends Component {
     
     handleSearchTracks = (type, query) => {
         const {token, spotyToken} = sessionStorage
+        
         try {
             searchTracks(token, spotyToken, type, query, (error, tracks) => {
                 if (error) return alert(error.message)
@@ -34,14 +35,14 @@ class Home extends Component {
 
     handleGoToTrack = (id) => {
 
-        const {spotyToken} = sessionStorage
+        const {token, spotyToken} = sessionStorage
 
-        retrieveTrack(spotyToken, id, (error, track) => {
+        retrieveTrack(token, spotyToken, id, (error, track) => {
             if (error) return alert(error.message)
             {
-            let { id, name: song, preview_url: preListening, album, artists } = track
-               
-            this.setState({ track: { id, song, preListening, image: album.images[1].url, releaseDate: album.release_date, artist: artists[0].name, album: album.name } })
+            let { id, name: song, preview_url: preListening, album, artists, favourite } = track
+
+            this.setState({ track: { id, song, preListening, image: album.images[1].url, releaseDate: album.release_date, artist: artists[0].name, album: album.name, favourite } })
             }
         })
     }
@@ -53,13 +54,15 @@ class Home extends Component {
         toggleFavouriteTrack(token, id, error => {
             if (error) return alert(error.message)
 
-            const{type, query} = this.state 
+            const {state : { track }} = this 
             
-            this.handleSearchTracks(type, query)
-
+            if(track)
+            this.handleGoToTrack(id)
+            else
+            this.handleSearchTracks(this.state.type, this.state.query)
         })
-
     }
+
 
     render() {
         const { state: { subview, tracks, track, user }, handleSearchTracks, handleGoToTrack, handleFavourite } = this
@@ -73,7 +76,7 @@ class Home extends Component {
 
             {!track && tracks && <Results tracks={tracks} onTrack={handleGoToTrack} onFavourite = {handleFavourite} />}
 
-            {track && <Detail song={track} /> }
+            {track && <Detail song={track}  onFavourite={handleFavourite}/> }
         </>
 
     }

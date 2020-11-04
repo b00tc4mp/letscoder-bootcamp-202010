@@ -6,7 +6,7 @@ class App extends Component {
 
         const {token} = sessionStorage
 
-        sessionStorage.spotyToken = "BQAKtinRXaBbiS8srswptP3zCZjQozJaL8fHNQZY4uXi5Rr9tz3imHkWpvYj8Ldo1y6dwupc9Eip1wY6boeJgpq55atBdCYn5wM7N8a-r64lhRvtXte57lG858oEMf-KuhvRp8gYAcz_UDIMC-NenH0uWFfi5x4"
+        sessionStorage.spotyToken = "BQCiU6frIcwTe24FMwdiuwqDPI6hPMLOF634Skt8kchtd9B5QpYicImYdnOzkps1TGikhzXDvJLK4IgCUToCDphWqa5njeIsOJ7Wh99wF6XF9cLrTDUgU-Cb4rnSL3NAZ3QhaxzdAlSzoeAXkza8EvwJp6MLfsQ"
 
         this.state = { view: token ? 'home' : 'access', }
     }
