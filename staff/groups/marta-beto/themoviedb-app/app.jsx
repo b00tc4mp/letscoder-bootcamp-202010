@@ -34,7 +34,7 @@ class App extends Component {
 
     handleLogin = (email, password) => {
         authenticateUser(email, password, (error, token) => {
-            if (error) return alert(error.message);
+            if (error) return alert(error.message)
 
             this.setState({ token, view: 'home' });
 

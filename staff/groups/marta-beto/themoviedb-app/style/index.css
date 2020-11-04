@@ -6,19 +6,18 @@
   padding: 0;
 }
 
-body {
+body, html {
   color: #bdb9b9;
   font-family: "Roboto", sans-serif;
+  height: 100%;
 }
 
 #root {
-  background-image: url("./background2.jpg");
-  background-color: transparent;
-  height: 650px;
-  background-position: center;
+  background-image: url("./back-b&w.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-position: center;
+  height: 100%;
 }
 
 .title {
@@ -143,22 +142,34 @@ body {
   margin: auto;
 }
 
+.welcome__title {
+  text-align: center;
+}
+.welcome__name {
+  color: #489899;
+}
+
 .carousel {
-  width: 100%;
-  height: 150px;
+  width: 90%;
   overflow: auto;
   white-space: nowrap;
-  width: 95%;
   margin: 0.5rem auto;
-  height: 165px;
+}
+.carousel__title {
+  padding: 0.3rem;
 }
 .carousel__movie {
   display: inline-block;
   margin: 0 0.2rem;
+  cursor: pointer;
 }
 .carousel__movie > img {
-  height: 150px;
-  width: 100px;
+  height: 155px;
+  width: 115px;
+}
+
+.genres {
+  margin: 0.8rem;
 }
 
 .search {
@@ -198,10 +209,37 @@ body {
   font-size: 0.8rem;
 }
 
+.detail {
+  box-shadow: 0 4px 8px 0 #000000b7;
+  transition: 0.3s;
+  width: 60%;
+  margin: 0.2rem auto;
+  color: #000000f3;
+  border-radius: 0 0.5rem;
+}
+.detail__title {
+  color: #bdb9b9;
+  text-align: center;
+}
+.detail__img {
+  width: 100%;
+}
 .detail__btn {
   text-decoration: none;
   border: none;
-  padding: 0.5rem;
+  padding: 0.3rem;
+  background: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+.detail__preoverview {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.3rem;
+}
+.detail__overview {
+  padding: 0.3rem;
 }
 
 * {

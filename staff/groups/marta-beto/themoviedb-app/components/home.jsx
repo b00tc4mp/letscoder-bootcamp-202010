@@ -31,7 +31,7 @@ class Home extends Component {
         modifyUser(this.props.token, { fullname, image }, error => {
             if (error) alert(error.message)
 
-            retrieveUser(token, (error, user) => {
+            retrieveUser(this.props.token, (error, user) => {
                 if (error) return alert(error.message)
 
                 this.setState({ user })
@@ -73,10 +73,10 @@ class Home extends Component {
     //     })
     // }
 
-    handleLike = movieId => {
+    handleLike = (movieId, image) => {
         //const { token } = sessionStorage
 
-        toggleLikeMovie(this.props.token, movieId, error => {
+        toggleLikeMovie(this.props.token, movieId, image, error => {
             if (error) return alert(error.message)
 
                 searchMovieId(this.props.token, movieId, (error, movie) => {
@@ -93,9 +93,9 @@ class Home extends Component {
         return <>
         {user && <Welcome name={user.fullname}/>}
 
-        <button onClick={handleGoToProfile} className="profile__btn">Profile</button>
+        <button onClick={handleGoToProfile} className="profile__btn btn">Profile</button>
 
-        {view === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} avatar={user.avatar}/>}
+        {view === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} avatar={user.avatar} likes={user.likes}/>}
 
         <Search onSearch={handleSearchMovies}/>
 
