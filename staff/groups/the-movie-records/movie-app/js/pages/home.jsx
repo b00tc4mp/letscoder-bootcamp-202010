@@ -24,7 +24,7 @@ class Home extends Component {
     });
   }
 
-  __handleResult = (resultSearch) => {
+  handleResult = (resultSearch) => {
     this.setState({
       resultSearch,
       searchUsed: true,
@@ -33,29 +33,31 @@ class Home extends Component {
     });
   };
 
-  __handleClickDetail = (id) => {
+  handleClickDetail = (id) => {
     retrieveMovie(id, "es", (error, movie) => {
       if (error) return alert(error.message);
       this.setState({ movieID: id, resultMovie: movie });
     });
   };
 
-  __renderResult() {
+  renderResult() {
     return this.state.resultSearch.results.length === 0 ? (
       <NoResult />
     ) : (
       <>
-        {!this.state.resultMovie.id && <ResultList
-          onList={this.__handleResult}
-          onItem={this.__handleClickDetail}
-          movies={this.state.resultSearch.results}
-        />}
-       {this.state.resultMovie.id && <Detail items={this.state.resultMovie}  />}
+        {!this.state.resultMovie.id && (
+          <ResultList
+            onList={this.handleResult}
+            onItem={this.handleClickDetail}
+            movies={this.state.resultSearch.results}
+          />
+        )}
+        {this.state.resultMovie.id && <Detail items={this.state.resultMovie} />}
       </>
     );
   }
 
-  __renderSlider() {
+  renderSlider() {
     return (
       <>
         {this.state.newMovies && (
@@ -72,9 +74,9 @@ class Home extends Component {
     return (
       <>
         <Discover />
-        <Search onResult={this.__handleResult} />
+        <Search onResult={this.handleResult} />
 
-        {this.state.searchUsed ? this.__renderResult() : this.__renderSlider()}
+        {this.state.searchUsed ? this.renderResult() : this.renderSlider()}
       </>
     );
   }

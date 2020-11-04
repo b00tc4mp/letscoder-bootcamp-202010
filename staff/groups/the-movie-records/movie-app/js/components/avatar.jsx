@@ -1,0 +1,13 @@
+function Avatar(props) {
+  return (
+    <div className="avatar" onClick={() => props.onAvatar(true)}>
+      <div className="avatar__initials">SG</div>
+      <img
+        className="avatar__image"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/c_southam/128.jpg"
+        alt="alt"
+      />
+      <div className="avatar__notifications">01</div>
+    </div>
+  );
+}
