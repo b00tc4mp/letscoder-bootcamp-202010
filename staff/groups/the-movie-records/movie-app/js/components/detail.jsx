@@ -18,7 +18,7 @@ function Detail(props) {
           <div
             className="movie__poster"
             data-title={props.items.original_title}
-            data-description={props.items.overview}
+            data-description={props.items.overview.truncate(80)}
           >
             <img
               src={
@@ -33,18 +33,19 @@ function Detail(props) {
           <div className="movie__overview">{props.items.overview}</div>
         </div>
       </div>
-
-      <div className="movie__trailer">
-        <div className="video-wrap">
-          <iframe
-            width="560"
-            height="315"
-            src={`https://www.youtube.com/embed/${videoId}?controls=0`}
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
+      {videoId && (
+        <div className="movie__trailer">
+          <div className="video-wrap">
+            <iframe
+              width="560"
+              height="315"
+              src={`https://www.youtube.com/embed/${videoId}?controls=0`}
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
