@@ -6,7 +6,7 @@ function ResultList(props) {
       <ul className="u-grid-items">
         {props.movies.map((movie) => (
           <li onClick={() => props.onItem(movie.id)}>
-            <Card movie={movie} />
+            <Card movie={movie} key={movie.id} />
           </li>
         ))}
       </ul>
