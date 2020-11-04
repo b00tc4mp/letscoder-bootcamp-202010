@@ -19,10 +19,14 @@ class Home extends Component {
     }
 
     handleGoToProfile = () => {
-        this.setState({ subview : 'profile'})
+        if (this.state.subview){
+            this.setState({ subview : null })
+        }
+        
+        else this.setState({ subview : 'profile'})
 
     }
-
+    
     handleModifyUser = (fullname, image) => {
         const { token } = sessionStorage
 
@@ -86,11 +90,11 @@ class Home extends Component {
 
 
     render() {
-        const { state: { subview, tracks, track, user }, handleSearchTracks, handleGoToTrack, handleFavourite, handleGoToProfile, handleModifyUser } = this
+        const { state: { subview, tracks, track, user }, handleSearchTracks, handleGoToTrack, handleFavourite, handleGoToProfile, handleModifyUser} = this
 
         return <>
 
-            {user && <Welcome name={user.fullname} image={user.image} onProfile={handleGoToProfile}/>}
+            {user && <Welcome name={user.fullname} image={user.image} onProfile={handleGoToProfile} />}
 
             {subview === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} image={user.image}/>}
 
