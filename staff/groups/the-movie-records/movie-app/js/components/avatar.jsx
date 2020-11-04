@@ -1,10 +1,13 @@
 function Avatar(props) {
-  const { token, onAvatar, onProfile, user } = props;
-  try {
-    const user = JSON.parse(localStorage.getItem("user"));
+  const { token, onAvatar, onProfile } = props;
+  let user 
+   try {
+     user = JSON.parse(localStorage.getItem("user"));
+    console.log(token)
   } catch (e) {
-    const user = null;
+     user = null;
   }
+  console.log(user)
   return (
     <div
       className="avatar"
@@ -14,10 +17,9 @@ function Avatar(props) {
       <img
         className="avatar__image"
         src={
-          user && token
+           user && token
             ? user.image
-            : "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png"
-        }
+            : "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" } 
         alt="alt"
       />
       <div className="avatar__notifications">01</div>

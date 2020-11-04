@@ -10,10 +10,10 @@ function ResultList(props) {
                 onClick={(event) => {
                   event.stopPropagation();
                   debugger;
-                  props.onLike(props.movies.id);
+                  props.onLike(movie.id);
                 }}
               >
-                {props.movies.like ? "❤️" : "♡"}
+                {movie.like ? "❤️" : "♡"}
               </button>
             }
             <Card movie={movie} />
