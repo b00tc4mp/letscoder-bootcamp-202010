@@ -9,22 +9,23 @@ class Home extends Component {
 
 
     componentWillMount() {
-        retrieveUser(this.props.token, (error, user) => {
+        
+        const {token} = sessionStorage
+
+        token && retrieveUser(token, (error, user) => {
             if (error) return alert(error.message)
             this.setState({ user })
         })
     }
 
-    handleSearchMusic = (type, query) => {
+    handleSearchTracks = (type, query) => {
+        const {token, spotyToken} = sessionStorage
         try {
-            searchMusic("BQCBKbH8X104utQm5b07hXZL9xAOmWYYt1Udaodv7oJCM6o9ngz_jHVBDeKsJQsKQceyE0aZ3mPELyFmiiOQjwCd04kJoY3y2AR96hKWnnSX964OtGddZys2HR6P7SmZPwE8449A2DMJeducZAZu4xjRad_UVxQ", type, query, (error, music) => {
+            searchTracks(token, spotyToken, type, query, (error, tracks) => {
                 if (error) return alert(error.message)
-                
-                music = music.map(({ name: song, id, preview_url: preListening, artists, album }) => ({ song, id, preListening, artist: artists[0].name ? artists[0].name : 'this song doesn´t have an artist', image: album.images[1].url ? album.images[1].url : 'http://hem.bredband.net/b477738/not-found.jpg', releaseDate: album.release_date}))
+                 
 
-                
-
-                this.setState({ music, track: undefined, query })
+                this.setState({ tracks, track: undefined, type, query })
             })
         } catch ({ message }) {
             alert(message)
@@ -32,7 +33,10 @@ class Home extends Component {
     }
 
     handleGoToTrack = (id) => {
-        retrieveTrack("BQCBKbH8X104utQm5b07hXZL9xAOmWYYt1Udaodv7oJCM6o9ngz_jHVBDeKsJQsKQceyE0aZ3mPELyFmiiOQjwCd04kJoY3y2AR96hKWnnSX964OtGddZys2HR6P7SmZPwE8449A2DMJeducZAZu4xjRad_UVxQ", id, (error, track) => {
+
+        const {spotyToken} = sessionStorage
+
+        retrieveTrack(spotyToken, id, (error, track) => {
             if (error) return alert(error.message)
             {
             let { id, name: song, preview_url: preListening, album, artists } = track
@@ -41,18 +45,33 @@ class Home extends Component {
             }
         })
     }
+  
+    handleFavourite = id => {
+
+        const {token} = sessionStorage
+
+        toggleFavouriteTrack(token, id, error => {
+            if (error) return alert(error.message)
+
+            const{type, query} = this.state 
+            
+            this.handleSearchTracks(type, query)
+
+        })
+
+    }
 
     render() {
-        const { state: { subview, music, track, user }, handleSearchMusic, handleGoToTrack } = this
+        const { state: { subview, tracks, track, user }, handleSearchTracks, handleGoToTrack, handleFavourite } = this
 
         return <>
 
             {user && <Welcome name={user.fullname} image={user.image} />}
 
 
-            <Search onSearch={handleSearchMusic} />
+            <Search onSearch={handleSearchTracks} />
 
-            {!track && music && <Results music={music} onTrack={handleGoToTrack} />}
+            {!track && tracks && <Results tracks={tracks} onTrack={handleGoToTrack} onFavourite = {handleFavourite} />}
 
             {track && <Detail song={track} /> }
         </>

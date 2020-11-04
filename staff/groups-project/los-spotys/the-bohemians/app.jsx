@@ -4,7 +4,11 @@ class App extends Component {
     constructor() {
         super()
 
-        this.state = { view: 'access' }
+        const {token} = sessionStorage
+
+        sessionStorage.spotyToken = "BQB2XO3_pJWlFHUimbaMl6UvHnSw5ITow3AAVRpsFxhgcYYdN3LAlthSEeQnNBfyETNRVVE73G8FNnHdBpwBFyjPJeK9vFNevv97yZPnzP9U80CaC3OpVMvtE5ol8HXCbZAOD_EdWjl43sbVfgWMQw68EQGeiwg"
+
+        this.state = { view: token ? 'home' : 'access', }
     }
 
 
@@ -13,7 +17,9 @@ class App extends Component {
     }
 
     handleGoToLogin = () => {
-        this.setState({ view: 'login' })
+
+            this.setState({ view: 'login' })
+        
     }
     
     handleGoToAcces = () => {
@@ -31,17 +37,18 @@ class App extends Component {
         authenticateUser(email, password, (error, token) => {
             if (error) return alert(error.message)
 
+            sessionStorage.token = token
+
+            this.setState({ view: 'home' })
+
             
-            this.setState({ token, view: 'home' })
         })
        
     }
 
-
-
-
     render() {
-        const { state: {view, token }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin } = this
+        const { state: {view }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin } = this
+
 
         return <>
 
@@ -55,7 +62,7 @@ class App extends Component {
 
         {view === 'login' && <Login onLogin={handleLogin} />}
 
-        {view === 'home' && <Home token={token}/>}
+        {view === 'home' && <Home />}
 
 
         </>
