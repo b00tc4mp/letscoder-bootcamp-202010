@@ -21,10 +21,9 @@ body, html
     background-image: url('./back-b&w.jpg')
     background-repeat: no-repeat
     background-size: cover
-    background-position: center
+    background-position: center center
+    background-attachment: fixed
     height: 100%
-    // min-width: 100%
-    // min-height: 100%
 
 
 .title
@@ -119,7 +118,6 @@ body, html
 
 .btn:hover
     color: #489899
-    font-size: 1.5rem
 
 .login
     display: flex
@@ -205,17 +203,24 @@ body, html
     &__btn:hover
         background-color: rgba(0,0,0,0.85)
 
+.logout
+    display: flex
+    justify-content: flex-end
 
-.logout__btn
-    font-size: .8rem
+    &__btn
+        position: absolute
+        font-size: .8rem
+        top: 2rem
+        right: 1rem
 
 .detail
     box-shadow: 0 4px 8px 0 #000000b7
     transition: 0.3s
     width: 60%
-    margin: .2rem auto
-    color: #000000f3
-    border-radius: 0 .5rem
+    margin: .3rem auto
+    border-radius: .5rem
+    z-index: 100
+    background-color: #000000b7
 
     &__title
         color: $font-color
@@ -232,6 +237,7 @@ body, html
         cursor: pointer
         transition-duration: 0.4s
         overflow: hidden
+        color: white
         
     &__preoverview
         display: flex
@@ -255,9 +261,9 @@ body, html
         margin-left: 1rem
 
     &__avatar
-        padding: .3rem
-        margin-left: 1rem 
-        width: 55vh
+        width: 100%
+        height: auto
+        padding: 0 .1rem
 
     &__bottom
         width: 90%

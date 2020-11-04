@@ -13,10 +13,16 @@ class Home extends Component {
         retrieveUser(this.props.token, (error, user) => {
             if (error) return alert(error.message)
 
+            retrieveUpcomingMovies((error, upcomingMovies) => {
+                if (error) return alert(error.message)
+
+
             retrieveTrendingMovies((error, trendingMovies) => {
                 if (error) return alert(error.message)
     
-                this.setState({ trendingMovies, user })
+                this.setState({ trendingMovies, upcomingMovies, user })
+            })
+
             })
         })
     }
@@ -42,7 +48,7 @@ class Home extends Component {
     handleSearchMovies = query => {
         
         try {
-        searchMovies(query, (error, movies) => {
+        retrieveMovies(query, (error, movies) => {
             if (error) return alert(error.message)
             const locationPath = 'https://image.tmdb.org/t/p/w500';
 
@@ -57,21 +63,15 @@ class Home extends Component {
 
 
     handleGoToMovie = movieId => {
-        retrieveMovie(movieId, (error, movie) => {
+        retrieveMovie(movieId, this.props.token, (error, movie) => {
             if (error) return alert(error.message)
             const genre = movie.genres[0].name
             
-            const {id, title, poster_path: image, release_date: date, overview, like} = movie // all the details from the movie we want to show (movie destructuring)
+            const {id, title, poster_path: image, vote_average: vote, release_date: date, overview, like} = movie // all the details from the movie we want to show (movie destructuring)
 
-            this.setState({movie: {id, title, image, date, overview, like, genre}})
+            this.setState({movie: {id, title, image, date, vote, overview, like, genre}})
         })
     }
-
-    // handleOnGenre = genreId => {
-    //     retrieveMoviesByGenre(genreId, (error, movies) => {
-    //         // TODO
-    //     })
-    // }
 
     handleLike = (movieId) => {
         //const { token } = sessionStorage
@@ -79,17 +79,13 @@ class Home extends Component {
         toggleLikeMovie(this.props.token, movieId, error => {
             if (error) return alert(error.message)
 
-                searchMovieId(this.props.token, movieId, (error, movie) => {
-                    if (error) return alert(error.message)
-
-                    //this.setState({movie})
-                })
+                this.handleGoToMovie(movieId)                        
         })
     }
 
     render() {
 
-        const {state: {view, user, movie, trendingMovies, moviesSearch}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
+        const {state: {view, user, movie, trendingMovies, moviesSearch, upcomingMovies}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
@@ -99,9 +95,11 @@ class Home extends Component {
 
         <Search onSearch={handleSearchMovies}/>
 
-        <Dropdown />
+        {/* <Dropdown /> */}
 
         {moviesSearch && <Carousel movies={moviesSearch} title="Your search" onMovie={handleGoToMovie}/>}
+
+        {upcomingMovies && <Carousel movies={upcomingMovies} title="Upcoming movies" onMovie={handleGoToMovie}/>}
 
         {trendingMovies && <Carousel movies={trendingMovies} title="Trending movies" onMovie={handleGoToMovie}/>}
 

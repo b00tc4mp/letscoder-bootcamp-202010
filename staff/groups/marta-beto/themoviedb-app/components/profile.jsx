@@ -7,7 +7,7 @@ return <section className="profile">
     <div className="carousel">
         <h2 className="carousel__title">{title}</h2>
         {likes.map(({id, image}) => <div className="carousel__movie" key={id}>
-        <img src={image} alt="movie-img"/>
+        <img src={image ? image : 'no favorites yet'} alt="movie-img"/>
         </div>)}
     </div>
 

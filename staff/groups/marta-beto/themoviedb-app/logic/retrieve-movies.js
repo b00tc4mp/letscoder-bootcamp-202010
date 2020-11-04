@@ -1,4 +1,4 @@
-function searchMovies(query, callback) {
+function retrieveMovies(query, callback) {
     if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
     if (!query.trim().length) throw new Error('query is empty or blank')
