@@ -17,7 +17,28 @@ class Home extends Component {
             this.setState({ user })
         })
     }
-    
+
+    handleGoToProfile = () => {
+        this.setState({ subview : 'profile'})
+
+    }
+
+    handleModifyUser = (fullname, image) => {
+        const { token } = sessionStorage
+
+        modifyUser(token, { fullname, image}, error => {
+            if (error) alert(error.message)
+
+            retrieveUser(token, (error, user) => {
+                if (error) return alert (error.message)
+
+                this.setState({ user })
+            })
+
+        })
+
+    }
+
     handleSearchTracks = (type, query) => {
         const {token, spotyToken} = sessionStorage
         
@@ -65,12 +86,13 @@ class Home extends Component {
 
 
     render() {
-        const { state: { subview, tracks, track, user }, handleSearchTracks, handleGoToTrack, handleFavourite } = this
+        const { state: { subview, tracks, track, user }, handleSearchTracks, handleGoToTrack, handleFavourite, handleGoToProfile, handleModifyUser } = this
 
         return <>
 
-            {user && <Welcome name={user.fullname} image={user.image} />}
+            {user && <Welcome name={user.fullname} image={user.image} onProfile={handleGoToProfile}/>}
 
+            {subview === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} image={user.image}/>}
 
             <Search onSearch={handleSearchTracks} />
 
