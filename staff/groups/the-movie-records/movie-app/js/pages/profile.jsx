@@ -9,7 +9,6 @@ class Profile extends Component {
   componentWillMount() {
     retrieveUser(this.props.token, (error, user) => {
         if (error) return alert(error.message)
-      console.log(user)
         this.setState({ user })
         localStorage.setItem("user", JSON.stringify(user))
     })

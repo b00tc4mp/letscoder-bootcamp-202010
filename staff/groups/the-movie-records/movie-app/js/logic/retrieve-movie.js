@@ -1,10 +1,14 @@
-function retrieveMovie(id, language, callback) {
-  if (typeof callback !== "function")
+function retrieveMovie(token, id, language, callback) {
+    if (typeof callback !== "function")
     throw new TypeError(`${callback} is not a callback`);
 
-  if (typeof id !== "number") throw new TypeError(`${id} is not a number`);
+    if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
-  if (typeof language !== "string")
+    if (!token.trim().length) throw new Error('token is empty or blank')
+
+    if (typeof id !== "number") throw new TypeError(`${id} is not a number`);
+
+    if (typeof language !== "string")
     throw new TypeError(`${language} is not a string`);
   call(
     "GET",
@@ -13,8 +17,20 @@ function retrieveMovie(id, language, callback) {
     "",
     function (status, response) {
       if (status === 200) {
-        var res = JSON.parse(response);
-        callback(null, res);
+        var movie = JSON.parse(response);
+        console.log(movie)
+        if (movie)
+                    call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, '',
+                        (status, response) => {
+                            if (status === 200) {
+                                const { likes = [] } = JSON.parse(response)
+
+                                movie.like = likes.includes(movie.id)
+
+                                callback(null, movie)
+                            }
+                        })
+                else callback(null, movie)
       } else {
         var res = JSON.parse(response);
         callback(new Error(res.error));

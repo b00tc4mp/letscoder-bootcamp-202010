@@ -33,8 +33,33 @@ class Home extends Component {
     });
   };
 
+  handleGoToMovie = movieId => {
+    const { token } = sessionStorage
+    retrieveMovie(token, movieId, "es", (error, movie) => {
+        if (error) return alert(error.message)
+
+        this.setState({ resultMovie: movie })
+    })
+}
+
+  handleLike = movieId => {
+    const { token } = sessionStorage
+    console.log(movieId)
+    toggleLikeMovie(token, movieId, error => {
+        if (error) return alert(error.message)
+
+        const { state : { resultMovie }} = this
+
+        if (resultMovie)
+            this.handleGoToMovie(movieId)
+        else
+            this.handleSearchVehicles(this.state.query)
+    })
+}
+
   handleClickDetail = (id) => {
-    retrieveMovie(id, "es", (error, movie) => {
+    const { token } = sessionStorage
+    retrieveMovie(token, id, "es", (error, movie) => {
       if (error) return alert(error.message);
       this.setState({ movieID: id, resultMovie: movie });
     });
@@ -52,7 +77,7 @@ class Home extends Component {
             movies={this.state.resultSearch.results}
           />
         )}
-        {this.state.resultMovie.id && <Detail items={this.state.resultMovie} />}
+        {this.state.resultMovie.id && <Detail item ={this.state.resultMovie} onLike = {this.handleLike} />}
       </>
     );
   }

@@ -75,7 +75,6 @@ class App extends Component {
           token={this.state.token}
         />
         <main className={`section-${view}`}>
-          {console.log(this.state.view)}
           {view === "home" && <Home />}
           {view === "login" && (
             <Login onGoToRegister={handleGoToRegister} onLogin={handleLogin} />

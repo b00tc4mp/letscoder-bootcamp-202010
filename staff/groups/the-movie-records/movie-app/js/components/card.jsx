@@ -14,7 +14,11 @@ function Card(props) {
           {props.movie.original_title} ({props.movie.release_date})
         </h4>
         <p className="card-body__description">{props.movie.overview}</p>
-        <Like />
+        {/* {<button onClick={event => {
+                event.stopPropagation()
+                
+                onLike(id)
+            }}>{like ? '❤️' : '♡'}</button>} */}
       </div>
     </article>
   );
