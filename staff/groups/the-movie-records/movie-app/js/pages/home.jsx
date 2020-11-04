@@ -33,32 +33,45 @@ class Home extends Component {
     });
   };
 
-  handleGoToMovie = movieId => {
-    const { token } = sessionStorage
+  handleSearchMovies = (query) => {
+    const { token } = sessionStorage;
+    debugger;
+    try {
+      searchMovies(token, query, 1, "es", (error, movies) => {
+        if (error) return alert(error.message);
+        this.setState({ resultSearch: movies });
+      });
+    } catch ({ message }) {
+      alert(message);
+    }
+  };
+
+  handleGoToMovie = (movieId) => {
+    const { token } = sessionStorage;
     retrieveMovie(token, movieId, "es", (error, movie) => {
-        if (error) return alert(error.message)
+      if (error) return alert(error.message);
 
-        this.setState({ resultMovie: movie })
-    })
-}
+      this.setState({ resultMovie: movie });
+    });
+  };
 
-  handleLike = movieId => {
-    const { token } = sessionStorage
-    console.log(movieId)
-    toggleLikeMovie(token, movieId, error => {
-        if (error) return alert(error.message)
+  handleLike = (movieId) => {
+    const { token } = sessionStorage;
+    console.log(movieId);
+    toggleLikeMovie(token, movieId, (error) => {
+      if (error) return alert(error.message);
 
-        const { state : { resultMovie }} = this
+      const {
+        state: { resultMovie },
+      } = this;
 
-        if (resultMovie)
-            this.handleGoToMovie(movieId)
-        else
-            this.handleSearchVehicles(this.state.query)
-    })
-}
+      if (resultMovie) this.handleGoToMovie(movieId);
+      else this.handleSearchMovies(this.state.query);
+    });
+  };
 
   handleClickDetail = (id) => {
-    const { token } = sessionStorage
+    const { token } = sessionStorage;
     retrieveMovie(token, id, "es", (error, movie) => {
       if (error) return alert(error.message);
       this.setState({ movieID: id, resultMovie: movie });
@@ -74,10 +87,13 @@ class Home extends Component {
           <ResultList
             onList={this.handleResult}
             onItem={this.handleClickDetail}
+            onLike={this.handleLike}
             movies={this.state.resultSearch.results}
           />
         )}
-        {this.state.resultMovie.id && <Detail item ={this.state.resultMovie} onLike = {this.handleLike} />}
+        {this.state.resultMovie.id && (
+          <Detail item={this.state.resultMovie} onLike={this.handleLike} />
+        )}
       </>
     );
   }
