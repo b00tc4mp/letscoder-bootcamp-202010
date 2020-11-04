@@ -17,7 +17,7 @@ class Home extends Component {
             this.setState({ user })
         })
     }
-
+    
     handleSearchTracks = (type, query) => {
         const {token, spotyToken} = sessionStorage
         try {

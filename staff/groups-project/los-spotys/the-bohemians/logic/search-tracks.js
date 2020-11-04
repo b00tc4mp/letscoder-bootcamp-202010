@@ -26,7 +26,7 @@ function searchTracks(token, spotyToken, type, query, callback) {
         }, '', function (status, response) {
             if (status === 200) {
                 let {tracks: {items: tracks}} = JSON.parse(response)
-
+                
                 tracks = tracks.map(({ name: song, id, preview_url: preListening, artists, album }) => ({ song, id, preListening, artist: artists[0].name ? artists[0].name : 'this song doesn´t have an artist', image: album.images[1].url ? album.images[1].url : 'http://hem.bredband.net/b477738/not-found.jpg', releaseDate: album.release_date}))
 
                 call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, ',',
