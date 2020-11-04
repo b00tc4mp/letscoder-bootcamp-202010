@@ -1,6 +1,6 @@
 function Avatar(props) {
   const { token, onAvatar, onProfile } = props;
-  console.log(token);
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <div
       className="avatar"
@@ -9,7 +9,7 @@ function Avatar(props) {
       <div className="avatar__initials">SG</div>
       <img
         className="avatar__image"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/c_southam/128.jpg"
+        src= {token ? user.image : "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" }
         alt="alt"
       />
       <div className="avatar__notifications">01</div>

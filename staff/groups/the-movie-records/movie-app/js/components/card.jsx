@@ -14,6 +14,7 @@ function Card(props) {
           {props.movie.original_title} ({props.movie.release_date})
         </h4>
         <p className="card-body__description">{props.movie.overview}</p>
+        <Like />
       </div>
     </article>
   );

@@ -29,11 +29,23 @@ class App extends Component {
       sessionStorage.token = token;
     });
   };
+  
 
   handleGoToProfile = () => {
     this.setState({ view: "profile" });
   };
 
+  handleModifyUser = (fullname, image) => {
+    modifyUser(this.props.token, { fullname, image }, error => {
+        if (error) alert(error.message)
+
+        retrieveUser(this.props.token, (error, user) => {
+            if (error) return alert(error.message)
+
+            this.setState({ user })
+        })
+    })
+}
   handleRegister = (fullname, email, password, repassword) => {
     registerUser(fullname, email, password, repassword, (error) => {
       if (error) return alert(error.message);
@@ -51,6 +63,8 @@ class App extends Component {
       handleLogin,
       handleGoToLogout,
       handleGoToProfile,
+      handleModifyUser,
+   
     } = this;
     return (
       <>
@@ -67,7 +81,8 @@ class App extends Component {
             <Login onGoToRegister={handleGoToRegister} onLogin={handleLogin} />
           )}
           {view === "register" && <Register onRegister={handleRegister} />}
-          {view === "profile" && <Profile />}
+          {view === "profile" && <Profile onModify={handleModifyUser} token = {this.state.token} />} 
+          
         </main>
         <Footer />
       </>
