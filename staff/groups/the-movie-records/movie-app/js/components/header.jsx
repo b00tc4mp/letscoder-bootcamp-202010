@@ -6,7 +6,6 @@ class Header extends Component {
   }
 
   handleClickAvatar = () => {
-    console.log("Pulsado avatar");
     this.props.onLogin();
   };
 
