@@ -1,11 +1,9 @@
-const toggleLikeMovie = (token, movieId, image, callback) => {
+const toggleLikeMovie = (token, movieId, callback) => {
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
     if (!token.trim().length) throw new Error('token is empty or blank')
 
     if (typeof movieId !== 'number') throw new TypeError(movieId + ' is not a movieId')
-
-    if (typeof image !== 'string') throw new TypeError(image + ' is not a valid url')
 
     if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
 
@@ -20,7 +18,7 @@ const toggleLikeMovie = (token, movieId, image, callback) => {
                 const index = likes.indexOf(movieId)
 
                 if (index > -1) likes.splice(index, 1)
-                else likes.push(movieId, image)
+                else likes.push(movieId)
 
                 // modify user's 'like' property according to above action.
                 call('PATCH', 'https://b00tc4mp.herokuapp.com/api/v2/users/',

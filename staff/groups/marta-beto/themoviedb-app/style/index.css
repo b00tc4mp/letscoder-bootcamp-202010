@@ -242,6 +242,29 @@ body, html {
   padding: 0.3rem;
 }
 
+.profile {
+  background-color: #000000b7;
+  border-radius: 1rem;
+  width: 60%;
+  margin: 0.3rem auto;
+}
+.profile__title {
+  margin: 0.5rem;
+}
+.profile__fullname {
+  padding: 0.3rem;
+  margin-left: 1rem;
+}
+.profile__avatar {
+  padding: 0.3rem;
+  margin-left: 1rem;
+  width: 55vh;
+}
+.profile__bottom {
+  width: 90%;
+  margin: auto;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

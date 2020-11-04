@@ -7,7 +7,7 @@ class Home extends Component {
         this.state = {}
     }
 
-    componentWillMount = () => {
+    UNSAFE_componentWillMount = () => {
         //const { token } = sessionStorage
 
         retrieveUser(this.props.token, (error, user) => {
@@ -16,7 +16,7 @@ class Home extends Component {
             retrieveTrendingMovies((error, trendingMovies) => {
                 if (error) return alert(error.message)
     
-                this.setState({trendingMovies, user})
+                this.setState({ trendingMovies, user })
             })
         })
     }
@@ -25,10 +25,10 @@ class Home extends Component {
         this.setState({ view: 'profile' })
     }
 
-    handleModifyUser = (fullname, image) => {
+    handleModifyUser = (fullname, avatar) => {
         //const {token} = sessionStorage
 
-        modifyUser(this.props.token, { fullname, image }, error => {
+        modifyUser(this.props.token, { fullname, avatar }, error => {
             if (error) alert(error.message)
 
             retrieveUser(this.props.token, (error, user) => {
@@ -73,10 +73,10 @@ class Home extends Component {
     //     })
     // }
 
-    handleLike = (movieId, image) => {
+    handleLike = (movieId) => {
         //const { token } = sessionStorage
 
-        toggleLikeMovie(this.props.token, movieId, image, error => {
+        toggleLikeMovie(this.props.token, movieId, error => {
             if (error) return alert(error.message)
 
                 searchMovieId(this.props.token, movieId, (error, movie) => {
@@ -95,7 +95,7 @@ class Home extends Component {
 
         <button onClick={handleGoToProfile} className="profile__btn btn">Profile</button>
 
-        {view === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} avatar={user.avatar} likes={user.likes}/>}
+        {view === 'profile' && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={user.likes}/>}
 
         <Search onSearch={handleSearchMovies}/>
 
@@ -104,8 +104,6 @@ class Home extends Component {
         {moviesSearch && <Carousel movies={moviesSearch} title="Your search" onMovie={handleGoToMovie}/>}
 
         {trendingMovies && <Carousel movies={trendingMovies} title="Trending movies" onMovie={handleGoToMovie}/>}
-
-        {/* {moviesByGenre && <Carousel images={moviesByGenre} title="Selected genre" onMovie={movie}/>} */}
 
         {movie && <Detail item={movie} onLike={handleLike}/>}
 
