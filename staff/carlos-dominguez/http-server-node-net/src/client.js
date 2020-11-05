@@ -1,4 +1,4 @@
-import net from "net";
+const net = require("net");
 
 const client = net.createConnection({
   host: "localhost",

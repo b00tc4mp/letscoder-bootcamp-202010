@@ -1,4 +1,4 @@
-import net from "net";
+const net = require("net");
 const server = net.createServer();
 const connectedClients = [];
 server.on("connection", (client) =>{
