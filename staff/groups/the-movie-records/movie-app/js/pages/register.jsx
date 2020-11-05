@@ -38,7 +38,7 @@ function Register({ onRegister }) {
           placeholder="repeat password"
           required
         />
-        <button>Register</button>
+        <button className= "btn">Register</button>
       </form>
     </section>
   );

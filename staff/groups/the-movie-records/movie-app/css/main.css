@@ -45,7 +45,12 @@ body > main {
   flex: 1;
 }
 #root > main.section-login {
-  background: url("../../images/bg-login.png");
+  background: #000 url("../images/bg-login.png");
+  opacity: 0.8;
+}
+#root > main.section-register {
+  background: #000 url("../images/bg-login.jpg");
+  opacity: 0.8;
 }
 
 @media (min-width: 600px) {
@@ -79,11 +84,67 @@ body > main {
   color: #2b577b;
 }
 
+.login, .register {
+  position: relative;
+  background: #f2f2f2;
+  border: 1px solid #8ebed2;
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;
+  padding: 20px;
+}
+.login:before, .register:before {
+  content: "";
+  box-shadow: rgba(142, 193, 218, 0.41) 0 5px 3px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
 .u-p-h-20 {
   padding: 0 20px;
 }
 
+.btn {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#d8d9db), color-stop(80%, #fff), to(#fdfdfd));
+  background-image: linear-gradient(to top, #d8d9db 0%, #fff 80%, #fdfdfd 100%);
+  border-radius: 30px;
+  border: 1px solid #8f9092;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+.login, .register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .header {
+  position: relative;
   flex: none;
   display: flex;
   height: 50px;
@@ -99,6 +160,18 @@ body > main {
 }
 .header__logo i {
   margin-right: 10px;
+}
+.header__logout {
+  position: absolute;
+  right: 60px;
+  background: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  box-shadow: 2px 2px #203c54;
+  background: #d5e9fa;
+}
+.header__logout:hover {
+  background: #c0d9ed;
 }
 .header .avatar {
   margin-right: 10px;
@@ -660,31 +733,30 @@ footer {
 }
 
 .register {
-  border: 1px solid #e00000;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  margin-bottom: 200px;
+  min-width: 365px;
+  max-width: 80%;
+  box-shadow: 0 0 20px 20px black;
+  background-color: #48769b;
 }
-.register label {
-  display: block;
+.register form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.register input {
+  margin-bottom: 20px;
   padding: 10px;
-  margin-top: 5px;
-  margin-left: 20px;
+  border: 1px solid #cacaca;
+  box-shadow: inset 3px 3px 3px #0000001a;
+  border-radius: 3px/6px;
+}
+.register .btn {
+  display: flex;
+  align-self: flex-end;
+  box-shadow: none;
 }
 .register h2 {
-  margin-top: 80px;
-  font-family: "Special Elite";
-}
-.register button {
-  margin: 0 auto;
-  display: block;
-  margin-top: 30px;
-  font-family: "Special Elite";
-  border: none;
-  font-size: 20px;
-  border-radius: 1rem 0 1rem;
-  border: 3px solid #e00000;
+  color: white;
 }
 
 @media (min-width: 600px) {
@@ -693,7 +765,6 @@ footer {
     margin: 0 auto;
     margin-bottom: 100px;
     width: 800px;
-    height: 300px;
   }
 
   label {
@@ -710,59 +781,31 @@ footer {
   }
 }
 .login {
-  border: 1px solid #e00000;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  margin-bottom: 200px;
-  margin-top: 100px;
-  background: #fff;
+  min-width: 365px;
+  max-width: 80%;
+  box-shadow: 0 0 20px 20px black;
+  background-color: #48769b;
 }
-.login label {
-  display: block;
+.login form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.login input {
+  margin-bottom: 20px;
   padding: 10px;
-  margin-top: 5px;
-  margin-left: 20px;
+  border: 1px solid #cacaca;
+  box-shadow: inset 3px 3px 3px #0000001a;
+  border-radius: 3px/6px;
+}
+.login__buttons {
+  display: flex;
+  justify-content: space-between;
 }
 .login h2 {
-  margin-top: 80px;
-  font-family: "Special Elite";
-  margin-left: 20px;
-}
-.login button {
-  margin: 0 auto;
-  display: block;
-  margin-top: 30px;
-  font-family: "Special Elite";
-  border: none;
-  font-size: 20px;
-  border-radius: 1rem 0 1rem;
-  border: 3px solid #e00000;
+  color: white;
 }
 
-@media (min-width: 600px) {
-  .login {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    width: 800px;
-    height: 300px;
-    margin-top: 50px;
-  }
-
-  label {
-    display: block;
-    padding: 10px;
-    padding: 20px;
-    margin-left: 20px;
-    text-align: center;
-  }
-
-  h2 {
-    text-align: center;
-    font-family: "Special Elite";
-  }
-}
 .avatar {
   position: relative;
   display: table;

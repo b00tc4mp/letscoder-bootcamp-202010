@@ -36,7 +36,11 @@ body {
   & > main {
     flex: 1;
     &.section-login {
-      background: #000 url("../../images/bg-login.png");
+      background: #000 url("../images/bg-login.png");
+      opacity: 0.8;
+    }
+    &.section-register{
+      background: #000 url("../images/bg-login.jpg");
       opacity: 0.8;
     }
   }

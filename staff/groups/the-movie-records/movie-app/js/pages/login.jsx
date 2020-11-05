@@ -1,6 +1,7 @@
 function Login({ onLogin, onGoToRegister }) {
   return (
     <section className="login">
+      <h2>Login</h2>
       <form
         className="login__form"
         onSubmit={function (event) {
