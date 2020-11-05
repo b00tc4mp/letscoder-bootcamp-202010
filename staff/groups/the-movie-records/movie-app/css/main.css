@@ -151,6 +151,7 @@ body > main {
   align-items: center;
   justify-content: space-between;
   background: #2b577b;
+  cursor: pointer;
 }
 .header__logo {
   font-size: 2rem;
@@ -181,8 +182,32 @@ body > main {
   margin-left: 15px;
 }
 
-.profile__icon {
+.section-profile {
+  justify-content: center;
+  align-content: center;
+}
+.section-profile__icon {
   margin-right: 15px;
+}
+.section-profile__image {
+  max-width: 100%;
+  height: 200px;
+}
+.section-profile__name {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #cacaca;
+  box-shadow: inset 3px 3px 3px #0000001a;
+  border-radius: 3px/6px;
+}
+.section-profile__data {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #cacaca;
+  box-shadow: inset 3px 3px 3px #0000001a;
+  border-radius: 3px/6px;
 }
 
 .discover {
