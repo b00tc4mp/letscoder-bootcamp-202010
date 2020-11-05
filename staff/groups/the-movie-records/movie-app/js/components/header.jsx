@@ -1,19 +1,16 @@
 function Header(props) {
+  const { onLogout, onLogo, onLogin, user, onProfile } = props;
   return (
     <header className="header">
-      <div className="header__logo">
+      <div onClick={() => onLogo()} className="header__logo">
         <i className="fa fa-film"></i>MovieRecords
       </div>
       {props.user && (
-        <button className="header__logout" onClick={() => props.onLogout()}>
+        <button className="header__logout" onClick={() => onLogout()}>
           Logout
         </button>
       )}
-      <Avatar
-        onAvatar={props.onLogin}
-        onProfile={props.onProfile}
-        user={props.user}
-      />
+      <Avatar onAvatar={onLogin} onProfile={onProfile} user={user} />
     </header>
   );
 }

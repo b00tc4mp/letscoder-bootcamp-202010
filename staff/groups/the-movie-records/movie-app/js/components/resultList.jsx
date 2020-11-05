@@ -9,7 +9,6 @@ function ResultList(props) {
                 className="result-like"
                 onClick={(event) => {
                   event.stopPropagation();
-                  debugger;
                   props.onLike(movie.id);
                 }}
               >

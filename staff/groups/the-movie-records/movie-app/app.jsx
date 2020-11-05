@@ -5,6 +5,7 @@ class App extends Component {
     super();
     const { token } = sessionStorage;
     this.state = { view: token ? "home" : "login", token };
+    this.homeRef = React.createRef();
   }
 
   componentWillMount() {
@@ -69,6 +70,12 @@ class App extends Component {
     });
   };
 
+  handleLogo = () => {
+    const { token } = sessionStorage;
+    token && this.homeRef.current.handleGoHome();
+    this.setState({ view: token ? "home" : "login" });
+  };
+
   render() {
     const { view, user } = this.state;
     const {
@@ -79,6 +86,7 @@ class App extends Component {
       handleGoToLogout,
       handleGoToProfile,
       handleModifyUser,
+      handleLogo,
     } = this;
     return (
       <>
@@ -86,10 +94,11 @@ class App extends Component {
           onLogin={handleGoToLogin}
           onLogout={handleGoToLogout}
           onProfile={handleGoToProfile}
+          onLogo={handleLogo}
           user={user}
         />
         <main className={`section-${view}`}>
-          {view === "home" && <Home />}
+          {view === "home" && <Home ref={this.homeRef} />}
           {view === "login" && (
             <Login onGoToRegister={handleGoToRegister} onLogin={handleLogin} />
           )}

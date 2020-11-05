@@ -24,6 +24,10 @@ class Home extends Component {
     });
   }
 
+  handleGoHome = () => {
+    this.setState({ searchUsed: false, resultMovie: {}, movieID: 0 });
+  };
+
   handleResult = (resultSearch) => {
     this.setState({
       resultSearch,
