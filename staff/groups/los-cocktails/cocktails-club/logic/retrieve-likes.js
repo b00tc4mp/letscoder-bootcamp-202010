@@ -6,7 +6,7 @@ function retrieveLikes(token, callback) {
             if (status === 200) {
                 const { likes = [] } = JSON.parse(response)
                 if (likes.length)
-                    likes.forEach(id => {
+                    likes.forEach((id,index) => {
 
                         call('GET', `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`, {}, '',
                             (status, response) => {
@@ -69,7 +69,7 @@ function retrieveLikes(token, callback) {
                                         );
                                         //destructuring del item
 
-                                        results[results.length] = drinks[0]
+                                        results[index] = drinks[0]
                                         counter = counter + 1
                                         // results.length++
 
@@ -84,10 +84,6 @@ function retrieveLikes(token, callback) {
                     }
                     )
                 else callback(null, results)
-                // setTimeout(function(){
-                //     console.log('hola')
-                // console.log('91')
-                // }, 5 * 1000)
 
             } else {
                 var res = JSON.parse(response);

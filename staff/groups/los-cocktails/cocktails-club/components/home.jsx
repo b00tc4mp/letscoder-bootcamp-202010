@@ -24,14 +24,14 @@ class Home extends Component {
         searchByName(token, query , (error, results) => {
             if (error) return this.setState({ error: error.message })
             
-            this.setState({ results, query })
+            this.setState({ results, query, search:'name' })
         })
         else {
             const {state: {query}} = this
             searchByName(token, query , (error, results) => {
                 if (error) return this.setState({ error: error.message })
                 
-                this.setState({ results, query })
+                this.setState({ results, query, search:'name' })
             })
         }
     }
@@ -51,14 +51,14 @@ class Home extends Component {
         searchByIngredient( token , query, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
-            this.setState({ results, query })
+            this.setState({ results, query, search:'ingredient' })
         })
         else{
             const {state: {query}} = this
             searchByIngredient( token , query, (error, results) => {
                 if (error) return this.setState({ error: error.message })
                 
-                this.setState({ results, query })
+                this.setState({ results, query , search:'ingredient'})
             })
         }
     }
@@ -71,16 +71,18 @@ class Home extends Component {
         const { token } = sessionStorage
         toggleLike(token,id, error => {
             if (error) return this.setState({ error: error.message })
-            this.handleSearchByName(this.state.query)
+            if (this.state.search === 'name' )this.handleSearchByName(this.state.query)
+            if (this.state.search === 'ingredient' )this.handleSearchByIngredient(this.state.query)
+            if (this.state.search === 'favourites' )this.handleShowFavourites()
+            
         })
     }
 
     handleShowFavourites = () => {
-        console.log('favourites')
         const { token } = sessionStorage
         retrieveLikes(token, (error,results) =>{
             if (error) this.setState({ error: error.message })
-            this.setState({ results })
+            this.setState({ results, search:'favourites' })
         })
     }
 
