@@ -10,6 +10,7 @@ function Detail(props) {
       props.item.backdrop_path || props.item.poster_path
     })`,
   };
+
   return (
     <div className="movie">
       <div className="movie__info" style={squareStyle}>
@@ -32,17 +33,17 @@ function Detail(props) {
               width="300"
             />
           </div>
-          <div className="movie__overview">{props.item.overview}</div>
+          <div className="movie__overview">{props.item.overview}</div
           {
-            <button
+            <div
+              className={`heart ${props.item.like ? "active" : ""}`}
               onClick={(event) => {
-                event.stopPropagation();
-
+                props.item.like
+                  ? event.target.classList.add("active")
+                  : event.target.classList.remove("active");
                 props.onLike(props.item.id);
               }}
-            >
-              {props.item.like ? "❤️" : "♡"}
-            </button>
+            />
           }
         </div>
       </div>

@@ -6,6 +6,7 @@
   gap: 10px;
 
   &__item {
+    cursor: pointer;
     flex: 0 0 auto;
   }
   div {
@@ -15,6 +16,7 @@
   img {
     max-width: 100%;
     object-fit: contain;
+    height: 212px;
   }
   &::-webkit-scrollbar {
     display: none;

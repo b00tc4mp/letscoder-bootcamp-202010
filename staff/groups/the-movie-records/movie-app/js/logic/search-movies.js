@@ -1,5 +1,4 @@
 function searchMovies(token, query, page, language, callback) {
-  debugger;
   if (typeof token !== "string") throw new TypeError(token + " is not a token");
 
   if (!token.trim().length) throw new Error("token is empty or blank");
