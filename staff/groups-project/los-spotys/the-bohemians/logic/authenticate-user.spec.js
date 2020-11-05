@@ -22,18 +22,18 @@ describe('SPEC authenticaUser()', function () {
         })
 
         it('should succeed when username and password are correct', function (done) {
-          
-            authenticateUser(email,password, function (error, token) {
-                expect(error).toBeNull()
-                //expect(typeOf.token).toBe('string')
-                expect(token.length).toBeGreaterThan(0)
-                //expect(status).toBe(201)
 
+            authenticateUser(email,password, function (error, testToken) {
+                expect(error).toBeNull()
+                expect(testToken).toBeOfType('string')
+                expect(testToken.length).toBeGreaterThan(0)
+
+                token = testToken
                 done()
             })
         })
         
-        afterEach(function () {
+        afterEach(function (done) {
             call('DELETE', 'https://b00tc4mp.herokuapp.com/api/v2/users',
                 {
                     Authorization: `Bearer ${token}`,
@@ -43,6 +43,7 @@ describe('SPEC authenticaUser()', function () {
                 function (status, response) {
                     expect(status).toBe(204)
                     expect(response.length).toBe(0)
+                    done()
                 }
             )
         }) 

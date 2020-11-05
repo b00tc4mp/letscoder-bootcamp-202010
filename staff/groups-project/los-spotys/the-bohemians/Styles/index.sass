@@ -125,36 +125,7 @@ audio
     border: 1px solid #2BB954
     border-radius: 2em
     color: #2BB954
-.button
-    padding: 5px 10px
-    border-radius: 1em
-    font-size: x-large
-    background-color:#2BB954
-    color: white
-    font-family: 'Quicksand', sans-serif
-    cursor: pointer
-    outline: none
 
-    &:hover
-        opacity: 0.5
-    &:active
-        opactiy: 0.25
-
-    &__login, &__submitLogin, &__reset
-        background-color: white
-        color: #2BB954
-        border: 1.5px solid #2BB954
-
-    &__error
-        width: 3vw
-
-
-
-    
-    &__submitRegister, &__submitLogin, &__search
-        font-size: large
-        grid-column: 1/3
-        text-align: center
 
 .searchTrack
 
@@ -185,13 +156,59 @@ audio
     p
         margin: 3% 0% 3% 0%
 
+.profile
+    display: grid
+    grid-template-columns: repeat(1, 2fr)
+    grid-template-rows: repeat(3, 1fr)
+    text-align: center
+
+    color: white
+
+    input
+        height: 3vh
+
     
-  
+.button
+    padding: 5px 10px
+    border-radius: 1em
+    font-size: x-large
+    background-color:#2BB954
+    color: white
+    font-family: 'Quicksand', sans-serif
+    cursor: pointer
+    outline: none
 
+    &:hover
+        opacity: 0.5
+    &:active
+        opactiy: 0.25
 
+    &__login, &__submitLogin, &__reset
+        background-color: white
+        color: #2BB954
+        border: 1.5px solid #2BB954
 
+    &__error
+        width: 6vw
 
+    &__logout
+        width: 7vw
+        font-size: 2.2vw
         
+    &__submitRegister, &__submitLogin, &__search
+        font-size: large
+        grid-column: 1/3
+        text-align: center
+    
+    &__modifyProfile
+        font-size: 3vw
+        height: 6vh
+        background-color: black
+        
+
+
+
+
 @media (min-width: 650px)
 
     .welcome
@@ -209,9 +226,6 @@ audio
         @include flexLeft
         margin-top: 10%
         margin-left: 3%
-
-        
-
 
     .login
         @include flexLeft
@@ -232,15 +246,11 @@ audio
         @include flexLeft
         margin-top: 60%
         margin-left: 9%
-
-
-    
+ 
     .detail
         margin-left: 4%
 
 @media (min-width: 1000px)
-
-
 
     .welcome
         margin-top: 15%

@@ -8,7 +8,7 @@ class App extends Component {
 
 
         
-        sessionStorage.spotyToken = "BQAYolmEYtSkMUkLqCuUIjJQ4JUluDPLsW4F6VoLXoz-17dvSWv7VnDmc7MtfShDFrHdLpVHqDLeNIwtKWYK6nBUJMBD5zQLeVh2m4myHDZWFIovSK3iRG6Q-MWJe4-bT_bmpr1bqwgaEdGE7cBqkrnI5QnRbT4"
+        sessionStorage.spotyToken = "BQBNkKs-4eqx3ecmL4xWm3C5JFxd5i2a_7pyH56Q07pnprqkQnBh1q4kXOR9UfHwquBusZOupg2eREqvlu0orj1BnVx2QlkSD6H7PqczImImWnDyk21bNnWTDFFkvERHY4wHQ5BE7U_2IyRGw7vXHky4wAgmo_c"
 
 
         this.state = { view: token ? 'home' : 'access', error: ''}
@@ -47,10 +47,8 @@ class App extends Component {
         })
     }
 
-    handleLogout = () => {
-        delete sessionStorage.token
-
-        this.setState({ view: 'access' })
+    handleView = () => {
+        this.setState({view: 'access'})
     }
 
     handleExitError = () => {
@@ -61,17 +59,13 @@ class App extends Component {
     
 
     render() {
-        const { state: {view, error }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin, handleExitError, handleLogout} = this
-
-        const { token } = sessionStorage
+        const { state: {view, error }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin, handleExitError, handleView} = this
 
         return <>
 
         <Title onHome={handleGoToAcces} />
 
         {error && <FeedBack level = {'error'} message={error} exitError={handleExitError}/>}
-
-        {token && <button className= "logout" onClick={handleLogout}>Logout</button>}
 
         {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} />}
 
@@ -81,10 +75,9 @@ class App extends Component {
 
         {view === 'login' && <Login onLogin={handleLogin} />}
 
-        {view === 'home' && <Home />}
+        {view === 'home' && <Home  onView={handleView}/>}
 
 
         </>
-
     }
 }

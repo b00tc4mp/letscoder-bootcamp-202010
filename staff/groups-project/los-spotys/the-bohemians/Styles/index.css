@@ -119,36 +119,6 @@ audio {
   color: #2BB954;
 }
 
-.button {
-  padding: 5px 10px;
-  border-radius: 1em;
-  font-size: x-large;
-  background-color: #2BB954;
-  color: white;
-  font-family: "Quicksand", sans-serif;
-  cursor: pointer;
-  outline: none;
-}
-.button:hover {
-  opacity: 0.5;
-}
-.button:active {
-  opactiy: 0.25;
-}
-.button__login, .button__submitLogin, .button__reset {
-  background-color: white;
-  color: #2BB954;
-  border: 1.5px solid #2BB954;
-}
-.button__error {
-  width: 3vw;
-}
-.button__submitRegister, .button__submitLogin, .button__search {
-  font-size: large;
-  grid-column: 1/3;
-  text-align: center;
-}
-
 .searchTrack {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -179,6 +149,56 @@ audio {
 }
 .results p {
   margin: 3% 0% 3% 0%;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+  color: white;
+}
+.profile input {
+  height: 3vh;
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 1em;
+  font-size: x-large;
+  background-color: #2BB954;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+.button:hover {
+  opacity: 0.5;
+}
+.button:active {
+  opactiy: 0.25;
+}
+.button__login, .button__submitLogin, .button__reset {
+  background-color: white;
+  color: #2BB954;
+  border: 1.5px solid #2BB954;
+}
+.button__error {
+  width: 6vw;
+}
+.button__logout {
+  width: 7vw;
+  font-size: 2.2vw;
+}
+.button__submitRegister, .button__submitLogin, .button__search {
+  font-size: large;
+  grid-column: 1/3;
+  text-align: center;
+}
+.button__modifyProfile {
+  font-size: 3vw;
+  height: 6vh;
+  background-color: black;
 }
 
 @media (min-width: 650px) {
