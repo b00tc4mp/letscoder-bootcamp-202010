@@ -1,5 +1,5 @@
-function Feedback({error}) {
+function Feedback({error, color = 'black'}) {
     return <>
-    <p style={{color: "black"}} >{error}</p>
+    <p className={`feedback feedback--${color}`}>{error}</p>
     </>
 }

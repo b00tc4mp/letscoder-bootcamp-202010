@@ -20,11 +20,20 @@ class Home extends Component {
 
     handleSearchByName = query => {
         const { token } = sessionStorage
-        searchByName(token, query, (error, results) => {
+        if(query)
+        searchByName(token, query , (error, results) => {
             if (error) return this.setState({ error: error.message })
             
             this.setState({ results, query })
         })
+        else {
+            const {state: {query}} = this
+            searchByName(token, query , (error, results) => {
+                if (error) return this.setState({ error: error.message })
+                
+                this.setState({ results, query })
+            })
+        }
     }
 
     handleSearchRandomCocktail = () => {
@@ -38,15 +47,24 @@ class Home extends Component {
 
     handleSearchByIngredient = query => {
         const { token } = sessionStorage
+        if (query)
         searchByIngredient( token , query, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
             this.setState({ results, query })
         })
+        else{
+            const {state: {query}} = this
+            searchByIngredient( token , query, (error, results) => {
+                if (error) return this.setState({ error: error.message })
+                
+                this.setState({ results, query })
+            })
+        }
     }
 
     handleGoToHome = () => {
-        this.setState({ results: null })
+        this.setState({ results: null, error: null })
     }
 
     handleLike = (id) => {
@@ -61,7 +79,7 @@ class Home extends Component {
         console.log('favourites')
         const { token } = sessionStorage
         retrieveLikes(token, (error,results) =>{
-            if (error) return this.setState({ error: error.message })
+            if (error) this.setState({ error: error.message })
             this.setState({ results })
         })
     }
@@ -86,9 +104,9 @@ class Home extends Component {
 
             <Search onSearchByName={handleSearchByName} onSearchByIngredient={handleSearchByIngredient} onSearchRandom={handleSearchRandomCocktail} />
 
-            {error && <Feedback error={error}/>}
+            {error && <Feedback error={error} color="white" />}
 
-            { results  && <Results items={results} onLike={handleLike} />}
+            { results  && results.length && <Results items={results} onLike={handleLike} />}
 
 
         </>
