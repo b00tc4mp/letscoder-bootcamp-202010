@@ -20,7 +20,7 @@ class Home extends Component {
                 retrieveTrendingMovies((error, trendingMovies) => {
                 if (error) return alert(error.message)
     
-                    this.setState({ trendingMovies, upcomingMovies, user })
+                    this.setState({ subview: 'home', trendingMovies, upcomingMovies, user })
             })
 
             })
@@ -67,6 +67,7 @@ class Home extends Component {
 
             this.setState({movie: {id, title, image, date, vote, overview, like, genre}})
         })
+        this.setState({subview: 'detail'})
     }
 
     handleLike = (movieId) => {
@@ -88,27 +89,34 @@ class Home extends Component {
         })
     }
 
+    handleGoToHome = () => this.setState( {subview: 'home'} )
+
     render() {
 
-        const {state: {subview, user, movie, trendingMovies, moviesSearch, upcomingMovies, likedMovies}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
+        const {state: {subview, user, movie, trendingMovies, moviesSearch, upcomingMovies, likedMovies}, handleGoToHome,handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
         <button onClick={handleGoToProfile} className="profile__btn btn">Profile</button>
 
-        {subview === 'profile' && likedMovies && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={likedMovies}/>}
+        {(subview === 'profile' || subview === 'detail') && <button onClick={handleGoToHome} className="back__btn btn">Home</button>}
 
-        <Search onSearch={handleSearchMovies}/>
+        {subview === 'profile' && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={likedMovies} onMovie={handleGoToMovie}/>}
+
 
         {/* <Dropdown /> */}
 
-        {moviesSearch && <Carousel movies={moviesSearch} title="Your search" onMovie={handleGoToMovie}/>}
+        {subview === 'home' && <>
+            <Search onSearch={handleSearchMovies}/>
 
-        {upcomingMovies && <Carousel movies={upcomingMovies} title="Upcoming movies" onMovie={handleGoToMovie}/>}
+            {moviesSearch && <Carousel movies={moviesSearch} title="Your search" onMovie={handleGoToMovie}/>}
 
-        {trendingMovies && <Carousel movies={trendingMovies} title="Trending movies" onMovie={handleGoToMovie}/>}
+            {upcomingMovies && <Carousel movies={upcomingMovies} title="Upcoming movies" onMovie={handleGoToMovie}/>}
 
-        {movie && <Detail item={movie} onLike={handleLike}/>}
+            {trendingMovies && <Carousel movies={trendingMovies} title="Trending movies" onMovie={handleGoToMovie}/>} 
+        </> }
+
+        {subview === 'detail' && movie && <Detail item={movie} onLike={handleLike}/>}
 
         </>
     }

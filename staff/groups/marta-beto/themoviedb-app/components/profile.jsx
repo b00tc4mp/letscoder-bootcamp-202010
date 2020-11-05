@@ -1,4 +1,7 @@
-const Profile = ({avatar, title, likes, fullname, onModify}) => {
+const Profile = ({avatar, title, likes, fullname, onModify, onMovie}) => {
+
+const pathLocation = 'https://image.tmdb.org/t/p/w500';
+
 return <section className="profile">
     <h3 className="profile__title">Your information:</h3>
     <img className="profile__avatar" src={avatar} alt="avatar"/>
@@ -6,8 +9,8 @@ return <section className="profile">
 
     <div className="carousel">
         <h2 className="carousel__title">{title}</h2>
-        {likes.map(({id, image}) => <div className="carousel__movie" key={id}>
-        <img src={image ? image : 'no favorites yet'} alt="movie-img"/>
+        {likes.map(({id, poster_path: image}) => <div className="carousel__movie" key={id} onClick={() => onMovie(id)}>
+        <img className="carousel__movie--liked" src={pathLocation + image ? pathLocation + image : 'no favorites yet'} alt="movie-img"/>
         </div>)}
     </div>
 

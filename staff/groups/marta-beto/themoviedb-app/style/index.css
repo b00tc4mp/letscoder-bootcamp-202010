@@ -163,6 +163,10 @@ body, html {
   margin: 0 0.2rem;
   cursor: pointer;
 }
+.carousel__movie--liked {
+  height: 115px;
+  width: 80px;
+}
 .carousel__movie > img {
   height: 155px;
   width: 115px;
@@ -254,7 +258,7 @@ body, html {
 .profile {
   background-color: #000000b7;
   border-radius: 1rem;
-  width: 60%;
+  width: 50%;
   margin: 0.3rem auto;
 }
 .profile__title {
