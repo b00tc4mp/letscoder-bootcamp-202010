@@ -21,7 +21,7 @@ class App extends Component {
     handleRegister = (fullname,email,password,repassword) => {
         registerUser(fullname,email,password,repassword, error => {
             if (error) return alert(error.message)
-
+            
             this.setState({ view: 'register-confirm' })
         })
     }
