@@ -10,9 +10,7 @@ function Avatar(props) {
       <img
         className="avatar__image"
         src={
-          user
-            ? user.image
-            : "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png"
+          user && user.image ? user.image : "https://tinyurl.com/avatardefault"
         }
         alt="alt"
       />

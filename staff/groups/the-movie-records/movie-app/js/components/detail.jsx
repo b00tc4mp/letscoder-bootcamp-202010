@@ -18,7 +18,9 @@ function Detail(props) {
           <div
             className="movie__poster"
             data-title={props.item.original_title}
-            data-description={props.item.overview.truncate(80)}
+            data-description={
+              props.item.overview && props.item.overview.truncate(80)
+            }
           >
             <img
               src={
@@ -31,11 +33,17 @@ function Detail(props) {
             />
           </div>
           <div className="movie__overview">{props.item.overview}</div>
-          {<button onClick={event => {
-                event.stopPropagation()
-                
-                props.onLike(props.item.id)
-            }}>{props.item.like ? '❤️' : '♡'}</button>}
+          {
+            <button
+              onClick={(event) => {
+                event.stopPropagation();
+
+                props.onLike(props.item.id);
+              }}
+            >
+              {props.item.like ? "❤️" : "♡"}
+            </button>
+          }
         </div>
       </div>
       {videoId && (
