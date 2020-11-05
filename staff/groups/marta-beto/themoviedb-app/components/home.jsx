@@ -19,12 +19,18 @@ class Home extends Component {
 
                 retrieveTrendingMovies((error, trendingMovies) => {
                 if (error) return alert(error.message)
+
+                retrieveTvTopRated((error, tvTopRated)=>{
+                    if (error) return alert(error.message)
+
+                    this.setState({ subview: 'home', trendingMovies, upcomingMovies, tvTopRated, user })
+                
+                })
     
-                    this.setState({ subview: 'home', trendingMovies, upcomingMovies, user })
             })
 
-            })
         })
+    })    
     }
 
     handleModifyUser = (fullname, avatar) => {
@@ -70,6 +76,17 @@ class Home extends Component {
         this.setState({subview: 'detail'})
     }
 
+    handleGoToShow = showId => {
+        retrieveShow(showId ,this.props.token, (error, show) => {
+            if (error) return alert(error.message)
+
+            const {id, name: title, poster_path: image, vote_average: vote, first_air_date: date, overview, like} = show
+
+            this.setState({show: {id, title, image, date, vote, overview, like}})
+        })
+        this.setState({subview: 'detail'})
+    }
+
     handleLike = (movieId) => {
         //const { token } = sessionStorage
 
@@ -80,20 +97,21 @@ class Home extends Component {
         })
     }
 
-    handleGoToProfile = () => {
-        
+    
+    handleGoToProfile = () =>  {
         retrieveLikedMovies(this.props.token, (error, likedMovies) => {
             if (error) alert (error.message)
+    
+            this.setState({subview: 'profile', likedMovies})
+            })
 
-            this.setState({ subview: 'profile', likedMovies})
-        })
     }
 
     handleGoToHome = () => this.setState( {subview: 'home'} )
 
     render() {
 
-        const {state: {subview, user, movie, trendingMovies, moviesSearch, upcomingMovies, likedMovies}, handleGoToHome,handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
+        const {state: {subview, user, movie, trendingMovies, moviesSearch, upcomingMovies, likedMovies, tvTopRated, show}, handleGoToHome, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie, handleGoToShow} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
@@ -101,22 +119,21 @@ class Home extends Component {
 
         {(subview === 'profile' || subview === 'detail') && <button onClick={handleGoToHome} className="back__btn btn">Home</button>}
 
-        {subview === 'profile' && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={likedMovies} onMovie={handleGoToMovie}/>}
-
-
-        {/* <Dropdown /> */}
+        {subview === 'profile' && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={likedMovies} onItem={handleGoToMovie}/>}
 
         {subview === 'home' && <>
             <Search onSearch={handleSearchMovies}/>
 
-            {moviesSearch && <Carousel movies={moviesSearch} title="Your search" onMovie={handleGoToMovie}/>}
+            {moviesSearch && <Carousel items={moviesSearch} title="Your search" onItem={handleGoToMovie}/>}
 
-            {upcomingMovies && <Carousel movies={upcomingMovies} title="Upcoming movies" onMovie={handleGoToMovie}/>}
+            {upcomingMovies && <Carousel items={upcomingMovies} title="Upcoming movies" onItem={handleGoToMovie}/>}
 
-            {trendingMovies && <Carousel movies={trendingMovies} title="Trending movies" onMovie={handleGoToMovie}/>} 
+            {trendingMovies && <Carousel items={trendingMovies} title="Trending movies" onItem={handleGoToMovie}/>} 
+
+            {tvTopRated && <Carousel items={tvTopRated} title="Top Rated TV" onItem={handleGoToShow}/>}
         </> }
 
-        {subview === 'detail' && movie && <Detail item={movie} onLike={handleLike}/>}
+        {subview === 'detail' && (movie || show) && <Detail item={movie || show} onLike={handleLike}/>}
 
         </>
     }

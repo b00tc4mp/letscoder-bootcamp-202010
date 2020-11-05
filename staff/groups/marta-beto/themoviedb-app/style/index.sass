@@ -12,22 +12,20 @@ $font-main: 'Roboto', sans-serif
     margin: 0
     padding: 0
 
-body, html
+body
     color: $font-color
     font-family: $font-main
-    height: 100%
 
 #root
     background-image: url('./back-b&w.jpg')
     background-repeat: no-repeat
-    background-size: cover
-    background-position: center center
-    background-attachment: fixed
-    height: 100%
+    background-size: 100% 100%
+    background-position: center
+    min-height: 100vh
 
 
 .title
-    padding: 1rem
+    padding: .5rem
     display: flex
     flex-flow: column
     text-align: center
@@ -37,9 +35,8 @@ body, html
     border-radius: 1rem
     font-family: $font-main
     color: $font-color
-    width: 85%
+    width: 65%
     font-size: 2.2rem
-
 
     &__small
         font-size: .8rem
@@ -113,8 +110,9 @@ body, html
     padding: .5rem
     color: $font-color
     cursor: pointer
-    background-color: transparent
-    font-size: 1.1rem
+    background-color: #00000080
+    border-radius: 5rem
+    font-size: .8rem
 
 .btn:hover
     color: #489899
@@ -145,6 +143,11 @@ body, html
 .welcome
     &__title
         text-align: center
+        background-color: #0000003d
+        max-width: 60%
+        margin: .5rem auto
+        border-radius: 1rem
+        font-size: 1.1rem
 
     &__name
         color: #489899
@@ -158,54 +161,37 @@ body, html
 
     &__title
         padding: .3rem
+        font-size: 1rem
 
     &__movie
         display: inline-block
         margin: 0 .2rem
         cursor: pointer
 
-        &--liked
-            height: 115px
-            width: 80px
-
     &__movie > img
-        height: 155px
+        height: 150px
         width: 115px
 
 .genres
     margin: .8rem
 
 .search
-    max-width: 50%
+    max-width: 30%
     margin: auto
     display: flex
     flex-wrap: wrap
-
-    &__label
-        font-size: .8rem
-        margin-bottom: .2rem
-        text-transform: uppercase
     
     &__title
         font-size: .8rem
-        padding: .5rem
-        line-height: .5rem
+        padding: .2rem
+        line-height: .2rem
         border-radius: 2rem
         border: 1px solid #ddd
         margin-bottom: 1rem
 
-    &__btn
-        background-color: rgba(0,0,0,0.75)
-        color: $font-color
-        padding: .5rem .8rem
-        border: 1px solid rgba(0,0,0,0.75)
-        border-radius: 2rem
-        font-size: 1rem
-        cursor: pointer
-        transition: background-color 250ms
 
     &__btn:hover
-        background-color: rgba(0,0,0,0.85)
+        background-color: #000000
 
 .logout
     display: flex
@@ -218,20 +204,25 @@ body, html
         right: 1rem
 
 .detail
+    display: flex
+    flex-direction: column
     box-shadow: 0 4px 8px 0 #000000b7
     transition: 0.3s
-    width: 60%
+    height: 100%
+    width: 95%
     margin: .3rem auto
     border-radius: .5rem
-    z-index: 100
     background-color: #000000b7
+    color: #000000
 
     &__title
         color: $font-color
         text-align: center
 
     &__img
-        width: 100%
+        width: 90%
+        margin: auto
+        height: 90%
 
     &__btn
         text-decoration: none
@@ -247,22 +238,26 @@ body, html
         display: flex
         justify-content: space-around
         padding: .3rem
+        color: white
 
     &__overview
-        padding: .3rem
+        padding: 0 .5rem
+        margin: .5rem
+        color: white
 
 .profile
     background-color: #000000b7
     border-radius: 1rem
     width: 50%
-    margin: .3rem auto
+    margin: auto
 
     &__title
         margin: .5rem
+        padding: .2rem
 
     &__fullname
         padding: .3rem
-        margin-left: 1rem
+        margin-left: .5rem
 
     &__avatar
         width: 100%
@@ -272,7 +267,10 @@ body, html
     &__bottom
         width: 90%
         margin: auto
-    
+
+    &__btn
+        margin-left: 1.2rem
+        
 
 
     

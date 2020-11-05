@@ -10,10 +10,8 @@ const Search = ({ onSearch }) => {
             alert(error.message);
         }
     }
-
     }>
-    <label htmlFor="query" className="search__label">Movie title</label>
-    <input className="search__title" type="text" name="query" placeholder="Search your title"/>
-    <button className="search__btn">Search</button>
+    <input className="search__title" type="text" name="query" placeholder="Title...."/>
+    <button className="search__btn btn">Search</button>
 </form>
 }
