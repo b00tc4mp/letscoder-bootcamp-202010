@@ -17,18 +17,14 @@ class Home extends Component {
                 if (error) return alert(error.message)
 
 
-            retrieveTrendingMovies((error, trendingMovies) => {
+                retrieveTrendingMovies((error, trendingMovies) => {
                 if (error) return alert(error.message)
     
-                this.setState({ trendingMovies, upcomingMovies, user })
+                    this.setState({ trendingMovies, upcomingMovies, user })
             })
 
             })
         })
-    }
-
-    handleGoToProfile = () => {
-        this.setState({ view: 'profile' })
     }
 
     handleModifyUser = (fullname, avatar) => {
@@ -83,15 +79,24 @@ class Home extends Component {
         })
     }
 
+    handleGoToProfile = () => {
+        
+        retrieveLikedMovies(this.props.token, (error, likedMovies) => {
+            if (error) alert (error.message)
+
+            this.setState({ subview: 'profile', likedMovies})
+        })
+    }
+
     render() {
 
-        const {state: {view, user, movie, trendingMovies, moviesSearch, upcomingMovies}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
+        const {state: {subview, user, movie, trendingMovies, moviesSearch, upcomingMovies, likedMovies}, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
         <button onClick={handleGoToProfile} className="profile__btn btn">Profile</button>
 
-        {view === 'profile' && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={user.likes}/>}
+        {subview === 'profile' && likedMovies && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={likedMovies}/>}
 
         <Search onSearch={handleSearchMovies}/>
 
