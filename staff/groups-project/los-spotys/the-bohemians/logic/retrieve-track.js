@@ -1,13 +1,14 @@
 function retrieveTrack(token, spotyToken, id, callback) {
-    if (typeof spotyToken !== 'string') throw new TypeError(spotyToken + ' is not a spotyToken')
-
-    if (!spotyToken.trim().length) throw new Error('spotyToken is empty or blank')
-
+    
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
     if (!token.trim().length) throw new Error('token is empty or blank')
 
-    if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+    if (typeof spotyToken !== 'string') throw new TypeError(spotyToken + ' is not a spotyToken')
+
+    if (!spotyToken.trim().length) throw new Error('spotyToken is empty or blank')
+
+    if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
     if (!id.trim().length) throw new Error('id is empty or blank')
 
