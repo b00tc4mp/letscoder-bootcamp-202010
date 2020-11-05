@@ -20,17 +20,6 @@ function ResultList(props) {
                 }}
               />
             }
-            {/* {
-              <button
-                className="result-like"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  props.onLike(movie.id);
-                }}
-              >
-                {movie.like ? "❤️" : "♡"}
-              </button>
-            } */}
             <Card movie={movie} />
           </li>
         ))}

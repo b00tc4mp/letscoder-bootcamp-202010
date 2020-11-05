@@ -7,6 +7,7 @@ class Home extends Component {
       resultSearch: [],
       searchUsed: false,
       resultMovie: undefined,
+      actors: undefined,
     };
   }
 
@@ -24,7 +25,11 @@ class Home extends Component {
   }
 
   handleGoHome = () => {
-    this.setState({ searchUsed: false, resultMovie: undefined });
+    this.setState({
+      searchUsed: false,
+      resultMovie: undefined,
+      actors: undefined,
+    });
   };
 
   handleResult = (resultSearch, query) => {
@@ -32,6 +37,7 @@ class Home extends Component {
       resultSearch,
       searchUsed: true,
       resultMovie: undefined,
+      actors: undefined,
       query,
     });
   };
@@ -52,8 +58,10 @@ class Home extends Component {
     const { token } = sessionStorage;
     retrieveMovie(token, movieId, "es", (error, movie) => {
       if (error) return alert(error.message);
-
-      this.setState({ resultMovie: movie });
+      retrieveActors(movieId, (error, actors) => {
+        if (error) return alert(error.message);
+        this.setState({ resultMovie: movie, actors });
+      });
     });
   };
 
@@ -76,7 +84,10 @@ class Home extends Component {
     const { token } = sessionStorage;
     retrieveMovie(token, id, "es", (error, movie) => {
       if (error) return alert(error.message);
-      this.setState({ resultMovie: movie });
+      retrieveActors(id, (error, actors) => {
+        if (error) return alert(error.message);
+        this.setState({ resultMovie: movie, actors });
+      });
     });
   };
 
@@ -98,7 +109,13 @@ class Home extends Component {
     );
   }
   renderDetail() {
-    return <Detail item={this.state.resultMovie} onLike={this.handleLike} />;
+    return (
+      <Detail
+        item={this.state.resultMovie}
+        actors={this.state.actors}
+        onLike={this.handleLike}
+      />
+    );
   }
   renderSlider() {
     return (

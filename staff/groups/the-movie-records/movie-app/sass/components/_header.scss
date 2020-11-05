@@ -19,13 +19,14 @@
   &__logout {
     position: absolute;
     right: 60px;
-    background: #fff;
     padding: 4px 6px;
-    border-radius: 4px;
-    box-shadow: 2px 2px #203c54;
-    background: #d5e9fa;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 21px;
+    cursor: pointer;
     &:hover {
-      background: #c0d9ed;
+      color: #c0d9ed;
     }
   }
   .avatar {

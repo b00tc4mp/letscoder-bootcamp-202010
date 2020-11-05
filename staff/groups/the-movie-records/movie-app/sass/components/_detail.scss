@@ -1,4 +1,6 @@
 .movie {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   background: #000;
   &__detail {
@@ -42,6 +44,10 @@
       opacity: 0.8;
       z-index: 0;
     }
+  }
+  &__actors {
+    padding: 20px;
+    margin: 0 auto;
   }
   // Poster section
   &__poster {

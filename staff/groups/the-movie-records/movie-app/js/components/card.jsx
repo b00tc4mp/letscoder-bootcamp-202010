@@ -7,7 +7,7 @@ function Card(props) {
           src={
             props.movie.poster_path
               ? `http://image.tmdb.org/t/p/w600_and_h900_bestv2/${props.movie.poster_path} `
-              : "https://i0.wp.com/oij.org/wp-content/uploads/2016/05/placeholder.png?ssl=1"
+              : "https://tinyurl.com/noimagesfound"
           }
           height="120"
           alt="Api"

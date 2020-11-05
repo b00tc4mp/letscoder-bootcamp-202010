@@ -47,6 +47,21 @@ function Detail(props) {
           }
         </div>
       </div>
+      <dir className="movie__actors">
+        {props.actors.map((actor) => (
+          <figure className="wave">
+            <img
+              src={
+                actor.image
+                  ? `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${actor.image}`
+                  : "https://tinyurl.com/avatardefault"
+              }
+              alt={actor.character}
+            />
+            <figcaption>{actor.name}</figcaption>
+          </figure>
+        ))}
+      </dir>
       {videoId && (
         <div className="movie__trailer">
           <div className="video-wrap">

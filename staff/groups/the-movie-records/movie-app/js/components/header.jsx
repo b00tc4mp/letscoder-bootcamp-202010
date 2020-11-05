@@ -7,7 +7,7 @@ function Header(props) {
       </div>
       {props.user && (
         <button className="header__logout" onClick={() => onLogout()}>
-          Logout
+          <i className="fa fa-sign-out-alt"></i>
         </button>
       )}
       <Avatar onAvatar={onLogin} onProfile={onProfile} user={user} />
