@@ -6,7 +6,7 @@ class Home extends Component {
     this.state = {
       resultSearch: [],
       searchUsed: false,
-      resultMovie: 0,
+      resultMovie: undefined,
     };
   }
 
@@ -24,14 +24,15 @@ class Home extends Component {
   }
 
   handleGoHome = () => {
-    this.setState({ searchUsed: false, resultMovie: {} });
+    this.setState({ searchUsed: false, resultMovie: undefined });
   };
 
-  handleResult = (resultSearch) => {
+  handleResult = (resultSearch, query) => {
     this.setState({
       resultSearch,
       searchUsed: true,
       resultMovie: undefined,
+      query,
     });
   };
 

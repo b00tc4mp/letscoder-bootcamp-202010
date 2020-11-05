@@ -7,10 +7,11 @@ class Search extends Component {
   }
   __handleSubmit = (event) => {
     const { onResult } = this.props;
+    const { query } = this.state;
     const { token } = sessionStorage;
     event.preventDefault();
     searchMovies(token, this.state.query, 1, "es", function (error, movies) {
-      movies && onResult(movies);
+      movies && onResult(movies, query);
     });
   };
   __handleChange = (event) => {
