@@ -4,7 +4,7 @@ class Home extends Component {
     constructor() {
         super()
 
-        this.state = {}
+        this.state = {error: ''}
     }
 
 
@@ -13,7 +13,7 @@ class Home extends Component {
         const {token} = sessionStorage
 
         token && retrieveUser(token, (error, user) => {
-            if (error) return alert(error.message)
+            if (error) return this.setState({ error: error.message })
             this.setState({ user })
         })
     }
@@ -31,7 +31,7 @@ class Home extends Component {
         const { token } = sessionStorage
 
         modifyUser(token, { fullname, image}, error => {
-            if (error) alert(error.message)
+            if (error) return this.setState({ error: error.message })
 
             retrieveUser(token, (error, user) => {
                 if (error) return alert (error.message)
@@ -48,13 +48,14 @@ class Home extends Component {
         
         try {
             searchTracks(token, spotyToken, type, query, (error, tracks) => {
-                if (error) return alert(error.message)
+                if (error) return this.setState({ error: error.message })
+                if (!tracks.length) return this.setState ({ error: 'no tracks found'})
                  
 
                 this.setState({ tracks, track: undefined, type, query })
             })
         } catch ({ message }) {
-            alert(message)
+            this.setState({ error: error.message })
         }
     }
 
@@ -63,7 +64,7 @@ class Home extends Component {
         const {token, spotyToken} = sessionStorage
 
         retrieveTrack(token, spotyToken, id, (error, track) => {
-            if (error) return alert(error.message)
+            if (error) return this.setState({ error: error.message })
             
         this.setState({ track })
             
@@ -75,7 +76,7 @@ class Home extends Component {
         const {token} = sessionStorage
 
         toggleFavouriteTrack(token, id, error => {
-            if (error) return alert(error.message)
+            if (error) return this.setState({ error: error.message })
 
             const {state : { track }} = this 
             
@@ -86,13 +87,21 @@ class Home extends Component {
         })
     }
 
+    handleExitError = () => {
+
+        this.setState({ error: '' })
+
+    }
+
 
     render() {
-        const { state: { subview, tracks, track, user }, handleSearchTracks, handleGoToTrack, handleFavourite, handleGoToProfile, handleModifyUser} = this
+        const { state: { subview, tracks, track, user, error}, handleSearchTracks, handleGoToTrack, handleFavourite, handleGoToProfile, handleModifyUser, handleExitError} = this
 
         return <>
 
-            {user && <Welcome name={user.fullname} image={user.image} onProfile={handleGoToProfile} />}
+            {error && <FeedBack level = {'error'} message={error} exitError={handleExitError}/>}
+
+            {user && <Welcome name={user.fullname} image={user.image} onProfile={handleGoToProfile}/>}
 
             {subview === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} image={user.image}/>}
 

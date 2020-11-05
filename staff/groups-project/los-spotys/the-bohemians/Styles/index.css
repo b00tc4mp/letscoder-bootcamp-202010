@@ -140,6 +140,9 @@ audio {
   color: #2BB954;
   border: 1.5px solid #2BB954;
 }
+.button__error {
+  width: 3vw;
+}
 .button__submitRegister, .button__submitLogin, .button__search {
   font-size: large;
   grid-column: 1/3;
