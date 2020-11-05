@@ -4,7 +4,9 @@ class App extends Component {
     constructor() {
         super() // refers to the parent class and gets access to the parent's propoerties
 
-        this.state = { view: 'access' } // initial state => component properties. The compo re-renders when state changes
+        const {token} = sessionStorage
+
+        this.state = { view: token? 'home' : 'access', token } // initial state => component properties. The compo re-renders when state changes
 
     }
 
@@ -17,41 +19,43 @@ class App extends Component {
     }
 
     handleGoToAccess = () => {
-        this.setState({ view: 'access' }) // re-renders on clicking the title to show the 'access' section
+        const { token } = sessionStorage
+
+        if (!token)
+            this.setState({ view: 'access' })
     }
 
-    handleRegister = (fullname, email, password, repassword) => {           // calls registerUser passing user inputs
-        registerUser(fullname, email, password, repassword, error => {      // registerUser logic
-            if (error) return alert(error.message)
+    handleLogout = () => {
+        delete sessionStorage.token
 
-            this.setState({ view: 'register-confirm' }) // if no error, setState.
-        })
+        this.setState({ view: 'access' })
     }
 
-    handleLogin = (email, password)  => {
-        authenticateUser(email, password, (error, token) => {
-            if (error) return alert(error.message)
+    handleRegisterSuccess = () => this.setState({ view: 'register-confirm' }) // passed by props onRegisterSuccess from Register
 
-            this.setState({ token, view: 'home' })
-        })
-    }
+    handleLoginSuccess = () => this.setState({ view: 'home' }) // // passed by props onLoginSuccess from Login
+
 
     render() {
-        const { state: { view, token }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogin, handleRegister } = this
+        const { state: { view }, handleGoToAccess, handleGoToLogin, handleGoToRegister, handleLogout } = this
+
+        const { token } = sessionStorage
 
         return <>
 
             <Title onAccess={handleGoToAccess} />
 
+            {token && <button className="logout btn" onClick={handleLogout}>Logout</button>}
+
             {view === 'access' && <Access onRegisterSection={handleGoToRegister} onLoginSection={handleGoToLogin} />}
 
-            {view === 'register' && <Register onRegister={handleRegister} />}
+            {view === 'register' && <Register onRegisterSucccess={this.handleRegisterSuccess}/>}
 
-            {view === 'login' && <Login onLogin={handleLogin} />}
+            {view === 'login' && <Login onLoginSuccess={this.handleLoginSuccess}/>}
 
             {view === 'register-confirm' && <RegisterConfirm onLoginSection={handleGoToLogin} />}
 
-            {view === 'home' && <Home token={token} />} 
-        </>  // 'Home' gets the user through props
+            {view === 'home' && <Home />} 
+        </>  
     }
 }

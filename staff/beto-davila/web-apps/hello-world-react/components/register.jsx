@@ -1,10 +1,30 @@
 // Displays the resgister form. Gets the user inputs for registration and pass them to the callback 'handleRegister' when submitting the form.
 
-function Register(props) {
+const { Component } = React
+class Register extends Component {
+
+    constructor() {
+        super()
+
+        this.state = {}
+    }
+
+    handleRegister = (fullname, email, password, repassword) => {
+        try {
+            registerUser(fullname, email, password, repassword, error => {
+                if (error) return this.setState({ error: error.message })
+
+                this.props.onRegisterSuccess()
+            })
+        } catch (error) {
+            this.setState({ error: error.message })
+        }
+    }
+
+    render() {
     return <section className="register">
     <h3>Register</h3>
 
-    {/* <img className='register__img' src="../../hello-world/style/img/registration.jpeg" alt="register-img" /> */}
         <p>Create your account, It´s free and only takes a minute</p>
 
     <form className="register__form" onSubmit={
@@ -16,11 +36,9 @@ function Register(props) {
             var password = event.target.password.value;
             var repassword = event.target.repassword.value;
 
-            try {
-                props.onRegister(fullname, email, password, repassword);
-            } catch (error) {
-                alert(error.message);
-            }
+            
+            this.handleRegister(fullname, email, password, repassword);
+           
         }
     }>
         <input type="text" name="fullname" placeholder="full name" required />
@@ -29,5 +47,8 @@ function Register(props) {
         <input type="password" name="repassword" placeholder="repeat password" required />
         <button className = "register__btn btn">Register</button>
     </form>
+
+    {error && <Feedback message={this.state.error} level="error" />}
 </section>
+    }
 }

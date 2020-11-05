@@ -4,11 +4,13 @@ class Home extends Component {
     constructor() {
         super()
 
-        this.state = {}
+        this.state = { subview: 'search'}
     }
 
     componentWillMount() {
-        retrieveUser(this.props.token, (error, user) => {
+        const { token } = sessionStorage
+
+        retrieveUser(token, (error, user) => {
             if (error) return alert(error.message)
 
             this.setState({ user })
@@ -35,8 +37,9 @@ class Home extends Component {
     // After the call, we get a response for the callback to do something with it.
     // If success, the callback will return a new array (array map method) 'vehicles' providing some features of each vehicle (id, title, image and price).
     handleSearchVehicles = query => {
+        const { token } = sessionStorage
         try {
-            searchVehicles(this.props.token, query, (error, vehicles) => {
+            searchVehicles(token, query, (error, vehicles) => {
                 if (error) return alert(error.message)
 
                 vehicles = vehicles.map(({ id, name: title, thumbnail: image, price, like }) => ({ id, title, image, price, like }))
@@ -49,7 +52,8 @@ class Home extends Component {
     }
 
     handleGoToVehicle = vehicleId => {
-        retrieveVehicle(vehicleId, (error, vehicle) => {
+        const { token } = sessionStorage
+        retrieveVehicle(token, vehicleId, (error, vehicle) => {
             if (error) return alert(error.message)
 
             const { id, name: title, year, description: preview, price, url, image } = vehicle
@@ -59,30 +63,54 @@ class Home extends Component {
     }
 
     handleLike = vehicleId => {
-        toggleLikeVehicle(this.props.token, vehicleId, error => {
+        const { token } = sessionStorage
+        toggleLikeVehicle(token, vehicleId, error => {
             if (error) return alert(error.message)
 
-            this.handleSearchVehicles(this.state.query)
+            const { state: { vehicle } } = this
+
+            if (vehicle)
+                this.handleGoToVehicle(vehicleId)
+            else
+                this.handleSearchVehicles(this.state.query)
         })
     }
 
+    handleGoToLikes = () => {
+        const { token } = sessionStorage
+
+        retrieveLikedVehicles(token, (error, likedVehicles) => {
+            if (error) alert(error.message)
+
+            this.setState({ subview: 'likes', likedVehicles })
+        })
+    }
+
+    handleGoToSearch = () => this.setState({ subview: 'search' })
+
     render() {
-        const { state: { subview, vehicles, vehicle, user }, handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoToVehicle, handleLike } = this
+        const { state: { subview, vehicles, vehicle, user }, handleGoToProfile, handleModifyUser, handleSearchVehicles, handleGoToVehicle, handleLike, handleGoToSearch, handleGoToLikes } = this
 
         return <>
             {user && <Welcome name={user.fullname} image={user.image} />}
 
+            <button onClick={handleGoToSearch}>Search</button>
+
+            <button onClick={handleGoToLikes}>Likes</button>
+
             <button onClick={handleGoToProfile}>Profile</button>
 
+            {subview === 'likes' && <Results items={this.state.likedVehicles} currency="$" />}
+
+            {subview === 'search' && <>
+                <Search onSearch={handleSearchVehicles} />
+
+                {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} onLike={handleLike} />}
+
+                { vehicle && <Detail item={vehicle} currency="$" onLike={handleLike} />}
+            </>}
+
             {subview === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} image={user.image} />}
-
-            <h2>Vehicles</h2>
-
-            <Search onSearch={handleSearchVehicles} />
-
-            {!vehicle && vehicles && <Results items={vehicles} currency="$" onItem={handleGoToVehicle} onLike={handleLike}/>}
-
-            { vehicle && <Detail item={vehicle} currency="$" />}
         </>
     }
 }

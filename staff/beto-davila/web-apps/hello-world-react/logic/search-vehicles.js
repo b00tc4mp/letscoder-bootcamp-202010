@@ -24,8 +24,8 @@ function searchVehicles(token, query, callback) {
                             vehicles.forEach(vehicle => vehicle.like = likes.includes(vehicle.id)) // forEach vehicle we find out if it was 'liked' (includes array method) wherein it´ll be true and will have a 'red heart'.
 
                             callback(null, vehicles)
-                        }
+                        } else callback(new Error('sorry, cannot search :('))
                     })
-            } else callback(new Error('sorry, cannot search :('))
+            } else callback(new Error('sorry, cannot search vehicles :('))
         })
 }
