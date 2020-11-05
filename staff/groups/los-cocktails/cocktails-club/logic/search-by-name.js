@@ -22,7 +22,7 @@ function searchByName(token,name, callback) {
                   if (status === 200) {
                       const { likes = [] } = JSON.parse(response)
 
-                      results.forEach( item => item.like = likes.includes(item.id) )
+                      results.forEach( item => item.like = likes.includes(item.idDrink) )
                       results = results.map(
                         ({
                           like,

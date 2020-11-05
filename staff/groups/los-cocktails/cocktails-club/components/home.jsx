@@ -23,7 +23,7 @@ class Home extends Component {
         searchByName(token, query, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
-            this.setState({ results })
+            this.setState({ results, query })
         })
     }
 
@@ -38,10 +38,10 @@ class Home extends Component {
 
     handleSearchByIngredient = query => {
         const { token } = sessionStorage
-        searchByIngredient( query, (error, results) => {
+        searchByIngredient( token , query, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
-            this.setState({ results })
+            this.setState({ results, query })
         })
     }
 
@@ -49,10 +49,18 @@ class Home extends Component {
         this.setState({ results: null })
     }
 
+    handleLike = (id) => {
+        const { token } = sessionStorage
+        toggleLike(token,id, error => {
+            if (error) return this.setState({ error: error.message })
+            this.handleSearchByName(this.state.query)
+        })
+    }
+
     
     
     render() {
-        const {state: { results, user, error } ,handleGoToHome, handleSearchByIngredient, handleSearchByName, handleSearchRandomCocktail } = this
+        const {state: { results, user, error }, handleLike ,handleGoToHome, handleSearchByIngredient, handleSearchByName, handleSearchRandomCocktail } = this
 
         return <>
             <Logo onHome={handleGoToHome} />
@@ -69,7 +77,7 @@ class Home extends Component {
 
             {error && <Feedback error={error} />}
 
-            { results  && <Results items={results} />}
+            { results  && <Results items={results} onLike={handleLike} />}
 
 
         </>

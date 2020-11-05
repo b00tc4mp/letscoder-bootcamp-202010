@@ -1,4 +1,4 @@
-function Results({items}) {
+function Results({items, onLike}) {
     return <>
             <section className="results" >
                 <ul className="results__ul">
@@ -18,7 +18,10 @@ function Results({items}) {
                         { ing5 && <p className="results__p">{ing5}: <span className=" negrita">{m5}</span></p> }
                         { ing6 && <p className="results__p">{ing6}: <span className=" negrita">{m6}</span></p> }
                         { ing7 && <p className="results__p">{ing7}: <span className=" negrita">{m7}</span></p> }
-                        {<button className="results__like" >{like ? '🤎': '🤍'}</button> }
+                        <button className="results__like" onClick={function(event){
+                            event.stopPropagation()
+                            onLike(id)
+                        }} >{like ? '🤎': '🤍'}</button> 
                         
 
                         </div>

@@ -8,6 +8,7 @@ function Search({ onSearchByName, onSearchByIngredient, onSearchRandom }) {
             
             var buttons = form.getElementsByTagName('button')
             
+            
             Array.prototype.forEach.call( buttons, button => addEventListener('click', event => {
                 event.stopPropagation()
                 // event.preventDefault()
