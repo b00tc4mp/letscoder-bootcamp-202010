@@ -1,9 +1,14 @@
 function retrieveTrack(token, spotyToken, id, callback) {
+    
+    if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+    if (!token.trim().length) throw new Error('token is empty or blank')
+
     if (typeof spotyToken !== 'string') throw new TypeError(spotyToken + ' is not a spotyToken')
 
     if (!spotyToken.trim().length) throw new Error('spotyToken is empty or blank')
 
-    if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+    if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
     if (!id.trim().length) throw new Error('id is empty or blank')
 
@@ -17,6 +22,10 @@ function retrieveTrack(token, spotyToken, id, callback) {
     }, '', function(status, response) {
         if (status === 200) {
             let track = JSON.parse(response)
+
+            let { id, name: song, preview_url: preListening, album, artists, favourite } = track
+
+            track = ({  id, song, preListening, image: album.images[1].url, releaseDate: album.release_date, artist: artists[0].name, album: album.name, favourite  })
 
 
             if (track)
@@ -40,3 +49,6 @@ function retrieveTrack(token, spotyToken, id, callback) {
         }
     })
 }
+
+
+
