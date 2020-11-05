@@ -1,10 +1,26 @@
 function ResultList(props) {
   return (
     <section className="u-p-h-20">
-      <ul className="u-grid-items">
+      <ul className="u-grid">
         {props.movies.map((movie) => (
-          <li onClick={() => props.onItem(movie.id)} key={movie.id}>
+          <li
+            className="u-grid__item"
+            onClick={() => props.onItem(movie.id)}
+            key={movie.id}
+          >
             {
+              <div
+                className={`heart ${movie.like ? "active" : ""}`}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  movie.like
+                    ? event.target.classList.add("active")
+                    : event.target.classList.remove("active");
+                  props.onLike(movie.id);
+                }}
+              />
+            }
+            {/* {
               <button
                 className="result-like"
                 onClick={(event) => {
@@ -14,7 +30,7 @@ function ResultList(props) {
               >
                 {movie.like ? "❤️" : "♡"}
               </button>
-            }
+            } */}
             <Card movie={movie} />
           </li>
         ))}
