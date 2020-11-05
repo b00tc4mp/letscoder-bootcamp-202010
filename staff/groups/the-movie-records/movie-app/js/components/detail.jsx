@@ -33,7 +33,7 @@ function Detail(props) {
               width="300"
             />
           </div>
-          <div className="movie__overview">{props.item.overview}</div
+          <div className="movie__overview">{props.item.overview}</div>
           {
             <div
               className={`heart ${props.item.like ? "active" : ""}`}
