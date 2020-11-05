@@ -57,15 +57,26 @@ class Home extends Component {
         })
     }
 
+    handleShowFavourites = () => {
+        console.log('favourites')
+        const { token } = sessionStorage
+        retrieveLikes(token, (error,results) =>{
+            if (error) return this.setState({ error: error.message })
+            this.setState({ results })
+        })
+    }
+
     
     
     render() {
-        const {state: { results, user, error }, handleLike ,handleGoToHome, handleSearchByIngredient, handleSearchByName, handleSearchRandomCocktail } = this
+        const {state: { results, user, error },handleShowFavourites, handleLike ,handleGoToHome, handleSearchByIngredient, handleSearchByName, handleSearchRandomCocktail } = this
 
         return <>
             <Logo onHome={handleGoToHome} />
 
             { user &&  <Welcome user={ user } />}
+
+            <button onClick={handleShowFavourites} >Favourites</button>
 
             <SearchByName onSearch={handleSearchByName} />
 
@@ -75,7 +86,7 @@ class Home extends Component {
 
             <Search onSearchByName={handleSearchByName} onSearchByIngredient={handleSearchByIngredient} onSearchRandom={handleSearchRandomCocktail} />
 
-            {error && <Feedback error={error} />}
+            {error && <Feedback error={error}/>}
 
             { results  && <Results items={results} onLike={handleLike} />}
 

@@ -78,7 +78,7 @@ function searchByName(token,name, callback) {
               })
         }
       } else {
-        var response = JSON.parse(response);
+        var res = JSON.parse(response);
 
         callback(new Error(res.error));
       }
