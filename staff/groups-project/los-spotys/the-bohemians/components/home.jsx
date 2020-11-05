@@ -64,11 +64,9 @@ class Home extends Component {
 
         retrieveTrack(token, spotyToken, id, (error, track) => {
             if (error) return alert(error.message)
-            {
-            let { id, name: song, preview_url: preListening, album, artists, favourite } = track
-
-            this.setState({ track: { id, song, preListening, image: album.images[1].url, releaseDate: album.release_date, artist: artists[0].name, album: album.name, favourite } })
-            }
+            
+        this.setState({ track })
+            
         })
     }
   

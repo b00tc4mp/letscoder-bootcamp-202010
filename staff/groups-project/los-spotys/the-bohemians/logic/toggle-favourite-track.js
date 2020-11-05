@@ -4,7 +4,7 @@ const toggleFavouriteTrack = (token, id, callback) => {
 
     if (!token.trim().length) throw new Error('token is empty or blank')
 
-    if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+    if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
     if (!id.trim().length) throw new Error('id is empty or blank')
 

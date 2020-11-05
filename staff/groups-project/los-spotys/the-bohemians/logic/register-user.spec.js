@@ -1,4 +1,4 @@
-const { random } = Math
+
 
 describe('SPEC registerUser()', function(){
     describe('When user is new', function(){
