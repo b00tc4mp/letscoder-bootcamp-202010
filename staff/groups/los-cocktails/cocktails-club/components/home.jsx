@@ -19,7 +19,8 @@ class Home extends Component {
     }
 
     handleSearchByName = query => {
-        searchByName(query, (error, results) => {
+        const { token } = sessionStorage
+        searchByName(token, query, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
             this.setState({ results })
@@ -27,7 +28,8 @@ class Home extends Component {
     }
 
     handleSearchRandomCocktail = () => {
-        searchRandomCocktail( (error, results) => {
+        const { token } = sessionStorage
+        searchRandomCocktail( token, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
             this.setState({ results })
@@ -35,7 +37,8 @@ class Home extends Component {
     }
 
     handleSearchByIngredient = query => {
-        searchByIngredient(query, (error, results) => {
+        const { token } = sessionStorage
+        searchByIngredient( query, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
             this.setState({ results })
@@ -61,6 +64,8 @@ class Home extends Component {
             <SearchRandomCocktail onSearch={handleSearchRandomCocktail} />
 
             <SearchByIngredient onSearch={handleSearchByIngredient} />
+
+            <Search onSearchByName={handleSearchByName} onSearchByIngredient={handleSearchByIngredient} onSearchRandom={handleSearchRandomCocktail} />
 
             {error && <Feedback error={error} />}
 
