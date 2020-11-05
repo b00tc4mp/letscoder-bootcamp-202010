@@ -5,7 +5,9 @@ function Header(props) {
         <i className="fa fa-film"></i>MovieRecords
       </div>
 
-      <p onClick={() => props.onLogout()}>Logout</p>
+      <button className="header__logout" onClick={() => props.onLogout()}>
+        Logout
+      </button>
 
       <Avatar
         onAvatar={props.onLogin}

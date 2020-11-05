@@ -36,7 +36,8 @@ body {
   & > main {
     flex: 1;
     &.section-login {
-      background: url("../../images/bg-login.png");
+      background: #000 url("../../images/bg-login.png");
+      opacity: 0.8;
     }
   }
 }
