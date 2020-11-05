@@ -8,10 +8,10 @@ class App extends Component {
 
 
         
-        sessionStorage.spotyToken = "BQCpP-LaSkWpP0mWHyuINBBDnIHfhyzVdnV_1SHJ3eLm-x5zVcP7uVodRVa5dIkZcjHkGRap4-wdgWJAlMOvjGBcIui4oh0El-XO_zjQC6N3rB0Y06-VU497Nwg7TvU9CDSdR-Y2Pa0L-OIwq4pJAfZo8yrEDuc"
+        sessionStorage.spotyToken = "BQAYolmEYtSkMUkLqCuUIjJQ4JUluDPLsW4F6VoLXoz-17dvSWv7VnDmc7MtfShDFrHdLpVHqDLeNIwtKWYK6nBUJMBD5zQLeVh2m4myHDZWFIovSK3iRG6Q-MWJe4-bT_bmpr1bqwgaEdGE7cBqkrnI5QnRbT4"
 
 
-        this.state = { view: token ? 'home' : 'access', }
+        this.state = { view: token ? 'home' : 'access', error: ''}
     }
 
 
@@ -31,31 +31,47 @@ class App extends Component {
 
     handleRegister = (fullname, email, password, repassword) => {
         registerUser(fullname, email, password, repassword, error => {
-            if (error) return alert(error.message)
+            if (error) return this.setState({ error: error.message })
 
             this.setState({ view: 'register-confirm' })
         })
     }
+
     handleLogin = (email, password) => {
         authenticateUser(email, password, (error, token) => {
-            if (error) return alert(error.message)
-
+            if (error) return this.setState({ error: error.message })
+            
             sessionStorage.token = token
 
             this.setState({ view: 'home' })
-
-            
         })
-       
     }
 
-    render() {
-        const { state: {view }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin } = this
+    handleLogout = () => {
+        delete sessionStorage.token
 
+        this.setState({ view: 'access' })
+    }
+
+    handleExitError = () => {
+
+        this.setState({ error: '' })
+
+    }
+    
+
+    render() {
+        const { state: {view, error }, handleGoToAcces, handleGoToRegister, handleGoToLogin, handleRegister, handleLogin, handleExitError, handleLogout} = this
+
+        const { token } = sessionStorage
 
         return <>
 
         <Title onHome={handleGoToAcces} />
+
+        {error && <FeedBack level = {'error'} message={error} exitError={handleExitError}/>}
+
+        {token && <button className= "logout" onClick={handleLogout}>Logout</button>}
 
         {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} />}
 
