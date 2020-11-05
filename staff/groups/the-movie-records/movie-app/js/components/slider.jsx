@@ -1,10 +1,11 @@
 function Slider(props) {
+  //TODo logica
   let posters =
     props &&
     props.items &&
     props.items.results &&
-    props.items.results.map(({ poster_path: image }) => {
-      return { image };
+    props.items.results.map(({ id, poster_path: image }) => {
+      return { id, image };
     });
 
   return (
@@ -16,7 +17,11 @@ function Slider(props) {
             let imgWithOutPath = poster.image.replace(/^.*[\\\/]/, "");
             let imgWithOutExt = imgWithOutPath.replace(/\.[^/.]+$/, "");
             return (
-              <div key={imgWithOutExt} className="scrollable-carousel__item">
+              <div
+                key={imgWithOutExt}
+                onClick={() => props.onItem(poster.id)}
+                className="scrollable-carousel__item"
+              >
                 <img
                   src={`https://image.tmdb.org/t/p/w185/${poster.image}`}
                 ></img>
