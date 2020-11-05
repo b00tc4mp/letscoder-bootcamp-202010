@@ -46,14 +46,16 @@ class App extends Component {
 // <App />
 const app = new App()
 
-app.handleSalute('Peter')
+const { handleSalute } = app
+
+handleSalute('Peter')
 
 console.log(app.render())
 
-app.handleSalute('Annita')
+handleSalute('Annita')
 
 console.log(app.render())
-VM1109:51 <>
+VM5366:53 <>
                     <form onSubmit={event => {
                             event.preventDefault()
                             
@@ -68,7 +70,7 @@ VM1109:51 <>
                     
                     <h1>Hello, Peter!</h1>
        </>
-VM1109:55 <>
+VM5366:57 <>
                     <form onSubmit={event => {
                             event.preventDefault()
                             

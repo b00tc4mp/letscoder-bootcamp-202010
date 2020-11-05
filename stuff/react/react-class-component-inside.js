@@ -51,14 +51,16 @@ App.prototype.render = function () {
 // <App />
 var app = new App()
 
-app.handleSalute('Peter')
+var handleSalute = app.handleSalute
+
+handleSalute('Peter')
 
 console.log(app.render())
 
-app.handleSalute('Annita')
+handleSalute('Annita')
 
 console.log(app.render())
-VM1417:56 <>
+VM5562:58 <>
                     <form onSubmit={event => {
                             event.preventDefault()
                             
@@ -73,7 +75,7 @@ VM1417:56 <>
                     
                     <h1>Hello, Peter!</h1>
        </>
-VM1417:60 <>
+VM5562:62 <>
                     <form onSubmit={event => {
                             event.preventDefault()
                             
@@ -88,7 +90,8 @@ VM1417:60 <>
                     
                     <h1>Hello, Annita!</h1>
        </>
-undefined
+
+
 app.__proto__ === App.prototype
 true
 app.__proto__.__proto__ === Component.prototype
