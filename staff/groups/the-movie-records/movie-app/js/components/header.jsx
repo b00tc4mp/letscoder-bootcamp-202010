@@ -4,11 +4,11 @@ function Header(props) {
       <div className="header__logo">
         <i className="fa fa-film"></i>MovieRecords
       </div>
-
-      <button className="header__logout" onClick={() => props.onLogout()}>
-        Logout
-      </button>
-
+      {props.user && (
+        <button className="header__logout" onClick={() => props.onLogout()}>
+          Logout
+        </button>
+      )}
       <Avatar
         onAvatar={props.onLogin}
         onProfile={props.onProfile}
