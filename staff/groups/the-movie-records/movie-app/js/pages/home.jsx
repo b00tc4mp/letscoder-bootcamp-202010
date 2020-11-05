@@ -35,7 +35,6 @@ class Home extends Component {
 
   handleSearchMovies = (query) => {
     const { token } = sessionStorage;
-    debugger;
     try {
       searchMovies(token, query, 1, "es", (error, movies) => {
         if (error) return alert(error.message);

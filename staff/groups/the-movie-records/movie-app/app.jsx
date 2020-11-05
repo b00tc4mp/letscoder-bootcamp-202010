@@ -7,13 +7,24 @@ class App extends Component {
     this.state = { view: token ? "home" : "login", token };
   }
 
+  componentWillMount() {
+    const { token } = sessionStorage;
+
+    token &&
+      retrieveUser(token, (error, user) => {
+        if (error) return alert(error.message);
+        this.setState({ user });
+      });
+  }
+
   handleGoToLogin = () => {
     this.setState({ view: "login" });
   };
 
   handleGoToLogout = () => {
     delete sessionStorage.token;
-    this.setState({ token: undefined, view: "login" });
+
+    this.setState({ view: "login", user: undefined });
   };
 
   handleGoToRegister = () => {
@@ -24,28 +35,32 @@ class App extends Component {
     authenticateUser(email, password, (error, token) => {
       if (error) return alert(error.message);
 
-      this.setState({ token, view: "home" });
-
       sessionStorage.token = token;
+
+      retrieveUser(token, (error, user) => {
+        if (error) return alert(error.message);
+        this.setState({ user, view: "home" });
+      });
     });
   };
-  
 
   handleGoToProfile = () => {
     this.setState({ view: "profile" });
   };
 
   handleModifyUser = (fullname, image) => {
-    modifyUser(this.props.token, { fullname, image }, error => {
-        if (error) alert(error.message)
+    const { token } = sessionStorage;
 
-        retrieveUser(this.props.token, (error, user) => {
-            if (error) return alert(error.message)
+    modifyUser(token, { fullname, image }, (error) => {
+      if (error) alert(error.message);
 
-            this.setState({ user })
-        })
-    })
-}
+      retrieveUser(token, (error, user) => {
+        if (error) return alert(error.message);
+
+        this.setState({ user });
+      });
+    });
+  };
   handleRegister = (fullname, email, password, repassword) => {
     registerUser(fullname, email, password, repassword, (error) => {
       if (error) return alert(error.message);
@@ -55,7 +70,7 @@ class App extends Component {
   };
 
   render() {
-    const { view } = this.state;
+    const { view, user } = this.state;
     const {
       handleGoToLogin,
       handleGoToRegister,
@@ -64,7 +79,6 @@ class App extends Component {
       handleGoToLogout,
       handleGoToProfile,
       handleModifyUser,
-   
     } = this;
     return (
       <>
@@ -72,7 +86,7 @@ class App extends Component {
           onLogin={handleGoToLogin}
           onLogout={handleGoToLogout}
           onProfile={handleGoToProfile}
-          token={this.state.token}
+          user={user}
         />
         <main className={`section-${view}`}>
           {view === "home" && <Home />}
@@ -80,8 +94,9 @@ class App extends Component {
             <Login onGoToRegister={handleGoToRegister} onLogin={handleLogin} />
           )}
           {view === "register" && <Register onRegister={handleRegister} />}
-          {view === "profile" && <Profile onModify={handleModifyUser} token = {this.state.token} />} 
-          
+          {view === "profile" && (
+            <Profile user={user} onModify={handleModifyUser} />
+          )}
         </main>
         <Footer />
       </>

@@ -1,31 +1,19 @@
-const { Component } = React;
+function Header(props) {
+  return (
+    <header className="header">
+      <div className="header__logo">
+        <i className="fa fa-film"></i>MovieRecords
+      </div>
 
-class Header extends Component {
-  constructor() {
-    super();
-  }
+      <button className="header__logout" onClick={() => props.onLogout()}>
+        Logout
+      </button>
 
-  handleClickAvatar = () => {
-    this.props.onLogin();
-  };
-
-  handleClickProfile = () => {
-    this.props.onProfile();
-  };
-
-  render() {
-    return (
-      <header className="header">
-        <div className="header__logo">
-          <i className="fa fa-film"></i>MovieRecords
-        </div>
-        <p onClick={() => this.props.onLogout()}>Logout</p>
-        <Avatar
-          onAvatar={this.handleClickAvatar}
-          onProfile={this.handleClickProfile}
-          token={this.props.token}
-        />
-      </header>
-    );
-  }
+      <Avatar
+        onAvatar={props.onLogin}
+        onProfile={props.onProfile}
+        user={props.user}
+      />
+    </header>
+  );
 }

@@ -21,21 +21,25 @@ function Login({ onLogin, onGoToRegister }) {
         }}
       >
         <input
-          className="login__input"
+          className="login__email"
           type="email"
           name="email"
           placeholder="e-mail"
           required
         />
         <input
-          className="login__input"
+          className="login__password"
           type="password"
           name="password"
           placeholder="password"
           required
         />
-        <button className="login__button">Login</button>
-        <p onClick={onGoToRegister}>Register</p>
+        <div className="login__buttons">
+          <button className="btn">Login</button>
+          <button className="btn" onClick={onGoToRegister}>
+            Register
+          </button>
+        </div>
       </form>
     </section>
   );
