@@ -1,38 +1,30 @@
-const { Component } = React;
+function Profile(props) {
+  return (
+    <>
+      <h2>Profile</h2>
+      <form
+        onSubmit={function (event) {
+          event.preventDefault();
 
-class Profile extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  
-  }
-  componentWillMount() {
-    retrieveUser(this.props.token, (error, user) => {
-        if (error) return alert(error.message)
-        this.setState({ user })
-        localStorage.setItem("user", JSON.stringify(user))
-    })
-}
+          props.onModify(props.user.fullname, props.user.image);
+        }}
+      >
+        <input
+          type="text"
+          name="fullname"
+          placeholder="full name"
+          defaultValue={props.user && props.user.fullname}
+        />
+        <img src={props.user && props.user.image} />
+        <input
+          type="text"
+          name="image"
+          placeholder="image url"
+          defaultValue={props.user && props.user.image}
+        />
 
-render() {
-    return (
-      <>
-         <h2>Profile</h2>
-      <form onSubmit={function (event) {
-          event.preventDefault()
-          
-          props.onModify(state.user.fullname, state.user.image)
-          
-      }}>
-          <input type="text" name="fullname" placeholder="full name" defaultValue={this.state.user  && this.state.user.fullname } />
-          <img src =  {this.state.user && this.state.user.image }/>
-          <input type="text" name="image" placeholder="image url" defaultValue={this.state.user && this.state.user.image } />  
-
-          <button>Save</button>
+        <button>Save</button>
       </form>
-      </>
-    );
-  }
-  }
-
-
+    </>
+  );
+}
