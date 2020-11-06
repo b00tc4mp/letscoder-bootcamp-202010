@@ -1,3 +1,36 @@
+/**
+ *  The callback expression that manages the result of the authentication
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API.
+ * @param {object} res Returns the content of the aPI movies.
+ */
+
+/**
+ * Delete user from his token.
+ * 
+ * @example
+ * 
+ * retrieveUpcomingMovies(2,"es",function(error,movies){
+   console.log("DEMO retrieve upcoming movies()");
+
+   if(error)console.error
+
+   else console.log(movies)
+
+
+})
+ * 
+ * 
+ * @param {function} callback The callback exppression that manage of the unregister.
+ * @param {number} page  Get the page where you want to search.
+ * @param {string} language Get the language of the language in which you want to display the search.
+ * @throws(TypeError)On type validation error
+ * @throws(Error)On content validation error
+ * 
+ * 
+ */
 function retrieveUpcomingMovies(page, language, callback) {
   if (typeof callback !== "function")
     throw new TypeError(`${callback} is not a callback`);
