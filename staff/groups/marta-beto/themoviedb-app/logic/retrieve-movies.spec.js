@@ -1,4 +1,4 @@
-describe('SPEC searchMovies()', function() {
+describe('SPEC retrieveMovies()', function() {
     describe('when query provides results', function (){
         let query
 
@@ -7,7 +7,7 @@ describe('SPEC searchMovies()', function() {
         })
 
         it ('should succeed on matching query', function(done) {
-            searchMovies(query, function(error, movies) {
+            retrieveMovies(query, function(error, movies) {
                 expect(error).toBeNull();
 
                 expect(movies).toBeDefined();
@@ -35,7 +35,7 @@ describe('SPEC searchMovies()', function() {
         })
 
         it('should succeed providing no results or, empty array, on non-matching query', function(done) {
-            searchMovies(query, function(error, movies) {
+            retrieveMovies(query, function(error, movies) {
                 expect(error).toBeNull();
 
                 expect(movies).toBeDefined();

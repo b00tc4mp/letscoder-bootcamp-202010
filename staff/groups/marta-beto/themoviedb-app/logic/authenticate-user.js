@@ -1,3 +1,31 @@
+/**
+ * The callback expression that manages the end results coming from the user's API
+ * 
+ * @callback callback
+ * @param {Error} error The first argument will throw an error in case the result was unsuccessful on the API's end
+ * @param {string} token The second argument will provide the token (in case of successful auth) for the application to use it on the different life cycles.
+ */
+
+/**
+ * This function autenticates the user through user and password.
+ * 
+ * @example
+ * 
+ * authenticateUser(email, password, function(error, token)) {
+ *  if (error) return console.log(error)
+ * 
+ *  console.log(token)
+ * }
+ * 
+ * @param {string} email The user's email
+ * @param {string} password The user's password
+ * @param {callback} callback The callback function that gets the result from the user's API to manage it.
+ * 
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ */
+
 function authenticateUser(email, password, callback) {
     if (typeof email !== 'string') throw new TypeError(email + ' is not an e-mail')
 

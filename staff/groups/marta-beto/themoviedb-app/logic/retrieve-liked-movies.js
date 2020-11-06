@@ -1,3 +1,25 @@
+/**
+ * The callback expression that manages the result provided by calling the movie's and the user's API. 
+ * 
+ * @callback callback
+ * 
+ * @param {null} null It provides no response on the API's end 
+ * @param {Array} movies It provides the movie's array whenever the result was successful
+ */
+/**
+ * Retrieve the movies that were liked by the user previously
+ * 
+ * Two calls are made on this function. First one to the user's API to retrieve their properties through token and the second one to the movie's API
+ * to get the results of finding a movie id within the 'likes' property array.
+ * 
+ * 
+ * @param {string} token The passed token as first argument to retrieve user's properties
+ * @param {callback} callback The callback expression that manages the result of the calls that were made.
+ * 
+ * @throws {TypeError} On token that is not a string
+ * @throws {Error} On emty or blank token
+ * @throws {TypeError} On a non function callback
+ */
 const retrieveLikedMovies = (token, callback) => {
   if (typeof token !== "string") throw new TypeError(token + " is not a token");
 

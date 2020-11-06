@@ -9,13 +9,11 @@ class Home extends Component {
 
     UNSAFE_componentWillMount = () => {
         //const { token } = sessionStorage
-
         retrieveUser(this.props.token, (error, user) => {
             if (error) return alert(error.message)
 
             retrieveUpcomingMovies((error, upcomingMovies) => {
                 if (error) return alert(error.message)
-
 
                 retrieveTrendingMovies((error, trendingMovies) => {
                 if (error) return alert(error.message)
@@ -31,9 +29,7 @@ class Home extends Component {
                 })
                 
                 })
-    
             })
-
         })
     })    
     }
@@ -57,11 +53,11 @@ class Home extends Component {
         try {
         retrieveMovies(query, (error, movies) => {
             if (error) return alert(error.message)
+
             const locationPath = 'https://image.tmdb.org/t/p/w500';
-
             const moviesSearch = movies.map(({id, poster_path}) => ({id, image: locationPath + poster_path}))
-
-            this.setState({ moviesSearch, query })
+            
+            this.setState({ moviesSearch })
         })
         } catch (error) {
             alert(error.message)
