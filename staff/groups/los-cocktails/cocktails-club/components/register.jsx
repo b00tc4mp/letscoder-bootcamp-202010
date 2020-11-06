@@ -52,9 +52,9 @@ return <>
         <p className="register__p">E-mail Address</p>
         <input className="register__input" name="email" type="text" placeholder="email@example.com" />
         <p className="register__p">Password</p>
-        <input className="register__input" name="password" type="text" placeholder="********" />
+        <input className="register__input" name="password" type="password" placeholder="********" />
         <p className="register__p">Repassword</p>
-        <input className="register__input" name="repassword" type="text" placeholder="********" />
+        <input className="register__input" name="repassword" type="password" placeholder="********" />
         {error && <Feedback error={error } />}
         <br/> <button className="register__button">Sign Up</button>
       </form>

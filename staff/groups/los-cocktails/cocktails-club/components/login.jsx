@@ -40,7 +40,7 @@ class Login extends Component {
             <p className= "login__p">E-mail Address</p>
             <input name="email" className="login__input" type="text" placeholder="email@example.com" />
             <p className="login__p" >Password</p>
-            <input name="password" className="login__input" type="text" placeholder="********" />
+            <input name="password" className="login__input" type="password" placeholder="********" />
             {error && <Feedback error={error} />}
             <br/> <button className="login__button">Log In</button>
           </form>
