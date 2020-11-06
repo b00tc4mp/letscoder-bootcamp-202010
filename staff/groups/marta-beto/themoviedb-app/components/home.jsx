@@ -78,7 +78,7 @@ class Home extends Component {
 
             this.setState({movie: {id, title, image, date, vote, overview, like, homepage, genre}})
         })
-        this.setState({subview: 'detail'})
+        this.setState({subview: 'detail-movie'})
     }
 
     handleGoToShow = showId => {
@@ -89,7 +89,7 @@ class Home extends Component {
 
             this.setState({show: {id, title, image, date, vote, overview, like}})
         })
-        this.setState({subview: 'detail'})
+        this.setState({subview: 'detail-movie'})
     }
 
     handleGoToPerson = personId => {
@@ -100,7 +100,7 @@ class Home extends Component {
 
             this.setState({person: {name, image, birthday, birthPlace, biography}})
         })
-        this.setState({subview: 'detail'})
+        this.setState({subview: 'detail-person'})
     }
 
     handleLike = (movieId) => {
@@ -133,7 +133,7 @@ class Home extends Component {
 
         <button onClick={handleGoToProfile} className="profile__btn btn">Profile</button>
 
-        {(subview === 'profile' || subview === 'detail') && <button onClick={handleGoToHome} className="back__btn btn">Home</button>}
+        {(subview === 'profile' || subview === 'detail-movie' || subview === 'detail-person') && <button onClick={handleGoToHome} className="back__btn btn">Home</button>}
 
         {subview === 'profile' && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={likedMovies} onItem={handleGoToMovie}/>}
 
@@ -151,9 +151,9 @@ class Home extends Component {
 
             {tvTopRated && <Carousel items={tvTopRated} title="Top Rated TV" onItem={handleGoToShow}/>}
         </> }
-        {subview === 'detail' && (person) && <DetailPerson person={person}/>}
+        {subview === 'detail-person' && (person) && <DetailPerson person={person}/>}
 
-        {subview === 'detail' && (movie || show) && <Detail item={movie || show} onLike={handleLike}/>}
+        {subview === 'detail-movie' && (movie || show) && <Detail item={movie || show} onLike={handleLike}/>}
 
         </>
     }
