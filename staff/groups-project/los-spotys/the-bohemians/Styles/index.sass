@@ -80,7 +80,7 @@ main
 
 .register-confirm
     @include flexCenter
-    font-size: large
+    font-size: x-large
     color: white
     margin-top: 60%
     font-family: 'Quicksand', sans-serif
@@ -167,6 +167,33 @@ audio
     input
         height: 3vh
 
+
+.detail
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    //background-color: grey
+    img
+        width: 40vw
+    .detailInfo
+        text-align: center
+
+.feedback
+    border: 2px solid red
+    width: 25%
+    height: 5vh
+    margin-left: 65vw
+    display: flex
+    align-items: right
+    justify-content: right
+    font-size: 2vw
+    background-color: white
+    border-radius: 1em
+    padding: 1vw
+   
+    
+    
+
+
     
 .button
     padding: 5px 10px
@@ -183,17 +210,21 @@ audio
     &:active
         opactiy: 0.25
 
-    &__login, &__submitLogin, &__reset
+    &__login, &__submitLogin, &__reset, &__logout
         background-color: white
         color: #2BB954
         border: 1.5px solid #2BB954
 
     &__error
-        width: 6vw
+        width: 3vw
+        height: 2vh
+        margin-top: 1vw
+        font-size: 2vw
 
     &__logout
         width: 7vw
         font-size: 2.2vw
+        margin-left: 1vw
         
     &__submitRegister, &__submitLogin, &__search
         font-size: large
@@ -205,6 +236,10 @@ audio
         height: 6vh
         background-color: black
         
+    &__favouritedetail
+        width: 45%
+        text-align: center
+        margin-left: 12vw
 
 
 
@@ -249,6 +284,17 @@ audio
  
     .detail
         margin-left: 4%
+
+    .feedback
+        height: 10vh
+        div 
+            height: 4vh
+
+    
+    
+   
+
+    
 
 @media (min-width: 1000px)
 
