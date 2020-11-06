@@ -1,4 +1,4 @@
-components
+Components
 
 - Beto
 - Marta
