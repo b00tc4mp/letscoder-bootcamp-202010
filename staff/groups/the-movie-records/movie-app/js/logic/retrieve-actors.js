@@ -1,3 +1,27 @@
+/**
+ *  The callback expression that manages the result of retrieve actors
+ *
+ * @callback callback
+ *
+ * @param {Error} error In case a fail is detected on response from API
+ * @param {object} actorsFiltered Object that contains all the actors, already filtered by fields
+ *
+ */
+
+/**
+ * Get all the actors involved in a movie
+ *
+ * @example
+ *
+ * retrieveActors(id, function(error) {
+ *      if (error) return console.error(error)
+ *      console.log(actorsFiltered)
+ * })
+ *
+ * @param {number} id The movie ID needed to get the data
+ *
+ * @throws {TypeError} On type validation error
+ */
 function retrieveActors(id, callback) {
   if (typeof id !== "number") throw new TypeError(`${id} is not a number`);
   if (typeof callback !== "function")

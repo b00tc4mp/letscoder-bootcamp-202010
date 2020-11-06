@@ -8,7 +8,17 @@ class Profile extends Component {
 
   componentDidMount() {
     const { user } = this.props;
-    this.setState({ fullname: user.fullname, image: user.image });
+    const { token } = sessionStorage;
+
+    retrieveLikes(token, (error, likedMovies) => {
+      if (error) alert(error.message);
+
+      this.setState({
+        fullname: user.fullname,
+        image: user.image,
+        likedMovies,
+      });
+    });
   }
 
   handleChangeFullName = (event) => {
@@ -27,15 +37,7 @@ class Profile extends Component {
     );
   };
 
-  handleGoToLikes = () => {
-    const { token } = sessionStorage;
-
-    retrieveLikes(token, (error, likedMovies) => {
-      if (error) alert(error.message);
-
-      this.setState({ likedMovies });
-    });
-  };
+  handleGoToLikes = () => {};
 
   render() {
     const { onModify, user } = this.props;
@@ -43,7 +45,14 @@ class Profile extends Component {
     return (
       <>
         <div className="section-profile__user">
-          <h2 onClick={this.handleGoToLikes()}>Profile</h2>
+          <h2
+            onClick={(event) => {
+              event.preventDefault();
+              this.handleGoToLikes();
+            }}
+          >
+            Profile
+          </h2>
           <form onSubmit={handleSubmit}>
             <input
               className="section-profile__name"
@@ -78,7 +87,7 @@ class Profile extends Component {
             {this.state &&
               this.state.likedMovies &&
               this.state.likedMovies.map((movie) => (
-                <li className="u-grid__item">
+                <li className="u-grid__item" key={movie.id}>
                   <Card movie={movie} />
                 </li>
               ))}
