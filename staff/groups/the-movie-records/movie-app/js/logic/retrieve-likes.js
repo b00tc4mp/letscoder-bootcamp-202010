@@ -2,23 +2,23 @@
  *  The callback expression that manages the result of the authentication
  *
  * @callback callback
- * 
+ *
  * @param {Error} error In case a fail is detected on response from API.
  * @param {object} movies Returns the likes of the movies that we have marked.
  */
 
 /**
  * Get likes of the movies.
- * 
+ *
  * @example
  *
  * @param {function} callback The callback exppression that manage of the unregister.
  * @param {string} token The token of the user generated when authenticating.
- * 
+ *
  * @throws(TypeError)On type validation error
  * @throws(Error)On content validation error
- * 
- * 
+ *
+ *
  */
 const retrieveLikes = (token, callback) => {
   if (typeof token !== "string") throw new TypeError(token + " is not a token");
@@ -27,7 +27,7 @@ const retrieveLikes = (token, callback) => {
 
   if (typeof callback !== "function")
     throw new TypeError(callback + " is not a callback");
-  console.log(token);
+
   call(
     "GET",
     "https://b00tc4mp.herokuapp.com/api/v2/users",
@@ -40,7 +40,7 @@ const retrieveLikes = (token, callback) => {
         const movies = [];
 
         let counter = 0;
-        console.log(likes);
+
         if (likes.length)
           likes.forEach((movieId, index) =>
             call(
@@ -57,8 +57,6 @@ const retrieveLikes = (token, callback) => {
                   movies[index] = movie;
 
                   counter++;
-                  console.log("COUNTER:", counter);
-                  console.log("LENGTH:", likes.length);
                   if (counter === likes.length) callback(null, movies);
                 } else callback(new Error("cannot retrieve liked movies :("));
               }
