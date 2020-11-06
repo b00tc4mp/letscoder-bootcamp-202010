@@ -11,20 +11,45 @@
     color: #fff;
     flex-direction: column;
   }
+  &__moreinfo {
+    margin: 10px 0;
+    font-weight: 100;
+    color: #ffffff;
+    a {
+      padding: 2px 4px;
+      border-radius: 4px;
+      margin-left: 8px;
+      font-family: "Noto Sans";
+      font-size: 17px;
+      color: aqua;
+    }
+  }
+  &__imdb {
+    display: block;
+    margin: 20px 0px;
+    img {
+      height: 48px;
+      width: 94px;
+    }
+  }
   &__title {
     position: inherit;
-    color: #fff;
     font-family: $text_font;
     font-weight: 100;
     text-align: center;
     padding: 20px 0 40px 0;
     text-shadow: 3px 1px 10px #071e3e;
-    font-size: 2.2rem;
+    font-size: 3.4rem;
+    color: #00caff;
   }
   &__overview {
     font-size: 1.9rem;
     line-height: 1.5;
     font-size: 2rem;
+  }
+  &__data {
+    font-size: 1.5rem;
+    vertical-align: initial;
   }
   &__info {
     background-repeat: no-repeat;
@@ -69,6 +94,7 @@
       display: block;
       max-width: 100%;
       transition: opacity 0.2s ease-in-out;
+      width: 100%;
     }
     &:hover img {
       opacity: 0.5;
@@ -137,6 +163,9 @@
     }
     &__title {
       font-size: 3.4rem;
+    }
+    &__poster img {
+      width: zuto;
     }
   }
 }

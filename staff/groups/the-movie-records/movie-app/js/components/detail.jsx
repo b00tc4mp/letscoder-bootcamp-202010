@@ -14,7 +14,10 @@ function Detail(props) {
   return (
     <div className="movie">
       <div className="movie__info" style={squareStyle}>
-        <h1 className="movie__title">{props.item.original_title}</h1>
+        <h1 className="movie__title">
+          {props.item.original_title}{" "}
+          <span className="movie__data">({props.item.release_date})</span>
+        </h1>
         <div className="movie__detail">
           <div
             className="movie__poster"
@@ -33,7 +36,31 @@ function Detail(props) {
               width="300"
             />
           </div>
-          <div className="movie__overview">{props.item.overview}</div>
+          <div className="movie__overview">
+            {props.item.overview}
+            {props.item.homepage && (
+              <p className="movie__moreinfo">
+                Más información:
+                <a href={props.item.homepage} target="_blank">
+                  {props.item.homepage}
+                </a>
+              </p>
+            )}
+            {props.item.original_language && (
+              <p className="movie__language">
+                Idioma original: {props.item.original_language.toUpperCase()}
+              </p>
+            )}
+            {props.item.imdb_id && (
+              <a
+                className="movie__imdb"
+                href={`https://www.imdb.com/title/${props.item.imdb_id}`}
+                target="_blank"
+              >
+                <img src="https://tinyurl.com/imdblogo" alt="Imdb" />
+              </a>
+            )}
+          </div>
           {
             <div
               className={`heart ${props.item.like ? "active" : ""}`}

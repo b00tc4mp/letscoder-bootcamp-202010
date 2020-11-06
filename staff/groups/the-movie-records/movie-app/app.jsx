@@ -50,7 +50,6 @@ class App extends Component {
   };
 
   handleModifyUser = (fullname, image) => {
-    console.log("ieeppppppp", fullname, image);
     const { token } = sessionStorage;
 
     modifyUser(token, { fullname, image }, (error) => {
