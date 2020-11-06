@@ -42,13 +42,11 @@ You can search for movies, view information such as actors, duration, year, desc
 
 ![Technologies](./doc/technologies.jpg "Technologies")
 
-...
-
 ### TODO
 
 - Be able to add comments on the movie
 - Delete user from profile
-- Delete from profile
+- Delete like from profile
 - Add more test (Jasmine)
 
 ### The team "The movie records"
