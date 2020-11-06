@@ -1,4 +1,4 @@
-const { random } = Math
+
 
 describe('SPEC retrieveTracks()', () => {
     describe('when the track id exist', () => {
@@ -28,7 +28,7 @@ describe('SPEC retrieveTracks()', () => {
                             expect(token.length).toBeGreaterThan(0)
 
                             id = ["5fcxVCOtfesNzI2n4Y4kiJ", "4u7EnebtmKWzUH433cf5Qv", "5T8EDUDqKcs6OSOwEsfqG7", "5vdp5UmvTsnMEMESIF2Ym7", "1HKl3RJInVzf5ObVnM644j", "2fuCquhmrzHpu5xcA1ci9x", "4pbJqGIASGPr0ZpGpnWkDn"].random()
-                            spotyToken = "BQCpP-LaSkWpP0mWHyuINBBDnIHfhyzVdnV_1SHJ3eLm-x5zVcP7uVodRVa5dIkZcjHkGRap4-wdgWJAlMOvjGBcIui4oh0El-XO_zjQC6N3rB0Y06-VU497Nwg7TvU9CDSdR-Y2Pa0L-OIwq4pJAfZo8yrEDuc"
+                            spotyToken = "BQBNkKs-4eqx3ecmL4xWm3C5JFxd5i2a_7pyH56Q07pnprqkQnBh1q4kXOR9UfHwquBusZOupg2eREqvlu0orj1BnVx2QlkSD6H7PqczImImWnDyk21bNnWTDFFkvERHY4wHQ5BE7U_2IyRGw7vXHky4wAgmo_c"
 
                             done()
                         })

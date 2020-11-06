@@ -1,5 +1,5 @@
 function Profile({ fullname, image, onModify }) {
-    return <>
+    return  <section className="profile">
 
         <h2>Profile</h2>
         <form onSubmit={function (event) {
@@ -14,7 +14,7 @@ function Profile({ fullname, image, onModify }) {
             <input type="text" name="fullname" placeholder="full name" defaultValue={fullname} />
             <input type="text" name="image" placeholder="image" defaultValue={image} />
 
-            <button>Save</button>
+            <button className="modifyProfile">Save</button>
         </form>
-    </> 
+    </section>
 }

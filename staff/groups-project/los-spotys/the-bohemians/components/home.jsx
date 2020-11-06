@@ -36,12 +36,14 @@ class Home extends Component {
             retrieveUser(token, (error, user) => {
                 if (error) return alert (error.message)
 
-                this.setState({ user })
+                this.setState({ user, subview: null })
             })
 
         })
 
     }
+
+    
 
     handleSearchTracks = (type, query) => {
         const {token, spotyToken} = sessionStorage
@@ -87,6 +89,12 @@ class Home extends Component {
         })
     }
 
+    handleLogout = () => {
+        delete sessionStorage.token
+
+        this.props.onView()
+    }
+    
     handleExitError = () => {
 
         this.setState({ error: '' })
@@ -95,17 +103,17 @@ class Home extends Component {
 
 
     render() {
-        const { state: { subview, tracks, track, user, error}, handleSearchTracks, handleGoToTrack, handleFavourite, handleGoToProfile, handleModifyUser, handleExitError} = this
+        const { state: { subview, tracks, track, user, error}, handleSearchTracks, handleGoToTrack, handleFavourite, handleGoToProfile, handleModifyUser, handleExitError, handleLogout} = this
 
         return <>
 
             {error && <FeedBack level = {'error'} message={error} exitError={handleExitError}/>}
 
-            {user && <Welcome name={user.fullname} image={user.image} onProfile={handleGoToProfile}/>}
+            {user && <Welcome name={user.fullname} image={user.image} onProfile={handleGoToProfile} onLogout={handleLogout}/>}
 
             {subview === 'profile' && <Profile onModify={handleModifyUser} fullname={user.fullname} image={user.image}/>}
 
-            <Search onSearch={handleSearchTracks} />
+            {!subview && <Search onSearch={handleSearchTracks} />}
 
             {!track && tracks && <Results tracks={tracks} onTrack={handleGoToTrack} onFavourite = {handleFavourite} />}
 

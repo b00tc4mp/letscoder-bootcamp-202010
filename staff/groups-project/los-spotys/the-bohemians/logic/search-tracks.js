@@ -29,7 +29,7 @@ function searchTracks(token, spotyToken, type, query, callback) {
                 
                 tracks = tracks.map(({ name: song, id, preview_url: preListening, artists, album }) => ({ song, id, preListening, artist: artists[0].name ? artists[0].name : 'this song doesn´t have an artist', image: album.images[1].url ? album.images[1].url : 'http://hem.bredband.net/b477738/not-found.jpg', releaseDate: album.release_date}))
 
-                call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, ',',
+                call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, '',
                     (status, response) => {
                         if (status === 200) {
                             const { favourites = [] } = JSON.parse(response)
@@ -44,60 +44,3 @@ function searchTracks(token, spotyToken, type, query, callback) {
 
         })
 }
-
-
-
-        // var music = JSON.parse(response)
-
-        // var doc = new DOMParser().parseFromString(response, "text/html")
-
-        // const results = doc.querySelectorAll('pre.code')
-
-        // Array.prototype.map.call(results, result => {
-
-        // const track = result.item[0]
-
-        // return (track)
-        // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var doc = new DOMParser().parseFromString(response, "text/html")
-
-// const results = doc.querySelectorAll('pre')
-
-// Array.prototype.map.call(results, result => {
-
-// const name = result.name
-
-// const thumbnail = result.thumbnail
-
-// const price = result.price
-
-// return { name, thumbnail, price}
-
-// })
-
-
-
-
-// callback(null, res)
-
-// } else callback(new Error('sorry, cannot search'))
-
-
-// console.log(res)
-//
