@@ -1,32 +1,40 @@
-.section-profile{
-    justify-content: center;
-    align-content: center;
-    &__icon{
-        margin-right: 15px;
-    }
+.section-profile {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  h2 {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+  &__icon {
+    margin-right: 15px;
+  }
 
-    &__image{
-        max-width: 100%;
-        height: 200px;
+  &__image {
+    max-width: 100%;
+    height: 200px;
+  }
 
-    }
-
-    &__name{
+  &__name {
     display: block;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #cacaca;
     box-shadow: inset 3px 3px 3px #0000001a;
     border-radius: 3px/6px;
-    }
+  }
 
-    &__data{
+  &__data {
     display: block;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #cacaca;
     box-shadow: inset 3px 3px 3px #0000001a;
     border-radius: 3px/6px;
-}
-
+  }
 }

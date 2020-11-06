@@ -32,8 +32,8 @@ class Profile extends Component {
     const { handleChangeFullName, handleChangeImage, handleSubmit } = this;
     return (
       <>
-        <h2>Profile</h2>
         <div>
+          <h2>Profile</h2>
           <form onSubmit={handleSubmit}>
             <input
               className="section-profile__name"
