@@ -23,7 +23,12 @@ class Home extends Component {
                 retrieveTvTopRated((error, tvTopRated)=>{
                     if (error) return alert(error.message)
 
-                    this.setState({ subview: 'home', trendingMovies, upcomingMovies, tvTopRated, user })
+                retrievePopularPeople((error, popularPeople) => {
+                    if (error) return alert(error.message)
+                
+
+                    this.setState({ subview: 'home', trendingMovies, upcomingMovies, popularPeople, tvTopRated, user })
+                })
                 
                 })
     
@@ -69,9 +74,9 @@ class Home extends Component {
             if (error) return alert(error.message)
             const genre = movie.genres[0].name
             
-            const {id, title, poster_path: image, vote_average: vote, release_date: date, overview, like} = movie // all the details from the movie we want to show (movie destructuring)
+            const {id, title, poster_path: image, vote_average: vote, release_date: date, homepage, overview, like} = movie // all the details from the movie we want to show (movie destructuring)
 
-            this.setState({movie: {id, title, image, date, vote, overview, like, genre}})
+            this.setState({movie: {id, title, image, date, vote, overview, like, homepage, genre}})
         })
         this.setState({subview: 'detail'})
     }
@@ -83,6 +88,17 @@ class Home extends Component {
             const {id, name: title, poster_path: image, vote_average: vote, first_air_date: date, overview, like} = show
 
             this.setState({show: {id, title, image, date, vote, overview, like}})
+        })
+        this.setState({subview: 'detail'})
+    }
+
+    handleGoToPerson = personId => {
+        retrievePerson(personId ,(error, person) => {
+            if (error) return alert(error.message)
+
+            const {name, profile_path: image, birthday, place_of_birth: birthPlace, biography} = person
+
+            this.setState({person: {name, image, birthday, birthPlace, biography}})
         })
         this.setState({subview: 'detail'})
     }
@@ -111,7 +127,7 @@ class Home extends Component {
 
     render() {
 
-        const {state: {subview, user, movie, trendingMovies, moviesSearch, upcomingMovies, likedMovies, tvTopRated, show}, handleGoToHome, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie, handleGoToShow} = this
+        const {state: {subview, user, movie, trendingMovies, moviesSearch, upcomingMovies, likedMovies, tvTopRated, show, popularPeople, person}, handleGoToHome, handleModifyUser, handleSearchMovies, handleGoToProfile, handleLike, handleGoToMovie, handleGoToShow, handleGoToPerson} = this
         return <>
         {user && <Welcome name={user.fullname}/>}
 
@@ -122,16 +138,20 @@ class Home extends Component {
         {subview === 'profile' && <Profile onModify={handleModifyUser} title="Favorite movies" fullname={user.fullname} avatar={user.avatar} likes={likedMovies} onItem={handleGoToMovie}/>}
 
         {subview === 'home' && <>
+
             <Search onSearch={handleSearchMovies}/>
 
             {moviesSearch && <Carousel items={moviesSearch} title="Your search" onItem={handleGoToMovie}/>}
 
-            {upcomingMovies && <Carousel items={upcomingMovies} title="Upcoming movies" onItem={handleGoToMovie}/>}
+            {trendingMovies && <Carousel items={trendingMovies} title="Trending movies" onItem={handleGoToMovie}/>}
 
-            {trendingMovies && <Carousel items={trendingMovies} title="Trending movies" onItem={handleGoToMovie}/>} 
+            {popularPeople && <Carousel items={popularPeople} title="Popular people" onItem={handleGoToPerson}/>} 
+
+            {upcomingMovies && <Carousel items={upcomingMovies} title="Upcoming movies" onItem={handleGoToMovie}/>} 
 
             {tvTopRated && <Carousel items={tvTopRated} title="Top Rated TV" onItem={handleGoToShow}/>}
         </> }
+        {subview === 'detail' && (person) && <DetailPerson person={person}/>}
 
         {subview === 'detail' && (movie || show) && <Detail item={movie || show} onLike={handleLike}/>}
 

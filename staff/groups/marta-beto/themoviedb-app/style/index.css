@@ -223,9 +223,9 @@ body {
   text-align: center;
 }
 .detail__img {
-  width: 90%;
+  width: 80%;
   margin: auto;
-  height: 90%;
+  height: 80%;
 }
 .detail__btn {
   text-decoration: none;
@@ -242,6 +242,11 @@ body {
   justify-content: space-around;
   padding: 0.3rem;
   color: white;
+}
+.detail__homepage {
+  color: white;
+  text-align: center;
+  margin-bottom: 0.3rem;
 }
 .detail__overview {
   padding: 0 0.5rem;
@@ -271,9 +276,6 @@ body {
 .profile__bottom {
   width: 90%;
   margin: auto;
-}
-.profile__btn {
-  margin-left: 1.2rem;
 }
 
 * {

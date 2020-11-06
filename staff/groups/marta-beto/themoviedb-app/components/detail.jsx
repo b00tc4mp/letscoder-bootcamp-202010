@@ -1,4 +1,4 @@
-function Detail ({item: {id, title, image, genre, date, vote, overview, like}, onLike}) {
+function Detail ({item: {id, title, image, genre, date, vote, homepage, overview, like}, onLike}) {
     const pathLocation = 'https://image.tmdb.org/t/p/w500';
     return <section className="detail">
                 {title && <h2 className="detail__title">{title}</h2>}
@@ -13,6 +13,7 @@ function Detail ({item: {id, title, image, genre, date, vote, overview, like}, o
                             onLike(id, image)
                         }}>{like ? '❤️️' : '♡'}</button>}
                 </div>
+                {homepage && <a className="detail__homepage" href={homepage}>{homepage}</a>}
                 {overview && <p className="detail__overview">{overview}</p>}
             </section>   
 }
