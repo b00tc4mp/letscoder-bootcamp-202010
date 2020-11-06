@@ -1,6 +1,7 @@
 .section-profile {
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   h2 {
@@ -9,7 +10,12 @@
   }
   .btn {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
+  }
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__icon {
     margin-right: 15px;
@@ -36,5 +42,10 @@
     border: 1px solid #cacaca;
     box-shadow: inset 3px 3px 3px #0000001a;
     border-radius: 3px/6px;
+  }
+  &__favorites {
+    background: #f3f3f3;
+    padding: 20px;
+    border-top: 2px solid gainsboro;
   }
 }

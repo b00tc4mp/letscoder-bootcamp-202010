@@ -27,13 +27,23 @@ class Profile extends Component {
     );
   };
 
+  handleGoToLikes = () => {
+    const { token } = sessionStorage;
+
+    retrieveLikes(token, (error, likedMovies) => {
+      if (error) alert(error.message);
+
+      this.setState({ likedMovies });
+    });
+  };
+
   render() {
     const { onModify, user } = this.props;
     const { handleChangeFullName, handleChangeImage, handleSubmit } = this;
     return (
       <>
-        <div>
-          <h2>Profile</h2>
+        <div className="section-profile__user">
+          <h2 onClick={this.handleGoToLikes()}>Profile</h2>
           <form onSubmit={handleSubmit}>
             <input
               className="section-profile__name"
@@ -45,7 +55,11 @@ class Profile extends Component {
             />
             <img
               className="section-profile__image"
-              src={this.state && this.state.image}
+              src={
+                this.state && this.state.image
+                  ? this.state.image
+                  : "https://tinyurl.com/avatardefault"
+              }
             />
             <input
               className="section-profile__data"
@@ -59,7 +73,17 @@ class Profile extends Component {
             <button className="btn">Save</button>
           </form>
         </div>
-        <div className="favorites"></div>
+        <div className="section-profile__favorites u-p-h-20">
+          <ul className="u-grid">
+            {this.state &&
+              this.state.likedMovies &&
+              this.state.likedMovies.map((movie) => (
+                <li className="u-grid__item">
+                  <Card movie={movie} />
+                </li>
+              ))}
+          </ul>
+        </div>
       </>
     );
   }
