@@ -7,6 +7,7 @@
   box-shadow: 4px 4px 5px 0px #cacaca75;
   transition: 0.25s;
   border: 1px solid #d8d8d8;
+  cursor: pointer;
   & header {
     height: 150px;
     width: 100%;
@@ -21,6 +22,7 @@
     object-fit: cover;
     object-position: 0 0;
     padding: 0;
+    @extend %flash;
   }
   &-body {
     flex: 1;

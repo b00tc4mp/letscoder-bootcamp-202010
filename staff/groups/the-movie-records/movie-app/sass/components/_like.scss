@@ -10,6 +10,7 @@
   background-position: 0 0;
   cursor: pointer;
   //animation: fave-heart 1s steps(28);
+  z-index: 999;
 }
 .heart.active {
   background-position: -2800px 0;

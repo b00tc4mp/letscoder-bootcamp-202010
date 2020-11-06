@@ -6,7 +6,6 @@ function Avatar(props) {
       className="avatar"
       onClick={() => (user ? onProfile(true) : onAvatar(true))}
     >
-      <div className="avatar__initials">SG</div>
       <img
         className="avatar__image"
         src={

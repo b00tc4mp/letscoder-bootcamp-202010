@@ -50,6 +50,7 @@ class App extends Component {
   };
 
   handleModifyUser = (fullname, image) => {
+    console.log("ieeppppppp", fullname, image);
     const { token } = sessionStorage;
 
     modifyUser(token, { fullname, image }, (error) => {
@@ -72,7 +73,10 @@ class App extends Component {
 
   handleLogo = () => {
     const { token } = sessionStorage;
-    token && this.homeRef.current.handleGoHome();
+    token &&
+      this.homeRef &&
+      this.homeRef.current &&
+      this.homeRef.current.handleGoHome();
     this.setState({ view: token ? "home" : "login" });
   };
 
