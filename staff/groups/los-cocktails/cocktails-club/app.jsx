@@ -46,7 +46,7 @@ class App extends Component {
             { view === 'home' || <Logo onHome={handleClickOnHome} />}
 
             
-            {token && <button onClick={handleLogout}>Logout</button>}
+            {token && <button onClick={handleLogout} className="logout">Logout</button>}
 
             {view === 'access' && <Access onRegister={handleGoToRegister} onLogin={handleGoToLogin} /> }
 

@@ -27,7 +27,7 @@ function searchByIngredient(token, name, callback) {
               const { likes = [] } = JSON.parse(response)
 
               if (drinkIds.length)
-                drinkIds.forEach( (id,index) => {
+                drinkIds.forEach((id, index) => {
 
                   call('GET', `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`, {}, '',
                     (status, response) => {
@@ -108,7 +108,7 @@ function searchByIngredient(token, name, callback) {
             }
           })
 
-        callback(null, results);
+        // callback(null, results);
       } else {
         var res = JSON.parse(response);
 

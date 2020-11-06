@@ -4,7 +4,7 @@ function Results({items, onLike}) {
                 <ul className="results__ul">
                     {items.map( ({like, name, id, image, instructions, instructionsES, alcoholic, glass, ing1,ing2,ing3,ing4,ing5,ing6,ing7,m1,m2,m3,m4,m5,m6,m7}) => <li className="results__li" key={id} >
                         <div>
-                        {image &&  <a href={image}><img style={{width: "350px"}} src={image} /></a>  }
+                        {image &&  <a href={image}><img className="results__image" src={image} /></a>  }
                         { alcoholic && <p className="results__p">{alcoholic}</p> }
                         { glass && <p className="results__p">{glass}</p> }
                         </div>

@@ -19,6 +19,13 @@ body {
   color: white;
 }
 
+.feedback--white {
+  color: white;
+}
+.feedback--black {
+  color: black;
+}
+
 .logo {
   max-height: 20vw;
   max-width: 40vw;
@@ -266,6 +273,7 @@ body {
 }
 .results__image {
   float: left;
+  width: 350px;
 }
 .results__p {
   text-align: start;

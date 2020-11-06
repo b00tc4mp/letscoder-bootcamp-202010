@@ -24,14 +24,14 @@ class Home extends Component {
         searchByName(token, query , (error, results) => {
             if (error) return this.setState({ error: error.message })
             
-            this.setState({ results, query, search:'name' })
+            this.setState({ results, query, search:'name',  error: null })
         })
         else {
             const {state: {query}} = this
             searchByName(token, query , (error, results) => {
                 if (error) return this.setState({ error: error.message })
                 
-                this.setState({ results, query, search:'name' })
+                this.setState({ results, query, search:'name', error: null })
             })
         }
     }
@@ -41,7 +41,7 @@ class Home extends Component {
         searchRandomCocktail( token, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
-            this.setState({ results })
+            this.setState({ results, error: null, search: 'random' })
         })
     }
 
@@ -51,14 +51,14 @@ class Home extends Component {
         searchByIngredient( token , query, (error, results) => {
             if (error) return this.setState({ error: error.message })
             
-            this.setState({ results, query, search:'ingredient' })
+            this.setState({ results, query, search:'ingredient' , error: null})
         })
         else{
             const {state: {query}} = this
             searchByIngredient( token , query, (error, results) => {
                 if (error) return this.setState({ error: error.message })
                 
-                this.setState({ results, query , search:'ingredient'})
+                this.setState({ results, query , search:'ingredient', error:null})
             })
         }
     }
@@ -74,6 +74,10 @@ class Home extends Component {
             if (this.state.search === 'name' )this.handleSearchByName(this.state.query)
             if (this.state.search === 'ingredient' )this.handleSearchByIngredient(this.state.query)
             if (this.state.search === 'favourites' )this.handleShowFavourites()
+            if (this.state.search === 'random' )searchById(token, id, (error, results) => {
+                if (error) return this.setState({ error: error.message })
+                this.setState({results})
+            })
             
         })
     }
@@ -82,7 +86,7 @@ class Home extends Component {
         const { token } = sessionStorage
         retrieveLikes(token, (error,results) =>{
             if (error) this.setState({ error: error.message })
-            this.setState({ results, search:'favourites' })
+            this.setState({ results, search:'favourites', error:null })
         })
     }
 
@@ -96,13 +100,13 @@ class Home extends Component {
 
             { user &&  <Welcome user={ user } />}
 
-            <button onClick={handleShowFavourites} >Favourites</button>
-
-            <SearchByName onSearch={handleSearchByName} />
+            <button onClick={handleShowFavourites} className="favourites" >Favourites</button>
+           
+            {/* <SearchByName onSearch={handleSearchByName} />
 
             <SearchRandomCocktail onSearch={handleSearchRandomCocktail} />
 
-            <SearchByIngredient onSearch={handleSearchByIngredient} />
+            <SearchByIngredient onSearch={handleSearchByIngredient} /> */}
 
             <Search onSearchByName={handleSearchByName} onSearchByIngredient={handleSearchByIngredient} onSearchRandom={handleSearchRandomCocktail} />
 

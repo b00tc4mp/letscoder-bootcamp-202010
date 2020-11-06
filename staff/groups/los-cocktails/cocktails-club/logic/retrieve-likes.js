@@ -83,7 +83,7 @@ function retrieveLikes(token, callback) {
                             })
                     }
                     )
-                else callback(null, results)
+                else callback(new Error('No Favourites'), results)
 
             } else {
                 var res = JSON.parse(response);

@@ -31,14 +31,13 @@ describe('SPEC searchByIngredient()', function(){
             searchByIngredient(token, name,function(error,results){
                 expect(error).toBeNull()
 
-                expect(results).toBeOfType("object")
-
                 expect(results.length).toBeGreaterThan(0)
 
-                results.forEach( ({ id, name, image }) => {
+                results.forEach( ({ id, name, image, like }) => {
                     expect(id).toBeOfType('string')
                     expect(name).toBeOfType('string')//nombre
                     expect(image).toBeOfType('string')
+                    expect(like).toBe(false)
                 })
 
                 done()
