@@ -1,3 +1,31 @@
+/**
+ *  The callback expression that manages the result of the authentication
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ */
+
+/**
+ * toggle track favourite for the user by means of token and id.
+ * 
+ * @example
+ * 
+ * toggleFavouriteTrack(token, id, console.log)
+ *   
+ *
+ * 
+ * 
+ * @param {string} token The token given by authenticate
+ * @param {string} id the id of the track the user want
+ * @param {callback} callback The callback expression that manages the result of the authentication
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ */
+
+
+
 const toggleFavouriteTrack = (token, id, callback) => {
     
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')

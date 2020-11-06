@@ -1,3 +1,36 @@
+/**
+ *  The callback expression that manages the result of the authentication
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * @param {Array} tracks The 20 tracks the API shows in every search
+ */
+
+/**
+ * search Tracks by means of token, spotyToken, type, and query.
+ * 
+ * @example
+ * 
+ * searchTracks(token, spotyToken, type, query, function(error, tracks){
+ *    console.log('DEMO music()')
+ *   
+ *    if (error) console.error(error)
+ *    else console.log(tracks)
+ *  })
+ * 
+ * @param {string} token The token given by authenticate
+ * @param {string} spotyToken The token given by validation on spotify
+ * @param {string} type The type of the search we are doing. To work the app correctly us 'track'
+ * @param {string} query The track we want to search
+ * 
+ * @param {callback} callback The callback expression that manages the result of the authentication
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ */
+
+
 function searchTracks(token, spotyToken, type, query, callback) {
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
