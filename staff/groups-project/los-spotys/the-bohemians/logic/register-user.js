@@ -1,3 +1,37 @@
+/**
+ *  The callback expression that manages the result of the register
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ */
+
+/**
+ * Register a user by means of fullname, email and password.
+ * 
+ * @example
+ * 
+ * registerUser(fullname, email, password, function(res.error) {
+ *      if (error) return console.error(error)
+ *      
+ *   
+ * })
+ * 
+ * @param {string} fullname The user fullname
+ * @param {string} email The user e-mail
+ * @param {string} password The user password
+ * @param {string} repassword The user re-password
+ * @param {callback} callback The callback expression that manages the result of the register
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ */
+
+
+
+
+
+
 function registerUser(fullname, email, password, repassword, callback) {
     if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a full name')
 

@@ -39,10 +39,13 @@ main
     min-height: 100vh
 
 
-header
-    height: 50vh
+.title
+    height: 5vh
     margin-left: 4%
     font-family: 'Syne Mono', monospace
+
+    &:hover
+        cursor: pointer
     
 
     
@@ -58,7 +61,7 @@ header
 .access
 
     @include flexCenter
-    margin-top: 15%
+    margin-top: 60%
     font-size: xx-large
     gap: 2rem
 
@@ -66,7 +69,7 @@ header
 
 .register
     @include flexCenter
-    margin-top: 10%
+    margin-top: 55%
 
     &__form
         @include gridColumn
@@ -77,14 +80,14 @@ header
 
 .register-confirm
     @include flexCenter
-    font-size: large
+    font-size: x-large
     color: white
-    margin-top: 10%
+    margin-top: 60%
     font-family: 'Quicksand', sans-serif
 
 .login
     @include flexCenter
-    margin-top: 10%
+    margin-top: 60%
 
     &__form
         @include gridColumn
@@ -94,95 +97,223 @@ header
 
 .welcome
     @include flexCenter
-    margin-top: -13%
+    flex-direction: column
+    
+    margin-left: 5%
+    margin-top: 40%
     font-family: 'Syne Mono', monospace
     color: white
 
-.search
-    @include flexCenter
-    margin-top: 12%
+    &__image
+        border-radius: 20%
+        opacity: 0.9
+        width: 10vw
 
-    &__form
-        @include gridColumn
-
-        input
-            font-size: large    
-            margin: 3% 
+    &__title
+        margin-top: 5%
 
 
+.results 
+    margin-top: 5%
+
+.detail
+    color: white
+    font-family: 'Quicksand', sans-serif
+    margin-left: 5%
+
+audio
+    border: 1px solid #2BB954
+    border-radius: 2em
+    color: #2BB954
+
+
+.searchTrack
+
+    @include gridColumn
+    width: 50vw
+    margin: 6% 0% 5% 25%
+    
+    input 
+        font-size: large
+        grid-column: 1/3
+    button
+        font-size: large
+
+.results
+    display: grid
+    text-align: center
+    align-items: center
+    justify-items: center
+    list-style: none
+    gap: 3rem
+    color: white
+    font-family: 'Quicksand', sans-serif
+    font-size: medium
+
+    &:hover
+        cursor: pointer
+
+    p
+        margin: 3% 0% 3% 0%
+
+.profile
+    display: grid
+    grid-template-columns: repeat(1, 2fr)
+    grid-template-rows: repeat(3, 1fr)
+    text-align: center
+
+    color: white
+
+    input
+        height: 3vh
+
+
+.detail
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    //background-color: grey
+    img
+        width: 40vw
+    .detailInfo
+        text-align: center
+
+.feedback
+    border: 2px solid red
+    width: 25%
+    height: 5vh
+    margin-left: 65vw
+    display: flex
+    align-items: right
+    justify-content: right
+    font-size: 2vw
+    background-color: white
+    border-radius: 1em
+    padding: 1vw
+   
+    
+    
+
+
+    
 .button
     padding: 5px 10px
     border-radius: 1em
     font-size: x-large
-    background-color: #B08A53
+    background-color:#2BB954
     color: white
     font-family: 'Quicksand', sans-serif
     cursor: pointer
-
+    outline: none
 
     &:hover
         opacity: 0.5
     &:active
         opactiy: 0.25
 
-    &__login
-        background-color:#E9D5A0
-    
+    &__login, &__submitLogin, &__reset, &__logout
+        background-color: white
+        color: #2BB954
+        border: 1.5px solid #2BB954
+
+    &__error
+        width: 3vw
+        height: 2vh
+        margin-top: 1vw
+        font-size: 2vw
+
+    &__logout
+        width: 7vw
+        font-size: 2.2vw
+        margin-left: 1vw
+        
     &__submitRegister, &__submitLogin, &__search
         font-size: large
         grid-column: 1/3
         text-align: center
-
-
-.off
-    display: none
-
+    
+    &__modifyProfile
+        font-size: 3vw
+        height: 6vh
+        background-color: black
         
+    &__favouritedetail
+        width: 45%
+        text-align: center
+        margin-left: 12vw
+
+
+
+
 @media (min-width: 650px)
 
     .welcome
         @include flexLeft
-        margin-top: -13%
+        margin-top: 40%
         font-family: 'Syne Mono', monospace
         color: white
 
         margin-left: 7%
+        &__title
+            margin-top: 5%
+            margin-left: -4%
 
     .subtitle
         @include flexLeft
         margin-top: 10%
         margin-left: 3%
 
-        
-    .search
-        @include flexLeft
-        margin-top: 12%
-        margin-left: 3%
-
-        &__form
-            @include gridColumn
-
-            input
-                font-size: large    
-                margin: 3% 
-
     .login
         @include flexLeft
         margin-left: 9%
+        margin-top: 50%
     
     .register-confirm
         @include flexLeft
         margin-left: 7%
+        margin-top: 50%
 
     .register
         @include flexLeft
-        margin-top: 5%
+        margin-top: 50%
         margin-left: 7%
 
     .access
         @include flexLeft
-        margin-top: 5%
+        margin-top: 60%
         margin-left: 9%
+ 
+    .detail
+        margin-left: 4%
 
-    .off
-        display: none
+    .feedback
+        height: 10vh
+        div 
+            height: 4vh
+
+    
+    
+   
+
+    
+
+@media (min-width: 1000px)
+
+    .welcome
+        margin-top: 15%
+
+
+    .subtitle
+        margin-top: 10%
+
+    .login
+        margin-top: 40%
+    
+    .register-confirm
+        margin-top: 40%
+
+    .register
+        margin-top: 35%
+
+    .access
+        margin-top: 40%
+   
