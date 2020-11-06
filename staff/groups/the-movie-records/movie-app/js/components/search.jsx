@@ -5,7 +5,7 @@ class Search extends Component {
     super();
     this.state = { query: "" };
   }
-  __handleSubmit = (event) => {
+  handleSubmit = (event) => {
     const { onResult } = this.props;
     const { query } = this.state;
     const { token } = sessionStorage;
@@ -14,7 +14,7 @@ class Search extends Component {
       movies && onResult(movies, query);
     });
   };
-  __handleChange = (event) => {
+  handleChange = (event) => {
     this.setState({ query: event.target.value });
   };
 
@@ -22,9 +22,9 @@ class Search extends Component {
     return (
       <>
         <div className="search">
-          <form className="search-content" onSubmit={this.__handleSubmit}>
+          <form className="search-content" onSubmit={this.handleSubmit}>
             <input
-              onChange={this.__handleChange}
+              onChange={this.handleChange}
               type="text"
               className="search-content__input"
               placeholder="¿Qué película quieres buscar?"
