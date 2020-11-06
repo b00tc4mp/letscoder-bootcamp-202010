@@ -18,7 +18,7 @@
  *
  * @param {string} token The token of the user generated when authenticating
  * @param {object} changes Object that contains the information to be changed for the user
- * @param {callback} callback The callback expression that manages the result of the modification
+ * @param {function} callback The callback expression that manages the result of the modification
  *
  * @throws {TypeError} On type validation error
  * @throws {Error} On content validation error

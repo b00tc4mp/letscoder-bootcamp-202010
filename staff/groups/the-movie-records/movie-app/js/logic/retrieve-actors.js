@@ -19,7 +19,7 @@
  * })
  *
  * @param {number} id The movie ID needed to get the data
- *
+ * @param {callback} callback The callback expression that manages the result of retrieve users
  * @throws {TypeError} On type validation error
  */
 function retrieveActors(id, callback) {

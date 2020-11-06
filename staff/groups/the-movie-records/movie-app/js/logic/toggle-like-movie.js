@@ -4,19 +4,19 @@
  * @callback callback
  * 
  * @param {Error} error In case a fail is detected on response from API
- * @param {string} token The auth token when credentials are correct (validation in API)
+ * 
  */
 
 /**
- * Delete user from his token.
+ * Get toggle like movies.
  * 
  * @example
  * 
- * unregisterUser("token", "tete@tete.es",function () {});
+ * 
  * 
  * @param {string} token The token of the user generated when authenticating.
  * @param {number} movieID  The movieId of the movies generated for the Api. 
- * @param {function} callback The callback exppression that manage of the unregister.
+ * @param {function} callback The callback exppression that manage of the toggle-like-movie.
  * 
  * @throws(TypeError)On type validation error
  * @throws(Error)On content validation error

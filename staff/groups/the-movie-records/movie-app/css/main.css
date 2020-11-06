@@ -59,16 +59,23 @@ body > main {
     margin: 0 auto;
   }
 }
-.u-grid-items {
+.u-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
   list-style: none;
 }
+.u-grid__item {
+  position: relative;
+}
+.u-grid .heart {
+  top: 25px;
+  left: 29px;
+}
 
 @media (min-width: 600px) {
-  .u-grid-items {
+  .u-grid {
     grid-gap: 10px;
   }
 }
@@ -143,6 +150,28 @@ body > main {
   transform: translate(-50%, -50%);
 }
 
+.scrollable-carousel img:hover, .card-header__image:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   position: relative;
   flex: none;
@@ -165,14 +194,15 @@ body > main {
 .header__logout {
   position: absolute;
   right: 60px;
-  background: #fff;
   padding: 4px 6px;
-  border-radius: 4px;
-  box-shadow: 2px 2px #203c54;
-  background: #d5e9fa;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
 }
 .header__logout:hover {
-  background: #c0d9ed;
+  color: #c0d9ed;
 }
 .header .avatar {
   margin-right: 10px;
@@ -183,8 +213,24 @@ body > main {
 }
 
 .section-profile {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+.section-profile h2 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.section-profile .btn {
+  display: block;
+  margin: 0 auto 40px auto;
+}
+.section-profile__user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section-profile__icon {
   margin-right: 15px;
@@ -208,6 +254,11 @@ body > main {
   border: 1px solid #cacaca;
   box-shadow: inset 3px 3px 3px #0000001a;
   border-radius: 3px/6px;
+}
+.section-profile__favorites {
+  background: #f3f3f3;
+  padding: 20px;
+  border-top: 2px solid gainsboro;
 }
 
 .discover {
@@ -311,6 +362,7 @@ body > main {
   box-shadow: 4px 4px 5px 0px #cacaca75;
   transition: 0.25s;
   border: 1px solid #d8d8d8;
+  cursor: pointer;
 }
 .card header {
   height: 150px;
@@ -617,31 +669,58 @@ body > main {
 }
 
 .movie {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   background: #000;
 }
 .movie__detail {
-  position: inherit;
+  position: relative;
   padding: 0 30px;
   display: flex;
   gap: 30px;
   color: #fff;
   flex-direction: column;
 }
+.movie__moreinfo {
+  margin: 10px 0;
+  font-weight: 100;
+  color: #ffffff;
+}
+.movie__moreinfo a {
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-family: "Noto Sans";
+  font-size: 17px;
+  color: aqua;
+}
+.movie__imdb {
+  display: block;
+  margin: 20px 0px;
+}
+.movie__imdb img {
+  height: 48px;
+  width: 94px;
+}
 .movie__title {
   position: inherit;
-  color: #fff;
   font-family: "Itim", cursive;
   font-weight: 100;
   text-align: center;
-  padding: 20px 0 40px 0;
+  padding: 20px 0 50px 0;
   text-shadow: 3px 1px 10px #071e3e;
-  font-size: 2.2rem;
+  font-size: 3.4rem;
+  color: #00caff;
 }
 .movie__overview {
   font-size: 1.9rem;
   line-height: 1.5;
   font-size: 2rem;
+}
+.movie__data {
+  font-size: 1.5rem;
+  vertical-align: initial;
 }
 .movie__info {
   background-repeat: no-repeat;
@@ -659,14 +738,24 @@ body > main {
   left: 0;
   bottom: 0;
   background-color: #2b577b;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 0;
+}
+.movie__tagline {
+  text-align: center;
+  color: #0ff;
+  position: relative;
+  top: -40px;
+  font-size: 2.6rem;
+}
+.movie__actors {
+  padding: 20px;
+  margin: 0 auto;
 }
 .movie__poster {
   -webkit-backface-visibility: hidden;
   display: inline-block;
   position: relative;
-  margin: 0 auto;
   overflow: hidden;
   background: #000;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
@@ -676,11 +765,13 @@ body > main {
   -webkit-box-orient: vertical;
   overflow: hidden;
   max-height: 100%;
+  cursor: pointer;
 }
 .movie__poster img {
   display: block;
   max-width: 100%;
   transition: opacity 0.2s ease-in-out;
+  width: 100%;
 }
 .movie__poster:hover img {
   opacity: 0.5;
@@ -742,6 +833,9 @@ body > main {
   .movie__title {
     font-size: 3.4rem;
   }
+  .movie__poster img {
+    width: zuto;
+  }
 }
 footer {
   flex: none;
@@ -749,7 +843,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   border-top: 5px solid #2c506d;
-  background: #2b577b;
+  background: #263d4f;
   text-align: center;
   display: block;
   line-height: 30px;
@@ -877,6 +971,7 @@ footer {
   gap: 10px;
 }
 .scrollable-carousel__item {
+  cursor: pointer;
   flex: 0 0 auto;
 }
 .scrollable-carousel div {
@@ -886,6 +981,7 @@ footer {
 .scrollable-carousel img {
   max-width: 100%;
   object-fit: contain;
+  height: 212px;
 }
 .scrollable-carousel::-webkit-scrollbar {
   display: none;
@@ -1881,6 +1977,90 @@ footer {
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
     -ms-transform: rotate(-2deg);
+  }
+}
+.heart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: -19px;
+  transform: translate(-50%, -50%);
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.heart.active {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+}
+
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
+.wave {
+  float: left;
+  margin: 20px;
+  animation: wave ease-in-out 0 infinite alternate;
+  transform-origin: center -20px;
+}
+
+.wave:hover {
+  animation-play-state: paused;
+}
+
+.wave img {
+  border: 5px solid #f8f8f8;
+  display: block;
+  width: 150px;
+  height: 200px;
+}
+
+.wave figcaption {
+  text-align: center;
+}
+
+.wave:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #ffffff;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+
+.wave:before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  display: block;
+  height: 44px;
+  width: 47px;
+  background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  z-index: 16;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
   }
 }
 

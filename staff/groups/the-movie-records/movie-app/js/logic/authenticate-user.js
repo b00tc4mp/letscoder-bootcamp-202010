@@ -20,7 +20,7 @@
  *
  * @param {string} email The user e-mail
  * @param {string} password The user password
- * @param {callback} callback The callback expression that manages the result of the authentication
+ * @param {function} callback The callback expression that manages the result of the authentication
  *
  * @throws {TypeError} On type validation error
  * @throws {Error} On content validation error
