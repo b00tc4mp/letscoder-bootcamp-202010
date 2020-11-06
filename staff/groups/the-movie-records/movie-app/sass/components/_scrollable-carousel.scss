@@ -6,15 +6,18 @@
   gap: 10px;
 
   &__item {
+    cursor: pointer;
     flex: 0 0 auto;
   }
   div {
-    height: 200px;
+    height: 240px;
     width: 150px;
   }
   img {
     max-width: 100%;
     object-fit: contain;
+    height: 212px;
+    @extend %flash;
   }
   &::-webkit-scrollbar {
     display: none;

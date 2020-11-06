@@ -9,3 +9,22 @@
     color: #2b577b;
   }
 }
+
+%box {
+  position: relative;
+  background: #f2f2f2;
+  border: 1px solid #8ebed2;
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;
+  padding: 20px;
+  &:before {
+    content: "";
+    box-shadow: rgb(142 193 218 / 41%) 0 5px 3px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}

@@ -5,9 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies APP</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
   </head>
 
   <body>
     <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./js/utils/call.js"></script>
+    <script src="./js/utils/array-polyfills.js"></script>
+
+    <script src="./js/logic/retrieve-movie.js"></script>
+    <script src="./js/logic/retrieve-new-movies.js"></script>
+    <script src="./js/logic/retrieve-upcoming-movies.js"></script>
+    <script src="./js/logic/search-movies.js"></script>
+    <script src="./js/logic/authenticate-user.js"></script>
+    <script src="./js/logic/register-user.js"></script>
+    <script src="./js/logic/retrieve-user.js"></script>
+    <script src="./js/logic/toggle-like-movie.js"></script>
+    <script src="./js/logic/retrieve-actors.js"></script>
+    <script src="./js/logic/modify-user.js"></script>
+    <script src="./js/logic/retrieve-likes.js"></script>
+
+    <script src="./js/components/avatar.jsx" type="text/babel"></script>
+    <script src="./js/components/header.jsx" type="text/babel"></script>
+    <script src="./js/components/detail.jsx" type="text/babel"></script>
+    <script src="./js/components/discover.jsx" type="text/babel"></script>
+    <script src="./js/components/search.jsx" type="text/babel"></script>
+    <script src="./js/components/slider.jsx" type="text/babel"></script>
+    <script src="./js/components/footer.jsx" type="text/babel"></script>
+    <script src="./js/components/noresult.jsx" type="text/babel"></script>
+    <script src="./js/components/card.jsx" type="text/babel"></script>
+    <script src="./js/components/resultList.jsx" type="text/babel"></script>
+
+    <script src="./js/pages/home.jsx" type="text/babel"></script>
+    <script src="./js/pages/login.jsx" type="text/babel"></script>
+    <script src="./js/pages/register.jsx" type="text/babel"></script>
+    <script src="./js/pages/profile.jsx" type="text/babel"></script>
+
+    <script src="./app.jsx" type="text/babel"></script>
+    <script src="./index.jsx" type="text/babel"></script>
   </body>
 </html>
