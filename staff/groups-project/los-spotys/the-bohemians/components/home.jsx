@@ -54,7 +54,7 @@ class Home extends Component {
                 if (!tracks.length) return this.setState ({ error: 'no tracks found'})
                  
 
-                this.setState({ tracks, track: undefined, type, query })
+                this.setState({ tracks, track: undefined, type, query, error: '' })
             })
         } catch ({ message }) {
             this.setState({ error: error.message })
@@ -68,7 +68,7 @@ class Home extends Component {
         retrieveTrack(token, spotyToken, id, (error, track) => {
             if (error) return this.setState({ error: error.message })
             
-        this.setState({ track })
+        this.setState({ track, error: '' })
             
         })
     }

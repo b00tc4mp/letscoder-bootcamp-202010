@@ -26,14 +26,14 @@ class App extends Component {
     }
     
     handleGoToAcces = () => {
-        this.setState({ view: 'access' })
+        this.setState({ view: 'access', error: '' })
     }
 
     handleRegister = (fullname, email, password, repassword) => {
         registerUser(fullname, email, password, repassword, error => {
             if (error) return this.setState({ error: error.message })
 
-            this.setState({ view: 'register-confirm' })
+            this.setState({ view: 'register-confirm', error: '' })
         })
     }
 
@@ -43,7 +43,7 @@ class App extends Component {
             
             sessionStorage.token = token
 
-            this.setState({ view: 'home' })
+            this.setState({ view: 'home', error: '' })
         })
     }
 
@@ -74,6 +74,7 @@ class App extends Component {
         {view === 'register-confirm' && <RegisterConfirm onLogin= {handleGoToLogin}/>}
 
         {view === 'login' && <Login onLogin={handleLogin} />}
+        
 
         {view === 'home' && <Home  onView={handleView}/>}
 

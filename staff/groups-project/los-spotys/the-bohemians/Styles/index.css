@@ -64,7 +64,7 @@ main {
   display: flex;
   align-content: center;
   justify-content: center;
-  font-size: large;
+  font-size: x-large;
   color: white;
   margin-top: 60%;
   font-family: "Quicksand", sans-serif;
@@ -162,6 +162,31 @@ audio {
   height: 3vh;
 }
 
+.detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.detail img {
+  width: 40vw;
+}
+.detail .detailInfo {
+  text-align: center;
+}
+
+.feedback {
+  border: 2px solid red;
+  width: 25%;
+  height: 5vh;
+  margin-left: 65vw;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  font-size: 2vw;
+  background-color: white;
+  border-radius: 1em;
+  padding: 1vw;
+}
+
 .button {
   padding: 5px 10px;
   border-radius: 1em;
@@ -184,7 +209,10 @@ audio {
   border: 1.5px solid #2BB954;
 }
 .button__error {
-  width: 6vw;
+  width: 3vw;
+  height: 2vh;
+  margin-top: 1vw;
+  font-size: 2vw;
 }
 .button__logout {
   width: 7vw;
@@ -202,8 +230,9 @@ audio {
   background-color: black;
 }
 .button__favouritedetail {
-  width: 19%;
+  width: 45%;
   text-align: center;
+  margin-left: 12vw;
 }
 
 @media (min-width: 650px) {
@@ -263,6 +292,13 @@ audio {
 
   .detail {
     margin-left: 4%;
+  }
+
+  .feedback {
+    height: 10vh;
+  }
+  .feedback div {
+    height: 4vh;
   }
 }
 @media (min-width: 1000px) {
