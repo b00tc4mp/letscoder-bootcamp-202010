@@ -1,3 +1,30 @@
+/**
+ *  The callback expression that manages the API's error and results
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * @param {Array} results An array that contains the results info / or empty array if no results were found
+ */
+/**
+ * look for the cocktails in user likes list and return them in an array 
+ * 
+ * 
+ * @example
+ * 
+ * retrieveLikes(token, function(error, results) {
+ *      if (error) return console.log(error.message)
+ * 
+ *    console.log(results)
+ * })
+ * 
+ * @param {string} token The authentication token required by the users API
+ * @param {callback} callback The callback expression that manages the error and results given by the cocktails API
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ * @throws {Error} When API does not find results
+ */
 function retrieveLikes(token, callback) {
     let counter = 0
     var results = []

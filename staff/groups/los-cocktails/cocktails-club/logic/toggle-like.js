@@ -13,6 +13,33 @@
 //tmb despues de hacer un toggle dentro de la busqueda hay q repetir la busqueda con esa query
 //y si le dan a like desde detail hay que volver a entrar al detail con el id de ese trago 
 // y por ultimo habria que implementar la opcion de ver los favoritos buscando la lista de likes de la api
+/**
+ *  The callback expression that manages the API's error if ther is one
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * 
+ */
+/**
+ * Adds / Removes the cocktail id from likes array list.
+ * 
+ * 
+ * @example
+ * 
+ * toggleLike(token, id, function(error,) {
+ *      if (error) return console.log(error.message)
+ * 
+ * })
+ * 
+ * @param {string} token The authentication token required by the users API
+ * @param {string} id The id of the cocktail to add/remove from likes list
+ * @param {callback} callback The callback expression that manages the error given by the cocktails API
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ * @throws {Error} When API does not find results
+ */
 
 function toggleLike(token, id, callback) {
     call('GET', 'https://b00tc4mp.herokuapp.com/api/v2/users', { Authorization: `Bearer ${token}` }, '',

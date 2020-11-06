@@ -1,3 +1,31 @@
+/**
+ *  The callback expression that manages the API's error and results
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * @param {Array} results An array that contains the results info / or empty array if no results were found
+ */
+/**
+ * looks for the cocktail that match the the id given.
+ * 
+ * 
+ * @example
+ * 
+ * searchById(token, id, function(error, results) {
+ *      if (error) return console.log(error.message)
+ * 
+ *    console.log(results)
+ * })
+ * 
+ * @param {string} token The authentication token required by the users API
+ * @param {string} id The id of the cocktail
+ * @param {callback} callback The callback expression that manages the error and results given by the cocktails API
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ * @throws {Error} When API does not find results
+ */
 function searchById(token, id, callback) {
     call('GET', `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`, {}, '',
         (status, response) => {

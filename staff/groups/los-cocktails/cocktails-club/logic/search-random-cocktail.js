@@ -1,3 +1,30 @@
+/**
+ *  The callback expression that manages the API's error and result
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * @param {Array} results An array that contains the result info / or empty array if no results were found
+ */
+/**
+ * looks for a random cocktail
+ * 
+ * 
+ * @example
+ * 
+ * searchRandomCocktail(token, function(error, results) {
+ *      if (error) return console.log(error.message)
+ * 
+ *    console.log(results)
+ * })
+ * 
+ * @param {string} token The authentication token required by the users API
+ * @param {callback} callback The callback expression that manages the error and results given by the cocktails API
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ */
+
 function searchRandomCocktail(token, callback) {
   if (typeof callback !== "function")
     throw new Error(callback + " is not a callback");

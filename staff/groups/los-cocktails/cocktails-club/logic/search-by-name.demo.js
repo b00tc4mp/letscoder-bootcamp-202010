@@ -1,4 +1,4 @@
-searchByName('martini', function(error, results) {
+searchByName(token,'martini', function(error, results) {
     if (error) return alert(error.message)
     
     var drinks = results.drinks
