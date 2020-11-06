@@ -178,7 +178,7 @@ audio {
 .button:active {
   opactiy: 0.25;
 }
-.button__login, .button__submitLogin, .button__reset {
+.button__login, .button__submitLogin, .button__reset, .button__logout {
   background-color: white;
   color: #2BB954;
   border: 1.5px solid #2BB954;
@@ -189,6 +189,7 @@ audio {
 .button__logout {
   width: 7vw;
   font-size: 2.2vw;
+  margin-left: 1vw;
 }
 .button__submitRegister, .button__submitLogin, .button__search {
   font-size: large;
@@ -199,6 +200,10 @@ audio {
   font-size: 3vw;
   height: 6vh;
   background-color: black;
+}
+.button__favouritedetail {
+  width: 19%;
+  text-align: center;
 }
 
 @media (min-width: 650px) {
