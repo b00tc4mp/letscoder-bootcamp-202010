@@ -2,7 +2,7 @@
 
 ## Intro
 
-Virtual calculator that develops the following operations: +, - , /, \*
+Movie App is a unique place to find information about movies, relax and enjoy.
 
 ![Movie App](https://media3.giphy.com/media/3o6Ztl7RvfwCp9mqhW/giphy.gif "Movie App")
 
@@ -10,11 +10,11 @@ Virtual calculator that develops the following operations: +, - , /, \*
 
 ### Use Cases
 
-![Alt Use Cases](./doc/use-cases.jpg "Use Cases")
+![Alt Use Cases](./doc/use-case.jpg "Use Cases")
 
 ### Activities
 
-Operate with numbers and display result.
+You can search for movies, view information such as actors, duration, year, description, add your favorite movies and much more...
 
 ![Alt Operate activity](./doc/activity-diagram.jpg "Operate activity")
 
@@ -40,9 +40,7 @@ Operate with numbers and display result.
 
 ### Technologies
 
-![Alt React](https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg "React")
-
-![Alt Sass](https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg "Sass")
+![Technologies](./doc/technologies.jpg "Technologies")
 
 ...
 
@@ -51,3 +49,7 @@ Operate with numbers and display result.
 - likes list
 - unregister user
 - ...
+
+### The team video
+
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=C6_th-5HJwA)
