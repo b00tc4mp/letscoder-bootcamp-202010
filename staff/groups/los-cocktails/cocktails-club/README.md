@@ -32,7 +32,7 @@ search for drinks or ingredients and display results.
 
 #### Logic functions
 
-![Alt Logic functions](./logic-functions.jpg "Logic functions")
+![Alt Logic functions](./style/images/logic-functions.jpg "Logic functions")
 
 ### Testing (QA)
 
