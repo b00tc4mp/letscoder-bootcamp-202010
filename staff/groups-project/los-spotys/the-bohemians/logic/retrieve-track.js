@@ -1,3 +1,31 @@
+/**
+ *  The callback expression that manages the result of the retrieve tracks
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * @param {string} track In case of success return a track from the spotyfy API
+ */
+/**
+ * Retrieve a track by token.
+ * 
+ * @example
+ * retrieveTrack(token, spotyToken, id, function(error, res) {
+ *  console.log('DEMO Track()')
+ *
+ *   if (error) console.error(error)
+ *  else console.log(res)
+ * })
+ * 
+ * @param {string} token Token given by the authenticate
+ * @param {string} spotyToken Token given by the Spotyfy API
+ * @param {String} id Track id given by the Spotyfy API
+ * @param {callback} callback The callback expression that manages the result of the retrieveTrack
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ */
+
 function retrieveTrack(token, spotyToken, id, callback) {
     
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
