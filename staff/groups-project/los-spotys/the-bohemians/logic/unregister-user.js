@@ -1,3 +1,31 @@
+/**
+ *  The callback expression that manages the result of the authentication
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ */
+
+/**
+ * Unregister a user by means of password and token.
+ * 
+ * @example
+ * 
+ * unregisterUser(password, token, function(error) {
+ *      if (error) return console.error(error)
+ *      
+ *  
+ * })
+ * 
+ * @param {string} password The user password
+ * 
+ * @param {callback} callback The callback expression that manages the result of the authentication
+ * 
+ * @throws {TypeError} On type validation error
+ * @throws {Error} On content validation error
+ */
+
+
 function unregisterUser(password, token, callback) {
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
     if (!token.trim().length) throw new Error('token is empty or blank')
