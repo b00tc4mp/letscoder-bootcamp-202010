@@ -46,10 +46,13 @@ You can search for movies, view information such as actors, duration, year, desc
 
 ### TODO
 
-- likes list
-- unregister user
-- ...
+- Be able to add comments on the movie
+- Delete user from profile
+- Delete from profile
+- Add more test (Jasmine)
 
-### The team video
+### The team "The movie records"
 
 [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=C6_th-5HJwA)
+
+Special thanks: (Simon, Henry, Manu & and to all the colleagues from the first Lets Coder promotion)
