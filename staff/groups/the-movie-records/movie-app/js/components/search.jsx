@@ -10,7 +10,8 @@ class Search extends Component {
     const { query } = this.state;
     const { token } = sessionStorage;
     event.preventDefault();
-    searchMovies(token, this.state.query, 1, "es", function (error, movies) {
+    searchMovies(token, query, 1, "es", function (error, movies) {
+      if (error) return alert(error.message);
       movies && onResult(movies, query);
     });
   };
@@ -19,12 +20,13 @@ class Search extends Component {
   };
 
   render() {
+    const { handleSubmit, handleChange } = this;
     return (
       <>
         <div className="search">
-          <form className="search-content" onSubmit={this.handleSubmit}>
+          <form className="search-content" onSubmit={handleSubmit}>
             <input
-              onChange={this.handleChange}
+              onChange={handleChange}
               type="text"
               className="search-content__input"
               placeholder="¿Qué película quieres buscar?"

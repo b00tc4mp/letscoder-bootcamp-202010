@@ -1,11 +1,12 @@
 function ResultList(props) {
+  const { movies, onItem, onLike } = props;
   return (
     <section className="u-p-h-20">
       <ul className="u-grid">
-        {props.movies.map((movie) => (
+        {movies.map((movie) => (
           <li
             className="u-grid__item"
-            onClick={() => props.onItem(movie.id)}
+            onClick={() => onItem(movie.id)}
             key={movie.id}
           >
             {
@@ -16,7 +17,7 @@ function ResultList(props) {
                   movie.like
                     ? event.target.classList.add("active")
                     : event.target.classList.remove("active");
-                  props.onLike(movie.id);
+                  onLike(movie.id);
                 }}
               />
             }

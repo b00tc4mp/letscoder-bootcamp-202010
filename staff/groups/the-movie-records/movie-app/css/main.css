@@ -70,8 +70,8 @@ body > main {
   position: relative;
 }
 .u-grid .heart {
-  top: 25px;
-  left: 29px;
+  top: 3px;
+  left: 40px;
 }
 
 @media (min-width: 600px) {
@@ -1980,20 +1980,19 @@ footer {
   }
 }
 .heart {
-  width: 100px;
-  height: 100px;
+  width: 57px;
+  height: 53px;
   position: absolute;
   left: 50%;
   top: -19px;
-  transform: translate(-50%, -50%);
   background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
-  background-position: 0 0;
+  background-position: -20px -31px;
   cursor: pointer;
   z-index: 999;
 }
 
 .heart.active {
-  background-position: -2800px 0;
+  background-position: -2819px -25px;
   transition: background 1s steps(28);
 }
 

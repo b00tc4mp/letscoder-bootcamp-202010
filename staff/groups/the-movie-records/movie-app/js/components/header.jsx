@@ -5,7 +5,7 @@ function Header(props) {
       <div onClick={() => onLogo()} className="header__logo">
         <i className="fa fa-film"></i>MovieRecords
       </div>
-      {props.user && (
+      {user && (
         <button className="header__logout" onClick={() => onLogout()}>
           <i className="fa fa-sign-out-alt"></i>
         </button>
