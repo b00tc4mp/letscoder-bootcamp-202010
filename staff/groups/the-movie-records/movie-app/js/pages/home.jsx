@@ -127,14 +127,14 @@ class Home extends Component {
         {!resultMovie && newMovies && (
           <Slider
             title="Cartelera de cine"
-            items={newMovies}
+            movies={newMovies}
             onItem={handleClickDetail}
           />
         )}
         {!resultMovie && upcomingMovies && (
           <Slider
             title="Novedades"
-            items={upcomingMovies}
+            movies={upcomingMovies}
             onItem={handleClickDetail}
           />
         )}
