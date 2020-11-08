@@ -14,6 +14,8 @@ html {
   font-size: 62.5%;
   background-image: url("../images/bg-movie-time.jpg");
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body {
@@ -751,6 +753,11 @@ body > main {
 .movie__actors {
   padding: 20px;
   margin: 0 auto;
+  max-width: 100%;
+}
+.movie__actors .u-box {
+  border: 0;
+  background: #000;
 }
 .movie__poster {
   -webkit-backface-visibility: hidden;
@@ -2004,6 +2011,11 @@ footer {
     background-position: -2800px 0;
   }
 }
+.movie__actors .scrollable-carousel::-webkit-scrollbar {
+  width: 12px;
+  background-color: #000;
+}
+
 .wave {
   float: left;
   margin: 20px;

@@ -1,3 +1,12 @@
+.movie__actors {
+  .scrollable-carousel {
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #000;
+    }
+  }
+}
+
 .wave {
   float: left;
   margin: 20px;

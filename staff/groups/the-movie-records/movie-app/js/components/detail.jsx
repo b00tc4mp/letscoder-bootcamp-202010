@@ -87,7 +87,8 @@ function Detail(props) {
         </div>
       </div>
       <dir className="movie__actors">
-        {actors &&
+        <Slider title="Actores" movies={actors} />
+        {/* {actors &&
           actors.length &&
           actors.map((actor) => (
             <figure className="wave" key={`${actor.name}${actor.character}`}>
@@ -101,7 +102,7 @@ function Detail(props) {
               />
               <figcaption>{actor.name}</figcaption>
             </figure>
-          ))}
+          ))} */}
       </dir>
       {videoIDyoutube && (
         <div className="movie__trailer">

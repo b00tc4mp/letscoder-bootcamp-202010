@@ -47,7 +47,10 @@ function retrieveActors(id, callback) {
           })
         );
 
-        callback(null, actorsFiltered);
+        // Filtramos actores, solo nos quedamos con los que tienen imagen
+        var actorsWithImg = actorsFiltered.filter((actor) => actor.image);
+
+        callback(null, actorsWithImg);
       } else {
         var res = JSON.parse(response);
         callback(new Error(res.error));

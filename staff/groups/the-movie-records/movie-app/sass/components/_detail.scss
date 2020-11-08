@@ -80,6 +80,11 @@
   &__actors {
     padding: 20px;
     margin: 0 auto;
+    max-width: 100%;
+    .u-box {
+      border: 0;
+      background: #000;
+    }
   }
   // Poster section
   &__poster {
