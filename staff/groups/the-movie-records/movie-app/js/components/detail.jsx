@@ -1,6 +1,7 @@
 function Detail(props) {
   const {
-    videos,
+    id,
+    videoIDyoutube,
     backdrop_path,
     poster_path,
     original_title,
@@ -13,9 +14,8 @@ function Detail(props) {
     imdb_id,
     like,
   } = props.item;
-  const { actors, onLike } = props;
 
-  const videoId = videos && videos.results[0] && videos.results[0].key;
+  const { actors, onLike } = props;
 
   let squareStyle = {
     backgroundImage: `url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/${
@@ -103,13 +103,13 @@ function Detail(props) {
             </figure>
           ))}
       </dir>
-      {videoId && (
+      {videoIDyoutube && (
         <div className="movie__trailer">
           <div className="video-wrap">
             <iframe
               width="560"
               height="315"
-              src={`https://www.youtube.com/embed/${videoId}?controls=0`}
+              src={`https://www.youtube.com/embed/${videoIDyoutube}?controls=0`}
               frameBorder="0"
               allowFullScreen
             ></iframe>

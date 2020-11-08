@@ -82,6 +82,7 @@ class Home extends Component {
 
   handleClickDetail = (id) => {
     const { token } = sessionStorage;
+
     retrieveMovie(token, id, "es", (error, movie) => {
       if (error) return alert(error.message);
       retrieveActors(id, (error, actors) => {
@@ -92,49 +93,52 @@ class Home extends Component {
   };
 
   renderResult() {
-    return this.state.resultSearch.results.length === 0 ? (
+    const { handleResult, handleClickDetail, handleLike, renderDetail } = this;
+
+    const { resultSearch, resultMovie } = this.state;
+
+    return resultSearch.results.length === 0 ? (
       <NoResult />
     ) : (
       <>
-        {!this.state.resultMovie && (
+        {!resultMovie && (
           <ResultList
-            onList={this.handleResult}
-            onItem={this.handleClickDetail}
-            onLike={this.handleLike}
-            movies={this.state.resultSearch.results}
+            onList={handleResult}
+            onItem={handleClickDetail}
+            onLike={handleLike}
+            movies={resultSearch.results}
           />
         )}
-        {this.state.resultMovie && this.renderDetail()}
+        {resultMovie && renderDetail()}
       </>
     );
   }
-  renderDetail() {
-    return (
-      <Detail
-        item={this.state.resultMovie}
-        actors={this.state.actors}
-        onLike={this.handleLike}
-      />
-    );
-  }
+  renderDetail = () => {
+    const { handleLike } = this;
+    const { resultMovie, actors } = this.state;
+    return <Detail item={resultMovie} actors={actors} onLike={handleLike} />;
+  };
+
   renderSlider() {
+    const { handleClickDetail, renderDetail } = this;
+    const { resultMovie, newMovies, upcomingMovies } = this.state;
     return (
       <>
-        {!this.state.resultMovie && this.state.newMovies && (
+        {!resultMovie && newMovies && (
           <Slider
             title="Cartelera de cine"
-            items={this.state.newMovies}
-            onItem={this.handleClickDetail}
+            items={newMovies}
+            onItem={handleClickDetail}
           />
         )}
-        {!this.state.resultMovie && this.state.upcomingMovies && (
+        {!resultMovie && upcomingMovies && (
           <Slider
             title="Novedades"
-            items={this.state.upcomingMovies}
-            onItem={this.handleClickDetail}
+            items={upcomingMovies}
+            onItem={handleClickDetail}
           />
         )}
-        {this.state.resultMovie && this.renderDetail()}
+        {resultMovie && renderDetail()}
       </>
     );
   }

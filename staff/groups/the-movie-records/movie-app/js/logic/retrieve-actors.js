@@ -35,15 +35,18 @@ function retrieveActors(id, callback) {
     function (status, response) {
       if (status === 200) {
         let actors = JSON.parse(response);
-        let actorsFiltered = undefined;
 
-        if (actors && actors.cast && actors.cast.length) {
-          actorsFiltered = actors.cast.map(
-            ({ character, name, profile_path }) => {
-              return { character, name, image: profile_path };
-            }
-          );
-        }
+        // Evitamos que el destructuring sea null o undefined para que no devuleva error
+        //en ese caso devolvería undefined
+        const { cast } = actors || {};
+        const actorsFiltered = cast.map(
+          ({ character, name, profile_path }) => ({
+            character,
+            name,
+            image: profile_path,
+          })
+        );
+
         callback(null, actorsFiltered);
       } else {
         var res = JSON.parse(response);

@@ -50,7 +50,25 @@ const retrieveLikes = (token, callback) => {
               "",
               (status, response) => {
                 if (status === 200) {
-                  const movie = JSON.parse(response);
+                  let movie = JSON.parse(response);
+
+                  // Evitamos que el destructuring sea null o undefined para que no devuleva error
+                  //en ese caso devolvería undefined
+                  const {
+                    id,
+                    poster_path,
+                    original_title,
+                    release_date,
+                    overview,
+                  } = movie || {};
+
+                  movie = {
+                    id,
+                    poster_path,
+                    original_title,
+                    release_date,
+                    overview,
+                  };
 
                   movie.like = true;
 

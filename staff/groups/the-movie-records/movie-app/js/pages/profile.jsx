@@ -41,6 +41,7 @@ class Profile extends Component {
 
   render() {
     const { onModify, user } = this.props;
+    const { image } = this.state;
     const { handleChangeFullName, handleChangeImage, handleSubmit } = this;
     return (
       <>
@@ -64,11 +65,7 @@ class Profile extends Component {
             />
             <img
               className="section-profile__image"
-              src={
-                this.state && this.state.image
-                  ? this.state.image
-                  : "https://tinyurl.com/avatardefault"
-              }
+              src={image ? image : "https://tinyurl.com/avatardefault"}
             />
             <input
               className="section-profile__data"
