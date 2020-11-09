@@ -1,0 +1,207 @@
+@media only screen and (max-width: 600px) 
+    
+
+@mixin item
+    background-color: greenyellow
+    border: 2px solid black
+
+@mixin itemMobil
+    height: 17vh
+    background-color: greenyellow
+    border: 2px solid black
+
+@mixin textBoard
+    width: 5vw
+    height:5vw
+    border: 1px solid black
+
+body
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+  
+header 
+    background: grey
+    height: 10vh
+    width: 80vw
+    display: flex
+    align-items: center
+    justify-content: center
+    display: block
+    position: fixed
+
+
+
+.social-networks 
+    width: 30vw
+    display: grid
+    align-self: center
+    justify-self: center
+    text-align: center
+    grid-template-columns: 0fr 0fr 0fr 0fr 0fr
+
+    div
+        width: 5vw
+        height:5vh
+
+.tres-bloques 
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    align-items: left
+    justify-content: left
+    width: 100px
+    height: 60px
+    margin-left: 4vw
+    div 
+        width: 60px
+        height: 60px
+        &:hover
+            height:120px
+    
+.bloque1
+    background: yellow
+
+.bloque2
+    background: red
+
+.bloque3
+    background: green
+
+
+
+//container & items(pictures)    
+.container
+    background-color: #61C9EA
+    width: 70vw
+    height: 200vh
+    display: grid
+    gap: 15px
+    margin-top: 20vw
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: repeat (6,1fr)
+    text-align: center
+
+
+.item1
+
+    grid-area: 1/1/3/1
+    @include item
+
+.item2
+
+    grid-area: 1/2/1/4
+    @include item
+
+
+.item3
+    @include item
+    grid-area: 2/2/2/4
+
+.item4
+    @include item
+    grid-area: 3/1/4/3
+
+.item5
+    @include item
+    grid-area: 3/3/5/4
+
+.item6
+    @include item
+    grid-area: 4/1/5/3
+
+.item7
+    @include item
+    grid-area: 5/1/7/2
+
+.item8
+    @include item
+    grid-area: 5/2/6/4
+
+.item9
+    @include item
+    grid-area: 6/2/7/4
+
+.item1__textBoard
+    @include textBoard
+
+.item2__textBoard
+    @include textBoard
+
+.item3__textBoard
+    @include textBoard
+
+.item4__textBoard
+    @include textBoard
+
+.item5__textBoard
+    @include textBoard
+
+
+.item6__textBoard
+    @include textBoard
+
+
+.item7__textBoard
+    @include textBoard
+
+.item8__textBoard
+    @include textBoard
+
+.item9__textBoard
+    @include textBoard
+
+@media screen and (max-width: 600px) 
+    @mixin item
+        background-color: greenyellow
+        border: 2px solid black
+
+
+    body
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .container
+        background-color: #61C9EA
+        width: 70vw
+        height: 180vh
+        display: grid
+        gap: 15px
+        margin-top: 20vw
+
+        display: flex
+        align-content: center
+        justify-content: center
+        flex-direction: column
+
+    .item1
+
+        @include itemMobil
+        
+
+    .item2
+        
+        @include itemMobil
+
+    .item3
+        @include itemMobil
+
+    .item4
+        @include itemMobil
+
+    .item5
+        @include itemMobil
+
+    .item6
+        @include itemMobil
+
+    .item7
+        @include itemMobil
+
+    .item8
+        @include itemMobil
+
+    .item9
+        @include itemMobil
