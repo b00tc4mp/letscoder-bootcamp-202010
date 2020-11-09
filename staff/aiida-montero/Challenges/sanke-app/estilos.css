@@ -1,0 +1,20 @@
+canvas{
+border: solid 4px black;
+margin: auto;
+display: flex;
+padding-left: 0; 
+padding-right: 0;
+margin-left: auto;
+margin-right: auto; 
+display: block;
+margin-top: 40px;
+
+}
+
+h1 {
+text-align: center;
+font-family: 'Lucida Sans'; 
+}
+
+
+  

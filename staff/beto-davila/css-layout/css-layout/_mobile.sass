@@ -1,0 +1,231 @@
+@media screen and (max-width: 600px)
+
+    @mixin item-color
+        background-color: #CDDCDA
+    @mixin primary-font
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+
+    .hide-mobile
+        display: none
+
+    body
+        display: flex
+        align-items: center
+        flex-direction: column
+
+    .header-container
+        width: 100%
+
+    .header
+        position: fixed
+        height: 5vh
+        width: 100%
+        background-color: #F2F5F3
+        display: flex
+        justify-content: flex-end 
+          
+        
+        &__cart
+            width: 7%
+            height: 100%
+            margin: auto 5px
+            background-color: #D2D8D7
+
+            &--qt
+                width: 7%
+                height: 100%
+                margin: auto 5px
+                background-color: #D2D8D7
+    .header2
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+
+        &__container
+            width: 50%
+            height: 100%
+            display: flex
+            margin-top: 2.5rem
+            flex-wrap: wrap
+
+    .search 
+        height: 3.3vh
+    
+    .lupa
+        height: 4vh
+        border: none
+        width: 10%
+
+    .slide
+        height: 35vh
+        width: 95vw
+        display: flex
+        flex-direction: column
+
+        &__img
+            display: flex
+            width: 100%
+            height: 80%
+            align-items: center
+            background-color: #C8F0E9
+        
+        &__button-ver-seccion
+            @include primary-font
+            border: none
+            padding: 15px
+            margin-left: 25px
+            font-weight: bold
+        
+        &__container-circles
+            display: flex
+            justify-content: space-between
+            background-color: #A6ADAC
+            height: 20%
+            width: 100%
+
+    a
+        text-decoration: none
+        padding: 15px
+
+
+    .wrapper-container
+        display: flex
+        align-items: center
+        width: 95vw
+        flex-direction: column
+        background-color: #F6FAED
+        margin: 30px 0
+
+    .logo
+        height: 75px
+        width: 75px
+        background: #3C50E1
+        text-align: center
+
+    .header__category
+        width: 40vw
+        height: 10vh
+        justify-content: center
+        padding: 1rem
+
+    h3
+        @include primary-font
+        color: black
+        text-align: center
+        border-top: 2px solid black
+        border-bottom: 2px solid black
+
+    .container-utensilios
+        width: 50%
+        display: grid
+        gap: .5rem
+        grid-template-rows: repeat(9,150px)
+        text-align: center
+
+    .container-ingredientes
+        width: 50%
+        display: grid
+        gap: .5rem
+        grid-template-rows: repeat(6,150px)
+        text-align: center
+
+    .container-fiestas
+        width: 50%
+        display: grid
+        gap: .5rem
+        grid-template-rows: repeat(3,150px)
+        text-align: center
+
+    .container-description
+        position: relative
+        top: 4.5rem
+        height: 10vh
+        width: 27vw
+        background-color: #C5F9DF
+
+        &__description
+            color: #646665
+            justify-content: center
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+            font-weight: bold
+
+    .item1
+        grid-row: 1/2
+        @include item-color
+
+    .item2
+        @include item-color
+        grid-row: 2/3
+
+    .item3
+        @include item-color
+        grid-row: 3/4
+
+    .item4
+        @include item-color
+        grid-row: 4/5
+
+    .item5
+        @include item-color
+        grid-row: 5/6
+    .item6
+        @include item-color
+        grid-row: 6/7
+
+    .item7
+        @include item-color
+        grid-row: 7/8
+
+    .item8
+        @include item-color
+        grid-row: 8/9
+
+    .item9
+        @include item-color
+        grid-row: 9/10
+
+    .container-blog
+        height: 70vh
+        display: flex
+        width: 50%
+        flex-direction: column
+
+    .picture-blog
+        background-color: #646665
+        height: 70%
+        display: flex
+        margin-top: 10px
+        
+
+        &__title
+            @include primary-font
+            font-size: .7rem
+            font-weight: bolder
+        
+        &__autor
+            height: 10vh
+            width: 100%
+            display: flex
+            margin-bottom: 5px
+
+            img
+                background-color: #646665
+                margin-left: 10px
+
+            p
+                color: #646665
+                margin-left: 10px
+
+                span
+                    color: red
+
+    .button-see-more
+        border: none
+        background-color: tomato
+        color: white
+        width: 100px
+        height: 45px
+        font-weight: lighter
+        font-size: 1rem
+        margin: 10px auto

@@ -1,0 +1,18 @@
+.carousel {
+    position: relative;
+    margin-bottom: $space-L;
+    &__image {
+        max-width: 100%;
+    }
+    &__arrow-left {
+        @include positionY-center;
+        left: 0;
+    }
+    &__arrow-right {
+        @include positionY-center;
+        right: 0;
+    }
+    &__items {
+        @include flex-center;
+    }
+}
