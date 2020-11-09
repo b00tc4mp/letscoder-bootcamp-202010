@@ -32,7 +32,7 @@ describe('SPEC SearchTracks()', function () {
 
                             type = 'track'
 
-                            spotyToken = "BQBNkKs-4eqx3ecmL4xWm3C5JFxd5i2a_7pyH56Q07pnprqkQnBh1q4kXOR9UfHwquBusZOupg2eREqvlu0orj1BnVx2QlkSD6H7PqczImImWnDyk21bNnWTDFFkvERHY4wHQ5BE7U_2IyRGw7vXHky4wAgmo_c"
+                            spotyToken = "BQDxGlJ_C-DcJJITySA1CXY5-ilY5NA-ZW9w4elNdYol2w9TN9sOXJWCt2p979dlYj6F0RsLodwIXfTc7MxYIB9pklu5JtlrU29M4NTCXAXr_k4nUKD7HmAl-_Bs_r49DeWyePRU0z7Xl_21v4OMjzMQZooYvZU"
 
                             query = ['jackson', 'hendrix', 'queen', 'stones', 'redding'].random()
 
