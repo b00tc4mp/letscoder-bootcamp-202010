@@ -1,0 +1,5 @@
+var c = new Caray()
+c.push('a')
+c.push('b')
+c.push('c')
+c.forEach(function(element) { console.log(element) })

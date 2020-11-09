@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex; /* Centramos tablero de juego */
+    font-family: sans-serif;
+    justify-content: center;
+    color: #2a4d69;
+    font-size: 20px;
+
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: auto;
+    font-size: 30px;
+}
+
+span {
+    font-size: 15px;
+}
+
+.container {
+
+    background: #fcf8e8;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    
+    
+}
+
+.container-score {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    
+}
+
+.turn {
+    background: floralwhite;
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px;
+    width: 35%;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.score{
+    background: floralwhite;
+    font-size: 35px;
+    height: 50px;
+    width: 55%;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    background: #adcbe3;
+   
+}
+
+.cells {
+    height: 150px;
+    width: 150px;
+    background: #fcf8e8;
+    cursor: pointer;
+    text-align: center;
+    font-size: 85px;
+    padding-top: 20px;
+}
+
+.reset {
+    display: flex;
+    padding-top: 15px; 
+    justify-content: center;
+}
+
+#reset-button {
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bolder;
+    border: none;
+    background: none;
+    font-size: 15px;
+    color: #2a4d69;
+    
+}
+
+#reset-button:hover {
+    color: #999999;
+}

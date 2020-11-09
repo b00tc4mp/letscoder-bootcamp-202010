@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-layout</title>
+</head>
+
+<body>
+    <script>
+        document.body.style.display = 'flex';
+        //document.body.style.alignItems = 'center';
+        document.body.style.justifyContent = 'center';
+
+        var container = document.createElement('div'); // create a <div> node
+        container.style.width = '75vw';
+        container.style.height = '250vh';
+
+        var box1 = document.createElement('div');
+        box1.style.backgroundColor = 'tomato';
+        box1.innerText = "box1";
+
+
+        var box2 = document.createElement('div');
+        box2.style.backgroundColor = 'skyblue';
+        box2.innerText = "box2";
+
+        var box3 = document.createElement('div');
+        box3.style.backgroundColor = 'chocolate';
+        box3.innerText = "box3";
+
+        var box4 = document.createElement('div');
+        box4.style.backgroundColor = 'violet';
+        box4.innerText = "box4";
+       
+
+        var box5 = document.createElement('div');
+        box5.style.backgroundColor = 'yellow';
+        box5.innerText = "box5";
+
+        var box6 = document.createElement('div');
+        box6.style.backgroundColor = 'red';
+        box6.innerText = "box6";
+
+        var box7 = document.createElement('div');
+        box7.style.backgroundColor = 'brown';
+        box7.innerText = "box7";
+
+        var box8 = document.createElement('div');
+        box8.style.backgroundColor = 'pink';
+        box8.innerText = "box8";
+
+        var box9 = document.createElement('div');
+        box9.style.backgroundColor = 'greenyellow';
+        box9.innerText = "box9";
+
+        document.body.append(container); // Appending function
+        container.append(box1, box2, box3, box4, box5, box6, box7, box8, box9); // Appending 'box' elements to their container
+
+        container.style.display = 'grid';
+        container.style.gridTemplateColumns = '1fr 1fr 1fr'; // 3 columns
+        container.style.gridTemplateRows = '1fr 1fr 1fr 1fr 1fr 1fr'; // 6 rows
+        container.style.gap = "2px"
+        box1.style.gridArea = "1/1/3/1" //box1 starts at row 1, column1 and ends at row 3, column 1.
+        box2.style.gridArea = "1/2/1/4" //box2 starts at row 1, column2 and ends at row 1, column 4.
+        box3.style.gridArea = "2/2/2/4" //box3 starts at row2, column2 and ends at row2, column4.
+        box4.style.gridArea = "3/1/4/3" //box 4 stars at row3, column1 and ends at row4, column 3.
+        box5.style.gridArea = "3/3/5/4" // etc, etc.
+        box6.style.gridArea = "4/1/5/3"
+        box7.style.gridArea = "5/1/7/2"
+        box8.style.gridArea = "5/2/6/4"
+        box9.style.gridArea = "6/2/7/4"
+    </script>
+</body>
+
+</html>

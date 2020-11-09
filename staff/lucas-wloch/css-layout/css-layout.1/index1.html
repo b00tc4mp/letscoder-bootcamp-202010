@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.body.style.display = 'flex'
+        document.body.style.alignItems = 'center'
+        document.body.style.justifyContent = 'center'
+        
+        var container = document.createElement('div')
+            container.style.backgroundColor = '#63CDF1'
+            container.style.width = '70vw'
+            container.style.height = '250vh'
+            container.style.gap = "15px"
+            container.style.display = "grid"
+            container.style.gridTemplateColumns = "1fr 1fr 1fr"
+            container.style.gridTemplateRows = "repeat(6,1fr)"
+            container.style.textAlign = "center"
+
+        var item1 = document.createElement('div')
+            item1.style.backgroundColor = '#FAA82A'
+            //item1.style.width = '10vw'
+            //item1.style.height = '10vh'
+            item1.innerText = "item1"
+            item1.style.border = "2px solid black"
+            item1.style.display = "flex"
+            item1.style.justifyContent = "center"
+            item1.style.alignItems = "center"
+            
+
+        var item2 = document.createElement('div')
+            item2.style.backgroundColor = '#FAA82A'
+            //item2.style.width = '10vw'
+            //item2.style.height = '10vh'
+            item2.innerText = "item2"
+            item2.style.border = "2px solid black"
+            item2.style.display = "flex"
+            item2.style.justifyContent = "center"
+            item2.style.alignItems = "center"
+
+        var item3 = document.createElement('div')
+            item3.style.backgroundColor = '#FAA82A'
+            //item3.style.width = '10vw'
+            //item3.style.height = '10vh'
+            item3.innerText = "item3"
+            item3.style.border = "2px solid black"
+            item3.style.display = "flex"
+            item3.style.justifyContent = "center"
+            item3.style.alignItems = "center"
+            
+        var item4 = document.createElement('div')
+            item4.style.backgroundColor = '#FAA82A'
+            //item4.style.width = '10vw'
+            //item4.style.height = '10vh'
+            item4.innerText = "item4"
+            item4.style.border = "2px solid black"
+            item4.style.display = "flex"
+            item4.style.justifyContent = "center"
+            item4.style.alignItems = "center"
+        
+        var item5 = document.createElement('div')
+            item5.style.backgroundColor = '#FAA82A'
+            //item5.style.width = '10vw'
+            //item5.style.height = '10vh'
+            item5.innerText = "item5"
+            item5.style.border = "2px solid black"
+            item5.style.display = "flex"
+            item5.style.justifyContent = "center"
+            item5.style.alignItems = "center"
+
+        var item6 = document.createElement('div')
+            item6.style.backgroundColor = '#FAA82A'
+            //item6.style.width = '10vw'
+            //item6.style.height = '10vh'
+            item6.innerText = "item6"
+            item6.style.border = "2px solid black"
+            item6.style.display = "flex"
+            item6.style.justifyContent = "center"
+            item6.style.alignItems = "center"
+
+        var item7 = document.createElement('div')
+            item7.style.backgroundColor = '#FAA82A'
+            //item7.style.width = '100px'
+            //item7.style.height = '100px'
+            item7.innerText = "item7"
+            item7.style.border = "2px solid black"
+            item7.style.display = "flex"
+            item7.style.justifyContent = "center"
+            item7.style.alignItems = "center"
+
+        var item8 = document.createElement('div')
+            item8.style.backgroundColor = '#FAA82A'
+            //item8.style.width = '10vw'
+            //item8.style.height = '10vh'
+            item8.innerText = "item8"
+            item8.style.border = "2px solid black"
+            item8.style.display = "flex"
+            item8.style.justifyContent = "center"
+            item8.style.alignItems = "center"
+
+        var item9 = document.createElement('div')
+            item9.style.backgroundColor = '#FAA82A'
+            //item9.style.width = '10vw'
+            //item9.style.height = '10vh'
+            item9.innerText = "item9"
+            item9.style.border = "2px solid black"
+            item9.style.display = "flex"
+            item9.style.justifyContent = "center"
+            item9.style.alignItems = "center"
+
+        container.append(item1,item2,item3,item4,item5,item6,item7,item8,item9)
+        document.body.append(container)
+        
+        //container.style.textJustify = "center"
+        
+        item1.style.gridArea = "1/1/3/2"
+        item2.style.gridArea = "1/2/1/4"
+        item3.style.gridArea = "2/2/2/4"
+        item4.style.gridArea = "3/1/4/3"
+        item5.style.gridArea = "3/3/5/4"
+        item6.style.gridArea = "4/1/5/3"
+        item7.style.gridArea = "5/1/7/2"
+        item8.style.gridArea = "5/2/6/4"
+        item9.style.gridArea = "6/2/7/4"
+
+
+    </script>
+</body>
+</html>

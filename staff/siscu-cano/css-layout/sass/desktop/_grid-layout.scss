@@ -1,0 +1,95 @@
+    .grid-layout {
+        @media (min-width: $breakpoint-desktop) {
+            // Layout with 3 sections
+            &--type3 {
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                div:nth-child(1) {
+                    grid-area: 1 / 1 / 5 / 3;
+                    background: $main-color;
+                }
+                div:nth-child(2) {
+                    grid-area: 1 / 3 / 3 / 6;
+                }
+                div:nth-child(3) {
+                    grid-area: 3 / 3 / 5 / 6;
+                }
+                div:nth-child(4) {
+                    grid-area: 5 / 4 / 9 / 6;
+                    background: $main-color;
+                }
+                div:nth-child(5) {
+                    grid-area: 5 / 1 / 7 / 4;
+                }
+                div:nth-child(6) {
+                    grid-area: 7 / 1 / 9 / 4;
+                }
+                div:nth-child(7) {
+                    grid-area: 9 / 1 / 13 / 3;
+                    background: $main-color;
+                }
+                div:nth-child(8) {
+                    grid-area: 9 / 3 / 11 / 6;
+                }
+                div:nth-child(9) {
+                    grid-area: 11 / 3 / 13 / 6;
+                }
+            }
+            // Layout with 2 sections
+            &--type2 {
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                div:nth-child(1) {
+                    grid-area: 1 / 1 / 5 / 3;
+                    background: $main-color;
+                }
+                div:nth-child(2) {
+                    grid-area: 1 / 3 / 3 / 6;
+                }
+                div:nth-child(3) {
+                    grid-area: 3 / 3 / 5 / 6;
+                }
+                div:nth-child(4) {
+                    grid-area: 5 / 4 / 9 / 6;
+                    background: $main-color;
+                }
+                div:nth-child(5) {
+                    grid-area: 5 / 1 / 7 / 4;
+                }
+                div:nth-child(6) {
+                    grid-area: 7 / 1 / 9 / 4;
+                }
+            }
+            // Layout with 3 sections vertical
+            &--type1 {
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                div:nth-child(1) {
+                    grid-area: 1/1/1/4;
+                }
+                div:nth-child(2) {
+                    grid-area: 2/4/3/1;
+                }
+                div:nth-child(3) {
+                    grid-area: 1/4/3/6;
+                    background: $main-color;
+                }
+            }
+            &--type0 {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: $space-XL;
+                img {
+                    max-width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+    }

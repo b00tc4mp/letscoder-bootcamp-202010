@@ -1,0 +1,20 @@
+.title {
+    @include flex-center;
+    flex-direction: column;
+    &__image {
+        display: block;
+    }
+    &__text {
+        border-top: 2px solid $main-color;
+        border-bottom: 2px solid $main-color;
+        padding: 19px;
+        color: $main-color
+    }
+    &__subtitle {
+        color: #FFFFFF;
+        text-align: center;
+        background-color: $main-color;
+        width: 100%;
+        padding: 6px 0px;
+    }
+}

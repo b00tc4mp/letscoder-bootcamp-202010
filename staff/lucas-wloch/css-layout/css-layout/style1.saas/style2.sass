@@ -1,0 +1,49 @@
+@import config
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+    +center-content(flex,center,center)
+.section
+    background-color:  rgba(38, 136, 128, 0.747)
+    +center-content(flex,center,center)
+    flex-direction: column
+    +size(95vw,300vh)
+    +margin(0,0,auto,auto)
+//usar margin auto en los constados del contentdor y margin definido en la seccion para darle tamaño
+
+.container
+    +size(70vw,250vh)
+    +create-grid(grid,1fr 1fr 1fr,repeat(6,1fr),13px)
+    text-align: center
+    background-color: $backgroundColor-container
+    
+    
+
+    &__item
+        +center-content(flex,center,center)
+        border: 2px solid black
+        background-color: $backgroundColor-container-item
+        width: 100%
+        
+       
+.one
+    grid-area: 1/1/3/2
+.two
+    grid-area: 1/2/1/4
+.three
+    grid-area: 2/2/2/4
+.four
+    grid-area: 3/1/4/3
+.five
+    grid-area: 3/3/5/4
+.six
+    grid-area: 4/1/5/3
+.seven
+    grid-area: 5/1/7/2
+.eight
+    grid-area: 5/2/6/4
+.nine
+    grid-area: 6/2/7/4

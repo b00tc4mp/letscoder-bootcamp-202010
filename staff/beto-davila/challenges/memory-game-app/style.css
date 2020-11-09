@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex; /* Centramos tablero de juego */
+    font-family: sans-serif;
+    justify-content: center;
+    color: #2a4d69;
+    align-items: center;
+    
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: auto;
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 13px;
+    text-align: center;
+}
+
+.container-general {
+    margin-top: 35px;
+    background-color: rgb(229, 250, 196);
+    height: 90vh;
+    width: 100vh;
+    border-radius: 10px;
+}
+
+.container-score {
+    display: flex;
+    height: 75px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.score {
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    height: 55%;
+    width: 55%;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.container-image {
+    margin: 5px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer; 
+    transform: scale(1); 
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+
+.container-image:active {
+    transform: scale(0.97);
+    transition: transform .1s;
+}
+
+.container-image.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    position: absolute;
+    background: #1C7CCC;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
