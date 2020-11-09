@@ -1,0 +1,59 @@
+body {
+    background-image: url(cruz.jpg);
+}
+
+h1 {
+    text-align: center;
+    border: solid 1px black;
+    background: aqua;
+    color: white;
+    margin: 10px;
+    padding-left: 10px
+}
+
+h2 {
+    margin-left: 80px;
+}
+
+div {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-rows: 10vw 10vw 10vw;
+    width: 30vw;
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    border: 1px solid aqua;
+    border-radius: 10px;
+    background: rgb(206, 200, 200);
+    font-size: 8vw;
+}
+
+.result-panel {
+    font-size: 5vw;
+    color: white;
+    font-family: comic;
+    font-style: normal;
+    width: 400px;
+    height: 150px;
+    -moz-border-radius: 0 50% / 0 100%;
+    -webkit-border-radius: 0 50% / 0 100%;
+    border-radius: 0 50% / 0 100%;
+    background: aqua;
+    border: 3px solid #555;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.result-title {
+    color: black;
+    font-size: 2rem;
+}

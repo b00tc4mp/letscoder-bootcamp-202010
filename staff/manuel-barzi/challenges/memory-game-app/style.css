@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    background-color: yellow;
+    grid-gap: 10px;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: transform 2s;
+}
+
+.card__front {
+    position: absolute;
+    transform: translateZ(1px);
+}
+
+.card__back {
+    position: absolute;
+}
+
+.card--flip {
+    transform: rotateY(0deg)
+}

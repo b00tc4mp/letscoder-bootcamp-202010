@@ -1,0 +1,18 @@
+.header {
+    &-fixed {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        &>div {
+            display: flex;
+            flex: 1;
+            align-items: center;
+        }
+        &__login {
+            margin-right: 20px;
+        }
+        &__nav-mobile {
+            margin-right: auto;
+        }
+    }
+}

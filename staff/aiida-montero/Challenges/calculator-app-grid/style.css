@@ -1,0 +1,73 @@
+*{margin: 40px
+    padding:0px¨
+    }
+
+
+h1 {
+    border: 1.5px solid aquamarine;
+    padding-block: 50px;
+    background: rosybrown;
+    text-align:center;
+    color: white;
+    border-radius: 10px;
+    font-family: apple-system;
+    letter-spacing: 2px;
+    font-style: italic;
+    }
+
+    .contenedor{
+        text-align: center;
+        max-width: 1000px;
+        border: 3px solid aqua;
+        margin: auto;
+        line-height: 50px;
+        background: grey;
+
+    }
+    .contenedor > button {
+        display: block;
+        padding: 0;
+        color: :black;
+        background:grey;
+        box-shadow:2px 2px 10px black;
+        height: 40px;
+    }
+    .calculadora {
+        display: flex; 
+        flex-flow: column; 
+        align-items: center;
+      }
+
+      .display {
+        border: 1px solid black;
+        background: blue;
+        flex-flow: column; 
+        align-items: center;
+        display:block;
+        text-align: center;
+        max-width: 1000px;
+        border: 1px solid black;
+        margin: auto;
+        line-height: 40px;
+        background: grey;
+        width: 240px;
+      }
+
+      .igual{
+          border:1px;
+          flex-flow: column; 
+        border: 1px solid black;
+        align-items: center;
+        display:block;
+        text-align: center;
+        max-width: 1000px;
+        margin: auto;
+        line-height: 40px;
+        background: grey;
+        width: 240px;
+      }
+      
+      .contenedor {
+        display: grid;
+        grid-template-columns: 60px 60px 60px 60px;
+}
