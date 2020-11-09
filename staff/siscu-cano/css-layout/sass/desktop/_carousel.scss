@@ -1,0 +1,9 @@
+.carousel {
+    @media (min-width: $breakpoint-desktop) {
+        &__items {
+            img {
+                width: 30px;
+            }
+        }
+    }
+}

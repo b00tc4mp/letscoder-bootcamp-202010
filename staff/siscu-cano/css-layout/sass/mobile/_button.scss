@@ -1,0 +1,16 @@
+.button {
+    display: block;
+    padding: 0.35em 1.2em;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    background-color: $main-color;
+    margin-bottom: $space-XL;
+    &--center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

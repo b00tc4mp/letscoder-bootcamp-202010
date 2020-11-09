@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    /*font-weight: normal;
+    font-family: sans-serif;*/
+    /*font-size: 70px;*/
+}
+body {
+    margin: 60px;
+    padding:0;
+    /*background-color: white;*/
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: radial-gradient( rgb(95, 67, 24),rgb(247, 206, 118), rgb(66, 80, 15));
+}
+.game-grid {
+    display: flex;
+    background-color:rgba(0, 0, 0, 0.15);
+    /*border: 2px solid black;*/
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    width: 450px;
+    height: 550px;
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    min-height: 60vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    border-radius: 10px;
+}
+.puntuaciones {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color: #111;
+    height: 100px;
+    width: 425px;
+    padding: 20px;
+    /*grid-area: 1 / 1 / 1 / 5;*/
+    margin: 10px 10px;
+    place-self: center center;
+    border-radius: 20px;
+    justify-content: space-arround;
+    align-content: center;
+}
+.jugando{
+    font-size: 20px;
+    border-radius: 5px;
+    background: rgba(10,10,10,0.9);
+    border: 2px solid #111;
+    padding: 20px;
+    margin: 0;
+    color: white;
+    /*width: span 4;*/
+    justify-self: end;
+    height: 90px;
+}
+.tic-tac-toe-grid {
+    background-color: rgba(255,255,255,0.7);
+    border: 2px solid black;
+    /*place-self: flex-end center;*/
+    width: 400px;
+    height: 400px;
+    /*margin-left: 25px;
+    margin-right: 10px;*/
+    margin-bottom: 20px;
+    
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: flex-end;
+    justify-self: flex-end;
+    align-self: center;
+    border-radius: 15px;
+}
+.tic-tac-toe-grid > button {
+    font-size: 70px;
+}
+.button {
+    cursor: pointer;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+    
+    /*font-size: 60px;*/
+    border-radius: 5px;
+    background: grey;
+    border: 2px solid #111;
+    padding: 20px;
+    color: black;
+}
+.button > text {
+    font-size: 100px;
+} 

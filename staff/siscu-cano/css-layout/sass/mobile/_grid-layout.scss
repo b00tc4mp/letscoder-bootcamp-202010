@@ -1,0 +1,40 @@
+.grid-layout {
+    // Layout with 3 sections
+    &--type3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 9fr;
+        margin-bottom: $space-L;
+        img {
+            max-width: 100%;
+        }
+    }
+    // Layout with 2 sections
+    &--type2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6fr;
+        margin-bottom: $space-L;
+        img {
+            max-width: 100%;
+        }
+    }
+    // Layout with 3 sections vertical
+    &--type1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        margin-bottom: $space-L;
+        img {
+            max-width: 100%;
+        }
+    }
+    &--type0 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $space-XL;
+        img {
+            max-width: 100%;
+        }
+    }
+}

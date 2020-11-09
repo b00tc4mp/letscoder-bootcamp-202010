@@ -1,0 +1,42 @@
+
+h1{
+	text-align: center;
+	font-family: 'Lucida Sans';
+	color:black;
+	border: solid 1px black ;
+	border-radius: 10px;
+	font-style: oblique;
+	font-weight: 200;
+	border-bottom-style: dotted;
+
+}
+
+
+
+h3 {
+	text-align: left;
+	font-family: 'Lucida Sans';
+	font-size: 1fr;
+	
+	color:black;
+	font-style: oblique;
+
+}
+
+
+.grid{
+	display: grid;
+	height: 500px;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	grid-template-columns: 2fr 2fr 2fr 2fr;
+	
+}
+
+body {
+	background-image: url(memoria.jpg);
+
+	background-size: 100vw;
+}
