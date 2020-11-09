@@ -46,6 +46,7 @@ function toggleLike(token, id, callback) {
         (status, response) => {
             if (status === 200) {
                 const { likes = [] } = JSON.parse(response)
+
                 const index = likes.indexOf(id)
                 if (index > -1) likes.splice(index, 1)
                 else likes.push(id)

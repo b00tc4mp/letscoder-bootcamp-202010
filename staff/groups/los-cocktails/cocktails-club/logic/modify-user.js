@@ -1,3 +1,4 @@
+
 function modifyUser(changes, token, callback) {
   if (typeof changes !== "object")
     throw new TypeError(changes + " is not an object");
@@ -11,7 +12,7 @@ function modifyUser(changes, token, callback) {
     "PATCH",
     "https://b00tc4mp.herokuapp.com/api/v2/users",
     { "Content-type": "application/json" },
-    `${changes}`,
+    JSON.stringify(changes),
     function (status, response) {
       if (status === 204) callback(null);
       else {

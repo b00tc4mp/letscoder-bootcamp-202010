@@ -72,14 +72,15 @@ class Home extends Component {
 
   handleLike = (id) => {
     const { token } = sessionStorage;
+    const {state: {search, query}} = this
     toggleLike(token, id, (error) => {
       if (error) return this.setState({ error: error.message });
-      if (this.state.search === "name")
-        this.handleSearchByName(this.state.query);
-      if (this.state.search === "ingredient")
-        this.handleSearchByIngredient(this.state.query);
-      if (this.state.search === "favourites") this.handleShowFavourites();
-      if (this.state.search === "random")
+      if (search === "name")
+        this.handleSearchByName(query);
+      if (search === "ingredient")
+        this.handleSearchByIngredient(query);
+      if (search === "favourites") this.handleShowFavourites();
+      if (search === "random")
         searchById(token, id, (error, results) => {
           if (error) return this.setState({ error: error.message });
           this.setState({ results });
@@ -129,7 +130,7 @@ class Home extends Component {
         {error && <Feedback error={error} color="white" />}
         {results && results.length && (
           <Results items={results} onLike={handleLike} />
-        )}
+        )} 
       </>
     );
   }

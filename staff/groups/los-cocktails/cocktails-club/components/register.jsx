@@ -4,7 +4,7 @@ class Register extends Component {
   constructor(){
     super()
 
-    this.state = {}
+    this.state = { }
   }
 
   handleRegister = (fullname,email,password,repassword) => {
@@ -20,7 +20,7 @@ class Register extends Component {
                   if (error) return this.setState({error: error.message})
                   
                   sessionStorage.token = token
-  
+
                   onRegisterSuccess()
               }) 
           })
@@ -55,7 +55,7 @@ return <>
         <input className="register__input" name="password" type="password" placeholder="********" />
         <p className="register__p">Repassword</p>
         <input className="register__input" name="repassword" type="password" placeholder="********" />
-        {error && <Feedback error={error } />}
+        {error && <Feedback error={error} />}
         <br/> <button className="register__button">Sign Up</button>
       </form>
       <p className="register__p2">Have an account?<span className="register__span" onClick={returnToLogin}>Log in here</span></p>
