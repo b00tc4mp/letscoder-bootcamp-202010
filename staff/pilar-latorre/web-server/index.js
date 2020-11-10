@@ -42,6 +42,7 @@ app.post('/register', (req, res) => {
 
         const parts = content.split('&')
 
+
         let [, fullname] = parts[0].split('=')
         let [, email] = parts[1].split('=')
         let [, password] = parts[2].split('=')
