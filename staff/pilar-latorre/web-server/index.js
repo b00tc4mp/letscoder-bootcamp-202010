@@ -53,7 +53,7 @@ app.post('/register', (req, res) => {
 
         password = decodeURIComponent(password)
 
-        const id = `ID-${Math.random()}-${Date.now()}`
+        const id = `${Date.now()}${`${Math.random() * 10**18}`.padStart(18, '0')}`
 
         const user = { id, fullname, email, password}
 
@@ -105,6 +105,4 @@ app.get('/login', (req, res) =>{
 })
 
 
-app.listen(port,()=>{
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`)) 
