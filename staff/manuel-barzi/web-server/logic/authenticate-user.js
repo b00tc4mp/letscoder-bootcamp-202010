@@ -1,8 +1,11 @@
 const fs = require('fs')
+const { validateEmail, validatePassword, validateCallback } = require('./helpers/validations')
 
 //const authenticateUser = (email, password, callback) => {
 module.exports = (email, password, callback) => {
-    // TODO validate all arguments
+    validateEmail(email)
+    validatePassword(password)
+    validateCallback(callback)
 
     fs.readdir('./data/users', (error, files) => {
         if (error) return callback(error);
