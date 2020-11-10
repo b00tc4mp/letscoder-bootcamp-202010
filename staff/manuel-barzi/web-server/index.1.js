@@ -111,8 +111,6 @@ app.post('/login', (req, res) => {
 
         // TODO check user exists in data (read all files, and try to match a user, otherwise login error)
 
-        // call authenticate user logic
-
         res.send('ok, logged in ,)')
     })
 })
