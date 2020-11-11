@@ -3,7 +3,6 @@ const authenticateUser = require('./authenticate-user')
 const { createId } = require('../utils/ids')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const fs = require('fs')
-const path = require('path')
 
 describe('authenticateUser()', () => {
     describe('when user already exists', () => {
@@ -19,7 +18,7 @@ describe('authenticateUser()', () => {
 
             const json = JSON.stringify(user)
 
-            file = path.join(__dirname, `../data/users/${id}.json`)
+            file = `./data/users/${id}.json`
 
             fs.writeFile(file, json, done)
         })

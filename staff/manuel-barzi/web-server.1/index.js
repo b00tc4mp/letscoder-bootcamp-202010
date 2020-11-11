@@ -2,11 +2,28 @@ const express = require('express')
 const app = express()
 const port = 3000
 const fs = require('fs')
-const path = require('path')
-const authenticateUser = require('./logic/authenticate-user')
+
+app.get('/', (req, res) => {
+    res.send(':)')
+})
+
+app.get('/helloworld', (req, res) => {
+    //res.send('Hello World!')
+
+    //res.set('Content-type', 'text/plain')
+    //res.set('Access-Control-Allow-Origin', '*')
+
+    //res.send(`<h1>hola mundo</h1>`)
+
+    fs.readFile('./public/helloworld/index.html', 'utf8', (error, content) => {
+        if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+
+        res.send(content)
+    })
+})
 
 app.get('/register', (req, res) => {
-    fs.readFile(path.join(__dirname, './public/register/index.html'), 'utf8', (error, content) => {
+    fs.readFile('./public/register/index.html', 'utf8', (error, content) => {
         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
         res.send(content)
@@ -46,13 +63,13 @@ app.post('/register', (req, res) => {
 
         //console.log(fullname, email, password)
 
-        const id = `${Date.now()}${`${Math.random() * 10 ** 18}`.padStart(18, '0')}`
+        const id = `${Date.now()}${`${Math.random() * 10**18}`.padStart(18, '0')}`
 
         const user = { id, fullname, email, password }
 
         const json = JSON.stringify(user)
 
-        fs.writeFile(path.join(__dirname, `./data/users/${id}.json`), json, error => {
+        fs.writeFile(`./data/users/${id}.json`, json, error => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
             res.send(`ok, user registered ,) ID: ${id}`)
@@ -61,7 +78,7 @@ app.post('/register', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-    fs.readFile(path.join(__dirname, './public/login/index.html'), 'utf8', (error, content) => {
+    fs.readFile('./public/login/index.html', 'utf8', (error, content) => {
         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
         res.send(content)
@@ -90,21 +107,13 @@ app.post('/login', (req, res) => {
 
         password = decodeURIComponent(password)
 
-        authenticateUser(email, password, (error, userId) => {
-            if (error) {
-                return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
-                    if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-    
-                    res.send(content)
-                })
-            }
+        //console.log(email, password)
 
-            fs.readFile(path.join(__dirname, './public/home/index.html'), 'utf8', (error, content) => {
-                if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+        // TODO check user exists in data (read all files, and try to match a user, otherwise login error)
 
-                res.send(content)
-            })
-        })
+        // call authenticate user logic
+
+        res.send('ok, logged in ,)')
     })
 })
 
