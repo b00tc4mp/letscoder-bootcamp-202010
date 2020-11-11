@@ -4,7 +4,7 @@ const port = 3000
 const fs = require('fs')
 const path = require('path')
 const authenticateUser = require('./logic/authenticate-user')
-const retrieveUser = require('')
+const retrieveUser = require('./logic/retrieve-user')
 
 app.get('/register', (req, res) => {
     fs.readFile(path.join(__dirname, './public/register/index.html'), 'utf8', (error, content) => {
