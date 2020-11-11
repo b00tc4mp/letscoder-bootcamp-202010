@@ -13,6 +13,10 @@ module.exports = {
         if (!password.trim().length) throw new Error('password is empty or blank')
     },
 
+    validateId(id) {
+        if (typeof id !== 'string') throw new TypeError(`${id} is not an id`)
+    },
+
     validateFullname(fullname){
 
         if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a full name')
@@ -20,7 +24,6 @@ module.exports = {
         if (!fullname.trim().length) throw new Error('full name is empty or blank')
 
     },
-
     validateCallback(callback) {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
     }

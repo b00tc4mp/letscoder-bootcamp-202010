@@ -26,7 +26,7 @@ module.exports = (email, password, callback) => {
                 
                 // Returns json file from ./data/users if successful
                 fs.readFile(path.join(__dirname, `../data/users/${file}`), 'utf8', (error, json) => {
-                    if (error) return console.error(error)
+                    if (error) return callback(error)
                     // destructuring the json variable to get what we need. Credentials we input have to match with the ones registered in the json file.
                     // In destructuring we rename email and password (_email, _password) to avoid shadowing with the params we pass first
                     const { id, email: _email, password: _password } = JSON.parse(json)

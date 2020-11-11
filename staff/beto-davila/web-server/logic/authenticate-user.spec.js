@@ -25,7 +25,7 @@ describe('authenticateUser()', () => {
 
             const json = JSON.stringify(user) // converts 'user' object to JSON
 
-            file = `./data/users/${id}.json` // file path definition
+            file = `../data/users/${id}.json` // file path definition
 
             fs.writeFile(path.join(__dirname, file), json, done) // file creation (path, content, done)
         })
@@ -66,7 +66,7 @@ describe('authenticateUser()', () => {
             })
         })
 
-        afterEach(done => fs.unlink(file, done))
+        afterEach(done => fs.unlink(path.join(__dirname, file), done))
     })
 
     describe('when user does not exist', () => {
