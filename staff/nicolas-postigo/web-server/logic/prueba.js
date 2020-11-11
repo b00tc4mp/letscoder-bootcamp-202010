@@ -1,11 +1,11 @@
 const fs = require('fs')
-const { validateEmail, validatePassword, validateCallback, validateFullname } = require('./helpers/validations')
+const { validateEmail, validatePassword, validateCallback, validateFullName } = require('./helpers/validations')
 const { createId } = require('../utils/ids')
 const path = require('path')
 const semaphore = require('./helpers/semaphore')
 
 module.exports = (fullname, email, password, callback) => {
-    validateFullname(fullname)
+    validateFullName(fullname)
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
@@ -32,26 +32,27 @@ module.exports = (fullname, email, password, callback) => {
                         }
 
                         const { email: _email } = JSON.parse(json)
-                        
+
                         if (email === _email) {
                             done()
 
                             callback(new Error(`e-mail ${email} already registered`))
                         } else check(files, ++index)
                     })
-
                 } else {
                     const id = createId()
 
                     const user = { id, fullname, email, password }
 
                     const json = JSON.stringify(user)
+
                     fs.writeFile(path.join(usersPath, `${id}.json`), json, error => {
                         if (error) {
                             done()
 
                             return callback(error)
                         }
+
                         done()
 
                         callback(null)
