@@ -17,9 +17,11 @@ module.exports = {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
     },
 
-    validateFullName(fullname) {
-        if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
+    validateId(id) {
+        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
 
-        if (!fullname.trim().length) throw new Error('fullname is empty or blank')
+        if (!id.trim().length) throw new Error('id is empty or blank')
+
+        if (id.length !== 31) throw new Error('id length is not 31')
     }
 }

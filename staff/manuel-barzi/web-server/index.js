@@ -4,6 +4,7 @@ const port = 3000
 const fs = require('fs')
 const path = require('path')
 const authenticateUser = require('./logic/authenticate-user')
+const retrieveUser = require('./logic/retrieve-user')
 
 app.get('/register', (req, res) => {
     fs.readFile(path.join(__dirname, './public/register/index.html'), 'utf8', (error, content) => {
@@ -68,6 +69,8 @@ app.get('/login', (req, res) => {
     })
 })
 
+let session
+
 app.post('/login', (req, res) => {
     debugger
     req.setEncoding('utf8')
@@ -94,18 +97,37 @@ app.post('/login', (req, res) => {
             if (error) {
                 return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
                     if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-    
+
                     res.send(content)
                 })
             }
 
-            fs.readFile(path.join(__dirname, './public/home/index.html'), 'utf8', (error, content) => {
-                if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+            session = userId
 
-                res.send(content)
-            })
+            res.redirect('/')
         })
     })
+})
+
+app.get('/', (req, res) => {
+    if (session)
+        fs.readFile(path.join(__dirname, './public/home/index.html'), 'utf8', (error, content) => {
+            if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+
+            retrieveUser(session, (error, user) => {
+                if (error) {
+                    return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
+                        if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+
+                        res.send(content)
+                    })
+                }
+
+                res.send(content.replace('{fullname}', user.fullname))
+            })
+
+        })
+    else res.redirect('/login')
 })
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
