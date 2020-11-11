@@ -1,24 +1,18 @@
 const callbacks = []
-let blocked = false
+let doing = false
 
-// TODO refactor and make it work!
+const done = () => {
+    if (callbacks.length) return callbacks.shift()(done)
+    
+    doing = false
+}
 
 module.exports = callback => {
     callbacks.push(callback)
 
-    if (!blocked) {
-        blocked = true
+    if (!doing) {
+        doing = true
 
-        const done = () => {
-            const nextIndex = callbacks.indexOf(callback) + 1
-
-            if (nextIndex < callbacks.length) 
-                callback = callbacks[nextIndex]
-            else blocked = false
-
-            callback(done)
-        }
-
-        callback(done)
+        done()
     }
 }
