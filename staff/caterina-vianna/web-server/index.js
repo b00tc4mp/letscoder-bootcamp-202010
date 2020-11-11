@@ -44,7 +44,6 @@ app.post("/register", (req, res) => {
     content += chunk; // content = content + chunk
   });
 
-  //para comprobar que está todo
   req.on("end", () => {
     debugger;
 
@@ -56,7 +55,6 @@ app.post("/register", (req, res) => {
 
     //fullname = fullname.replaceAll('+', ' ') // ERROR not supported in NodeJS yet (but in the browsers yes :( ))
 
-    //quita el mas y añade un espacio
     fullname = fullname.split("+").join(" ");
 
     email = decodeURIComponent(email);

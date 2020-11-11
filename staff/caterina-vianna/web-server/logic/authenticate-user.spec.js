@@ -87,6 +87,7 @@ describe("authenticateUser()", () => {
         "surname"
       )}`;
       email = 2222;
+      debugger;
       password = randomStringWithPrefix("password");
     });
 
@@ -110,5 +111,11 @@ describe("authenticateUser()", () => {
         `invalid e-mail`
       );
     });
+
+    it("should fail on password is not a string");
+    expect(() => authenticateUser(email, null, () => {})).to.throw(
+      TypeError,
+      `${password} is not a string`
+    );
   });
 });
