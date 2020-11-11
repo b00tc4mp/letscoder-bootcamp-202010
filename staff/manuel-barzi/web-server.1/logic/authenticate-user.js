@@ -15,7 +15,7 @@ module.exports = (email, password, callback) => {
                 const file = files[index]
 
                 fs.readFile(`./data/users/${file}`, 'utf8', (error, json) => {
-                    if (error) return console.error(error)
+                    if (error) return callback(error)
 
                     const { id, email: _email, password: _password } = JSON.parse(json)
 

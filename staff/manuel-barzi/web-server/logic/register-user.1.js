@@ -3,6 +3,8 @@ const { validateEmail, validatePassword, validateCallback, validateFullName } = 
 const { createId } = require('../utils/ids')
 const path = require('path')
 
+// WARN this solution fails on concurrent registers!
+
 module.exports = (fullname, email, password, callback) => {
     validateFullName(fullname)
     validateEmail(email)
@@ -11,25 +13,21 @@ module.exports = (fullname, email, password, callback) => {
 
     const usersPath = path.join(__dirname, '../data/users')
 
-    try {
-        const files = fs.readdirSync(usersPath);
+    fs.readdir(usersPath, (error, files) => {
+        if (error) return callback(error);
 
         (function check(files, index = 0) {
             if (index < files.length) {
                 const file = files[index]
 
-                try {
-                    const json = fs.readFileSync(path.join(usersPath, file), 'utf8')
+                fs.readFile(path.join(usersPath, file), 'utf8', (error, json) => {
+                    if (error) return console.error(error)
 
                     const { email: _email } = JSON.parse(json)
 
-                    if (email === _email)
-                        callback(new Error(`e-mail ${email} already registered`))
-                    else
-                        check(files, ++index)
-                } catch (error) {
-                    return callback(error)
-                }
+                    if (email === _email) callback(new Error(`e-mail ${email} already registered`))
+                    else check(files, ++index)
+                })
             } else {
                 const id = createId()
 
@@ -37,16 +35,12 @@ module.exports = (fullname, email, password, callback) => {
 
                 const json = JSON.stringify(user)
 
-                try {
-                    fs.writeFileSync(path.join(usersPath, `${id}.json`), json)
-                } catch(error) {
-                    return callback(error)
-                }
+                fs.writeFile(path.join(usersPath, `${id}.json`), json, error => {
+                    if (error) return callback(error)
 
-                callback(null)
+                    callback(null)
+                })
             }
         })(files)
-    } catch (error) {
-        callback(error)
-    }
+    })
 }
