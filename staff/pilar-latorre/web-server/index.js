@@ -4,19 +4,6 @@ const fs = require('fs')
 const app = express ()
 const port = 3000
 
-app.get('/',(req, res) => {
-    res.send ('Hello World!')
-
-})
-
-app.get('/helloworld', (req, res) => {
-
-    fs.readFile('./public/helloworld/index.html', 'utf8', (error, content) => {
-        if(error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-
-        res.send(content)
-    })
-})
 
 app.get('/register', (req, res) => {
 

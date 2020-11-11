@@ -9,29 +9,29 @@ describe('SPEC registerUser()', () => {
         let id, fullname, email, password, repassword, file
 
         beforeEach(done => {
-            id = createId()
+            
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
             repassword = password
 
-            file = `./data/users/${id}.json`
-
+            
             done()
-
+            
         })
-
+        
         it('should succed on new user', done => {
-            registerUser(id, fullname, email, password, repassword, error => {
+            registerUser(fullname, email, password, repassword, (error, id) => {
                 expect(error).to.be.null
+                
+                file = `./data/users/${id}.json`
 
                 fs.readFile(file, 'utf8', (error, json) => {
                     expect(error).to.be.null
 
-                    const { id: _id, email: _email, password: _password, fullname: _fullname } = JSON.parse(json)
+                    const {  email: _email, password: _password, fullname: _fullname } = JSON.parse(json)
 
-                    expect(id).to.be.a('string')
-                    expect(id).to.equal(_id)
+                    
                     expect(email).to.be.a('string')
                     expect(email).to.equal(_email)
                     expect(password).to.be.a('string')
@@ -56,6 +56,7 @@ describe('SPEC registerUser()', () => {
         let id, fullname, email, password, repassword, file, user, json
 
         beforeEach(done => {
+            
             id = createId()
             fullname = `${randomStringWithPrefix('name')}${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
@@ -90,7 +91,7 @@ describe('SPEC registerUser()', () => {
         })
 
         it('should fail on existing user', done => {
-            registerUser(id, fullname, email, password, repassword, error => {
+            registerUser( fullname, email, password, repassword, error => {
                 expect(error).to.exist
                 expect(error).to.be.instanceOf(Error)
                 expect(error.message).to.have.length.greaterThan(0)

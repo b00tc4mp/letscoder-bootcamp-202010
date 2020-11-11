@@ -34,6 +34,14 @@ module.exports = {
 
         if (password !== repassword) throw new Error('passwords don\'t match')
 
+    },
+
+    validateId(id) {
+        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+
+        if (!id.trim().length) throw new Error('id is empty or blank')
+
+        if (id.length !== 31) throw new Error(`${id} is not a valid id`)
     }
 
 

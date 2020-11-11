@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node .",
     "inspect": "node inspect .",
-    "test": "npx mocha logic",
-    "test-inspect": "npx mocha inspect logic"
+    "test": "npx mocha logic/*.spec.js",
+    "test-inspect": "npx mocha inspect logic/*.spec.js"
   },
   "author": "",
   "license": "ISC",

@@ -1,45 +1,60 @@
 const fs = require('fs')
+const { validateEmail, validatePassword, validateCallback, validateFullname, validateRepassword } = require('./helpers/validations')
+const { createId } = require('../utils/ids')
+const path = require('path')
 
-const { validateFullname, validateEmail, validatePassword, validateRepassword, validateCallback } = require('./helpers/validations') 
-
-module.exports = (id, fullname, email, password, repassword, callback) => {
-
+module.exports = (fullname, email, password, repassword, callback) => {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
-    validateRepassword(password, repassword)
     validateCallback(callback)
+    validateRepassword(password, repassword)
 
+    const usersPath = path.join(__dirname, '../data/users')
 
-    const user = {id, fullname, email, password}
+    try {
+        const files = fs.readdirSync(usersPath);
 
-    const json = JSON.stringify(user);
-
-    fs.readdir('./data/users', (error, files) => {
-       
         (function check(files, index = 0) {
-            if (index < files.length){  
+            if (index < files.length) {
                 const file = files[index]
 
-                fs.readFile(`./data/users/${file}`,'utf8',(error, json) => {
-                    if(error) return console.error(error)
+                try {
+                    const json = fs.readFileSync(path.join(usersPath, file), 'utf8')
 
-                    const { email: _email, password: _password } =JSON.parse(json)
+                    const { email: _email } = JSON.parse(json)
 
-                    if(email === _email && password === _password) callback(new Error('user already exists'))
-                    else check(files, ++index)
+                    if (email === _email){
 
-                })
+                    
+                        callback(new Error(`e-mail ${email} already registered`))
+                    }else
+                        check(files, ++index)
 
-            }else {
-                fs.writeFile(`./data/users/${id}.json`,  json, error => {
-                    if (error) return callback(new Error(error.message))
-            
-                    callback(null)
-            
-                })
+                        
+                } catch (error) {
+                    return callback(error)
+                }
+            } else {
+                const id = createId()
+
+                const user = { id, fullname, email, password }
+
+                const json = JSON.stringify(user)
+
+                try {
+                    debugger
+                    fs.writeFileSync(path.join(usersPath, `${id}.json`), json)
+                    
+                } catch(error) {
+                    return callback(error)
+                }
+
+                callback(null, id)
             }
-        })(files);
-    })
-
+        })(files)
+        
+    } catch (error) {
+        callback(error)
+    }
 }
