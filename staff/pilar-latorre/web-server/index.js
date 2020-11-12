@@ -8,9 +8,10 @@ const retrieveUser = require('./logic/retrieve-user')
 
 
 
+
 app.get('/register', (req, res) => {
 
-    fs.readFile(path.join(__dirname,'./public/register/index.html'), 'utf8', (error, content) => {
+    fs.readFile(path.join(__dirname,'./views/register/index.html'), 'utf8', (error, content) => {
         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
         res.send(content)
@@ -59,7 +60,7 @@ app.post('/register', (req, res) => {
 
 
 app.get('/login', (req, res) => {
-    fs.readFile(path.join(__dirname,'./public/login/index.html'), 'utf8', (error, content) => {
+    fs.readFile(path.join(__dirname,'./views/login/index.html'), 'utf8', (error, content) => {
         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
         res.send(content)
@@ -90,7 +91,7 @@ app.post('/login', (req, res) =>{
 
         authenticateUser(email, password, (error, userId) => {
             if(error) {
-                return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
+                return fs.readFile(path.join(__dirname, './views/error/index.html'), 'utf8', (error, content) => {
                     if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
                     res.send(content)
@@ -109,12 +110,12 @@ app.post('/login', (req, res) =>{
 
 app.get('/', (req, res) => {
     if (session)
-        fs.readFile(path.join(__dirname, './public/home/index.html'), 'utf8', (error, content) => {
+        fs.readFile(path.join(__dirname, './views/home/index.html'), 'utf8', (error, content) => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
             retrieveUser(session, (error, user) => {
                 if (error) {
-                    return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
+                    return fs.readFile(path.join(__dirname, './views/error/index.html'), 'utf8', (error, content) => {
                         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
                         res.send(content)
