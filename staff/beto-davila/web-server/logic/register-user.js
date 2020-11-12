@@ -1,10 +1,8 @@
 // synchronous register version
-
 const fs = require('fs')
 const path = require('path')
 const { validateFullname, validateEmail, validatePassword, validateCallback } = require('./helpers/validations') 
 const { createId } = require('../utils/ids')
-//const semaphore = require('./helpers/semaphore')
 
 module.exports = (fullname, email, password, callback) => {
     // previous synchronous validations

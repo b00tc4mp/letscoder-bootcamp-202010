@@ -20,7 +20,7 @@ module.exports = (id, callback) => {
   )
 }
 
-// Another approach that checks first the permission to access the file we need:
+// Another approach that checks firstly the permission to access the file we need:
 
 /*
 module.exports = (id, callback) => {
