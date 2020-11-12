@@ -28,7 +28,7 @@ app.get('/', cookieParser, handleGoToHome)
 
 app.post('/logout', handleLogout)
 
-app.get('./*', handleNotFound)
+app.get('/*', handleNotFound)
 
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`)) 

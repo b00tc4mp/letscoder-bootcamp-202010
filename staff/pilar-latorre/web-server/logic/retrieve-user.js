@@ -1,22 +1,24 @@
+const { validateId, validateCallback } = require('./helpers/validations')
 const fs = require('fs')
 const path = require('path')
 
-const {validateCallback, validateId} = require('./helpers/validations') 
-
 module.exports = (id, callback) => {
-
-    validateCallback(callback)
     validateId(id)
+    validateCallback(callback)
 
-    let file = path.join(__dirname,`../data/users/${id}.json`)
+    const filePath = path.join(__dirname, `../data/users/${id}.json`)
 
-    fs.readFile(file, 'utf8', (error, json) => { 
-        if (error) return callback(new Error('id does not match with any user'))
+    fs.access(filePath, fs.F_OK, error => {
+        if (error) return callback(new Error(`user with id ${id} not found`))
 
-        const user = JSON.parse(json)
+        fs.readFile(filePath, 'utf8', (error, json) => {
+            if (error) return callback(error)
 
-        delete user.password
-        
-        callback(null, user)
-    }) 
-}
+            const user = JSON.parse(json)
+
+            delete user.password
+
+            callback(null, user)
+        })
+    })
+} 
