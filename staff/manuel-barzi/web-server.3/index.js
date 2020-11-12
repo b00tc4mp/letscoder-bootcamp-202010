@@ -3,7 +3,6 @@ const app = express()
 const port = 3000
 
 const urlencodedBodyParser = require('./middlewares/urlencoded-body-parser')
-const cookieParser = require('./middlewares/cookie-parser')
 
 const handleGoToRegister = require('./handlers/handle-go-to-register')
 // const urlencodedBodyParserRegister = require('./handlers/urlencoded-body-parser-register')
@@ -17,17 +16,17 @@ const handleNotFound = require('./handlers/handle-not-found')
 
 app.use(express.static('public'))
 
-app.get('/register', cookieParser, handleGoToRegister)
+app.get('/register', handleGoToRegister)
 
 //app.post('/register', urlencodedBodyParserRegister, handleRegister)
 app.post('/register', urlencodedBodyParser, handleRegister)
 
-app.get('/login', cookieParser, handleGoToLogin)
+app.get('/login', handleGoToLogin)
 
 //app.post('/login', urlencodedBodyParserLogin, handleLogin)
 app.post('/login', urlencodedBodyParser, handleLogin)
 
-app.get('/', cookieParser, handleGoToHome)
+app.get('/', handleGoToHome)
 
 app.post('/logout', handleLogout)
 

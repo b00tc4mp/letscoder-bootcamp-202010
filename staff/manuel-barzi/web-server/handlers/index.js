@@ -17,12 +17,12 @@ const handleNotFound = require('./handlers/handle-not-found')
 
 app.use(express.static('public'))
 
-app.get('/register', cookieParser, handleGoToRegister)
+app.get('/register', handleGoToRegister)
 
 //app.post('/register', urlencodedBodyParserRegister, handleRegister)
 app.post('/register', urlencodedBodyParser, handleRegister)
 
-app.get('/login', cookieParser, handleGoToLogin)
+app.get('/login', handleGoToLogin)
 
 //app.post('/login', urlencodedBodyParserLogin, handleLogin)
 app.post('/login', urlencodedBodyParser, handleLogin)
