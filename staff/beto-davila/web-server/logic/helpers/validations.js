@@ -15,6 +15,10 @@ module.exports = {
 
     validateId(id) {
         if (typeof id !== 'string') throw new TypeError(`${id} is not an id`)
+
+        if (!id.trim().length) throw new Error('id is empty or blank')
+
+        if (id.length !== 31) throw new Error('id length is not 31')
     },
 
     validateFullname(fullname){

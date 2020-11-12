@@ -4,9 +4,9 @@ const port = 3000
 const authenticateUser = require('./logic/authenticate-user')
 const fs = require('fs') // file system module
 const registerUser = require('./logic/register-user')
+const retrieveUser = require('./logic/retrieve-user')
 const path = require('path') // solve path problems when execting the scripts from different locations
 
-// TODO change paths using __dirname and 'path' module (on readFile and writeFile methods)
 
 /*
 app.get('/helloworld', (req, res) => {
@@ -23,7 +23,6 @@ app.get('/helloworld', (req, res) => {
   })
 })
 */
-
 
 
 // register form, 'get' method. send HTML content
@@ -48,8 +47,8 @@ app.post('/register', (req, res) => {
     })
     
     /* The on method binds an event to a object.
-      It is a way to express your intent if there is something happening (data sent), 
-      then execute the callback. (Event-driven programming). */
+      Way to express the intent if there is something happening (data sent), 
+      then execute the callback. (Event-driven). */
 
       // The 'end' event indicates that the whole content has been received. (on... end  = cuando... acaba)
       req.on('end', () => {
@@ -72,7 +71,7 @@ app.post('/register', (req, res) => {
       const user = { id, fullname, email, password }
       const json = JSON.stringify(user) // converts 'user' js to JSON object
 
-      registerUser(id, fullname, email, password, (error) => {
+      registerUser(fullname, email, password, (error) => {
         if (error) {
           // return error html content on wrong registration 
           return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
@@ -111,6 +110,7 @@ app.get('/login', (req, res) => {
   })
 })
 
+let session;
 
 app.post('/login', (req, res) => {
   
@@ -122,7 +122,7 @@ app.post('/login', (req, res) => {
 
         // chunk refers to the whole string 'email=xxxx%40mail.com&password=xxxxx' that we need to split in parts 'on end'
         content += chunk
-      debugger
+      
     })
 
     req.on('end', () => {
@@ -144,15 +144,34 @@ app.post('/login', (req, res) => {
               res.send(content)
           })
           }
-          // return home html content on successful auth
-          fs.readFile(path.join(__dirname, './public/home/index.html'), 'utf8', (error, content) => {
-            if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-
-            res.send(content)
-          })
-          
+          // saving the userID on the current session on auth
+          session = userId
+          // redirects response to home/root path after successful auth
+          res.redirect('/')
         })
     })
+})
+
+app.get('/', (req, res) => {
+  if (session)
+      fs.readFile(path.join(__dirname, './public/home/index.html'), 'utf8', (error, content) => {
+          if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+          // reminder: in 'session' we stored the id
+          retrieveUser(session, (error, user) => {
+              if (error) {
+                  return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
+                      if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+
+                      res.send(content)
+                  })
+              }
+              // replace the passed string for the fullname in the id
+              res.send(content.replace('{fullname}', user.fullname))
+
+          })
+
+      })
+  else res.redirect('/login')
 })
 
 

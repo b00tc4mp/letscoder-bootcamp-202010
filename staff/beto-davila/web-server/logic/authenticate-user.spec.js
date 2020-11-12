@@ -5,10 +5,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const fs = require('fs')
 const path = require('path')
 
-// TODO change paths using __dirname and 'path' module (on readFile and writeFile methods)
-
-
-describe('authenticateUser()', () => {
+describe('SPEC authenticateUser()', () => {
     describe('when user already exists', () => {
         let id, fullname, email, password, file;
 

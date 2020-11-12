@@ -1,35 +1,48 @@
-const fs = require('fs')
-const { validateCallback, validateId } = require('./helpers/validations')
-const path = require('path')
+const fs = require("fs");
+const { validateCallback, validateId } = require("./helpers/validations");
+const path = require("path");
 
 //const retrieveUser = (id, callback) => {
 module.exports = (id, callback) => {
-    // sync validations
+  // sync validations
+  validateId(id);
+  validateCallback(callback);
+
+  fs.readFile(path.join(__dirname, `../data/users/${id}.json`), "utf8", (error, json) => {
+      if (error) return callback(new Error(`the id: ${id} was not found`));
+
+        json = JSON.parse(json);
+
+        delete json.password; // return json with no password
+
+        callback(null, json);
+    }
+  )
+}
+
+// Another approach that checks first the permission to access the file we need:
+
+/*
+module.exports = (id, callback) => {
     validateId(id)
     validateCallback(callback)
 
-    // Read the provided directory. Return 'files' array if no error.
-    fs.readdir(path.join(__dirname, '../data/users'), (error, files) => {
-        if (error) return callback(error);
-        
-        (function check(files, index = 0) {
-            if (index < files.length) { 
-                const file = files[index] // the current file to read in the next step
-                
-                // Returns json file from ./data/users if successful
-                fs.readFile(path.join(__dirname, `../data/users/${id}.json`), 'utf8', (error, json) => {
-                    if (error) return console.error(error)
-                    // destructuring the json variable to get what we need.
-                    const { id: _id } = JSON.parse(json)
+    const filePath = path.join(__dirname, `../data/users/${id}.json`)
 
-                    if (id === _id) {
-                        json = JSON.parse(json)
-                        callback(null, json)
-                    }
-                    else 
-                        check(files, ++index)
-                })
-            } else callback(new Error(`the id: ${id} was not found`)) // when we are done checking all the files and got no success
-        })(files) // Passing 'files' argument to the 'selfie'. Since there's no defined index here, will be 0 by default.
+    --// fs.access method is used to test the permissions of a file/directory. The second param denotes the permissions, fs.F_OK by default //--
+
+    fs.access(filePath, fs.F_OK, error => {
+        if (error) return callback(new Error(`user with id ${id} not found`))
+
+        fs.readFile(filePath, 'utf8', (error, json) => {
+            if (error) return callback(error)
+
+            const user = JSON.parse(json)
+
+            delete user.password
+
+            callback(null, user)
+        })
     })
 }
+*/
