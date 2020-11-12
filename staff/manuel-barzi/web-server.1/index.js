@@ -15,7 +15,7 @@ app.get('/helloworld', (req, res) => {
 
     //res.send(`<h1>hola mundo</h1>`)
 
-    fs.readFile('./public/helloworld/index.html', 'utf8', (error, content) => {
+    fs.readFile('./views/helloworld/index.html', 'utf8', (error, content) => {
         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
         res.send(content)
@@ -23,7 +23,7 @@ app.get('/helloworld', (req, res) => {
 })
 
 app.get('/register', (req, res) => {
-    fs.readFile('./public/register/index.html', 'utf8', (error, content) => {
+    fs.readFile('./views/register/index.html', 'utf8', (error, content) => {
         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
         res.send(content)
@@ -78,7 +78,7 @@ app.post('/register', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-    fs.readFile('./public/login/index.html', 'utf8', (error, content) => {
+    fs.readFile('./views/login/index.html', 'utf8', (error, content) => {
         if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
         res.send(content)

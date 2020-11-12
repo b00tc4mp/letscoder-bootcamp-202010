@@ -9,8 +9,6 @@ const registerUser = require('./logic/register-user')
 
 let session
 
-app.use(express.static('public'))
-
 app.get('/register', (req, res) => {
     if (!session)
         fs.readFile(path.join(__dirname, './views/register.html'), 'utf8', (error, content) => {
