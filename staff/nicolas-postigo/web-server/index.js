@@ -1,46 +1,34 @@
-const express = require('express')
+const express = require("express")
 const app = express()
 const port = 3000
-const fs = require('fs')
 
-app.get('/', (req, res) => {
-    res.send(':)')
-})
-app.get('/helloworld', (req, res) => {
+const urlencodedBodyParser = require("./middlewares/urlencoded-body-parser")
+const cookieParser = require("./middlewares/cookie-parser")
 
-    //res.send('Hello World!')
+const handleGoToRegister = require("./handlers/handle-go-to-register")
 
-    /*     res.set('Content-type', 'text/plain')
-        res.set('Access-Control-Allow-Origin', '*')
-    
-        res.send(`hola mundo`) */
+const handleRegister = require("./handlers/handle-register")
+const handleGoToLogin = require("./handlers/handle-go-to-login")
 
-    fs.readFile('./public/index.html', 'utf8', (error, content) => {
-        if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+const handleLogin = require("./handlers/handle-login")
+const handleGoToHome = require("./handlers/handle-go-to-home")
+const handleLogout = require("./handlers/handle-logout")
+const handleNotFound = require("./handlers/handle-not-found")
 
-        res.send(content)
-    })
-})
+app.use(express.static('public'))
 
-app.get('/login', (req, res) => {
+app.get('/register', cookieParser, handleGoToRegister)
 
+app.post('/register', urlencodedBodyParser, handleRegister)
 
+app.get('/login', cookieParser, handleGoToLogin)
 
-    fs.readFile('./public/login/index.html', 'utf8', (error, content) => {
-        if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+app.post('/login', urlencodedBodyParser, handleLogin)
 
-        res.send(content)
-    })
-})
+app.get('/', cookieParser, handleGoToHome)
 
-app.post('/login', (req, res) => {
-    res.send("ok ;)")
+app.post('/logout', handleLogout)
 
+app.get('/*', handleNotFound)
 
-    })
-
-
-
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
