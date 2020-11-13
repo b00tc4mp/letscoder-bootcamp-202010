@@ -1,133 +1,38 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const fs = require('fs')
-const path = require('path')
-const authenticateUser = require('./logic/authenticate-user')
-const retrieveUser = require('./logic/retrieve-user')
 
-app.get('/register', (req, res) => {
-    fs.readFile(path.join(__dirname, './public/register/index.html'), 'utf8', (error, content) => {
-        if (error) return res.send(`sorry, there was an error ;( ERROR : ${error.message}`)
+const urlencodedBodyParser = require('./middlewares/urlencoded-body-parser')
+const cookieParser = require('./middlewares/cookie-parser')
 
-        res.send(content)
-    })
-})
+const handleGoToRegister = require('./handlers/handle-go-to-register')
+const handleRegister = require('./handlers/handle-register')
+const handleGoToLogin = require('./handlers/handle-go-to-login')
+const handleLogin = require('./handlers/handle-login')
+const handleGoToHome = require('./handlers/handle-go-to-home')
+const handleLogout = require('./handlers/handle-logout')
+const handleNotFound = require('./handlers/handle-not-found')
 
-app.post('/register', (req, res) => {
-    debugger
-    req.setEncoding('utf8')
+const handleAcceptCookies = require('./api/handlers/handle-accept-cookies')
 
-    let content = ''
+app.use(express.static('public'))
 
-    req.on('data', chunk => {
-        //console.log(chunk)
+app.get('/register', cookieParser, handleGoToRegister)
 
-        content += chunk
-    })
+app.post('/register', urlencodedBodyParser, handleRegister)
 
-    req.on('end', () => {
+app.get('/login', cookieParser, handleGoToLogin)
 
+app.post('/login', cookieParser, urlencodedBodyParser, handleLogin)
 
-        const parts = content.split('&')
+app.get('/', cookieParser, handleGoToHome)
 
-        let [, fullname] = parts[0].split('=')
-        let [, email] = parts[1].split('=')
-        let [, password] = parts[2].split('=')
+app.post('/logout', handleLogout)
 
-        //fullname = fullname.replaceAll('+', ' ') // ERROR not supported in NodeJS yet (but in the browsers yes :( ))
+// api paths
 
-        fullname = fullname.split('+').join(' ')
+app.post('/api/accept-cookies', cookieParser, handleAcceptCookies)
 
-        email = decodeURIComponent(email)
+app.get('/*', handleNotFound)
 
-        password = decodeURIComponent(password)
-
-        //console.log(fullname, email, password)
-
-        const id = `${Date.now()}${`${Math.random() * 10**18}`.padStart(18, '0')}`
-        
-        const user = { id, fullname, email, password }
-
-        const json = JSON.stringify(user)
-
-        fs.writeFile(path.join(__dirname, `./data/users/${id}.json`), json, error => {
-            if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-
-            res.send(`ok, user registered ,) ID: ${id}`)
-        })
-    })
-})
-
-app.get('/login', (req, res) => {
-    fs.readFile(path.join(__dirname, './public/login/index.html'), 'utf8', (error, content) => {
-        if (error) return res.send(`sorry, there was an error  ERROR: ${error.message}`)
-
-        res.send(content)
-    })
-})
-
-
-let session
-
-
-app.post('/login', (req, res) => {
-    debugger
-    req.setEncoding('utf8')
-
-    let content = ''
-
-    req.on('data', chunk => {
-        //console.log(chunk)
-
-        content += chunk
-    })
-
-    req.on('end', () => {
-        const parts = content.split('&')
-
-        let [, email] = parts[0].split('=')
-        let [, password] = parts[1].split('=')
-
-        email = decodeURIComponent(email)
-
-        password = decodeURIComponent(password)
-
-        authenticateUser(email, password, (error, userId) => {
-            if (error) {
-                return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
-                    if (error) return res.send(`sorry, there was an error, ERROR: ${error.message}`)
-
-                    res.send(content)
-                })
-            }
-
-            session = userId
-            
-            res.redirect('/')
-            })
-        })
-    })
-
-    app.get('/', (req, res) => {
-        if (session)
-            fs.readFile(path.join(__dirname, './public/home/index.html'), 'utf8', (error, content) => {
-                if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-    
-                retrieveUser(session, (error, user) => {
-                    if (error) {
-                        return fs.readFile(path.join(__dirname, './public/error/index.html'), 'utf8', (error, content) => {
-                            if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-    
-                            res.send(content)
-                        })
-                    }
-    
-                    res.send(content.replace('{fullname}', user.fullname))
-                })
-    
-            })
-        else res.redirect('/login')
-    })
-    
-    app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))     
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`)) 
