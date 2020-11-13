@@ -26,6 +26,7 @@ module.exports = (email, password, callback) => {
 
     (function check(files, index = 0) {
       if (index < files.length) {
+        debugger;
         const file = files[index];
 
         fs.readFile(`./data/users/${file}`, "utf8", (error, json) => {
