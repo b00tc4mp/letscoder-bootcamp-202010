@@ -12,7 +12,8 @@ const {
     handleLogin,
     handleGoToHome,
     handleLogout,
-    handleNotFound
+    handleNotFound,
+    handleGoToSearch
 } = require('./web/handlers')
 
 const {
@@ -32,6 +33,8 @@ app.post('/login', cookieParser, urlencodedBodyParser, handleLogin)
 app.get('/', cookieParser, handleGoToHome)
 
 app.post('/logout', handleLogout)
+
+app.get('/search', cookieParser, handleGoToSearch)
 
 // api paths
 
