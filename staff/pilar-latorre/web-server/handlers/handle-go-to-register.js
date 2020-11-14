@@ -5,6 +5,8 @@ const path = require('path')
 module.exports = (req, res) => {
     const { cookies: { 'session-id': userId } } = req
 
+    debugger
+
     if (!userId)
         fs.readFile(path.join(__dirname,'../views/register.html'), 'utf8', (error, content) => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
