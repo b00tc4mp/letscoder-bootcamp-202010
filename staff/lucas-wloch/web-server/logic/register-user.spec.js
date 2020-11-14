@@ -93,7 +93,6 @@ describe('SPEC registerUser()', () => {
             registerUser(fullname, email, password, repassword, error => {
                 expect(error).to.exist
                 expect(error).to.be.instanceOf(Error)
-                debugger
                 expect(error.message).to.have.length.greaterThan(0)
                 done()
             })

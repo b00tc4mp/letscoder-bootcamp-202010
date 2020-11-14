@@ -1,5 +1,15 @@
+.accept-cookies {
+  position: absolute;
+  top: 0;
+  background-color: rgba(100, 100, 100, 0.75);
+  width: 100vw;
+  height: 100vh;
+}
+
 h1 {
-    color: orange;
-    background-color: cornflowerblue;
-    border: 1px solid orange;
-} 
+  color: orange;
+  background-color: cornflowerblue;
+  border: 1px solid orange;
+}
+
+/*# sourceMappingURL=style.css.map */

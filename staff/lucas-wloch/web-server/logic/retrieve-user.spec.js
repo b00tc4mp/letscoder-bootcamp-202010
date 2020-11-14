@@ -58,7 +58,6 @@ describe('SPEC retrieveUser()', () => {
         it('should fail on non matching id', done => {
             retrieveUser(id, (error, user) => {
                 expect(error).to.exist
-                debugger
                 expect(error.message).to.have.length.greaterThan(0)
                 expect(user).to.be.undefined
                 done()

@@ -14,6 +14,7 @@ module.exports = (req, res, next) => {
     }
 
     req.cookies = cookies
+   
 
     next()
 }

@@ -4,12 +4,11 @@ const retrieveUser = require('../../logic/retrieve-user')
 const sessions = require('../../sessions')
 
 
-module.exports = (req, res,next) => {
+module.exports = (req, res) => {
     
     const {cookies: { 'session-id' : sessionId } } = req
 
     const session = sessions[sessionId]
-
     if (session && session.userId)
         fs.readFile(path.join(__dirname, '../../views/home.html'), 'utf8', (error, content) => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
@@ -23,11 +22,8 @@ module.exports = (req, res,next) => {
                     })
                 }
 
-                const changes = { '{fullname}' : user.fullname, '{email}': user.email }
 
-                res.changes = changes 
-                res.content = content
-                next()
+                res.send(content.replace('{fullname}', user.fullname).replace('{email}', ''))
             })
         })
     else res.redirect('/login')

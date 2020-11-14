@@ -5,7 +5,6 @@ const port = 3000
 
 const urlencodedBodyParser = require('./middlewares/urlencoded-body-parser')
 const cookieParser = require('./middlewares/cookie-parser')
-const fillTemplate = require('./middlewares/fill-template')
 
 const {
     handleGoToRegister,
@@ -14,7 +13,9 @@ const {
     handleLogin,
     handleGoToHome,
     handleLogout,
-    handleNotFound
+    handleNotFound,
+    handleGoToSearch,
+    handleGoToDetail
 } = require('./web/handlers')
 
 const {
@@ -23,22 +24,8 @@ const {
 
 
 
+
 app.use(express.static('public'))
-
-//prueba/////////////////////////
-const fs = require('fs')
-const path = require('path')
-const crearContenido = (req,res,next) => {
-    fs.readFile(path.join(__dirname, './views/prueba.html'),'utf8', (error, content) => {
-        
-        res.changes = { '{name_1}': 'juanita ramirez', '{name_2}': 'carlos sanchez', '{name_3}': 'marta esteras' }
-        res.content = content
-        next()
-    })
-} 
-app.get('/prueba', crearContenido, fillTemplate)
-//prueba////////////////////////
-
 
 app.get('/register',cookieParser, handleGoToRegister)
 
@@ -48,9 +35,19 @@ app.get('/login',cookieParser, handleGoToLogin)
 
 app.post('/login',cookieParser, urlencodedBodyParser, handleLogin)
 
-app.get('/',cookieParser, handleGoToHome, fillTemplate)
+app.get('/',cookieParser, handleGoToHome)
 
 app.post('/logout', handleLogout)
+// search paths
+app.get('/search', cookieParser, handleGoToSearch)
+
+
+app.get(`/search/vehicles/*`, cookieParser, handleGoToDetail)
+
+// const vehicleIds = ['FYF20','FYG52','GMR67']
+// vehicleIds.forEach(id => {
+//     app.get(`/search/vehicles/${id}`, cookieParser, handleGoToDetail)
+// })
 
 // api paths
 
