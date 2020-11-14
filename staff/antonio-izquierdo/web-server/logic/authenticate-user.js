@@ -1,20 +1,23 @@
 const fs = require('fs')
-const {validateEmail, validatePassword, validateCallback}= require('./helpers/validations')
-//const authenticateUser = (email, password, callback) => {
+const { validateEmail, validatePassword, validateCallback } = require('./helpers/validations')
+const path = require('path')
+
 module.exports = (email, password, callback) => {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
 
-    fs.readdir('./data/users', (error, files) => {
+    const usersPath = path.join(__dirname, '../data/users')
+
+    fs.readdir(usersPath, (error, files) => {
         if (error) return callback(error);
 
         (function check(files, index = 0) {
             if (index < files.length) {
                 const file = files[index]
 
-                fs.readFile(`./data/users/${file}`, 'utf8', (error, json) => {
-                    if (error) return console.error(error)
+                fs.readFile(path.join(usersPath, file), 'utf8', (error, json) => {
+                    if (error) return callback(error)
 
                     const { id, email: _email, password: _password } = JSON.parse(json)
 
@@ -24,4 +27,4 @@ module.exports = (email, password, callback) => {
             } else callback(new Error('wrong credentials'))
         })(files)
     })
-}
+} 

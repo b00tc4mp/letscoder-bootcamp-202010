@@ -3,6 +3,7 @@ const authenticateUser = require('./authenticate-user')
 const { createId } = require('../utils/ids')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomNonFunction, randomEmptyOrBlankString } = require('../utils/randoms')
 const fs = require('fs')
+const path = require('path')
 
 describe('authenticateUser()', () => {
     describe('when user already exists', () => {
@@ -18,7 +19,7 @@ describe('authenticateUser()', () => {
 
             const json = JSON.stringify(user)
 
-            file = `./data/users/${id}.json`
+            file = path.join(__dirname, `../data/users/${id}.json`)
 
             fs.writeFile(file, json, done)
         })
@@ -72,6 +73,7 @@ describe('authenticateUser()', () => {
             authenticateUser(email, password, (error, userId) => {
                 expect(error).to.be.instanceOf(Error)
                 expect(error.message).to.equal('wrong credentials')
+                
                 expect(userId).to.be.undefined
 
                 done()

@@ -1,6 +1,6 @@
 module.exports = {
 
-    validateFullName(fullname) {
+    validateFullname(fullname) {
         if (typeof fullname !== 'string') throw new TypeError(`${fullname} is not a fullname`)
 
         if (!fullname.trim().length) throw new Error('fullname is empty or blank')
@@ -20,11 +20,21 @@ module.exports = {
         if (!password.trim().length) throw new Error('password is empty or blank')
     },
 
-    validateRepeatedPasword(repassword) {
+    validateRepeatedPassword(password, repassword) {
+        if (typeof repassword !== 'string') throw new TypeError(repassword + ' is not a password')
+        if (!repassword.trim().length) throw new Error('repassword is empty or blank')
         if (repassword !== password) throw new Error ('repeated passwords do not match')
     },
 
     validateCallback(callback) {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
+    },
+
+    validateId(id) {
+        if(typeof id !== 'string') throw new TypeError(id + 'is not a id')
+
+        if(!id.trim().length) throw new Error('id is empty or blank')
+
+        if(id.length !== 31) throw new Error('id length is not 31')
     }
 }
