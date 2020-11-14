@@ -3,8 +3,12 @@ const path = require('path')
 const {validateId, validateCallback} = require('./helpers/validations')
 
 module.exports = (id, callback) => {
-    validateId(id)
-    validateCallback(callback)
+    try{
+        validateId(id)
+        validateCallback(callback)
+    }catch(error) {
+        callback(error)
+    }
 
     const file = path.join(__dirname, `../data/users/${id}.json`)
 

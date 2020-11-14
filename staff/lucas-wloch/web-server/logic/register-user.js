@@ -4,11 +4,16 @@ const { createId } = require('../utils/ids')
 const path = require('path')
 
 module.exports = (fullname, email, password, repassword, callback) => {
-    validateFullname(fullname)
+    try {
+      validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
     validateRepassword(password, repassword)
-    validateCallback(callback)
+    validateCallback(callback)  
+    }catch(error){
+        callback(error)
+    }
+    
 
     const usersPath = path.join(__dirname, '../data/users/')
 
