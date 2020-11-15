@@ -14,11 +14,13 @@ module.exports = (req, res) => {
 
     const { userId, cookiesAccepted } = session
 
+    debugger
+
     if(!userId)
         fs.readFile(path.join(__dirname,'../../views/login.html'), 'utf8', (error, content) => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
-            res.send(content.replace('{cookiesAccepted', cookiesAccepted))
+            res.send(content.replace('{cookiesAccepted}', cookiesAccepted))
         })
     else res.redirect('/')
 

@@ -8,7 +8,7 @@ module.exports = (email, password, callback) => {
     validatePassword(password)
     validateCallback(callback)
 
-    const usersPath = path.join(__dirname, '../date/user')
+    const usersPath = path.join(__dirname, '../data/users')
 
     
     fs.readdir(usersPath, (error, files) => {

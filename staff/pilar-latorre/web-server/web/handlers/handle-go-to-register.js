@@ -18,7 +18,7 @@ module.exports = (req, res) => {
         fs.readFile(path.join(__dirname,'../../views/register.html'), 'utf8', (error, content) => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
-            res.send(content.replace('{cookiesAccepted', cookiesAccepted))
+            res.send(content.replace('{cookiesAccepted}', cookiesAccepted))
         })
 
     else res.redirect('/')

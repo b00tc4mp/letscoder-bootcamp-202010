@@ -1,4 +1,4 @@
-const { Components } = React
+const { Component } = React
 
 function AcceptCookies({ onAccept}) {
     return <section className="accept-cookies">

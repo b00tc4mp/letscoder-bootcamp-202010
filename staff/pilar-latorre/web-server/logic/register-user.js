@@ -9,7 +9,7 @@ module.exports = (fullname, email, password, callback) => {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
-
+debugger
     const usersPath = path.join(__dirname, '../data/users')
 
     semaphore(done => {

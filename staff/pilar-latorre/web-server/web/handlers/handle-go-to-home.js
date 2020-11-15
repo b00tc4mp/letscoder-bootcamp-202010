@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const retrieveUser = require('../../logic/retrieve-user')
-const session = require('../../sessions')
+const sessions = require('../../sessions')
 
 module.exports = (req, res) => {
     const { cookies: { 'session-id': sessionId } } = req

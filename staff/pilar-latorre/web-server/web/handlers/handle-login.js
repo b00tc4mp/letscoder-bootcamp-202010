@@ -5,7 +5,7 @@ const sessions = require('../../sessions')
 
 
 module.exports = (req, res) => {
-    const { body: { email, password }, cookies: { 'session-Id': sessionId }} = req
+    const { body: { email, password }, cookies: { 'session-id': sessionId }} = req
 
     authenticateUser(email, password, (error, userId) => {
         if(error) 
