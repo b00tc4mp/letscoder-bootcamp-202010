@@ -1,17 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 const retrieveUser = require("../logic/retrieve-user");
-//const session = require('./session')
+const sessions = require("../sessions");
 
 module.exports = (req, res) => {
   const {
-    cookies: { "session-id": userId },
+    cookies: { "session-id": sessionId },
   } = req;
 
-  //if (session.userId)
-  if (userId)
-    //retrieveUser(session.userId, (error, user) => {
-    retrieveUser(userId, (error, user) => {
+  const session = sessions[sessionId];
+
+  if (session && session.userId)
+    retrieveUser(session.userId, (error, user) => {
       if (error)
         return fs.readFile(
           path.join(__dirname, "../views/error.html"),
