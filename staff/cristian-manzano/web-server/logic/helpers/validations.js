@@ -30,5 +30,17 @@ module.exports = {
 
     validateCallback(callback) {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
+    },
+
+    validateQuery(query) {
+    if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
+
+    if (!query.trim().length) throw new Error('query is empty or blank')
+    },
+
+    validateVehicleId(vehicleId) {
+    if (typeof vehicleId !== 'string') throw new TypeError(vehicleId + ' is not a vehicleId')
+
+    if (!vehicleId.trim().length) throw new Error('vehicleId is empty or blank')
     }
 }
