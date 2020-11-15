@@ -5,16 +5,46 @@ const port = 3000
 const cookieParser = require('./middlewares/cookie-parser')
 const urlencodedBodyParser = require ('./middlewares/urlencoded-body-parser')
 
-const handleGoToHome = require('./handlers/handle-go-to-home')
-const handleGoToRegister = require('./handlers/handle-go-to-register')
-const handleRegister = require('./handlers/handle-register')
-const handleGoToLogin = require ('./handlers/handle-go-to-login')
-const handleLogin = require ('./handlers/handle-login')
-const handleLogout = require('./handlers/handle-logout')
-const handleNotFound = require('./handlers/handle-not-found')
+// destructuring of index.js 
+const {
+  handleGoToRegister,
+  handleRegister,
+  handleGoToLogin,
+  handleLogin,
+  handleGoToHome,
+  handleLogout,
+  handleNotFound,
+  handleGoToSearch,
+  handleGoToDetail
+} = require('./web/handlers')
 
+const { handleAcceptCookies } = require ('./api/handlers')
+
+// static files service (images, css, jsx files...)
 app.use(express.static('public'))
 
+// register form, 'get' method.
+app.get('/register', cookieParser, handleGoToRegister)
+
+// register form, post method to send user data
+app.post('/register', urlencodedBodyParser, handleRegister)
+
+app.get('/login', cookieParser, handleGoToLogin)
+
+app.post('/login', urlencodedBodyParser, cookieParser, handleLogin)
+
+app.get('/', cookieParser, handleGoToHome)
+
+app.post('/logout', handleLogout)
+
+app.get('/search', cookieParser, handleGoToSearch)
+
+app.get('/vehicles/*', cookieParser, handleGoToDetail)
+
+//api paths
+app.post('/api/accept-cookies', cookieParser, handleAcceptCookies)
+
+app.get('/*', handleNotFound)
 
 /*
 app.get('/helloworld', (req, res) => {
@@ -32,22 +62,7 @@ app.get('/helloworld', (req, res) => {
 })
 */
 
-// register form, 'get' method.
-app.get('/register', cookieParser, handleGoToRegister)
-
-// register form, post method to send user data
-app.post('/register', urlencodedBodyParser, handleRegister)
-
-app.get('/login', cookieParser, handleGoToLogin)
-
-app.post('/login', urlencodedBodyParser, handleLogin)
-
-app.get('/', cookieParser, handleGoToHome)
-
-app.post('/logout', handleLogout)
-
-app.get('/*', handleNotFound)
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+

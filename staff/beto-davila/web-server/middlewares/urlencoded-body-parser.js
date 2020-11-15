@@ -28,8 +28,9 @@ module.exports = (req, res, next) => {
                 body[key] = decodeURIComponent(value.split('+').join(' ')) // decode URI. (i.e.: dagoman19%40gmail.com === dagoman19@gmail.com)
             }
         }
+        // req.body contains key-value pairs of data submitted in the request body. By default, it is undefined, and is populated when you use body-parsing middleware
         req.body = body
-        // callback is called to continue with handleRegister for example. We confirm with this that the process ends before starting next one.
+        // called to continue with handleRegister for instance. We confirm with this that the process ends before starting next one.
         next()
     })
 }

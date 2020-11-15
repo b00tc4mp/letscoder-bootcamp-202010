@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Search</title>
 </head>
 <body>
-    <h1>Register</h1>
+    <h1>Search</h1>
 
-    <form action="/register" method="POST">
-        <input type="text" name="fullname" id="">
-        <input type="email" name="email" id="">
-        <input type="password" name="password" id="">
-        
+    <form action="./search" method="get">
+        <input type="text" name="q" id="">
 
-        <button>send</button>
+        <button>Send</button>
     </form>
-    or <a href="/login">login</a>
+
+    <!-- here goes the results from the search (vehicles API)-->
+    {results}
+
+    <a href="/login">login</a> or <a href="/register"></a>
 
     <div id="root"></div>
 
@@ -39,5 +40,6 @@
 
     <script src="components/accept-cookies.jsx" type="text/babel"></script>
     <script src="landing-app.jsx" type="text/babel"></script>
+    
 </body>
 </html>

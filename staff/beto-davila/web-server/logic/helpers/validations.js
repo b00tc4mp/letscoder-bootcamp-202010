@@ -21,6 +21,14 @@ module.exports = {
         if (id.length !== 31) throw new Error('id length is not 31')
     },
 
+    validateQuery(query){
+
+        if (typeof query !== 'string') throw new TypeError(query + ' is not a full name')
+
+        if (!query.trim().length) throw new Error('query is empty or blank')
+
+    },
+
     validateFullname(fullname){
 
         if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a full name')
