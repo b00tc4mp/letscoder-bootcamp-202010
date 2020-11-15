@@ -18,10 +18,10 @@ const {
 } = require('./web/handlers')
 
 const {
-    handlAcceptCookies
+    handleAcceptCookies
 
 } = require('./api/handlers')
-const handleAcceptCookies = require('./api/handlers/handle-accept-cookies')
+//const handleAcceptCookies = require('./api/handlers/handle-accept-cookies')
 
 app.use(express.static('public'))
 
