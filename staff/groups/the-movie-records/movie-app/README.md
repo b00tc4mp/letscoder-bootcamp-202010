@@ -1,5 +1,7 @@
 # Movie APP
 
+View app: [Movie App](http://lets-coders-movie-app.surge.sh/)
+
 ## Intro
 
 Movie App is a unique place to find information about movies, relax and enjoy.
