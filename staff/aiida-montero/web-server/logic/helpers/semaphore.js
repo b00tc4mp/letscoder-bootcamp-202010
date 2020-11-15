@@ -12,7 +12,7 @@ const done = () => {
 
 module.exports = callbacks => {
 
-    callbacks.psuh(callback)
+    callbacks.push(callback)
 
     if(!doing){
         doing = true

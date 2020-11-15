@@ -1,28 +1,27 @@
 module.exports = (req, res, next) => {
-   req.setEncoding('utf8')
+    req.setEncoding('utf8')
 
-   let content = ''
+    let content = ''
 
-   req.on('data', chunk => content += chunk)
+    req.on('data', chunk => content += chunk)
 
-   req.on('end', () => {
-   const body = {}
-   
-   if (content){
-    const keyValues = content.split('&')
+    req.on('end', () => {
+        const body = {}
 
-    for(const keyValue of keyValues){
-        const [key, value] = keyValue.split('=')
+        if (content) {
+            const keyValues = content.split('&')
 
-        body[key] = decodeURIComponent(value.split('+').join(' '))
-    }
+            for (const keyValue of keyValues) {
+                const [key, value] = keyValue.split('=')
 
-   }
+                body[key] = decodeURIComponent(value.split('+').join(' '))
+            }
+        }
 
-   req.body = body
+        req.body = body
 
-   next()
+        next()
 
-   })
+    })
 
 }

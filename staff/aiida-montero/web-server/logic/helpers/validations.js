@@ -13,12 +13,6 @@ module.exports = {
         if (!password.trim().length) throw new Error('password is empty or blank')
     },
 
-    validateRepassword(repassword) {
-        if (typeof repassword !== 'string') throw new TypeError(password + ' is not a password')
-
-        if (!repassword.trim().length) throw new Error('password is empty or blank')
-    },
-
     validateCallback(callback) {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
     },

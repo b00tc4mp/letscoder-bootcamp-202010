@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
         const keyValues = cookie.split(';')
 
         for(const keyValue of keyValues) {
-            const [key,value] = keyValue.split('=')
+            const[key,value] = keyValue.split('=')
 
             cookies[key.trim()] = value
         }

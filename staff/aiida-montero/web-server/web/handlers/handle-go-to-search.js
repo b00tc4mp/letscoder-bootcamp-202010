@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path')
-const sessions = require('../sessions')
-const {createId} = require('../utils/ids')
+const sessions = require('../../sessions')
+const {createId} = require('../../utils/ids')
 const {createSessionCookie} = require('./helpers/cookies')
-const {searchVehicles} = require('../logic')
+const {searchVehicles} = require('../../logic')
 
 module.exports = (req, res) => {
   
@@ -26,10 +26,10 @@ module.exports = (req, res) => {
             if(error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
             const results = `<ul>
-            ${vehicles.map(({id,name,thumbail}) => `<li>
+            ${vehicles.map(({id,name,thumbnail}) => `<li>
             <a href = "http://localhost:3000/vehicles/${id}">
                     <h3>${name}<h3>
-                    <img src = "${thumbail}">
+                    <img src = "${thumbnail}">
                     </a>
                     </li>`).join('\n')}
                     </ul>`
@@ -37,5 +37,5 @@ module.exports = (req, res) => {
         })
 
     })
-
+   else res.rediirect('/')
 }

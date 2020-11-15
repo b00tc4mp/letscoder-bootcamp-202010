@@ -10,7 +10,7 @@ class App extends Component {
 
   handleAcceptCookies = () =>{
      acceptCookies(error => {
-        if (error) return alert (error)
+        if (error) return alert (error.message)
         
         this.setState({cookiesAccepted: true })
 

@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require ('path')
-const sessions = require('../sessions')
-const {createId} = require('../utils/ids')
+const sessions = require('../../sessions')
+const {createId} = require('../../utils/ids')
 const {createSessionCookie} = require('./helpers/cookies')
 
 module.exports = (req, res) => {
@@ -14,7 +14,7 @@ module.exports = (req, res) => {
    const {userId, cookiesAccepted } = session
 
    if (!userId)
-      fs.readFile(path.join(__dirname, '../views/register.html'), 'utf8', (error, content) => {
+      fs.readFile(path.join(__dirname, '../../views/register.html'), 'utf8', (error, content) => {
        if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
        res.send(content.replace('{cookiesAccepted}', cookiesAccepted ))
