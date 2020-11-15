@@ -34,6 +34,7 @@ module.exports = (req, res) => {
                 </ul>`
                 // .join('\n')
 
+                
                 res.send(content.replace('{cookiesAccepted}', cookiesAccepted).replace('{results}', results))
 
             })

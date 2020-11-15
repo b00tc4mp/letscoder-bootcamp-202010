@@ -9,6 +9,7 @@ module.exports = (req, res) => {
     const {cookies: { 'session-id' : sessionId } } = req
 
     const session = sessions[sessionId]
+    debugger
     if (session && session.userId)
         fs.readFile(path.join(__dirname, '../../views/home.html'), 'utf8', (error, content) => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)

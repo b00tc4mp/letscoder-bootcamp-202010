@@ -5,6 +5,9 @@
   width: 100vw;
   height: 100vh;
 }
+.accept-cookies__h2 {
+  color: white;
+}
 
 h1 {
   color: orange;
