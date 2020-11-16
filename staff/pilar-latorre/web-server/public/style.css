@@ -6,6 +6,19 @@
   height: 100vh;
 }
 
+.feedback {
+  font-weight: bold;
+}
+.feedback--success {
+  color: green;
+}
+.feedback--warning {
+  color: gold;
+}
+.feedback--error {
+  color: red;
+}
+
 h1 {
   color: #f4c272;
   background-color: #572364;

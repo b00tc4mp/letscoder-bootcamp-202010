@@ -4,6 +4,8 @@ const port = 3000
 
 const { urlencodedBodyParser, cookieParser, cookieSession } = require('./middlewares')
 
+const withErrorHandling = require('./handlers/web/helpers/with-error-handling')
+
 const {
     handleGoToRegister,
     handleRegister,
@@ -12,7 +14,8 @@ const {
     handleGoToHome,
     handleLogout,
     handleNotFound,
-    handleGoToSearch
+    handleGoToSearch,
+    handleGoToDetail
 
 } = require('./handlers/web')
 
@@ -36,6 +39,12 @@ app.get('/', cookieParser, cookieSession, handleGoToHome)
 app.post('/logout', cookieParser, cookieSession, handleLogout)
 
 app.get('/search', cookieParser, cookieSession, handleGoToSearch)
+
+app.get('/vehicles/:vehicleId', cookieParser, cookieSession, handleGoToDetail)
+
+
+
+//api path
 
 app.post('/api/accept-cookies', cookieParser, cookieSession, handleAcceptCookies)
 
