@@ -1,18 +1,18 @@
 const fs = require("fs");
 const path = require("path");
-const authenticateUser = require("../logic/authenticate-user");
+const authenticateUser = require("../../logic/authenticate-user");
+const sessions = require("../../sessions");
 
 module.exports = (req, res) => {
   const {
     body: { email, password },
+    cookies: { "session-id": sessionId },
   } = req;
-
-  // const { email, password } = req.body
 
   authenticateUser(email, password, (error, userId) => {
     if (error)
       return fs.readFile(
-        path.join(__dirname, "../views/error.html"),
+        path.join(__dirname, "../../views/error.html"),
         "utf8",
         (_error, content) => {
           if (_error)
@@ -24,14 +24,9 @@ module.exports = (req, res) => {
         }
       );
 
-    //session.userId = userId
+    const session = sessions[sessionId];
 
-    res.setHeader(
-      "set-cookie",
-      `session-id=${userId}; expires=${new Date(
-        Date.now() + 60 * 60 * 1000
-      ).toUTCString()}`
-    );
+    session.userId = userId;
 
     res.redirect("/");
   });

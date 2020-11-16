@@ -2,11 +2,8 @@ const callbacks = [];
 let doing = false;
 
 const done = () => {
-  //if (callbacks.length) return callbacks.shift()(done);
-  if (callbacks.length) {
-    const hola = callbacks.shift();
-    hola(done);
-  }
+  if (callbacks.length) return callbacks.shift()(done);
+
   doing = false;
 };
 

@@ -1,16 +1,23 @@
 const fs = require("fs");
 const path = require("path");
-// const session = require('./session')
+const sessions = require("../../sessions");
+const { createId } = require("../../utils/ids");
+const { createSessionCookie } = require("./helpers/cookies");
 
 module.exports = (req, res) => {
   const {
-    cookies: { "session-id": userId },
+    cookies: { "session-id": sessionId = createId() },
   } = req;
 
-  // if (!session.userId)
+  res.setHeader("set-cookie", createSessionCookie(sessionId));
+
+  const session = sessions[sessionId] || (sessions[sessionId] = {});
+
+  const { userId, cookiesAccepted } = session;
+
   if (!userId)
     fs.readFile(
-      path.join(__dirname, "../views/register.html"),
+      path.join(__dirname, "../../views/register.html"),
       "utf8",
       (error, content) => {
         if (error)
@@ -18,7 +25,7 @@ module.exports = (req, res) => {
             `sorry, there was an error :( ERROR: ${error.message}`
           );
 
-        res.send(content);
+        res.send(content.replace("{cookiesAccepted}", cookiesAccepted));
       }
     );
   else res.redirect("/");

@@ -6,7 +6,6 @@ const {
   randomWithPrefixAndSuffix,
   randomNonString,
   randomEmptyOrBlankString,
-  randomNotFunction,
 } = require("../utils/randoms");
 const fs = require("fs");
 const path = require("path");
@@ -124,54 +123,8 @@ describe("authenticateUser()", () => {
         });
       });
     });
-    describe("when password is wrong", () => {
-      describe("when password is not a string", () => {
-        let email, password;
 
-        beforeEach(() => {
-          email = randomWithPrefixAndSuffix();
-          password = randomNonString();
-        });
-
-        it("should fail on empty or blank password", () => {
-          expect(() => authenticateUser(email, password, () => {})).to.throw(
-            TypeError,
-            `${password} is not an passwordp`
-          );
-        });
-      });
-      describe("when password is empty or blank", () => {});
-      let email, password;
-
-      beforeEach(() => {
-        email = randomWithPrefixAndSuffix();
-        password = randomEmptyOrBlankString();
-      });
-
-      it("should fail on non-string password", () => {
-        expect(() => authenticateUser(email, password, () => {})).to.throw(
-          Error,
-          "password is empty or blank"
-        );
-      });
-      describe("when callback is wrong", () => {
-        describe("when callback is not a callback", () => {
-          let email, password, callback;
-          beforeEach(() => {
-            email = randomWithPrefixAndSuffix();
-            password = randomStringWithPrefix();
-            callback = randomNotFunction();
-          });
-          it("should fail on non-function callback", () => {
-            expect(() => authenticateUser(email, password, callback)).to.throw(
-              TypeError,
-              `${callback} is not a callback`
-            );
-          });
-        });
-      });
-    });
-
+    // TODO when password is wrong and its subcases
     // TODO when callback is wrong
   });
 });
