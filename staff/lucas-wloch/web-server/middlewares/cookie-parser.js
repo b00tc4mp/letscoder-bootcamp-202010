@@ -18,10 +18,3 @@ module.exports = (req, res, next) => {
 
     next()
 }
-
-
-// res.setHeader('set-cookie','hola=holaa')
-    // res.setHeader('set-cookie','chao=chaoo')
-    // console.log(typeof req.headers.cookie)
-    // console.log(req.headers.cookie)
-    // console.log(req.get('cookie'))

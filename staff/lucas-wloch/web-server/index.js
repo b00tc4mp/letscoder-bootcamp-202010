@@ -3,8 +3,9 @@ const app = express()
 const port = 3000
 
 
-const urlencodedBodyParser = require('./middlewares/urlencoded-body-parser')
-const cookieParser = require('./middlewares/cookie-parser')
+const { urlencodedBodyParser, cookieParser, cookieSession} = require('./middlewares')
+
+const withErrorHandling = require('./handlers/web/helpers/with-error-handling')
 
 const {
     handleGoToRegister,
@@ -16,42 +17,42 @@ const {
     handleNotFound,
     handleGoToSearch,
     handleGoToDetail
-} = require('./web/handlers')
+} = require('./handlers/web')
 
 const {
-    handleAcceptCookies
-} = require('./api/handlers')
+    handleAcceptCookies,
+    handleLikeVehicle
+} = require('./handlers/api')
 
 
 
 
 app.use(express.static('public'))
 
-app.get('/register',cookieParser, handleGoToRegister)
+app.get('/register',cookieParser, cookieSession, withErrorHandling(handleGoToRegister))
 
-app.post('/register', urlencodedBodyParser, handleRegister)
+app.post('/register', urlencodedBodyParser, withErrorHandling(handleRegister))
 
-app.get('/login',cookieParser, handleGoToLogin)
+app.get('/login',cookieParser, cookieSession, withErrorHandling(handleGoToLogin))
 
-app.post('/login',cookieParser, urlencodedBodyParser, handleLogin)
+app.post('/login',cookieParser, cookieSession, urlencodedBodyParser, withErrorHandling(handleLogin))
 
-app.get('/',cookieParser, handleGoToHome)
+app.get('/',cookieParser, cookieSession, withErrorHandling(handleGoToHome))
 
-app.post('/logout', handleLogout)
+app.post('/logout', cookieParser, cookieSession, withErrorHandling(handleLogout))
+
 // search paths
-app.get('/search', cookieParser, handleGoToSearch)
 
+app.get('/search', cookieParser, cookieSession, withErrorHandling(handleGoToSearch))
 
-app.get(`/search/vehicles/*`, cookieParser, handleGoToDetail)
-
-// const vehicleIds = ['FYF20','FYG52','GMR67']
-// vehicleIds.forEach(id => {
-//     app.get(`/search/vehicles/${id}`, cookieParser, handleGoToDetail)
-// })
+app.get(`/vehicles/:vehicleId`, cookieParser, cookieSession, withErrorHandling(handleGoToDetail))
 
 // api paths
 
-app.post('/api/accept-cookies', cookieParser, handleAcceptCookies)
+app.post('/api/accept-cookies', cookieParser, cookieSession, handleAcceptCookies)
+
+
+app.post(`/api/likeVehicle/:vehicleId`, cookieParser, cookieSession, handleLikeVehicle)
 
 app.get('/*', handleNotFound)
 
