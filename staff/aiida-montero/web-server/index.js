@@ -2,8 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const urlencodeBodyParser = require('./middlewares/urlencoded-body-parser')
-const cookieParser = require('./middlewares/cookie-parser')
+const { urlencodedBodyParser, cookieParser, cookieSession } = require('./middlewares')
 
 const {
     handleGoToRegister,
@@ -14,28 +13,31 @@ const {
     handleLogout,
     handleNotFound,
     handleGoToSearch
+} = require('./handlers/web')
 
-} = require('./web/handlers')
-
-const { 
-     handleAcceptCookies 
- } = require('./api/handlers')
+const {
+    handleAcceptCookies
+} = require('./handlers/api')
 
 app.use(express.static('public'))
 
-app.get('/register', cookieParser, handleGoToRegister)
+app.get('/register', cookieParser, cookieSession, handleGoToRegister)
 
-app.post('/register', urlencodeBodyParser, handleRegister)
+app.post('/register', urlencodedBodyParser, handleRegister)
 
-app.get('/login', cookieParser, handleGoToLogin)
+app.get('/login', cookieParser, cookieSession, handleGoToLogin)
 
-app.post('/login', cookieParser, urlencodeBodyParser, handleLogin )
+app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, handleLogin)
 
-app.get('/', cookieParser, handleGoToHome )
+app.get('/', cookieParser, cookieSession, handleGoToHome)
 
-app.post('/logout', handleLogout)
+app.post('/logout', cookieParser, cookieSession, handleLogout)
 
-app.post('/api/accept-cookies', cookieParser, handleAcceptCookies)
+app.get('/search', cookieParser, cookieSession, handleGoToSearch)
+
+// api paths
+
+app.post('/api/accept-cookies', cookieParser, cookieSession, handleAcceptCookies)
 
 app.get('/*', handleNotFound)
 

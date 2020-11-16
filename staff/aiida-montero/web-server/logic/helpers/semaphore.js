@@ -10,7 +10,7 @@ const done = () => {
 
 }
 
-module.exports = callbacks => {
+module.exports = callback => {
 
     callbacks.push(callback)
 

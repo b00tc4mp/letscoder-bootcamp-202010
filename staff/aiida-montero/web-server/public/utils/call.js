@@ -1,6 +1,4 @@
-const { XMLHttpRequest } = require("xmlhttprequest")
-
-module.exports = (method, url, headers, body, callback) => {
+function call(method, url, headers, body, callback) {
     var xhr = new XMLHttpRequest
 
     xhr.onreadystatechange = function () {

@@ -1,10 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 const authenticateUser = require('../../logic/authenticate-user')
-const sessions = require ('../../sessions')
 
 module.exports = (req, res) => {
-  const {body : {email, password}, cookies : {'session-id' : sessionId} } = req
+  const {body : {email, password}} = req
 
   authenticateUser(email, password, (error, userId) =>{
       if(error)
@@ -14,9 +13,13 @@ module.exports = (req, res) => {
            res.send(content.replace('{message}', error.message))
       })
 
-      const session = sessions[sessionId]
+      const {session} = req
 
       session.userId = userId
+
+      session.save(error => {
+        if(error) return res.status(500).send(`sorry, there was an error :( ERROR: ${_error.message}`)
+      })
 
       res.redirect('/')
   })
