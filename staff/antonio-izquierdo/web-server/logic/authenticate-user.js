@@ -2,14 +2,11 @@ const fs = require('fs')
 const { validateEmail, validatePassword, validateCallback } = require('./helpers/validations')
 const path = require('path')
 
-module.exports = (email, password, callback) => {try {
+module.exports = (email, password, callback) => {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
-    
-} catch (error) {
-return callback(error)
-}
+
     const usersPath = path.join(__dirname, '../data/users')
 
     fs.readdir(usersPath, (error, files) => {

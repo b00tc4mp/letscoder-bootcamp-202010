@@ -1,20 +1,9 @@
 const fs = require('fs')
 const path = require('path')
-const sessions = require('../../sessions')
-const { createId } = require('../../utils/ids')
-const { createSessionCookie } = require('./helpers/cookies')
 const { searchVehicles } = require('../../logic')
 
 module.exports = (req, res) => {
-    const { cookies: { 'session-id': sessionId = createId() }, query: { q } } = req
-
-    debugger
-
-    res.setHeader('set-cookie', createSessionCookie(sessionId))
-
-    const session = sessions[sessionId] || (sessions[sessionId] = {})
-
-    const { userId, cookiesAccepted } = session
+    const { query: { q }, session: { userId, cookiesAccepted } } = req
 
     if (!userId)
         fs.readFile(path.join(__dirname, '../../views/search.html'), 'utf8', (error, content) => {
@@ -27,7 +16,7 @@ module.exports = (req, res) => {
                 if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
                 const results = `<ul>
-                    ${vehicles.map(({id, name, thumbnail}) => `<li>
+                    ${vehicles.map(({ id, name, thumbnail }) => `<li>
                         <a href="http://localhost:3000/vehicles/${id}">
                             <h3>${name}</h3>
                             <img src="${thumbnail}">

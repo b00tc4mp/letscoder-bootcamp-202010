@@ -4,17 +4,13 @@ const { createId } = require('../utils/ids')
 const path = require('path')
 const semaphore = require('./helpers/semaphore')
 
-module.exports = (fullname, email, password, repassword, callback) => {try {
+module.exports = (fullname, email, password, repassword, callback) => {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
     validateRepeatedPassword(password, repassword)
     validateCallback(callback)
-} catch (error) {
-    callback(error)
-    return
-}
-    
+   
     const usersPath = path.join(__dirname, '../data/users')
 
     semaphore(done => {
