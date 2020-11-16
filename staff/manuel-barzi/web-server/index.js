@@ -13,11 +13,11 @@ const {
     handleLogout,
     handleNotFound,
     handleGoToSearch
-} = require('./web/handlers')
+} = require('./handlers/web')
 
 const {
     handleAcceptCookies
-} = require('./api/handlers')
+} = require('./handlers/api')
 
 app.use(express.static('public'))
 
