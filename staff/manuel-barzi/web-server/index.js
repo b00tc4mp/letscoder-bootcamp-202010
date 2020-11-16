@@ -4,6 +4,8 @@ const port = 3000
 
 const { urlencodedBodyParser, cookieParser, cookieSession } = require('./middlewares')
 
+const withErrorHandling = require('./handlers/web/helpers/with-error-handling')
+
 const {
     handleGoToRegister,
     handleRegister,
@@ -12,7 +14,8 @@ const {
     handleGoToHome,
     handleLogout,
     handleNotFound,
-    handleGoToSearch
+    handleGoToSearch,
+    handleGoToDetail
 } = require('./handlers/web')
 
 const {
@@ -21,24 +24,39 @@ const {
 
 app.use(express.static('public'))
 
-app.get('/register', cookieParser, cookieSession, handleGoToRegister)
+app.get('/register', cookieParser, cookieSession, withErrorHandling(handleGoToRegister))
 
-app.post('/register', urlencodedBodyParser, handleRegister)
+app.post('/register', urlencodedBodyParser, withErrorHandling(handleRegister))
 
-app.get('/login', cookieParser, cookieSession, handleGoToLogin)
+// const withErrorHandling = handler =>
+//     (req, res) =>
+//         handler(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
 
-app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, handleLogin)
 
-app.get('/', cookieParser, cookieSession, handleGoToHome)
+// app.get('/login', cookieParser, cookieSession, (req, res) => {
+//     handleGoToLogin(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
+// })
 
-app.post('/logout', cookieParser, cookieSession, handleLogout)
+app.get('/login', cookieParser, cookieSession, withErrorHandling(handleGoToLogin))
 
-app.get('/search', cookieParser, cookieSession, handleGoToSearch)
+// app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, (req, res) => {
+//     handleLogin(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
+// })
+
+app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, withErrorHandling(handleLogin))
+
+app.get('/', cookieParser, cookieSession, withErrorHandling(handleGoToHome))
+
+app.post('/logout', cookieParser, cookieSession, withErrorHandling(handleLogout))
+
+app.get('/search', cookieParser, cookieSession, withErrorHandling(handleGoToSearch))
+
+app.get('/vehicles/:vehicleId', cookieParser, cookieSession, withErrorHandling(handleGoToDetail))
 
 // api paths
 
 app.post('/api/accept-cookies', cookieParser, cookieSession, handleAcceptCookies)
 
-app.get('/*', handleNotFound)
+app.get('/*', withErrorHandling(handleNotFound))
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))

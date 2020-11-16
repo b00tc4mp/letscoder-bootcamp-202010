@@ -8,7 +8,7 @@
     "inspect": "node inspect .",
     "test": "npx mocha logic/*.spec.js",
     "test-inspect": "npx mocha inspect logic/*.spec.js",
-    "style-client": "sass public/style.sass public/style.css"
+    "style": "sass public/style.sass public/style.css"
   },
   "author": "",
   "license": "ISC",

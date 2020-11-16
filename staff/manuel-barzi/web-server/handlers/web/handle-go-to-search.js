@@ -2,18 +2,18 @@ const fs = require('fs')
 const path = require('path')
 const { searchVehicles } = require('../../logic')
 
-module.exports = (req, res) => {
+module.exports = (req, res, handleError) => {
     const { query: { q }, session: { userId, cookiesAccepted } } = req
 
     if (!userId)
         fs.readFile(path.join(__dirname, '../../views/search.html'), 'utf8', (error, content) => {
-            if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+            if (error) return handleError(error)
 
             if (!q)
                 return res.send(content.replace('{cookiesAccepted}', cookiesAccepted).replace('{results}', ''))
 
             searchVehicles(q, (error, vehicles) => {
-                if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+                if (error) return handleError(error)
 
                 const results = `<ul>
                     ${vehicles.map(({ id, name, thumbnail }) => `<li>
