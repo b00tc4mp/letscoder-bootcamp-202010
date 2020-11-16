@@ -1,5 +1,5 @@
 module.exports = (req, res, next) => {
-    
+
     const cookie = req.get('cookie')
 
     const cookies = {}
