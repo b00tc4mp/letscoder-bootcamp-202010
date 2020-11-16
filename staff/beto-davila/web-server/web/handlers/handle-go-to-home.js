@@ -8,8 +8,6 @@ module.exports = (req, res) => {
 
     const session = sessions[sessionId]
 
-
-    //if (session.userId)
     if (session && session.userId)
         //retrieveUser(session.userId, (error, user) => {
         retrieveUser(session.userId, (error, user) => {

@@ -8,12 +8,14 @@ const { searchVehicles } = require('../../logic')
 module.exports = (req, res) => {
     // req destructuring
     const { cookies: { 'session-id': sessionId = createId() }, query: { q } } = req
+    debugger
 
     res.setHeader('set-cookie', createSessionCookie(sessionId))
 
     const session = sessions[sessionId] || (sessions[sessionId] = {})
 
     const { userId, cookiesAccepted } = session
+    debugger
 
     // if (!session.userId) --> there is no register/login yet
     if (!userId)
@@ -34,7 +36,7 @@ module.exports = (req, res) => {
                         </a>
                     </li>`).join('\n')}
                 </ul>`
-
+debugger
                 res.send(content.replace('{cookiesAccepted}', cookiesAccepted).replace('{results}', results))
     
             })

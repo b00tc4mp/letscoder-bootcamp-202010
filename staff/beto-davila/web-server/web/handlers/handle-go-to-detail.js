@@ -5,7 +5,18 @@ const { retrieveVehicles } = require('../../logic')
 
 module.exports = (req, res) => {
     // req destructuring
-    const { cookies: { 'session-id': sessionId } } = req
+    const { cookies: { 'session-id': sessionId }, url } = req
+
+    const urlParts = url.split('/');
+
+    const [,,vehicleId] = urlParts
+
+    debugger
+    // const path = document.location.pathname
+
+    // const parts = path.split("/")
+
+    // const [,,vehicleId] = parts
 
     const session = sessions[sessionId] || (sessions[sessionId] = {})
 
@@ -15,21 +26,17 @@ module.exports = (req, res) => {
         fs.readFile(path.join(__dirname, '../../views/detail.html'), 'utf8', (error, content) => {
             if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
-            retrieveVehicles(id, (error, vehicle) => {
+            retrieveVehicles(vehicleId, (error, vehicle) => {
                 if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
 
-                const {id, name, image, maker, description, price} = vehicle
-                console.log(vehicle)
-                // const result = `<ul>
-                //     ${vehicles.map(({id, name, thumbnail}) => `<li>
-                //         <a href="http://localhost:3000/vehicles/${id}">
-                //             <h3>${name}</h3>
-                //             <img src="${thumbnail}">
-                //         </a>
-                //     </li>`).join('\n')}
-                // </ul>`
+                const {name, image, maker, description, price} = vehicle
+                vehicle = ` <h3>${name}</h3>
+                            <img src="${image}">
+                            <p>Maker: ${maker}</p><p>Description: ${description}</p>
+                            <p>Price: ${price} $</p>`
 
-                //res.send(content.replace('{cookiesAccepted}', cookiesAccepted).replace('{result}', vehicle))
+                //console.log(vehicle)
+                res.send(content.replace('{cookiesAccepted}', cookiesAccepted).replace('{result}', vehicle))
     
             })
         })

@@ -1,4 +1,4 @@
-// we need sessionId to accept cookies so that we bring sessions object
+// we need sessionId to accept cookies so we bring sessions object
 const sessions = require('../../sessions') 
 
 module.exports = (req, res) => {
