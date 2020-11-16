@@ -1,9 +1,9 @@
-module.exports = (req, res) => {
+module.exports = (req, res, handleError) => {
 
     const { session } = req
 
     session.destroy(error => {
-        if (error) return res.status(500).send(`sorry, there was an error :( ERROR: ${_error.message}`)
+        if (error) return handleError(error)
 
         
         res.setHeader('set-cookie', `session-id=NO-SESSION; max-age: 0; expires=${new Date().toUTCString()} `)

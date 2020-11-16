@@ -26,21 +26,26 @@ const {
 
 app.use(express.static('public'))
 
-app.get('/register', cookieParser, cookieSession, handleGoToRegister)
+app.get('/register', cookieParser, cookieSession, withErrorHandling(handleGoToRegister) )
 
-app.post('/register', urlencodedBodyParser, handleRegister)
+app.post('/register', urlencodedBodyParser, withErrorHandling(handleRegister) )
 
-app.get('/login', cookieParser, cookieSession, handleGoToLogin)
+app.get('/login', cookieParser, cookieSession, withErrorHandling(handleGoToLogin) )
 
-app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, handleLogin)
+app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, withErrorHandling(handleLogin) )
 
-app.get('/', cookieParser, cookieSession, handleGoToHome)
+app.get('/', cookieParser, cookieSession, withErrorHandling(handleGoToHome) )
 
-app.post('/logout', cookieParser, cookieSession, handleLogout)
+app.post('/logout', cookieParser, cookieSession, withErrorHandling(handleLogout) )
 
-app.get('/search', cookieParser, cookieSession, handleGoToSearch)
+//app.get('/search', cookieParser, cookieSession, handleGoToSearch)
 
-app.get('/vehicles/:vehicleId', cookieParser, cookieSession, handleGoToDetail)
+//app.get('/vehicles/:vehicleId', cookieParser, cookieSession, handleGoToDetail)
+
+app.get('/search', cookieParser, cookieSession, withErrorHandling(handleGoToSearch) )
+
+app.get('/vehicles/:vehicleId', cookieParser, cookieSession, withErrorHandling(handleGoToDetail) )
+
 
 
 
