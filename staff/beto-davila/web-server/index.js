@@ -2,10 +2,11 @@ const express = require('express') // bring express module
 const app = express()
 const port = 3000
 
-const cookieParser = require('./middlewares/cookie-parser')
-const urlencodedBodyParser = require ('./middlewares/urlencoded-body-parser')
+const { cookieParser, cookieSession, urlencodedBodyParser } = require('./middlewares/indexer')
 
-// destructuring of index.js 
+const withErrorHandling = require('./handlers/web/helpers/with-error-handling')
+
+// destructuring of indexer.js 
 const {
   handleGoToRegister,
   handleRegister,
@@ -16,35 +17,51 @@ const {
   handleNotFound,
   handleGoToSearch,
   handleGoToDetail
-} = require('./web/handlers')
+} = require('./handlers/web/indexer')
 
-const { handleAcceptCookies } = require ('./api/handlers')
+const { handleAcceptCookies } = require ('./handlers/api')
 
-// static files service (images, css, jsx files...)
+// static files service (images, css, jsx files...). 'use' runs in all routes
 app.use(express.static('public'))
 
 // register form, 'get' method.
-app.get('/register', cookieParser, handleGoToRegister)
+app.get('/register', cookieParser, cookieSession, withErrorHandling(handleGoToRegister))
 
 // register form, post method to send user data
-app.post('/register', urlencodedBodyParser, handleRegister)
+app.post('/register', urlencodedBodyParser, withErrorHandling(handleRegister))
+/*
+const withErrorHandling = handler =>
+    (req, res) =>
+        handler(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
 
-app.get('/login', cookieParser, handleGoToLogin)
 
-app.post('/login', urlencodedBodyParser, cookieParser, handleLogin)
+app.get('/login', cookieParser, cookieSession, (req, res) => {
+    handleGoToLogin(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
+})
+*/
 
-app.get('/', cookieParser, handleGoToHome)
+app.get('/login', cookieParser, cookieSession, withErrorHandling(handleGoToLogin))
 
-app.post('/logout', handleLogout)
+/*
+app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, (req, res) => {
+    handleLogin(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
+})
+*/
 
-app.get('/search', cookieParser, handleGoToSearch)
+app.post('/login', urlencodedBodyParser, cookieParser, cookieSession, withErrorHandling(handleLogin))
 
-app.get('/vehicles/*', cookieParser, handleGoToDetail)
+app.get('/', cookieParser, cookieSession, withErrorHandling(handleGoToHome))
 
-//api paths
-app.post('/api/accept-cookies', cookieParser, handleAcceptCookies)
+app.post('/logout', cookieParser, cookieSession, withErrorHandling(handleLogout))
 
-app.get('/*', handleNotFound)
+app.get('/search', cookieParser, cookieSession, withErrorHandling(handleGoToSearch))
+
+app.get('/vehicles/*', cookieParser, cookieSession, withErrorHandling(handleGoToDetail))
+
+//api route that handles the accept-cookies logic
+app.post('/api/accept-cookies', cookieParser, cookieSession, handleAcceptCookies)
+
+app.get('/*', withErrorHandling(handleNotFound))
 
 /*
 app.get('/helloworld', (req, res) => {

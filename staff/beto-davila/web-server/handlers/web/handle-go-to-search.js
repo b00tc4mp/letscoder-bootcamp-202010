@@ -1,33 +1,26 @@
 const fs = require('fs')
 const path = require('path')
-const sessions = require('../../sessions')
-const { createId } = require('../../utils/ids')
-const { createSessionCookie } = require('./helpers/cookies')
-const { searchVehicles } = require('../../logic')
+// const sessions = require('../../../sessions')
+// const { createId } = require('../../../utils/ids')
+// const { createSessionCookie } = require('./helpers/cookies')
+const { searchVehicles } = require('../../logic/indexer')
 
-module.exports = (req, res) => {
+module.exports = (req, res, handleError) => {
     // req destructuring
-    const { cookies: { 'session-id': sessionId = createId() }, query: { q } } = req
-    debugger
+    const { session: { userId, cookiesAccepted }, query: { q } } = req
 
-    res.setHeader('set-cookie', createSessionCookie(sessionId))
-
-    const session = sessions[sessionId] || (sessions[sessionId] = {})
-
-    const { userId, cookiesAccepted } = session
-    debugger
 
     // if (!session.userId) --> there is no register/login yet
     if (!userId)
         fs.readFile(path.join(__dirname, '../../views/search.html'), 'utf8', (error, content) => {
-            if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
+            if (error) return handleError(error)
 
             if(!q)
                 return res.send(content.replace('{cookiesAccepted}', cookiesAccepted).replace('{results}', ''))
 
             searchVehicles(q, (error, vehicles) => {
-                if (error) return res.send(`sorry, there was an error :( ERROR: ${error.message}`)
-
+                if (error) return handleError(error)
+                
                 const results = `<ul>
                     ${vehicles.map(({id, name, thumbnail}) => `<li>
                         <a href="http://localhost:3000/vehicles/${id}">
@@ -36,7 +29,7 @@ module.exports = (req, res) => {
                         </a>
                     </li>`).join('\n')}
                 </ul>`
-debugger
+
                 res.send(content.replace('{cookiesAccepted}', cookiesAccepted).replace('{results}', results))
     
             })

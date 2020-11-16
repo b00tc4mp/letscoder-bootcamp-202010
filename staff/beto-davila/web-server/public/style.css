@@ -25,6 +25,19 @@
   color: #4ae61b;
 }
 
+.feedback {
+  font-weight: bold;
+}
+.feedback--success {
+  color: green;
+}
+.feedback--warning {
+  color: gold;
+}
+.feedback--error {
+  color: red;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }

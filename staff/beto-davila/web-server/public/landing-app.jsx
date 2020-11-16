@@ -1,5 +1,6 @@
 // The function that renders the accept-cookies component
-class App extends React.Component {
+const { Component } = React
+class App extends Component {
   constructor() {
       super()
 

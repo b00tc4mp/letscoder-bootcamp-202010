@@ -1,4 +1,4 @@
-const { call } = require('../utils')
+const { call } = require('../utils/indexer')
 const { validateCallback } = require('./helpers/validations')
 
 module.exports = (vehicleId, callback) => {

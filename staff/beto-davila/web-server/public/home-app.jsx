@@ -1,5 +1,3 @@
-const { Component } = React
-
 function App() {
 
   return ( <section> Hello, React! ⚛ </section> )
