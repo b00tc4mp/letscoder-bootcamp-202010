@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-module.exports = withErrorHandling = handler =>
+module.exports = handler =>
     (req, res) =>
         handler(req, res, error => {
             fs.readFile(path.join(__dirname, '../../../views/error.html'), 'utf8', (_error, content) => {
