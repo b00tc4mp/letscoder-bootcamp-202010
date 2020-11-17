@@ -1,5 +1,5 @@
-module.exports = { 
-    call: requestAnimationFrame('./call'),
-    ids: requestAnimationFrame('./ids'),
-    randoms: requestAnimationFrame('./randoms')
-}
+module.exports =  {
+    call: require('./call'),
+    ids: require('./ids'),
+    randoms: require('./randoms')
+} 

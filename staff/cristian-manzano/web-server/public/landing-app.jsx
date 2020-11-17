@@ -19,9 +19,8 @@ class App extends Component {
         const { state: { cookiesAccepted }, handleAcceptCookies } = this
 
         return <>
-        {!cookiesAccepted && <AcceptCokies onAccept={handleAcceptCookies} />}
+            {!cookiesAccepted && <AcceptCookies onAccept={handleAcceptCookies} />}
         </>
     }
 }
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root')) 

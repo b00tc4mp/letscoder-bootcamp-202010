@@ -21,4 +21,4 @@ module.exports = (id, callback) => {
             callback(null, user)
         })
     })
-}
+} 

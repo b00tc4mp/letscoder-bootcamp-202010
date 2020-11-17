@@ -9,6 +9,7 @@ module.exports = (req, res, next) => {
         const body = {}
 
         if (content) {
+            // content => email=manuelbarzi%40gmail.com&password=123123123&c=1&d=2
             const keyValues = content.split('&')
 
             for (const keyValue of keyValues) {
@@ -16,10 +17,11 @@ module.exports = (req, res, next) => {
 
                 body[key] = decodeURIComponent(value.split('+').join(' '))
             }
+
         }
 
         req.body = body
 
         next()
     })
-}
+} 

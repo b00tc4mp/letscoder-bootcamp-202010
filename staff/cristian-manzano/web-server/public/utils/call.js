@@ -12,4 +12,4 @@ function call(method, url, headers, body, callback) {
         xhr.setRequestHeader(key, headers[key])
 
     xhr.send(body)
-}
+} 
