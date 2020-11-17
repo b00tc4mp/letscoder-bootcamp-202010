@@ -1,5 +1,3 @@
-const fs = require('fs')
-const path = require('path')
 const { retrieveVehicle } = require('../../logic')
 
 module.exports = (req, res, handleError) => {
@@ -12,7 +10,14 @@ module.exports = (req, res, handleError) => {
             if(vehicle) {
                 const {name, image, description, price, url } = vehicle
 
-                fs.readFile(path.join(__dirname, '../../views/detail.html'), 'utf8', (error, content) =>{
+                    res.render('detail', { cookiesAccepted, name,image, description, price, url}, (error, html) =>{
+                        if(error) handleError(error)
+
+                        res.send(html)
+
+                    })
+
+/*                 fs.readFile(path.join(__dirname, '../../views/detail.html'), 'utf8', (error, content) =>{
                     if(error) return handleError(error)
 
                     res.send(content
@@ -22,7 +27,7 @@ module.exports = (req, res, handleError) => {
                         .replace('{description}', description)
                         .replace('{price}', price)
                         .replace('{url}', url))
-                })
+                }) */
             }else handleError(new Error(`sorry, could not retrieve vehicle with id ${vehicleId}`))
         })
     }else res.redirect('/')

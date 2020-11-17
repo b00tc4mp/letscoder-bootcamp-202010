@@ -24,6 +24,8 @@ const {
 
 } = require('./handlers/api')
 
+app.set('view engine', 'pug')
+
 app.use(express.static('public'))
 
 app.get('/register', cookieParser, cookieSession, withErrorHandling(handleGoToRegister) )
