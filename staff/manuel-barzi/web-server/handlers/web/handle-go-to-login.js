@@ -1,16 +1,11 @@
-const fs = require('fs')
-const path = require('path')
-
 module.exports = (req, res, handleError) => {
     const { session: { userId, cookiesAccepted } } = req
 
     if (!userId)
-        fs.readFile(path.join(__dirname, '../../views/login.html'), 'utf8', (error, content) => {
+        res.render('login', { feedback: '', cookiesAccepted }, (error, html) => {
             if (error) return handleError(error)
 
-            res.send(content
-                .replace('{cookiesAccepted}', cookiesAccepted)
-                .replace('{feedback}', ''))
+            res.send(html)
         })
     else res.redirect('/')
 }

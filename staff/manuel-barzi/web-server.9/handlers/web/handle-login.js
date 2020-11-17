@@ -1,3 +1,5 @@
+const fs = require('fs')
+const path = require('path')
 const { authenticateUser } = require('../../logic')
 
 module.exports = (req, res, handleError) => {
@@ -5,10 +7,12 @@ module.exports = (req, res, handleError) => {
 
     authenticateUser(email, password, (error, userId) => {
         if (error)
-            return res.render('login', { cookiesAccepted, feedback: error.message }, (error, html) => {
-                if (error) return handleError(error)
+            return fs.readFile(path.join(__dirname, '../../views/login.html'), 'utf8', (_error, content) => {
+                if (_error) return handleError(_error)
 
-                res.send(html)
+                res.send(content
+                    .replace('{cookiesAccepted}', cookiesAccepted)
+                    .replace('{feedback}', `<p class="feedback feedback--error">${error.message}</>`))
             })
 
         const { session } = req
