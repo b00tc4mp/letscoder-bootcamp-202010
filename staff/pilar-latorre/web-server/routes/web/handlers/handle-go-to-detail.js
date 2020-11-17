@@ -1,4 +1,4 @@
-const { retrieveVehicle } = require('../../logic')
+const { retrieveVehicle } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
     const { params: { vehicleId }, session: { userId, cookiesAccepted } } = req

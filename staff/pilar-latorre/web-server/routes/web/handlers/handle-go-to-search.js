@@ -1,6 +1,4 @@
-//const fs = require('fs')
-//const path = require('path')
-const { searchVehicles } = require('../../logic')
+const { searchVehicles } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
     const { query: { q }, session: { userId, cookiesAccepted } } = req

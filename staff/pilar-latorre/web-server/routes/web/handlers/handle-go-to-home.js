@@ -1,6 +1,4 @@
-const retrieveUser = require('../../logic/retrieve-user')
-const { randomStringWithPrefix } = require('../../utils/randoms')
-
+const retrieveUser = require('../../../logic/retrieve-user')
 
 module.exports = (req, res, handleError) => {
     const { session: { userId } } = req

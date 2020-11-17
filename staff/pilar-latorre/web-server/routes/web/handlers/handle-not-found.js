@@ -1,7 +1,3 @@
-const { resolveSoa } = require('dns')
-const fs = require('fs')
-const path = require('path')
-
 module.exports = (req, res, handleError) => {
     res.render('not-found', (error, html) => {
         if(error) return handleError(error)
