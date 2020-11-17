@@ -1,59 +1,32 @@
+require('dotenv').config()
+
 const express = require('express')
+const logger = require('./utils/logger')
+
+const { env: { PORT }, argv: [,,port = PORT || 8080]} = process
+
 const app = express()
-const port = 3000
 
-
-const { urlencodedBodyParser, cookieParser, cookieSession} = require('./middlewares')
-
-const withErrorHandling = require('./handlers/web/helpers/with-error-handling')
+const { web, api } = require('./routes')
 
 const {
-    handleGoToRegister,
-    handleRegister,
-    handleGoToLogin,
-    handleLogin,
-    handleGoToHome,
-    handleLogout,
-    handleNotFound,
-    handleGoToSearch,
-    handleGoToDetail
-} = require('./handlers/web')
+    handleNotFound
+} = require('./routes/web/handlers')
 
-const {
-    handleAcceptCookies,
-    handleLikeVehicle
-} = require('./handlers/api')
-
-
-
+app.set('view engine', 'pug')
 
 app.use(express.static('public'))
 
-app.get('/register',cookieParser, cookieSession, withErrorHandling(handleGoToRegister))
+app.use(web)
 
-app.post('/register', urlencodedBodyParser, withErrorHandling(handleRegister))
-
-app.get('/login',cookieParser, cookieSession, withErrorHandling(handleGoToLogin))
-
-app.post('/login',cookieParser, cookieSession, urlencodedBodyParser, withErrorHandling(handleLogin))
-
-app.get('/',cookieParser, cookieSession, withErrorHandling(handleGoToHome))
-
-app.post('/logout', cookieParser, cookieSession, withErrorHandling(handleLogout))
-
-// search paths
-
-app.get('/search', cookieParser, cookieSession, withErrorHandling(handleGoToSearch))
-
-app.get(`/vehicles/:vehicleId`, cookieParser, cookieSession, withErrorHandling(handleGoToDetail))
-
-// api paths
-
-app.post('/api/accept-cookies', cookieParser, cookieSession, handleAcceptCookies)
-
-
-app.post(`/api/likeVehicle/:vehicleId`, cookieParser, cookieSession, handleLikeVehicle)
+app.use(api)
 
 app.get('/*', handleNotFound)
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(port, () =>{
+ logger.log(`server running on port ${port}`)
+ console.log(`server running on port ${port}`)})
+
+process.on('SIGINT', () => {
+console.log('stopping server')
+logger.log(`stopping server`, 'info', () => process.exit(0))})

@@ -5,8 +5,18 @@
   width: 100vw;
   height: 100vh;
 }
-.accept-cookies__h2 {
-  color: white;
+
+.feedback {
+  font-weight: bold;
+}
+.feedback--success {
+  color: green;
+}
+.feedback--warning {
+  color: gold;
+}
+.feedback--error {
+  color: red;
 }
 
 h1 {
