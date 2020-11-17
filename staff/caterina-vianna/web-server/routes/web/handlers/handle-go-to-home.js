@@ -1,4 +1,4 @@
-const retrieveUser = require("../../logic/retrieve-user");
+const retrieveUser = require("../../../logic/retrieve-user");
 
 module.exports = (req, res, handleError, cookiesAccepted) => {
   const {

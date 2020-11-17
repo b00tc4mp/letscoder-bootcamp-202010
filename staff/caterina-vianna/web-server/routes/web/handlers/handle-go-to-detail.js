@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { retrieveVehicle } = require("../../logic");
+const retrieveVehicle = require("../../../logic/search-vehicles");
 
 module.exports = (req, res, handleError) => {
   const {
