@@ -1,0 +1,91 @@
+.container {
+  margin: 40px 0;
+  width: 70vw;
+  height: 140vmax;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: auto auto auto;
+}
+.grid-tile {
+  position: relative;
+  border: 2px solid back;
+  background-color: cornflowerblue;
+  margin: 4px;
+}
+.uno {
+  grid-area: 1 / 1 / span 2 / span 1;
+}
+.dos {
+  grid-area: 1 / 2 / span 1 / span 2;
+}
+.tres {
+  grid-area: 2 / 2 / span 1 / span 2;
+}
+.cuatro {
+  grid-area: 3 / 1 / span 1 / span 2;
+}
+.cinco {
+  grid-area: 3 / 3 / span 2 / span 1;
+}
+.seis {
+  grid-area: 4 / 1 / span 1 / span 2;
+}
+.siete {
+  grid-area: 5 / 1 / span 2 / span 1;
+}
+.ocho {
+  grid-area: 5 / 2 / span 1 / span 2;
+}
+.nueve {
+  grid-area: 6 / 2 / span 1 / span 2;
+}
+.fade {
+  opacity: 0.5;
+  background-color: lightblue;
+  position: absolute;
+  bottom: 0;
+  h3 {
+    font-family: "SourceSansPro", "sans-serif";
+    font-weight: 700;
+    font-size: 15px;
+    padding: 4%;
+    margin: 0;
+  }
+  p {
+    font-family: "SourceSansProRegular", "sans-serif";
+    font-weight: lighter;
+    padding: 10px;
+    margin: 0;
+  }
+}
+.izq {
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+.der {
+  right: 0;
+  height: 100%;
+  width: 50%;
+}
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 15;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: auto auto auto;
+  }
+  .grid-tile {
+  }
+  .alto {
+    height: 50%;
+  }
+}

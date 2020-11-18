@@ -1,0 +1,135 @@
+.header {
+  // position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 70vh;
+  z-index: 2;
+  max-height: 53px;
+  background-color: #fff;
+  .bloquerefs {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin: 0px 2px;
+    padding: 0px 2px;
+    overflow: visible;
+    div {
+      margin: 0px 2px;
+      padding: 0px 2px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      border-radius: 5px;
+      height: 60px;
+      width: 60px;
+      transition: 0.6s;
+      p {
+        font-family: "SourceSansPro";
+      }
+    }
+    .rojo {
+      background-color: rgb(253, 77, 77);
+      height: 90px;
+    }
+    .azul {
+      background-color: rgb(85, 59, 231);
+      &:hover {
+        height: 90px;
+      }
+    }
+    .amarillo {
+      background-color: rgb(248, 215, 26);
+      &:hover {
+        height: 90px;
+      }
+    }
+  }
+  .login {
+    padding-top: 5px;
+    background-color: #fff;
+    &-container {
+      padding: 10px;
+      &:hover i {
+        color: red;
+      }
+      a {
+        display: none;
+        text-decoration: none;
+        font-family: "SourceSansProRegular", "sans-serif";
+        padding: 4px;
+      }
+    }
+  }
+  .search {
+    display: flex;
+    align-content: center;
+    height: 40px;
+    margin-top: 4px;
+    input {
+      padding: 0 5px;
+    }
+    button {
+      background-color: gray;
+      box-shadow: none;
+      border: none;
+      cursor: pointer;
+      width: 40px;
+    }
+  }
+  .redes {
+    padding: 8px 16px;
+    background-color: #fff;
+    .container-redes {
+      display: flex;
+      justify-content: center;
+      div {
+        i {
+          margin: 8px 6px;
+          color: black;
+          transition: 0.6s;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .fa-facebook-f:hover {
+          color: rgb(0, 40, 170);
+        }
+        .fa-twitter:hover {
+          color: rgb(0, 108, 231);
+        }
+        .fa-instagram:hover {
+          color: rgb(255, 255, 95);
+        }
+        .fa-pinterest-p:hover {
+          color: red;
+        }
+        .fa-youtube:hover {
+          color: red;
+        }
+      }
+    }
+  }
+  .carrito {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    div {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 10px;
+      width: 36px;
+      background-color: red;
+      div {
+        span {
+          color: white;
+        }
+      }
+    }
+    i {
+      margin: 18px 9px 9px 9px;
+    }
+  }
+}
