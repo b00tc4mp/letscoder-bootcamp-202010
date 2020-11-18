@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: bold;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #048b75;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  width: fit-content;
+  height: 100%;
+  padding: 10px;
+}
+
+.off {
+  display: none;
+}
+
+section {
+  padding: 30px;
+  border: 2px solid green;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: rgba(83, 114, 37, 0.911);
+  text-align: start;
+}
+
+.access {
+  text-align: center;
+}
+
+.title {
+  font-family: architects daughter;
+  font-weight: bolder;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.profile > button {
+  width: 60%;
+  height: 60%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=index.css.map */

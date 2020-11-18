@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  font-family: Roboto Condensed;
+}
+
+button {
+  border-style: none;
+}
+button:focus {
+  outline: 0;
+}
+
+.access {
+  text-align: center;
+}
+.access__register {
+  background-color: orange;
+  color: black;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
+}
+.access__register:hover {
+  cursor: pointer;
+}
+.access__login {
+  border-style: solid;
+  border-color: orange;
+  background-color: transparent;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
+}
+.access__login:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.title {
+  font-family: Bebas Neue;
+}
+.title:hover {
+  cursor: pointer;
+}
+.title__world {
+  background-color: orange;
+  font-size: 5rem;
+}
+
+.register {
+  background-color: red;
+}
+
+.register-confirm {
+  background-color: greenyellow;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__input {
+  margin: 0.5rem;
+}
+.login__input:focus {
+  outline-color: orange;
+}
+.login__button {
+  background-color: orange;
+  border-style: none;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+.welcome {
+  background-color: plum;
+}
+.welcome__image {
+  width: 10vw;
+}
+
+/*# sourceMappingURL=index.css.map */

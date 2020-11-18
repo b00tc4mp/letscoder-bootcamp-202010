@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  padding: 10px;
+  background-color: #8f999c;
+  width: 70vw;
+  height: 200vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 6, 1fr;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 8vw;
+}
+
+.cabecera {
+  margin: 10px;
+  background: grey;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  text-align: center;
+}
+
+.bloques {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 180px;
+  height: 60px;
+  margin: 0vw 0vw 0vw 15vw;
+}
+.bloques div {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Dosis;
+}
+.bloques div:hover {
+  height: 120px;
+}
+
+.login {
+  color: black;
+  margin-left: 15vw;
+}
+
+.social-networks {
+  margin-left: 5vw;
+  color: black;
+  font-family: Dosis;
+}
+
+.compras {
+  margin-left: 5vw;
+}
+
+button {
+  color: black;
+  background-color: RGB(205, 92, 92);
+  font-size: 3vw;
+  border-radius: 1vw;
+  font-family: Dosis;
+}
+
+.carrito {
+  background-color: white;
+  font-size: 3vw;
+  font-family: Dosis;
+}
+
+.number {
+  background-color: black;
+  color: white;
+  font-size: 3vw;
+  font-family: Dosis;
+}
+
+.bloque1 {
+  background-color: RGB(205, 92, 92);
+}
+
+.bloque2 {
+  background-color: #C39BD3;
+}
+
+.bloque3 {
+  background-color: white;
+}
+
+.item1 {
+  grid-area: 1/1/3/1;
+  background-color: brown;
+  border: 2px solid white;
+}
+
+.item2 {
+  grid-area: 1/2/1/4;
+  background-color: brown;
+  border: 2px solid white;
+}
+
+.item3 {
+  background-color: brown;
+  border: 2px solid white;
+  grid-area: 2/2/2/4;
+}
+
+.item4 {
+  background-color: brown;
+  border: 2px solid white;
+  grid-area: 3/1/4/3;
+}
+
+.item5 {
+  background-color: brown;
+  border: 2px solid white;
+  grid-area: 3/3/5/4;
+}
+
+.item6 {
+  background-color: brown;
+  border: 2px solid white;
+  grid-area: 4/1/5/3;
+}
+
+.item7 {
+  background-color: brown;
+  border: 2px solid white;
+  grid-area: 5/1/7/2;
+}
+
+.item8 {
+  background-color: brown;
+  border: 2px solid white;
+  grid-area: 5/2/6/4;
+}
+
+.item9 {
+  background-color: brown;
+  border: 2px solid white;
+  grid-area: 6/2/7/4;
+}
+
+@media screen and (max-width: 600px) {
+  .ocultar {
+    display: none;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background-color: #4b4b4b;
+    width: 70vw;
+    height: 180vh;
+    gap: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15svw;
+  }
+
+  .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9 {
+    background-color: brown;
+    border: 2px solid white;
+    height: 17vh;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
