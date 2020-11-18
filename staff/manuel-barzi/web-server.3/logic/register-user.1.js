@@ -1,12 +1,12 @@
 const fs = require('fs')
-const { validateEmail, validatePassword, validateCallback, validateFullName } = require('./helpers/validations')
+const { validateEmail, validatePassword, validateCallback, validateFullname } = require('./helpers/validations')
 const { createId } = require('../utils/ids')
 const path = require('path')
 
 // WARN this solution fails on concurrent registers!
 
 module.exports = (fullname, email, password, callback) => {
-    validateFullName(fullname)
+    validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
