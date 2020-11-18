@@ -19,11 +19,13 @@ const {
     handleAcceptCookies
 } = require('./handlers/api')
 
+app.set('view engine', 'pug')
+
 app.use(express.static('public'))
 
 app.get('/register', cookieParser, cookieSession, handleGoToRegister)
 
-app.post('/register', urlencodedBodyParser, handleRegister)
+app.post('/register', urlencodedBodyParser, cookieParser, cookieSession, handleRegister)
 
 app.get('/login', cookieParser, cookieSession, handleGoToLogin)
 
