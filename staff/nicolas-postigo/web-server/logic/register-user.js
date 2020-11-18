@@ -4,6 +4,10 @@ const { createId } = require('../utils/ids')
 const path = require('path')
 const semaphore = require('./helpers/semaphore')
 
+
+
+
+
 module.exports = (fullname, email, password, callback) => {
     validateFullname(fullname)
     validateEmail(email)
@@ -40,11 +44,15 @@ module.exports = (fullname, email, password, callback) => {
                         } else check(files, ++index)
                     })
                 } else {
+
+
                     const id = createId()
 
                     const user = { id, fullname, email, password }
 
                     const json = JSON.stringify(user)
+
+
 
                     fs.writeFile(path.join(usersPath, `${id}.json`), json, error => {
                         if (error) {

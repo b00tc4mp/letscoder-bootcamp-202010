@@ -4,6 +4,8 @@ module.exports = {
 
         if (!email.trim().length) throw new Error('e-mail is empty or blank')
 
+        
+
         if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
     },
 
@@ -17,11 +19,17 @@ module.exports = {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
     },
 
+
+
+
     validateFullname(fullname) {
         if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
 
         if (!fullname.trim().length) throw new Error('fullname is empty or blank')
     },
+
+
+
 
     validateId(id) {
         if (typeof id !== 'string') throw new TypeError(id + ' is not a id')

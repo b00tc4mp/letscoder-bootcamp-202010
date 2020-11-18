@@ -3,6 +3,9 @@ const fs = require('fs')
 const path = require('path')
 const Session = require('../data/models/session.js')
 
+
+
+
 const createSessionCookie = sessionId => {
     return `session-id=${sessionId}; expires=${new Date(Date.now() + 60 * 60 * 1000).toUTCString()}`
 }

@@ -7,6 +7,10 @@ const done = () => {
     doing = false
 }
 
+
+
+
+
 module.exports = callback => {
     callbacks.push(callback)
 
@@ -14,5 +18,8 @@ module.exports = callback => {
         doing = true
 
         done()
+
+
+        
     }
 }

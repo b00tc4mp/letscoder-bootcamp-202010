@@ -12,6 +12,8 @@ module.exports = (vehicleId, callback) => {
             if (status === 200) {
                 const vehicle = JSON.parse(response)
 
+                
+
                 callback(null, vehicle)
             } else {
                 const { error } = JSON.parse(response)

@@ -6,6 +6,8 @@ module.exports = (id, callback) => {
     validateId(id)
     validateCallback(callback)
 
+
+    
     const filePath = path.join(__dirname, `../data/users/${id}.json`)
 
     fs.access(filePath, fs.F_OK, error => {
