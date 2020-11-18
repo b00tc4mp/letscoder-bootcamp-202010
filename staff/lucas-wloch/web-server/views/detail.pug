@@ -20,6 +20,6 @@ html(lang='en')
           img(src=detail.image)
           form(action=`/api/likeVehicle/${detail.id}` method='POST')
             button= detail.like ? "🤎" : "🤍"
-        h4= `${detail.maker  }${detail.year  }${detail.color} `
+        h4= `${detail.maker}  ${detail.year}   ${detail.color} `
         p= detail.description
 
