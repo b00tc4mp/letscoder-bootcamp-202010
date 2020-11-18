@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Home
+    link(rel='stylesheet' href='style.css')
+    link(rel='shortcut icon' href='favicon.ico' type='image/x-icon')
+  body
+    h1 HOME
+    |     Welcome, #{fullname}! 
+    form(action='/logout' method='POST')
+      button logout 
+    #root
+    script(crossorigin='' src='https://unpkg.com/react@17/umd/react.development.js')
+    script(crossorigin='' src='https://unpkg.com/react-dom@17/umd/react-dom.development.js')
+    script(src='https://unpkg.com/@babel/standalone/babel.min.js')
+    script(src='home-app.jsx' type='text/babel')

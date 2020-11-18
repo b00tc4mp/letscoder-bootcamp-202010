@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path')
-const { retrieveUser } = require('../../logic/indexer')
+// const fs = require('fs')
+// const path = require('path')
+const { retrieveUser } = require('../../../logic/indexer')
 // const sessions = require('../../../sessions')
 
 module.exports = (req, res, handleError) => {
@@ -11,11 +11,13 @@ module.exports = (req, res, handleError) => {
         retrieveUser(userId, (error, user) => {
             if (error) return handleError(error)
 
-            fs.readFile(path.join(__dirname, '../../views/home.html'), 'utf8', (error, content) => {
+            const { fullname } = user
+            res.render('home', {fullname}, (error, html) => {
                 if (error) return handleError(error)
 
-                res.send(content.replace('{fullname}', user.fullname))
+                res.send(html)
             })
+            // fs.readFile(path.join(__dirname, '../../views/home.html'), 'utf8', (error, content) => {
         })
     else res.redirect('/login')
 }

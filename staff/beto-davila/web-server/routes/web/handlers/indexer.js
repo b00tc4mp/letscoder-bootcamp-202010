@@ -1,5 +1,3 @@
-const handleGoToDetail = require('./handle-go-to-detail');
-
 module.exports = {
     handleGoToRegister: require('./handle-go-to-register'),
     handleRegister: require('./handle-register'),
