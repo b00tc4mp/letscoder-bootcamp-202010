@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.body.style.display = "flex";
+      document.body.style.alignItems = "center";
+      document.body.style.justifyContent = "center";
+
+      var container = document.createElement("div");
+
+      container.style.backgroundColor = "beige";
+      container.style.width = "80vw";
+      container.style.height = "200vh";
+      container.style.display = "grid";
+      container.style.gridTemplateAreas =
+        "'uno dos dos' 'uno tres tres' 'cuatro cuatro cinco' 'seis seis cinco' 'siete ocho ocho' 'siete nueve nueve'";
+
+      document.body.append(container);
+
+      var item1 = document.createElement("div");
+      item1.style.margin = "5px";
+      item1.style.backgroundColor = "yellow";
+      item1.style.gridArea = "uno";
+      container.append(item1);
+
+      var item2 = document.createElement("div");
+      item2.style.margin = "5px";
+      item2.style.backgroundColor = "black";
+      item2.style.gridArea = "dos";
+      container.append(item2);
+
+      var item3 = document.createElement("div");
+      item3.style.margin = "5px";
+      item3.style.backgroundColor = "green";
+      item3.style.gridArea = "tres";
+      container.append(item3);
+
+      var item4 = document.createElement("div");
+      item4.style.margin = "5px";
+      item4.style.backgroundColor = "yellow";
+      item4.style.gridArea = "cuatro";
+      container.append(item4);
+
+      var item5 = document.createElement("div");
+      item5.style.margin = "5px";
+      item5.style.backgroundColor = "black";
+      item5.style.gridArea = "cinco";
+      container.append(item5);
+
+      var item6 = document.createElement("div");
+      item6.style.margin = "5px";
+      item6.style.backgroundColor = "green";
+      item6.style.gridArea = "seis";
+      container.append(item6);
+
+      var item7 = document.createElement("div");
+      item7.style.margin = "5px";
+      item7.style.backgroundColor = "yellow";
+      item7.style.gridArea = "siete";
+      container.append(item7);
+
+      var item8 = document.createElement("div");
+      item8.style.margin = "5px";
+      item8.style.backgroundColor = "black";
+      item8.style.gridArea = "ocho";
+      container.append(item8);
+
+      var item9 = document.createElement("div");
+      item9.style.margin = "5px";
+      item9.style.backgroundColor = "green";
+      item9.style.gridArea = "nueve";
+      container.append(item9);
+    </script>
+  </body>
+</html>

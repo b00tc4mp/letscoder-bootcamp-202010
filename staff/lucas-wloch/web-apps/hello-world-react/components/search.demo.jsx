@@ -1,0 +1,1 @@
+ReactDOM.render(<Search />, document.getElementById('root'))

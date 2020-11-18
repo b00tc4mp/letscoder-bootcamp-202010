@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("./fonts/SourceSansPro-SemiBold.ttf") format("truetype");
+  src: url("./style/fonts/source-sans-pro-v14-latin-700.woff") format("woff");
+}
+@font-face {
+  font-family: "SourceSansProRegular";
+  src: url("./fonts/SourceSansPro-Regular.ttf") format("truetype");
+  src: url("./style/fonts/source-sans-pro-v14-latin-regular.woff")
+    format("woff");
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
