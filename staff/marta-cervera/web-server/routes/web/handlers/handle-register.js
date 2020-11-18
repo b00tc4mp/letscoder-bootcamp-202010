@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const registerUser = require ('../../logic/register-user')
+const { registerUser } = require('../../../logic')
 
 //const session = require()
 

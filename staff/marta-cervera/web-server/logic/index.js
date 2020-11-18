@@ -1,3 +1,7 @@
 module.exports = {
-    searchVehicles: require('./search-vehicles')
+    registerUser: require('./register-user'),
+    authenticateUser: require('./authenticate-user'),
+    retrieveUser: require('./retrieve-user'),
+    searchVehicles: require('./search-vehicles'),
+    retrieveVehicle: require('./retrieve-vehicle')
 }

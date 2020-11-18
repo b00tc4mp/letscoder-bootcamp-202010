@@ -6,5 +6,6 @@ module.exports = {
     handleGoToHome: require('./handle-go-to-home'),
     handleLogout: require('./handle-logout'),
     handleNotFound: require('./handle-not-found'),
-    handleGoToSearch: require('./handle-go-to-search')
+    handleGoToSearch: require('./handle-go-to-search'),
+    handleGoToDetail: require('./handle-go-to-detail')
 }
