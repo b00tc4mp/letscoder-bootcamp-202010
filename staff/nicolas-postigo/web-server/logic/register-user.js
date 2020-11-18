@@ -32,26 +32,27 @@ module.exports = (fullname, email, password, callback) => {
                         }
 
                         const { email: _email } = JSON.parse(json)
-                        
+
                         if (email === _email) {
                             done()
 
                             callback(new Error(`e-mail ${email} already registered`))
                         } else check(files, ++index)
                     })
-
                 } else {
                     const id = createId()
 
                     const user = { id, fullname, email, password }
 
                     const json = JSON.stringify(user)
+
                     fs.writeFile(path.join(usersPath, `${id}.json`), json, error => {
                         if (error) {
                             done()
 
                             return callback(error)
                         }
+
                         done()
 
                         callback(null)

@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Detail</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-    <h1>Register</h1>
+    <h1>{name}</h1>
 
-    <form action="./register" method="POST">
-        <input type="text" name="fullname" placeholder="full name" />
-        <input type="email" name="email" placeholder="e-mail" />
-        <input type="password" name="password" placeholder="password" />
+    <img src="{image}">
 
-        <button>Send</button>
-    </form>
+    <p>{description}</p>
+    
+    <span>{price} €</span>
 
-    or <a href="/login">login</a>
+    <p>Link to original <a href="{url}">store</a></p>
+
+    <a href="/login">login</a> or <a href="/register">register</a>
 
     <div id="root"></div>
 
@@ -42,5 +40,4 @@
     <script src="/components/accept-cookies.jsx" type="text/babel"></script>
     <script src="/landing-app.jsx" type="text/babel"></script>
 </body>
-
 </html>
