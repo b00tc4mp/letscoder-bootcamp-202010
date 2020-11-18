@@ -1,30 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
-import Register from './components/Register'
-import Login from './components/Login'
+import { Register, Login, Home } from './components'
 import { useState } from 'react'
-import 
+import { registerUser, authenticateUser } from './logic'
 
 function App() {
-  const [view, setView] = useState('register')
+  // React Hooks
+  const [view, setView] = useState('login')
 
   const handleRegister = (fullname, email, password) => {
     registerUser(fullname, email, password, (error) => {
-      if (error) return console.error(error)
-    })
+      if (error) return alert(error.message)
 
-    setView('login')
+      setView('login')
+    })
   }
   const handleLogin = (email, password) => {
-    console.log('Signing in....')
+    authenticateUser(email, password, (error, id) => {
+      if (error) return alert (error.message)
+
+      console.log(`Correct authentication. Your id is: ${id}`)
+      setView('home', id)
+    })
   }
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello, Beto!</h1>
+        <h1>Notes App</h1>
 
         {view === 'register' && <Register onRegister={handleRegister}/>}
+
         {view === 'login' && <Login onLogin={handleLogin}/>}
+
+        {view === 'home' && <Home />}
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>

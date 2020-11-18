@@ -1,0 +1,73 @@
+info 2020-11-17T16:19:13.188Z - server running on port 3000
+info 2020-11-17T16:19:23.643Z - stopping server
+info 2020-11-17T16:21:52.952Z - server running on port 3000
+error 2020-11-17T16:22:22.069Z - Error: Failed to lookup view "login" in views directory "/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/web-server/views"
+info 2020-11-17T16:31:56.568Z - server running on port 3000
+info 2020-11-17T16:32:51.784Z - server running on port 3000
+info 2020-11-17T16:32:55.107Z - stopping server
+info 2020-11-17T16:40:45.941Z - server running on port 3000
+info 2020-11-17T16:49:00.267Z - stopping server
+info 2020-11-17T16:49:00.268Z - stopping server
+info 2020-11-17T16:49:11.080Z - server running on port 3000
+error 2020-11-17T16:49:24.446Z - could not accept cookies :(
+error 2020-11-17T16:50:33.684Z - could not accept cookies :(
+info 2020-11-17T17:11:52.252Z - stopping server
+
+info 2020-11-17T17:13:02.777Z - server running on port 3000
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-18T13:00:35.228Z - server running on port 4000
+info 2020-11-18T13:01:12.536Z - stopping server
+info 2020-11-18T13:01:12.537Z - stopping server
+info 2020-11-18T13:01:15.670Z - server running on port 4000
+info 2020-11-18T13:03:18.380Z - stopping server
+info 2020-11-18T13:03:18.381Z - stopping server
+info 2020-11-18T13:15:25.409Z - server running on port 4000
+info 2020-11-18T13:18:09.224Z - server running on port 4000
+error 2020-11-18T13:18:23.101Z - Error: fullname is empty or blank
+error 2020-11-18T13:18:36.202Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:03.308Z - stopping server
+info 2020-11-18T13:19:04.401Z - server running on port 4000
+error 2020-11-18T13:19:06.886Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:20:26.360Z - server running on port 4000
+info 2020-11-18T13:43:31.863Z - stopping server
+info 2020-11-18T13:43:31.864Z - stopping server
+info 2020-11-18T13:45:50.034Z - server running on port 4000
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:34.615Z - server running on port 4000
+info 2020-11-18T13:53:43.043Z - server running on port 4000
+info 2020-11-18T13:55:43.167Z - server running on port 4000
+info 2020-11-18T13:56:35.766Z - server running on port 4000
+info 2020-11-18T13:58:25.580Z - server running on port 4000
+info 2020-11-18T13:59:49.053Z - server running on port 4000
+info 2020-11-18T14:00:17.901Z - server running on port 4000
+error 2020-11-18T14:00:43.219Z - Error: e-mail manuelbarzi@gmail.com already registered
+info 2020-11-18T16:09:02.857Z - server running on port 4000
+info 2020-11-18T16:09:54.854Z - stopping server
+info 2020-11-18T16:09:54.855Z - stopping server
+info 2020-11-18T16:10:52.852Z - server running on port 4000
+info 2020-11-18T16:15:28.282Z - stopping server
+info 2020-11-18T16:15:28.283Z - stopping server
+info 2020-11-18T16:15:30.485Z - server running on port 4000
+error 2020-11-18T17:12:11.936Z - TypeError: undefined is not a password
+info 2020-11-18T17:13:24.691Z - stopping server
+info 2020-11-18T17:13:24.692Z - stopping server
+info 2020-11-18T17:13:28.237Z - server running on port 4000
+error 2020-11-18T17:14:41.571Z - Error: wrong credentials
+info 2020-11-18T17:16:38.933Z - stopping server
+info 2020-11-18T17:16:38.936Z - stopping server
+info 2020-11-18T17:16:55.436Z - server running on port 4000
+error 2020-11-18T17:17:14.735Z - Error: wrong credentials
+info 2020-11-18T17:19:27.726Z - stopping server
+info 2020-11-18T17:19:27.727Z - stopping server
+info 2020-11-18T17:20:09.125Z - server running on port 4000
+info 2020-11-18T17:27:42.997Z - server running on port 4000
+error 2020-11-18T17:36:01.912Z - Error: wrong credentials
+error 2020-11-18T18:16:20.488Z - Error: wrong credentials
+error 2020-11-18T18:16:24.867Z - Error: wrong credentials
+error 2020-11-18T18:16:30.460Z - Error: wrong credentials
+info 2020-11-18T18:20:49.794Z - stopping server
+info 2020-11-18T18:20:49.796Z - stopping server
