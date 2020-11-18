@@ -1,44 +1,33 @@
+require('dotenv').config()
+
 const express = require('express')
+const logger = require('./utils/logger')
+
+const { env: { PORT }, argv: [, , port = PORT || 8080] } = process
+
 const app = express()
-const port = 3000
 
-const { urlencodedBodyParser, cookieParser, cookieSession } = require('./middlewares')
+const { web, api } = require('./routes')
 
-const {
-    handleGoToRegister,
-    handleRegister,
-    handleGoToLogin,
-    handleLogin,
-    handleGoToHome,
-    handleLogout,
-    handleNotFound,
-    handleGoToSearch
-} = require('./handlers/web')
+const withErrorHandling = require('./routes/web/helpers/with-error-handling')
+const { handleNotFound } = require('./routes/web/handlers')
 
-const {
-    handleAcceptCookies
-} = require('./handlers/api')
+app.set('view engine', 'pug')
 
 app.use(express.static('public'))
 
-app.get('/register', cookieParser, cookieSession, handleGoToRegister)
+app.use(web)
 
-app.post('/register', urlencodedBodyParser, handleRegister)
+app.use(api)
 
-app.get('/login', cookieParser, cookieSession, handleGoToLogin)
+// not found
 
-app.post('/login', cookieParser, cookieSession, urlencodedBodyParser, handleLogin)
+app.get('/*', withErrorHandling(handleNotFound))
 
-app.get('/', cookieParser, cookieSession, handleGoToHome)
-
-app.post('/logout', cookieParser, cookieSession, handleLogout)
-
-app.get('/search', cookieParser, cookieSession, handleGoToSearch)
-
-// api paths
-
-app.post('/api/accept-cookies', cookieParser, cookieSession, handleAcceptCookies)
-
-app.get('/*', handleNotFound)
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`)) 
+app.listen(port, () =>{
+    logger.log(`server running on port ${port}`)
+    console.log(`server running on port ${port}`)})
+   
+   process.on('SIGINT', () => {
+   console.log('stopping server')
+   logger.log(`stopping server`, 'info', () => process.exit(0))})

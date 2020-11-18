@@ -8,9 +8,9 @@ module.exports = (fullname, email, password, repassword, callback) => {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
-    validateRepeatedPassword(password, repassword)
     validateCallback(callback)
-   
+    validateRepeatedPassword(password, repassword)
+
     const usersPath = path.join(__dirname, '../data/users')
 
     semaphore(done => {

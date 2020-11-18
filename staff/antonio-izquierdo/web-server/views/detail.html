@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Detail</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>Search</h1>
+    <h1>{name}</h1>
 
-    <form action="./search" method="GET">
-        <input type="text" name="q" />
+    <img src="{image}">
 
-        <button>Send</button>
-    </form>
+    <p>{description}</p>
 
-    {results}
+    <span>{price} €</span>
+
+    <p>Link to original <a href="{url}">store</a></p>
 
     <a href="/login">login</a> or <a href="/register">register</a>
 
@@ -32,12 +32,12 @@
         }
     </script>
 
-    <script src="utils/call.js"></script>
+    <script src="/utils/call.js"></script>
 
-    <script src="logic/helpers/validations.js"></script>
-    <script src="logic/accept-cookies.js"></script>
+    <script src="/logic/helpers/validations.js"></script>
+    <script src="/logic/accept-cookies.js"></script>
 
-    <script src="components/accept-cookies.jsx" type="text/babel"></script>
-    <script src="landing-app.jsx" type="text/babel"></script>
+    <script src="/components/accept-cookies.jsx" type="text/babel"></script>
+    <script src="/landing-app.jsx" type="text/babel"></script>
 </body>
 </html> 

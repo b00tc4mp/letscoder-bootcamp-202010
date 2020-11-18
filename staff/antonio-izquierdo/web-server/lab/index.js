@@ -8,9 +8,7 @@ fs.readdir('./data/users', (error, files) => {
     /*
     files.forEach(file => fs.readFile(`./data/users/${file}`, 'utf8', (error, json) => {
         if (error) return console.error(error)
-
         const { email, password } = JSON.parse(json)
-        
         if (email === 'manuelbarzi@gmail.com' && password === '123123123')
             console.log('good credentials .)')
         else console.error('wrong credentials')
