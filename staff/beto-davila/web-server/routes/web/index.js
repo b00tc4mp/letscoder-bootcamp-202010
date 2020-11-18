@@ -1,9 +1,13 @@
 const { Router } = require('express')
+const router = new Router()
+
+// middlewares
 const { cookieParser, cookieSession, urlencodedBodyParser } = require('../../middlewares/indexer')
 
+// error handling logic
 const withErrorHandling = require('./helpers/with-error-handling')
 
-// destructuring of indexer.js 
+// web handlers
 const {
   handleGoToRegister,
   handleRegister,
@@ -15,7 +19,6 @@ const {
   handleGoToDetail
 } = require('./handlers/indexer')
 
-const router = new Router()
 
 // register form, 'get' method.
 router.get('/register', cookieParser, cookieSession, withErrorHandling(handleGoToRegister))
@@ -26,7 +29,6 @@ router.post('/register', urlencodedBodyParser, cookieParser, cookieSession, with
 const withErrorHandling = handler =>
     (req, res) =>
         handler(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
-
 
 app.get('/login', cookieParser, cookieSession, (req, res) => {
     handleGoToLogin(req, res, error => res.status(500).send(`sorry, there was an error :( ERROR: ${error.message}`))
