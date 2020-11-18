@@ -3,22 +3,17 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Search
+    title Detail
     link(rel='stylesheet' href='/style.css')
-    link(rel='shortcut icon' href='favicon.ico' type='image/x-icon')
+    link(rel='shortcut icon' href='/favicon.ico' type='image/x-icon')
   body
-    h1 Search
-    form(action='./search' method='GET')
-      input(type='text' name='q')
-      button Send
-    if (vehicles)
-        ul
-            each vehicle in vehicles
-                - const { id, name, thumbnail } = vehicle
-                li
-                    a(href=`http://localhost:3000/vehicles/${id}`)
-                        h3= name
-                        img(src=thumbnail)
+    h1 {name}
+    img(src='{image}')
+    p {description}
+    span {price} €
+    p
+      | Link to original 
+      a(href='{url}') store
     a(href='/login') login
     |  or 
     a(href='/register') register
@@ -28,7 +23,7 @@ html(lang='en')
     script(src='https://unpkg.com/@babel/standalone@7.12.6/babel.min.js')
     script.
       const state = {
-      cookiesAccepted: #{!!cookiesAccepted}
+      cookiesAccepted: {cookiesAccepted}
       }
     script(src='/utils/call.js')
     script(src='/logic/helpers/validations.js')

@@ -1,4 +1,4 @@
-const retrieveUser = require('../../logic/retrieve-user')
+const retrieveUser = require('../../../logic/retrieve-user')
 
 
 module.exports = (req, res, handleError) => {
@@ -15,7 +15,5 @@ module.exports = (req, res, handleError) => {
                 res.send(html.replace('{fullname}', user.fullname))
             })
         })
-        
-        
     else res.redirect('/login')
 }

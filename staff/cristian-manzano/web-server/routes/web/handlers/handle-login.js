@@ -1,4 +1,4 @@
-const authenticateUser= require('../../logic/authenticate-user')
+const authenticateUser= require('../../../logic/authenticate-user')
 
 module.exports = (req, res, handleError) => {
     const { body: { email, password }, session: { cookiesAccepted } } = req

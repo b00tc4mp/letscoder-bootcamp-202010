@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const { retrieveVehicle } = require('../../logic')
+const retrieveVehicle = require('../../../logic/retrieve-vehicle')
 
 module.exports = (req, res, handleError) => {
     const { params: { vehicleId }, session: { userId, cookiesAccepted } } = req
@@ -12,7 +12,7 @@ module.exports = (req, res, handleError) => {
             if (vehicle) {
                 const { name, image, description, price, url } = vehicle
 
-                fs.readFile(path.join(__dirname, '../../views/detail.html'), 'utf8', (error, content) => {
+                fs.readFile(path.join(__dirname, '../../../views/detail.html'), 'utf8', (error, content) => {
                     if (error) return handleError(error)
 
                     res.send(content
