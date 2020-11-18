@@ -1,15 +1,14 @@
-import React from 'react'
-import './Register.sass'
+import './SignUp.sass'
 
-function Register() {
-    return <section className="register">
+function SignUp({ onSignUp } ) {
+    return <section className="sign-up">
         <h2>SING UP</h2>
         <form onSubmit={event =>{
             event.preventDefault()
 
             const { target : { fullname: { value: fullname}, email: {value:email}, password: {value:password}}} = event
 
-            onRegister(fullname, email, password)
+            onSignUp(fullname, email, password)
 
         }}>
             <input type= "text" name ="fullname" placeholder="fullname"/>
@@ -22,5 +21,4 @@ function Register() {
     
 }
 
-export default Register
-
+export default SignUp
