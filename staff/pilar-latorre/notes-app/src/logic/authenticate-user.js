@@ -10,7 +10,7 @@ export default function (email, password, callback) {
         JSON.stringify({email, password}),
         (status, response) => {
             if(status !== 200) {
-debugger
+
                 const { error } = JSON.parse(response) 
 
                 return callback(new Error(error))
