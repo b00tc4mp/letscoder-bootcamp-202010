@@ -1,28 +1,53 @@
 import logo from './logo.svg';
 import './App.css';
-import { SignUp, SignIn } from './components'
+import { SignUp, SignIn, Home } from './components'
 import { useState } from 'react'
-import { registerUser } from './logic'
+import { registerUser, authenticateUser } from './logic'
+import Note from './components/Note'
 
 function App() {
-  const [view, setView] = useState('sign-up')
+  const [view, setView] = useState('sign-in')
 
   const handleSignUp = (fullname, email, password) => {
-    registerUser(fullname, email, password, error => {
-      if (error) return alert(error.message)
+    try {
+      registerUser(fullname, email, password, error => {
+        if (error) return alert(error.message)
 
-      setView('sign-in')
-    })
-}
+        setView('sign-in')
+      })
+    } catch (error) {
+      alert(error.message)
+    }
+  }
 
+  const handleSignIn = (email, password) => {
+    try {
+      authenticateUser(email, password, (error, token) => {
+        if (error) return alert(error.message)
+
+        sessionStorage.token = token
+
+        setView('home')
+      })
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+
+  const handleNewNote = () => {
+    setView('home')
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Hello, Cristian!</h1>
-      
+
         {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />}
-        {view === 'sign-in' && <SignIn />}
+        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />}
+        {view === 'home' && <Home />}
+        {view === 'home' && <Note onSaveNote={handleNewNote} />}
+        
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>

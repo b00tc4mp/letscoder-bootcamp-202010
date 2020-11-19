@@ -1,6 +1,6 @@
 import './SignUp.sass'
 
-function SignUp({ onSignUp }) {
+function SignUp({ onSignUp, goToSignIn }) {
     return <section className="sign-up">
     <h2>Sign Up</h2>
     
@@ -15,6 +15,7 @@ function SignUp({ onSignUp }) {
       <input type="email" name="email" placeholder="email"/>
       <input type="password" name="password" placeholder="password"/>
       <button>Send</button>
+      <button onClick={goToSignIn}>Sign In</button>
     </form>
   </section>
 }

@@ -52,3 +52,36 @@ info 2020-11-18T16:14:13.866Z - server running on port 4000
 info 2020-11-18T16:15:22.011Z - stopping server
 info 2020-11-18T16:15:22.011Z - stopping server
 info 2020-11-18T16:15:37.020Z - server running on port 4000
+info 2020-11-18T17:32:19.256Z - stopping server
+info 2020-11-18T17:32:23.995Z - server running on port 4000
+info 2020-11-18T17:39:34.266Z - stopping server
+info 2020-11-18T17:39:34.266Z - stopping server
+info 2020-11-18T17:39:37.551Z - server running on port 4000
+info 2020-11-18T17:47:11.499Z - stopping server
+info 2020-11-18T17:47:15.316Z - server running on port 4000
+info 2020-11-18T19:26:17.382Z - stopping server
+info 2020-11-18T19:26:17.383Z - stopping server
+info 2020-11-18T19:26:23.285Z - server running on port 4000
+error 2020-11-18T19:28:52.656Z - Error: wrong credentials
+error 2020-11-18T19:29:11.817Z - Error: wrong credentials
+info 2020-11-19T11:23:56.596Z - stopping server
+info 2020-11-19T11:23:56.601Z - stopping server
+info 2020-11-19T11:24:05.835Z - server running on port 4000
+error 2020-11-19T11:29:57.917Z - Error: wrong credentials
+error 2020-11-19T11:30:13.738Z - Error: wrong credentials
+error 2020-11-19T11:30:48.170Z - TypeError: undefined is not a id
+error 2020-11-19T11:31:55.544Z - TypeError: undefined is not a id
+error 2020-11-19T11:32:32.168Z - TypeError: undefined is not a id
+error 2020-11-19T11:35:03.164Z - TypeError: undefined is not a id
+error 2020-11-19T12:04:19.815Z - Error: wrong credentials
+info 2020-11-19T15:47:08.876Z - stopping server
+info 2020-11-19T15:47:08.876Z - stopping server
+info 2020-11-19T15:47:15.355Z - server running on port 4000
+info 2020-11-19T15:54:44.388Z - stopping server
+info 2020-11-19T15:54:44.388Z - stopping server
+info 2020-11-19T15:54:51.110Z - server running on port 4000
+info 2020-11-19T15:55:47.896Z - stopping server
+info 2020-11-19T15:55:51.785Z - server running on port 4000
+info 2020-11-19T16:17:01.715Z - stopping server
+info 2020-11-19T16:17:01.716Z - stopping server
+info 2020-11-19T18:01:37.826Z - server running on port 4000
