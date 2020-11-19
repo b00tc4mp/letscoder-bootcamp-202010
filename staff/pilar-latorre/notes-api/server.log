@@ -67,3 +67,23 @@ info 2020-11-19T09:02:04.201Z - server running on port 4000
 info 2020-11-19T09:03:58.337Z - stopping server
 info 2020-11-19T09:04:11.787Z - server running on port 4000
 info 2020-11-19T09:04:54.997Z - stopping server
+info 2020-11-19T09:18:09.606Z - server running on port 4000
+info 2020-11-19T09:20:19.700Z - stopping server
+info 2020-11-19T10:49:58.976Z - server running on port 4000
+error 2020-11-19T10:52:14.973Z - Error: e-mail pilar123456@latorre.com already registered
+info 2020-11-19T11:28:51.187Z - stopping server
+info 2020-11-19T11:28:54.014Z - server running on port 4000
+info 2020-11-19T11:30:42.460Z - stopping server
+info 2020-11-19T11:30:45.970Z - server running on port 4000
+info 2020-11-19T11:45:04.587Z - stopping server
+info 2020-11-19T11:45:26.340Z - server running on port 4000
+info 2020-11-19T11:57:33.426Z - server running on port 4000
+info 2020-11-19T12:00:47.948Z - stopping server
+info 2020-11-19T12:00:51.658Z - server running on port 4000
+info 2020-11-19T12:05:20.900Z - stopping server
+info 2020-11-19T12:05:24.939Z - server running on port 4000
+info 2020-11-19T12:10:22.222Z - stopping server
+info 2020-11-19T12:10:26.130Z - server running on port 4000
+info 2020-11-19T12:10:54.517Z - stopping server
+info 2020-11-19T12:11:26.677Z - server running on port 4000
+info 2020-11-19T12:11:57.990Z - stopping server

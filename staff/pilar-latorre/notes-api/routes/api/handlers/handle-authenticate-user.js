@@ -1,5 +1,5 @@
 const { authenticateUser } = require('../../../logic')
-const { createId } = require('../../../utils/ids')
+
 
 module.exports = (req, res, handleError) => {
     const { body: { email, password } } = req

@@ -6,7 +6,7 @@ import { registerUser, authenticateUser } from './logic'
 
 
 function App() {
-  const [view, setView ] = useState('sign-up')
+  const [view, setView ] = useState('sign-in')
 
     const handleSignUp = (fullname, email, password) => {
       registerUser(fullname, email, password, error => {
@@ -27,7 +27,6 @@ function App() {
 
       })
     }
-
 
   return (
     <div className="App">
