@@ -26,7 +26,7 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
                         const { id: _id } = JSON.parse(json)
 
                         if (id === _id) {
-                            const note = { id, text, tags, owner, visibility }
+                            const note = { id, text, tags, owner, visibility, date: new Date }
 
                             const json = JSON.stringify(note)
 
@@ -40,7 +40,7 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
                 } else {
                     id = createId()
 
-                    const note = { id, text, tags, owner, visibility }
+                    const note = { id, text, tags, owner, visibility, date: new Date }
 
                     const json = JSON.stringify(note)
 
@@ -54,8 +54,8 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
         })
     else {
         id = createId()
-        
-        const note = { id, text, tags, owner, visibility }
+
+        const note = { id, text, tags, owner, visibility, date: new Date }
 
         const json = JSON.stringify(note)
 
