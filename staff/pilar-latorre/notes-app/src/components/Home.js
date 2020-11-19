@@ -1,41 +1,61 @@
 //import './Home.sass'
-import React from 'react'
-import retrieveUser from '../logic/retrieve-user'
 import Welcome from './Welcome'
+import {retrieveUser, retrieveNotes} from '../logic'
+import { useEffect, useState } from 'react'
+import Note from './Note'
+import Results from './Results'
 
-const { Component } = React
+function Home() {
+    const [user, setUser] = useState()
+    const [notes, setNotes] = useState()
+    const [success, setSuccess] = useState()
 
-class Home extends Component{
-    constructor(){
-        super()
 
-        this.state = {}
-    }
-    componentWillMount(){
+    useEffect( () => {
         const { token } = sessionStorage
-       
-        retrieveUser(token, (error, user) => {
-           
-            if (error) return alert(error)
-            this.setState({user})
-        })
-      
+
+        try {
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
+
+                setUser(user)
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+
+    },[]) 
+
+    const onSavedNote = () =>{
+        setSuccess(true)
     }
-        
-    
 
-    render(){
+    const handleRetrieveNotes = () => {
 
-        const {state: { user }} = this
-
-        return <>
-
-            {user && <Welcome user = {user}/>}
-
-            </> 
+        try {
+            retrieveNotes(user.id, (error, notes) => {
+                if (error) return alert(error.message)
+                setNotes(notes)
+            })
+        } catch (error) {
+            alert(error.message)
+        }
     }
+
+
+
+    return <>
+        <h1>HOME </h1>
+        {/* {user ? <h1>HOME {user.fullname} </h1> : <h1>HOME </h1>} */}
+        {/* <Welcome /> */}
+        {user && <Welcome user={user} />}
+        <button onClick={handleRetrieveNotes}>My Notes</button>
+        {user && <Note onSavedNote={onSavedNote} userId={user.id} />}
+        {success && <h2>Su nota se ha guardado correctamente 🤩</h2>}
+        {notes && <Results results={notes} />}
+    </>
+
 
 }
 
 export default Home
-

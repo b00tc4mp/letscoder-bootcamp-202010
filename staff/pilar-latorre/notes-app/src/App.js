@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Hello Pilar!! 🤩 </h1>
+      <h1>NOTES APP 📝 </h1>
 
       {view === 'sign-up' && <SignUp onSignUp={handleSignUp}/>}
       {view === 'sign-in' && <SignIn onSignIn={handleSignIn}/>}
