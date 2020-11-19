@@ -6,16 +6,19 @@ export default function (email, password, callback) {
     validatePassword(password)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/users/auth', { 'Content-type': 'application/json', Authorization: 'Bearer' },
+    call('POST', 'http://localhost:4000/api/users/auth', { 'Content-type': 'application/json' },
         JSON.stringify({ email, password }),
         (status, response) => {
-            if (status !== 200) {
+            if(status === 0)
+                return callback(new Error('server error'))
+                
+            else if (status !== 200) {
                 const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
             }
-            const id = JSON.parse(response)
+            const { token } = JSON.parse(response)
 
-            callback(null, id)
+            callback(null, token)
         })
 }

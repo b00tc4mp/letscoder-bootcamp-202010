@@ -6,12 +6,13 @@ module.exports = (req, res, handleError) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
 
     try {
-        authenticateUser(email, password, (error, id) => {
-            if (error) return handleError(409, error)
+        authenticateUser(email, password, (error, userId) => {
+            if (error) return handleError(401, error)
 
-            res.status(200).send(id)
+            res.status(200).json({ token: userId })
+            //console.log(token)
         })
     } catch (error) {
-        handleError(401, error)
+        handleError(400, error)
     }
 }

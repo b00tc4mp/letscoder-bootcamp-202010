@@ -9,7 +9,9 @@ module.exports = (id, callback) => {
     const filePath = path.join(__dirname, `../data/users/${id}.json`)
 
     fs.access(filePath, fs.F_OK, error => {
-        if (error) return callback(new Error(`user with id ${id} not found`))
+        if (error) {
+            console.log(error.message)
+            return callback(new Error(`user with id ${id} not found`))}
 
         fs.readFile(filePath, 'utf8', (error, json) => {
             if (error) return callback(error)
