@@ -1,18 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
-import { SignUp, SignIn } from './components'
+import { SignUp, SignIn, Home } from './components'
 import { useState } from 'react'
-import { registerUser } from './logic'
+import { registerUser, authenticateUser } from './logic'
 
 function App() {
-  const [view, setView] = useState('sign-up')
+  const [view, setView] = useState('sign-in')
 
   const handleSignUp = (fullname, email, password) => {
-    registerUser(fullname, email, password, error => {
-      if (error) return alert(error.message)
+    try {
+      registerUser(fullname, email, password, error => {
+        if (error) return alert(error.message)
 
-      setView('sign-in')
-    })
+        setView('sign-in')
+      })
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+
+  const handleSignIn = (email, password) => {
+    try {
+      authenticateUser(email, password, (error, token) => {
+        if (error) return alert(error.message)
+
+        sessionStorage.token = token
+
+        setView('home')
+      })
+    } catch (error) {
+      alert(error.message)
+    }
   }
 
   return (
@@ -21,7 +39,8 @@ function App() {
         <h1>Hello, Manu!</h1>
 
         {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />}
-        {view === 'sign-in' && <SignIn />}
+        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />}
+        {view === 'home' && <Home />}
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>

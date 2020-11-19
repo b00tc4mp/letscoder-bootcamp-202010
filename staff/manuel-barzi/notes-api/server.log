@@ -45,3 +45,6 @@ info 2020-11-18T13:58:25.580Z - server running on port 4000
 info 2020-11-18T13:59:49.053Z - server running on port 4000
 info 2020-11-18T14:00:17.901Z - server running on port 4000
 error 2020-11-18T14:00:43.219Z - Error: e-mail manuelbarzi@gmail.com already registered
+info 2020-11-19T09:17:53.895Z - server running on port 4000
+info 2020-11-19T09:19:32.785Z - stopping server
+info 2020-11-19T09:19:32.785Z - stopping server
