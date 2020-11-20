@@ -1,4 +1,5 @@
 // import { useEffect, useState } from 'react'
+import './Results.sass'
 
 
 function Results({ results }) {
@@ -16,8 +17,8 @@ function Results({ results }) {
         <li key={id}>
             <p>{text}</p>
             <p>tags: {tags}</p>
-            <h6>owner: {owner}</h6>
-            <h6>visibility: {visibility}</h6>
+            <p>owner: {owner}</p>
+            <p>visibility: {visibility}</p>
         </li>)}
 
         </ul>

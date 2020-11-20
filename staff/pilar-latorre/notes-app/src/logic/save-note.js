@@ -8,7 +8,6 @@ import {
   } from "./helpers/validations";
 
 export default function (id, text, tags, owner, visibility, callback) {
-    debugger
     if (typeof id !== 'undefined') validateId(id)
     validateText(text);
     validateTags(tags);
@@ -16,7 +15,7 @@ export default function (id, text, tags, owner, visibility, callback) {
     validateVisibility(visibility);
     validateCallback(callback);
 
-    call('POST', 'http://localhost:4000/api/notes', { 'Content-type': 'application/json'},
+    call('POST', 'http://localhost:4000/api/notes', { 'Content-type': 'application/json', Authorization: `Bearer ${owner}`},
         JSON.stringify({id, text, tags, owner, visibility}),
         (status, response) => {
             if(status === 0) {

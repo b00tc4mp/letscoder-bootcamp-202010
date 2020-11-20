@@ -2,7 +2,9 @@ const { saveNote } = require('../../../logic')
 const handleAuthenticateUser = require('./handle-authenticate-user')
 
 module.exports = (req, res, handleError) => {
-    const { body: { id, text, tags, owner, visibility } } = req
+    const { body: { id, text, tags, visibility }, headers: { authorization } } = req
+
+    const owner = authorization.replace('Bearer ', '')
 
     res.setHeader('Access-Control-Allow-Origin', '*')
 

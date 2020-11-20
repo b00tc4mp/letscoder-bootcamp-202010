@@ -8,24 +8,39 @@ import { registerUser, authenticateUser } from './logic'
 function App() {
   const [view, setView ] = useState('sign-in')
 
-    const handleSignUp = (fullname, email, password) => {
+  const handleSignUp = (fullname, email, password) => {
+    try {
       registerUser(fullname, email, password, error => {
-        if(error) return alert(error.message)
+        if (error) return alert(error.message)
 
         setView('sign-in')
-
       })
+    } catch (error) {
+      if (error) return alert(error.message)
     }
-
-    const handleSignIn = ( email, password) => {
+  }
+  const handleSignIn = (email, password) => {
+    try {
       authenticateUser(email, password, (error, token) => {
-        if(error) return alert(error.message)
+        if (error) return alert(error.message)
 
         sessionStorage.token = token
 
         setView('home')
-
       })
+    } catch (error) {
+      if (error) return alert(error.message)
+    }
+  }
+
+    const handleGoToSignIn = () => {
+
+      setView('sign-in')
+    }
+
+    const handleGoToSignUp = () => {
+
+      setView('sign-up')
     }
 
   return (
@@ -33,8 +48,8 @@ function App() {
       <header className="App-header">
       <h1>NOTES APP 📝 </h1>
 
-      {view === 'sign-up' && <SignUp onSignUp={handleSignUp}/>}
-      {view === 'sign-in' && <SignIn onSignIn={handleSignIn}/>}
+      {view === 'sign-up' && <SignUp onSignUp={handleSignUp} onGoToSignIn = {handleGoToSignIn}/>}
+      {view === 'sign-in' && <SignIn onSignIn={handleSignIn} onGoToSignUp = {handleGoToSignUp}/>}
       {view === 'home' && <Home />}
 
         <img src={logo} className="App-logo" alt="logo" />

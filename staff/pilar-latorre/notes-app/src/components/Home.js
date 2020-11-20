@@ -2,7 +2,7 @@
 import Welcome from './Welcome'
 import {retrieveUser, retrieveNotes} from '../logic'
 import { useEffect, useState } from 'react'
-import Note from './Note'
+import NoteEditor from './NoteEditor'
 import Results from './Results'
 
 function Home() {
@@ -50,7 +50,7 @@ function Home() {
         {/* <Welcome /> */}
         {user && <Welcome user={user} />}
         <button onClick={handleRetrieveNotes}>My Notes</button>
-        {user && <Note onSavedNote={onSavedNote} userId={user.id} />}
+        {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} />}
         {success && <h2>Su nota se ha guardado correctamente 🤩 </h2>}
         {notes && <Results results={notes} />}
     </>
