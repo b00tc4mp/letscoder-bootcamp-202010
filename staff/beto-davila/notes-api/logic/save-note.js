@@ -3,16 +3,16 @@ const path = require('path')
 const { createId } = require('../utils/ids')
 const { validateCallback, validateId, validateText, validateTags, validateVisibility } = require('./helpers/validations')
 
-module.exports = (id, text, tags, owner, visibility, callback) => {
+module.exports = (owner, id, text, tags, visibility, callback) => {
+    validateId(owner)
     if (typeof id !== 'undefined') validateId(id)
     validateText(text)
     validateTags(tags)
-    validateId(owner)
     validateVisibility(visibility)
     validateCallback(callback)
 
     const notesPath = path.join(__dirname, '../data/notes')
-
+    // if we pass id
     if (id)
         fs.readdir(notesPath, (error, files) => {
             if (error) return callback(error);
@@ -27,7 +27,7 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
                         const { id: _id } = JSON.parse(json)
 
                         if (id === _id) {
-                            const note = { id, text, tags, owner, visibility }
+                            const note = { id, text, tags, owner, visibility, date: new Date() }
 
                             const json = JSON.stringify(note)
 
@@ -38,10 +38,11 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
                             })
                         } else check(files, ++index)
                     })
+                // if there are no notes in the folder
                 } else {
                     id = createId()
 
-                    const note = { id, text, tags, owner, visibility }
+                    const note = { id, text, tags, owner, visibility, date: new Date() }
 
                     const json = JSON.stringify(note)
 
@@ -53,10 +54,11 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
                 }
             })(files)
         })
+    // if id is undefined
     else {
         id = createId()
         
-        const note = { id, text, tags, owner, visibility }
+        const note = { id, text, tags, owner, visibility, date: new Date() }
 
         const json = JSON.stringify(note)
 

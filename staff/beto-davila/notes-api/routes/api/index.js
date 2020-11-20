@@ -5,7 +5,9 @@ const {
     handleAcceptCookies,
     handleRegisterUser,
     handleAuthenticateUser,
-    handleRetrieveUser
+    handleRetrieveUser,
+    handleSaveNote,
+    handleRetrieveNotes
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -22,5 +24,14 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 
 // retrieve user
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
+
+// retrieve notes
+router.get('/api/notes', withErrorHandling(handleRetrieveNotes))
+
+// save note
+router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
+
+// search users
+//router.post('api/users/search', withErrorHandling(handleSearchUsers))
 
 module.exports = router

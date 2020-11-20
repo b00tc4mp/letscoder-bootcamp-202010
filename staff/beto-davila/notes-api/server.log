@@ -239,3 +239,17 @@ error 2020-11-19T16:10:02.873Z - Error: id length is not 31 digits
 info 2020-11-19T16:11:35.338Z - stopping server
 info 2020-11-19T16:11:35.340Z - stopping server
 info 2020-11-19T16:11:41.278Z - server running on port 4000
+info 2020-11-19T17:04:55.407Z - stopping server
+info 2020-11-19T17:04:55.409Z - stopping server
+info 2020-11-20T10:53:58.826Z - server running on port 4000
+error 2020-11-20T12:00:25.936Z - Error: id is empty or blank
+error 2020-11-20T13:14:47.000Z - TypeError: undefined is not a id
+error 2020-11-20T13:18:31.445Z - TypeError: undefined is not a id
+error 2020-11-20T13:19:29.420Z - TypeError: undefined is not a id
+error 2020-11-20T13:24:57.795Z - TypeError: undefined is not a id
+error 2020-11-20T13:25:28.490Z - TypeError: undefined is not a id
+error 2020-11-20T13:35:37.582Z - TypeError: undefined is not a id
+error 2020-11-20T13:36:33.674Z - TypeError: undefined is not a id
+error 2020-11-20T13:51:34.609Z - TypeError: undefined is not a id
+info 2020-11-20T13:53:19.503Z - server running on port 4000
+info 2020-11-20T13:55:24.928Z - server running on port 4000
