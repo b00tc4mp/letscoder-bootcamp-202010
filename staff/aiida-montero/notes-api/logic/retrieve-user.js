@@ -1,4 +1,4 @@
-const { validateId, validateCallback } = require('./helpers/validations')
+const {validateCallback, validateId } = require('./helpers/validations')
 const fs = require('fs')
 const path = require('path')
 
