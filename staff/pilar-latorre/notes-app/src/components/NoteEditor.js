@@ -1,16 +1,16 @@
 import saveNote from "../logic/save-note"
-
+import './NoteEditor.sass'
 
 function NoteEditor( {onSavedNote, userId}){
     const handleSubmit = event => {
         event.preventDefault()
 
-        const { target: { text: { value: text }, visibility: { value: visibility } } } = event
-        if (text && [] && userId && visibility)
-            saveNote(undefined, text, [], userId, visibility, error => {
+        const { target: { text: { value: text }, visibility: { value: visibility }, tags: {value: tags} } } = event
+        if (text && tags && userId && visibility)
+            saveNote(undefined, text, tags.split(' '), userId, visibility, error => {
                 if (error) {
-                    const { error } = JSON.parse(error)
-                    alert(error)
+                    const res = JSON.parse(error)
+                    alert(res.error)
                 }
                 onSavedNote()
             })
@@ -19,17 +19,22 @@ function NoteEditor( {onSavedNote, userId}){
     }
 
     return <>
-        <section>
-            <h1>Create your note</h1>
-            <form onSubmit={handleSubmit}>
-            <input type="text" name="text" placeholder="write your note" />
-
-            <select name="visibility" id="visibility">
-                <option value="private">Private</option>
-                <option value="public">Public</option>
-            </select>
-          
-            <button>Send</button>
+        <section className="noteEditor">
+            <h1 className="noteEditor__title">Create your note</h1>
+            <form className="noteEditor__form" onSubmit={handleSubmit}>
+                <div>
+                <textarea className="noteEditor__textArea" type="text" name="text" placeholder="write your note"></textarea>
+                
+                </div>
+                <div className= "noteEditor__div">
+                <input className="noteEditor__inputTag" type="text" id="tags" name="tags" placeholder = "Tag your note" />
+                <label className="noteEditor__label" htmlFor="tags"></label>
+                <select className="noteEditor__select" name="visibility" id="visibility">
+                    <option className="noteEditor__option" value="private">Private</option>
+                    <option className="noteEditor__option" value="public">Public</option>
+                </select>
+                <button className="noteEditor__button" >Send</button>
+                </div>
             </form>
         </section>
    

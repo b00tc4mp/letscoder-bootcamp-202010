@@ -12,16 +12,18 @@ function Results({ results }) {
     // },[results] ) 
 
     return <>
-        <ul>
+    <div className="results">
+        <ul className="results__ul">
         {results.map( ({id, text, tags, owner, visibility}) => 
-        <li key={id}>
-            <p>{text}</p>
-            <p>tags: {tags}</p>
-            <p>owner: {owner}</p>
-            <p>visibility: {visibility}</p>
+        <li key={id} className="results__li">
+            <p className="results__p">{text}</p>
+            <p className="results__p">tags: {tags}</p>
+            <p className="results__p">owner: {owner}</p>
+            <p className="results__p">visibility: {visibility}</p>
         </li>)}
 
         </ul>
+        </div>
     </>
 }
 
