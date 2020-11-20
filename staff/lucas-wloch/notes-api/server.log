@@ -1,0 +1,113 @@
+info 2020-11-17T16:19:13.188Z - server running on port 3000
+info 2020-11-17T16:19:23.643Z - stopping server
+info 2020-11-17T16:21:52.952Z - server running on port 3000
+error 2020-11-17T16:22:22.069Z - Error: Failed to lookup view "login" in views directory "/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/web-server/views"
+info 2020-11-17T16:31:56.568Z - server running on port 3000
+info 2020-11-17T16:32:51.784Z - server running on port 3000
+info 2020-11-17T16:32:55.107Z - stopping server
+info 2020-11-17T16:40:45.941Z - server running on port 3000
+info 2020-11-17T16:49:00.267Z - stopping server
+info 2020-11-17T16:49:00.268Z - stopping server
+info 2020-11-17T16:49:11.080Z - server running on port 3000
+error 2020-11-17T16:49:24.446Z - could not accept cookies :(
+error 2020-11-17T16:50:33.684Z - could not accept cookies :(
+info 2020-11-17T17:11:52.252Z - stopping server
+
+info 2020-11-17T17:13:02.777Z - server running on port 3000
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-18T13:00:35.228Z - server running on port 4000
+info 2020-11-18T13:01:12.536Z - stopping server
+info 2020-11-18T13:01:12.537Z - stopping server
+info 2020-11-18T13:01:15.670Z - server running on port 4000
+info 2020-11-18T13:03:18.380Z - stopping server
+info 2020-11-18T13:03:18.381Z - stopping server
+info 2020-11-18T13:15:25.409Z - server running on port 4000
+info 2020-11-18T13:18:09.224Z - server running on port 4000
+error 2020-11-18T13:18:23.101Z - Error: fullname is empty or blank
+error 2020-11-18T13:18:36.202Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:03.308Z - stopping server
+info 2020-11-18T13:19:04.401Z - server running on port 4000
+error 2020-11-18T13:19:06.886Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:20:26.360Z - server running on port 4000
+info 2020-11-18T13:43:31.863Z - stopping server
+info 2020-11-18T13:43:31.864Z - stopping server
+info 2020-11-18T13:45:50.034Z - server running on port 4000
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:34.615Z - server running on port 4000
+info 2020-11-18T13:53:43.043Z - server running on port 4000
+info 2020-11-18T13:55:43.167Z - server running on port 4000
+info 2020-11-18T13:56:35.766Z - server running on port 4000
+info 2020-11-18T13:58:25.580Z - server running on port 4000
+info 2020-11-18T13:59:49.053Z - server running on port 4000
+info 2020-11-18T14:00:17.901Z - server running on port 4000
+error 2020-11-18T14:00:43.219Z - Error: e-mail manuelbarzi@gmail.com already registered
+info 2020-11-18T17:17:59.306Z - server running on port 4000
+info 2020-11-18T17:18:03.732Z - stopping server
+info 2020-11-18T17:19:17.952Z - server running on port 4000
+info 2020-11-18T17:21:34.650Z - stopping server
+info 2020-11-18T17:53:52.237Z - server running on port 4000
+error 2020-11-18T17:55:46.264Z - ReferenceError: authenticateUser is not defined
+info 2020-11-18T17:56:25.870Z - stopping server
+info 2020-11-18T18:05:18.821Z - server running on port 4000
+error 2020-11-18T18:06:28.600Z - ReferenceError: authenticateUser is not defined
+error 2020-11-18T18:07:01.215Z - ReferenceError: authenticateUser is not defined
+info 2020-11-18T18:08:48.169Z - stopping server
+info 2020-11-18T18:09:04.359Z - server running on port 4000
+info 2020-11-18T18:11:49.840Z - server running on port 4000
+info 2020-11-18T18:26:07.117Z - stopping server
+info 2020-11-18T19:36:10.908Z - server running on port 4000
+info 2020-11-18T20:03:51.150Z - stopping server
+info 2020-11-19T08:44:23.359Z - server running on port 4000
+error 2020-11-19T08:46:24.462Z - ReferenceError: id is not defined
+error 2020-11-19T08:49:25.458Z - ReferenceError: id is not defined
+error 2020-11-19T08:49:44.591Z - ReferenceError: id is not defined
+info 2020-11-19T08:50:59.793Z - stopping server
+info 2020-11-19T08:51:09.342Z - server running on port 4000
+error 2020-11-19T08:52:19.387Z - ReferenceError: id is not defined
+error 2020-11-19T08:53:43.116Z - ReferenceError: id is not defined
+info 2020-11-19T08:54:24.796Z - server running on port 4000
+error 2020-11-19T08:55:26.184Z - ReferenceError: id is not defined
+info 2020-11-19T08:59:01.499Z - server running on port 4000
+error 2020-11-19T08:59:38.425Z - ReferenceError: id is not defined
+error 2020-11-19T09:00:05.448Z - ReferenceError: id is not defined
+info 2020-11-19T09:06:05.385Z - server running on port 4000
+error 2020-11-19T09:06:40.595Z - ReferenceError: id is not defined
+info 2020-11-19T09:15:32.315Z - stopping server
+info 2020-11-19T09:15:59.880Z - server running on port 4000
+error 2020-11-19T09:16:18.977Z - ReferenceError: id is not defined
+info 2020-11-19T09:17:27.927Z - server running on port 4000
+info 2020-11-19T09:25:05.476Z - server running on port 4000
+info 2020-11-19T09:29:49.868Z - server running on port 4000
+info 2020-11-19T09:33:41.046Z - stopping server
+info 2020-11-19T10:03:04.169Z - server running on port 4000
+info 2020-11-19T11:19:10.770Z - stopping server
+info 2020-11-19T11:44:06.306Z - server running on port 4000
+info 2020-11-19T12:04:55.834Z - stopping server
+info 2020-11-19T14:34:39.401Z - server running on port 4000
+info 2020-11-19T15:29:53.521Z - stopping server
+info 2020-11-19T15:29:59.081Z - server running on port 4000
+info 2020-11-19T15:30:06.814Z - stopping server
+info 2020-11-19T16:14:32.172Z - server running on port 4000
+info 2020-11-19T18:43:26.566Z - stopping server
+info 2020-11-19T18:43:29.300Z - server running on port 4000
+error 2020-11-19T18:43:31.522Z - TypeError: undefined is not a id
+error 2020-11-19T18:43:34.831Z - TypeError: undefined is not a id
+error 2020-11-19T18:44:58.501Z - TypeError: undefined is not a id
+error 2020-11-19T18:45:01.121Z - TypeError: undefined is not a id
+error 2020-11-19T18:45:26.049Z - TypeError: undefined is not a id
+info 2020-11-19T18:47:06.566Z - stopping server
+info 2020-11-19T18:47:10.077Z - server running on port 4000
+error 2020-11-19T18:47:29.940Z - TypeError: undefined is not a id
+info 2020-11-19T18:49:36.041Z - stopping server
+info 2020-11-19T18:49:38.538Z - server running on port 4000
+info 2020-11-19T19:47:07.706Z - stopping server
+info 2020-11-20T08:04:09.582Z - server running on port 4000
+info 2020-11-20T08:18:12.642Z - stopping server
+info 2020-11-20T08:19:33.047Z - server running on port 4000
+info 2020-11-20T08:20:31.346Z - stopping server
+info 2020-11-20T09:13:13.679Z - server running on port 4000
+info 2020-11-20T09:55:08.753Z - stopping server
