@@ -3,11 +3,11 @@ const path = require('path')
 const { createId } = require('../utils/ids')
 const { validateId, validateText, validateTags, validateVisibility, validateCallback } = require('./helpers/validations')
 
-module.exports = (noteId, text, tags, ownerId, visibility, callback) => {
+module.exports = (ownerId, noteId, text, tags, visibility, callback) => {
+    validateId(ownerId)
     if (typeof noteId !== 'undefined') validateId(noteId)
     validateText(text)
     validateTags(tags)
-    validateId(ownerId)
     validateVisibility(visibility)
     validateCallback(callback)
 
