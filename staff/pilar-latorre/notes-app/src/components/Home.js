@@ -1,4 +1,4 @@
-//import './Home.sass'
+// import './Home.sass'
 import Welcome from './Welcome'
 import {retrieveUser, retrieveNotes} from '../logic'
 import { useEffect, useState } from 'react'
@@ -51,7 +51,7 @@ function Home() {
         {user && <Welcome user={user} />}
         <button onClick={handleRetrieveNotes}>My Notes</button>
         {user && <Note onSavedNote={onSavedNote} userId={user.id} />}
-        {success && <h2>Su nota se ha guardado correctamente 🤩</h2>}
+        {success && <h2>Su nota se ha guardado correctamente 🤩 </h2>}
         {notes && <Results results={notes} />}
     </>
 

@@ -1,5 +1,5 @@
-import { call } from '../utils/call'
-import { validateId, validateCallback } from './helpers/validations'
+import { call } from '../utils'
+import { validateCallback, validateId } from './helpers/validations'
 
 
 function retrieveNotes(id,callback){
@@ -7,7 +7,7 @@ function retrieveNotes(id,callback){
     validateCallback(callback)
     
     call('GET','http://localhost:4000/api/notes',
-    {Authorization:`Bearer ${id}`} ,'', function(status,response){
+    {Authorization:`Bearer ${id}`},'',function(status,response){
         if(status === 0){
             callback(new Error('server down'))
         }else if(status === 200){

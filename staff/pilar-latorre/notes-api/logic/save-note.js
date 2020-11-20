@@ -34,7 +34,7 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
                         const { id: _id } = JSON.parse(json)
 
                         if (id === _id) {
-                            const note = { id, text, tags, owner, visibility }
+                            const note = { id, text, tags, owner, visibility, date: new Date }
 
                             const json = JSON.stringify(note)
 
@@ -45,25 +45,13 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
                             })
                         } else check(files, ++index)
                     })
-                } else {
-                    id = createId()
-
-                    const note = { id, text, tags, owner, visibility }
-
-                    const json = JSON.stringify(note)
-
-                    fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-                        if (error) return callback(error)
-
-                        callback(null)
-                    })
-                }
+                } else  callback(new Error(`note with id ${id} not found`))
             })(files)
         })
     else {
         id = createId()
 
-        const note = { id, text, tags, owner, visibility }
+        const note = { id, text, tags, owner, visibility, date: new Date }
 
         const json = JSON.stringify(note)
 

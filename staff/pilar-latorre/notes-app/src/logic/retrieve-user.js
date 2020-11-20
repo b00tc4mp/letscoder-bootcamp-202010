@@ -1,18 +1,18 @@
 import { call } from '../utils'
-import { validateCallback, validateId } from './helpers/validations'
+import { validateToken, validateCallback } from './helpers/validations'
 
 
-function retrieveNotes(id,callback){
-    validateId(id)
+function retrieveUser(token,callback){
+    validateToken(token)
     validateCallback(callback)
     
-    call('GET','http://localhost:4000/api/notes',
-    {Authorization:`Bearer ${id}`},'',function(status,response){
+    call('GET','http://localhost:4000/api/users',
+    {Authorization:`Bearer ${token}`},'',function(status,response){
         if(status === 0){
             callback(new Error('server down'))
         }else if(status === 200){
-            const {notes} = JSON.parse(response);
-            callback(null,notes);
+            const {user} = JSON.parse(response);
+            callback(null,user);
         } else {
             var res = JSON.parse(response);
             callback(new Error(res.error));
@@ -21,4 +21,4 @@ function retrieveNotes(id,callback){
     })
 };
 
-export default retrieveNotes
+export default retrieveUser

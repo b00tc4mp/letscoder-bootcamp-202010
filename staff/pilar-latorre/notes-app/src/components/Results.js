@@ -12,7 +12,8 @@ function Results({ results }) {
 
     return <>
         <ul>
-        {results.map( ({id, text, tags, owner, visibility}) => <li key={id}>
+        {results.map( ({id, text, tags, owner, visibility}) => 
+        <li key={id}>
             <p>{text}</p>
             <p>tags: {tags}</p>
             <h6>owner: {owner}</h6>

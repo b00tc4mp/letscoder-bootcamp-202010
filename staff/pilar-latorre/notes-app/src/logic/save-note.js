@@ -8,6 +8,7 @@ import {
   } from "./helpers/validations";
 
 export default function (id, text, tags, owner, visibility, callback) {
+    debugger
     if (typeof id !== 'undefined') validateId(id)
     validateText(text);
     validateTags(tags);
