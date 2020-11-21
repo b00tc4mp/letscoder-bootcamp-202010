@@ -10,8 +10,8 @@ export default function (id, text, tags, owner, visibility, callback) {
     validateVisibility(visibility)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/notes', { 'Content-type': 'application/json' },
-        JSON.stringify({ id, text, tags, owner, visibility }),
+    call('POST', 'http://localhost:4000/api/notes', { 'Content-type': 'application/json', Authorization: `Bearer ${owner}` },
+        JSON.stringify({ id, text, tags, visibility }),
         (status, response) => {
             if (status === 0) {
                 callback(new Error('server down'))

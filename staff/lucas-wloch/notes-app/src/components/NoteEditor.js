@@ -1,38 +1,48 @@
 import saveNote from "../logic/save-note"
+import './NoteEditor.sass'
+
+
 
 function NoteEditor({ onSavedNote, userId }) {
-    // (id, text, tags, owner, visibility, callback)
+    const handleSubmit = event => {
+        event.preventDefault()
 
-    // onSaveNote = (id, text, tags, owner, visibility, callback) => {
-    //     saveNote
-    // }
+        const { target: { text: { value: text }, visibility: { value: visibility }, tags: { value: tags } } } = event
+        if (text && tags && userId && visibility)
+            saveNote(undefined, text, tags.split(' '), userId, visibility, error => {
+                if (error) {
+                    const res = JSON.parse(error)
+                    alert(res.error)
+                }
+                onSavedNote()
+            })
+        else return console.log('text is empty or blank')
+
+    }
+
     return <>
-        <section>
-            <h1>Create Your Note </h1>
-            <form onSubmit={event => {
-                event.preventDefault()
+        <section className="noteEditor" >
+            {/* <h1 className="noteEditor__title" >Create your note</h1> */}
+            <form className="noteEditor__form" onSubmit={handleSubmit}>
+                <div>
 
-                const { target: { text: { value: text }, visibility: { value: visibility } } } = event
-                if (text && [] && userId && visibility)
-                    saveNote(undefined, text, [], userId, visibility, error => {
-                        if (error) {
-                            const { error } = JSON.parse(error)
-                            alert(error)
-                        }
-                        onSavedNote()
-                    })
-                else return console.log('text is empty or blank')
-            }}>
-                <input type="text" name="text" placeholder="Create your note" />
-                <select name="visibility" id="visibility">
-                    <option value="private">private</option>
-                    <option value="public">public</option>
+                <textarea className="noteEditor__textarea" type="text" name="text" placeholder="write your note"></textarea>
+                </div>
+                <div className="noteEditor__div"> 
+                   <input className="noteEditor__inputTag" type="text" id="tags" name="tags" placeholder="tag your note" />
+                <select className="noteEditor__select" name="visibility" id="visibility">
+                    <option className="noteEditor__option" value="private">Private</option>
+                    <option className="noteEditor__option" value="public">Public</option>
                 </select>
-                <button>Send</button>
+
+                <button className="noteEditor__button">Send</button> 
+                </div>
+                
             </form>
         </section>
+
     </>
+
 }
 
 export default NoteEditor
-

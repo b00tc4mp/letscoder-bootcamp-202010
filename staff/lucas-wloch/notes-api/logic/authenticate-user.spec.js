@@ -27,7 +27,6 @@ describe('authenticateUser()', () => {
         it('should succeed on correct credentials', done => {
             authenticateUser(email, password, (error, userId) => {
                 expect(error).to.be.null
-                debugger
                 expect(userId).to.be.a('string')
                 expect(userId).to.have.length.greaterThan(0)
 

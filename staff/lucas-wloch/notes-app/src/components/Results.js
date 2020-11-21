@@ -2,16 +2,9 @@
 
 
 function Results({ results }) {
-    // const [resultList, setResultList] = useState(results)
-
-    // useEffect( () => {
-        
-    //     setResultList(results)
-
-    // },[results] ) 
 
     return <>
-        <ul>
+        {results && results.length && <ul>
         {results.map( ({id, text, tags, owner, visibility}) => <li key={id}>
             <p>{text}</p>
             <p>tags: {tags}</p>
@@ -19,7 +12,7 @@ function Results({ results }) {
             <h6>visibility: {visibility}</h6>
         </li>)}
 
-        </ul>
+        </ul>}
     </>
 }
 

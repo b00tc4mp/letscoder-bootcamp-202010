@@ -2,7 +2,6 @@ const { retrieveUser } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
 
-    debugger
 
     res.setHeader('Access-Control-Allow-Origin', '*')
 

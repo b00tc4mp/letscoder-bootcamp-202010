@@ -3,7 +3,6 @@ call('POST',
 { 'Content-type': 'application/json' },
 '{ "username": "pe@rro.com", "password" : "123123123" }',
 function(status,response){
-    debugger
     console.log(status,response)
 })
 // 2

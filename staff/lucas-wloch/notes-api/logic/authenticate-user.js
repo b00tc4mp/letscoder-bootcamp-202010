@@ -20,7 +20,6 @@ module.exports = (email, password, callback) => {
                     if (error) return callback(error)
 
                     const { id, email: _email, password: _password } = JSON.parse(json)
-                    debugger
 
 
                     if (email === _email && password === _password) callback(null, id)

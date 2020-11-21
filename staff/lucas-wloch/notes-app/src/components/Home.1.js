@@ -15,7 +15,6 @@ class Home extends Component {
         // try {
         retrieveUser(token, (error, user) => {
             if (error) return alert(error.message)
-            debugger
 
             this.setState({ user })
         })

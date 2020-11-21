@@ -32,14 +32,24 @@ function App() {
     }
   }
 
+  const handleGoToSignIn = () => {
+    setView('sign-in')
+  }
+  
+  const handleGoToSignUp = () => {
+    setView('sign-up')
+  }
+
   return (
     <div className="App">
       <header className="App-header">
 
         {view === 'home' || <h1>NOTES APP!</h1>}
 
-        {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />}
-        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />}
+        {view === 'sign-up' && <SignUp onSignUp={handleSignUp} onGoToSignIn={handleGoToSignIn} />}
+
+        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} onGoToSignUp={handleGoToSignUp}/>}
+        
         {view === 'home' && <Home />}
 
         <img src={logo} className="App-logo" alt="logo" />

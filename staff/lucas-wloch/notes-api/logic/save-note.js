@@ -5,12 +5,13 @@ const path = require('path')
 
 module.exports = (id, text, tags, owner, visibility, callback) => {
     if (typeof id !== 'undefined') validateId(id)
+    debugger
     validateText(text)
     validateTags(tags)
     validateId(owner)
     validateVisibility(visibility)
     validateCallback(callback)
-
+    debugger
 
     const notesPath = path.join(__dirname, '../data/notes')
 

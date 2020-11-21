@@ -12,7 +12,6 @@ export default function (email, password, callback) {
             if (status === 0) {
                 callback(new Error('server down'))
             }else if (status !== 200) {
-                debugger
                 const { error } = JSON.parse(response)
                 
                 return callback(new Error(error))
