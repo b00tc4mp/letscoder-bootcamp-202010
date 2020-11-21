@@ -36,7 +36,6 @@ import ListNotes from './ListNotes'
                         if (error) return alert(error.message)
         
                         setNotes(notes)
-                        //console.log(notes)
                     })
             })
         }

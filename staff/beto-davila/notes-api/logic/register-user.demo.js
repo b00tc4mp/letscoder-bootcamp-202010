@@ -1,19 +1,35 @@
+require('dotenv').config()
+
+const { MongoClient } = require('mongodb')
+const context = require('./context')
+
 const registerUser = require('./register-user')
 
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(1)
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(2)
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(3)
+const { env: { MONGODB_URL } } = process
 
-//console.log('hello world')
+const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-setTimeout(() => {
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
+client.connect((error, connection) => {
+    if (error) return console.error(error)
+
+
+    context.connection = connection
+
+    registerUser('beto davila', 'dagoman19@gmail.com', '123', console.log)
     console.log(1)
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(2)
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(3)
-}, 3000)
+    // registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
+    // console.log(2)
+    // registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
+    // console.log(3)
+
+
+    // setTimeout(() => {
+    //     registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
+    //     console.log(1)
+    //     registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
+    //     console.log(2)
+    //     registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
+    //     console.log(3)
+    // }, 3000)
+
+})

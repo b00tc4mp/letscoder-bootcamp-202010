@@ -1,9 +1,11 @@
-const fs = require('fs')
-const path = require('path')
-const { createId } = require('../utils/ids')
+// const fs = require('fs')
+// const path = require('path')
+// const { createId } = require('../utils/ids')
 const { validateCallback, validateId, validateText, validateTags, validateVisibility } = require('./helpers/validations')
+const context = require('./context')
+const { env: { DB_NAME } } = process
 
-module.exports = (owner, id, text, tags, visibility, callback) => {
+module.exports = function (owner, id, text, tags, visibility, callback) {
     validateId(owner)
     if (typeof id !== 'undefined') validateId(id)
     validateText(text)
@@ -11,61 +13,18 @@ module.exports = (owner, id, text, tags, visibility, callback) => {
     validateVisibility(visibility)
     validateCallback(callback)
 
-    const notesPath = path.join(__dirname, '../data/notes')
-    // if we pass id
-    if (id)
-        fs.readdir(notesPath, (error, files) => {
-            if (error) return callback(error);
+    const { connection } = this
 
-            (function check(files, index = 0) {
-                if (index < files.length) {
-                    const file = files[index]
+    const db = connection.db(DB_NAME)
 
-                    fs.readFile(path.join(notesPath, file), 'utf8', (error, json) => {
-                        if (error) return callback(error)
+    const notes = db.collection('notes')
 
-                        const { id: _id } = JSON.parse(json)
 
-                        if (id === _id) {
-                            const note = { id, text, tags, owner, visibility, date: new Date() }
+    notes.insertOne({owner, text, tags, visibility}, (error, result) => {
+        if (error) return callback(error)
+    
+        console.log(result.ops[0])
+        callback(null)
+    })
 
-                            const json = JSON.stringify(note)
-
-                            fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-                                if (error) return callback(error)
-
-                                callback(null)
-                            })
-                        } else check(files, ++index)
-                    })
-                // if there are no notes in the folder
-                } else {
-                    id = createId()
-
-                    const note = { id, text, tags, owner, visibility, date: new Date() }
-
-                    const json = JSON.stringify(note)
-
-                    fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-                        if (error) return callback(error)
-
-                        callback(null)
-                    })
-                }
-            })(files)
-        })
-    // if id is undefined
-    else {
-        id = createId()
-        
-        const note = { id, text, tags, owner, visibility, date: new Date() }
-
-        const json = JSON.stringify(note)
-
-        fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-            if (error) return callback(error)
-
-            callback(null)
-        })
-    }
-}
+}.bind(context)

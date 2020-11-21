@@ -253,3 +253,85 @@ error 2020-11-20T13:36:33.674Z - TypeError: undefined is not a id
 error 2020-11-20T13:51:34.609Z - TypeError: undefined is not a id
 info 2020-11-20T13:53:19.503Z - server running on port 4000
 info 2020-11-20T13:55:24.928Z - server running on port 4000
+info 2020-11-20T17:35:13.625Z - starting server
+info 2020-11-20T17:35:30.455Z - stopping server
+info 2020-11-20T17:36:03.617Z - starting server
+info 2020-11-20T17:36:14.162Z - starting server
+info 2020-11-20T17:36:14.191Z - server running on port 4000
+info 2020-11-20T17:38:12.594Z - stopping server
+info 2020-11-20T17:38:12.595Z - stopping server
+info 2020-11-20T18:08:01.795Z - starting server
+info 2020-11-20T18:10:05.313Z - starting server
+info 2020-11-20T18:13:11.896Z - starting server
+info 2020-11-20T18:18:20.181Z - starting server
+info 2020-11-20T18:18:58.931Z - starting server
+info 2020-11-20T18:19:27.242Z - starting server
+info 2020-11-20T18:20:51.170Z - starting server
+info 2020-11-20T18:21:44.590Z - starting server
+info 2020-11-20T18:23:29.226Z - starting server
+error 2020-11-20T18:24:49.487Z - MongoServerSelectionError: connection timed out
+info 2020-11-20T18:24:49.496Z - stopping server
+info 2020-11-21T04:26:30.253Z - starting server
+info 2020-11-21T04:26:30.304Z - server running on port 4000
+info 2020-11-21T04:34:08.026Z - starting server
+info 2020-11-21T04:34:08.072Z - server running on port 4000
+info 2020-11-21T04:34:49.249Z - starting server
+info 2020-11-21T04:34:49.292Z - server running on port 4000
+info 2020-11-21T04:36:58.016Z - stopping server
+info 2020-11-21T04:38:30.748Z - starting server
+info 2020-11-21T04:47:15.626Z - starting server
+info 2020-11-21T04:48:59.900Z - starting server
+info 2020-11-21T04:49:30.556Z - starting server
+info 2020-11-21T04:54:43.819Z - starting server
+info 2020-11-21T09:39:57.482Z - starting server
+info 2020-11-21T09:39:57.523Z - server running on port 4000
+info 2020-11-21T10:36:24.568Z - starting server
+info 2020-11-21T10:36:24.609Z - server running on port 4000
+error 2020-11-21T10:36:45.862Z - Error: the email dagoman19@gmail.com was registered already
+error 2020-11-21T10:41:23.028Z - Error: the email dagoman19@gmail.com was registered already
+info 2020-11-21T10:45:57.996Z - stopping server
+info 2020-11-21T10:46:37.836Z - starting server
+info 2020-11-21T11:08:35.719Z - starting server
+info 2020-11-21T11:08:35.763Z - server running on port 4000
+error 2020-11-21T11:09:00.441Z - Error: id length is not 31 digits
+error 2020-11-21T11:12:22.499Z - Error: the email dagoman19@gmail.com was registered already
+error 2020-11-21T11:12:44.407Z - Error: the email dagoman19@gmail1.com was registered already
+error 2020-11-21T11:12:55.324Z - Error: the email dagoman19@mail.com was registered already
+error 2020-11-21T11:13:13.039Z - Error: the email lola@gmail.com was registered already
+info 2020-11-21T11:14:21.791Z - stopping server
+info 2020-11-21T11:15:38.974Z - starting server
+info 2020-11-21T11:15:39.014Z - server running on port 4000
+error 2020-11-21T11:15:55.248Z - Error: user with id 5fb898ff3a550d5535a9963d not found
+error 2020-11-21T11:19:31.765Z - Error: user with id 5fb898ff3a550d5535a9963d not found
+error 2020-11-21T11:22:55.941Z - Error: the email dagoman19@gmail.com was registered already
+info 2020-11-21T11:23:52.539Z - stopping server
+info 2020-11-21T11:34:15.396Z - starting server
+info 2020-11-21T11:34:15.436Z - server running on port 4000
+error 2020-11-21T11:34:27.950Z - Error: the email dagoman19@gmail1.com was registered already
+info 2020-11-21T11:34:44.161Z - stopping server
+info 2020-11-21T11:44:56.462Z - starting server
+info 2020-11-21T11:44:56.502Z - server running on port 4000
+error 2020-11-21T11:46:01.235Z - Error: the email culebra@gmail.com was registered already
+error 2020-11-21T11:46:48.475Z - Error: the email guepardo@gmail.com was registered already
+error 2020-11-21T11:46:57.149Z - Error: the email lola@gmail.com was registered already
+info 2020-11-21T11:48:02.971Z - stopping server
+info 2020-11-21T11:59:44.946Z - starting server
+info 2020-11-21T11:59:44.986Z - server running on port 4000
+info 2020-11-21T12:06:52.714Z - starting server
+info 2020-11-21T12:06:52.753Z - server running on port 4000
+error 2020-11-21T12:06:56.294Z - Error: user with id 5fb8fad9a15a822fff0a201b not found
+info 2020-11-21T12:07:24.477Z - stopping server
+info 2020-11-21T12:08:58.939Z - starting server
+info 2020-11-21T12:08:58.979Z - server running on port 4000
+error 2020-11-21T12:09:02.380Z - Error: wrong credentials
+error 2020-11-21T12:09:12.349Z - Error: user with id 5fb8fad9a15a822fff0a201b not found
+info 2020-11-21T12:09:40.107Z - stopping server
+info 2020-11-21T12:19:46.678Z - starting server
+info 2020-11-21T12:19:46.719Z - server running on port 4000
+info 2020-11-21T12:20:08.179Z - stopping server
+info 2020-11-21T14:13:28.343Z - starting server
+info 2020-11-21T14:13:28.383Z - server running on port 4000
+info 2020-11-21T14:15:15.357Z - stopping server
+info 2020-11-21T14:57:42.851Z - starting server
+info 2020-11-21T14:57:42.895Z - server running on port 4000
+info 2020-11-21T15:01:30.017Z - stopping server
