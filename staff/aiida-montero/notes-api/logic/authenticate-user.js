@@ -1,13 +1,15 @@
-const fs = require('fs')
-const { validateEmail, validatePassword, validateCallback } = require('./helpers/validations')
-const path = require('path')
 
+const { validateEmail, validatePassword, validateCallback } = require('./helpers/validations')
+const context = require('./context')
+
+const {env : {DB_NAME}} = process
 module.exports = (email, password, callback) => {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
-
-    const usersPath = path.join(__dirname, '../data/users')
+const {connection} = this
+const db = connection.db(DB_NAME)
+/* const users = db.collection('users') */
 
     fs.readdir(usersPath, (error, files) => {
         if (error) return callback(error);

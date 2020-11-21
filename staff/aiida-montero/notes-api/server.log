@@ -170,3 +170,24 @@ info 2020-11-19T22:14:06.526Z - server running on port 4000
 info 2020-11-20T10:16:23.392Z - server running on port 4000
 info 2020-11-20T11:01:51.629Z - stopping server
 info 2020-11-20T11:01:54.157Z - server running on port 4000
+info 2020-11-20T15:28:50.460Z - stopping server
+error 2020-11-20T16:11:47.574Z - MongoParseError: Invalid connection string
+info 2020-11-20T16:11:47.619Z - server running on port 4000
+error 2020-11-20T16:12:12.255Z - MongoParseError: Invalid connection string
+info 2020-11-20T16:12:12.295Z - server running on port 4000
+info 2020-11-21T00:39:06.088Z - starting server
+info 2020-11-21T00:39:06.146Z - server running on port 4000
+info 2020-11-21T00:54:56.379Z - stopping server
+info 2020-11-21T00:55:00.110Z - starting server
+info 2020-11-21T00:55:00.163Z - server running on port 4000
+info 2020-11-21T00:59:32.345Z - stopping server
+info 2020-11-21T00:59:34.935Z - starting server
+info 2020-11-21T00:59:34.988Z - server running on port 4000
+info 2020-11-21T01:16:06.633Z - stopping server
+info 2020-11-21T01:18:49.084Z - starting server
+info 2020-11-21T01:18:49.138Z - server running on port 4000
+info 2020-11-21T01:27:59.800Z - stopping server
+info 2020-11-21T01:28:02.366Z - starting server
+info 2020-11-21T01:28:02.425Z - server running on port 4000
+error 2020-11-21T02:11:11.242Z - Error: wrong credentials
+error 2020-11-21T02:13:12.757Z - Error: e-mail anaaa@gmail.com already registered

@@ -11,10 +11,10 @@ function SignUp({ onSignUp }) {
 
             onSignUp(fullname, email, password)
         }}>
-            <input type="text" name="fullname" placeholder="fullname" />
-            <input type="email" name="email" placeholder="e-mail" />
-            <input type="password" name="password" placeholder="password" />
-            <button>Send</button>
+            <input className = "input" type="text" name="fullname" placeholder="fullname" />
+            <input className = "input" type="email" name="email" placeholder="e-mail" />
+            <input className = "input" type="password" name="password" placeholder="password" />
+            <button className = "button">Send</button>
         </form>
     </section>
 }

@@ -1,3 +1,5 @@
+const {XMLHttpRequest} = require("xmlhttprequest")
+
 module.exports = (method, url, headers, body, callback) => {
     const xhr = new XMLHttpRequest
 

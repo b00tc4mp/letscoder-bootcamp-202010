@@ -30,4 +30,4 @@ module.exports = (userId, callback) => {
             } else callback(null, notes)
         })(files)
     })
-} 
+}

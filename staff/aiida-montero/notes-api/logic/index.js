@@ -1,6 +1,8 @@
 module.exports = {
+    context: require('./context'),
     registerUser: require('./register-user'),
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
-    retrieveNotes: require ('./retrieve-notes')
+    saveNote: require('./save-note'),
+    retrieveNotes: require('./retrieve-notes')
 }
