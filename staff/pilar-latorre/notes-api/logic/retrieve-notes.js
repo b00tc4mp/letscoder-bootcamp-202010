@@ -1,41 +1,27 @@
 const { validateId, validateCallback } = require('./helpers/validations')
-const fs = require('fs')
-const path = require('path')
+const context = require('./context')
+
+const { env: { DB_NAME } } = process
 
 module.exports = (id, callback) => {
-    validateId(id)
+    //validateId(id)
     validateCallback(callback)
 
-    let results = []
+    const { connection } = context
 
-    const notesPath = path.join(__dirname, '../data/notes')
+    const db = connection.db(DB_NAME)
 
-    fs.readdir(notesPath, (error, files) => {
+    const notes = db.collection('notes')
 
-        (function check(files, index = 0) {
-            if (index < files.length) {
-                const file = files[index]
+    //let results = []
 
-                fs.readFile(path.join(notesPath, file), 'utf8', (error, json) => {
-                    if (error) return callback(error)
-
-                    const note = JSON.parse(json)
-
-                    if (note.owner === id) {
-                        results.push(note)
-                       
-                        check(files, ++index)
-
-                    } else check(files, ++index)
-
-                })
-            } else if (results.length === 0) {
-                callback(new Error('no saved notes'))
-            } else {
-                callback(null, results)
-            }
-
-        })(files)
-
+    notes.find({owner: id}, (error, results) => {
+        if(error){
+            return callback(error)
+        }
+        if(results){
+            return callback (null, results)
+        }
     })
+
 }

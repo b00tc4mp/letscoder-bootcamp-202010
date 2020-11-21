@@ -1,25 +1,57 @@
-require('dotenv').config()
+require("dotenv").config();
+const express = require("express");
+const { MongoClient } = require("mongodb");
 
-const express = require('express')
-const logger = require('./utils/logger')
+const logger = require("./utils/logger");
+const { cors } = require("./middlewares");
+const { context } = require("./logic");
 
-const { env: { PORT }, argv: [, , port = PORT || 8080] } = process
+const {
+    env: { PORT, MONGODB_URL },
+    argv: [, , port = PORT || 8080],
+} = process;
 
-const app = express()
+const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true });
 
-const { api } = require('./routes')
+logger.log("starting server", "info");
 
-app.options('*', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.setHeader('Access-Control-Allow-Headers', '*')
+client.connect((error, connection) => {
+    if (error)
+        return logger.log(error, "error", (error) => {
+            if (error) console.error(error);
 
-    res.status(204).send()
-})
+            shutDown();
+        });
 
-app.use(api)
+    context.connection = connection;
+    const app = express();
 
-app.get('/*', (req, res) => res.status(404).send('Not found :('))
+    app.use(cors)
 
-app.listen(port, () => logger.log(`server running on port ${port}`))
+    const { api } = require("./routes");
 
-process.on('SIGINT', () => logger.log(`stopping server`, 'info', () => process.exit(0)))
+    app.use(api);
+
+    app.get("/*", (req, res) => res.status(404).send("Not found :("));
+
+    app.listen(port, () => logger.log(`server running on port ${port}`)
+);
+});
+
+const shutDown = () => {
+    console.log(`stopping server`)
+    logger.log(`stopping server`, 'info', error => {
+        if (error) console.error(error)
+
+        if (client)
+            return client.close(error => {
+                if (error) console.error(error)
+                process.exit(0)
+
+            })
+
+        process.exit(0)
+    })
+}
+
+process.on("SIGINT", shutDown);

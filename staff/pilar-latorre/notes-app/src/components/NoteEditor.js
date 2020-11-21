@@ -4,7 +4,7 @@ import './NoteEditor.sass'
 function NoteEditor( {onSavedNote, userId}){
     const handleSubmit = event => {
         event.preventDefault()
-
+debugger
         const { target: { text: { value: text }, visibility: { value: visibility }, tags: {value: tags} } } = event
         if (text && tags && userId && visibility)
             saveNote(undefined, text, tags.split(' '), userId, visibility, error => {

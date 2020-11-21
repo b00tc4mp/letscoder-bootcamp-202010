@@ -7,6 +7,8 @@ import {
     validateCallback
   } from "./helpers/validations";
 
+  debugger
+
 export default function (id, text, tags, owner, visibility, callback) {
     if (typeof id !== 'undefined') validateId(id)
     validateText(text);
