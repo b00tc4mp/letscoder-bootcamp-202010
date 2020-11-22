@@ -13,9 +13,9 @@ const SaveNote = ({ onSave }) => {
             onSave(text, tags.split(' '), visibility)
 
         }}>
-            <input type="text" name="text" placeholder="TODO"></input>
-            <input type="text" name="tags" placeholder="tags"></input>
-            <input type="text" name="visibility" placeholder="public or private"></input>
+            <input type="text" name="text" placeholder="TODO" required></input>
+            <input type="text" name="tags" placeholder="tags" required></input>
+            <input type="text" name="visibility" placeholder="public or private" required></input>
             <button className='note__btn'>Add note!</button>
         </form>
     </section>

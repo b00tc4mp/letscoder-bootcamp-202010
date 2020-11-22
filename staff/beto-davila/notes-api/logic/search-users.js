@@ -7,33 +7,5 @@ module.exports = (query, callback) => {
     //validateQuery(query)
     validateCallback(callback)
 
-    const usersPath = path.join(__dirname, `../data/users/${id}.json`)
-    let user;
-
-    fs.readdir(usersPath, (error, files) => {
-        if (error) return callback(error);
-        
-        if (files) {
-            (function check(files, index = 0) {
-                if (index < files.length) {
-                    const file = files[index]
     
-                    fs.readFile(path.join(usersPath, file), 'utf8', (error, json) => {
-                        if (error) return callback(error)
-                        
-                        var match = json.match(query)
-
-                        if (match) {
-                             const result = match.input
-
-                             user = JSON.parse(result)
-                        }
-
-                        else check(files, ++index)
-                    })
-                } else return callback(user)
-            })(files)
-        } else return callback (new Error(''))
-
-    })
 }

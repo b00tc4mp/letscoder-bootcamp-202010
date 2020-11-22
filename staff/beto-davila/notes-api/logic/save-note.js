@@ -4,6 +4,7 @@
 const { validateCallback, validateId, validateText, validateTags, validateVisibility } = require('./helpers/validations')
 const context = require('./context')
 const { env: { DB_NAME } } = process
+const { ObjectID } = require('mongodb')
 
 module.exports = function (owner, id, text, tags, visibility, callback) {
     validateId(owner)
@@ -19,6 +20,7 @@ module.exports = function (owner, id, text, tags, visibility, callback) {
 
     const notes = db.collection('notes')
 
+    owner = ObjectID.createFromHexString(owner)
 
     notes.insertOne({owner, text, tags, visibility}, (error, result) => {
         if (error) return callback(error)

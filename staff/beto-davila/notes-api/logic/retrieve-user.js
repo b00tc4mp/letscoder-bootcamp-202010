@@ -16,7 +16,7 @@ module.exports = function (token, callback) {
 
     const users = db.collection('users')
 
-    var _id = ObjectID.createFromHexString(token)
+    const _id = ObjectID.createFromHexString(token)
 
     users.findOne({_id} ,(error, user) => {
         if(error) return callback(error)

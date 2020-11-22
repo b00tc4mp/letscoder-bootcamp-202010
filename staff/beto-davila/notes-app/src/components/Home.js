@@ -20,6 +20,12 @@ import ListNotes from './ListNotes'
 
                     const { fullname } = user
                     setName(fullname)
+
+                    retrieveNotes( token, (error, notes) => {
+                        if (error) return alert(error.message)
+        
+                        setNotes(notes)
+                    })
                 })
             } catch (error) {
                 return alert(error.message)  
@@ -29,8 +35,6 @@ import ListNotes from './ListNotes'
         const handleSaveNote = (text, tags, visibility) => {
             saveNote( token, undefined, text, tags, visibility, (error) => {
                 if (error) return alert(error.message)
-
-                console.log('The note was added!')
         
                     retrieveNotes( token, (error, notes) => {
                         if (error) return alert(error.message)
