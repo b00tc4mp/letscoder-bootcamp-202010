@@ -11,10 +11,10 @@ module.exports = (req, res, handleError) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
 
     try {
-        retrieveNotes(id, (error, user) => {
+        retrieveNotes(id, (error, notes) => {
             if (error) return handleError(401, error)
         
-            res.status(200).json(user)
+            res.status(200).json(notes)
             })
         } catch (error) {
             handleError(400, error)   

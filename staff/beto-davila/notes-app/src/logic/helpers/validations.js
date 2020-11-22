@@ -33,8 +33,6 @@ module.exports = {
         if (typeof visibility !== 'string') throw new TypeError(visibility + ' is not a valid visibility')
 
         if (!visibility.trim().length) throw new Error('visibility is empty or blank')
-
-        if (visibility !== 'public' && visibility !== 'private') throw new Error('visibility should be public or private')
     },
 
     validateTags(tags) {
@@ -54,5 +52,11 @@ module.exports = {
         if (!id.trim().length) throw new Error('id is empty or blank')
 
         if (id.length !== 24 ) throw new Error('id length is not 24 digits')
+    },
+
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
+
+        if (!query.trim().length) throw new Error('the query is empty or blank')
     }
 }

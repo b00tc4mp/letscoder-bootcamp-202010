@@ -44,7 +44,6 @@ module.exports = function (fullname, email, password, callback) {
                     return callback(error)
                 }
                 done()
-
                 callback(null)
             })
 

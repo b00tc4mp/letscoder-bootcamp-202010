@@ -13,9 +13,14 @@ const SaveNote = ({ onSave }) => {
             onSave(text, tags.split(' '), visibility)
 
         }}>
-            <input type="text" name="text" placeholder="TODO" required></input>
+            <textarea name="text" rows="10" cols="35" placeholder="Input your new task" required></textarea>
+            <div className="note__inputs">
             <input type="text" name="tags" placeholder="tags" required></input>
-            <input type="text" name="visibility" placeholder="public or private" required></input>
+            <input type="radio" name="visibility" value="public" defaultChecked/>
+            <label htmlFor="public">Public</label>
+            <input type="radio" name="visibility" value="private"/>
+            <label htmlFor="private">Private</label>
+            </div>
             <button className='note__btn'>Add note!</button>
         </form>
     </section>

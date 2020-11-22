@@ -22,7 +22,7 @@ module.exports = function (owner, id, text, tags, visibility, callback) {
 
     owner = ObjectID.createFromHexString(owner)
 
-    notes.insertOne({owner, text, tags, visibility}, (error, result) => {
+    notes.insertOne({owner, text, tags, visibility, date: new Date}, (error, result) => {
         if (error) return callback(error)
     
         console.log(result.ops[0])

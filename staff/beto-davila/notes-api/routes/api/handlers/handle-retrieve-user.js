@@ -7,7 +7,6 @@ module.exports = (req, res, handleError) => {
     const id = authorization.replace('Bearer ', '')
     
     //const id = '1605718707109104439437083615920'
-    debugger
 
     res.setHeader('Access-Control-Allow-Origin', '*')
 

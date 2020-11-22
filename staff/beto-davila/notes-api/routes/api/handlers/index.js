@@ -4,5 +4,6 @@ module.exports = {
     handleAuthenticateUser: require('./handle-authenticate-user'),
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleSaveNote: require('./handle-save-note'),
-    handleRetrieveNotes: require('./handle-retrieve-notes')
+    handleRetrieveNotes: require('./handle-retrieve-notes'),
+    handleSearchUsers: require('./handle-search-users.js')
 }

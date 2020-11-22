@@ -17,5 +17,5 @@ client.connect((error, connection) => {
 
     // saveNote(undefined, 'Code, eat, sleep and repeat!',['bootcamp'], '1605718707109104439437083615920', 'private', console.log)
 
-    saveNote('5fb8fad9a15a822fff0a201b', undefined, 'Dale duro a Mongodb',['mongo', 'code', 'finde'], 'public', console.log)
+    saveNote('5fb8fad9a15a822fff0a201b', undefined, 'Desinstalar Mongo HOY!',['mongo', 'uninstall', 'arbolada'], 'private', console.log)
 })

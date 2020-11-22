@@ -15,7 +15,7 @@ client.connect((error, connection) => {
 
     context.connection = connection
 
-    registerUser('beto davila', 'dagoman19@gmail.com', '123', console.log)
+    registerUser('Rodolfo Langosta', 'rodolfito@gmail.com', '123', console.log)
     console.log(1)
     // registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
     // console.log(2)
