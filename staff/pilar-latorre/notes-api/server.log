@@ -227,3 +227,20 @@ info 2020-11-21T17:13:34.767Z - stopping server
 info 2020-11-21T17:15:57.492Z - starting server
 info 2020-11-21T17:15:57.550Z - server running on port 4000
 info 2020-11-21T18:08:19.585Z - stopping server
+info 2020-11-22T10:27:04.846Z - starting server
+error 2020-11-22T10:27:34.869Z - MongoServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+info 2020-11-22T10:27:34.874Z - stopping server
+info 2020-11-22T10:29:55.148Z - starting server
+info 2020-11-22T10:29:55.212Z - server running on port 4000
+info 2020-11-22T10:35:20.878Z - stopping server
+info 2020-11-22T10:35:25.291Z - starting server
+info 2020-11-22T10:35:25.339Z - server running on port 4000
+error 2020-11-22T10:38:17.833Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-22T10:42:06.534Z - stopping server
+info 2020-11-22T10:42:16.860Z - starting server
+info 2020-11-22T10:42:16.918Z - server running on port 4000
+info 2020-11-22T10:47:56.926Z - stopping server

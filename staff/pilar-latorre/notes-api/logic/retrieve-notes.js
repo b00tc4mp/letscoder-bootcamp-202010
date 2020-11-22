@@ -15,7 +15,7 @@ module.exports = (id, callback) => {
 
     //let results = []
 
-    notes.find({owner: id}, (error, results) => {
+    notes.find({owner: id}).toArray( (error, results) => {
         if(error){
             return callback(error)
         }

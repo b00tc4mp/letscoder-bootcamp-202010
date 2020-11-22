@@ -33,7 +33,7 @@ function Home() {
     const handleRetrieveNotes = () => {
 
         try {
-            retrieveNotes(user.id, (error, notes) => {
+            retrieveNotes(user._id, (error, notes) => {
                 if (error) return alert(error.message)
                 setNotes(notes)
             })
@@ -50,7 +50,7 @@ function Home() {
         {/* <Welcome /> */}
         {user && <Welcome user={user} />}
         <button className = "myNotes"onClick={handleRetrieveNotes}>Check your Notes</button>
-        {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} />}
+        {user && <NoteEditor onSavedNote={onSavedNote} userId={user._id} />}
         {success && <h2>Su nota se ha guardado correctamente 🤩 </h2>}
         {notes && <Results results={notes} />}
     </>
