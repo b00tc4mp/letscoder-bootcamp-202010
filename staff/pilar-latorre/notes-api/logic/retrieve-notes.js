@@ -4,7 +4,7 @@ const context = require('./context')
 const { env: { DB_NAME } } = process
 
 module.exports = (id, callback) => {
-    //validateId(id)
+    validateId(id)
     validateCallback(callback)
 
     const { connection } = context
