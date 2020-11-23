@@ -35,9 +35,9 @@ function SearchUser() {
                 // onClick={() => handleSearchUser(query)} OPCION QUE NO REFRESCA AUTOMATICAMENTE
             > 🔍 </button>
             {(results && results.length && <ul className="searchUser__ul">
-                {results.map(({ fullname, _id }) => <li key={_id} className="searchUser__li">
+                {results.map(({ fullname, id }) => <li key={id} className="searchUser__li">
                     {fullname && <p className="searchUser__result-name">{fullname}</p>}
-                    {_id && <p className="searchUser__result-id">{_id}</p> }
+                    {id && <p className="searchUser__result-id">{id}</p> }
                 </li>)}
             </ul>) || ''}
         </form>

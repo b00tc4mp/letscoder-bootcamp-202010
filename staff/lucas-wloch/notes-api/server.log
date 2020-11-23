@@ -479,3 +479,56 @@ info 2020-11-22T15:32:40.750Z - server running on port 4000
 info 2020-11-22T16:11:06.239Z - starting server
 info 2020-11-22T16:11:06.329Z - server running on port 4000
 info 2020-11-22T17:06:14.939Z - stopping server
+info 2020-11-23T09:00:19.692Z - starting server
+info 2020-11-23T09:00:19.853Z - server running on port 4000
+info 2020-11-23T09:31:34.896Z - stopping server
+info 2020-11-23T09:31:37.573Z - starting server
+info 2020-11-23T09:31:37.629Z - server running on port 4000
+info 2020-11-23T09:32:38.769Z - stopping server
+info 2020-11-23T09:32:41.052Z - starting server
+info 2020-11-23T09:32:41.092Z - server running on port 4000
+info 2020-11-23T09:33:12.731Z - stopping server
+info 2020-11-23T09:34:31.553Z - starting server
+info 2020-11-23T09:34:31.595Z - server running on port 4000
+info 2020-11-23T09:34:52.167Z - stopping server
+info 2020-11-23T09:34:54.119Z - starting server
+info 2020-11-23T09:34:54.159Z - server running on port 4000
+info 2020-11-23T09:37:36.221Z - stopping server
+info 2020-11-23T09:37:38.768Z - starting server
+info 2020-11-23T09:37:38.814Z - server running on port 4000
+info 2020-11-23T09:38:15.593Z - stopping server
+info 2020-11-23T09:38:17.896Z - starting server
+info 2020-11-23T09:38:17.938Z - server running on port 4000
+error 2020-11-23T09:39:40.081Z - ReferenceError: _userId is not defined
+error 2020-11-23T09:39:49.347Z - ReferenceError: _userId is not defined
+info 2020-11-23T09:41:34.653Z - stopping server
+info 2020-11-23T09:41:37.094Z - starting server
+info 2020-11-23T09:41:37.134Z - server running on port 4000
+error 2020-11-23T09:41:49.235Z - Error: user with id 5fba62c39633f535c432b630 not found
+info 2020-11-23T09:42:44.186Z - stopping server
+info 2020-11-23T09:42:46.719Z - starting server
+info 2020-11-23T09:42:46.758Z - server running on port 4000
+info 2020-11-23T09:43:52.618Z - starting server
+info 2020-11-23T09:43:52.657Z - server running on port 4000
+info 2020-11-23T09:45:33.137Z - stopping server
+info 2020-11-23T09:45:35.241Z - starting server
+info 2020-11-23T09:45:35.282Z - server running on port 4000
+info 2020-11-23T10:21:30.106Z - stopping server
+info 2020-11-23T11:06:54.713Z - starting server
+info 2020-11-23T11:06:54.759Z - server running on port 4000
+info 2020-11-23T11:10:52.074Z - starting server
+info 2020-11-23T11:10:52.118Z - server running on port 4000
+info 2020-11-23T12:04:10.483Z - stopping server
+info 2020-11-23T12:04:12.966Z - starting server
+info 2020-11-23T12:04:13.009Z - server running on port 4000
+error 2020-11-23T12:10:05.533Z - ReferenceError: deleteNote is not defined
+error 2020-11-23T12:11:21.818Z - ReferenceError: deleteNote is not defined
+info 2020-11-23T12:12:48.676Z - stopping server
+info 2020-11-23T12:12:52.219Z - starting server
+info 2020-11-23T12:12:52.337Z - server running on port 4000
+info 2020-11-23T12:16:57.617Z - stopping server
+info 2020-11-23T12:17:07.199Z - starting server
+info 2020-11-23T12:17:07.308Z - server running on port 4000
+info 2020-11-23T12:18:25.944Z - starting server
+info 2020-11-23T12:18:25.995Z - server running on port 4000
+info 2020-11-23T12:26:25.414Z - stopping server

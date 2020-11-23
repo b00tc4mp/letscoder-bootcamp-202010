@@ -5,5 +5,6 @@ module.exports = {
     saveNote: require('./save-note'),
     retrieveNotes: require('./retrieve-notes'),
     context: require('./context'),
-    searchUserFullname: require('./search-user-fullname')
+    searchUserFullname: require('./search-user-fullname'),
+    deleteNote: require('./delete-note')
 }

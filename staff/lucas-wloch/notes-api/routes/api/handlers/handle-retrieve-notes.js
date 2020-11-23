@@ -10,7 +10,7 @@ module.exports = (req, res, handleError) => {
     try {
         retrieveNotes(id, (error, notes) => {
             if (error) return handleError(401, error)
-
+            debugger
             res.status(200).json(notes)
         })
     } catch (error) {

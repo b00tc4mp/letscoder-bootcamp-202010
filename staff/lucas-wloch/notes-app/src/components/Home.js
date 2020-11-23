@@ -37,7 +37,7 @@ function Home() {
     const handleRetrieveNotes = () => {
 
         try {
-            retrieveNotes(user._id, (error, notes) => {
+            retrieveNotes(user.id, (error, notes) => {
                 if (error) return alert(error.message)
                 setNotes(notes)
             })
@@ -55,9 +55,9 @@ function Home() {
         {user && <Welcome user={user} />}
         <SearchUser/>
         <button onClick={handleRetrieveNotes}>My Notes</button>
-        {user && <NoteEditor onSavedNote={onSavedNote} userId={user._id} />}
+        {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} />}
         {success && <h2>Su nota se guardo correctamente</h2>}
-        {notes && <Results results={notes} />}
+        {notes && <Results results={notes} onDelete={handleRetrieveNotes} />}
     </>
 
 

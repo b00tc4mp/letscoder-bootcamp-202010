@@ -4,6 +4,7 @@ import retrieveUser from './retrieve-user'
 import retrieveNotes from './retrieve-notes'
 import saveNote from './save-note'
 import searchUserFullname from './search-user-fullname'
+import deleteNote from './delete-note'
 
 export {
     registerUser,
@@ -11,5 +12,6 @@ export {
     retrieveUser,
     retrieveNotes,
     saveNote,
-    searchUserFullname
+    searchUserFullname,
+    deleteNote
 }

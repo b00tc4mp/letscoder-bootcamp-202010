@@ -1,25 +1,32 @@
 // import { useEffect, useState } from 'react'
+import deleteNote from '../logic/delete-note'
 import './Results.sass'
 
 
-function Results({ results }) {
-    // const [resultList, setResultList] = useState(results)
+function Results({ results, onDelete }) {
+    
+    const handleDelete = (id) => {
+        deleteNote(id, error =>{
+            if(error) return alert(error)
 
-    // useEffect( () => {
-        
-    //     setResultList(results)
-
-    // },[results] ) 
+            onDelete()
+        })
+    }
 
     return <>
     <div className="results">
         <ul className="results__ul">
-        {results.map( ({id, text, tags, owner, visibility}) => 
+        {results.map( ({id, text, tags, owner, visibility, date}) => 
         <li key={`${Math.random()}`} className="results__li">
             <p className="results__p">{text}</p>
             <p className="results__p">tags: {tags}</p>
             <p className="results__p">owner: {owner}</p>
             <p className="results__p">visibility: {visibility}</p>
+            <p className="results__p">date: {date}</p>
+            <button onClick={event => {
+                event.stopPropagation()
+                handleDelete(id)
+            }}>❌</button>
         </li>)}
 
         </ul>

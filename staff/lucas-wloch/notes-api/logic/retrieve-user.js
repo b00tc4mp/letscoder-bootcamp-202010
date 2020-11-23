@@ -6,7 +6,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 
 module.exports = (id, callback) => {
-    // validateId(id)
+    validateId(id)
     validateCallback(callback)
     const { connection } = context
 
@@ -15,7 +15,7 @@ module.exports = (id, callback) => {
     const users = db.collection('users')
 
     let _id = new ObjectId(id)
-
+    //users.findById(ObjectId)
     users.findOne({_id} , (error, user) => {
         if (error) {
 
@@ -23,7 +23,9 @@ module.exports = (id, callback) => {
         }
 
         if (user) {
-            delete user.password
+            const { _id, fullname, email } = user
+
+            user = { id: _id.toString(), fullname, email }
 
             return callback(null, user)
         } else return callback(new Error(`user with id ${id} is not found`))

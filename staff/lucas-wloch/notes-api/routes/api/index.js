@@ -8,7 +8,8 @@ const {
     handleRetrieveUser,
     handleSaveNote,
     handleRetrieveNotes,
-    handleSearchUser
+    handleSearchUser,
+    handleDeleteNote
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -28,6 +29,8 @@ router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
 router.get('/api/notes',jsonBodyParser, withErrorHandling(handleRetrieveNotes))
 
 router.post('/api/users/search',jsonBodyParser, withErrorHandling(handleSearchUser))
+
+router.post('/api/notes/delete',jsonBodyParser, withErrorHandling(handleDeleteNote))
 
 
 module.exports = router

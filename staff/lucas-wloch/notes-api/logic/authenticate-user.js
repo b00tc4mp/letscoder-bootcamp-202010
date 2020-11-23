@@ -13,17 +13,16 @@ module.exports = (email, password, callback) => {
 
     const users = db.collection('users')
 
-debugger
-    users.findOne( { email } , (error, user) => {
+    users.findOne( { email, password } , (error, user) => {
         if(error){
            
             return callback(error)
 
         }
         if(user){
-            
+
             const { _id } = user 
-            return callback(null, _id)
+            return callback(null, _id.toString())
         } else return callback(new Error('wrong credentials'))
        
     })

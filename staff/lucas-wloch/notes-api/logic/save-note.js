@@ -7,7 +7,7 @@ const ObjectId = require('mongodb').ObjectId;
 const { env: { DB_NAME } } = process
 
 
-module.exports = (id, text, tags, owner, visibility, callback) => {
+module.exports = (noteId, text, tags, owner, visibility, callback) => {
     // if (typeof id !== 'undefined') validateId(id)
     validateText(text)
     // validateTags(tags)
@@ -18,37 +18,44 @@ module.exports = (id, text, tags, owner, visibility, callback) => {
     const { connection } = context
 
     const db = connection.db(DB_NAME)
-    debugger
-    const notes = db.collection('notes')
-    let _id = new ObjectId(id)
+    const users = db.collection('users')
+
     // let o_id = ObjectId.createFromHexString(id)
 
-    // findOne().toArray(function(errorn, _notes))
-    if (id)
-        notes.findOne({ _id}, (error, note) => {
-            if (error) {
-                return callback(error)
-            }
+    users.findOne({ _id: ObjectId(owner) }, (error, user) => {
+        if (error) {
+            return callback(error)
+        }
+        if (!user) return callback(new Error(`user with id ${owner} not found`))
 
-            if (note) {
-                note = { _id, text, tags, owner, visibility }
-                notes.insertOne(note, (error, result) => {
-                    if (error) {
-                        return callback(error)
-                    }
-                    callback(null)
-                })
-            }
-        })
+        const notes = db.collection('notes')
+        if (noteId) {
+            let _id = new ObjectId(noteId)
+            notes.findOne({ _id }, (error, note) => {
+                if (error) {
+                    return callback(error)
+                }
+                if (!note) return callback(new Error(`note with id ${noteId} not found`))
 
-    else {
-        const note = { _id, text, tags, owner, visibility }
-        notes.insertOne(note, (error, result) => {
-            if (error) {
+                if (note) {
+                    notes.updateOne({ _id }, { $set: { text, tags, visibility, date: new Date } }, (error, result) => {
+                        if (error) return callback(error)
+                        callback(null)
+                    })
+                    
+                }
+                
+            })
 
-                return callback(error)
-            }
-            callback(null)
-        })
-    }
+        } else {
+            const note = { text, tags, owner: ObjectId(owner), visibility, date: new Date }
+            notes.insertOne(note, (error, result) => {
+                if (error) {
+
+                    return callback(error)
+                }
+                callback(null)
+            })
+        }
+    })
 }
