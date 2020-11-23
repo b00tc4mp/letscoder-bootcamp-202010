@@ -27,7 +27,7 @@ module.exports = function (fullname, email, password, callback) {
             if (user) {
                 done()
 
-                return callback(new Error(`e-mail ${email} already registered`))
+                return callback(new Error(`user with e-mail ${email} already registered`))
             }
 
             user = { fullname, email, password }
