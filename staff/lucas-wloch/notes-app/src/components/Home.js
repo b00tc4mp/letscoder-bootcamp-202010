@@ -32,6 +32,9 @@ function Home() {
 
     const onSavedNote = () =>{
         setSuccess(true)
+        setTimeout(() => {
+            setSuccess(false)
+        },4000)
     }
 
     const handleRetrieveNotes = () => {

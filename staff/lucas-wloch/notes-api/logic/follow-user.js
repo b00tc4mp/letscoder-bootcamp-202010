@@ -28,19 +28,12 @@ module.exports = (userId, followId, callback) => {
 
 
             /////////////////////7
-            const _followId = ObjectId(followId) // esto no
 
-            const index = follows.indexOf(_followId)
+            const index = follows.findIndex( objId => objId.toString() === followId)
             debugger
             if (index > -1) follows.splice(index, 1)
-            else follows.push(_followId)
-
-            // const index = followings.findIndex( object => object.toString() === followId)
-
-            // index < 0 ? followings.push(new ObjectId(followId)) : followings.splic(index,1)
-
-            // updateOne(user)
-
+            else follows.push(new ObjectId(followId))
+            // index < 0 ? followings.push(new ObjectId(followId)) : followings.splice(index,1)
 
             users.updateOne({ _id }, { $set: { follows } }, (error, result) => {
                 if (error) return callback(error)
