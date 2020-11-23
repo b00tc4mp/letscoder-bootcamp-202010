@@ -18,7 +18,7 @@ module.exports = {
     },
 
     validateFullname(fullname) {
-        if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
+        if (typeof fullname !== 'string') throw new TypeError(`${fullname} is not a fullname`)
 
         if (!fullname.trim().length) throw new Error('fullname is empty or blank')
     },

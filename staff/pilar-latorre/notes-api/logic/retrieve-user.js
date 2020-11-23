@@ -1,36 +1,34 @@
-const { validateCallback } = require('./helpers/validations')
+const { validateId, validateCallback } = require('./helpers/validations')
 const context = require('./context')
-const ObjectId = require('mongodb').ObjectId; 
-//const { ObjectId } = require('mongodb'); 
-const {env : {DB_NAME} } = process
+//const { ObjectID } = require('mongodb')
+const { ObjectId } = require('mongodb')
 
+const { env: { DB_NAME } } = process
 
-module.exports = function (id, callback) {
-    
+module.exports = function (userId, callback) {
+    validateId(userId)
     validateCallback(callback)
 
-
-    let _id = new ObjectId(id)   // id as a string is passed
-    //let _id = new ObjectID(id) se puede hacer de varias maneras
-    //let _id = ObjectId(id)
-
-    const { connection } = context
+    const { connection } = this
 
     const db = connection.db(DB_NAME)
 
     const users = db.collection('users')
 
+    //const _id = new ObjectID(userId)
+    //const _id = ObjectID(userId)
+    //const _id = new ObjectId(userId)
+    const _id = ObjectId(userId)
 
-        users.findOne({_id}, (error, user) => {
-            console.log({user})
-        if (error) {return callback(error)
-        } if(user){  
+    users.findOne({ _id }, (error, user) => {
+        if (error) return callback(error)
 
-            delete user.password  
+        if (!user) return callback(new Error(`user with id ${userId} not found`))
 
-            return callback(null, user)
-        }else return callback(new Error(`user with id ${id} not found`))
+        const { _id, fullname, email } = user
 
-
+        user = { id: _id.toString(), fullname, email } // sanitise  
+        
+        callback(null, user)
     })
-}
+}.bind(context)

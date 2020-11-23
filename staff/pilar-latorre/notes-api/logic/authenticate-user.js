@@ -22,8 +22,8 @@ module.exports = (email, password, callback) => {
         }if(user){
             
             const { _id } = user 
-            return callback(null, _id)
-            //return callback (null, _id.toString)
+            return callback(null, _id.toString())
+            //return callback (null, _id)
 
         } else return callback(new Error('wrong credentials'))
        
