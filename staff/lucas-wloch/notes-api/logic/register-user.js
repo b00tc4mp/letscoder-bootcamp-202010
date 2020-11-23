@@ -4,10 +4,11 @@ const context = require('./context')
 
 const { env: { DB_NAME } } = process
 
-module.exports = (fullname, email, password, callback) => {
+module.exports = (fullname, email, password, repassword, callback) => {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
+    if(password !== repassword) throw new Error('passwords do not match')
     validateCallback(callback)
 
     const { connection } = context

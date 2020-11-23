@@ -23,9 +23,9 @@ module.exports = (id, callback) => {
         }
 
         if (user) {
-            const { _id, fullname, email } = user
+            const { _id, fullname, email, follows } = user
 
-            user = { id: _id.toString(), fullname, email }
+            user = { id: _id.toString(), fullname, email, follows }
 
             return callback(null, user)
         } else return callback(new Error(`user with id ${id} is not found`))

@@ -13,6 +13,7 @@ module.exports = (query, callback) => {
 
     const users = db.collection('users')
     debugger // /l/i
+    
     users.find({fullname: new RegExp(query, 'i')}).toArray((error, results) => {
         if (error) {
 
@@ -21,7 +22,7 @@ module.exports = (query, callback) => {
 
         if (results) {
             results = results.map( ({_id, fullname }) => ({ id: _id.toString(), fullname}) )
-
+            debugger
             return callback(null, results)
         } else return callback(new Error(`user not found`))
 

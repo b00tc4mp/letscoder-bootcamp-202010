@@ -6,5 +6,6 @@ module.exports = {
     handleSaveNote: require('./handle-save-note'),
     handleRetrieveNotes: require('./handle-retrieve-notes'),
     handleSearchUser: require('./handle-search-user'),
-    handleDeleteNote: require('./handle-delete-note')
+    handleDeleteNote: require('./handle-delete-note'),
+    handleFollowUser: require('./handle-follow-user')
 }
