@@ -1,35 +1,56 @@
+require('dotenv').config()
+
 const { expect } = require('chai')
-const authenticateUser = require('./authenticate-user')
-const { createId } = require('../utils/ids')
+const { MongoClient, ObjectId } = require('mongodb')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
-const fs = require('fs')
-const path = require('path')
+const context = require('./context')
+const authenticateUser = require('./authenticate-user')
+
+const { env: { MONGODB_URL, DB_NAME } } = process
 
 describe('authenticateUser()', () => {
+    let client, db, users
+
+    before(done => {
+        client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
+
+        client.connect((error, connection) => {
+            if (error) return done(error)
+
+            context.connection = connection
+
+            db = connection.db(DB_NAME)
+
+            users = db.collection('users')
+
+            done()
+        })
+    })
+
     describe('when user already exists', () => {
-        let id, fullname, email, password, file
+        let userId, fullname, email, password
 
         beforeEach(done => {
-            id = createId()
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
-            const user = { id, fullname, email, password }
+            const user = { fullname, email, password }
 
-            const json = JSON.stringify(user)
+            users.insertOne(user, (error, result) => {
+                if (error) return done(error)
 
-            file = path.join(__dirname, `../data/users/${id}.json`)
+                userId = result.insertedId.toString()
 
-            fs.writeFile(file, json, done)
+                done()
+            })
         })
 
         it('should succeed on correct credentials', done => {
-            authenticateUser(email, password, (error, userId) => {
+            authenticateUser(email, password, (error, _userId) => {
                 expect(error).to.be.null
-                debugger
-                expect(userId).to.be.a('string')
-                expect(userId).to.have.length.greaterThan(0)
+
+                expect(_userId).to.equal(userId)
 
                 done()
             })
@@ -59,7 +80,15 @@ describe('authenticateUser()', () => {
             })
         })
 
-        afterEach(done => fs.unlink(file, done))
+        afterEach(done =>
+            users.deleteOne({ _id: ObjectId(userId) }, (error, result) => {
+                if (error) return done(error)
+
+                expect(result.deletedCount).to.equal(1)
+
+                done()
+            })
+        )
     })
 
     describe('when user does not exist', () => {
@@ -92,7 +121,7 @@ describe('authenticateUser()', () => {
                     password = randomStringWithPrefix('password')
                 })
 
-                it('should fail on empty or blank email', () => {
+                it('should fail on wrong email', () => {
                     expect(() => authenticateUser(email, password, () => { })).to.throw(TypeError, `${email} is not an e-mail`)
                 })
             })
@@ -114,4 +143,10 @@ describe('authenticateUser()', () => {
         // TODO when password is wrong and its subcases
         // TODO when callback is wrong
     })
+
+    after(done => client.close(error => {
+        if (error) return done(error)
+
+        done()
+    }))
 })

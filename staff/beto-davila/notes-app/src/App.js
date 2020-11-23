@@ -6,7 +6,7 @@ import { registerUser, authenticateUser } from './logic'
 
 function App() {
   // React Hooks
-  const [view, setView] = useState('home')
+  const [view, setView] = useState('register')
 
   const handleRegister = (fullname, email, password) => {
     try {

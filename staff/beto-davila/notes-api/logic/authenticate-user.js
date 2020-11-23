@@ -20,7 +20,9 @@ module.exports = function (email, password, callback) {
         if(error) return callback(error)
 
         if (user) {
-            const token = user._id.toHexString()
+            const { _id } = user
+
+            const token = _id.toHexString()
 
             return callback(null, token)
 

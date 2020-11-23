@@ -6,8 +6,8 @@ const { ObjectID } = require('mongodb')
 const { env: { DB_NAME} } = process
 
 
-module.exports = function (token, callback) {
-    validateId(token)
+module.exports = function (ownerId, callback) {
+    validateId(ownerId)
     validateCallback(callback)
 
     const { connection } = this
@@ -16,14 +16,14 @@ module.exports = function (token, callback) {
 
     const notes = db.collection('notes')
 
-    var owner = ObjectID.createFromHexString(token)
-    // const query = `owner: "${token}"`
+    // const users = db.collection('users')
 
-    
-    notes.find({ owner }).toArray(function (error, _notes) {
-        if (error) return callback(error)
+    // const owner = ObjectID.createFromHexString(ownerId)
 
-        return callback(null, _notes)
+    notes.find({ owner: ObjectID.createFromHexString(ownerId) }).toArray( (error, _notes) => {
+    if (error) return callback(error)
+
+    callback(null, _notes)
     })
-    
+  
 }.bind(context)

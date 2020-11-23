@@ -20,13 +20,36 @@ module.exports = function (owner, id, text, tags, visibility, callback) {
 
     const notes = db.collection('notes')
 
-    owner = ObjectID.createFromHexString(owner)
+    const users = db.collection('users')
 
-    notes.insertOne({owner, text, tags, visibility, date: new Date}, (error, result) => {
-        if (error) return callback(error)
+    const _id = ObjectID(owner)
     
-        console.log(result.ops[0])
-        callback(null)
+    users.findOne({ _id }, (error, user) => {
+        if (error) return callback(error)
+
+        if (!user) return callback(new Error(`the user with id ${owner} does not exist`)) 
+
+        if (id) {
+            const _id = ObjectID(id)
+
+            notes.findOne({ _id }, (error, note) => {
+                if (error) return callback(error)
+        
+                if (!note) return callback(new Error(`the note with id ${id} does not exist`))
+
+                notes.updateOne({ _id }, { $set: {text, tags, visibility} }, (error, result) => {
+                    if (error) return callback(error)
+
+                    callback(null)
+                })
+            })  
+        }
+        else notes.insertOne({owner: ObjectID(owner), text, tags, visibility, date: new Date}, (error, result) => {
+                if (error) return callback(error)
+                
+                console.log(result.ops[0])
+                callback(null)
+                })
     })
 
 }.bind(context)

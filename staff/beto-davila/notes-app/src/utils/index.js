@@ -1,4 +1,6 @@
-module.exports = {
-    call: require('./call')
+import call from './call'
+
+export {
+    call
 }
 

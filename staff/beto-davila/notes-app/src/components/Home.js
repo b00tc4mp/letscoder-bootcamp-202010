@@ -52,9 +52,9 @@ import SearchUsers from './SearchUsers'
             }
         }
 
-        const handleSearchUsers = q => {
+        const handleSearchUsers = query => {
             try {
-                searchUsers(q, (error, users) => {
+                searchUsers(query, (error, users) => {
                     if (error) return alert(error.message)
     
                     setUsers(users)

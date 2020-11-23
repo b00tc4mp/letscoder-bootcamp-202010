@@ -7,7 +7,7 @@ export default function (query, callback) {
     validateCallback(callback)
 
     call('POST', 'http://localhost:4000/api/users/search', { 'Content-type': 'application/json' },
-        JSON.stringify({ query }),
+        JSON.stringify( {query} ),
         (status, response) => {
             if(status === 0)
                 return callback(new Error('server error'))
