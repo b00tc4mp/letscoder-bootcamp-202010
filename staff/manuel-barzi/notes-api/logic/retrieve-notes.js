@@ -25,12 +25,34 @@ module.exports = function (ownerId, callback) {
 
         const owner = _id
 
-        notes.find({ owner }, (error, cursor) => {
+        notes.find({ owner }, { sort: { date: -1 } }, (error, cursor) => {
             if (error) return callback(error)
 
-            // TODO
+            // USING cursor.each()
 
-            cursor.forEach()
+            // const notes = []
+
+            // cursor.each((error, note) => {
+            //     if (error) return callback(error)
+
+            //     if (note) {
+            //         const { _id, text, tags, visibility, date } = note
+
+            //         note = { id: _id.toString(), text, tags, visibility, date }
+
+            //         notes.push(note)
+            //     } else callback(null, notes)
+            // })
+
+            // USING cursor.toArray()
+
+            cursor.toArray((error, notes) => {
+                if (error) return callback(error)
+
+                notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
+
+                callback(null, notes)
+            })
         })
     })
 
