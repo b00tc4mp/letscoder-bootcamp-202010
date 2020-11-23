@@ -1,30 +1,26 @@
-const fs = require('fs')
 const { validateEmail, validatePassword, validateCallback } = require('./helpers/validations')
-const path = require('path')
+const context = require('./context')
 
-module.exports = (email, password, callback) => {
+const { env: { DB_NAME } } = process
+
+module.exports = function (email, password, callback) {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
 
-    const usersPath = path.join(__dirname, '../data/users')
+    const { connection } = this
 
-    fs.readdir(usersPath, (error, files) => {
-        if (error) return callback(error);
+    const db = connection.db(DB_NAME)
 
-        (function check(files, index = 0) {
-            if (index < files.length) {
-                const file = files[index]
+    const users = db.collection('users')
 
-                fs.readFile(path.join(usersPath, file), 'utf8', (error, json) => {
-                    if (error) return callback(error)
+    users.findOne({ email, password }, (error, user) => {
+        if (error) return callback(error)
+        
+        if (!user) return callback(new Error('wrong credentials'))
 
-                    const { id, email: _email, password: _password } = JSON.parse(json)
+        const { _id } = user
 
-                    if (email === _email && password === _password) callback(null, id)
-                    else check(files, ++index)
-                })
-            } else callback(new Error('wrong credentials'))
-        })(files)
+        callback(null, _id.toString())
     })
-}
+}.bind(context)
