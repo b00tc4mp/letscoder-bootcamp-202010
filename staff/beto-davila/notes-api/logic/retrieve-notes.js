@@ -20,10 +20,29 @@ module.exports = function (ownerId, callback) {
 
     // const owner = ObjectID.createFromHexString(ownerId)
 
-    notes.find({ owner: ObjectID.createFromHexString(ownerId) }).toArray( (error, _notes) => {
+    notes.find({ owner: ObjectID.createFromHexString(ownerId)}, { sort: { date: -1 } }).toArray( (error, _notes) => {
     if (error) return callback(error)
 
     callback(null, _notes)
     })
   
 }.bind(context)
+
+// USING cursor.each() to get to know how the 'toArray' method works under the hood with the cursor.
+
+/*
+
+            const notes = []
+
+            cursor.each((error, note) => {
+                if (error) return callback(error)
+
+                if (note) {
+                    const { _id, text, tags, visibility, date } = note
+
+                    note = { id: _id.toString(), text, tags, visibility, date }
+
+                    notes.push(note)
+                } else callback(null, notes)
+            })
+            */

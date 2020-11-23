@@ -16,9 +16,11 @@ export default function (query, callback) {
                 const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
-            }
-            const users = JSON.parse(response)
+            } else {
 
-            callback(null, users)
+                const users = JSON.parse(response)
+    
+                callback(null, users)
+            }
         })
 }

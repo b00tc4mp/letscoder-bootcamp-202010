@@ -22,11 +22,11 @@ module.exports = function (userId, callback) {
     users.findOne({_id} ,(error, user) => {
         if(error) return callback(error)
 
-        if (!user) return callback(new Error(`The user with id ${id} was not found`))
+        if (!user) return callback(new Error(`The user with id ${userId} was not found`))
         
         const { _id, fullname, email} = user
 
-        user = { id: _id, fullname, email}
+        user = { userId: _id, fullname, email}
 
         return callback(null, user)
     })

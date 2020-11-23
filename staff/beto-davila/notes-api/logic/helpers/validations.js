@@ -47,7 +47,7 @@ module.exports = {
     },
 
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new Error('id is empty or blank')
 

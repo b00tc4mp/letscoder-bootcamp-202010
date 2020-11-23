@@ -1,3 +1,0 @@
-describe('SPEC registerUser()', () => {
-    // TODO
-})

@@ -10,6 +10,7 @@ const { env: { MONGODB_URL, DB_NAME } } = process
 describe('SPEC registerUser()', () => {
     let client, db, users
 
+    // creating db connection for all cases 
     before(done => {
         client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
@@ -29,23 +30,29 @@ describe('SPEC registerUser()', () => {
     describe('when user does not exist', () => {
         let fullname, email, password
 
-        beforeEach(done => {
+        beforeEach(() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
-
-            done()
         })
 
         it ('should suceed on correct registration', done => {
             registerUser(fullname, email, password, (error) => {
                 expect(error).to.be.null
 
-                done()
+                users.findOne({email, password}, (error, user) => {
+                    expect(error).to.be.null
+
+                    expect(user).to.exist
+                    expect(user.fullname).to.equal(fullname)
+
+                    done()
+                })
             })
         })
+
         afterEach(done =>
-            users.deleteOne({ email }, (error, result) => {
+            users.deleteOne({ email, password }, (error, result) => {
                 if (error) return done(error)
 
                 expect(result.deletedCount).to.equal(1)
@@ -55,7 +62,7 @@ describe('SPEC registerUser()', () => {
         )
     })
 
-    describe('when user does exist', () => {
+    describe('when user does exist already', () => {
         let fullname, email, password
 
         beforeEach(done => {
