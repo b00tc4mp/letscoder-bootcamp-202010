@@ -11,6 +11,8 @@ module.exports = function (id, callback) {
 
 
     let _id = new ObjectId(id)   // id as a string is passed
+    //let _id = new ObjectID(id) se puede hacer de varias maneras
+    //let _id = ObjectId(id)
 
     const { connection } = context
 

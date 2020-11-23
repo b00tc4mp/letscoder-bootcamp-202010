@@ -244,3 +244,36 @@ info 2020-11-22T10:42:06.534Z - stopping server
 info 2020-11-22T10:42:16.860Z - starting server
 info 2020-11-22T10:42:16.918Z - server running on port 4000
 info 2020-11-22T10:47:56.926Z - stopping server
+info 2020-11-23T10:51:41.945Z - starting server
+info 2020-11-23T10:51:42.028Z - server running on port 4000
+error 2020-11-23T10:52:25.097Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:28.230Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:28.462Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:28.631Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:28.783Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:28.964Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:29.122Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:29.281Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:29.450Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:29.611Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:29.754Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:29.928Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:30.124Z - TypeError: undefined is not a id
+error 2020-11-23T10:52:31.074Z - TypeError: undefined is not a id
+error 2020-11-23T10:54:17.257Z - TypeError: undefined is not a id
+error 2020-11-23T10:58:00.026Z - TypeError: undefined is not a id
+info 2020-11-23T10:59:40.902Z - stopping server
+info 2020-11-23T10:59:44.986Z - starting server
+info 2020-11-23T10:59:45.094Z - server running on port 4000
+info 2020-11-23T11:08:03.237Z - stopping server
+info 2020-11-23T11:09:45.222Z - starting server
+info 2020-11-23T11:09:45.305Z - server running on port 4000
+info 2020-11-23T11:11:09.461Z - stopping server
+info 2020-11-23T11:11:14.501Z - starting server
+info 2020-11-23T11:11:14.598Z - server running on port 4000
+info 2020-11-23T11:53:44.446Z - stopping server
+info 2020-11-23T12:08:41.272Z - starting server
+info 2020-11-23T12:08:41.352Z - server running on port 4000
+info 2020-11-23T12:14:48.557Z - stopping server
+info 2020-11-23T12:34:33.182Z - starting server
+info 2020-11-23T12:34:33.228Z - server running on port 4000
