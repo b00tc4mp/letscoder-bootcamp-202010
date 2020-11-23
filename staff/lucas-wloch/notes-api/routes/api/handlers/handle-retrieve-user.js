@@ -7,6 +7,8 @@ module.exports = (req, res, handleError) => {
 
     const id = req.headers.authorization.replace('Bearer ', '')
 
+    debugger
+
 
     try {
         retrieveUser(id, (error, user) => {

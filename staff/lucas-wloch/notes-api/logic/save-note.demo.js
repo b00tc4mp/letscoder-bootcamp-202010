@@ -1,4 +1,21 @@
+require('dotenv').config()
+const { MongoClient } = require('mongodb')
+const context = require('./context')
+
 const saveNote = require('./save-note')
 
-// saveNote(undefined, 'Hola, Mundo!', ['hola', 'mundo'], "1605720021879189464266580725800", 'public', console.log)
-saveNote(undefined, 'Chau, Mundo!', ['hola', 'mundo'], "1605720021879189464266580725800", 'public', console.log)
+const { env: { MONGODB_URL } } = process
+
+const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
+
+client.connect((error, connection) => {
+    if (error) return console.error(error)
+
+    context.connection = connection
+
+    // saveNote('1605799287806306572291313610430', 'Hola, Beto!', ['code', 'demo', 'bootcamp'], '1605718707109104439437083615920', 'private', console.log)
+
+    // saveNote(undefined, 'Code, eat, sleep and repeat!',['bootcamp'], '1605718707109104439437083615920', 'private', console.log)
+
+    saveNote('5fb8fad9a15a822fff0a201b', undefined, 'Desinstalar Mongo HOY!',['mongo', 'uninstall', 'arbolada'], 'private', console.log)
+})

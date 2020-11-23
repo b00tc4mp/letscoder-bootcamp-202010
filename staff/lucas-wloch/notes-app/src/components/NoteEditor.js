@@ -8,7 +8,7 @@ function NoteEditor({ onSavedNote, userId }) {
         event.preventDefault()
 
         const { target: { text: { value: text }, visibility: { value: visibility }, tags: { value: tags } } } = event
-        if (text && tags && userId && visibility)
+        if (text && userId && visibility)
             saveNote(undefined, text, tags.split(' '), userId, visibility, error => {
                 if (error) {
                     const res = JSON.parse(error)
@@ -46,3 +46,4 @@ function NoteEditor({ onSavedNote, userId }) {
 }
 
 export default NoteEditor
+

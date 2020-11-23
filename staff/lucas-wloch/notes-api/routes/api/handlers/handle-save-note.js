@@ -6,7 +6,7 @@ module.exports = (req, res, handleError) => {
     const owner = authorization.replace('Bearer ', '')
 
     res.setHeader('Access-Control-Allow-Origin', '*')
-
+    debugger
     try {
         saveNote(id, text, tags, owner, visibility, error => {
             if (error) return handleError(500, error)

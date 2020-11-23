@@ -1,24 +1,33 @@
 const { validateId, validateCallback } = require('./helpers/validations')
-const fs = require('fs')
-const path = require('path')
+
+const context = require('./context')
+const { env: { DB_NAME } } = process
+const ObjectId = require('mongodb').ObjectId;
+
 
 module.exports = (id, callback) => {
-    validateId(id)
+    // validateId(id)
     validateCallback(callback)
+    const { connection } = context
 
-    const filePath = path.join(__dirname, `../data/users/${id}.json`)
+    const db = connection.db(DB_NAME)
 
-    fs.access(filePath, fs.F_OK, error => {
-        if (error) return callback(new Error(`user with id ${id} not found`))
+    const users = db.collection('users')
 
-        fs.readFile(filePath, 'utf8', (error, json) => {
-            if (error) return callback(error)
+    let _id = new ObjectId(id)
 
-            const user = JSON.parse(json)
+    users.findOne({_id} , (error, user) => {
+        if (error) {
 
+            return callback(error)
+        }
+
+        if (user) {
             delete user.password
 
-            callback(null, user)
-        })
+            return callback(null, user)
+        } else return callback(new Error(`user with id ${id} is not found`))
+
     })
+
 }

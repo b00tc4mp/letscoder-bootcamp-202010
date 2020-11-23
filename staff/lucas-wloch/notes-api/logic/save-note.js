@@ -1,64 +1,53 @@
-const fs = require('fs')
 const { validateText, validateCallback, validateId, validateTags, validateVisibility } = require('./helpers/validations')
 const { createId } = require('../utils/ids')
-const path = require('path')
+const context = require('./context')
+const ObjectId = require('mongodb').ObjectId;
+
+
+const { env: { DB_NAME } } = process
+
 
 module.exports = (id, text, tags, owner, visibility, callback) => {
-    if (typeof id !== 'undefined') validateId(id)
-    debugger
+    // if (typeof id !== 'undefined') validateId(id)
     validateText(text)
-    validateTags(tags)
-    validateId(owner)
+    // validateTags(tags)
+    // validateId(owner)
     validateVisibility(visibility)
     validateCallback(callback)
+
+    const { connection } = context
+
+    const db = connection.db(DB_NAME)
     debugger
+    const notes = db.collection('notes')
+    let _id = new ObjectId(id)
+    // let o_id = ObjectId.createFromHexString(id)
 
-    const notesPath = path.join(__dirname, '../data/notes')
-
+    // findOne().toArray(function(errorn, _notes))
     if (id)
-        fs.readdir(notesPath, (error, files) => {
-            if (error) return callback(error);
+        notes.findOne({ _id}, (error, note) => {
+            if (error) {
+                return callback(error)
+            }
 
-
-            (function check(files, index = 0) {
-                if (index < files.length) {
-                    const file = files[index]
-
-                    fs.readFile(path.join(notesPath, file), 'utf8', (error, json) => {
-                        if (error) return callback(error)
-
-
-                        const { id: _id } = JSON.parse(json)
-
-                        if (id === _id) {
-
-                            const note = { id, text, tags, owner, visibility }
-
-                            const json = JSON.stringify(note)
-
-                            fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-                                if (error) return callback(error)
-
-
-
-                                callback(null)
-                            })
-
-                        } else check(files, ++index)
-                    })
-                } else callback(new Error(`note with id: ${id} not found`))
-            })(files)
+            if (note) {
+                note = { _id, text, tags, owner, visibility }
+                notes.insertOne(note, (error, result) => {
+                    if (error) {
+                        return callback(error)
+                    }
+                    callback(null)
+                })
+            }
         })
+
     else {
-        const id = createId()
+        const note = { _id, text, tags, owner, visibility }
+        notes.insertOne(note, (error, result) => {
+            if (error) {
 
-        const note = { id, text, tags, owner, visibility }
-
-        const json = JSON.stringify(note)
-
-        fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-            if (error) return callback(error)
-
+                return callback(error)
+            }
             callback(null)
         })
     }

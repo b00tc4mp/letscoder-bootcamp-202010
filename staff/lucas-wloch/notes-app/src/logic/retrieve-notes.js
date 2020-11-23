@@ -3,7 +3,7 @@ import { validateCallback, validateId } from './helpers/validations'
 
 
 function retrieveNotes(id,callback){
-    validateId(id)
+    // validateId(id)
     validateCallback(callback)
     
     call('GET','http://localhost:4000/api/notes',
@@ -11,7 +11,9 @@ function retrieveNotes(id,callback){
         if(status === 0){
             callback(new Error('server down'))
         }else if(status === 200){
-            const {notes} = JSON.parse(response);
+            const notes = JSON.parse(response);
+            // const notes = notesCursor.toArray()
+            // debugger
             callback(null,notes);
         } else {
             var res = JSON.parse(response);

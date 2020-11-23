@@ -3,10 +3,10 @@ import {  validateCallback, validateId, validateText, validateTags, validateVisi
 
 export default function (id, text, tags, owner, visibility, callback) {
     // (id, text, tags, owner, visibility, callback)
-    if (typeof id !== 'undefined') validateId(id)
+    // if (typeof id !== 'undefined') validateId(id)
     validateText(text)
     validateTags(tags)
-    validateId(owner)
+    // validateId(owner)
     validateVisibility(visibility)
     validateCallback(callback)
 
