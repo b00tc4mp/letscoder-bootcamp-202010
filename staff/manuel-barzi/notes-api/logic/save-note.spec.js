@@ -55,7 +55,7 @@ describe('saveNote()', () => {
             beforeEach(() => {
                 text = randomStringWithPrefix('text')
                 tags = new Array(randomInteger(10, 100))
-                
+
                 for (let i = 0; i < tags.length; i++)
                     tags[i] = randomStringWithPrefix('tag')
 
@@ -80,20 +80,15 @@ describe('saveNote()', () => {
 
                             expect(note.tags).to.deep.equal(tags)
                             expect(note.visibility).to.equal(visibility)
+                            expect(note.date).to.be.instanceOf(Date)
 
                             done()
                         })
                     })
                 })
             })
-        })
 
-        afterEach(done =>
-            users.deleteOne({ email, password }, (error, result) => {
-                if (error) return done(error)
-
-                expect(result.deletedCount).to.equal(1)
-
+            afterEach(done =>
                 notes.deleteMany({ owner: ObjectId(ownerId) }, (error, result) => {
                     if (error) return done(error)
 
@@ -101,33 +96,100 @@ describe('saveNote()', () => {
 
                     done()
                 })
-            })
-        )
-    })
-
-    describe('when user does not exist', () => {
-        let fullname, email, password
-
-        beforeEach(() => {
-            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
-            email = randomWithPrefixAndSuffix('email', '@mail.com')
-            password = randomStringWithPrefix('password')
+            )
         })
 
-        // it('should succeed on new user', done => {
-        //     registerUser(fullname, email, password, error => {
-        //         expect(error).to.be.null
+        describe('when user already has notes', () => {
+            let text, tags, visibility, noteId
 
-        //         users.findOne({ email, password }, (error, user) => {
-        //             expect(error).to.be.null
+            beforeEach(done => {
+                text = randomStringWithPrefix('text')
+                tags = new Array(randomInteger(10, 100))
 
-        //             expect(user).to.exist
-        //             expect(user.fullname).to.equal(fullname)
+                for (let i = 0; i < tags.length; i++)
+                    tags[i] = randomStringWithPrefix('tag')
 
-        //             done()
-        //         })
-        //     })
-        // })
+                visibility = ['public', 'private'].random()
+
+                notes.insertOne({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date }, (error, result) => {
+                    if (error) return done(error)
+
+                    noteId = result.insertedId.toString()
+
+                    done()
+                })
+            })
+
+            it('should succeed updating the note', done => {
+                text = randomStringWithPrefix('text')
+                tags = new Array(randomInteger(10, 100))
+
+                for (let i = 0; i < tags.length; i++)
+                    tags[i] = randomStringWithPrefix('tag')
+
+                visibility = ['public', 'private'].random()
+
+                saveNote(ownerId, noteId, text, tags, visibility, error => {
+                    expect(error).to.be.null
+
+                    notes.find({ owner: ObjectId(ownerId) }, (error, cursor) => {
+                        if (error) return done(error)
+
+                        cursor.toArray((error, notes) => {
+                            if (error) return done(error)
+
+                            expect(notes).to.have.lengthOf(1)
+
+                            const [note] = notes
+
+                            expect(note.text).to.equal(text)
+
+                            expect(note.tags).to.deep.equal(tags)
+                            expect(note.visibility).to.equal(visibility)
+                            expect(note.date).to.be.instanceOf(Date)
+
+                            done()
+                        })
+                    })
+                })
+            })
+
+            afterEach(done =>
+                notes.deleteMany({ owner: ObjectId(ownerId) }, (error, result) => {
+                    if (error) return done(error)
+
+                    expect(result.deletedCount).to.equal(1)
+
+                    done()
+                })
+            )
+        })
+
+        describe('when user note does not exist (it was removed from db)', () => {
+            let text, tags, visibility, noteId
+
+            beforeEach(() => {
+                noteId = '5fbcd46c1cc24f9c7ce22db0'
+
+                text = randomStringWithPrefix('text')
+                tags = new Array(randomInteger(10, 100))
+
+                for (let i = 0; i < tags.length; i++)
+                    tags[i] = randomStringWithPrefix('tag')
+
+                visibility = ['public', 'private'].random()
+            })
+
+            it('should fail on trying to update a note that does not exist any more', done => {
+                saveNote(ownerId, noteId, text, tags, visibility, error => {
+                    expect(error).to.be.instanceOf(Error)
+
+                    expect(error.message).to.equal(`note with id ${noteId} not found`)
+
+                    done()
+                })
+            })
+        })
 
         afterEach(done =>
             users.deleteOne({ email, password }, (error, result) => {
@@ -138,6 +200,32 @@ describe('saveNote()', () => {
                 done()
             })
         )
+    })
+
+    describe('when user does not exist', () => {
+        let text, tags, visibility, ownerId
+
+        beforeEach(() => {
+            ownerId = '5fbcd46c1cc24f9c7ce22db1'
+
+            text = randomStringWithPrefix('text')
+            tags = new Array(randomInteger(10, 100))
+
+            for (let i = 0; i < tags.length; i++)
+                tags[i] = randomStringWithPrefix('tag')
+
+            visibility = ['public', 'private'].random()
+        })
+
+        it('should fail alerting user with id does not exist', done => {
+            saveNote(ownerId, undefined, text, tags, visibility, error => {
+                expect(error).to.be.instanceOf(Error)
+
+                expect(error.message).to.equal(`user with id ${ownerId} not found`)
+
+                done()
+            })
+        })
     })
 
     // TODO more unit test cases
