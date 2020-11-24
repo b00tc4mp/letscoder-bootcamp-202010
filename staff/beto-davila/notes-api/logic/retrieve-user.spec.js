@@ -140,7 +140,7 @@ describe('SPEC retrieveUser()', () => {
         let userId
 
         beforeEach( () => {
-            userId = '5fb8fad9a15a822fff0a201b2'
+            userId = '5fb8fad9a15a822fff0a201b32'
         })
 
         it('should fail on not having 24 digits', () => {
