@@ -13,8 +13,16 @@ client.connect((error, connection) => {
 
     context.connection = connection
 
-    saveNote('5fb7f43bcf65c468175af431', undefined, 'Hello, World!', ['hello', 'world'], 'private', console.log)
-    //saveNote('5fb7f43bcf65c468175af431', '5fbb7dc5f6eb5f8ec3d55dd1', 'Hola, Mundo!', ['hola', 'mundo'], 'public', console.log)
-    //saveNote('5fb7f43bcf65c468175af432', '5fbb7dc5f6eb5f8ec3d55dd1', 'Hola, Mundo!', ['hola', 'mundo'], 'public', console.log)
-    // saveNote('5fb7f43bcf65c468175af431', '5fbb7dc5f6eb5f8ec3d55dd2', 'Hola, Mundo!', ['hola', 'mundo'], 'public', console.log)
+    try {
+        saveNote('5fbcff05c955a0599bacac84', undefined, 'Hello, World!', ['hello', 'world'], 'private')
+            .then(() => console.log('note saved'))
+            .catch(error => console.error('note could not be saved', error))
+            .then(() => client.close())
+            .then(() => console.log('connection closed'))
+        //saveNote('5fb7f43bcf65c468175af431', '5fbb7dc5f6eb5f8ec3d55dd1', 'Hola, Mundo!', ['hola', 'mundo'], 'public', console.log)
+        //saveNote('5fb7f43bcf65c468175af432', '5fbb7dc5f6eb5f8ec3d55dd1', 'Hola, Mundo!', ['hola', 'mundo'], 'public', console.log)
+        // saveNote('5fb7f43bcf65c468175af431', '5fbb7dc5f6eb5f8ec3d55dd2', 'Hola, Mundo!', ['hola', 'mundo'], 'public', console.log)
+    } catch (error) {
+        console.log('validation error', error)
+    }
 })
