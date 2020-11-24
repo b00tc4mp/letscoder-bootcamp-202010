@@ -75,8 +75,6 @@ describe('registerUser()', () => {
             users.insertOne(user, (error, result) => {
                 if (error) return done(error)
 
-                userId = result.insertedId.toString()
-
                 done()
             })
         })
