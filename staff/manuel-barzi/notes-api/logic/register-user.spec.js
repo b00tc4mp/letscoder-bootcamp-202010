@@ -67,6 +67,7 @@ describe('registerUser()', () => {
         it('should fail on existing user', () =>
             registerUser(fullname, email, password)
                 .catch(error => {
+                    debugger
                     expect(error).to.be.instanceOf(Error)
 
                     expect(error.message).to.equal(`user with e-mail ${email} already registered`)

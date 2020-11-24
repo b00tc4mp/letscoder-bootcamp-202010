@@ -15,31 +15,16 @@ module.exports = function (fullname, email, password) {
 
     const users = db.collection('users')
 
-    return new Promise((resolve, reject) => {
-        semaphore(done => {
-            users
-                .findOne({ email })
-                .then(user => {
-                    if (user) {
-                        done()
+    return semaphore(() =>
+        users
+            .findOne({ email })
+            .then(user => {
+                if (user) throw new Error(`user with e-mail ${email} already registered`)
 
-                        return reject(new Error(`user with e-mail ${email} already registered`))
-                    }
+                user = { fullname, email, password }
 
-                    user = { fullname, email, password }
-
-                    return users.insertOne(user)
-                })
-                .then(result => {
-                    done()
-
-                    resolve()
-                })
-                .catch(error => {
-                    done()
-
-                    reject(error)
-                })
-        })
-    })
+                return users.insertOne(user)
+            })
+            .then(() => {})
+    )
 }.bind(context)
