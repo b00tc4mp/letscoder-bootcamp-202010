@@ -1,12 +1,11 @@
-const { validateId, validateCallback } = require('./helpers/validations')
+const { validateId } = require('./helpers/validations')
 const context = require('./context')
 const { ObjectId } = require('mongodb')
 
 const { env: { DB_NAME } } = process
 
-module.exports = function (ownerId, callback) {
+module.exports = function (ownerId) {
     validateId(ownerId)
-    validateCallback(callback)
 
     const { connection } = this
 
@@ -16,44 +15,30 @@ module.exports = function (ownerId, callback) {
 
     const _id = ObjectId(ownerId)
 
-    users.findOne({ _id }, (error, user) => {
-        if (error) return callback(error)
-
-        if (!user) return callback(new Error(`user with id ${ownerId} not found`))
+    return users
+        .findOne({ _id })
+        .then(user => {
+                if (!user) throw new Error(`user with id ${ownerId} not found`)
 
         const notes = db.collection('notes')
 
         const owner = _id
 
-        notes.find({ owner }, { sort: { date: -1 } }, (error, cursor) => {
-            if (error) return callback(error)
+        return notes
+        .find({ owner},{ sort: { date: -1 } }).toArray()
+        .then(notes => {
+            const result = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
+            console.log({result})
+            return result
+        }) /* (cursor => {
+                console.log({cursor})
+                cursor.toArray(notes => {
+                    console.log(notes)
+                return _notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
 
-            // USING cursor.each()
-
-            // const notes = []
-
-            // cursor.each((error, note) => {
-            //     if (error) return callback(error)
-
-            //     if (note) {
-            //         const { _id, text, tags, visibility, date } = note
-
-            //         note = { id: _id.toString(), text, tags, visibility, date }
-
-            //         notes.push(note)
-            //     } else callback(null, notes)
-            // })
-
-            // USING cursor.toArray()
-
-            cursor.toArray((error, notes) => {
-                if (error) return callback(error)
-
-                notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
-
-                callback(null, notes)
             })
-        })
+        }) */
     })
 
 }.bind(context) 
+

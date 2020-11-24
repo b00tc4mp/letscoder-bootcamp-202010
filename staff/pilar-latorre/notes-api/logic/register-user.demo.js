@@ -1,19 +1,28 @@
+require('dotenv').config()
+
+const { MongoClient } = require('mongodb')
+const context = require('./context')
 const registerUser = require('./register-user')
 
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(1)
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(2)
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(3)
+const { env: { MONGODB_URL } } = process
 
-//console.log('hello world')
+const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-setTimeout(() => {
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(1)
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(2)
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(3)
-}, 3000)
+client.connect((error, connection) => {
+    if (error) return console.error(error)
+
+    context.connection = connection
+
+    try {
+        registerUser('monito', 'mo@no.es', '123')
+            .then(() => console.log('user registered'))
+            .catch(error => console.error('user could not be registered', error))
+            .then(() => client.close())
+            .then(() => console.log('connection closed'))
+  
+    } catch (error) {
+        console.log('validation error', error)
+    }
+}) 
+
+

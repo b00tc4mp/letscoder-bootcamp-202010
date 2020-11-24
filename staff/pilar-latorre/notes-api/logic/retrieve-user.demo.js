@@ -1,13 +1,8 @@
-/* const retrieveUser = require('./retrieve-user')
-
-retrieveUser('1605100834183530418874468846100', console.log) */
-
 require('dotenv').config()
+
 const { MongoClient } = require('mongodb')
 const context = require('./context')
-const retrieveNotes = require('./retrieve-notes')
-
-const retrieveNotes = require('./save-note')
+const retrieveUser = require('./retrieve-user')
 
 const { env: { MONGODB_URL } } = process
 
@@ -18,5 +13,15 @@ client.connect((error, connection) => {
 
     context.connection = connection
 
-    retrieveNotes('5fb8f86644948c23d87319c0', console.log)
-})
+    try {
+        retrieveUser('5fbd31ba3fcbd02d4023da45')
+            .then(() => console.log('user retrieved'))
+            .catch(error => console.error('user could not be retrieved', error))
+            .then(() => client.close())
+            .then(() => console.log('connection closed'))
+  
+    } catch (error) {
+        console.log('validation error', error)
+    }
+}) 
+

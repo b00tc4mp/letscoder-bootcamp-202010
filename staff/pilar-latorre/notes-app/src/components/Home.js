@@ -50,7 +50,7 @@ function Home() {
         {/* <Welcome /> */}
         {user && <Welcome user={user} />}
         <button className = "myNotes"onClick={handleRetrieveNotes}>Check your Notes</button>
-        {user && <NoteEditor onSavedNote={onSavedNote} userId={user._id} />}
+        {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} />}
         {success && <h2>Su nota se ha guardado correctamente 🤩 </h2>}
         {notes && <Results results={notes} />}
     </>

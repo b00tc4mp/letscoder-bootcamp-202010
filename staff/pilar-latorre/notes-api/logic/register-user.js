@@ -1,46 +1,45 @@
-const { validateEmail, validatePassword, validateCallback, validateFullname } = require('./helpers/validations')
+const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const context = require('./context')
 
 const { env: { DB_NAME } } = process
 
-
-module.exports = (fullname, email, password, callback) => {
+module.exports = function (fullname, email, password) {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
-    validateCallback(callback)
 
-    const { connection } = context
+    const { connection } = this
 
     const db = connection.db(DB_NAME)
 
     const users = db.collection('users')
 
-    semaphore(done => {
-        users.findOne( { email } , (error, user) => {
-            if(error){
-                done()
+    return new Promise((resolve, reject) => {
+        semaphore(done => {
+            users
+                .findOne({ email })
+                .then(user => {
+                    if (user) {
+                        done()
 
-                return callback(error)
-            }if(user){
-                done()
+                        return reject(new Error(`user with e-mail ${email} already registered`))
+                    }
 
-                return callback(new Error(`e-mail ${email} already registered`))
-            }
+                    user = { fullname, email, password }
 
-            user = { fullname, email, password } 
-
-            users.insertOne(user, (error, result) =>{
-                if(error){
+                    return users.insertOne(user)
+                })
+                .then(result => {
                     done()
-    
-                    return callback(error)
-                }
-                done()
-                callback(null)
 
-            })
+                    resolve()
+                })
+                .catch(error => {
+                    done()
+
+                    reject(error)
+                })
         })
     })
-}
+}.bind(context)

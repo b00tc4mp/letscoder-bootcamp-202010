@@ -1,16 +1,16 @@
-const { validateId, validateText, validateTags, validateVisibility, validateCallback } = require('./helpers/validations')
+const { validateId, validateText, validateTags, validateVisibility} = require('./helpers/validations')
 const context = require('./context')
 const { ObjectId } = require('mongodb')
 
 const { env: { DB_NAME } } = process
 
-module.exports = function (noteId, text, tags, ownerId, visibility, callback) {
+module.exports = function (noteId, text, tags, ownerId, visibility) {
     validateId(ownerId)
     if (typeof noteId !== 'undefined') validateId(noteId)
     validateText(text)
     validateTags(tags)
     validateVisibility(visibility)
-    validateCallback(callback)
+ 
 
     const { connection } = this
 
@@ -20,31 +20,29 @@ module.exports = function (noteId, text, tags, ownerId, visibility, callback) {
 
     const _id = ObjectId(ownerId)
 
-    users.findOne({ _id }, (error, user) => {
-        if (error) return callback(error)
+    return users
+        .findOne({ _id })
+        .then(user => {
+            if (!user) throw new Error(`user with id ${ownerId} not found`)
 
-        if (!user) return callback(new Error(`user with id ${ownerId} not found`))
-
-        const notes = db.collection('notes')
+            const notes = db.collection('notes')
 
         if (noteId) {
             const _id = ObjectId(noteId)
 
-            notes.findOne({ _id }, (error, note) => {
-                if (error) return callback(error)
+            return notes
+                .findOne({ _id })
+                .then (note => {
+                    if (!note) throw new Error(`note with id ${noteId} not found`)
 
-                if (!note) return callback(new Error(`note with id ${noteId} not found`))
-
-                notes.updateOne({ _id }, { $set: { text, tags, visibility }}, (error, result) => {
-                    if (error) return callback(error)
-
-                    callback(null)
-                })
+                return notes
+                    .updateOne({ _id }), { $set: { text, tags, visibility }}
+                    .then (result => undefined) 
+                
             })
-        } else notes.insertOne({ text, tags, owner: ObjectId(ownerId), visibility, date: new Date }, (error, result) => {
-            if (error) return callback(error)
-
-            callback(null)
-        })
+        } else
+            return notes.insertOne({ text, tags, owner: ObjectId(ownerId), visibility, date: new Date })
+                .then(result => undefined)
+           
     })
 }.bind(context)

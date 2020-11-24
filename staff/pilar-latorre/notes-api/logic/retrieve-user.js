@@ -1,13 +1,14 @@
-const { validateId, validateCallback } = require('./helpers/validations')
+const { validateId } = require('./helpers/validations')
 const context = require('./context')
 //const { ObjectID } = require('mongodb')
 const { ObjectId } = require('mongodb')
 
+
 const { env: { DB_NAME } } = process
 
-module.exports = function (userId, callback) {
+module.exports = function (userId) {
     validateId(userId)
-    validateCallback(callback)
+   
 
     const { connection } = this
 
@@ -20,15 +21,15 @@ module.exports = function (userId, callback) {
     //const _id = new ObjectId(userId)
     const _id = ObjectId(userId)
 
-    users.findOne({ _id }, (error, user) => {
-        if (error) return callback(error)
+    return users
+        .findOne({ _id })
+        .then( user => {
+            if (!user) throw new Error(`user with id ${userId} not found`)
 
-        if (!user) return callback(new Error(`user with id ${userId} not found`))
-
-        const { _id, fullname, email } = user
+            const { _id, fullname, email } = user
 
         user = { id: _id.toString(), fullname, email } // sanitise  
         
-        callback(null, user)
+        return user
     })
 }.bind(context)
