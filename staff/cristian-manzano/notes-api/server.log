@@ -45,43 +45,216 @@ info 2020-11-18T13:58:25.580Z - server running on port 4000
 info 2020-11-18T13:59:49.053Z - server running on port 4000
 info 2020-11-18T14:00:17.901Z - server running on port 4000
 error 2020-11-18T14:00:43.219Z - Error: e-mail manuelbarzi@gmail.com already registered
-info 2020-11-18T16:11:15.910Z - server running on port 4000
-info 2020-11-18T16:14:10.629Z - stopping server
-info 2020-11-18T16:14:10.630Z - stopping server
-info 2020-11-18T16:14:13.866Z - server running on port 4000
-info 2020-11-18T16:15:22.011Z - stopping server
-info 2020-11-18T16:15:22.011Z - stopping server
-info 2020-11-18T16:15:37.020Z - server running on port 4000
-info 2020-11-18T17:32:19.256Z - stopping server
-info 2020-11-18T17:32:23.995Z - server running on port 4000
-info 2020-11-18T17:39:34.266Z - stopping server
-info 2020-11-18T17:39:34.266Z - stopping server
-info 2020-11-18T17:39:37.551Z - server running on port 4000
-info 2020-11-18T17:47:11.499Z - stopping server
-info 2020-11-18T17:47:15.316Z - server running on port 4000
-info 2020-11-18T19:26:17.382Z - stopping server
-info 2020-11-18T19:26:17.383Z - stopping server
-info 2020-11-18T19:26:23.285Z - server running on port 4000
-error 2020-11-18T19:28:52.656Z - Error: wrong credentials
-error 2020-11-18T19:29:11.817Z - Error: wrong credentials
-info 2020-11-19T11:23:56.596Z - stopping server
-info 2020-11-19T11:23:56.601Z - stopping server
-info 2020-11-19T11:24:05.835Z - server running on port 4000
-error 2020-11-19T11:29:57.917Z - Error: wrong credentials
-error 2020-11-19T11:30:13.738Z - Error: wrong credentials
-error 2020-11-19T11:30:48.170Z - TypeError: undefined is not a id
-error 2020-11-19T11:31:55.544Z - TypeError: undefined is not a id
-error 2020-11-19T11:32:32.168Z - TypeError: undefined is not a id
-error 2020-11-19T11:35:03.164Z - TypeError: undefined is not a id
-error 2020-11-19T12:04:19.815Z - Error: wrong credentials
-info 2020-11-19T15:47:08.876Z - stopping server
-info 2020-11-19T15:47:08.876Z - stopping server
-info 2020-11-19T15:47:15.355Z - server running on port 4000
-info 2020-11-19T15:54:44.388Z - stopping server
-info 2020-11-19T15:54:44.388Z - stopping server
-info 2020-11-19T15:54:51.110Z - server running on port 4000
-info 2020-11-19T15:55:47.896Z - stopping server
-info 2020-11-19T15:55:51.785Z - server running on port 4000
-info 2020-11-19T16:17:01.715Z - stopping server
-info 2020-11-19T16:17:01.716Z - stopping server
-info 2020-11-19T18:01:37.826Z - server running on port 4000
+info 2020-11-19T09:17:53.895Z - server running on port 4000
+info 2020-11-19T09:19:32.785Z - stopping server
+info 2020-11-19T09:19:32.785Z - stopping server
+info 2020-11-19T12:11:40.935Z - server running on port 4000
+info 2020-11-19T13:38:13.634Z - stopping server
+info 2020-11-19T13:38:13.635Z - stopping server
+info 2020-11-20T11:18:17.735Z - server running on port 4000
+info 2020-11-20T11:34:36.925Z - stopping server
+info 2020-11-20T11:34:36.925Z - stopping server
+info 2020-11-20T11:34:37.997Z - server running on port 4000
+info 2020-11-20T11:37:54.962Z - stopping server
+info 2020-11-20T11:37:54.963Z - stopping server
+info 2020-11-20T11:38:13.659Z - server running on port 4000
+info 2020-11-20T11:39:57.744Z - server running on port 4000
+info 2020-11-20T11:41:14.809Z - stopping server
+info 2020-11-20T11:42:46.034Z - server running on port 4000
+info 2020-11-20T12:15:36.725Z - stopping server
+info 2020-11-20T12:15:36.725Z - stopping server
+info 2020-11-20T12:17:10.832Z - server running on port 4000
+info 2020-11-20T12:21:54.732Z - stopping server
+info 2020-11-20T12:21:54.733Z - stopping server
+info 2020-11-20T12:22:36.877Z - server running on port 4000
+info 2020-11-20T12:23:51.012Z - stopping server
+info 2020-11-20T12:23:51.013Z - stopping server
+info 2020-11-20T12:23:51.946Z - server running on port 4000
+info 2020-11-20T12:33:15.595Z - stopping server
+info 2020-11-20T12:33:15.595Z - stopping server
+info 2020-11-20T18:02:04.654Z - server running on port 4000
+error 2020-11-21T10:05:23.733Z - Error: wrong credentials
+info 2020-11-21T10:37:35.312Z - stopping server
+info 2020-11-21T11:16:08.761Z - starting server
+info 2020-11-21T11:16:08.891Z - server running on port 4000
+info 2020-11-21T11:40:42.088Z - stopping server
+info 2020-11-21T11:40:44.168Z - starting server
+info 2020-11-21T11:40:44.245Z - server running on port 4000
+error 2020-11-21T11:44:20.542Z - Error: wrong credentials
+info 2020-11-21T11:51:34.472Z - stopping server
+info 2020-11-21T11:51:36.749Z - starting server
+info 2020-11-21T11:51:36.824Z - server running on port 4000
+error 2020-11-21T11:51:49.354Z - Error: wrong credentials
+error 2020-11-21T11:52:09.343Z - ReferenceError: Cannot access 'connection' before initialization
+error 2020-11-21T11:54:59.388Z - ReferenceError: Cannot access 'connection' before initialization
+error 2020-11-21T11:56:06.115Z - ReferenceError: Cannot access 'connection' before initialization
+error 2020-11-21T11:59:35.120Z - ReferenceError: Cannot access 'connection' before initialization
+info 2020-11-21T12:03:12.585Z - stopping server
+info 2020-11-21T12:03:14.469Z - starting server
+info 2020-11-21T12:03:14.583Z - server running on port 4000
+info 2020-11-21T12:03:37.417Z - stopping server
+info 2020-11-21T12:03:39.115Z - starting server
+info 2020-11-21T12:03:39.258Z - server running on port 4000
+info 2020-11-21T17:03:03.467Z - stopping server
+info 2020-11-21T17:03:10.366Z - starting server
+info 2020-11-21T17:03:10.439Z - server running on port 4000
+error 2020-11-21T17:03:39.029Z - Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+error 2020-11-21T17:06:09.217Z - Error: wrong credentials
+info 2020-11-21T17:07:04.682Z - stopping server
+info 2020-11-21T17:07:06.729Z - starting server
+info 2020-11-21T17:07:06.788Z - server running on port 4000
+error 2020-11-21T17:08:38.155Z - Error: wrong credentials
+info 2020-11-21T17:10:39.095Z - stopping server
+info 2020-11-21T17:10:40.708Z - starting server
+info 2020-11-21T17:10:40.763Z - server running on port 4000
+error 2020-11-21T17:10:48.702Z - Error: id length is not 31
+error 2020-11-21T17:17:10.461Z - Error: id length is not 31
+error 2020-11-21T17:19:01.658Z - Error: id length is not 31
+error 2020-11-21T17:19:38.867Z - Error: id length is not 31
+error 2020-11-21T17:21:01.550Z - Error: id length is not 31
+info 2020-11-21T17:21:06.918Z - stopping server
+info 2020-11-21T17:21:08.549Z - starting server
+info 2020-11-21T17:21:08.609Z - server running on port 4000
+error 2020-11-21T17:21:32.140Z - Error: id length is not 31
+error 2020-11-21T17:23:08.323Z - Error: id length is not 31
+info 2020-11-21T17:24:36.768Z - stopping server
+info 2020-11-21T17:24:38.625Z - starting server
+info 2020-11-21T17:24:38.679Z - server running on port 4000
+error 2020-11-21T17:24:52.706Z - Error: id length is not 31
+error 2020-11-21T17:25:49.995Z - Error: id length is not 31
+info 2020-11-21T17:25:56.646Z - stopping server
+info 2020-11-21T17:25:58.122Z - starting server
+info 2020-11-21T17:25:58.211Z - server running on port 4000
+info 2020-11-21T18:12:23.465Z - stopping server
+info 2020-11-21T18:12:26.093Z - starting server
+info 2020-11-21T18:12:26.160Z - server running on port 4000
+info 2020-11-21T18:23:15.435Z - stopping server
+info 2020-11-21T18:23:17.164Z - starting server
+info 2020-11-21T18:23:17.218Z - server running on port 4000
+error 2020-11-21T18:25:12.998Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:25:25.638Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:26:01.476Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:26:19.282Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-21T18:27:40.997Z - stopping server
+info 2020-11-21T18:27:42.611Z - starting server
+info 2020-11-21T18:27:42.682Z - server running on port 4000
+error 2020-11-21T18:30:36.407Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:32:54.564Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-21T18:32:57.696Z - stopping server
+info 2020-11-21T18:32:59.518Z - starting server
+info 2020-11-21T18:32:59.577Z - server running on port 4000
+info 2020-11-21T18:34:05.160Z - starting server
+info 2020-11-21T18:34:05.216Z - server running on port 4000
+info 2020-11-21T18:35:11.205Z - starting server
+info 2020-11-21T18:35:11.260Z - server running on port 4000
+info 2020-11-21T18:39:31.652Z - starting server
+info 2020-11-21T18:39:31.706Z - server running on port 4000
+error 2020-11-21T18:39:54.174Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:40:29.611Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:42:18.623Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:42:39.628Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:42:54.782Z - TypeError: undefined is not a text
+error 2020-11-21T18:43:21.329Z - TypeError: undefined is not a text
+error 2020-11-21T18:43:29.640Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:43:38.837Z - TypeError: undefined is not a text
+error 2020-11-21T18:46:51.128Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:47:07.836Z - TypeError: undefined is not a text
+error 2020-11-21T18:47:37.837Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:48:08.264Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:48:23.557Z - TypeError: undefined is not a text
+error 2020-11-21T18:49:15.156Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:49:17.070Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:49:39.274Z - TypeError: undefined is not a text
+error 2020-11-21T18:50:24.789Z - TypeError: undefined is not a text
+error 2020-11-21T18:51:59.779Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:52:16.112Z - TypeError: undefined is not a text
+error 2020-11-21T18:52:22.042Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:52:45.634Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-21T18:59:05.023Z - stopping server
+info 2020-11-21T19:00:43.479Z - starting server
+info 2020-11-21T19:00:43.576Z - server running on port 4000
+error 2020-11-21T19:18:07.969Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-23T11:19:31.044Z - stopping server
+info 2020-11-23T11:19:33.299Z - starting server
+info 2020-11-23T11:19:33.406Z - server running on port 4000
+info 2020-11-23T14:45:26.844Z - stopping server

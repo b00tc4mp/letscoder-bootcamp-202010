@@ -1,5 +1,5 @@
 module.exports = (method, url, headers, body, callback) => {
-    var xhr = new XMLHttpRequest
+    const xhr = new XMLHttpRequest
 
     xhr.onreadystatechange = function () {
         const { readyState, status, responseText } = this
@@ -9,7 +9,7 @@ module.exports = (method, url, headers, body, callback) => {
 
     xhr.open(method, url)
 
-    for (var key in headers)
+    for (const key in headers)
         xhr.setRequestHeader(key, headers[key])
 
     xhr.send(body)

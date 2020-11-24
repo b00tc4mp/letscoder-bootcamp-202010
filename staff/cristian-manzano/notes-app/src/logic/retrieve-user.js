@@ -17,7 +17,7 @@ export default function (token, callback) {
             }
 
             const user = JSON.parse(response)
-
+            console.log(user)
             callback(null, user)
         })
 }

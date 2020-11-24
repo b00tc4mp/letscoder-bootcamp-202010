@@ -1,72 +1,52 @@
-const fs = require('fs')
-const path = require('path')
-const { createId } = require('../utils/ids')
+const { validateText, validateTags, validateVisibility, validateCallback, } = require("./helpers/validations");
 
-module.exports = (id, text, tags, owner, visibility, callback) => {
-    // if (typeof id !== 'undefined') validateId(id)
-    // validateText(text)
-    // valitateTags(tags)
-    // validateId(owner)
-    // validateVisibility(visibility)
-    // validateCallback(callback)
+const context = require('./context')
+const { ObjectId } = require('mongodb')
 
-    const notesPath = path.join(__dirname, '../data/notes')
+const { env: { DB_NAME } } = process
 
-    if (id)
-        fs.readdir(notesPath, (error, files) => {
-            debugger
-            if (error) return callback(error);
+module.exports = function (ownerId, noteId, text, tags, visibility, callback) {
+    //if (typeof id !== 'undefined') validateId(id)
+    validateText(text);
+    validateTags(tags);
+    //validateId(owner);
+    validateVisibility(visibility);
+    validateCallback(callback);
 
-            (function check(files, index = 0) {
-                if (index < files.length) {
-                    const file = files[index]
+    const { connection } = context
 
-                    fs.readFile(path.join(notesPath, file), 'utf8', (error, json) => {
-                        if (error) return callback(error)
-                        debugger
-                        const { id: _id } = JSON.parse(json)
+    const db = connection.db(DB_NAME)
 
-                        if (id === _id) {
-                            debugger
-                            const note = { id, text, tags, owner, visibility }
+    const users = db.collection('users')
 
-                            const json = JSON.stringify(note)
 
-                            fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-                                debugger
-                                if (error) return callback(error)
+    const _id = ObjectId(ownerId)
 
-                                callback(null)
-                            })
-                        } else check(files, ++index)
-                    })
-                } else {
-                    id = createId()
+    users.findOne({ _id }, (error, user) => {
+        if (error) return callback(error)
 
-                    const note = { id, text, tags, owner, visibility }
+        if (!user) return callback(new Error(`user with id ${ownerId} not found`))
 
-                    const json = JSON.stringify(note)
+        const notes = db.collection('notes')
 
-                    fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
-                        debugger
-                        if (error) return callback(error)
+        if (noteId) {
+            const _id = ObjectId(noteId)
 
-                        callback(null)
-                    })
-                }
-            })(files)
-        })
-    else {
-        id = createId()
-        
-        const note = { id, text, tags, owner, visibility }
+            notes.findOne({ _id }, (error, note) => {
+                if (error) return callback(error)
 
-        const json = JSON.stringify(note)
+                if (!note) return callback(new Error(`note with id ${noteId} not found`))
 
-        fs.writeFile(path.join(notesPath, `${id}.json`), json, error => {
+                notes.updateOne({ _id }, { $set: { text, tags, visibility }}, (error, result) => {
+                    if (error) return callback(error)
+
+                    callback(null)
+                })
+            })
+        } else notes.insertOne({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date }, (error, result) => {
             if (error) return callback(error)
 
             callback(null)
         })
-    }
+    })
 }

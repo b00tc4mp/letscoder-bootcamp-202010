@@ -1,11 +1,11 @@
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 import Home from './Home'
-import Note from './Note'
+import SaveNote from './SaveNote'
 
 export {
     SignUp,
     SignIn,
     Home,
-    Note
+    SaveNote
 }

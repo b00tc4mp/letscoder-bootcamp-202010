@@ -28,6 +28,30 @@ module.exports = {
 
         if (!id.trim().length) throw new Error('id is empty or blank')
 
-        if (id.length !== 31) throw new Error('id length is not 31')
+        if (id.length !== 24) throw new Error('id length is not 24')
+    },
+
+    validateText(text) {
+        if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
+
+        if (!text.trim().length) throw new Error('text is empty or blank')
+    },
+
+    validateTags(tags) {
+        if (!(tags instanceof Array)) throw new TypeError(`${tags} is not an array`)
+
+        tags.forEach(tag => {
+            if (typeof tag !== 'string') throw new TypeError(tag + ' is not a tag')
+
+            if (!tag.trim().length) throw new Error('tag is empty or blank')
+        })
+    },
+
+    validateVisibility(visibility) {
+        if (typeof visibility !== 'string') throw new TypeError(visibility + ' is not a visibility')
+
+        if (!visibility.trim().length) throw new Error('visibility is empty or blank')
+
+        if (visibility !== 'public' && visibility !== 'private') throw new Error('visibility is not public or private')
     }
 }

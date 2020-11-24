@@ -3,7 +3,6 @@ import './App.css';
 import { SignUp, SignIn, Home } from './components'
 import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
-import Note from './components/Note'
 
 function App() {
   const [view, setView] = useState('sign-in')
@@ -34,20 +33,14 @@ function App() {
     }
   }
 
-  const handleNewNote = () => {
-    setView('home')
-  }
-
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello, Cristian!</h1>
+        <h1>Hello, Cris!</h1>
 
         {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />}
         {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />}
         {view === 'home' && <Home />}
-        {view === 'home' && <Note onSaveNote={handleNewNote} />}
-        
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -1,15 +1,17 @@
 const { saveNote } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
-    const { body: { id, text, tags, owner, visibility } } = req
+    const { headers: { authorization }, body: { noteId, text, tags, visibility } } = req
 
     res.setHeader('Access-Control-Allow-Origin', '*')
 
+    const ownerId = authorization.replace('Bearer ', '')
+
     try {
-        saveNote(id, text, tags, owner, visibility, error => {
+        saveNote(ownerId, noteId, text, tags, visibility, error => {
             if (error) return handleError(409, error)
 
-            res.status(201).send()
+            res.status(200).send()
         })
     } catch (error) {
         handleError(400, error)

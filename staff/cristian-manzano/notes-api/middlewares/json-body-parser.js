@@ -1,20 +1,24 @@
 module.exports = (req, res, next) => {
     req.setEncoding('utf8')
 
-    let content = ''
+    const { headers: { 'content-type': contentType } } = req
 
-    req.on('data', chunk => content += chunk)
+    if (contentType === 'application/json') {
+        let content = ''
 
-    req.on('end', () => {
-        let body = {}
+        req.on('data', chunk => content += chunk)
 
-        if (content) {
-            // content => { "hola": "mundo", "year": 2020 }
-            body = JSON.parse(content)
-        }
-        
-        req.body = body
+        req.on('end', () => {
+            let body = {}
 
-        next()
-    })
+            if (content) {
+                // content => { "hola": "mundo", "year": 2020 }
+                body = JSON.parse(content)
+            }
+
+            req.body = body
+
+            next()
+        })
+    } else next()
 }
