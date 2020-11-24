@@ -1,12 +1,11 @@
-const { validateEmail, validatePassword, validateCallback } = require('./helpers/validations')
+const { validateEmail, validatePassword } = require('./helpers/validations')
 const context = require('./context')
 
 const { env: { DB_NAME } } = process
 
-module.exports = function (email, password, callback) {
+module.exports = function (email, password) {
     validateEmail(email)
     validatePassword(password)
-    validateCallback(callback)
 
     const { connection } = this
 
@@ -14,13 +13,12 @@ module.exports = function (email, password, callback) {
 
     const users = db.collection('users')
 
-    users.findOne({ email, password }, (error, user) => {
-        if (error) return callback(error)
-        
-        if (!user) return callback(new Error('wrong credentials'))
+    return users.findOne({ email, password })
+        .then(user => {
+            if (!user) throw new Error('wrong credentials')
 
-        const { _id } = user
+            const { _id } = user
 
-        callback(null, _id.toString())
-    })
+            return _id.toString()
+        })
 }.bind(context)

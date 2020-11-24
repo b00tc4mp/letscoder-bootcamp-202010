@@ -1,14 +1,13 @@
-const { validateEmail, validatePassword, validateCallback, validateFullname } = require('./helpers/validations')
+const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const context = require('./context')
 
 const { env: { DB_NAME } } = process
 
-module.exports = function (fullname, email, password, callback) {
+module.exports = function (fullname, email, password) {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
-    validateCallback(callback)
 
     const { connection } = this
 
@@ -16,33 +15,31 @@ module.exports = function (fullname, email, password, callback) {
 
     const users = db.collection('users')
 
-    semaphore(done => {
-        users.findOne({ email }, (error, user) => {
-            if (error) {
-                done()
+    return new Promise((resolve, reject) => {
+        semaphore(done => {
+            users
+                .findOne({ email })
+                .then(user => {
+                    if (user) {
+                        done()
 
-                return callback(error)
-            }
+                        return reject(new Error(`user with e-mail ${email} already registered`))
+                    }
 
-            if (user) {
-                done()
+                    user = { fullname, email, password }
 
-                return callback(new Error(`user with e-mail ${email} already registered`))
-            }
-
-            user = { fullname, email, password }
-
-            users.insertOne(user, (error, result) => {
-                if (error) {
+                    return users.insertOne(user)
+                })
+                .then(result => {
                     done()
 
-                    return callback(error)
-                }
+                    resolve()
+                })
+                .catch(error => {
+                    done()
 
-                done()
-
-                callback(null)
-            })
+                    reject(error)
+                })
         })
     })
 }.bind(context)
