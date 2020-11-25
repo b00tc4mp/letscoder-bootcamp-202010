@@ -33,7 +33,7 @@ function Home() {
     const handleRetrieveNotes = () => {
 
         try {
-            retrieveNotes(user._id, (error, notes) => {
+            retrieveNotes(user.id, (error, notes) => {
                 if (error) return alert(error.message)
                 setNotes(notes)
             })

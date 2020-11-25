@@ -290,3 +290,39 @@ info 2020-11-24T16:16:31.799Z - stopping server
 info 2020-11-24T16:16:41.982Z - starting server
 info 2020-11-24T16:16:42.025Z - server running on port 4000
 info 2020-11-24T16:18:45.609Z - stopping server
+info 2020-11-25T11:08:13.291Z - starting server
+info 2020-11-25T11:08:13.388Z - server running on port 4000
+error 2020-11-25T11:08:59.215Z - TypeError: registerUser(...).then(...).cath is not a function
+error 2020-11-25T11:09:38.177Z - TypeError: registerUser(...).then(...).cath is not a function
+error 2020-11-25T11:11:14.528Z - TypeError: registerUser(...).then(...).cath is not a function
+info 2020-11-25T11:11:37.241Z - stopping server
+info 2020-11-25T11:11:41.761Z - starting server
+info 2020-11-25T11:11:41.882Z - server running on port 4000
+error 2020-11-25T11:11:59.896Z - Error: user with e-mail india@gmail.com already registered
+info 2020-11-25T11:19:31.234Z - stopping server
+info 2020-11-25T11:19:39.357Z - starting server
+info 2020-11-25T11:19:39.468Z - server running on port 4000
+info 2020-11-25T11:29:07.281Z - stopping server
+info 2020-11-25T11:29:11.235Z - starting server
+info 2020-11-25T11:29:11.354Z - server running on port 4000
+error 2020-11-25T11:29:31.683Z - Error: wrong credentials
+error 2020-11-25T11:40:56.422Z - Error: wrong credentials
+info 2020-11-25T11:49:22.393Z - stopping server
+info 2020-11-25T11:49:25.454Z - starting server
+info 2020-11-25T11:49:25.525Z - server running on port 4000
+error 2020-11-25T11:50:05.087Z - Error: wrong credentials
+info 2020-11-25T11:50:39.792Z - stopping server
+info 2020-11-25T11:50:42.867Z - starting server
+info 2020-11-25T11:50:42.938Z - server running on port 4000
+info 2020-11-25T11:51:07.272Z - stopping server
+info 2020-11-25T11:51:10.413Z - starting server
+info 2020-11-25T11:51:10.465Z - server running on port 4000
+info 2020-11-25T11:59:42.155Z - stopping server
+info 2020-11-25T11:59:45.416Z - starting server
+info 2020-11-25T12:00:53.635Z - starting server
+info 2020-11-25T12:00:53.694Z - server running on port 4000
+info 2020-11-25T12:03:27.080Z - stopping server
+info 2020-11-25T12:03:31.046Z - starting server
+info 2020-11-25T12:03:31.139Z - server running on port 4000
+error 2020-11-25T12:03:43.478Z - Error: wrong credentials
+info 2020-11-25T12:04:48.438Z - stopping server

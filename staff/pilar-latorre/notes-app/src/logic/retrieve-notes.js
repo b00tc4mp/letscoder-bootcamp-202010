@@ -11,7 +11,7 @@ function retrieveNotes(id,callback){
         if(status === 0){
             callback(new Error('server down'))
         }else if(status === 200){
-            const {notes} = JSON.parse(response);
+            const notes = JSON.parse(response);
             callback(null,notes);
         } else {
             var res = JSON.parse(response);

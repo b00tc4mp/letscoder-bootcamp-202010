@@ -6,15 +6,13 @@ module.exports = (req, res, handleError) => {
 
     const owner = authorization.replace('Bearer ', '')
 
-    res.setHeader('Access-Control-Allow-Origin', '*')
 
     try {
-        saveNote(id, text, tags, owner, visibility, error => {
-            if(error) return handleAuthenticateUser(500, error)
-
-            res.status(201).send()
-
-        })
+        saveNote(id, text, tags, owner, visibility)
+        
+            .then(() => res.status(201).send())
+            .catch(error => handleAuthenticateUser(500, error))
+          
         
     } catch (error) {
         handleError(400, error)

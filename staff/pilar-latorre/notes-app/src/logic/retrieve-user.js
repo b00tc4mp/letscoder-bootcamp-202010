@@ -11,7 +11,7 @@ function retrieveUser(token,callback){
         if(status === 0){
             callback(new Error('server down'))
         }else if(status === 200){
-            const {user} = JSON.parse(response);
+            const user = JSON.parse(response);
             callback(null,user);
         } else {
             var res = JSON.parse(response);

@@ -7,15 +7,13 @@ module.exports = (req, res, handleError) => {
     
     const id = req.headers.authorization.replace('Bearer ', '')
  
-    res.setHeader('Access-Control-Allow-Origin', '*')
-
     try {
-        retrieveUser(id, (error, user) => {
-            if (error) return handleError(401, error) 
-
-
-            res.status(200).json({ user })
-        })
+        retrieveUser(id)
+        
+            .then((user) => res.status(200).json( user ))
+            .catch (error => handleError(401, error))
+     
+        
     } catch (error) {
         handleError(400, error)
     }

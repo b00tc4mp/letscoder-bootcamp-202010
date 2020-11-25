@@ -14,7 +14,7 @@ client.connect((error, connection) => {
     context.connection = connection
 
     try {
-        retrieveUser('5fbd31ba3fcbd02d4023da45')
+        retrieveUser('5fbd3c718be4e51c588a5c7a')
             .then(() => console.log('user retrieved'))
             .catch(error => console.error('user could not be retrieved', error))
             .then(() => client.close())
