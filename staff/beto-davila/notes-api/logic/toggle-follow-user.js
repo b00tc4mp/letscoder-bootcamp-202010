@@ -10,10 +10,6 @@ module.exports = function (userId, followingId, callback) {
     validateCallback(callback)
     /* 
     // TODO retrieve user by id
-    
-    const index = followings.findIndex(following => following.toString() === followingId)
-    index < 0? followings.push(new ObjectId(followingId)) : followings.splice(index, 1)
-    
     // TODO update user in db with new followings
     */
 
@@ -34,34 +30,29 @@ module.exports = function (userId, followingId, callback) {
 
         let { followings } = user
 
-        // followings = [] --> reinitialize array each time
+        // followings = []  reinitialize array each time
 
         user = { userId: _id, followings }
 
-        if (followings.length) {
-
         // look for followees before adding. If it exists remove it, otherwise add it to 'followings' array (toggle)
+        if (followings.length) {
+            // Store index position
+            const index = followings.findIndex(following => following.toString() === followingId)
 
-        // Store index position
-        const index = followings.findIndex(following => following.toString() === followingId)
+            // if < 0, does not exist in array, add it, else, remove it with splice method
+            index < 0? followings.push(ObjectId.createFromHexString(followingId)) : followings.splice(index, 1)
 
-        // const _id = ObjectId.createFromHexString(followingId)
-        // if < 0, does not exist in array, add it, else, remove it with splice method
-        index < 0? followings.push(followingId) : followings.splice(index, 1)
+            users.updateOne({ _id }, { $set: { followings } }, (error, result) => {
+                if (error) return callback(error)
 
-        users.updateOne({ _id }, { $set: { followings } }, (error, result) => {
-            if (error) return callback(error)
+                callback(null)
+            })
 
-            callback(null)
-        })
-
-        return callback(null)
+            return callback(null)
 
         } else {
             // add new followee to empty array
-            // const _id = ObjectId.createFromHexString(followingId)
-
-            followings.push(followingId)
+            followings.push(ObjectId.createFromHexString(followingId))
 
             users.updateOne({ _id }, { $set: { followings } }, (error, result) => {
                 if (error) return callback(error)

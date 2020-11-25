@@ -8,7 +8,8 @@
     "inspect": "node inspect .",
     "test": "npx mocha logic/*.spec.js",
     "test-inspect": "npx mocha inspect logic/*.spec.js",
-    "style": "sass public/style.sass public/style.css"
+    "style": "sass public/style.sass public/style.css",
+    "test-coverage": "npx nyc --reporter=html --exclude=**/*.spec.js mocha logic/*.spec.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.2.1"
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
   }
 }

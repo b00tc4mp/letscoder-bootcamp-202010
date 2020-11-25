@@ -8,12 +8,22 @@ const { env: { MONGODB_URL } } = process
 const authenticateUser = require('./authenticate-user')
 const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-client.connect((error, connection) => {
-    if (error) return console.error(error)
+return client
+    .connect()
+        .then(connection => {
 
-    context.connection = connection
+            context.connection = connection
 
-authenticateUser('dagoman19@gmail.com', '123', console.log)
+        try {
+            authenticateUser('dagoman19@gmail.com', '1234')
+            .then(() => console.log('successfull authentication'))
+            .catch(error => console.log(error))
+            .then(() => client.close())
+            
+        } catch (error) {
+            console.log('validation error', error)
+        }
+
 
 })
 

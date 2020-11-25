@@ -13,6 +13,6 @@ client.connect((error, connection) => {
 
     context.connection = connection
 
-    toggleFollowUser('5fb898ff3a550d5535a9963d', '5fbbda6e3ab45e26edb2f9ac', console.log)
+    toggleFollowUser('5fb898ff3a550d5535a9963d', '5fba4c597681f88cbecb8060', console.log)
 
 })

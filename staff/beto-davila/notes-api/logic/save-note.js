@@ -1,18 +1,17 @@
 // const fs = require('fs')
 // const path = require('path')
 // const { createId } = require('../utils/ids')
-const { validateCallback, validateId, validateText, validateTags, validateVisibility } = require('./helpers/validations')
+const { validateId, validateText, validateTags, validateVisibility } = require('./helpers/validations')
 const context = require('./context')
 const { env: { DB_NAME } } = process
 const { ObjectID } = require('mongodb')
 
-module.exports = function (owner, id, text, tags, visibility, callback) {
+module.exports = function (owner, id, text, tags, visibility) {
     validateId(owner)
     if (typeof id !== 'undefined') validateId(id)
     validateText(text)
     validateTags(tags)
     validateVisibility(visibility)
-    validateCallback(callback)
 
     const { connection } = this
 
@@ -23,33 +22,34 @@ module.exports = function (owner, id, text, tags, visibility, callback) {
     const users = db.collection('users')
 
     const _id = ObjectID(owner)
-    
-    users.findOne({ _id }, (error, user) => {
-        if (error) return callback(error)
 
-        if (!user) return callback(new Error(`the user with id ${owner} does not exist`)) 
+    // find user firstly
+    return users
+        .findOne({ _id })
+        .then(user => {
 
-        if (id) {
-            const _id = ObjectID(id)
+            if (!user) throw new Error(`the user with id ${owner} does not exist`)
 
-            notes.findOne({ _id }, (error, note) => {
-                if (error) return callback(error)
-        
-                if (!note) return callback(new Error(`the note with id ${id} does not exist`))
+            // exists note: find and update 
+            if (id) {
+                const _id = ObjectID(id)
 
-                notes.updateOne({ _id }, { $set: {text, tags, visibility} }, (error, result) => {
-                    if (error) return callback(error)
+                return notes
+                    .findOne({ _id })
+                        .then(note => {
+                            if (!note) throw new Error(`the note with id ${id} does not exist`)
 
-                    callback(null)
-                })
-            })  
-        }
-        else notes.insertOne({owner: ObjectID(owner), text, tags, visibility, date: new Date}, (error, result) => {
-                if (error) return callback(error)
+                            return notes
+                                .updateOne({ _id }, { $set: { text, tags, visibility } })
+                                .then(result => undefined)
+                        })  
                 
-                console.log(result.ops[0])
-                callback(null)
-                })
-    })
+                        }
+            // note does not exist: insert
+            else 
+                notes
+                    .insertOne({ owner: ObjectID(owner), text, tags, visibility, date: new Date })
+                    .then(result => undefined)
 
+        })
 }.bind(context)

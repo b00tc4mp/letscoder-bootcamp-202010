@@ -100,6 +100,7 @@ describe('SPEC retrieveUser()', () => {
                 expect(error).to.be.instanceOf(Error)
                 expect(user).to.be.undefined
 
+                expect(userId).to.equal(userId)
                 expect(error.message).to.equal(`The user with id ${userId} was not found`)
 
                 done()

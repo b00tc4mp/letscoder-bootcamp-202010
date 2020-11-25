@@ -7,11 +7,17 @@ const { env: { MONGODB_URL } } = process
 
 const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-client.connect((error, connection) => {
-    if (error) return console.error(error)
+return client.connect().then(connection => {
 
     context.connection = connection
 
-    retrieveUser('5fb8fad9a15a822fff0a201b', console.log)
+    try {
+        retrieveUser('5fb8fad9a15a822fff0a201b')
+        .then((user) => console.log(user))
+        .catch(error => console.log('could not retrieve user', error))
+        .then(() => client.close())
+    } catch (error) {
+        console.log ('validation error', error)
+    }
 
 })

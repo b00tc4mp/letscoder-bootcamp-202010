@@ -1,15 +1,14 @@
 // const fs = require('fs')
 // const path = require('path')
 // const { ObjectID } = require('mongodb')
-const { validateId, validateCallback } = require('./helpers/validations')
+const { validateId } = require('./helpers/validations')
 const { ObjectId } = require('mongodb')
 const context = require('./context')
 
 const { env: { DB_NAME } } = process
 
-module.exports = function (userId, callback) {
+module.exports = function (userId) {
     validateId(userId)
-    validateCallback(callback)
 
     const { connection } = this
 
@@ -19,15 +18,16 @@ module.exports = function (userId, callback) {
 
     const _id = ObjectId.createFromHexString(userId)
 
-    users.findOne({_id} ,(error, user) => {
-        if(error) return callback(error)
+    return users
+        .findOne({_id})
+        .then( user => {
 
-        if (!user) return callback(new Error(`The user with id ${userId} was not found`))
-        
-        const { _id, fullname, email} = user
+                if (!user) throw new Error(`The user with id ${userId} was not found`)
+                    
+                const { _id, fullname, email} = user
 
-        user = { userId: _id, fullname, email}
+                user = { userId: _id, fullname, email}
 
-        return callback(null, user)
-    })
+                return user
+                })
 }.bind(context)

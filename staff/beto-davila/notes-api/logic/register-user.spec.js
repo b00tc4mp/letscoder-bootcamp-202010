@@ -11,91 +11,65 @@ describe('SPEC registerUser()', () => {
     let client, db, users
 
     // creating db connection for all cases 
-    before(done => {
+    before(() => {
         client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-        client.connect((error, connection) => {
-            if (error) return done(error)
+        return client.connect().then(connection => {
 
             context.connection = connection
 
             db = connection.db(DB_NAME)
 
             users = db.collection('users')
-
-            done()
         })
     })
 
     describe('when user does not exist', () => {
         let fullname, email, password
-
+        debugger
         beforeEach(() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
         })
 
-        it ('should suceed on correct registration', done => {
-            registerUser(fullname, email, password, (error) => {
-                expect(error).to.be.null
+        it ('should suceed on correct registration', () => {
+            registerUser(fullname, email, password).then(() => {
 
-                users.findOne({email, password}, (error, user) => {
-                    expect(error).to.be.null
+                return users.findOne({email, password}).then(user => {
 
                     expect(user).to.exist
                     expect(user.fullname).to.equal(fullname)
 
-                    done()
                 })
             })
         })
-
-        afterEach(done =>
-            users.deleteOne({ email, password }, (error, result) => {
-                if (error) return done(error)
-
-                expect(result.deletedCount).to.equal(1)
-
-                done()
-            })
+        afterEach( () =>
+            users.deleteOne({ email }).then(result => expect(result.deletedCount).to.equal(0))
         )
     })
 
     describe('when user does exist already', () => {
         let fullname, email, password
 
-        beforeEach(done => {
+        beforeEach(() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
             const user = { fullname, email, password }
 
-            users.insertOne(user, (error, result) => {
-                if (error) return done(error)
-
-            done()
-
-            })
+            return users.insertOne(user).then(result => undefined)
         })
 
-        it('should fail on already registered user', done => {
-            registerUser(fullname, email, password, (error) => {
+        it('should fail on already registered user', () => {
+            registerUser(fullname, email, password).catch(error => {
                 expect(error).to.be.instanceOf(Error)
                 expect(error.message).to.equal(`the email ${email} was registered already`)
-
-                done()
             })
         })
-        afterEach(done =>
-            users.deleteOne({ email }, (error, result) => {
-                if (error) return done(error)
-
-                expect(result.deletedCount).to.equal(1)
-
-                done()
-            })
+        afterEach( () =>
+            users.deleteOne({ email }).then(result => expect(result.deletedCount).to.equal(1))
         )
     })
     describe('when any parameter is wrong', () => {
@@ -146,9 +120,5 @@ describe('SPEC registerUser()', () => {
 
             })
         })
-        after(done => client.close(error => {
-            if (error) return done(error)
-    
-            done()
-        }))
+        after(() => client.close())
 })
