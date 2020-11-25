@@ -136,3 +136,33 @@ info 2020-11-20T16:19:29.151Z - stopping server
 info 2020-11-20T16:52:46.660Z - starting server
 info 2020-11-20T16:52:46.699Z - server running on port 4000
 info 2020-11-20T16:55:26.355Z - stopping server
+info 2020-11-25T15:49:09.033Z - starting server
+info 2020-11-25T15:49:09.074Z - server running on port 4000
+error 2020-11-25T15:49:59.661Z - TypeError: undefined is not a callback
+error 2020-11-25T15:50:21.735Z - TypeError: undefined is not a callback
+info 2020-11-25T15:53:07.933Z - stopping server
+info 2020-11-25T15:53:07.934Z - stopping server
+info 2020-11-25T15:53:09.305Z - starting server
+info 2020-11-25T15:53:09.366Z - server running on port 4000
+error 2020-11-25T15:53:31.037Z - TypeError: Cannot read property 'then' of undefined
+error 2020-11-25T15:55:10.594Z - TypeError: Cannot read property 'then' of undefined
+info 2020-11-25T15:56:16.972Z - stopping server
+info 2020-11-25T15:56:16.973Z - stopping server
+info 2020-11-25T15:56:18.167Z - starting server
+info 2020-11-25T15:56:18.206Z - server running on port 4000
+info 2020-11-25T16:01:55.783Z - stopping server
+info 2020-11-25T16:01:55.783Z - stopping server
+info 2020-11-25T16:26:22.795Z - starting server
+info 2020-11-25T16:26:22.862Z - server running on port 4000
+error 2020-11-25T16:26:35.188Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T16:26:52.945Z - Error: id length is not 24
+info 2020-11-25T16:29:35.932Z - stopping server
+info 2020-11-25T16:29:35.932Z - stopping server
+info 2020-11-25T16:29:38.975Z - starting server
+info 2020-11-25T16:29:39.049Z - server running on port 4000
+info 2020-11-25T16:30:59.553Z - stopping server
+info 2020-11-25T16:30:59.553Z - stopping server
+info 2020-11-25T16:31:01.344Z - starting server
+info 2020-11-25T16:31:01.407Z - server running on port 4000
+info 2020-11-25T16:40:23.852Z - stopping server
+info 2020-11-25T16:40:23.852Z - stopping server

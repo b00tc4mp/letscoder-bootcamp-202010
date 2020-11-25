@@ -1,5 +1,5 @@
 import { call } from '../utils'
-import { validateId, validateText, validateTags, validateVisibility, validateCallback } from './helpers/validations'
+import { validateToken, validateId, validateText, validateTags, validateVisibility, validateCallback } from './helpers/validations'
 
 /**
  * Saves a user note
@@ -17,7 +17,7 @@ import { validateId, validateText, validateTags, validateVisibility, validateCal
  * @param {function} callback 
  */
 export default function saveNote(token, noteId, text, tags, visibility, callback) {
-    validateId(token)
+    validateToken(token)
     if (typeof noteId !== 'undefined') validateId(noteId)
     validateText(text)
     validateTags(tags)

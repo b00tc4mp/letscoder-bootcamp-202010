@@ -4,13 +4,15 @@ export default function ({ onSaveNote }) {
     const handleSubmit = event => {
         event.preventDefault()
 
-        const { target: {
+        let { target: {
             text: { value: text },
             visibility: { value: visibility },
             tags: { value: tags }
         } } = event
 
-        onSaveNote(text, visibility, tags.split(' '))
+        tags = tags.trim()
+
+        onSaveNote(text, visibility, tags ? tags.split(' ') : [])
     }
 
     return <section className="save-note">
