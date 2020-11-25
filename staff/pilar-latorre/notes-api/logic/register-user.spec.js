@@ -9,68 +9,60 @@ const registerUser = require('./register-user')
 const { env: { MONGODB_URL, DB_NAME } } = process
 
 describe('registerUser()', () => {
+    let client, db, users
     
-    before(done => {
+    before(() => {
+
         client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-        client.connect((error, connection) => {
-            if (error) return done(error)
+        return client.connect()
+            .then(connection => {
+           
+                context.connection = connection
 
-            context.connection = connection
+                db = connection.db(DB_NAME)
 
-            db = connection.db(DB_NAME)
-
-            users = db.collection('users')
-
-            done()
+                users = db.collection('users')
         })
 
     })
 
     describe('when user is new', ()=>{
-        let userId, fullname, email, password
+        let fullname, email, password
 
-        beforeEach(done => {
+        beforeEach(() => {
         
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
-            password = randomStringWithPrefix('password')
+            password = randomStringWithPrefix('password') 
+         
+        })
+        it('should succedd on a new user', () => 
+            registerUser(fullname, email, password) 
+                .then(() => 
+                    users.findOne({email, password})
+                )
+                .then(user => {
+                    expect(user).to.exist
+                    expect(user.fullname).to.equal(fullname)
+                    expect(user.email).to.equal(email)
 
-            //const user = { fullname, email, password }
-            
-            done()
+                }) 
+             
+        )
+        afterEach(() =>
            
-        })
-        it('should succedd on a new user', done => {
-            registerUser(fullname, email, password, (error) => {
-                expect(error).to.be.null
-                
-                done()
-
-            })
-
-        })
-        afterEach(done =>
-            /* users.findOne({fullname, email, password}, (error, user) => {
-                if (error) return done(error)
-
-                let result */
-
-                users.deleteOne({ email, password }, (error, result) => {
-                    if (error) return done(error)
-    
-                    expect(result.deletedCount).to.equal(1)
-    
-                    done()
-                })
-            //})
+                users
+                    .deleteOne({ email, password }) 
+                    .then(result => expect(result.deletedCount).to.equal(1))     
+            
         )
     })
 
     describe('when user already exists', ()=>{
         let fullname, email, password
 
-        beforeEach(done => {
+        beforeEach(() => {
         
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
@@ -78,38 +70,32 @@ describe('registerUser()', () => {
 
             const user = { fullname, email, password }
 
-            users.insertOne(user, (error, result) => {
-                if (error) return done(error)
- 
-                userId = result.insertedId.toString()
- 
-                done()
- 
-            })   
-           
+            return users
+            .insertOne(user) 
+            .then (result => userId = result.insertedId.toString()) 
+            
         })
-        it('should fail when already exists a user with the same credentials', done => {
-            registerUser(fullname, email, password, (error) => {
-                expect(error.message).to.equal(`e-mail ${email} already registered`)
+        it('should fail when already exists a user with the same credentials', () => 
+            registerUser(fullname, email, password)
+                .catch (error => {
+                    expect(error).to.be.instanceOf(Error)
+                    expect(error.message).to.equal(`e-mail ${email} already registered`)
                 
-                done()
-
-            })
-
-        })
-        afterEach(done =>
-            users.findOne({fullname, email, password}, (error, user) => {
-                if (error) return done(error)
-
-                users.deleteOne({ _id: ObjectId(user._id) }, (error, result) => {
-                    if (error) return done(error)
-    
-                    expect(result.deletedCount).to.equal(1)
-    
-                    done()
                 })
-            })
+
         )
+        afterEach(() =>
+            users
+            //.findOne({fullname, email, password})
+            //.then (user) 
+            //.deleteOne({ _id: ObjectId(user._id) })
+            .deleteOne({email,password})
+            .then (result => expect(result.deletedCount).to.equal(1))
+    
+               
+        )
+        
+        
     })
 
     describe('when any parameter is wrong', () => {
@@ -204,10 +190,7 @@ describe('registerUser()', () => {
         })
         
     })
-    after(done => client.close(error => {
-        if (error) return done(error)
-
-        done()
-    }))
+    after(() => client.close()) 
+    
 
 })

@@ -23,7 +23,7 @@ module.exports = function (fullname, email, password) {
                     if (user) {
                         done()
 
-                        return reject(new Error(`user with e-mail ${email} already registered`))
+                        return reject(new Error(`e-mail ${email} already registered`))
                     }
 
                     user = { fullname, email, password }
