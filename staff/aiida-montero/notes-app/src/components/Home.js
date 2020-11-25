@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { retrieveUser, saveNote, retrieveNotes } from '../logic'
 import SaveNote from './SaveNote'
 import ListNotes from './ListNotes'
+import Search from './SearchNotes'
 
 export default function () {
     const [name, setName] = useState()
@@ -36,7 +37,8 @@ export default function () {
 
     const handleSaveNote = (text, visibility, tags) => {
         const { token } = sessionStorage
-
+      
+    
         try {
             saveNote(token, undefined, text, tags, visibility, error => {
                 if (error) return alert(error.message)
@@ -56,9 +58,23 @@ export default function () {
         }
     }
 
+     /* const handleSearchNotes =  {user, search, tags, error => {
+        const { token } = sessionStorage
+        if(error) return alert (error.message)
+
+        /* try {
+            retrieveNotes(token, user, tags (error, notes ) => {
+                if(error) return alert (error.message)
+
+                setNotes(notes)
+            })
+        }
+    }
+ */  
     return <section className="home">
         <h1>Hello, {name}!</h1>
         <SaveNote onSaveNote={handleSaveNote} />
         <ListNotes notes={notes} />
+        <Search /*  onSearchNote = {handleSearchNotes} *//>
     </section>
 }

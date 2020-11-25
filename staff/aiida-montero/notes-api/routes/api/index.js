@@ -26,6 +26,6 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
 router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
 
-/* router.get('/api/notes', withErrorHandling(handleRetrieveNotes)) */
+router.get('/api/notes', withErrorHandling(handleRetrieveNotes)) 
 
 module.exports = router

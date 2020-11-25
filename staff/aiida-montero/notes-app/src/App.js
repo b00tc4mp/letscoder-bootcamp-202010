@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { SignUp, SignIn, Home } from './components'
 import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
 
 function App() {
-  const [view, setView] = useState('sign-up')
+  const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-in')
 
   const handleSignUp = (fullname, email, password) => {
     try {

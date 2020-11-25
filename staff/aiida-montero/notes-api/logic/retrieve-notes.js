@@ -1,33 +1,46 @@
-const fs = require('fs')
-const path = require('path')
-const { validateId, validateCallback } = require('./helpers/validations')
+const { validateId } = require('./helpers/validations')
+const context = require('./context');
+const ObjectId = require('mongodb').ObjectId; 
 
-module.exports = (userId, callback) => {
-    validateId(userId)
-    validateCallback(callback)
+const { env: { DB_NAME } } = process
 
-    const notesPath = path.join(__dirname, '../data/notes')
 
-    const notes = []
+module.exports = function (ownerId)  {
+    validateId(ownerId)
+    const { connection } = this
+    
+    let _id = new ObjectId(ownerId)   
 
-    fs.readdir(notesPath, (error, files) => {
-        if (error) return callback(error);
+    const db = connection.db(DB_NAME)
 
-        (function readNote(files, index = 0) {
-            if (index < files.length) {
-                const file = files[index]
+    const users = db.collection('users')
+  
 
-                fs.readFile(path.join(notesPath, file), 'utf8', (error, json) => {
-                    if (error) return callback(error)
 
-                    const note = JSON.parse(json)
+    
+    return users
+    .findOne({ _id })
+    .then (user => {    
 
-                    if (note.owner === userId)
-                        notes.push(note)
+    if(!user) return callback (new Error (`user with id ${ownerId} not found`))
 
-                    readNote(files, ++index)
-                })
-            } else callback(null, notes)
-        })(files)
+    const notes = db.collection('notes')
+
+    const owner = _id
+    
+    return notes
+    .find({ owner }, { sort: { date: -1 } }).toArray() 
+    .then (notes => {
+        const result = notes.map (({ _id, text, tags, visibility, date }) => ({ id : _id.toString(), text, tags , visibility, date }))
+
+        console.log({result})
+
+    
+           return result
+        })
     })
-}
+ 
+    
+
+
+}.bind(context)

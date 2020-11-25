@@ -27,8 +27,8 @@ module.exports = {
         if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
 
         if (!id.trim().length) throw new Error('id is empty or blank')
-         debugger
-        if (id.length !== 31) throw new Error('id length is not 31')
+
+        /* if (id.length !== 31) throw new Error('id length is not 31') */
     },
     validateToken(token) {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')

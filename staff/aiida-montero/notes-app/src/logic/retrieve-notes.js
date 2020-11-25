@@ -27,6 +27,7 @@ export default function retrieveNotes(token, callback) {
 
             const notes = JSON.parse(response)
 
-            callback(null, notes)
+        
+            return callback(null, notes)
         })
 }
