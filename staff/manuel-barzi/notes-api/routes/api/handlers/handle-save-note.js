@@ -3,8 +3,6 @@ const { saveNote } = require('../../../logic')
 module.exports = (req, res, handleError) => {
     const { headers: { authorization }, body: { noteId, text, tags, visibility } } = req
 
-    res.setHeader('Access-Control-Allow-Origin', '*')
-
     const ownerId = authorization.replace('Bearer ', '')
 
     try {

@@ -6,8 +6,6 @@ module.exports = (req, res, handleError) => {
     // Bearer <token>
     const userId = authorization.replace('Bearer ', '')
 
-    res.setHeader('Access-Control-Allow-Origin', '*')
-
     try {
         retrieveUser(userId, (error, user) => {
             if (error) return handleError(401, error)
