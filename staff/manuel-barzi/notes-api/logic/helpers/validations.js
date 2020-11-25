@@ -53,5 +53,11 @@ module.exports = {
         if (!visibility.trim().length) throw new Error('visibility is empty or blank')
 
         if (visibility !== 'public' && visibility !== 'private') throw new Error('visibility is not public or private')
+    },
+
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
+
+        if (!query.trim().length) throw new Error('query is empty or blank')
     }
 }

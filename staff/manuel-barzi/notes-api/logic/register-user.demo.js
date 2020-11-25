@@ -13,6 +13,9 @@ client.connect((error, connection) => {
 
     context.connection = connection
 
+    registerUser('Pa Járito', 'pajarin@mail.com', '123123123').then(console.log).catch(console.error)
+    registerUser('Bu Falo', 'buffy@mail.com', '123123123').then(console.log).catch(console.error)
+    registerUser('Pepito Grillo', 'pepitogrillo@mail.com', '123123123').then(console.log).catch(console.error)
     registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123').then(console.log).catch(console.error)
     console.log(1)
     registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123').then(console.log).catch(console.error)
