@@ -5,10 +5,9 @@ const { env: { DB_NAME } } = process
 const ObjectId = require('mongodb').ObjectId;
 
 
-module.exports = (userId, followId, callback) => {
+module.exports = (userId, followId) => {
     validateId(userId)
     validateId(followId)
-    validateCallback(callback)
     const { connection } = context
 
     const db = connection.db(DB_NAME)
@@ -17,31 +16,23 @@ module.exports = (userId, followId, callback) => {
 
     let _id = new ObjectId(userId)
     //users.findById(ObjectId)
-    users.findOne({ _id }, (error, user) => {
-        if (error) {
+    return users
+        .findOne({ _id })
+        .then(user => {
+            if (user) {
+                const { follows = [] } = user
 
-            return callback(error)
-        }
+                const index = follows.findIndex(objId => objId.toString() === followId)
 
-        if (user) {
-            const { follows = [] } = user
+                if (index > -1) follows.splice(index, 1)
+                else follows.push(new ObjectId(followId))
 
+                return users
+                    .updateOne({ _id }, { $set: { follows } })
+                    .then(result => undefined)
 
-            /////////////////////7
+            } else throw new Error(`user with id ${userId} is not found`)
 
-            const index = follows.findIndex( objId => objId.toString() === followId)
-            debugger
-            if (index > -1) follows.splice(index, 1)
-            else follows.push(new ObjectId(followId))
-            // index < 0 ? followings.push(new ObjectId(followId)) : followings.splice(index,1)
-
-            users.updateOne({ _id }, { $set: { follows } }, (error, result) => {
-                if (error) return callback(error)
-                callback(null)
-            })
-
-        } else return callback(new Error(`user with id ${userId} is not found`))
-
-    })
+})
 
 }

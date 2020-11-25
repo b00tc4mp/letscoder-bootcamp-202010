@@ -3,13 +3,19 @@ import './NoteEditor.sass'
 
 
 
-function NoteEditor({ onSavedNote, userId }) {
+function NoteEditor({ onSavedNote }) {
     const handleSubmit = event => {
         event.preventDefault()
 
-        const { target: { text: { value: text }, visibility: { value: visibility }, tags: { value: tags } } } = event
-        if (text && userId && visibility)
-            saveNote(undefined, text, tags.split(' '), userId, visibility, error => {
+        let { target: { text: { value: text }, visibility: { value: visibility }, tags: { value: tags } } } = event
+
+        tags = tags.trim()
+
+        const { token } = sessionStorage
+
+
+        if (text && visibility)
+            saveNote(undefined, text, tags ? tags.split(' ') : [] , token, visibility, error => {
                 if (error) {
                     const res = JSON.parse(error)
                     alert(res.error)
@@ -26,18 +32,18 @@ function NoteEditor({ onSavedNote, userId }) {
             <form className="noteEditor__form" onSubmit={handleSubmit}>
                 <div>
 
-                <textarea className="noteEditor__textarea" type="text" name="text" placeholder="write your note"></textarea>
+                    <textarea className="noteEditor__textarea" type="text" name="text" placeholder="write your note"></textarea>
                 </div>
-                <div className="noteEditor__div"> 
-                   <input className="noteEditor__inputTag" type="text" id="tags" name="tags" placeholder="tag your note" />
-                <select className="noteEditor__select" name="visibility" id="visibility">
-                    <option className="noteEditor__option" value="private">Private</option>
-                    <option className="noteEditor__option" value="public">Public</option>
-                </select>
+                <div className="noteEditor__div">
+                    <input className="noteEditor__inputTag" type="text" id="tags" name="tags" placeholder="tag your note" />
+                    <select className="noteEditor__select" name="visibility" id="visibility">
+                        <option className="noteEditor__option" value="private">Private</option>
+                        <option className="noteEditor__option" value="public">Public</option>
+                    </select>
 
-                <button className="noteEditor__button">Send</button> 
+                    <button className="noteEditor__button">Send</button>
                 </div>
-                
+
             </form>
         </section>
 

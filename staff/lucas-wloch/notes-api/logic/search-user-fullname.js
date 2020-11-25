@@ -1,31 +1,37 @@
 
-const { validateCallback } = require('./helpers/validations')
+const { validateQuery } = require('./helpers/validations')
 
 const context = require('./context')
 const { env: { DB_NAME } } = process
 
 
-module.exports = (query, callback) => {
-    validateCallback(callback)
+module.exports = (query) => {
+    validateQuery(query)
+
     const { connection } = context
 
     const db = connection.db(DB_NAME)
 
     const users = db.collection('users')
-    debugger // /l/i
-    
-    users.find({fullname: new RegExp(query, 'i')}).toArray((error, results) => {
-        if (error) {
 
-            return callback(error)
-        }
+    const cursor = users.find({ $or: [{ fullname: new RegExp(query, 'i')} , {email: new RegExp(query, 'i') }]})
 
-        if (results) {
-            results = results.map( ({_id, fullname }) => ({ id: _id.toString(), fullname}) )
-            debugger
-            return callback(null, results)
-        } else return callback(new Error(`user not found`))
+    return cursor.toArray()
+        .then(users => {
+            if (users) {
+                users = users.map(({ _id, fullname }) => ({ id: _id.toString(), fullname }))
+                // users.forEach(user => {
+                //     const { _id } = user
+                //     user.id = _id.toString()
 
-    })
+                //     delete user._id
+                //     delete user.password
+                // }
+
+
+                return users
+            } else throw new Error(`user not found`)
+
+        })
 
 }

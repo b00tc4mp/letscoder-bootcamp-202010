@@ -5,7 +5,7 @@ const { MongoClient } = require('mongodb')
 const logger = require('./utils/logger')
 const { cors } = require('./middlewares')
 const { context } = require('./logic')
-debugger
+
 const { env: { PORT, MONGODB_URL }, argv: [, , port = PORT || 8080] } = process
 
 const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })

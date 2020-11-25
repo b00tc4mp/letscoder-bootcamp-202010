@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './SearchUser.sass'
 
 
-function SearchUser() {
+function SearchUser({onfollowedUser}) {
     const [results, setResults] = useState()
     const [lastQuery, setLastQuery] = useState()
     let query;
@@ -24,6 +24,7 @@ function SearchUser() {
             if (error) return alert(error.message)
 
             handleSearchUser(lastQuery)
+            onfollowedUser()
         })
     }
 
@@ -47,7 +48,7 @@ function SearchUser() {
                 className="searchUser__button"
             // onClick={() => handleSearchUser(query)} OPCION QUE NO REFRESCA AUTOMATICAMENTE
             > 🔍 </button>
-            {(results && results.length && <ul className="searchUser__ul">
+            {results && results.length > 0 && <ul className="searchUser__ul">
                 {results.map(({ fullname, id, followed }) => <li key={id} className="searchUser__li">
                     {fullname && <p className="searchUser__result-name">{fullname}</p>}
                     {id && <p className="searchUser__result-id">{id}</p>}
@@ -56,7 +57,8 @@ function SearchUser() {
                         handleFollowUser(id)
                     }}>{followed ? 'following' : 'follow'}</button>
                 </li>)}
-            </ul>) || ''}
+            </ul>}
+            
         </form>
     </>
 

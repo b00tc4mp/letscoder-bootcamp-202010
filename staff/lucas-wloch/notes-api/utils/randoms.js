@@ -6,5 +6,9 @@ module.exports = {
     randomNonString() {
         return [1, true, null, undefined, {}, [], function () { }, new Date].random()
     },
-    randomEmptyOrBlankString() { return ['', ' ', '\t', '\r', '\n'].random() }
+    randomEmptyOrBlankString() { return ['', ' ', '\t', '\r', '\n'].random() },
+
+    randomInteger(from, to) {  // 1, 10
+        return Math.round(Math.random() * (to - from) + from)
+    }
 }

@@ -2,7 +2,7 @@
 import './Results.sass'
 
 import Welcome from './Welcome'
-import {retrieveUser, retrieveNotes} from '../logic'
+import { retrieveUser, retrieveNotes } from '../logic'
 import { useEffect, useState } from 'react'
 import NoteEditor from './NoteEditor'
 import Results from './Results'
@@ -15,7 +15,7 @@ function Home() {
     const [success, setSuccess] = useState()
 
 
-    useEffect( () => {
+    useEffect(() => {
         const { token } = sessionStorage
 
         try {
@@ -28,19 +28,34 @@ function Home() {
             alert(error.message)
         }
 
-    },[]) 
+    }, [])
 
-    const onSavedNote = () =>{
+    const handleRetrieveUser = () => {
+
+        const { token } = sessionStorage
+        
+        try {
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
+                
+                setUser(user)
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+    const onSavedNote = () => {
         setSuccess(true)
         setTimeout(() => {
             setSuccess(false)
-        },4000)
+        }, 4000)
     }
-
+    
     const handleRetrieveNotes = () => {
-
+        const { token } = sessionStorage
+        
         try {
-            retrieveNotes(user.id, (error, notes) => {
+            retrieveNotes(token, (error, notes) => {
                 if (error) return alert(error.message)
                 setNotes(notes)
             })
@@ -56,9 +71,9 @@ function Home() {
         {/* {user ? <h1>HOME {user.fullname} </h1> : <h1>HOME </h1>} */}
         {/* <Welcome /> */}
         {user && <Welcome user={user} />}
-        <SearchUser/>
+        <SearchUser onfollowedUser={handleRetrieveUser} />
         <button onClick={handleRetrieveNotes}>My Notes</button>
-        {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} />}
+        {user && <NoteEditor onSavedNote={onSavedNote} />}
         {success && <h2>Su nota se guardo correctamente</h2>}
         {notes && <Results results={notes} onDelete={handleRetrieveNotes} />}
     </>

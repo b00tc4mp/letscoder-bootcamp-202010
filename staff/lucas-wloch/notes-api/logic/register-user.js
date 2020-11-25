@@ -4,12 +4,10 @@ const context = require('./context')
 
 const { env: { DB_NAME } } = process
 
-module.exports = (fullname, email, password, repassword, callback) => {
+module.exports = (fullname, email, password) => {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
-    if(password !== repassword) throw new Error('passwords do not match')
-    validateCallback(callback)
 
     const { connection } = context
 
@@ -17,33 +15,27 @@ module.exports = (fullname, email, password, repassword, callback) => {
 
     const users = db.collection('users')
 
-    semaphore(done => {
-        users.findOne({ email }, (error, user) => {
-            if (error) {
-                done()
+    return new Promise((resolve, reject) => {
 
-                return callback(error)
-            }
+        semaphore(done => {
+            users
+                .findOne({ email })
+                .then(user => {
+                    if (user) {
+                        done()
+                        return reject(new Error(`e-mail ${email} already registered`))
+                    }
 
-            if (user) {
-                done()
-
-                return callback(new Error(`e-mail ${email} already registered`))
-            }
-
-            user = { fullname, email, password }
-
-            users.insertOne(user, (error, result) => {
-                if (error) {
+                    return users.insertOne({ fullname, email, password })
+                })
+                .then(result => {
                     done()
-
-                    return callback(error)
-                }
-
-                done()
-
-                callback(null)
-            })
+                    resolve()
+                })
+                .catch(error => {
+                    done()
+                    reject(error)
+                })
         })
     })
 }

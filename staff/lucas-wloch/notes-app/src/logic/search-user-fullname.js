@@ -9,7 +9,7 @@ function searchUserFullname(token, query, callback) {
     validateCallback(callback)
 
     call('POST', 'http://localhost:4000/api/users/search',
-        { 'Content-type': 'application/json' }
+        { 'Content-type': 'application/json', Authorization: `Bearer ${token}`  }
         , JSON.stringify({ query }),
         function (status, response) {
             if (status === 0) {

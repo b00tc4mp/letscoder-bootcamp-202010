@@ -5,9 +5,9 @@ const { env: { DB_NAME } } = process
 const ObjectId = require('mongodb').ObjectId;
 
 
-module.exports = (id, callback) => {
+module.exports = (id) => {
     validateId(id)
-    validateCallback(callback)
+
     const { connection } = context
 
     const db = connection.db(DB_NAME)
@@ -16,20 +16,16 @@ module.exports = (id, callback) => {
 
     let _id = new ObjectId(id)
     //users.findById(ObjectId)
-    users.findOne({_id} , (error, user) => {
-        if (error) {
+    return users
+        .findOne({ _id })
+        .then(user => {
+            if (user) {
+                const { _id, fullname, email, follows } = user
 
-            return callback(error)
-        }
+                user = { id: _id.toString(), fullname, email, follows }
 
-        if (user) {
-            const { _id, fullname, email, follows } = user
+                return user
+            } else throw new Error(`user with id ${id} is not found`)
 
-            user = { id: _id.toString(), fullname, email, follows }
-
-            return callback(null, user)
-        } else return callback(new Error(`user with id ${id} is not found`))
-
-    })
-
+        })
 }

@@ -1,16 +1,19 @@
 import { call } from '../utils'
-import {  validateCallback, validateId, validateText, validateTags, validateVisibility } from './helpers/validations'
+import {  validateCallback, validateId, validateText, validateTags, validateVisibility, validateToken } from './helpers/validations'
 
-export default function (id, text, tags, owner, visibility, callback) {
-    // (id, text, tags, owner, visibility, callback)
-    // if (typeof id !== 'undefined') validateId(id)
+export default function (id, text, tags, token, visibility, callback) {
+    // (id, text, tags, token, visibility, callback)
+    if (typeof id !== 'undefined') validateId(id)
     validateText(text)
     validateTags(tags)
-    // validateId(owner)
+    validateToken(token)
     validateVisibility(visibility)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/notes', { 'Content-type': 'application/json', Authorization: `Bearer ${owner}` },
+    // if (tags[0] === '') tags = []
+    
+
+    call('POST', 'http://localhost:4000/api/notes', { 'Content-type': 'application/json', Authorization: `Bearer ${token}` },
         JSON.stringify({ id, text, tags, visibility }),
         (status, response) => {
             if (status === 0) {

@@ -1,4 +1,4 @@
-const {  validateCallback, validateId } = require('./helpers/validations')
+const { validateCallback, validateId } = require('./helpers/validations')
 const context = require('./context')
 const ObjectId = require('mongodb').ObjectId;
 
@@ -6,9 +6,8 @@ const ObjectId = require('mongodb').ObjectId;
 const { env: { DB_NAME } } = process
 
 
-module.exports = (noteId, callback) => {
+module.exports = (noteId) => {
     validateId(noteId)
-    validateCallback(callback)
 
     const { connection } = context
 
@@ -16,9 +15,7 @@ module.exports = (noteId, callback) => {
 
     const notes = db.collection('notes')
 
-    notes.deleteOne({_id: ObjectId(noteId)}, (error, result) => {
-        if (error) {
-            return callback(error)
-        }else return callback(null)
-    }) 
+    return notes
+        .deleteOne({ _id: ObjectId(noteId) })
+        .then(result => undefined)
 }

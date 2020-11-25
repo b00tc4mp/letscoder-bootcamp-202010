@@ -12,27 +12,24 @@ const { env: { MONGODB_URL, DB_NAME } } = process
 describe('authenticateUser()', () => {
     let client, db, users
 
-    before(done => {
+    before(() => {
 
         client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-        client.connect((error, connection) => {
-            if (error) return done(error)
+        return client.connect()
+            .then(connection => {
+                context.connection = connection
 
-            context.connection = connection
+                db = connection.db(DB_NAME)
 
-            db = connection.db(DB_NAME)
-
-            users = db.collection('users')
-
-            done()
-        })
+                users = db.collection('users')
+            })
     })
 
     describe('when user already exists', () => {
         let userId, fullname, email, password
 
-        beforeEach(done => {
+        beforeEach(() => {
 
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
@@ -40,55 +37,37 @@ describe('authenticateUser()', () => {
 
             const user = { fullname, email, password }
 
-            users.insertOne(user, (error, result) => {
-                if (error) return done(error)
-
-                userId = result.insertedId.toString()
-
-                done()
-            })
+            return users.insertOne(user)
+                .then(result => userId = result.insertedId.toString())
         })
 
-        it('should succeed on correct credentials', done => {
-            authenticateUser(email, password, (error, _userId) => {
-                expect(error).to.be.null
+        it('should succeed on correct credentials', () =>
+            authenticateUser(email, password)
+                .then(_userId => expect(_userId).to.equal(userId))
+        )
+        describe('when wrong credentials', () => {
+            it('should fail on wrong e-mail', () =>
+                authenticateUser(`wrong${email}`, password)
+                    .catch(error => {
+                        expect(error).to.be.instanceOf(Error)
 
-                expect(_userId).to.equal(userId)
+                        expect(error.message).to.equal('wrong credentials')
+                    })
+            )
 
-                done()
-            })
+            it('should fail on wrong password', () =>
+                authenticateUser(email, `wrong${password}`)
+                    .catch(error => {
+                        expect(error).to.be.instanceOf(Error)
+
+                        expect(error.message).to.equal('wrong credentials')
+                    })
+            )
         })
-
-        it('should fail on wrong e-mail', done => {
-            authenticateUser(`wrong${email}`, password, (error, _userId) => {
-                expect(error).to.be.instanceOf(Error)
-                expect(error.message).to.equal('wrong credentials')
-
-                expect(_userId).to.be.undefined
-
-                done()
-            })
-        })
-
-        it('should fail on wrong password', done => {
-            authenticateUser(email, `wrong${password}`, (error, _userId) => {
-                expect(error).to.be.instanceOf(Error)
-                expect(error.message).to.equal('wrong credentials')
-
-                expect(_userId).to.be.undefined
-
-                done()
-            })
-        })
-
-        afterEach(done =>
-            users.deleteOne({ _id: ObjectId(userId) }, (error, result) => {
-                if (error) return done(error)
-
-                expect(result.deletedCount).to.equal(1)
-
-                done()
-            })
+        afterEach(() =>
+            users
+                .deleteOne({ _id: ObjectId(userId) })
+                .then(result => expect(result.deletedCount).to.equal(1))
         )
     })
 
@@ -100,16 +79,14 @@ describe('authenticateUser()', () => {
             password = randomStringWithPrefix('password')
         })
 
-        it('should fail on valid credentials', done => {
-            authenticateUser(email, password, (error, _userId) => {
-                expect(error).to.be.instanceOf(Error)
-                expect(error.message).to.equal('wrong credentials')
+        it('should fail on valid credentials', () =>
+            authenticateUser(email, password)
+                .catch(error => {
+                    expect(error).to.be.instanceOf(Error)
 
-                expect(_userId).to.be.undefined
-
-                done()
-            })
-        })
+                    expect(error.message).to.equal('wrong credentials')
+                })
+        )
     })
 
     describe('when any parameter is wrong', () => {
@@ -142,9 +119,5 @@ describe('authenticateUser()', () => {
         })
 
     })
-    after(done => client.close(error => {
-        if(error) return done(error)
-
-        done()
-    }))
+    after( () => client.close() )
 })

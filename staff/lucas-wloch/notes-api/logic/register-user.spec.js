@@ -12,106 +12,81 @@ const { env: { MONGODB_URL, DB_NAME } } = process
 describe('registerUser()', () => {
     let client, db, users
 
-    before(done => {
+    before(() => {
 
         client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-        client.connect((error, connection) => {
-            if (error) return done(error)
+        return client.connect()
+            .then(connection => {
+                context.connection = connection
 
-            context.connection = connection
+                db = connection.db(DB_NAME)
 
-            db = connection.db(DB_NAME)
-
-            users = db.collection('users')
-
-            done()
-        })
+                users = db.collection('users')
+            })
     })
 
     describe('when user does not exist', () => {
         let fullname, email, password
 
-        beforeEach(done => {
+        beforeEach(() => {
 
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
             repassword = password
-            
-            done()
+
         })
 
-        it('should succeed on non existing user', done => {
-            registerUser(fullname, email, password, repassword, error => {
-                expect(error).to.be.null
-
-                users.findOne({ fullname, email, password }, (error, _user) => {
-                    expect(error).to.be.null
-
+        it('should succeed on new user', () =>
+            registerUser(fullname, email, password, repassword)
+                .then(() =>
+                    users.findOne({ fullname, email, password })
+                )
+                .then(_user => {
+                    expect(user).to.exist
                     expect(_user.fullname).to.equal(fullname)
                     expect(_user.email).to.equal(email)
                     expect(_user.password).to.equal(password)
-
-                    done()
                 })
-            })
-        })
-
-        afterEach(done =>
-            users.findOne({ fullname, email, password }, (error, user) => {
-                users.deleteOne({ _id: ObjectId(user._id) }, (error, result) => {
-                    if (error) return done(error)
-
-                    expect(result.deletedCount).to.equal(1)
-
-                    done()
-                })
-            })
-
         )
 
-    })
-    describe('when user already exists', () => {
-        let fullname, email, password, user
+        afterEach(() =>
+            users
+                .deleteOne({ email, password })
+                .then(result => expect(result.deletedCount).to.equal(1))
 
-        beforeEach(done => {
+        )
+    })
+
+
+    describe('when user already exists', () => {
+        let fullname, email, password
+
+        beforeEach(() => {
 
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
             repassword = password
 
-            user = { fullname, email, password }
+            const user = { fullname, email, password }
 
-            users.insertOne(user, (error, result) => {
-                if (error) return done(error)
-
-                done()
-            })
-
+            return users.insertOne(user)
         })
-        it('should fail on existing user', done => {
-            registerUser(fullname, email, password, repassword, error => {
-                expect(error).to.exist
 
-                expect(error).to.be.instanceOf(Error)
-                expect(error.message).to.equal(`e-mail ${email} already registered`)
+        it('should fail on existing user', () =>
+            registerUser(fullname, email, password, repassword)
+                .catch(error => {
+                    expect(error).to.be.instanceOf(Error)
 
-                done()
-
-            })
-        })
-        afterEach(done =>
-            users.findOne({ fullname, email, password }, (error, user) => {
-                users.deleteOne({ _id: ObjectId(user._id) }, (error, result) => {
-                    if (error) return done(error)
-
-                    expect(result.deletedCount).to.equal(1)
-
-                    done()
+                    expect(error.message).to.equal(`e-mail ${email} already registered`)
                 })
-            })
+        )
+        afterEach(() =>
+            users
+                .deleteOne({ email, password })
+                .then(result => expect(result.deletedCount).to.equal(1))
 
         )
     })
@@ -126,15 +101,15 @@ describe('registerUser()', () => {
                     password = randomStringWithPrefix('password')
                     repassword = password
                 })
-                
+
                 it('should fail on non-string email', () => {
-                    expect(() => registerUser(fullname,email, password,repassword, () => { })).to.throw(TypeError, `${email} is not an e-mail`)
+                    expect(() => registerUser(fullname, email, password, repassword, () => { })).to.throw(TypeError, `${email} is not an e-mail`)
                 })
             })
-            
+
             describe('when e-mails is empty or blank', () => {
                 let fullname, email, password, repassword
-                
+
                 beforeEach(() => {
                     fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomEmptyOrBlankString()
@@ -143,15 +118,11 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on empty or blank email ', () => {
-                    expect(() => registerUser(fullname, email, password, repassword,  () => { })).to.throw(Error, 'e-mail is empty or blank')
+                    expect(() => registerUser(fullname, email, password, repassword, () => { })).to.throw(Error, 'e-mail is empty or blank')
                 })
             })
         })
 
     })
-    after(done => client.close(error => {
-        if (error) return done(error)
-
-        done()
-    }))
+    after( () => client.close() )
 })
