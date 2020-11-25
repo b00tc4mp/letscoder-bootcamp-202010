@@ -329,3 +329,103 @@ info 2020-11-25T12:04:48.438Z - stopping server
 info 2020-11-25T12:06:34.146Z - starting server
 info 2020-11-25T12:06:34.200Z - server running on port 4000
 info 2020-11-25T12:45:05.953Z - stopping server
+info 2020-11-25T18:25:53.534Z - starting server
+info 2020-11-25T18:25:53.617Z - server running on port 4000
+info 2020-11-25T18:29:21.173Z - stopping server
+info 2020-11-25T18:29:24.843Z - starting server
+info 2020-11-25T18:29:24.948Z - server running on port 4000
+error 2020-11-25T18:29:46.011Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:29:58.889Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:30:21.086Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:31:33.709Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T18:34:13.739Z - stopping server
+info 2020-11-25T18:34:16.556Z - starting server
+info 2020-11-25T18:34:16.687Z - server running on port 4000
+error 2020-11-25T18:34:49.626Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:34:54.788Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:39:15.688Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:39:48.251Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:40:17.536Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:41:29.047Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:41:31.443Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:41:39.221Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T18:43:50.117Z - stopping server
+info 2020-11-25T18:43:53.519Z - starting server
+info 2020-11-25T18:43:53.594Z - server running on port 4000
+error 2020-11-25T18:44:19.021Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:45:03.928Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T18:45:35.311Z - stopping server
+info 2020-11-25T18:45:40.863Z - starting server
+info 2020-11-25T18:45:40.939Z - server running on port 4000
+error 2020-11-25T18:46:26.865Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T18:53:31.163Z - stopping server
+info 2020-11-25T18:53:33.995Z - starting server
+info 2020-11-25T18:53:34.070Z - server running on port 4000
+error 2020-11-25T18:53:57.759Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T18:54:18.293Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T19:00:50.724Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T19:09:18.653Z - stopping server
+info 2020-11-25T19:09:21.436Z - starting server
+info 2020-11-25T19:09:21.529Z - server running on port 4000
+error 2020-11-25T19:10:09.347Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T19:10:33.243Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T19:11:14.766Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T19:12:59.432Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T19:14:37.354Z - stopping server
+info 2020-11-25T19:14:40.224Z - starting server
+info 2020-11-25T19:14:40.325Z - server running on port 4000
+error 2020-11-25T19:15:19.918Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T19:22:41.898Z - stopping server
+info 2020-11-25T19:22:46.079Z - starting server
+info 2020-11-25T19:22:46.156Z - server running on port 4000
+error 2020-11-25T19:22:57.586Z - Error: wrong credentials
+info 2020-11-25T19:24:15.278Z - stopping server
+info 2020-11-25T19:24:18.280Z - starting server
+info 2020-11-25T19:24:18.381Z - server running on port 4000
+error 2020-11-25T19:24:30.122Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T19:26:28.153Z - stopping server
+info 2020-11-25T19:26:30.848Z - starting server
+info 2020-11-25T19:26:30.963Z - server running on port 4000
+info 2020-11-25T19:30:03.837Z - stopping server
+info 2020-11-25T19:30:07.472Z - starting server
+info 2020-11-25T19:30:07.577Z - server running on port 4000
+info 2020-11-25T19:33:13.690Z - stopping server
+info 2020-11-25T19:33:16.606Z - starting server
+info 2020-11-25T19:33:16.684Z - server running on port 4000
+info 2020-11-25T19:36:18.694Z - stopping server
+info 2020-11-25T19:36:21.147Z - starting server
+info 2020-11-25T19:36:21.241Z - server running on port 4000
+info 2020-11-25T19:38:22.593Z - stopping server
+info 2020-11-25T19:38:25.546Z - starting server
+info 2020-11-25T19:38:25.626Z - server running on port 4000
+error 2020-11-25T19:38:59.050Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T19:45:22.290Z - stopping server
+info 2020-11-25T19:45:24.927Z - starting server
+info 2020-11-25T19:45:25.005Z - server running on port 4000
+info 2020-11-25T19:47:21.035Z - stopping server
+info 2020-11-25T19:47:24.540Z - starting server
+info 2020-11-25T19:47:24.647Z - server running on port 4000
+info 2020-11-25T19:51:30.841Z - stopping server
+info 2020-11-25T19:51:33.078Z - starting server
+info 2020-11-25T19:51:33.156Z - server running on port 4000
+info 2020-11-25T19:53:39.597Z - stopping server
+info 2020-11-25T19:53:42.951Z - starting server
+info 2020-11-25T19:53:43.034Z - server running on port 4000
+error 2020-11-25T19:53:43.186Z - JsonWebTokenError: jwt malformed
+error 2020-11-25T19:53:54.150Z - JsonWebTokenError: jwt malformed
+info 2020-11-25T19:58:06.452Z - stopping server
+info 2020-11-25T19:58:09.909Z - starting server
+info 2020-11-25T19:58:10.008Z - server running on port 4000
+info 2020-11-25T20:02:21.189Z - stopping server
+info 2020-11-25T20:02:23.939Z - starting server
+info 2020-11-25T20:02:24.023Z - server running on port 4000
+info 2020-11-25T20:04:39.566Z - stopping server
+info 2020-11-25T20:04:42.568Z - starting server
+info 2020-11-25T20:04:42.714Z - server running on port 4000
+info 2020-11-25T20:06:40.781Z - stopping server
+info 2020-11-25T20:06:43.887Z - starting server
+info 2020-11-25T20:06:43.968Z - server running on port 4000
+info 2020-11-25T20:08:13.664Z - stopping server
+info 2020-11-25T20:08:16.747Z - starting server
+info 2020-11-25T20:08:16.820Z - server running on port 4000
+info 2020-11-25T20:09:31.851Z - stopping server

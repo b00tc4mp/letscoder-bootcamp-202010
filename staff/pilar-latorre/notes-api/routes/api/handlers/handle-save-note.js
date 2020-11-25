@@ -1,23 +1,21 @@
 const { saveNote } = require('../../../logic')
-const handleAuthenticateUser = require('./handle-authenticate-user')
+const jwt = require('jsonwebtoken')
+
+const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
-    const { body: { id, text, tags, visibility }, headers: { authorization } } = req
+    const { headers: { authorization }, body: { noteId, text, tags, visibility } } = req
 
-    const owner = authorization.replace('Bearer ', '')
-
-
+    // Bearer <token>
+    const token = authorization.replace('Bearer ', '')
+    
     try {
-        saveNote(id, text, tags, owner, visibility)
-        
-            .then(() => res.status(201).send())
-            .catch(error => handleAuthenticateUser(500, error))
-          
-        
+        const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
+
+        saveNote(noteId, text, tags, ownerId, visibility)
+            .then(() => res.status(200).send())
+            .catch(error => handleError(409, error))
     } catch (error) {
         handleError(400, error)
     }
-}
-
-
-
+} 

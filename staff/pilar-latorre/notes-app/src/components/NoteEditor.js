@@ -1,13 +1,13 @@
 import saveNote from "../logic/save-note"
 import './NoteEditor.sass'
 
-function NoteEditor( {onSavedNote, userId}){
+function NoteEditor( {onSavedNote, _token}){
     const handleSubmit = event => {
         event.preventDefault()
 debugger
         const { target: { text: { value: text }, visibility: { value: visibility }, tags: {value: tags} } } = event
-        if (text && userId && visibility)
-            saveNote(undefined, text, tags.split(' '), userId, visibility, error => {
+        if (text && _token && visibility)
+            saveNote(undefined, text, tags ? tags.split(' '): [], _token, visibility, error => {
                 if (error) {
                     const res = JSON.parse(error)
                     alert(res.error)

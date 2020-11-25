@@ -9,10 +9,12 @@ function Home() {
     const [user, setUser] = useState()
     const [notes, setNotes] = useState()
     const [success, setSuccess] = useState()
+    const [token, setToken] = useState()
 
 
     useEffect( () => {
         const { token } = sessionStorage
+        setToken(token)
 
         try {
             retrieveUser(token, (error, user) => {
@@ -33,7 +35,7 @@ function Home() {
     const handleRetrieveNotes = () => {
 
         try {
-            retrieveNotes(user.id, (error, notes) => {
+            retrieveNotes(token, (error, notes) => {
                 if (error) return alert(error.message)
                 setNotes(notes)
             })
@@ -49,8 +51,8 @@ function Home() {
         {/* {user ? <h1>HOME {user.fullname} </h1> : <h1>HOME </h1>} */}
         {/* <Welcome /> */}
         {user && <Welcome user={user} />}
-        <button className = "myNotes"onClick={handleRetrieveNotes}>Check your Notes</button>
-        {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} />}
+        <button className = "myNotes"onClick={handleRetrieveNotes} >Check your Notes</button>
+        {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} _token={token} />}
         {success && <h2>Su nota se ha guardado correctamente 🤩 </h2>}
         {notes && <Results results={notes} />}
     </>

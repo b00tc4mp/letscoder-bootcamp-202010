@@ -2,12 +2,12 @@ import { call } from '../utils'
 import { validateCallback, validateId } from './helpers/validations'
 
 
-function retrieveNotes(id,callback){
-    validateId(id)
+function retrieveNotes(token,callback){
+    //validateId(id)
     validateCallback(callback)
     
     call('GET','http://localhost:4000/api/notes',
-    {Authorization:`Bearer ${id}`},'',function(status,response){
+    {Authorization:`Bearer ${token}`},'',function(status,response){
         if(status === 0){
             callback(new Error('server down'))
         }else if(status === 200){

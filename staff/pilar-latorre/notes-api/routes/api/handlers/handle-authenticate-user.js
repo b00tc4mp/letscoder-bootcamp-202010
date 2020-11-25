@@ -1,4 +1,7 @@
 const { authenticateUser } = require('../../../logic')
+const jwt = require('jsonwebtoken')
+
+const { env: {JWT_SECRET, JWT_EXP}} = process
 
 
 module.exports = (req, res, handleError) => {
@@ -7,9 +10,14 @@ module.exports = (req, res, handleError) => {
     try {
         authenticateUser(email, password) 
 
-            .then((id) => res.status(200).json({ token: id }))
+            .then((userId) => {
+                
+                const token = jwt.sign({sub:userId}, JWT_SECRET, {expiresIn: JWT_EXP})
+                res.status(200).json({ token })
+
+            })
             .catch (error => handleError(401, error))
-  
+           
         
     } catch (error) {
         handleError(400, error)
