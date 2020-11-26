@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
 
 function App() {
-  const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-in')
+  const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-up')
 
   const handleSignUp = (fullname, email, password) => {
     try {

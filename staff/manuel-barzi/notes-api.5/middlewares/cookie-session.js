@@ -1,5 +1,5 @@
 const { createId } = require('../utils/ids')
-const Session = require('../models/session.js')
+const Session = require('../data/models/session.js')
 
 const createSessionCookie = sessionId => {
     return `session-id=${sessionId}; expires=${new Date(Date.now() + 60 * 60 * 1000).toUTCString()}`
