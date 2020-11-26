@@ -1,52 +1,50 @@
-const { validateText, validateTags, validateVisibility, validateCallback, } = require("./helpers/validations");
-
+const { validateId, validateText, validateTags, validateVisibility, validateCallback } = require('./helpers/validations')
 const context = require('./context')
 const { ObjectId } = require('mongodb')
+const { NotFoundError } = require('../errors')
 
-const { env: { DB_NAME } } = process
+const jwt  = require('jsonwebtoken')
 
-module.exports = function (ownerId, noteId, text, tags, visibility, callback) {
-    //if (typeof id !== 'undefined') validateId(id)
-    validateText(text);
-    validateTags(tags);
-    //validateId(owner);
-    validateVisibility(visibility);
-    validateCallback(callback);
+const { env: { DB_NAME, JWT_SECRET } } = process
 
-    const { connection } = context
+module.exports = function (token, noteId, text, tags, visibility) {
+    //validateId(ownerId)
+    if (typeof noteId !== 'undefined') validateId(noteId)
+    validateText(text)
+    validateTags(tags)
+    validateVisibility(visibility)
+
+    const { connection } = this
 
     const db = connection.db(DB_NAME)
 
     const users = db.collection('users')
 
+    const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
 
     const _id = ObjectId(ownerId)
 
-    users.findOne({ _id }, (error, user) => {
-        if (error) return callback(error)
+    return users
+        .findOne({ _id })
+        .then(user => {
+            if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
-        if (!user) return callback(new Error(`user with id ${ownerId} not found`))
+            const notes = db.collection('notes')
 
-        const notes = db.collection('notes')
+            if (noteId) {
+                const _id = ObjectId(noteId)
 
-        if (noteId) {
-            const _id = ObjectId(noteId)
+                return notes
+                    .findOne({ _id })
+                    .then(note => {
+                        if (!note) throw new NotFoundError(`note with id ${noteId} not found`)
 
-            notes.findOne({ _id }, (error, note) => {
-                if (error) return callback(error)
-
-                if (!note) return callback(new Error(`note with id ${noteId} not found`))
-
-                notes.updateOne({ _id }, { $set: { text, tags, visibility }}, (error, result) => {
-                    if (error) return callback(error)
-
-                    callback(null)
-                })
-            })
-        } else notes.insertOne({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date }, (error, result) => {
-            if (error) return callback(error)
-
-            callback(null)
+                        return notes
+                            .updateOne({ _id }, { $set: { text, tags, visibility } })
+                            .then(result => undefined)
+                    })
+            } else
+                return notes.insertOne({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date })
+                    .then(result => undefined)
         })
-    })
-}
+}.bind(context)

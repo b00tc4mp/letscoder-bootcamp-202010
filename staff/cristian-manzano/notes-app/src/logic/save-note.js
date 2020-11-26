@@ -1,5 +1,5 @@
 import { call } from '../utils'
-import { validateId, validateText, validateTags, validateVisibility, validateCallback } from './helpers/validations'
+import { validateToken, validateId, validateText, validateTags, validateVisibility, validateCallback } from './helpers/validations'
 
 /**
  * Saves a user note
@@ -17,21 +17,19 @@ import { validateId, validateText, validateTags, validateVisibility, validateCal
  * @param {function} callback 
  */
 export default function saveNote(token, noteId, text, tags, visibility, callback) {
-    debugger
-    //validateId(token)
-    //if (typeof noteId !== 'undefined') validateId(noteId)
+    validateToken(token)
+    if (typeof noteId !== 'undefined') validateId(noteId)
     validateText(text)
     validateTags(tags)
     validateVisibility(visibility)
     validateCallback(callback)
-debugger
+
     call('POST', 'http://localhost:4000/api/notes', { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },
         JSON.stringify({ noteId, text, tags, visibility }),
         (status, response) => {
-
             if (status === 0)
                 return callback(new Error('server error'))
             else if (status !== 200) {

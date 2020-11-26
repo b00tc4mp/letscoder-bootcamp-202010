@@ -1,12 +1,14 @@
-const { validateCallback } = require('./helpers/validations')
+const { validateId, validateCallback } = require('./helpers/validations')
 const context = require('./context')
 const { ObjectId } = require('mongodb')
+const { NotFoundError } = require('../errors')
 
 const { env: { DB_NAME } } = process
 
-module.exports =  function (ownerId, callback) {
-    //validateId(id)
+module.exports = function (ownerId) {
+    validateId(ownerId)
     validateCallback(callback)
+
 
     const { connection } = context
 
@@ -16,25 +18,22 @@ module.exports =  function (ownerId, callback) {
 
     const _id = ObjectId(ownerId)
 
-    users.findOne({ _id }, (error, user) => {
-        if (error) return callback(error)
+    return users
+        .findOne({ _id })
+        .then(user => {
 
-        if(!user) return callback(new Error(`user with id ${ownerId} not found`))
 
-        const notes = db.collection('notes')
+            if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
-        const owner = _id
-        
-        notes.find({ owner }, { sort: { date: -1 } }, (error, cursor) => {
-            if (error) return callback(error)
+            const notes = db.collection('notes')
+            const owner = _id
 
-            cursor.toArray((error, notes) => {
-                if (error) return callback(error)
-
+            
+            return notes.find({ owner},{ sort: { date: -1 } }).toArray()
+            .then(notes => {
                 notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
-
-                callback(null, notes)
-            })
+                console.log({notes})
+                return notes
+            }) 
         })
-    })
-} 
+    }

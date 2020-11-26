@@ -1,5 +1,4 @@
 module.exports = {
-    
     validateEmail(email) {
         if (typeof email !== 'string') throw new TypeError(`${email} is not an e-mail`)
 
@@ -24,13 +23,13 @@ module.exports = {
         if (!fullname.trim().length) throw new Error('fullname is empty or blank')
     },
 
-    // validateId(id) {
-    //     if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+    validateId(id) {
+        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
 
-    //     if (!id.trim().length) throw new Error('id is empty or blank')
+        if (!id.trim().length) throw new Error('id is empty or blank')
 
-    //     if (id.length !== 31) throw new Error('id length is not 31')
-    // },
+        if (id.length !== 24) throw new Error('id length is not 24')
+    },
 
     validateToken(token) {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
@@ -39,7 +38,6 @@ module.exports = {
     },
 
     validateText(text) {
-        debugger
         if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
 
         if (!text.trim().length) throw new Error('text is empty or blank')
