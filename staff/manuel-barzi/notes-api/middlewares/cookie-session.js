@@ -1,6 +1,4 @@
 const { createId } = require('../utils/ids')
-const fs = require('fs')
-const path = require('path')
 const Session = require('../data/models/session.js')
 
 const createSessionCookie = sessionId => {
