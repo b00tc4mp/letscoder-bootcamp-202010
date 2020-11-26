@@ -1,6 +1,7 @@
 const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const context = require('./context')
+const {ConflictError} = require('../errors')
 
 const { env: { DB_NAME } } = process
 
@@ -23,7 +24,7 @@ module.exports = function (fullname, email, password) {
                     if (user) {
                         done()
 
-                        return reject(new Error(`e-mail ${email} already registered`))
+                        return reject(new ConflictError(`e-mail ${email} already registered`))
                     }
 
                     user = { fullname, email, password }

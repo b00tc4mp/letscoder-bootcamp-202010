@@ -14,8 +14,8 @@ module.exports = (req, res, handleError) => {
 
         saveNote(noteId, text, tags, ownerId, visibility)
             .then(() => res.status(200).send())
-            .catch(error => handleError(409, error))
+            .catch(handleError)
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 } 

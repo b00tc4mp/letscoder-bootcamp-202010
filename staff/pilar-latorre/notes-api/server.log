@@ -429,3 +429,17 @@ info 2020-11-25T20:08:13.664Z - stopping server
 info 2020-11-25T20:08:16.747Z - starting server
 info 2020-11-25T20:08:16.820Z - server running on port 4000
 info 2020-11-25T20:09:31.851Z - stopping server
+info 2020-11-26T14:16:19.904Z - starting server
+info 2020-11-26T14:16:46.629Z - starting server
+info 2020-11-26T14:16:46.714Z - server running on port 4000
+error 2020-11-26T14:20:20.272Z - AuthError: wrong credentials
+error 2020-11-26T14:23:31.772Z - ConflictError: e-mail pilar@latorre.com already registered
+error 2020-11-26T14:32:08.537Z - ConflictError: e-mail pilar@latorre.com already registered
+info 2020-11-26T14:32:35.552Z - stopping server
+info 2020-11-26T14:32:37.965Z - starting server
+info 2020-11-26T14:32:38.056Z - server running on port 4000
+error 2020-11-26T14:32:54.438Z - AuthError: wrong credentials
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:27:19
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-11-26T14:35:25.860Z - stopping server

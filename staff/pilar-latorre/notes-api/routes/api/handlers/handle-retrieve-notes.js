@@ -17,11 +17,11 @@ module.exports = (req, res, handleError) => {
         retrieveNotes(id)
         
             .then((notes) => res.status(200).json( notes ))
-            .catch(error => handleError(401, error) )
+            .catch(handleError)
          
  
         
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { SignUp, SignIn, Home } from './components'
 import { useState } from 'react'
@@ -52,7 +52,7 @@ function App() {
       {view === 'sign-in' && <SignIn onSignIn={handleSignIn} onGoToSignUp = {handleGoToSignUp}/>}
       {view === 'home' && <Home />}
 
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -63,7 +63,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );

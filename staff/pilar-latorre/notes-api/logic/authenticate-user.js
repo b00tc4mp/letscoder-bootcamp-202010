@@ -1,8 +1,10 @@
 const { validateEmail, validatePassword} = require('./helpers/validations')
 const context = require('./context')
 const { env: { DB_NAME } } = process
+const { AuthError } = require('../errors')
 
-module.exports = (email, password, callback) => {
+
+module.exports = (email, password) => {
     validateEmail(email)
     validatePassword(password)
 
@@ -22,7 +24,7 @@ module.exports = (email, password, callback) => {
      
 
         } else 
-            throw new Error('wrong credentials')
+            throw new AuthError('wrong credentials')
        
     })
     
