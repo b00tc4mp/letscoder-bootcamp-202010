@@ -1,6 +1,7 @@
 const { validateId } = require('./helpers/validations')
 const context = require('./context')
 const { ObjectId } = require('mongodb')
+const { NotFoundError } = require('../errors')
 
 const { env: { DB_NAME } } = process
 
@@ -18,7 +19,7 @@ module.exports = function (userId, followingId) {
 
     return users.findOne({ _id })
         .then(user => {
-            if (!user) throw new Error(`user with id ${userId} not found`)
+            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
             const { followings = [] } = user
 

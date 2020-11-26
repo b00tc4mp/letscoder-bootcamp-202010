@@ -1,6 +1,7 @@
 const { validateId, validateCallback } = require('./helpers/validations')
 const context = require('./context')
 const { ObjectId } = require('mongodb')
+const { NotFoundError } = require('../errors')
 
 const { env: { DB_NAME } } = process
 
@@ -19,7 +20,7 @@ module.exports = function (ownerId, callback) {
     users.findOne({ _id }, (error, user) => {
         if (error) return callback(error)
 
-        if (!user) return callback(new Error(`user with id ${ownerId} not found`))
+        if (!user) return callback(new NotFoundError(`user with id ${ownerId} not found`))
 
         const notes = db.collection('notes')
 

@@ -13,8 +13,9 @@ module.exports = (req, res, handleError) => {
 
                 res.status(200).json({ token })
             })
-            .catch(error => handleError(401, error))
+            //.catch(error => handleError(error))
+            .catch(handleError)
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }
