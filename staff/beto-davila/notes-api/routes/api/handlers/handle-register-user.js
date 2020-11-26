@@ -6,12 +6,10 @@ module.exports = (req, res, handleError) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
 
     try {
-        registerUser(fullname, email, password, error => {
-            if (error) return handleError(409, error)
-
-            res.status(201).send()
-        })
+        registerUser(fullname, email, password)
+        .then(() => res.status(201).send())
+        .catch(handleError)
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }

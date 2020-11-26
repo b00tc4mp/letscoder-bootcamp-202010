@@ -5,6 +5,7 @@ const { validateId, validateText, validateTags, validateVisibility } = require('
 const context = require('./context')
 const { env: { DB_NAME } } = process
 const { ObjectID } = require('mongodb')
+const { NotFoundError } = require('../errors')
 
 module.exports = function (owner, id, text, tags, visibility) {
     validateId(owner)
@@ -28,7 +29,7 @@ module.exports = function (owner, id, text, tags, visibility) {
         .findOne({ _id })
         .then(user => {
 
-            if (!user) throw new Error(`the user with id ${owner} does not exist`)
+            if (!user) throw new NotFoundError(`the user with id ${owner} does not exist`)
 
             // exists note: find and update 
             if (id) {
@@ -37,7 +38,7 @@ module.exports = function (owner, id, text, tags, visibility) {
                 return notes
                     .findOne({ _id })
                         .then(note => {
-                            if (!note) throw new Error(`the note with id ${id} does not exist`)
+                            if (!note) throw new NotFoundError(`the note with id ${id} does not exist`)
 
                             return notes
                                 .updateOne({ _id }, { $set: { text, tags, visibility } })

@@ -54,6 +54,12 @@ module.exports = {
         if (id.length !== 24 ) throw new Error('id length is not 24 digits')
     },
 
+    validateToken(token) {
+        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+        if (!token.trim().length) throw new Error('token is empty or blank')
+    },
+
     validateQuery(query) {
         if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 

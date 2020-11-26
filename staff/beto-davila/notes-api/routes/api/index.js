@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const { cookieParser, cookieSession, jsonBodyParser, cors } = require('../../middlewares')
+const { cookieParser, cookieSession, jsonBodyParser } = require('../../middlewares')
 
 const {
     handleAcceptCookies,
@@ -33,6 +33,6 @@ router.get('/api/notes', withErrorHandling(handleRetrieveNotes))
 router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
 
 // search users
-router.post('api/users/search', jsonBodyParser, withErrorHandling(handleSearchUsers))
+router.post('/api/users/search', jsonBodyParser, withErrorHandling(handleSearchUsers))
 
 module.exports = router

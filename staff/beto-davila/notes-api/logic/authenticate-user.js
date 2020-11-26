@@ -1,6 +1,7 @@
 // const fs = require('fs')
 // const path = require('path')
 const { validateEmail, validatePassword } = require('./helpers/validations')
+const { AuthError } = require('../errors')
 const context = require('./context')
 
 const { env: { DB_NAME } } = process
@@ -26,6 +27,6 @@ module.exports = function (email, password) {
 
                     return userId
 
-                } else throw new Error('wrong credentials')
+                } else throw new AuthError('wrong credentials')
             })
 }.bind(context)

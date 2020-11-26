@@ -1,32 +1,40 @@
-const { validateId, validateCallback } = require('./helpers/validations')
+const { validateId } = require("./helpers/validations");
 // const fs = require('fs')
 // const path = require('path')
-const context = require('./context')
-const { ObjectID } = require('mongodb')
-const { env: { DB_NAME} } = process
+const context = require("./context");
+const { ObjectID } = require("mongodb");
+const { NotFoundError } = require('../errors')
+const {
+  env: { DB_NAME },
+} = process;
 
+module.exports = function (ownerId) {
+  validateId(ownerId);
 
-module.exports = function (ownerId, callback) {
-    validateId(ownerId)
-    validateCallback(callback)
+  const { connection } = this;
 
-    const { connection } = this
+  const db = connection.db(DB_NAME);
 
-    const db = connection.db(DB_NAME)
+  const notes = db.collection("notes");
 
-    const notes = db.collection('notes')
+  const users = db.collection("users");
 
-    // const users = db.collection('users')
+  const _id = ObjectID.createFromHexString(ownerId);
 
-    // const owner = ObjectID.createFromHexString(ownerId)
+  return users.findOne({ _id }).then((user) => {
+    if (user) {
 
-    notes.find({ owner: ObjectID.createFromHexString(ownerId)}, { sort: { date: -1 } }).toArray( (error, _notes) => {
-    if (error) return callback(error)
+      const cursor = notes.find({ owner: _id });
 
-    callback(null, _notes)
-    })
-  
-}.bind(context)
+      return cursor
+        .toArray()
+        .then(_notes => {
+          return _notes = _notes.map(({ _id, text, tags, visibility, date}) => ({ id: _id.toHexString(), text, tags, visibility, date}))
+        });
+
+    } else throw new NotFoundError(`the user with id ${ownerId} was not found`);
+  });
+}.bind(context);
 
 // USING cursor.each() to get to know how the 'toArray' method works under the hood with the cursor.
 

@@ -1,4 +1,7 @@
 const { saveNote } = require('../../../logic')
+const jwt = require('jsonwebtoken')
+
+const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
 
@@ -6,16 +9,15 @@ module.exports = (req, res, handleError) => {
 
     res.setHeader('Access-Control-Allow-Origin', '*')
 
-    const ownerId = authorization.replace('Bearer ', '')
+    const token = authorization.replace('Bearer ', '')
 
     try {
-        saveNote(ownerId, id, text, tags, visibility, error => {
-            if (error) return handleError(409, error)
-
-            res.status(200).send()
-        })
+        const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
+        saveNote(ownerId, id, text, tags, visibility)
+        .then(() => res.status(200).send()) 
+        .catch(handleError)
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }
 

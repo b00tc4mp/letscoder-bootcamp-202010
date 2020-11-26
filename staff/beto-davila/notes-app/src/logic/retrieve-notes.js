@@ -1,5 +1,5 @@
 import { call } from '../utils'
-import { validateId, validateCallback } from './helpers/validations'
+import { validateToken, validateCallback } from './helpers/validations'
 
 /**
  * Retrieve user notes
@@ -11,7 +11,7 @@ import { validateId, validateCallback } from './helpers/validations'
  * @param {*} callback 
  */
 export default function retrieveNotes(token, callback) {
-    validateId(token)
+    validateToken(token)
     validateCallback(callback)
 
     call('GET', 'http://localhost:4000/api/notes', { Authorization: `Bearer ${token}` },

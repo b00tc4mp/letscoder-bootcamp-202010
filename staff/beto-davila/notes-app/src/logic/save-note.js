@@ -1,5 +1,5 @@
 import { call } from '../utils'
-import { validateId, validateText, validateTags, validateVisibility, validateCallback } from './helpers/validations'
+import { validateId, validateText, validateTags, validateVisibility, validateToken, validateCallback } from './helpers/validations'
 
 /**
  * Saves a user note
@@ -18,7 +18,7 @@ import { validateId, validateText, validateTags, validateVisibility, validateCal
  */
 
 export default function (token, id, text, tags, visibility, callback) {
-    validateId(token)
+    validateToken(token)
     if (typeof id !== 'undefined') validateId(id)
     validateText(text)
     validateTags(tags)

@@ -8,9 +8,11 @@ const SaveNote = ({ onSave }) => {
         <form className='note__form' onSubmit={event => {
             event.preventDefault()
 
-            const { target: { text: { value: text }, tags: {value: tags }, visibility: { value: visibility} }} = event
+            let { target: { text: { value: text }, tags: {value: tags }, visibility: { value: visibility} }} = event
 
-            onSave(text, tags.split(' '), visibility)
+            tags = tags.trim()
+
+            onSave(text, tags ? tags.split(' ') : [], visibility)
 
         }}>
             <textarea name="text" rows="10" cols="35" placeholder="Input your new task" required></textarea>
