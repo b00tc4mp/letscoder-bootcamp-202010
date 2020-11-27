@@ -1,28 +1,15 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { MongoClient } = require('mongodb')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
-const context = require('./context')
+const mongoose = require('mongoose')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
 const registerUser = require('./register-user')
+const { User } = require('../models')
 
-const { env: { MONGODB_URL, DB_NAME } } = process
+const { env: { MONGODB_URL } } = process
 
 describe('registerUser()', () => {
-    let client, db, users
-
-    before(() => {
-        client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-        return client.connect()
-            .then(connection => {
-                context.connection = connection
-
-                db = connection.db(DB_NAME)
-
-                users = db.collection('users')
-            })
-    })
+    before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user does not exist', () => {
         let fullname, email, password
@@ -36,7 +23,7 @@ describe('registerUser()', () => {
         it('should succeed on new user', () =>
             registerUser(fullname, email, password)
                 .then(() =>
-                    users.findOne({ email, password })
+                    User.findOne({ email, password })
                 )
                 .then(user => {
                     expect(user).to.exist
@@ -45,7 +32,7 @@ describe('registerUser()', () => {
         )
 
         afterEach(() =>
-            users
+            User
                 .deleteOne({ email, password })
                 .then(result => expect(result.deletedCount).to.equal(1))
         )
@@ -61,13 +48,12 @@ describe('registerUser()', () => {
 
             const user = { fullname, email, password }
 
-            return users.insertOne(user)
+            return User.create(user)
         })
 
         it('should fail on existing user', () =>
             registerUser(fullname, email, password)
                 .catch(error => {
-                    debugger
                     expect(error).to.be.instanceOf(Error)
 
                     expect(error.message).to.equal(`user with e-mail ${email} already registered`)
@@ -75,7 +61,7 @@ describe('registerUser()', () => {
         )
 
         afterEach(() =>
-            users
+            User
                 .deleteOne({ email, password })
                 .then(result => expect(result.deletedCount).to.equal(1))
         )
@@ -83,5 +69,5 @@ describe('registerUser()', () => {
 
     // TODO more unit test cases
 
-    after(() => client.close())
+    after(() => mongoose.disconnect())
 })

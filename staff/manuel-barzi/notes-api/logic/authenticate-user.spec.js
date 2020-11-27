@@ -1,28 +1,15 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { MongoClient, ObjectId } = require('mongodb')
+const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
-const context = require('./context')
 const authenticateUser = require('./authenticate-user')
+const { User } = require('../models')
 
-const { env: { MONGODB_URL, DB_NAME } } = process
+const { env: { MONGODB_URL } } = process
 
 describe('authenticateUser()', () => {
-    let client, db, users
-
-    before(() => {
-        client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-        return client.connect()
-            .then(connection => {
-                context.connection = connection
-
-                db = connection.db(DB_NAME)
-
-                users = db.collection('users')
-            })
-    })
+    before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {
         let userId, fullname, email, password
@@ -34,8 +21,8 @@ describe('authenticateUser()', () => {
 
             const user = { fullname, email, password }
 
-            return users.insertOne(user)
-                .then(result => userId = result.insertedId.toString())
+            return User.create(user)
+                .then(user => userId = user.id)
         })
 
         it('should succeed on correct credentials', () =>
@@ -64,8 +51,8 @@ describe('authenticateUser()', () => {
         })
 
         afterEach(() =>
-            users
-                .deleteOne({ _id: ObjectId(userId) })
+            User
+                .deleteOne({ _id: userId })
                 .then(result => expect(result.deletedCount).to.equal(1))
         )
     })
@@ -121,5 +108,5 @@ describe('authenticateUser()', () => {
         // TODO when callback is wrong
     })
 
-    after(() => client.close())
+    after(() => mongoose.disconnect())
 })

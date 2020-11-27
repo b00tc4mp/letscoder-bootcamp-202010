@@ -9,7 +9,7 @@ const { env: { PORT, MONGODB_URL }, argv: [, , port = PORT || 8080] } = process
 
 logger.log('starting server', 'info')
 
-mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
     .then(() => {
         const app = express()
 

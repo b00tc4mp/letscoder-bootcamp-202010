@@ -250,3 +250,6 @@ error 2020-11-26T16:44:13.771Z - TypeError: Cannot read property 'db' of undefin
     at endReadableNT (node:internal/streams/readable:1289:12)
     at processTicksAndRejections (node:internal/process/task_queues:80:21)
 info 2020-11-26T16:44:59.215Z - stopping server
+info 2020-11-27T15:36:00.106Z - starting server
+info 2020-11-27T15:36:00.183Z - server running on port 4000
+info 2020-11-27T15:36:02.161Z - stopping server

@@ -26,11 +26,11 @@ module.exports = {
     },
 
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new ContentError('id is empty or blank')
 
-        if (id.length !== 24) throw new LengthError('id length is not 24')
+        if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
     validateText(text) {
