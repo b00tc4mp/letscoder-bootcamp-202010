@@ -1,15 +1,17 @@
 import './Results.sass'
 import Welcome from './Welcome'
-import {retrieveUser, retrieveNotes} from '../logic'
+import {retrieveUser, retrieveNotes, findUsers} from '../logic'
 import { useEffect, useState } from 'react'
 import NoteEditor from './NoteEditor'
 import Results from './Results'
+import FindUsers from './FindUsers'
 
 function Home() {
     const [user, setUser] = useState()
     const [notes, setNotes] = useState()
     const [success, setSuccess] = useState()
     const [token, setToken] = useState()
+    const [query, setResults] = useState()
 
 
     useEffect( () => {
@@ -44,6 +46,21 @@ function Home() {
         }
     }
 
+    const handleFindUsers = () => {
+        try {
+            FindUsers(query,( error, results) =>{
+                if (error) return alert(error.message)
+                setResults(results)
+            })
+
+        }catch(error) {
+            alert(error.message)
+
+
+        }
+
+    }
+
 
 
     return <>
@@ -52,6 +69,7 @@ function Home() {
         {/* <Welcome /> */}
         {user && <Welcome user={user} />}
         <button className = "myNotes"onClick={handleRetrieveNotes} >Check your Notes</button>
+        <button className = "FindUsers"onClick={handleFindUsers} >Check the Users</button>
         {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} _token={token} />}
         {success && <h2>Su nota se ha guardado correctamente 🤩 </h2>}
         {notes && <Results results={notes} />}

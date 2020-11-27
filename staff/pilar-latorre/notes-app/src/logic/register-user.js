@@ -1,6 +1,6 @@
 import { call } from '../utils'
 import { validateFullname, validateEmail, validatePassword, validateCallback } from './helpers/validations'
-
+debugger
 export default function (fullname, email, password, callback) {
     validateFullname(fullname)
     validateEmail(email)

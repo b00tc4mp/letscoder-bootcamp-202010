@@ -1,46 +1,28 @@
 const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
-const context = require('./context')
-const {ConflictError} = require('../errors')
-
-const { env: { DB_NAME } } = process
+const { ConflictError } = require('../errors')
+const { User } = require('../models')
 
 module.exports = function (fullname, email, password) {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
+debugger
+    return semaphore(() =>
+        User
+            .findOne({ email })
+            .then(user => {
+                if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
+                
+                // user = new User({ fullname, email, password })
+                // return user.save()
 
-    const { connection } = this
+                //user = { fullname, email, password }
+                //return new User(user).save()
+                //return User.create(user)
 
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
-    return new Promise((resolve, reject) => {
-        semaphore(done => {
-            users
-                .findOne({ email })
-                .then(user => {
-                    if (user) {
-                        done()
-
-                        return reject(new ConflictError(`e-mail ${email} already registered`))
-                    }
-
-                    user = { fullname, email, password }
-
-                    return users.insertOne(user)
-                })
-                .then(result => {
-                    done()
-
-                    resolve()
-                })
-                .catch(error => {
-                    done()
-
-                    reject(error)
-                })
-        })
-    })
-}.bind(context)
+                return User.create({ fullname, email, password })
+            })
+            .then(() => {})
+    )
+}

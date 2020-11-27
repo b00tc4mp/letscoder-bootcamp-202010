@@ -1,45 +1,26 @@
-const { validateId } = require('./helpers/validations')
-const context = require('./context')
-const { ObjectId } = require('mongodb')
+const { validateId } = require("./helpers/validations");
+const { ObjectID } = require("mongodb");
 const { NotFoundError } = require('../errors')
+const { User, Note } = require('../models')
 
-const { env: { DB_NAME } } = process
+module.exports = (ownerId) => {
+  validateId(ownerId);
 
-module.exports = function (ownerId) {
-    validateId(ownerId)
+  const _id = ObjectID.createFromHexString(ownerId);
 
-    const { connection } = this
+  return User.findOne({ _id }).then((user) => {
+    if (user) {
 
-    const db = connection.db(DB_NAME)
+      const cursor = Note.find({ owner: _id }).sort({ date: -1});
 
-    const users = db.collection('users')
+      return cursor.lean()
+        //.toArray()
+        .then(_notes => {
+          if(_notes)
+            return _notes = _notes.map(({ _id, text, tags, visibility, date}) => ({ id: _id.toHexString(), text, tags, visibility, date}))
+          else throw new NotFoundError('there are no notes to retrieve')
+        });
 
-    const _id = ObjectId(ownerId)
-
-    return users
-        .findOne({ _id })
-        .then(user => {
-                if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
-
-        const notes = db.collection('notes')
-
-        const owner = _id
-
-        return notes
-        .find({ owner},{ sort: { date: -1 } }).toArray()
-        .then(notes => {
-            const result = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
-            console.log({result})
-            return result
-        }) /* (cursor => {
-                console.log({cursor})
-                cursor.toArray(notes => {
-                    console.log(notes)
-                return _notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
-
-            })
-        }) */
-    })
-
-}.bind(context) 
-
+    } else throw new NotFoundError(`the user with id ${ownerId} was not found`);
+  });
+}

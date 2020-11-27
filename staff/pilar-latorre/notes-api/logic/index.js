@@ -8,6 +8,7 @@ module.exports = {
     retrieveNotes: require('./retrieve-notes'),
     context: require('./context'),
     searchUsersFullname: require('./search-users-fullname'),
-    searchUsersEmail: require('./search-users-email')
+    searchUsersEmail: require('./search-users-email'),
+    findUsers: require('./find-users')
 
 }

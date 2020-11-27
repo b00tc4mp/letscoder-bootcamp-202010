@@ -443,3 +443,258 @@ error 2020-11-26T14:32:54.438Z - AuthError: wrong credentials
     at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:27:19
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
 info 2020-11-26T14:35:25.860Z - stopping server
+info 2020-11-26T16:48:23.201Z - starting server
+info 2020-11-26T16:48:23.338Z - server running on port 4000
+error 2020-11-26T16:48:59.532Z - ConflictError: e-mail mo@no.es already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:27:39
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-11-26T18:36:52.591Z - stopping server
+info 2020-11-26T19:42:23.456Z - starting server
+info 2020-11-26T19:42:23.570Z - server running on port 4000
+error 2020-11-26T19:47:46.807Z - TypeError: Cannot read property 'db' of undefined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:13:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-authenticate-user.js:11:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+error 2020-11-26T19:47:49.935Z - TypeError: Cannot read property 'db' of undefined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:13:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-authenticate-user.js:11:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+error 2020-11-26T19:48:01.488Z - TypeError: Cannot read property 'db' of undefined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:13:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-authenticate-user.js:11:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+info 2020-11-26T19:59:17.250Z - stopping server
+info 2020-11-26T19:59:20.738Z - starting server
+info 2020-11-26T19:59:20.848Z - server running on port 4000
+info 2020-11-26T20:02:00.426Z - stopping server
+info 2020-11-26T20:02:03.265Z - starting server
+info 2020-11-26T20:02:03.377Z - server running on port 4000
+info 2020-11-26T20:04:17.888Z - stopping server
+info 2020-11-26T20:04:20.537Z - starting server
+info 2020-11-26T20:04:20.646Z - server running on port 4000
+info 2020-11-26T20:08:30.283Z - starting server
+info 2020-11-26T20:08:30.410Z - server running on port 4000
+info 2020-11-26T20:10:28.391Z - stopping server
+info 2020-11-26T20:10:31.291Z - starting server
+info 2020-11-26T20:10:31.406Z - server running on port 4000
+info 2020-11-26T20:17:47.616Z - stopping server
+info 2020-11-26T20:17:50.443Z - starting server
+info 2020-11-26T20:17:50.564Z - server running on port 4000
+info 2020-11-26T20:21:42.150Z - stopping server
+info 2020-11-26T20:21:45.379Z - starting server
+info 2020-11-26T20:21:45.489Z - server running on port 4000
+info 2020-11-26T20:27:45.446Z - stopping server
+info 2020-11-26T20:27:48.913Z - starting server
+info 2020-11-26T20:27:49.023Z - server running on port 4000
+info 2020-11-26T20:28:44.358Z - stopping server
+info 2020-11-26T20:31:06.617Z - starting server
+info 2020-11-26T20:31:06.746Z - server running on port 4000
+info 2020-11-26T20:31:25.771Z - starting server
+info 2020-11-26T20:31:25.898Z - server running on port 4000
+error 2020-11-26T20:34:07.000Z - ConflictError: user with e-mail per@sona.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-26T20:34:07.005Z - ConflictError: user with e-mail per@sona.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-26T20:34:38.509Z - ConflictError: user with e-mail per@sona.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-26T20:45:16.437Z - ConflictError: user with e-mail per@sona.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-26T20:46:09.548Z - ConflictError: user with e-mail per@sona.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-26T20:47:37.997Z - ConflictError: user with e-mail per@sona.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-26T20:52:20.108Z - ConflictError: user with e-mail per@sona.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-11-27T08:12:42.018Z - starting server
+info 2020-11-27T08:12:42.165Z - server running on port 4000
+error 2020-11-27T08:13:21.319Z - TypeError: Cannot read property 'db' of undefined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:13:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-authenticate-user.js:11:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+error 2020-11-27T08:14:10.319Z - TypeError: Cannot read property 'db' of undefined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:13:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-authenticate-user.js:11:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+error 2020-11-27T08:15:06.388Z - ConflictError: user with e-mail mos@quito.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T09:04:55.736Z - ConflictError: user with e-mail mos@quito.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T09:06:29.932Z - ConflictError: user with e-mail mos@quito.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T09:07:02.872Z - ConflictError: user with e-mail mos@quito.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T10:42:24.590Z - ConflictError: user with e-mail mos@quito.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-11-27T10:44:14.264Z - stopping server
+info 2020-11-27T10:44:17.216Z - starting server
+info 2020-11-27T10:44:17.337Z - server running on port 4000
+info 2020-11-27T10:49:04.472Z - stopping server
+info 2020-11-27T10:49:07.809Z - starting server
+info 2020-11-27T10:49:07.933Z - server running on port 4000
+info 2020-11-27T10:52:41.583Z - stopping server
+info 2020-11-27T10:52:44.112Z - starting server
+info 2020-11-27T10:52:44.235Z - server running on port 4000
+error 2020-11-27T10:52:52.909Z - ConflictError: user with e-mail manuel@gmail.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T10:54:05.766Z - ConflictError: user with e-mail manuel@gmail.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T11:23:12.642Z - ConflictError: user with e-mail manuel@gmail.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T11:23:52.054Z - ConflictError: user with e-mail manuel@gmail.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T11:23:55.621Z - ConflictError: user with e-mail manuel@gmail.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T11:23:58.721Z - ConflictError: user with e-mail manuel@gmail.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-11-27T11:24:04.433Z - stopping server
+info 2020-11-27T11:24:07.539Z - starting server
+info 2020-11-27T11:24:07.644Z - server running on port 4000
+error 2020-11-27T11:24:25.758Z - TypeError: Cannot read property 'db' of undefined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:13:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-authenticate-user.js:11:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+info 2020-11-27T12:16:45.592Z - stopping server
+info 2020-11-27T12:16:48.786Z - starting server
+info 2020-11-27T12:16:48.923Z - server running on port 4000
+error 2020-11-27T12:17:11.447Z - ConflictError: user with e-mail mo@no.es already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-11-27T12:17:38.118Z - TypeError: Cannot read property 'db' of undefined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\authenticate-user.js:13:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-authenticate-user.js:11:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+error 2020-11-27T12:17:55.446Z - ConflictError: user with e-mail perri@to.com already registered
+    at new <anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\errors\create-custom-error.js:8:19)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\register-user.js:15:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-11-27T12:51:49.722Z - stopping server
+info 2020-11-27T12:51:52.936Z - starting server
+info 2020-11-27T12:51:53.071Z - server running on port 4000
+info 2020-11-27T12:53:02.737Z - stopping server
+info 2020-11-27T12:53:05.637Z - starting server
+info 2020-11-27T12:53:05.744Z - server running on port 4000
+error 2020-11-27T12:53:17.068Z - TypeError: Cannot read property 'db' of undefined
+    at Object.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\logic\retrieve-user.js:16:27)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\handlers\handle-retrieve-user.js:16:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\express\lib\router\index.js:335:12)
+info 2020-11-27T12:56:16.002Z - stopping server
+info 2020-11-27T12:56:19.085Z - starting server
+info 2020-11-27T12:56:19.197Z - server running on port 4000
+info 2020-11-27T12:59:21.696Z - stopping server
+info 2020-11-27T12:59:25.972Z - starting server
+info 2020-11-27T12:59:26.132Z - server running on port 4000
+info 2020-11-27T13:02:14.210Z - stopping server
+info 2020-11-27T13:02:17.289Z - starting server
+info 2020-11-27T13:02:17.419Z - server running on port 4000
+info 2020-11-27T13:05:54.193Z - stopping server
+info 2020-11-27T13:05:57.434Z - starting server
+info 2020-11-27T13:05:57.552Z - server running on port 4000
+info 2020-11-27T13:08:48.418Z - stopping server
+info 2020-11-27T14:22:32.644Z - starting server
+info 2020-11-27T14:22:32.804Z - server running on port 4000
+info 2020-11-27T14:27:50.842Z - stopping server
+info 2020-11-27T14:27:54.246Z - starting server
+info 2020-11-27T14:27:54.370Z - server running on port 4000
+info 2020-11-27T14:57:02.988Z - stopping server
+info 2020-11-27T15:35:05.858Z - starting server
+info 2020-11-27T15:35:05.986Z - server running on port 4000
+info 2020-11-27T15:37:48.467Z - stopping server
+info 2020-11-27T15:37:51.913Z - starting server
+info 2020-11-27T15:37:52.034Z - server running on port 4000
+info 2020-11-27T15:38:51.753Z - stopping server
+info 2020-11-27T15:38:56.298Z - starting server
+info 2020-11-27T15:38:56.416Z - server running on port 4000
+info 2020-11-27T15:46:32.851Z - stopping server
