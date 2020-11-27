@@ -108,5 +108,5 @@ describe('authenticateUser()', () => {
         // TODO when callback is wrong
     })
 
-    after(mongoose.disconnect)
+    after(() => mongoose.disconnect())
 })

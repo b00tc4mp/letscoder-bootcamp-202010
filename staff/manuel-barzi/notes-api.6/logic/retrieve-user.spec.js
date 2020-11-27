@@ -91,5 +91,5 @@ describe('retrieveUser()', () => {
         })
     })
 
-    after(mongoose.disconnect)
+    after(() => mongoose.disconnect())
 })

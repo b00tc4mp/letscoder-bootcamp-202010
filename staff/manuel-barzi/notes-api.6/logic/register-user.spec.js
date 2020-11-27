@@ -69,5 +69,5 @@ describe('registerUser()', () => {
 
     // TODO more unit test cases
 
-    after(mongoose.disconnect)
+    after(() => mongoose.disconnect())
 })
