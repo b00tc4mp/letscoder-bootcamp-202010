@@ -32,6 +32,7 @@ const userSchema = new Schema({
 const User = model('User', userSchema)
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
+    .then(() => User.deleteMany())
     .then(() => {
         //const user = new User({ fullname: 'Manuel Barzi', email: 'manuelbarzi@gmail.com', password: '123123123' })
         const user = new User({ fullname: 'Pepito Grillo', email: 'pepigri@gmail.com', password: '123123123' })
@@ -51,6 +52,12 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
 
         return user.save()
     })
+    .then(() => {
+        const user2 = new User({ fullname: 'Gu Sánito', email: 'gu@gsanito.com', password: '123123123' })
+        const user3 = new User({ fullname: 'Pa Járito', email: 'pa@jarito.com', password: '123123123' })
+
+        return Promise.all([user2.save(), user3.save()])
+    })
     .then(() => User.find({}))
     .then(users => {
         console.log(users)
@@ -60,6 +67,10 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
         //return User.deleteOne({ _id: user._id })
         //return User.deleteOne({ _id: user._id.toString() })
         return User.deleteOne({ _id: user.id })
+    })
+    .then(() => User.find({}).lean())
+    .then(users => {
+        console.log(users)
     })
     .catch(console.error)
     .then(() => mongoose.disconnect())
