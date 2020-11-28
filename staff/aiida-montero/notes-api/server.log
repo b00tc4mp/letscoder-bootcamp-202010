@@ -680,3 +680,227 @@ info 2020-11-25T19:36:34.108Z - server running on port 4000
 info 2020-11-25T19:36:41.589Z - starting server
 info 2020-11-25T19:36:41.753Z - server running on port 4000
 info 2020-11-25T19:36:46.816Z - stopping server
+info 2020-11-26T14:36:54.530Z - starting server
+info 2020-11-26T14:37:46.608Z - starting server
+info 2020-11-26T14:37:46.726Z - server running on port 4000
+error 2020-11-26T14:40:03.543Z - AuthError: wrong credentials
+info 2020-11-26T20:44:10.191Z - starting server
+info 2020-11-26T20:44:10.329Z - server running on port 4000
+info 2020-11-26T20:48:07.599Z - starting server
+info 2020-11-26T20:49:49.577Z - starting server
+info 2020-11-26T20:49:49.739Z - server running on port 4000
+info 2020-11-26T20:50:39.316Z - starting server
+info 2020-11-26T20:50:39.494Z - server running on port 4000
+info 2020-11-26T20:51:42.465Z - starting server
+info 2020-11-26T20:51:42.693Z - server running on port 4000
+info 2020-11-26T20:51:53.943Z - starting server
+info 2020-11-26T20:51:54.119Z - server running on port 4000
+info 2020-11-26T20:53:57.719Z - starting server
+info 2020-11-26T20:53:57.866Z - server running on port 4000
+info 2020-11-26T20:54:50.784Z - stopping server
+info 2020-11-26T20:55:05.423Z - starting server
+info 2020-11-26T20:55:05.912Z - server running on port 4000
+error 2020-11-26T20:55:25.020Z - ValidationError: password: Path `password` (`123`) is shorter than the minimum allowed length (8).
+error 2020-11-26T20:55:39.883Z - ValidationError: password: Path `password` (`123`) is shorter than the minimum allowed length (8).
+error 2020-11-26T20:55:45.731Z - ValidationError: password: Path `password` (`123`) is shorter than the minimum allowed length (8).
+error 2020-11-26T20:56:26.968Z - ValidationError: password: Path `password` (`123`) is shorter than the minimum allowed length (8).
+error 2020-11-26T20:56:33.930Z - ValidationError: password: Path `password` (`123`) is shorter than the minimum allowed length (8).
+error 2020-11-26T20:57:25.110Z - ValidationError: password: Path `password` (`123`) is shorter than the minimum allowed length (8).
+error 2020-11-26T21:00:34.434Z - ValidationError: password: Path `password` (`123`) is shorter than the minimum allowed length (8).
+info 2020-11-26T21:00:54.617Z - stopping server
+info 2020-11-26T21:00:59.133Z - starting server
+info 2020-11-26T21:00:59.273Z - server running on port 4000
+error 2020-11-26T21:04:13.095Z - ConflictError: user with e-mail carmenmari@gmail.com already registered
+error 2020-11-26T21:05:55.183Z - ConflictError: user with e-mail carmenmari@gmail.com already registered
+error 2020-11-26T21:05:57.979Z - ConflictError: user with e-mail carmenmari@gmail.com already registered
+error 2020-11-26T21:06:01.365Z - ConflictError: user with e-mail carmenmari@gmail.com already registered
+info 2020-11-26T21:06:11.964Z - stopping server
+info 2020-11-26T21:06:18.258Z - starting server
+info 2020-11-26T21:06:18.390Z - server running on port 4000
+error 2020-11-26T21:13:56.852Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:14:40.880Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:16:26.402Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:22:20.178Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:24:46.050Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:25:47.455Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:30:58.640Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:31:04.029Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:31:33.116Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:31:48.026Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:32:25.509Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:32:28.043Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:33:14.813Z - TypeError: Cannot read property 'db' of undefined
+error 2020-11-26T21:33:30.698Z - ConflictError: user with e-mail aidamoAAantero@gmail.com already registered
+error 2020-11-26T21:33:35.424Z - ConflictError: user with e-mail aidamoAAantero@gmail.com already registered
+error 2020-11-26T21:33:38.525Z - ConflictError: user with e-mail aidamoAAantero@gmail.com already registered
+error 2020-11-26T21:33:52.759Z - ConflictError: user with e-mail aidamoAAantero@gmail.com already registered
+error 2020-11-26T21:34:07.099Z - ConflictError: user with e-mail aidamoAAantero@gmail.com already registered
+error 2020-11-26T21:34:14.838Z - ConflictError: user with e-mail aidamoAAantero@gmail.com already registered
+info 2020-11-26T21:34:23.630Z - stopping server
+info 2020-11-26T21:34:27.943Z - starting server
+info 2020-11-26T21:34:28.107Z - server running on port 4000
+error 2020-11-26T21:35:06.665Z - TypeError: User.save is not a function
+error 2020-11-26T21:38:46.224Z - TypeError: User.save is not a function
+error 2020-11-26T21:38:59.244Z - TypeError: User.save is not a function
+info 2020-11-26T21:39:06.797Z - stopping server
+info 2020-11-26T21:39:14.229Z - starting server
+info 2020-11-26T21:39:14.415Z - server running on port 4000
+error 2020-11-26T21:39:30.019Z - TypeError: User.inserted is not a function
+info 2020-11-26T21:39:34.719Z - stopping server
+info 2020-11-26T21:39:39.036Z - starting server
+info 2020-11-26T21:39:39.191Z - server running on port 4000
+info 2020-11-26T21:40:08.748Z - starting server
+info 2020-11-26T21:40:08.927Z - server running on port 4000
+info 2020-11-26T21:41:49.211Z - starting server
+info 2020-11-26T21:41:49.392Z - server running on port 4000
+error 2020-11-26T21:41:53.184Z - TypeError: User.auth is not a function
+info 2020-11-26T23:18:58.822Z - starting server
+error 2020-11-26T23:19:28.849Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+info 2020-11-26T23:19:28.850Z - stopping server
+info 2020-11-26T23:20:04.292Z - starting server
+error 2020-11-26T23:20:34.329Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+info 2020-11-26T23:20:34.337Z - stopping server
+info 2020-11-26T23:22:01.170Z - starting server
+info 2020-11-26T23:22:01.335Z - server running on port 4000
+error 2020-11-26T23:22:12.287Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:27:05.922Z - starting server
+info 2020-11-26T23:27:06.042Z - server running on port 4000
+info 2020-11-26T23:27:17.195Z - starting server
+info 2020-11-26T23:27:17.322Z - server running on port 4000
+info 2020-11-26T23:28:32.432Z - starting server
+info 2020-11-26T23:28:32.597Z - server running on port 4000
+error 2020-11-26T23:28:37.494Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:28:58.049Z - starting server
+error 2020-11-26T23:28:58.122Z - SyntaxError: Unexpected token '{'
+info 2020-11-26T23:28:58.134Z - stopping server
+info 2020-11-26T23:29:48.158Z - starting server
+error 2020-11-26T23:29:48.221Z - SyntaxError: missing ) after argument list
+info 2020-11-26T23:29:48.231Z - stopping server
+info 2020-11-26T23:30:07.510Z - starting server
+info 2020-11-26T23:30:07.679Z - server running on port 4000
+error 2020-11-26T23:30:14.550Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:30:33.953Z - starting server
+info 2020-11-26T23:30:34.094Z - server running on port 4000
+error 2020-11-26T23:30:36.443Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:36:56.132Z - starting server
+info 2020-11-26T23:36:56.260Z - server running on port 4000
+info 2020-11-26T23:37:40.432Z - starting server
+info 2020-11-26T23:37:40.562Z - server running on port 4000
+error 2020-11-26T23:37:42.739Z - TypeError: [object Object] is not a id
+error 2020-11-26T23:37:52.249Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:38:36.028Z - starting server
+error 2020-11-26T23:38:36.093Z - SyntaxError: Unexpected token '.'
+info 2020-11-26T23:38:36.104Z - stopping server
+info 2020-11-26T23:38:46.995Z - starting server
+info 2020-11-26T23:38:47.150Z - server running on port 4000
+error 2020-11-26T23:38:51.325Z - TypeError: [object Object] is not a id
+error 2020-11-26T23:39:17.000Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:39:48.492Z - starting server
+info 2020-11-26T23:39:48.631Z - server running on port 4000
+error 2020-11-26T23:39:54.208Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:40:03.234Z - starting server
+info 2020-11-26T23:40:03.389Z - server running on port 4000
+error 2020-11-26T23:40:08.963Z - TypeError: [object Object] is not a id
+info 2020-11-26T23:42:19.472Z - starting server
+info 2020-11-26T23:42:19.604Z - server running on port 4000
+info 2020-11-26T23:42:44.338Z - starting server
+info 2020-11-26T23:42:44.467Z - server running on port 4000
+info 2020-11-26T23:42:45.793Z - starting server
+info 2020-11-26T23:42:45.927Z - server running on port 4000
+info 2020-11-27T14:30:05.786Z - starting server
+info 2020-11-27T14:30:05.985Z - server running on port 4000
+error 2020-11-27T14:30:55.424Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:31:37.148Z - starting server
+info 2020-11-27T14:31:37.295Z - server running on port 4000
+error 2020-11-27T14:31:40.027Z - TypeError: [object Object] is not a id
+error 2020-11-27T14:31:43.319Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:31:56.842Z - stopping server
+info 2020-11-27T14:33:06.176Z - starting server
+info 2020-11-27T14:33:06.324Z - server running on port 4000
+error 2020-11-27T14:33:36.224Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:34:03.354Z - starting server
+info 2020-11-27T14:34:03.495Z - server running on port 4000
+info 2020-11-27T14:34:54.727Z - starting server
+info 2020-11-27T14:34:54.865Z - server running on port 4000
+info 2020-11-27T14:34:59.400Z - starting server
+info 2020-11-27T14:34:59.551Z - server running on port 4000
+info 2020-11-27T14:35:02.127Z - starting server
+info 2020-11-27T14:35:02.261Z - server running on port 4000
+error 2020-11-27T14:35:11.780Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:36:18.540Z - starting server
+info 2020-11-27T14:36:18.712Z - server running on port 4000
+info 2020-11-27T14:36:28.854Z - starting server
+info 2020-11-27T14:36:28.997Z - server running on port 4000
+info 2020-11-27T14:36:39.373Z - starting server
+info 2020-11-27T14:36:39.533Z - server running on port 4000
+error 2020-11-27T14:37:11.099Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:38:22.777Z - starting server
+info 2020-11-27T14:38:22.900Z - server running on port 4000
+error 2020-11-27T14:38:27.508Z - TypeError: id.trim is not a function
+info 2020-11-27T14:38:38.557Z - starting server
+info 2020-11-27T14:38:38.662Z - server running on port 4000
+info 2020-11-27T14:40:12.583Z - starting server
+error 2020-11-27T14:40:12.660Z - SyntaxError: Unexpected token '.'
+info 2020-11-27T14:40:12.671Z - stopping server
+info 2020-11-27T14:40:20.926Z - starting server
+info 2020-11-27T14:40:21.088Z - server running on port 4000
+error 2020-11-27T14:40:25.675Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:40:59.376Z - starting server
+info 2020-11-27T14:40:59.529Z - server running on port 4000
+info 2020-11-27T14:41:02.178Z - starting server
+info 2020-11-27T14:41:02.314Z - server running on port 4000
+info 2020-11-27T14:41:32.017Z - stopping server
+info 2020-11-27T14:41:47.648Z - starting server
+info 2020-11-27T14:42:58.203Z - starting server
+info 2020-11-27T14:42:58.740Z - server running on port 4000
+info 2020-11-27T14:43:43.200Z - starting server
+info 2020-11-27T14:43:43.445Z - server running on port 4000
+info 2020-11-27T14:44:32.176Z - starting server
+info 2020-11-27T14:44:32.324Z - server running on port 4000
+info 2020-11-27T14:44:48.942Z - stopping server
+info 2020-11-27T14:45:03.069Z - starting server
+info 2020-11-27T14:45:03.307Z - server running on port 4000
+error 2020-11-27T14:46:23.584Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:49:46.505Z - starting server
+info 2020-11-27T14:49:46.651Z - server running on port 4000
+error 2020-11-27T14:49:53.166Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:50:37.406Z - starting server
+info 2020-11-27T14:50:37.557Z - server running on port 4000
+info 2020-11-27T14:50:40.167Z - stopping server
+info 2020-11-27T14:50:42.537Z - starting server
+info 2020-11-27T14:50:42.683Z - server running on port 4000
+info 2020-11-27T14:51:04.871Z - starting server
+info 2020-11-27T14:51:05.066Z - server running on port 4000
+error 2020-11-27T14:51:16.327Z - TypeError: [object Object] is not a id
+error 2020-11-27T14:51:35.762Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:53:32.723Z - starting server
+info 2020-11-27T14:53:32.894Z - server running on port 4000
+info 2020-11-27T14:53:54.252Z - starting server
+info 2020-11-27T14:53:54.413Z - server running on port 4000
+info 2020-11-27T14:54:00.236Z - stopping server
+info 2020-11-27T14:54:02.223Z - starting server
+info 2020-11-27T14:54:02.385Z - server running on port 4000
+error 2020-11-27T14:54:03.838Z - TypeError: [object Object] is not a id
+error 2020-11-27T14:54:20.589Z - TypeError: [object Object] is not a id
+info 2020-11-27T14:54:48.978Z - stopping server
+info 2020-11-27T14:55:17.490Z - starting server
+info 2020-11-27T14:55:17.764Z - server running on port 4000
+info 2020-11-27T15:02:43.194Z - starting server
+info 2020-11-27T15:02:43.413Z - server running on port 4000
+info 2020-11-27T15:04:27.534Z - starting server
+info 2020-11-27T15:04:27.761Z - server running on port 4000
+info 2020-11-27T15:09:14.418Z - starting server
+info 2020-11-27T15:09:14.636Z - server running on port 4000
+info 2020-11-27T15:19:57.825Z - starting server
+info 2020-11-27T15:19:58.088Z - server running on port 4000
+error 2020-11-27T15:20:47.929Z - ReferenceError: id is not defined
+info 2020-11-27T15:35:57.400Z - starting server
+info 2020-11-27T15:35:57.557Z - server running on port 4000
+error 2020-11-27T15:36:12.231Z - NotFoundError: user with id 5fc11277ca52dd1bb829cc33 not found
+info 2020-11-27T15:36:47.669Z - starting server
+info 2020-11-27T15:36:47.846Z - server running on port 4000
+error 2020-11-27T15:36:52.216Z - TypeError: [object Object] is not a id
+info 2020-11-27T15:37:19.675Z - starting server
+info 2020-11-27T15:37:19.822Z - server running on port 4000
+error 2020-11-27T15:37:28.928Z - NotFoundError: user with id 5fc11277ca52dd1bb829cc33 not found
+error 2020-11-27T15:38:03.856Z - NotFoundError: user with id 5fc11d5bc0ff3c167c0523e3 not found

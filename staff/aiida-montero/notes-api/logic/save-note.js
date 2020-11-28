@@ -10,6 +10,7 @@ module.exports = function (ownerId, noteId, text, tags, visibility) {
     validateText(text)
     validateTags(tags)
     validateVisibility(visibility)
+    const {NotFoundError} = require ('../errors')
 
     const { connection } = this
 
@@ -22,7 +23,7 @@ module.exports = function (ownerId, noteId, text, tags, visibility) {
     return users
     .findOne({ _id }) 
     .then (user => {
-        if (!user) throw new Error(`user with id ${ownerId} not found`)
+        if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
         const notes = db.collection('notes')
 
@@ -32,7 +33,7 @@ module.exports = function (ownerId, noteId, text, tags, visibility) {
             return notes 
             .findOne({ _id })
             .then ( note => {
-                if (!note) throw new Error(`note with id ${noteId} not found`)
+                if (!note) throw new NotFoundError(`note with id ${noteId} not found`)
 
                 return notes
                 .updateOne({ _id } , { $set: { text, tags, visibility }}  )

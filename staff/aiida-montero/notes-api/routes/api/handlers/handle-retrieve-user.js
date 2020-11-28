@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken')
 const {env : {JWT_SECRET}} = process
 
 module.exports = (req, res, handleError) => {
+    debugger
     const { headers: { authorization } } = req
 
     
@@ -11,13 +12,13 @@ module.exports = (req, res, handleError) => {
  
     try {
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
-
-        retrieveUser(userId)
+        const {_id : id} = userId 
+        retrieveUser(id)
             .then((user) => res.status(200).json(user))
-            .catch (error => handleError(401, error))
+            .catch (handleError)
      
         
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }

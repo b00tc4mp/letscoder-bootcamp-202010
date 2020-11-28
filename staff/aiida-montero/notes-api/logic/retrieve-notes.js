@@ -3,7 +3,7 @@ const context = require('./context');
 const ObjectId = require('mongodb').ObjectId; 
 
 const { env: { DB_NAME } } = process
-
+const {NotFoundError} = require ('../errors')
 
 module.exports = function (ownerId)  {
     validateId(ownerId)
@@ -22,7 +22,7 @@ module.exports = function (ownerId)  {
     .findOne({ _id })
     .then (user => {    
 
-    if(!user) return callback (new Error (`user with id ${ownerId} not found`))
+    if(!user) return callback (new NotFoundError (`user with id ${ownerId} not found`))
 
     const notes = db.collection('notes')
 

@@ -14,12 +14,12 @@ module.exports = (req, res, handleError) => {
         const {sub: userId} = jwt.verify(token, JWT_SECRET)
         retrieveNotes(userId) 
         .then(notes =>  res.status(200).json(notes))
-        .catch (error =>handleError(401, error))
+        .catch (handleError)
 
            
         
     } catch (error) {
-       handleError(400, error)
+       handleError(error)
     
 }
 }
