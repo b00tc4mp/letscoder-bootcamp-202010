@@ -1,23 +1,18 @@
 require('dotenv').config()
-const { MongoClient } = require('mongodb')
-const context = require('./context')
-const retrieveUser = require('./retrieve-user')
 
+const retrieveUser = require('./retrieve-user')
+const mongoose = require('mongoose')
 const { env: { MONGODB_URL } } = process
 
-const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-return client.connect().then(connection => {
-
-    context.connection = connection
-
+return mongoose.connect(MONGODB_URL, {useUnifiedTopology: true, useNewUrlParser: true})
+    .then(() => {
     try {
-        retrieveUser('5fb8fad9a15a822fff0a201b')
+        retrieveUser('5fc137643b839bd272f736db')
         .then((user) => console.log(user))
         .catch(error => console.log('could not retrieve user', error))
-        .then(() => client.close())
+        .then(() => mongoose.disconnect())
     } catch (error) {
         console.log ('validation error', error)
     }
-
 })

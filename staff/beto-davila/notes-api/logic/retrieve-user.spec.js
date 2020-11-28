@@ -1,29 +1,16 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const { MongoClient, ObjectId } = require('mongodb')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
-const context = require('./context')
 const retrieveUser = require('./retrieve-user')
+const mongoose = require('mongoose')
+const { User } = require('../models')
 
-const { env: { MONGODB_URL, DB_NAME } } = process
+const { env: { MONGODB_URL } } = process
 
 describe('SPEC retrieveUser()', () => {
-    let client, db, users
-
     // creating db connection for all cases 
-    before(done => {
-        client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-        client.connect((error, connection) => {
-            if (error) return done(error)
-
-            context.connection = connection
-
-            db = connection.db(DB_NAME)
-
-            users = db.collection('users')
-
-            done()
+    before(() => {
+        mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useCreateIndex: true, useNewUrlParser: true })
         })
     })
 
@@ -37,7 +24,7 @@ describe('SPEC retrieveUser()', () => {
 
             const user = { fullname, email, password }
 
-            users.insertOne(user, (error, result) => {
+            User.create(user, (error, result) => {
                 if (error) return done(error)
 
                 userId = result.insertedId.toString()

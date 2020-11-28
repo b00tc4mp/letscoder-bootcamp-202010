@@ -23,7 +23,7 @@ function Register({ onRegister, onGoToLogin }) {
           <button className="register__btn btn" >Send</button>      
         </form>
 
-        <span>or</span><button className="register__btn--login btn" onClick={onGoToLogin}> Login </button>
+        <span>or</span><a className="register__btn--login btn" onClick={onGoToLogin}> Login </a>
     </section>
 }
 

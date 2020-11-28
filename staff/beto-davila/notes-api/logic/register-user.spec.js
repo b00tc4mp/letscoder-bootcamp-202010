@@ -1,32 +1,21 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const { MongoClient, ObjectId } = require('mongodb')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
-const context = require('./context')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString } = require('../utils/randoms')
 const registerUser = require('./register-user')
+const mongoose = require('mongoose')
+const { User } = require('../models')
 
-const { env: { MONGODB_URL, DB_NAME } } = process
+const { env: { MONGODB_URL } } = process
 
 describe('SPEC registerUser()', () => {
-    let client, db, users
-
     // creating db connection for all cases 
     before(() => {
-        client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-        return client.connect().then(connection => {
-
-            context.connection = connection
-
-            db = connection.db(DB_NAME)
-
-            users = db.collection('users')
-        })
+        mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
     })
 
     describe('when user does not exist', () => {
         let fullname, email, password
-        debugger
+        
         beforeEach(() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
@@ -36,7 +25,7 @@ describe('SPEC registerUser()', () => {
         it ('should suceed on correct registration', () => {
             registerUser(fullname, email, password).then(() => {
 
-                return users.findOne({email, password}).then(user => {
+                return User.findOne({email, password}).then(user => {
 
                     expect(user).to.exist
                     expect(user.fullname).to.equal(fullname)
@@ -45,7 +34,7 @@ describe('SPEC registerUser()', () => {
             })
         })
         afterEach( () =>
-            users.deleteOne({ email }).then(result => expect(result.deletedCount).to.equal(0))
+            User.deleteOne({ email }).then(result => expect(result.deletedCount).to.equal(0))
         )
     })
 
@@ -59,7 +48,7 @@ describe('SPEC registerUser()', () => {
 
             const user = { fullname, email, password }
 
-            return users.insertOne(user).then(result => undefined)
+            return User.create(user).then(result => undefined)
         })
 
         it('should fail on already registered user', () => {
@@ -69,7 +58,7 @@ describe('SPEC registerUser()', () => {
             })
         })
         afterEach( () =>
-            users.deleteOne({ email }).then(result => expect(result.deletedCount).to.equal(1))
+            User.deleteOne({ email }).then(result => expect(result.deletedCount).to.equal(1))
         )
     })
     describe('when any parameter is wrong', () => {
@@ -120,5 +109,5 @@ describe('SPEC registerUser()', () => {
 
             })
         })
-        after(() => client.close())
+        after(() => mongoose.disconnect())
 })

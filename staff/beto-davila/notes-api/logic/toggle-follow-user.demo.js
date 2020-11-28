@@ -1,18 +1,21 @@
 require('dotenv').config()
-const { MongoClient } = require('mongodb')
-const context = require('./context')
+
+const mongoose = require('mongoose')
 
 const toggleFollowUser = require ('./toggle-follow-user')
 
 const { env: { MONGODB_URL } } = process
 
-const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-client.connect((error, connection) => {
-    if (error) return console.error(error)
-
-    context.connection = connection
-
-    toggleFollowUser('5fb898ff3a550d5535a9963d', '5fb8fad9a15a822fff0a201b', console.log)
-
-})
+mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true})
+    .then(() => {
+        try {
+            toggleFollowUser('5fbfe34b25c054a94e22253f', '5fbfe8ac3b0c41aa74c830f0')
+            .then(() => console.log('you added or removed a follow'))
+            .catch(console.log)
+            .then(() => mongoose.disconnect())
+            .then(() => console.log('client disconnected'))
+        } catch (error) {
+            console.log(error)
+        }
+    })

@@ -161,7 +161,6 @@ describe('SPEC saveNote()', () => {
 
                     })
             })
-
             afterEach(() => {
                 users
                     .deleteOne({email, password})

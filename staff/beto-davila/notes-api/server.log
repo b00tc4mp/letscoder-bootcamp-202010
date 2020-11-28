@@ -456,3 +456,36 @@ info 2020-11-26T10:34:28.388Z - stopping server
 info 2020-11-26T10:34:30.395Z - starting server
 info 2020-11-26T10:34:30.458Z - server running on port 4000
 info 2020-11-26T12:10:29.633Z - stopping server
+info 2020-11-26T14:11:35.960Z - starting server
+info 2020-11-26T14:11:36.038Z - server running on port 4000
+error 2020-11-26T14:19:39.924Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/notes-api/logic/authenticate-user.js:30:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T14:29:01.583Z - stopping server
+info 2020-11-27T06:39:53.142Z - starting server
+info 2020-11-27T06:39:53.261Z - server running on port 4000
+info 2020-11-27T06:40:45.712Z - stopping server
+info 2020-11-27T12:50:51.013Z - starting server
+info 2020-11-27T12:50:51.118Z - server running on port 4000
+info 2020-11-27T12:51:32.200Z - stopping server
+info 2020-11-27T12:51:34.426Z - starting server
+info 2020-11-27T12:51:34.529Z - server running on port 4000
+info 2020-11-27T12:52:27.245Z - stopping server
+info 2020-11-27T13:20:48.190Z - starting server
+info 2020-11-27T13:20:48.298Z - server running on port 4000
+error 2020-11-27T13:21:07.194Z - 204
+error 2020-11-27T13:21:18.975Z - 204
+info 2020-11-27T13:22:47.296Z - stopping server
+info 2020-11-27T14:18:01.018Z - starting server
+info 2020-11-27T14:18:01.124Z - server running on port 4000
+info 2020-11-27T14:41:23.912Z - stopping server
+info 2020-11-27T17:09:46.681Z - starting server
+info 2020-11-27T17:09:46.792Z - server running on port 4000
+error 2020-11-27T17:10:02.100Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/notes-api/logic/authenticate-user.js:26:47
+error 2020-11-27T17:12:36.599Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/notes-api/logic/authenticate-user.js:26:47
+info 2020-11-27T17:12:49.249Z - stopping server
+info 2020-11-27T17:28:49.922Z - starting server
+info 2020-11-27T17:28:50.046Z - server running on port 4000
+info 2020-11-27T17:31:00.665Z - stopping server

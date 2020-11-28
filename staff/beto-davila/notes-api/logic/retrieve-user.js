@@ -1,34 +1,36 @@
 // const fs = require('fs')
 // const path = require('path')
-// const { ObjectID } = require('mongodb')
+// const { ObjectId } = require('mongodb')
 const { validateId } = require('./helpers/validations')
-const { ObjectId } = require('mongodb')
-const context = require('./context')
 const { NotFoundError } = require('../errors')
+const { User } = require('../models')
 
-const { env: { DB_NAME } } = process
+/**
+ * Retrieves a user by its id
+ * 
+ * @param {string} userId 
+ * 
+ * @returns {Promise}
+ */
 
 module.exports = function (userId) {
     validateId(userId)
 
-    const { connection } = this
+    // const _id = ObjectId.createFromHexString(userId)
 
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
-    const _id = ObjectId.createFromHexString(userId)
-
-    return users
-        .findOne({_id})
+    return User
+        .findById(userId).lean()
         .then( user => {
 
                 if (!user) throw new NotFoundError(`The user with id ${userId} was not found`)
                     
-                const { _id, fullname, email} = user
+                const { _id } = user
 
-                user = { userId: _id, fullname, email}
+                user.id = _id.toString()
+
+                delete user._id
+                delete user.password
 
                 return user
                 })
-}.bind(context)
+}

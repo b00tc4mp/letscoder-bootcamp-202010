@@ -1,27 +1,17 @@
-const { validateId, validateCallback } = require('./helpers/validations')
+const { validateId } = require('./helpers/validations')
 const { ObjectId } = require('mongodb')
-const context = require('./context')
 const { NotFoundError } = require('../errors')
-
-const { env: { DB_NAME } } = process
-
-module.exports = function (userId, followingId, callback) {
+const { User } = require('../models')
+ 
+module.exports = (userId, followingId) => {
     validateId(userId)
     validateId(followingId)
-    validateCallback(callback)
-
-    const { connection } = this
-
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
 
     const _id = ObjectId.createFromHexString(userId)
 
-    users.findOne({_id} ,(error, user) => {
-        if(error) return callback(error)
+    return User.findOne({_id}).then(user => {
 
-        if (!user) return callback(new NotFoundError(`User with id ${userId} not found`))
+        if (!user) throw new NotFoundError(`User with id ${userId} not found`)
         
         const { _id } = user
 
@@ -29,7 +19,7 @@ module.exports = function (userId, followingId, callback) {
 
         // followings = []  reinitialize array each time
 
-        user = { userId: _id, followings }
+        user = { userId: _id, followings: [] }
 
         // look for followees before adding. If it exists remove it, otherwise add it to 'followings' array (toggle)
         if (followings.length) {
@@ -39,24 +29,18 @@ module.exports = function (userId, followingId, callback) {
             // if < 0, does not exist in array, add it, else, remove it with splice method
             index < 0? followings.push(ObjectId.createFromHexString(followingId)) : followings.splice(index, 1)
 
-            users.updateOne({ _id }, { $set: { followings } }, (error, result) => {
-                if (error) return callback(error)
-
-                callback(null)
-            })
-
-            return callback(null)
+            return User.update({ _id }, { $set: { followings } })
+                .then(result => {})
+                .then(() => {})
+             
 
         } else {
             // add new followee to empty array
             followings.push(ObjectId.createFromHexString(followingId))
 
-            users.updateOne({ _id }, { $set: { followings } }, (error, result) => {
-                if (error) return callback(error)
-    
-                callback(null)
-            })
+            return User.update({ _id }, { $set: { followings } })
+                .then(result => {})
         }
     })
 
-}.bind(context)
+}

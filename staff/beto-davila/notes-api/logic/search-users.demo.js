@@ -1,24 +1,18 @@
 require('dotenv').config()
-const { MongoClient, connect } = require('mongodb')
-const context = require('./context')
+const mongoose = require('mongoose')
+const { User } = require('../models')
 
-const searchUsers = require ('./search-users')
+const { MONGODB_URL } = process.env
 
-const { env: { MONGODB_URL } } = process
+const searchUsers = require('./search-users')
 
-const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-return client
-    .connect()
-    .then(connection => {
-
-    context.connection = connection
-
+mongoose.connect(MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => {
     try {
-        searchUsers('undo')
-        .then( users => console.log('The result of your search:', users))
+        searchUsers('hola')
+        .then(users => console.log('The result of your search:', users))
         .catch(error => console.log('could not find any match', error))
-        .then(() => client.close())
+        .then(() => mongoose.disconnect())
         .then(() => console.log('client closed'))
         
     } catch (error) {

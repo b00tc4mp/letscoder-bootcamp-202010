@@ -1,24 +1,18 @@
 require('dotenv').config()
 
-const { MongoClient } = require('mongodb')
-const context = require('./context')
-
+const mongoose = require('mongoose')
 const { env: { MONGODB_URL } } = process
 
 const authenticateUser = require('./authenticate-user')
-const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
-return client
-    .connect()
-        .then(connection => {
-
-            context.connection = connection
-
+mongoose
+        .connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true})
+        .then(() => {
         try {
-            authenticateUser('dagoman19@gmail.com', '1234')
+            authenticateUser('pajarin@gmail.com', '123')
             .then(() => console.log('successfull authentication'))
-            .catch(error => console.log(error))
-            .then(() => client.close())
+            .catch(console.log)
+            .then(() => mongoose.disconnect())
             
         } catch (error) {
             console.log('validation error', error)

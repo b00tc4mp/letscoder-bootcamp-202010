@@ -2,31 +2,34 @@
 // const path = require('path')
 const { validateEmail, validatePassword } = require('./helpers/validations')
 const { AuthError } = require('../errors')
-const context = require('./context')
+// const context = require('./context')
+const { User } = require('../models')
+const bcryptjs = require('bcryptjs')
 
-const { env: { DB_NAME } } = process
-
-module.exports = function (email, password) {
+module.exports = (email, password) => {
     validateEmail(email)
     validatePassword(password)
 
-    const { connection } = this
+    // const { connection } = this
+    // const db = connection.db(DB_NAME)
+    // const users = db.collection('users')
 
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
-    return users
-        .findOne({email, password}) 
+    return User.findOne({email}).lean() 
                 .then(user => {
 
-                if (user) {
-                    const { _id } = user
+                if (!user) throw new AuthError('wrong credentials')
 
-                    const userId = _id.toHexString()
+                    const { password: hash } = user
 
-                    return userId
+                    return bcryptjs.compare(password, hash)
+                        .then(match => {
+                            if (!match) throw new AuthError('wrong credentials')
 
-                } else throw new AuthError('wrong credentials')
+                            const { _id } = user
+        
+                            return _id.toString()
+        
+                        })
+
             })
-}.bind(context)
+}
