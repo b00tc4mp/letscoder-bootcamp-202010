@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Register
+    link(rel='stylesheet' href='/style.css')
+    link(rel='shortcut icon' href='/favicon.ico' type='image/x-icon')
+  body
+    h1 Register
+    form(action='/register' method='POST')
+      input(type='text' name='fullname' id='')
+      input(type='email' name='email' id='')
+      input(type='password' name='password' id='')
+      button send
+    |     or 
+    a(href='/login') login
+    if feedback
+      p.feedback.feedback--error= feedback
+    #root
+    script(crossorigin='' src='https://unpkg.com/react@17.0.1/umd/react.development.js')
+    script(crossorigin='' src='https://unpkg.com/react-dom@17.0.1/umd/react-dom.development.js')
+    script(src='https://unpkg.com/@babel/standalone@7.12.6/babel.min.js')
+    script.
+      const state = {
+      cookiesAccepted: #{!!cookiesAccepted}
+      }
+    script(src='/utils/call.js')
+    script(src='/logic/helpers/validations.js')
+    script(src='/logic/accept-cookies.js')
+    script(src='/components/accept-cookies.jsx' type='text/babel')
+    script(src='/landing-app.jsx' type='text/babel')
