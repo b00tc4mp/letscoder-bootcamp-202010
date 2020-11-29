@@ -8,6 +8,7 @@ module.exports = (req, res, handleError) => {
     const { body: { query } } = req
 
     try {
+      
         findUsers(query) 
 
             .then((results) => {

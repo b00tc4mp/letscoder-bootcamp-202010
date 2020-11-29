@@ -10,10 +10,10 @@ function FindUsers( { onFind } ) {
 
             onFind(query)
         }}>
-            <>
+           
             <input className='findUsers__input' type="query" name="query" placeholder="insert your query" />
            
-            </>
+            
             <button className='findUsers__button'>SHOW USERS</button>
         </form>
 

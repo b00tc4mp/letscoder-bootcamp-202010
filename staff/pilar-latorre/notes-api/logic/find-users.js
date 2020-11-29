@@ -15,7 +15,7 @@ module.exports = function (query) {
             //users = users.map(({ _id, fullname, email }) => ({ id: _id.toString(), fullname, email }))
             users.forEach(user => {
                 const { _id } = user
-
+debugger
                 user.id = _id.toString()
 
                 delete user._id

@@ -11,7 +11,7 @@ function Home() {
     const [notes, setNotes] = useState()
     const [success, setSuccess] = useState()
     const [token, setToken] = useState()
-    const [query, setResults] = useState()
+    const [query, setQuery] = useState()
 
 
     useEffect( () => {
@@ -46,22 +46,21 @@ function Home() {
         }
     }
 
-    const handleFindUsers = () => {
+    const handleFindUsers = (query) => {
         try {
-            FindUsers(query,( error, results) =>{
+            
+            findUsers(query,( error, userResults) =>{
                 if (error) return alert(error.message)
-                setResults(results)
+                setQuery(userResults)
+          
             })
-
+          
         }catch(error) {
             alert(error.message)
 
 
         }
-
     }
-
-
 
     return <>
        
@@ -69,7 +68,8 @@ function Home() {
         {/* <Welcome /> */}
         {user && <Welcome user={user} />}
         <button className = "myNotes"onClick={handleRetrieveNotes} >Check your Notes</button>
-        <button className = "FindUsers"onClick={handleFindUsers} >Check the Users</button>
+        {!query && <FindUsers onFind= {handleFindUsers}/>} 
+        {query && <h2>seguimos trabajando en ello</h2>}
         {user && <NoteEditor onSavedNote={onSavedNote} userId={user.id} _token={token} />}
         {success && <h2>Su nota se ha guardado correctamente 🤩 </h2>}
         {notes && <Results results={notes} />}

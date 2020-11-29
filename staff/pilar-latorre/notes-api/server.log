@@ -698,3 +698,84 @@ info 2020-11-27T15:38:51.753Z - stopping server
 info 2020-11-27T15:38:56.298Z - starting server
 info 2020-11-27T15:38:56.416Z - server running on port 4000
 info 2020-11-27T15:46:32.851Z - stopping server
+info 2020-11-27T18:02:21.101Z - starting server
+info 2020-11-27T18:02:21.238Z - server running on port 4000
+info 2020-11-27T18:13:46.202Z - stopping server
+info 2020-11-27T18:13:56.188Z - starting server
+info 2020-11-27T18:13:56.313Z - server running on port 4000
+info 2020-11-27T18:24:14.252Z - stopping server
+info 2020-11-27T18:24:18.491Z - starting server
+info 2020-11-27T18:24:18.604Z - server running on port 4000
+info 2020-11-27T18:27:08.256Z - stopping server
+info 2020-11-27T18:27:30.069Z - starting server
+info 2020-11-27T18:27:30.218Z - server running on port 4000
+info 2020-11-27T18:29:00.903Z - starting server
+info 2020-11-27T18:29:01.122Z - server running on port 4000
+info 2020-11-27T18:34:20.969Z - starting server
+info 2020-11-27T18:34:21.079Z - server running on port 4000
+error 2020-11-27T18:34:43.816Z - MongoError: "$search" had the wrong type. Expected string, found null
+    at MessageStream.messageHandler (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:315:20)
+    at processIncomingData (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at MessageStream.Writable.write (_stream_writable.js:303:10)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+error 2020-11-27T18:35:31.272Z - MongoError: "$search" had the wrong type. Expected string, found null
+    at MessageStream.messageHandler (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:315:20)
+    at processIncomingData (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at MessageStream.Writable.write (_stream_writable.js:303:10)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-11-27T18:36:44.385Z - stopping server
+info 2020-11-27T18:36:47.328Z - starting server
+info 2020-11-27T18:36:47.448Z - server running on port 4000
+error 2020-11-27T18:37:03.849Z - MongoError: "$search" had the wrong type. Expected string, found null
+    at MessageStream.messageHandler (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:315:20)
+    at processIncomingData (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at MessageStream.Writable.write (_stream_writable.js:303:10)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+error 2020-11-27T18:37:12.799Z - MongoError: "$search" had the wrong type. Expected string, found null
+    at MessageStream.messageHandler (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:315:20)
+    at processIncomingData (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at MessageStream.Writable.write (_stream_writable.js:303:10)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-11-27T18:43:57.476Z - stopping server
+info 2020-11-27T18:44:00.630Z - starting server
+info 2020-11-27T18:44:00.744Z - server running on port 4000
+info 2020-11-27T18:45:59.930Z - stopping server
+info 2020-11-27T18:46:03.207Z - starting server
+info 2020-11-27T18:46:03.363Z - server running on port 4000
+info 2020-11-27T18:56:24.780Z - stopping server
+info 2020-11-27T18:57:00.512Z - starting server
+info 2020-11-27T18:57:00.697Z - server running on port 4000
+info 2020-11-28T12:14:39.716Z - starting server
+info 2020-11-28T12:14:39.926Z - server running on port 4000

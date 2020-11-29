@@ -5,7 +5,7 @@ export default function (query, callback) {
     //validateEmail(email)
     //validatePassword(password)
     //validateCallback(callback)
-
+debugger
     call('POST', 'http://localhost:4000/api/users/find', { 'Content-type': 'application/json'},
         JSON.stringify({query}),
         (status, response) => {
@@ -16,7 +16,7 @@ export default function (query, callback) {
                 return callback(new Error(error))
 
             } 
-            const  results  = JSON.parse(response) 
+            const results  = JSON.parse(response) 
             callback(null, results)
         })
 }
