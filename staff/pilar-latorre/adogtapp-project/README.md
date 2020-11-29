@@ -6,6 +6,10 @@ This APP provides you information about the closest shelters and shows you the p
 
 ![Alt Adogtap](https://media2.giphy.com/media/eYilisUwipOEM/giphy.gif?cid=ecf05e471g8xjdntjop71tdweqwwnuf5vdu8ru15eta7o9v1&rid=giphy.gif)
 
+## Mockup
+
+![Alt Mockup](mockup.png)
+
 ## Functional Description
 
 ### Use Cases
@@ -19,6 +23,10 @@ Search shelters and find a pet, and if you are a shelter sign in & sing up, upda
 ![Alt Operate Activity](opActivities.png)
 
 ## Technical Description
+
+### Collections
+
+![Alt Collections](collections.png)
 
 ### Blocks
 
