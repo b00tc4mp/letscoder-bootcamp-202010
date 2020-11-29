@@ -14,9 +14,9 @@ This APP provides you information about the closest shelters and shows you the p
 
 ### Activities
 
-Search tracks and display info about the track
+Search shelters and find a pet, and if you are a shelter sign in & sing up, update and delete info about the animals.
 
-![Alt Operate Activity](opActivity.png)
+![Alt Operate Activity](opActivities.png)
 
 ## Technical Description
 
