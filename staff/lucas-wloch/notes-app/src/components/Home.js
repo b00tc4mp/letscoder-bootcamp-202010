@@ -2,11 +2,12 @@
 import './Results.sass'
 
 import Welcome from './Welcome'
-import { retrieveUser, retrieveNotes } from '../logic'
+import { retrieveUser, retrieveNotes, retrievePublicNotes } from '../logic'
 import { useEffect, useState } from 'react'
 import NoteEditor from './NoteEditor'
 import Results from './Results'
 import SearchUser from './SearchUser'
+import SaveProducts from './SaveProducts'
 
 
 function Home() {
@@ -33,11 +34,11 @@ function Home() {
     const handleRetrieveUser = () => {
 
         const { token } = sessionStorage
-        
+
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
-                
+
                 setUser(user)
             })
         } catch (error) {
@@ -50,12 +51,31 @@ function Home() {
             setSuccess(false)
         }, 4000)
     }
-    
+    const onSavedProduct = () => {
+        setSuccess(true)
+        setTimeout(() => {
+            setSuccess(false)
+        }, 4000)
+    }
+
     const handleRetrieveNotes = () => {
         const { token } = sessionStorage
-        
+
         try {
             retrieveNotes(token, (error, notes) => {
+                if (error) return alert(error.message)
+                setNotes(notes)
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+    const handleRetrievePublicNotes = () => {
+        const { token } = sessionStorage
+
+        try {
+            retrievePublicNotes(token, user.follows ? user.follows : [], (error, notes) => {
                 if (error) return alert(error.message)
                 setNotes(notes)
             })
@@ -70,12 +90,14 @@ function Home() {
         <h1>HOME </h1>
         {/* {user ? <h1>HOME {user.fullname} </h1> : <h1>HOME </h1>} */}
         {/* <Welcome /> */}
-        {user && <Welcome user={user} />}
+        {/* {user && <Welcome user={user} />}
         <SearchUser onfollowedUser={handleRetrieveUser} />
         <button onClick={handleRetrieveNotes}>My Notes</button>
+        <button onClick={handleRetrievePublicNotes}>Public Notes</button>
         {user && <NoteEditor onSavedNote={onSavedNote} />}
-        {success && <h2>Su nota se guardo correctamente</h2>}
-        {notes && <Results results={notes} onDelete={handleRetrieveNotes} />}
+    {notes && <Results results={notes} onDelete={handleRetrieveNotes} />} */}
+        {success && <h2>Su producto se guardo correctamente</h2>}
+        <SaveProducts onSavedProduct={onSavedProduct} />
     </>
 
 

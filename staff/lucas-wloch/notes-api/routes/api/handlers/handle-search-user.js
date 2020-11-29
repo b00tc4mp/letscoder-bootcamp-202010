@@ -10,11 +10,11 @@ module.exports = (req, res, handleError) => {
     
     
     try {
-        const payload = jwt.verify(token, JWT_SECRET)
-        searchUserFullname(query)
+        const {sub: userId} = jwt.verify(token, JWT_SECRET)
+        searchUserFullname(userId, query)
             .then(results => res.status(200).json(results))
-            .catch(error => handleError(204, error))
+            .catch(handleError)
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }

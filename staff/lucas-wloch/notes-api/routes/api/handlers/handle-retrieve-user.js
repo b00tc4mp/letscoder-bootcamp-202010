@@ -6,16 +6,16 @@ const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
     const { headers: { authorization } } = req
-    
-    const token = authorization.replace('Bearer ','')
-    
+
+    const token = authorization.replace('Bearer ', '')
+
     const { sub: userId } = jwt.verify(token, JWT_SECRET)
 
     try {
         retrieveUser(userId)
-        .then(user => res.status(200).json({ user }))
-        .catch(error => handleError(401, error))
+            .then(user => res.status(200).json({ user }))
+            .catch(handleError)
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }

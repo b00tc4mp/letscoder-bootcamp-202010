@@ -1,33 +1,35 @@
-const { validateId, validateCallback } = require('./helpers/validations')
-const context = require('./context')
-const { env: { DB_NAME } } = process
+const { validateId } = require('./helpers/validations')
 const ObjectId = require('mongodb').ObjectId;
+const { NotFoundError } = require('../errors')
+const { User, Note } = require('../models')
+
+
 
 
 module.exports = (owner) => {
     validateId(owner)
 
-    const { connection } = context
+    return User
+        .findOne({ _id: owner })
+        .then( user => {
+            if (!user) throw new NotFoundError(`user with id ${owner} not found`)
 
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
-    return users
-        .findOne({ _id: ObjectId(owner) })
-        .then(user => {
-            if (!user) throw new Error(`user with id ${owner} not found`)
-
-            const notes = db.collection('notes')
-
-            const cursor = notes.find({ owner: ObjectId(owner) }, { sort: { date: -1 } })
-
-            return cursor.toArray()
+            // , { sort: { date: -1 } }
+            return Note.find({ owner })
                 .then(notes => {
                     notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, owner, visibility, date }))
 
                     return notes
                 })
+
+
+            // const cursor = Note.find({ owner: ObjectId(owner) }, { sort: { date: -1 } })
+            // return cursor.toArray()
+            //     .then(notes => {
+            //         notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, owner, visibility, date }))
+
+            //         return notes
+            //     })
         })
 
     // notes.find({ owner: ObjectId(owner) }).toArray((error, results) => {

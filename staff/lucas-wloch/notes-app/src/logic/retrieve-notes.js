@@ -13,7 +13,6 @@ function retrieveNotes(token,callback){
         }else if(status === 200){
             const notes = JSON.parse(response);
             // const notes = notesCursor.toArray()
-            // debugger
             callback(null,notes);
         } else {
             var res = JSON.parse(response);

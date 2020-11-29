@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const { cookieParser, cookieSession, jsonBodyParser, tokenParser } = require('../../middlewares')
+const { cookieParser, cookieSession, jsonBodyParser } = require('../../middlewares')
 
 const {
     handleAcceptCookies,
@@ -10,7 +10,9 @@ const {
     handleRetrieveNotes,
     handleSearchUser,
     handleDeleteNote,
-    handleFollowUser
+    handleFollowUser,
+    handleRetrievePublicNotes,
+    handleSaveProducts
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -34,5 +36,10 @@ router.post('/api/users/search',jsonBodyParser, withErrorHandling(handleSearchUs
 router.post('/api/notes/delete',jsonBodyParser, withErrorHandling(handleDeleteNote))
 
 router.post('/api/users/follow',jsonBodyParser, withErrorHandling(handleFollowUser))
+
+router.post('/api/notes/public',jsonBodyParser, withErrorHandling(handleRetrievePublicNotes))
+
+
+router.post('/api/products/save',jsonBodyParser, withErrorHandling(handleSaveProducts))
 
 module.exports = router

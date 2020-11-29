@@ -1,11 +1,13 @@
 import { call } from '../utils'
-import {  validateCallback, validateId } from './helpers/validations'
+import {  validateCallback, validateId, validateToken } from './helpers/validations'
 
-export default function (noteId, callback) {
+export default function (token, noteId, callback) {
+    validateToken(token)
     validateId(noteId)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/notes/delete', { 'Content-type': 'application/json'},
+    call('POST', 'http://localhost:4000/api/notes/delete',
+     { 'Content-type': 'application/json', Authorization: `Bearer ${token}`},
         JSON.stringify({ noteId }),
         (status, response) => {
             if (status === 0) {

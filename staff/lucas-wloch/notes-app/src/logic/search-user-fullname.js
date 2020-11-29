@@ -19,7 +19,7 @@ function searchUserFullname(token, query, callback) {
                 return callback(new Error(res.error));
 
             }
-            const results = JSON.parse(response);
+            let results = JSON.parse(response);
 
             call('GET', 'http://localhost:4000/api/users',
                 { Authorization: `Bearer ${token}` }, '', function (status, response) {
@@ -29,14 +29,15 @@ function searchUserFullname(token, query, callback) {
                         var res = JSON.parse(response);
                         callback(new Error(res.error));
                     }
-                    const { user } = JSON.parse(response);
+                    const  { user } = JSON.parse(response);
 
                     const { follows = [] } = user
                     
 
                     /////////
 
-                    results.forEach(user => user.followed = follows.includes(user.id))
+                    // results = results.map(user => user.followed = follows.includes(user.id))
+                    results.forEach(user => user.followed = follows.includes(user.id) )
         
                     callback(null, results);
                 })

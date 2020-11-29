@@ -7,5 +7,7 @@ module.exports = {
     context: require('./context'),
     searchUserFullname: require('./search-user-fullname'),
     deleteNote: require('./delete-note'),
-    followUser: require('./follow-user')
+    followUser: require('./follow-user'),
+    retrievePublicNotes: require('./retrieve-public-notes'),
+    saveProducts: require('./save-products')
 }

@@ -616,3 +616,1037 @@ info 2020-11-25T17:52:32.430Z - stopping server
 info 2020-11-25T17:52:36.793Z - starting server
 info 2020-11-25T17:52:36.918Z - server running on port 4000
 info 2020-11-25T18:33:21.506Z - stopping server
+info 2020-11-26T12:41:00.753Z - starting server
+info 2020-11-26T12:41:00.859Z - server running on port 4000
+error 2020-11-26T12:42:22.828Z - AuthError: wrong credentials
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\authenticate-user.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-11-26T12:43:20.491Z - AuthError: wrong credentials
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\authenticate-user.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T12:53:16.770Z - stopping server
+info 2020-11-26T14:11:32.889Z - starting server
+info 2020-11-26T14:11:32.996Z - server running on port 4000
+error 2020-11-26T14:12:10.063Z - ReferenceError: validateId is not defined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:14:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-search-user.js:14:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T14:12:14.188Z - ReferenceError: validateId is not defined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:14:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-search-user.js:14:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-26T14:13:01.453Z - stopping server
+info 2020-11-26T14:13:03.952Z - starting server
+info 2020-11-26T14:13:04.046Z - server running on port 4000
+info 2020-11-26T14:41:32.939Z - stopping server
+info 2020-11-26T14:41:36.029Z - starting server
+info 2020-11-26T14:41:36.100Z - server running on port 4000
+info 2020-11-26T14:55:41.225Z - stopping server
+info 2020-11-26T15:14:44.362Z - starting server
+info 2020-11-26T15:14:44.458Z - server running on port 4000
+error 2020-11-26T15:16:58.898Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:68:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T15:18:22.812Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:68:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T15:19:03.537Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:68:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T15:19:41.999Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:68:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T15:20:24.444Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:68:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T15:20:31.226Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:68:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T15:22:48.624Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:68:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-26T15:26:51.349Z - stopping server
+info 2020-11-26T15:27:02.788Z - starting server
+info 2020-11-26T15:27:02.872Z - server running on port 4000
+error 2020-11-26T15:30:22.464Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:69:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-26T15:33:04.860Z - starting server
+info 2020-11-26T15:33:04.944Z - server running on port 4000
+error 2020-11-26T15:33:13.927Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:69:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-26T15:33:41.165Z - TypeError: undefined is not an array
+    at validateFollows (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\validations.js:69:48)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-26T15:34:58.718Z - starting server
+info 2020-11-26T15:34:58.797Z - server running on port 4000
+error 2020-11-26T15:37:31.990Z - MongoError: unknown operator: $or
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-11-26T15:39:29.612Z - starting server
+info 2020-11-26T15:39:29.682Z - server running on port 4000
+error 2020-11-26T15:39:36.747Z - MongoError: unknown operator: $or
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-11-26T15:43:04.091Z - stopping server
+info 2020-11-26T15:43:07.138Z - starting server
+info 2020-11-26T15:43:07.211Z - server running on port 4000
+error 2020-11-26T15:43:11.036Z - MongoError: unknown operator: $or
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-11-26T15:43:13.567Z - MongoError: unknown operator: $or
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-11-26T15:43:52.081Z - stopping server
+info 2020-11-26T15:43:55.004Z - starting server
+info 2020-11-26T15:43:55.082Z - server running on port 4000
+error 2020-11-26T15:44:00.947Z - MongoError: $or/$and/$nor entries need to be full objects
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-11-26T15:44:59.540Z - MongoError: $or/$and/$nor entries need to be full objects
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-11-26T15:45:18.983Z - stopping server
+info 2020-11-26T15:45:21.108Z - starting server
+info 2020-11-26T15:45:21.189Z - server running on port 4000
+error 2020-11-26T15:45:23.203Z - MongoError: $or must be an array
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-11-26T15:45:42.785Z - stopping server
+info 2020-11-26T15:45:46.401Z - starting server
+info 2020-11-26T15:45:46.482Z - server running on port 4000
+error 2020-11-26T15:45:47.135Z - MongoError: $or/$and/$nor entries need to be full objects
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-11-26T15:46:44.416Z - stopping server
+info 2020-11-26T15:46:52.007Z - starting server
+info 2020-11-26T15:46:52.089Z - server running on port 4000
+info 2020-11-26T15:49:21.845Z - starting server
+info 2020-11-26T15:49:21.925Z - server running on port 4000
+info 2020-11-26T15:49:54.123Z - starting server
+info 2020-11-26T15:49:54.217Z - server running on port 4000
+info 2020-11-26T15:51:19.472Z - starting server
+info 2020-11-26T15:51:19.560Z - server running on port 4000
+error 2020-11-26T15:54:33.190Z - ReferenceError: NotFoundError is not defined
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\delete-note.js:22:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T15:55:24.868Z - stopping server
+info 2020-11-26T15:55:27.094Z - starting server
+info 2020-11-26T15:55:27.171Z - server running on port 4000
+error 2020-11-26T15:55:29.402Z - NotFoundError: couldnt delete note with id 5fbfcf3734ed2c6d88a585d3
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\delete-note.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-11-26T15:55:35.664Z - NotFoundError: couldnt delete note with id 5fbfcf3234ed2c6d88a585d1
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\delete-note.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-11-26T15:55:38.909Z - NotFoundError: couldnt delete note with id 5fbfcf2d34ed2c6d88a585cf
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\delete-note.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T17:05:38.745Z - stopping server
+info 2020-11-26T17:38:40.326Z - starting server
+info 2020-11-26T17:38:40.472Z - server running on port 4000
+error 2020-11-26T17:39:59.878Z - ReferenceError: context is not defined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\register-user.js:13:28)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:8:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-26T17:40:55.780Z - stopping server
+info 2020-11-26T17:40:58.466Z - starting server
+info 2020-11-26T17:40:58.572Z - server running on port 4000
+info 2020-11-26T17:44:37.091Z - stopping server
+info 2020-11-26T17:44:40.146Z - starting server
+info 2020-11-26T17:44:40.257Z - server running on port 4000
+info 2020-11-26T17:46:18.511Z - stopping server
+info 2020-11-26T17:46:22.946Z - starting server
+info 2020-11-26T17:46:23.061Z - server running on port 4000
+info 2020-11-26T17:48:13.068Z - stopping server
+info 2020-11-26T17:48:15.545Z - starting server
+info 2020-11-26T17:48:15.782Z - server running on port 4000
+info 2020-11-26T17:50:28.542Z - stopping server
+info 2020-11-26T17:50:31.300Z - starting server
+info 2020-11-26T17:50:31.509Z - server running on port 4000
+info 2020-11-26T17:53:46.081Z - stopping server
+info 2020-11-26T17:53:48.634Z - starting server
+info 2020-11-26T17:53:48.739Z - server running on port 4000
+info 2020-11-26T18:06:51.978Z - stopping server
+info 2020-11-26T18:06:54.890Z - starting server
+info 2020-11-26T18:06:55.005Z - server running on port 4000
+error 2020-11-26T18:07:18.330Z - TypeError: Note.insertOne is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-note.js:42:22
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T18:08:39.055Z - stopping server
+info 2020-11-26T18:08:42.770Z - starting server
+info 2020-11-26T18:08:42.893Z - server running on port 4000
+error 2020-11-26T18:08:53.183Z - TypeError: cursor.toArray is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-notes.js:19:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T18:09:48.445Z - stopping server
+info 2020-11-26T18:09:50.944Z - starting server
+info 2020-11-26T18:09:51.052Z - server running on port 4000
+error 2020-11-26T18:09:54.590Z - TypeError: cursor.toArray is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-notes.js:19:31
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T18:11:31.830Z - stopping server
+info 2020-11-26T18:11:41.121Z - starting server
+info 2020-11-26T18:11:41.265Z - server running on port 4000
+info 2020-11-26T18:17:55.309Z - starting server
+info 2020-11-26T18:17:55.432Z - server running on port 4000
+error 2020-11-26T18:18:23.393Z - TypeError: Note.find(...).toArray is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-notes.js:19:18
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T18:18:42.795Z - starting server
+info 2020-11-26T18:18:42.920Z - server running on port 4000
+info 2020-11-26T18:24:57.293Z - starting server
+info 2020-11-26T18:24:57.425Z - server running on port 4000
+info 2020-11-26T18:29:14.019Z - starting server
+info 2020-11-26T18:29:14.145Z - server running on port 4000
+info 2020-11-26T18:31:50.207Z - starting server
+info 2020-11-26T18:31:50.335Z - server running on port 4000
+info 2020-11-26T18:34:54.565Z - starting server
+info 2020-11-26T18:34:54.701Z - server running on port 4000
+info 2020-11-26T18:44:31.676Z - starting server
+info 2020-11-26T18:44:31.937Z - server running on port 4000
+info 2020-11-26T18:53:55.858Z - starting server
+info 2020-11-26T18:53:55.995Z - server running on port 4000
+info 2020-11-26T19:18:02.485Z - starting server
+info 2020-11-26T19:18:02.750Z - server running on port 4000
+info 2020-11-27T08:28:59.547Z - starting server
+info 2020-11-27T08:29:00.054Z - server running on port 4000
+error 2020-11-27T08:37:08.828Z - TypeError: cursor.toArray is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:29:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T08:39:26.674Z - starting server
+info 2020-11-27T08:39:26.872Z - server running on port 4000
+error 2020-11-27T08:39:32.163Z - MongoError: $and/$or/$nor must be a nonempty array
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-11-27T08:40:23.723Z - stopping server
+info 2020-11-27T08:40:34.469Z - starting server
+info 2020-11-27T08:40:35.080Z - server running on port 4000
+error 2020-11-27T08:41:36.581Z - MongoError: $and/$or/$nor must be a nonempty array
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+    at TCP.callbackTrampoline (internal/async_hooks.js:126:14)
+info 2020-11-27T08:44:51.721Z - starting server
+info 2020-11-27T08:44:51.984Z - server running on port 4000
+error 2020-11-27T08:44:58.208Z - TypeError: retrievePublicNotes(...).then is not a function
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:17:10)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-27T08:46:00.714Z - stopping server
+info 2020-11-27T08:46:05.509Z - starting server
+info 2020-11-27T08:46:05.720Z - server running on port 4000
+error 2020-11-27T08:46:08.889Z - ReferenceError: resolve is not defined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-public-notes.js:11:25)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-retrieve-public-notes.js:16:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-27T08:46:33.112Z - stopping server
+info 2020-11-27T08:46:37.272Z - starting server
+info 2020-11-27T08:46:37.465Z - server running on port 4000
+error 2020-11-27T08:46:38.619Z - MongoError: $and/$or/$nor must be a nonempty array
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+error 2020-11-27T08:46:49.411Z - MongoError: $and/$or/$nor must be a nonempty array
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-11-27T08:47:28.103Z - stopping server
+info 2020-11-27T08:47:33.015Z - starting server
+info 2020-11-27T08:47:33.217Z - server running on port 4000
+error 2020-11-27T08:47:35.087Z - MongoError: $and/$or/$nor must be a nonempty array
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+error 2020-11-27T08:47:37.244Z - MongoError: $and/$or/$nor must be a nonempty array
+    at MessageStream.messageHandler (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-11-27T08:47:55.852Z - stopping server
+info 2020-11-27T08:47:59.859Z - starting server
+info 2020-11-27T08:48:00.037Z - server running on port 4000
+info 2020-11-27T08:48:54.833Z - stopping server
+info 2020-11-27T12:50:17.592Z - starting server
+info 2020-11-27T12:50:17.775Z - server running on port 4000
+error 2020-11-27T12:50:40.055Z - ReferenceError: chain is not defined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\semaphore.js:3:36)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\register-user.js:14:12)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:8:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-11-27T12:50:54.138Z - ReferenceError: chain is not defined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\helpers\semaphore.js:3:36)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\register-user.js:14:12)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:8:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-27T12:50:57.027Z - stopping server
+info 2020-11-27T12:50:59.924Z - starting server
+info 2020-11-27T12:51:00.067Z - server running on port 4000
+error 2020-11-27T12:51:53.049Z - TypeError: cursor.toArray is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:23:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T12:52:51.179Z - stopping server
+info 2020-11-27T12:52:54.155Z - starting server
+info 2020-11-27T12:52:54.299Z - server running on port 4000
+info 2020-11-27T12:55:32.410Z - stopping server
+info 2020-11-27T12:55:36.021Z - starting server
+info 2020-11-27T12:55:36.190Z - server running on port 4000
+error 2020-11-27T12:55:43.669Z - TypeError: users.forEach is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:25:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T12:56:03.628Z - stopping server
+info 2020-11-27T12:56:06.092Z - starting server
+info 2020-11-27T12:56:06.217Z - server running on port 4000
+error 2020-11-27T12:56:12.398Z - NotFoundError: user not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:34:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-11-27T12:56:22.448Z - NotFoundError: user not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:34:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T12:56:38.562Z - stopping server
+info 2020-11-27T12:57:08.640Z - starting server
+info 2020-11-27T12:57:08.798Z - server running on port 4000
+error 2020-11-27T12:58:56.973Z - NotFoundError: user not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:34:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T12:59:20.830Z - starting server
+info 2020-11-27T12:59:21.191Z - server running on port 4000
+info 2020-11-27T13:01:13.683Z - starting server
+info 2020-11-27T13:01:14.008Z - server running on port 4000
+info 2020-11-27T13:14:48.402Z - stopping server
+info 2020-11-27T14:34:07.847Z - starting server
+error 2020-11-27T14:34:07.916Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:36
+            }
+            ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:8:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T14:34:07.923Z - stopping server
+info 2020-11-27T14:34:56.571Z - starting server
+error 2020-11-27T14:34:56.640Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:36
+            }
+            ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:8:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T14:34:56.650Z - stopping server
+info 2020-11-27T14:35:35.894Z - starting server
+error 2020-11-27T14:35:35.966Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:36
+            }
+            ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:8:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T14:35:35.980Z - stopping server
+info 2020-11-27T14:38:44.351Z - starting server
+info 2020-11-27T14:38:44.497Z - server running on port 4000
+info 2020-11-27T14:41:21.801Z - stopping server
+info 2020-11-27T14:41:26.032Z - starting server
+info 2020-11-27T14:41:26.161Z - server running on port 4000
+info 2020-11-27T14:41:47.972Z - stopping server
+info 2020-11-27T14:41:51.017Z - starting server
+info 2020-11-27T14:41:51.211Z - server running on port 4000
+info 2020-11-27T14:42:03.423Z - stopping server
+info 2020-11-27T14:42:06.353Z - starting server
+info 2020-11-27T14:42:06.511Z - server running on port 4000
+info 2020-11-27T14:43:29.033Z - stopping server
+info 2020-11-27T14:43:31.925Z - starting server
+info 2020-11-27T14:43:32.079Z - server running on port 4000
+info 2020-11-27T14:44:28.386Z - stopping server
+info 2020-11-27T14:44:48.896Z - starting server
+info 2020-11-27T14:44:49.047Z - server running on port 4000
+info 2020-11-27T14:49:09.967Z - starting server
+info 2020-11-27T14:49:10.276Z - server running on port 4000
+info 2020-11-27T14:57:16.339Z - starting server
+info 2020-11-27T14:57:16.732Z - server running on port 4000
+info 2020-11-27T15:02:06.198Z - starting server
+info 2020-11-27T15:02:06.406Z - server running on port 4000
+info 2020-11-27T15:05:34.285Z - starting server
+info 2020-11-27T15:05:34.728Z - server running on port 4000
+info 2020-11-27T15:07:57.551Z - starting server
+info 2020-11-27T15:07:57.712Z - server running on port 4000
+info 2020-11-27T15:09:10.754Z - stopping server
+info 2020-11-27T15:09:13.486Z - starting server
+info 2020-11-27T15:09:13.677Z - server running on port 4000
+info 2020-11-27T15:10:59.456Z - stopping server
+info 2020-11-27T15:11:02.684Z - starting server
+info 2020-11-27T15:11:02.823Z - server running on port 4000
+info 2020-11-27T15:12:50.802Z - stopping server
+info 2020-11-27T15:12:54.040Z - starting server
+info 2020-11-27T15:12:54.200Z - server running on port 4000
+info 2020-11-27T15:12:55.827Z - stopping server
+info 2020-11-27T15:13:09.067Z - starting server
+info 2020-11-27T15:13:09.488Z - server running on port 4000
+info 2020-11-27T15:14:37.181Z - starting server
+info 2020-11-27T15:14:37.603Z - server running on port 4000
+info 2020-11-27T15:15:42.135Z - starting server
+info 2020-11-27T15:15:42.300Z - server running on port 4000
+error 2020-11-27T15:16:37.957Z - TypeError: searchUserFullname(...).then is not a function
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-search-user.js:15:14)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-27T15:17:30.120Z - starting server
+info 2020-11-27T15:17:30.280Z - server running on port 4000
+error 2020-11-27T15:18:30.375Z - TypeError: searchUserFullname(...).then is not a function
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-search-user.js:15:14)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-27T15:20:03.080Z - starting server
+info 2020-11-27T15:20:03.308Z - server running on port 4000
+error 2020-11-27T15:20:30.403Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-search-user.js:15:13)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-27T15:21:20.725Z - stopping server
+info 2020-11-27T15:21:23.575Z - starting server
+info 2020-11-27T15:21:23.722Z - server running on port 4000
+info 2020-11-27T15:22:30.359Z - stopping server
+info 2020-11-27T15:22:33.569Z - starting server
+info 2020-11-27T15:22:33.719Z - server running on port 4000
+info 2020-11-27T15:23:00.711Z - stopping server
+info 2020-11-27T15:23:03.361Z - starting server
+info 2020-11-27T15:23:03.497Z - server running on port 4000
+info 2020-11-27T15:23:41.508Z - stopping server
+info 2020-11-27T15:23:49.481Z - starting server
+info 2020-11-27T15:23:49.636Z - server running on port 4000
+info 2020-11-27T15:25:16.973Z - starting server
+info 2020-11-27T15:25:17.427Z - server running on port 4000
+info 2020-11-27T15:25:59.080Z - starting server
+info 2020-11-27T15:25:59.609Z - server running on port 4000
+info 2020-11-27T15:27:05.286Z - starting server
+info 2020-11-27T15:27:05.408Z - server running on port 4000
+info 2020-11-27T15:30:48.865Z - stopping server
+info 2020-11-27T15:30:53.501Z - starting server
+info 2020-11-27T15:30:53.661Z - server running on port 4000
+info 2020-11-27T15:32:17.761Z - stopping server
+info 2020-11-27T15:32:20.764Z - starting server
+info 2020-11-27T15:32:20.929Z - server running on port 4000
+info 2020-11-27T15:33:43.855Z - stopping server
+info 2020-11-27T15:33:46.838Z - starting server
+info 2020-11-27T15:33:46.971Z - server running on port 4000
+info 2020-11-27T15:34:38.569Z - stopping server
+info 2020-11-27T15:34:41.703Z - starting server
+info 2020-11-27T15:34:41.855Z - server running on port 4000
+info 2020-11-27T15:35:49.788Z - stopping server
+info 2020-11-27T15:35:53.312Z - starting server
+info 2020-11-27T15:35:53.471Z - server running on port 4000
+info 2020-11-27T15:37:13.628Z - stopping server
+info 2020-11-27T15:37:16.518Z - starting server
+info 2020-11-27T15:37:16.676Z - server running on port 4000
+info 2020-11-27T15:38:39.984Z - stopping server
+info 2020-11-27T15:38:43.059Z - starting server
+info 2020-11-27T15:38:43.245Z - server running on port 4000
+error 2020-11-27T15:38:44.962Z - TypeError: users.forEach is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:29:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T15:39:02.003Z - stopping server
+info 2020-11-27T15:39:18.923Z - starting server
+info 2020-11-27T15:39:19.367Z - server running on port 4000
+error 2020-11-27T15:39:34.490Z - TypeError: users.forEach is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:29:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T15:41:20.946Z - starting server
+info 2020-11-27T15:41:21.161Z - server running on port 4000
+info 2020-11-27T15:41:38.902Z - stopping server
+info 2020-11-27T15:41:42.311Z - starting server
+info 2020-11-27T15:41:42.527Z - server running on port 4000
+info 2020-11-27T15:42:03.400Z - stopping server
+info 2020-11-27T15:42:20.016Z - starting server
+info 2020-11-27T15:42:20.211Z - server running on port 4000
+error 2020-11-27T15:42:23.213Z - TypeError: users.forEach is not a function
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\search-user-fullname.js:29:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T15:43:33.034Z - stopping server
+info 2020-11-27T15:43:36.026Z - starting server
+info 2020-11-27T15:43:36.233Z - server running on port 4000
+info 2020-11-27T15:44:10.586Z - stopping server
+info 2020-11-27T15:44:13.494Z - starting server
+info 2020-11-27T15:44:13.642Z - server running on port 4000
+info 2020-11-27T15:46:35.346Z - stopping server
+info 2020-11-27T15:46:39.661Z - starting server
+info 2020-11-27T15:46:39.798Z - server running on port 4000
+info 2020-11-27T15:49:54.360Z - stopping server
+info 2020-11-27T15:49:57.673Z - starting server
+info 2020-11-27T15:49:57.840Z - server running on port 4000
+info 2020-11-27T15:56:52.992Z - stopping server
+info 2020-11-27T15:57:03.923Z - starting server
+info 2020-11-27T15:57:04.096Z - server running on port 4000
+info 2020-11-27T15:59:03.448Z - starting server
+error 2020-11-27T15:59:03.525Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-user.js:17
+                user = { id: _id.toString(), fullname, email, follows = [] }
+                                                              ^^^^^^^^^^^^
+
+SyntaxError: Invalid shorthand property initializer
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:4:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T15:59:03.534Z - stopping server
+info 2020-11-27T15:59:54.063Z - starting server
+error 2020-11-27T15:59:54.134Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-user.js:17
+                user = { id: _id.toString(), fullname, email, follows = [] }
+                                                              ^^^^^^^^^^^^
+
+SyntaxError: Invalid shorthand property initializer
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:4:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T15:59:54.144Z - stopping server
+info 2020-11-27T16:01:16.295Z - starting server
+error 2020-11-27T16:01:16.377Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-user.js:17
+                user = { id: _id.toString(), fullname, email, follows = [] }
+                                                              ^^^^^^^^^^^^
+
+SyntaxError: Invalid shorthand property initializer
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:4:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T16:01:16.386Z - stopping server
+info 2020-11-27T16:02:07.330Z - starting server
+error 2020-11-27T16:02:07.412Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-user.js:17
+                user = { id: _id.toString(), fullname, email, follows =[] }
+                                                              ^^^^^^^^^^^
+
+SyntaxError: Invalid shorthand property initializer
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:4:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T16:02:07.421Z - stopping server
+info 2020-11-27T16:03:08.257Z - starting server
+error 2020-11-27T16:03:08.332Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\retrieve-user.js:17
+                user = { id: _id.toString(), fullname, email, follows = [] }
+                                                              ^^^^^^^^^^^^
+
+SyntaxError: Invalid shorthand property initializer
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\index.js:4:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-27T16:03:08.341Z - stopping server
+info 2020-11-27T16:04:49.439Z - starting server
+info 2020-11-27T16:04:49.608Z - server running on port 4000
+info 2020-11-27T16:06:52.151Z - stopping server
+info 2020-11-27T16:06:55.924Z - starting server
+info 2020-11-27T16:06:56.136Z - server running on port 4000
+info 2020-11-27T16:07:41.425Z - stopping server
+info 2020-11-27T16:07:44.934Z - starting server
+info 2020-11-27T16:07:45.109Z - server running on port 4000
+info 2020-11-27T16:10:48.755Z - stopping server
+info 2020-11-27T16:10:55.027Z - starting server
+info 2020-11-27T16:10:55.183Z - server running on port 4000
+error 2020-11-27T16:10:58.516Z - ObjectParameterError: Parameter "filter" to findOne() must be an object, got 5fbfebc1da5317365cebc265
+    at model.Query.Query.findOne (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongoose\lib\query.js:2188:16)
+    at Function.findOne (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\mongoose\lib\model.js:2164:13)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\follow-user.js:15:10)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-follow-user.js:19:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-27T16:11:29.136Z - starting server
+info 2020-11-27T16:11:29.286Z - server running on port 4000
+error 2020-11-27T16:12:10.744Z - ReferenceError: _id is not defined
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\follow-user.js:26:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-27T16:12:36.880Z - starting server
+info 2020-11-27T16:12:37.022Z - server running on port 4000
+info 2020-11-27T16:13:38.147Z - stopping server
+info 2020-11-27T16:13:41.225Z - starting server
+info 2020-11-27T16:13:41.412Z - server running on port 4000
+info 2020-11-27T16:14:31.532Z - stopping server
+info 2020-11-27T16:14:34.752Z - starting server
+info 2020-11-27T16:14:34.896Z - server running on port 4000
+info 2020-11-27T16:14:53.503Z - stopping server
+info 2020-11-27T16:14:57.020Z - starting server
+info 2020-11-27T16:14:57.196Z - server running on port 4000
+info 2020-11-27T16:20:12.842Z - stopping server
+info 2020-11-27T16:20:16.051Z - starting server
+info 2020-11-27T16:20:16.200Z - server running on port 4000
+info 2020-11-27T16:20:37.619Z - stopping server
+info 2020-11-27T16:20:40.688Z - starting server
+info 2020-11-27T16:20:40.864Z - server running on port 4000
+info 2020-11-28T12:24:37.185Z - starting server
+info 2020-11-28T12:24:37.745Z - server running on port 4000
+error 2020-11-28T13:17:09.052Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-save-products.js:10:13)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-28T13:18:48.278Z - stopping server
+info 2020-11-28T13:18:51.304Z - starting server
+info 2020-11-28T13:18:51.422Z - server running on port 4000
+error 2020-11-28T13:18:56.640Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-save-products.js:10:13)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-28T13:23:13.873Z - stopping server
+info 2020-11-28T13:23:17.146Z - starting server
+info 2020-11-28T13:23:17.320Z - server running on port 4000
+info 2020-11-28T13:25:19.130Z - stopping server
+info 2020-11-28T13:28:19.781Z - starting server
+info 2020-11-28T13:28:19.931Z - server running on port 4000
+info 2020-11-28T13:28:41.897Z - stopping server
+info 2020-11-28T13:28:50.926Z - starting server
+info 2020-11-28T13:28:51.125Z - server running on port 4000
+info 2020-11-28T13:31:13.866Z - starting server
+info 2020-11-28T13:31:14.180Z - server running on port 4000
+info 2020-11-28T13:32:17.758Z - starting server
+info 2020-11-28T13:32:17.905Z - server running on port 4000
+info 2020-11-28T13:33:05.226Z - starting server
+info 2020-11-28T13:33:05.577Z - server running on port 4000
+info 2020-11-28T13:40:08.306Z - starting server
+info 2020-11-28T13:40:08.654Z - server running on port 4000
+info 2020-11-28T13:44:08.564Z - starting server
+info 2020-11-28T13:44:08.682Z - server running on port 4000
+info 2020-11-28T13:45:10.018Z - starting server
+info 2020-11-28T13:45:10.190Z - server running on port 4000
+info 2020-11-28T13:46:40.796Z - starting server
+info 2020-11-28T13:46:40.908Z - server running on port 4000
+error 2020-11-28T13:46:59.796Z - ReferenceError: callback is not defined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:18:22)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-save-products.js:9:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-28T13:47:27.505Z - stopping server
+info 2020-11-28T13:47:30.700Z - starting server
+info 2020-11-28T13:47:30.846Z - server running on port 4000
+error 2020-11-28T13:47:32.444Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\handlers\handle-save-products.js:10:13)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-11-28T13:48:12.165Z - stopping server
+info 2020-11-28T13:48:16.570Z - starting server
+info 2020-11-28T13:48:16.882Z - server running on port 4000
+info 2020-11-28T13:48:58.384Z - starting server
+info 2020-11-28T13:48:58.499Z - server running on port 4000
+info 2020-11-28T13:53:46.180Z - starting server
+info 2020-11-28T13:53:46.316Z - server running on port 4000
+info 2020-11-28T13:58:52.916Z - starting server
+info 2020-11-28T13:58:53.052Z - server running on port 4000
+info 2020-11-28T14:01:16.458Z - starting server
+info 2020-11-28T14:01:16.582Z - server running on port 4000
+error 2020-11-28T14:02:03.642Z - Error: problem reading files
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:23:38
+    at FSReqCallback.oncomplete (fs.js:156:23)
+error 2020-11-28T14:02:46.147Z - Error: problem reading files
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:23:38
+    at FSReqCallback.oncomplete (fs.js:156:23)
+info 2020-11-28T14:03:37.147Z - stopping server
+info 2020-11-28T14:03:39.875Z - starting server
+info 2020-11-28T14:03:40.010Z - server running on port 4000
+info 2020-11-28T14:05:24.131Z - stopping server
+info 2020-11-28T14:05:27.408Z - starting server
+info 2020-11-28T14:05:27.535Z - server running on port 4000
+error 2020-11-28T14:05:42.797Z - AuthError: wrong credentials
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\authenticate-user.js:15:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-11-28T14:07:44.050Z - AlreadyExistsError: product with name arbolin already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:36:43
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+error 2020-11-28T14:07:44.467Z - AlreadyExistsError: product with name arbolin already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:36:43
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+info 2020-11-28T14:09:16.821Z - stopping server
+info 2020-11-28T21:51:31.874Z - starting server
+info 2020-11-28T21:51:32.415Z - server running on port 4000
+error 2020-11-28T21:54:36.932Z - AlreadyExistsError: product with name vino tinto pepito already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:36:43
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+error 2020-11-28T21:55:51.746Z - AlreadyExistsError: product with name vino tinto pepito already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:36:43
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+error 2020-11-28T21:57:39.084Z - AlreadyExistsError: product with name vino tinto pepito already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\notes-api\logic\save-products.js:36:43
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+info 2020-11-28T21:59:23.567Z - stopping server

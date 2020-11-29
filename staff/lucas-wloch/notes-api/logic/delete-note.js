@@ -1,21 +1,26 @@
-const { validateCallback, validateId } = require('./helpers/validations')
-const context = require('./context')
+const { validateId } = require('./helpers/validations')
 const ObjectId = require('mongodb').ObjectId;
+const { NotFoundError } = require('../errors')
+const { Note } = require('../models')
+
+
 
 
 const { env: { DB_NAME } } = process
 
 
-module.exports = (noteId) => {
+module.exports = (userId, noteId) => {
+    validateId(userId)
     validateId(noteId)
 
-    const { connection } = context
 
-    const db = connection.db(DB_NAME)
+    return Note
+        .findOne({ _id: ObjectId(noteId), owner: ObjectId(userId) })
+        .then(note => {
+            if (!note) throw new NotFoundError(`couldnt delete note with id ${noteId}`)
 
-    const notes = db.collection('notes')
-
-    return notes
-        .deleteOne({ _id: ObjectId(noteId) })
-        .then(result => undefined)
+            return Note
+                .deleteOne({ _id: ObjectId(noteId) })
+                .then(result => undefined)
+        })
 }

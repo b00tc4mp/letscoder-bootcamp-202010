@@ -6,6 +6,8 @@ import saveNote from './save-note'
 import searchUserFullname from './search-user-fullname'
 import deleteNote from './delete-note'
 import followUser from './follow-user'
+import retrievePublicNotes from './retrieve-public-notes'
+import saveProducts from './save-products'
 
 export {
     registerUser,
@@ -16,4 +18,6 @@ export {
     searchUserFullname,
     deleteNote,
     followUser,
+    retrievePublicNotes,
+    saveProducts
 }

@@ -1,7 +1,9 @@
-const { validateText, validateCallback, validateId, validateTags, validateVisibility } = require('./helpers/validations')
-const { createId } = require('../utils/ids')
-const context = require('./context')
+const { validateText, validateId, validateTags, validateVisibility } = require('./helpers/validations')
 const ObjectId = require('mongodb').ObjectId;
+const { NotFoundError } = require('../errors')
+const { User, Note } = require('../models')
+
+
 
 
 const { env: { DB_NAME } } = process
@@ -14,37 +16,30 @@ module.exports = (noteId, text, tags, owner, visibility) => {
     validateId(owner)
     validateVisibility(visibility)
 
-    const { connection } = context
-
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
     const _id = ObjectId(owner)
 
-    return users
+    return User
         .findOne({ _id })
         .then(user => {
-            if (!user) throw new Error(`user with id ${owner} not found`)
+            if (!user) throw new NotFoundError(`user with id ${owner} not found`)
 
-            const notes = db.collection('notes')
 
             if (noteId) {
                 const _id = ObjectId(noteId)
-                return notes
+                return Note
                     .findOne({ _id })
                     .then(note => {
-                        if (!note) throw new Error(`note with id ${noteId} not found`)
+                        if (!note) throw new NotFoundError(`note with id ${noteId} not found`)
 
-                        return notes
+                        return Note
                             .updateOne({ _id }, { $set: { text, tags, visibility, date: new Date } })
                             .then(result => undefined)
                     })
 
             } else {
                 const note = { text, tags, owner: ObjectId(owner), visibility, date: new Date }
-                return notes
-                    .insertOne(note)
+                return Note
+                    .create(note)
                     .then(result => undefined)
             }
         })

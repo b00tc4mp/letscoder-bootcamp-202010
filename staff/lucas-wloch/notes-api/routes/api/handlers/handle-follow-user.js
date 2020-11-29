@@ -18,8 +18,8 @@ module.exports = (req, res, handleError) => {
     try {
         followUser(userId, followId )
             .then(result => res.status(200).send())
-            .catch(error => handleError(401, error))
+            .catch(handleError)
     } catch (error) {
-        handleError(400, error)
+        handleError(error)
     }
 }

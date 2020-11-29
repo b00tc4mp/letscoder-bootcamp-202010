@@ -5,8 +5,9 @@ import './Results.sass'
 
 function Results({ results, onDelete }) {
     
-    const handleDelete = (id) => {
-        deleteNote(id, error =>{
+    const handleDelete = (noteId) => {
+        const { token } = sessionStorage
+        deleteNote(token, noteId, error =>{
             if(error) return alert(error)
 
             onDelete()
