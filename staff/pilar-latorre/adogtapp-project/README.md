@@ -8,43 +8,43 @@ This APP provides you information about the closest shelters and shows you the p
 
 ## Mockup
 
-![Alt Mockup](mockup.png)
+![Alt Mockup](./adogtapp-doc/mockup.png)
 
 ## Functional Description
 
 ### Use Cases
 
-![Alt Use Cases](useCases.png)
+![Alt Use Cases](./adogtapp-doc/useCases.png)
 
 ### Activities
 
 Search shelters and find a pet, and if you are a shelter sign in & sing up, update and delete info about the animals.
 
-![Alt Operate Activity](opActivities.png)
+![Alt Operate Activity](./adogtapp-doc/opActivities.png)
 
 ## Technical Description
 
 ### Collections
 
-![Alt Collections](collections.png)
+![Alt Collections](./adogtapp-doc/collections.png)
 
 ### Blocks
 
-![Alt Blocks](blocks.png)
+![Alt Blocks](./adogtapp-doc/blocks.png)
 
 ### Packages
 
 #### React Components 
 
-![Alt React comonents](componentsReact.png)
+![Alt React comonents](./adogtapp-doc/componentsReact.png)
 
 #### Logic function
 
-![Alt Logic function](logic.png)
+![Alt Logic function](./adogtapp-doc/logic.png)
 
 ### Testing (QA)
 
-![Alt Testing](testing.png)
+![Alt Testing](./adogtapp-doc/testing.png)
 
 ### Technologies
 
