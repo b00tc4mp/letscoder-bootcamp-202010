@@ -1,0 +1,25 @@
+User = {
+    id: ObjectId,
+    fullname: String,
+    phone-number: String,
+    password: String, // o implementar verificacion con telefono 
+    historial-pedidos: {
+        [product-name]: ammount = Number/String
+    }
+}
+
+Product = {
+    id: ObjectId,
+    price: Num/String,
+    name/title: String,
+    description: String,
+    glutenFree: boolean,
+    vegan: boolean,
+    alergenos: [ String ],
+    category: String,
+    img: String? Png?
+    available: boolean
+}
+
+Pedido = {}
+Carrito = {}

@@ -1,0 +1,17 @@
+@import config
+
+.layout
+    &__h1
+        color: $general-title-color
+        font-size: 5rem
+        margin-top: 20px
+        text-align: center
+
+@media (min-width: 1000px)
+    .layout
+        &__h1
+            font-size: 8rem
+@media (max-width: 999px) and (min-width: 550px)
+    .layout
+        &__h1
+            font-size: 8rem
