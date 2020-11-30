@@ -2,7 +2,7 @@ import { Layout, Feedback } from '../components'
 import '../components/Register.sass'
 import Link from 'next/link'
 import { useState } from 'react'
-// import { registerUser } from '../logic'
+import  registerUser  from '../logic/register-user'
 
 
 
