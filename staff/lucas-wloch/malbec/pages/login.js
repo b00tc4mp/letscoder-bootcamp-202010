@@ -22,13 +22,13 @@ const Login = () => {
     const handleLogin = (email, password) => {
         try {
             authenticateUser(email, password, (error, token) => {
-                if (error) return setError({ error: error.message })
+                if (error) return setError( error.message )
 
                 sessionStorage.token = token
 
             })
         } catch (error) {
-            setError({ error: error.message })
+            setError( error.message )
         }
 
     }
