@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, a, h3, button {
+h1, h2, h3, a, button {
   font-family: "Oswald", sans-serif;
   color: #0bb1ba;
 }
@@ -23,9 +23,4 @@ select {
 
 input, label {
   margin: .2rem;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

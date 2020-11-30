@@ -18,11 +18,11 @@ function CaloriesGoal ({macros, onGoToPlans, onGoToRegister}) {
 
     <h3 className="goal__subtitle">¡Estamos ready!</h3>
 
-    <h3 className="goal__subtitle">Vamos a completar tu <a className="goal__register"onClick={onGoToRegister}>cuenta</a></h3>
+    <h3 className="goal__subtitle">Para conseguir el mejor resultado de tu nuevo estilo de vida, completa tu <a className="goal__register"onClick={onGoToRegister}>cuenta</a></h3>
 
     <p className="goal__p">¿Necesitas ayuda para interpretar el resultado y un seguimiento personalizado? Tenemos el plan perfecto para ti ;)</p>
 
-    <h3 className="goal__subtitle">Acceso a los <a className="goal__plans" onClick={onGoToPlans}>planes</a></h3>
+    {/* <h3 className="goal__subtitle">Acceso a los <a className="goal__plans" onClick={onGoToPlans}>planes</a></h3> */}
 
     </section>
 

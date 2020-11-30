@@ -34,5 +34,11 @@ module.exports = {
     validateNumber(number) {
         if (typeof number !== 'number') throw new TypeError(number + ' is not a number')
 
+    },
+
+    validateToken(token) {
+        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+        if (!token.trim().length) throw new Error('token is empty or blank')
     }
 }

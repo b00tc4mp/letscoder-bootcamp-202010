@@ -1,0 +1,50 @@
+.navbar
+    overflow: hidden
+    background-color: #635f5f
+
+
+.navbar a 
+    float: left
+    font-size: 1rem
+    color: white
+    text-align: center
+    padding: .5rem
+    text-decoration: none
+
+.dropdown 
+    float: left
+    overflow: hidden
+
+.dropdown .dropdown__btn
+    font-size: 1rem 
+    border: none
+    outline: none
+    color: white
+    padding: .5rem
+    background-color: inherit
+    margin: 0
+
+.navbar a:hover, .dropdown:hover .dropdown__btn
+    background-color: #0bb1ba
+
+.dropdown__content
+    display: none
+    position: absolute
+    background-color: #f9f9f9
+    min-width: 50px
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2)
+    z-index: 1
+
+.dropdown__content a
+    float: none
+    color: black
+    padding: .5rem
+    text-decoration: none
+    display: block
+    text-align: left
+
+.dropdown__content a:hover
+    background-color: #ddd
+
+.dropdown:hover .dropdown__content
+    display: block

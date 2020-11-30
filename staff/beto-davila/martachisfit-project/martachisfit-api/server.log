@@ -16,3 +16,139 @@ info 2020-11-30T13:07:14.667Z - stopping server
 info 2020-11-30T13:22:57.587Z - starting server
 info 2020-11-30T13:22:57.642Z - server running on port 4000
 info 2020-11-30T13:24:18.012Z - stopping server
+info 2020-11-30T13:45:42.795Z - starting server
+info 2020-11-30T13:45:42.875Z - server running on port 4000
+info 2020-11-30T13:47:10.714Z - stopping server
+info 2020-11-30T13:48:44.995Z - starting server
+info 2020-11-30T13:48:45.111Z - server running on port 4000
+info 2020-11-30T13:52:59.943Z - stopping server
+info 2020-11-30T14:18:57.770Z - starting server
+info 2020-11-30T14:18:57.861Z - server running on port 4000
+info 2020-11-30T14:18:59.940Z - stopping server
+info 2020-11-30T14:54:22.287Z - starting server
+info 2020-11-30T14:54:22.434Z - server running on port 4000
+info 2020-11-30T14:54:25.871Z - stopping server
+info 2020-11-30T14:54:25.872Z - stopping server
+info 2020-11-30T15:44:31.261Z - starting server
+error 2020-11-30T15:44:31.358Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:44:31.362Z - stopping server
+info 2020-11-30T15:44:41.168Z - starting server
+error 2020-11-30T15:44:41.221Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:44:41.225Z - stopping server
+info 2020-11-30T15:45:31.517Z - starting server
+error 2020-11-30T15:45:31.566Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:45:31.570Z - stopping server
+info 2020-11-30T15:45:43.262Z - starting server
+error 2020-11-30T15:45:43.317Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:45:43.320Z - stopping server
+info 2020-11-30T15:47:12.300Z - starting server
+error 2020-11-30T15:47:12.349Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:47:12.353Z - stopping server
+info 2020-11-30T15:48:58.505Z - starting server
+info 2020-11-30T15:48:58.575Z - server running on port 4000
+info 2020-11-30T15:52:33.889Z - stopping server
+info 2020-11-30T15:53:17.731Z - starting server
+info 2020-11-30T15:53:17.830Z - server running on port 4000
+info 2020-11-30T15:55:42.063Z - stopping server
+info 2020-11-30T15:55:53.573Z - starting server
+info 2020-11-30T15:55:53.658Z - server running on port 4000

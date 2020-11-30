@@ -25,5 +25,10 @@ module.exports = new Schema({
     gender: {
         type: String,
         enum: ['hombre', 'mujer']
+    },
+
+    role: {
+        type: String,
+        enum: ['admin', 'user']
     }
 })

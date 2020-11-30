@@ -1,10 +1,10 @@
 import './App.css';
-import { Landing, SignIn, CaloriesGoal, UserInfo, SignUp } from './components';
+import { Landing, SignIn, CaloriesGoal, UserInfo, SignUp, Home } from './components';
 import { useState } from 'react';
-import { macrosAfterCalories, caloriesCalc, registerUser } from './logic/index';
+import { macrosAfterCalories, caloriesCalc, registerUser, authenticateUser } from './logic/index';
 
 function App() {
-  const [view, setView] = useState('landing')
+  const [view, setView] = useState(sessionStorage.token? 'home' : 'landing')
   const [goal, setGoal] = useState()
 
   const handleGoToSignIn = () => {
@@ -24,12 +24,31 @@ function App() {
   }
 
   const handleRegister = (fullname, email, password) => {
-    registerUser(fullname, email, password, error => {
-      if (error) return alert(error.message)
-
-      setView('home')
-    })
+    try {
+      registerUser(fullname, email, password, error => {
+        if (error) return alert(error.message)
+  
+        setView('home')
+      })
+    } catch (error) {
+        alert(error.message)
+    }
   }
+
+  const handleAuthenticateUser = (email, password) => {
+    try {
+      authenticateUser(email, password, (error, token) => {
+        if (error) return alert(error.message)
+  
+        sessionStorage.token = token
+        setView('home')
+      })    
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+
+  
 
   const handleGetCaloriesAndMacros = (gender, goal, age, height, weight, activity) => {
     try {
@@ -48,10 +67,11 @@ function App() {
 
   return <>
   {view === 'landing' && <Landing onUserInfo={handleGoToUserInfo} onGoToSignIn={handleGoToSignIn}/>}
-  {view === 'sign-in' && <SignIn />}
+  {view === 'sign-in' && <SignIn onLogin={handleAuthenticateUser}/>}
   {view === 'user-info' && <UserInfo onGoToGoalCaloriesAndMacros={handleGetCaloriesAndMacros}/>}
   {view === 'calories-goal' && goal && <CaloriesGoal macros={goal} onGoToRegister={handleGoToRegister} onGoToPlans={handleGoToPlans}/>}
   {view === 'sign-up' && <SignUp onRegister={handleRegister}/>}
+  {view === 'home' && <Home />}
   </>
 }
 
