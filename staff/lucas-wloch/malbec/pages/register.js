@@ -2,7 +2,7 @@ import { Layout, Feedback } from '../components'
 import '../components/Register.sass'
 import Link from 'next/link'
 import { useState } from 'react'
-import { registerUser } from '../logic'
+// import { registerUser } from '../logic'
 
 
 
@@ -23,12 +23,12 @@ const Register = () => {
     const handleRegister = (fullname, email, password) => {
         try {
             registerUser(fullname, email, password, error => {
-                if (error) return setError({ error: error.message })
+                if (error) return setError( error.message )
 
                 setRegisterSuccess(true)
             })
         } catch (error) {
-            setError({ error: error.message })
+            setError(error.message)
         }
     }
 

@@ -2,7 +2,7 @@ import { Layout, Feedback } from '../components'
 import '../components/Login.sass'
 import Link from 'next/link'
 import { useState } from 'react'
-import { authenticateUser } from '../logic'
+// import { authenticateUser } from '../logic'
 
 
 const Login = () => {
