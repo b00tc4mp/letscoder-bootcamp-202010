@@ -7,7 +7,6 @@ module.exports = (req, res, handleError) => {
         registerUser(fullname, email, password)
             .then(() => res.status(201).send())
             .catch(handleError)
-
     } catch (error) {
         handleError(error)
     }

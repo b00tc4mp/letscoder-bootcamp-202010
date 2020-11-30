@@ -6,7 +6,7 @@ const logger = require('./utils/logger')
 const { cors } = require('./middlewares')
 
 const { env: { PORT, MONGODB_URL }, argv: [, , port = PORT || 8080] } = process
-debugger
+
 logger.log('starting server', 'info')
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })

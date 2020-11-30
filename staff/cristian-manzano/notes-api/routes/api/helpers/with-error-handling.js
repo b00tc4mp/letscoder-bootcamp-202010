@@ -22,6 +22,6 @@ module.exports = handler =>
                     status = 409
                     break
             }
-            
+
             res.status(status).json({ error: error.message })
         })

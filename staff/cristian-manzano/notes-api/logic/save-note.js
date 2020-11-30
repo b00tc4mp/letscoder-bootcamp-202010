@@ -3,12 +3,10 @@ const context = require('./context')
 const { ObjectId } = require('mongodb')
 const { NotFoundError } = require('../errors')
 
-const jwt  = require('jsonwebtoken')
+const { env: { DB_NAME } } = process
 
-const { env: { DB_NAME, JWT_SECRET } } = process
-
-module.exports = function (token, noteId, text, tags, visibility) {
-    //validateId(ownerId)
+module.exports = function (ownerId, noteId, text, tags, visibility) {
+    validateId(ownerId)
     if (typeof noteId !== 'undefined') validateId(noteId)
     validateText(text)
     validateTags(tags)
@@ -19,8 +17,6 @@ module.exports = function (token, noteId, text, tags, visibility) {
     const db = connection.db(DB_NAME)
 
     const users = db.collection('users')
-
-    const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
 
     const _id = ObjectId(ownerId)
 

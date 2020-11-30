@@ -12,13 +12,6 @@ client.connect((error, connection) => {
     if (error) return console.error(error)
 
     context.connection = connection
-    try {
-    retrieveNotes('5fbd3176423461a9261e64e1')
-    .then(() => console.log('note retrieved'))
-    .catch(error => console.error('note could not be retrieved'))
-    .then(() => client.close())
-    .then(() => console.log('connection closed'))
-    } catch (error) {
-        console.log(error.message)
-    }
-}) 
+
+    retrieveNotes('5fb7f43bcf65c468175af431', console.log)
+})

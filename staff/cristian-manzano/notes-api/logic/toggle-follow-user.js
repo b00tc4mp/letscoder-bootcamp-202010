@@ -9,7 +9,7 @@ module.exports = function (userId, followingId) {
     validateId(userId)
     validateId(followingId)
 
-    const { connection } = context
+    const { connection } = this
 
     const db = connection.db(DB_NAME)
 
@@ -21,13 +21,13 @@ module.exports = function (userId, followingId) {
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            const { following = [] } = user
+            const { followings = [] } = user
 
-            const indew = followings.findIndex(following => following.toString() === followingId)
+            const index = followings.findIndex(following => following.toString() === followingId)
 
             index < 0 ? followings.push(new ObjectId(followingId)) : followings.splice(index, 1)
 
-            return users.updateOne({ _id }, { $set: { followings }})
+            return users.updateOne({ _id }, { $set: { followings } })
         })
         .then(() => {})
-    }
+}.bind(context)

@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb')
 const context = require('./context')
 const toggleFollowUser = require('./toggle-follow-user')
 
-const { env: {MONGODB_URL } } = process
+const { env: { MONGODB_URL } } = process
 
 const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 

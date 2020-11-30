@@ -5,6 +5,6 @@ module.exports = name => class extends Error {
         this.name = name
 
         if (Error.captureStackTrace)
-            Error.captureStackTrace(this, this.constructor)
-    }
+            Error.captureStackTrace(this, this.constructor)      
+    } 
 }

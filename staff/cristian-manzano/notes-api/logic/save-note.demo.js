@@ -14,7 +14,7 @@ client.connect((error, connection) => {
     context.connection = connection
 
     try {
-        saveNote('5fb8ff62d9831e15ab34f3fe', undefined, 'Hello, World!', ['hello', 'world'], 'private')
+        saveNote('5fbcff05c955a0599bacac84', undefined, 'Hello, World!', ['hello', 'world'], 'private')
             .then(() => console.log('note saved'))
             .catch(error => console.error('note could not be saved', error))
             .then(() => client.close())
@@ -25,4 +25,4 @@ client.connect((error, connection) => {
     } catch (error) {
         console.log('validation error', error)
     }
-}) 
+})

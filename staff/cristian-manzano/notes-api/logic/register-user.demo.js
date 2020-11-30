@@ -1,19 +1,12 @@
+require('dotenv').config()
+
+const mongoose = require('mongoose')
 const registerUser = require('./register-user')
 
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(1)
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(2)
-registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-console.log(3)
+const { env: { MONGODB_URL } } = process
 
-//console.log('hello world')
-
-setTimeout(() => {
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(1)
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(2)
-    registerUser('manuel barzi', 'manuelbarzi@gmail.com', '123123123', console.log)
-    console.log(3)
-}, 3000)
+mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
+    .then(() => registerUser('Pa Járito', 'pajarin@mail.com', '123123123').then(console.log).catch(console.error))
+    .catch(console.error)
+    .then(() => mongoose.disconnect())
+    .then(() => console.log('ended'))

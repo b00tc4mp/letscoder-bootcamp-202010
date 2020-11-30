@@ -9,14 +9,14 @@ module.exports = (req, res, handleError) => {
     // Bearer <token>
     const token = authorization.replace('Bearer ', '')
 
-
-
     try {
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
 
-        retrieveNotes(userId) 
-        .then(notes => res.status(200).json(notes))
-        .catch(handleError)
+        retrieveNotes(userId, (error, notes) => {
+            if (error) return handleError(error)
+
+            res.status(200).json(notes)
+        })
     } catch (error) {
         handleError(error)
     }

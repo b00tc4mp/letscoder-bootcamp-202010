@@ -1,0 +1,1800 @@
+info 2020-11-17T16:19:13.188Z - server running on port 3000
+info 2020-11-17T16:19:23.643Z - stopping server
+info 2020-11-17T16:21:52.952Z - server running on port 3000
+error 2020-11-17T16:22:22.069Z - Error: Failed to lookup view "login" in views directory "/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/web-server/views"
+info 2020-11-17T16:31:56.568Z - server running on port 3000
+info 2020-11-17T16:32:51.784Z - server running on port 3000
+info 2020-11-17T16:32:55.107Z - stopping server
+info 2020-11-17T16:40:45.941Z - server running on port 3000
+info 2020-11-17T16:49:00.267Z - stopping server
+info 2020-11-17T16:49:00.268Z - stopping server
+info 2020-11-17T16:49:11.080Z - server running on port 3000
+error 2020-11-17T16:49:24.446Z - could not accept cookies :(
+error 2020-11-17T16:50:33.684Z - could not accept cookies :(
+info 2020-11-17T17:11:52.252Z - stopping server
+
+info 2020-11-17T17:13:02.777Z - server running on port 3000
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-18T13:00:35.228Z - server running on port 4000
+info 2020-11-18T13:01:12.536Z - stopping server
+info 2020-11-18T13:01:12.537Z - stopping server
+info 2020-11-18T13:01:15.670Z - server running on port 4000
+info 2020-11-18T13:03:18.380Z - stopping server
+info 2020-11-18T13:03:18.381Z - stopping server
+info 2020-11-18T13:15:25.409Z - server running on port 4000
+info 2020-11-18T13:18:09.224Z - server running on port 4000
+error 2020-11-18T13:18:23.101Z - Error: fullname is empty or blank
+error 2020-11-18T13:18:36.202Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:03.308Z - stopping server
+info 2020-11-18T13:19:04.401Z - server running on port 4000
+error 2020-11-18T13:19:06.886Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:20:26.360Z - server running on port 4000
+info 2020-11-18T13:43:31.863Z - stopping server
+info 2020-11-18T13:43:31.864Z - stopping server
+info 2020-11-18T13:45:50.034Z - server running on port 4000
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:34.615Z - server running on port 4000
+info 2020-11-18T13:53:43.043Z - server running on port 4000
+info 2020-11-18T13:55:43.167Z - server running on port 4000
+info 2020-11-18T13:56:35.766Z - server running on port 4000
+info 2020-11-18T13:58:25.580Z - server running on port 4000
+info 2020-11-18T13:59:49.053Z - server running on port 4000
+info 2020-11-18T14:00:17.901Z - server running on port 4000
+error 2020-11-18T14:00:43.219Z - Error: e-mail manuelbarzi@gmail.com already registered
+info 2020-11-19T09:17:53.895Z - server running on port 4000
+info 2020-11-19T09:19:32.785Z - stopping server
+info 2020-11-19T09:19:32.785Z - stopping server
+info 2020-11-19T12:11:40.935Z - server running on port 4000
+info 2020-11-19T13:38:13.634Z - stopping server
+info 2020-11-19T13:38:13.635Z - stopping server
+info 2020-11-20T11:18:17.735Z - server running on port 4000
+info 2020-11-20T11:34:36.925Z - stopping server
+info 2020-11-20T11:34:36.925Z - stopping server
+info 2020-11-20T11:34:37.997Z - server running on port 4000
+info 2020-11-20T11:37:54.962Z - stopping server
+info 2020-11-20T11:37:54.963Z - stopping server
+info 2020-11-20T11:38:13.659Z - server running on port 4000
+info 2020-11-20T11:39:57.744Z - server running on port 4000
+info 2020-11-20T11:41:14.809Z - stopping server
+info 2020-11-20T11:42:46.034Z - server running on port 4000
+info 2020-11-20T12:15:36.725Z - stopping server
+info 2020-11-20T12:15:36.725Z - stopping server
+info 2020-11-20T12:17:10.832Z - server running on port 4000
+info 2020-11-20T12:21:54.732Z - stopping server
+info 2020-11-20T12:21:54.733Z - stopping server
+info 2020-11-20T12:22:36.877Z - server running on port 4000
+info 2020-11-20T12:23:51.012Z - stopping server
+info 2020-11-20T12:23:51.013Z - stopping server
+info 2020-11-20T12:23:51.946Z - server running on port 4000
+info 2020-11-20T12:33:15.595Z - stopping server
+info 2020-11-20T12:33:15.595Z - stopping server
+info 2020-11-20T18:02:04.654Z - server running on port 4000
+error 2020-11-21T10:05:23.733Z - Error: wrong credentials
+info 2020-11-21T10:37:35.312Z - stopping server
+info 2020-11-21T11:16:08.761Z - starting server
+info 2020-11-21T11:16:08.891Z - server running on port 4000
+info 2020-11-21T11:40:42.088Z - stopping server
+info 2020-11-21T11:40:44.168Z - starting server
+info 2020-11-21T11:40:44.245Z - server running on port 4000
+error 2020-11-21T11:44:20.542Z - Error: wrong credentials
+info 2020-11-21T11:51:34.472Z - stopping server
+info 2020-11-21T11:51:36.749Z - starting server
+info 2020-11-21T11:51:36.824Z - server running on port 4000
+error 2020-11-21T11:51:49.354Z - Error: wrong credentials
+error 2020-11-21T11:52:09.343Z - ReferenceError: Cannot access 'connection' before initialization
+error 2020-11-21T11:54:59.388Z - ReferenceError: Cannot access 'connection' before initialization
+error 2020-11-21T11:56:06.115Z - ReferenceError: Cannot access 'connection' before initialization
+error 2020-11-21T11:59:35.120Z - ReferenceError: Cannot access 'connection' before initialization
+info 2020-11-21T12:03:12.585Z - stopping server
+info 2020-11-21T12:03:14.469Z - starting server
+info 2020-11-21T12:03:14.583Z - server running on port 4000
+info 2020-11-21T12:03:37.417Z - stopping server
+info 2020-11-21T12:03:39.115Z - starting server
+info 2020-11-21T12:03:39.258Z - server running on port 4000
+info 2020-11-21T17:03:03.467Z - stopping server
+info 2020-11-21T17:03:10.366Z - starting server
+info 2020-11-21T17:03:10.439Z - server running on port 4000
+error 2020-11-21T17:03:39.029Z - Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+error 2020-11-21T17:06:09.217Z - Error: wrong credentials
+info 2020-11-21T17:07:04.682Z - stopping server
+info 2020-11-21T17:07:06.729Z - starting server
+info 2020-11-21T17:07:06.788Z - server running on port 4000
+error 2020-11-21T17:08:38.155Z - Error: wrong credentials
+info 2020-11-21T17:10:39.095Z - stopping server
+info 2020-11-21T17:10:40.708Z - starting server
+info 2020-11-21T17:10:40.763Z - server running on port 4000
+error 2020-11-21T17:10:48.702Z - Error: id length is not 31
+error 2020-11-21T17:17:10.461Z - Error: id length is not 31
+error 2020-11-21T17:19:01.658Z - Error: id length is not 31
+error 2020-11-21T17:19:38.867Z - Error: id length is not 31
+error 2020-11-21T17:21:01.550Z - Error: id length is not 31
+info 2020-11-21T17:21:06.918Z - stopping server
+info 2020-11-21T17:21:08.549Z - starting server
+info 2020-11-21T17:21:08.609Z - server running on port 4000
+error 2020-11-21T17:21:32.140Z - Error: id length is not 31
+error 2020-11-21T17:23:08.323Z - Error: id length is not 31
+info 2020-11-21T17:24:36.768Z - stopping server
+info 2020-11-21T17:24:38.625Z - starting server
+info 2020-11-21T17:24:38.679Z - server running on port 4000
+error 2020-11-21T17:24:52.706Z - Error: id length is not 31
+error 2020-11-21T17:25:49.995Z - Error: id length is not 31
+info 2020-11-21T17:25:56.646Z - stopping server
+info 2020-11-21T17:25:58.122Z - starting server
+info 2020-11-21T17:25:58.211Z - server running on port 4000
+info 2020-11-21T18:12:23.465Z - stopping server
+info 2020-11-21T18:12:26.093Z - starting server
+info 2020-11-21T18:12:26.160Z - server running on port 4000
+info 2020-11-21T18:23:15.435Z - stopping server
+info 2020-11-21T18:23:17.164Z - starting server
+info 2020-11-21T18:23:17.218Z - server running on port 4000
+error 2020-11-21T18:25:12.998Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:25:25.638Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:26:01.476Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:26:19.282Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-21T18:27:40.997Z - stopping server
+info 2020-11-21T18:27:42.611Z - starting server
+info 2020-11-21T18:27:42.682Z - server running on port 4000
+error 2020-11-21T18:30:36.407Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:32:54.564Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-21T18:32:57.696Z - stopping server
+info 2020-11-21T18:32:59.518Z - starting server
+info 2020-11-21T18:32:59.577Z - server running on port 4000
+info 2020-11-21T18:34:05.160Z - starting server
+info 2020-11-21T18:34:05.216Z - server running on port 4000
+info 2020-11-21T18:35:11.205Z - starting server
+info 2020-11-21T18:35:11.260Z - server running on port 4000
+info 2020-11-21T18:39:31.652Z - starting server
+info 2020-11-21T18:39:31.706Z - server running on port 4000
+error 2020-11-21T18:39:54.174Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:40:29.611Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:42:18.623Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:42:39.628Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:42:54.782Z - TypeError: undefined is not a text
+error 2020-11-21T18:43:21.329Z - TypeError: undefined is not a text
+error 2020-11-21T18:43:29.640Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:43:38.837Z - TypeError: undefined is not a text
+error 2020-11-21T18:46:51.128Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:47:07.836Z - TypeError: undefined is not a text
+error 2020-11-21T18:47:37.837Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:48:08.264Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:48:23.557Z - TypeError: undefined is not a text
+error 2020-11-21T18:49:15.156Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:49:17.070Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:49:39.274Z - TypeError: undefined is not a text
+error 2020-11-21T18:50:24.789Z - TypeError: undefined is not a text
+error 2020-11-21T18:51:59.779Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:52:16.112Z - TypeError: undefined is not a text
+error 2020-11-21T18:52:22.042Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+error 2020-11-21T18:52:45.634Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-21T18:59:05.023Z - stopping server
+info 2020-11-21T19:00:43.479Z - starting server
+info 2020-11-21T19:00:43.576Z - server running on port 4000
+error 2020-11-21T19:18:07.969Z - TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+info 2020-11-23T11:19:31.044Z - stopping server
+info 2020-11-23T11:19:33.299Z - starting server
+info 2020-11-23T11:19:33.406Z - server running on port 4000
+info 2020-11-23T14:45:26.844Z - stopping server
+info 2020-11-24T14:30:10.498Z - starting server
+info 2020-11-24T14:30:11.011Z - server running on port 4000
+info 2020-11-24T14:32:23.026Z - stopping server
+info 2020-11-24T14:39:41.298Z - starting server
+info 2020-11-24T14:39:42.171Z - server running on port 4000
+info 2020-11-24T16:10:49.489Z - starting server
+info 2020-11-24T16:10:49.874Z - server running on port 4000
+info 2020-11-24T16:28:25.202Z - stopping server
+info 2020-11-25T11:43:04.107Z - starting server
+info 2020-11-25T11:43:04.331Z - server running on port 4000
+error 2020-11-25T11:45:20.235Z - ReferenceError: userId is not defined
+error 2020-11-25T11:46:43.505Z - ReferenceError: userId is not defined
+info 2020-11-25T11:49:02.140Z - stopping server
+info 2020-11-25T11:49:06.206Z - starting server
+info 2020-11-25T11:49:06.374Z - server running on port 4000
+error 2020-11-25T11:49:25.100Z - ReferenceError: userId is not defined
+info 2020-11-25T11:50:47.786Z - stopping server
+info 2020-11-25T11:50:51.856Z - starting server
+info 2020-11-25T11:50:52.013Z - server running on port 4000
+error 2020-11-25T11:51:09.847Z - userId is not defined
+info 2020-11-25T11:53:07.102Z - stopping server
+info 2020-11-25T11:53:10.608Z - starting server
+info 2020-11-25T11:53:10.756Z - server running on port 4000
+info 2020-11-25T11:53:21.388Z - stopping server
+info 2020-11-25T11:53:22.723Z - starting server
+info 2020-11-25T11:53:22.791Z - server running on port 4000
+error 2020-11-25T11:53:33.048Z - ReferenceError: token is not defined
+info 2020-11-25T11:54:29.009Z - stopping server
+info 2020-11-25T11:54:32.150Z - starting server
+info 2020-11-25T11:54:32.262Z - server running on port 4000
+info 2020-11-25T11:54:41.368Z - stopping server
+info 2020-11-25T11:54:43.572Z - starting server
+info 2020-11-25T11:54:43.840Z - server running on port 4000
+error 2020-11-25T11:55:06.094Z - ReferenceError: token is not defined
+info 2020-11-25T11:55:24.237Z - stopping server
+info 2020-11-25T11:55:26.577Z - starting server
+info 2020-11-25T11:55:26.644Z - server running on port 4000
+error 2020-11-25T11:55:48.505Z - ReferenceError: userId is not defined
+info 2020-11-25T11:56:29.258Z - stopping server
+info 2020-11-25T11:56:31.365Z - starting server
+info 2020-11-25T11:56:31.441Z - server running on port 4000
+info 2020-11-25T11:56:37.843Z - stopping server
+info 2020-11-25T11:57:28.172Z - starting server
+info 2020-11-25T11:57:28.442Z - server running on port 4000
+error 2020-11-25T11:58:46.026Z - userId is not defined
+info 2020-11-25T11:59:43.534Z - starting server
+info 2020-11-25T11:59:43.930Z - server running on port 4000
+info 2020-11-25T12:03:26.527Z - starting server
+info 2020-11-25T12:03:26.857Z - server running on port 4000
+error 2020-11-25T12:03:36.033Z - userId is not defined
+error 2020-11-25T12:03:39.196Z - userId is not defined
+info 2020-11-25T12:05:10.072Z - starting server
+info 2020-11-25T12:05:10.331Z - server running on port 4000
+error 2020-11-25T12:05:24.740Z - token is not defined
+info 2020-11-25T12:06:05.996Z - stopping server
+info 2020-11-25T12:06:10.869Z - starting server
+info 2020-11-25T12:06:10.956Z - server running on port 4000
+error 2020-11-25T12:06:26.081Z - user is not defined
+info 2020-11-25T12:07:25.174Z - stopping server
+info 2020-11-25T12:07:35.004Z - starting server
+info 2020-11-25T12:07:35.207Z - server running on port 4000
+info 2020-11-25T12:08:05.363Z - starting server
+info 2020-11-25T12:08:05.623Z - server running on port 4000
+info 2020-11-25T12:08:54.254Z - starting server
+info 2020-11-25T12:08:54.458Z - server running on port 4000
+info 2020-11-25T12:09:28.471Z - starting server
+info 2020-11-25T12:09:28.688Z - server running on port 4000
+info 2020-11-25T12:09:51.841Z - starting server
+info 2020-11-25T12:09:53.141Z - server running on port 4000
+info 2020-11-25T12:11:06.590Z - starting server
+info 2020-11-25T12:11:06.759Z - server running on port 4000
+info 2020-11-25T12:16:57.134Z - starting server
+info 2020-11-25T12:16:57.322Z - server running on port 4000
+info 2020-11-25T12:17:06.603Z - starting server
+info 2020-11-25T12:17:06.675Z - server running on port 4000
+error 2020-11-25T12:17:21.800Z - userId is not defined
+info 2020-11-25T12:17:54.287Z - stopping server
+info 2020-11-25T12:17:56.231Z - starting server
+info 2020-11-25T12:17:56.298Z - server running on port 4000
+info 2020-11-25T12:25:09.362Z - stopping server
+info 2020-11-25T12:25:13.890Z - starting server
+info 2020-11-25T12:25:14.115Z - server running on port 4000
+info 2020-11-25T12:30:31.616Z - stopping server
+info 2020-11-25T12:30:35.401Z - starting server
+info 2020-11-25T12:30:35.639Z - server running on port 4000
+info 2020-11-25T17:36:52.794Z - stopping server
+info 2020-11-25T19:46:33.086Z - starting server
+info 2020-11-25T19:46:34.049Z - server running on port 4000
+error 2020-11-25T19:46:52.199Z - ReferenceError: JWT_SECRET is not defined
+error 2020-11-25T19:51:35.806Z - ReferenceError: JWT_SECRET is not defined
+info 2020-11-25T19:52:09.393Z - stopping server
+info 2020-11-25T19:52:14.563Z - starting server
+info 2020-11-25T19:52:14.890Z - server running on port 4000
+error 2020-11-25T19:52:44.214Z - Error: "expiresIn" should be a number of seconds or string representing a timespan
+info 2020-11-25T19:53:26.474Z - stopping server
+info 2020-11-25T19:53:28.211Z - starting server
+info 2020-11-25T19:53:28.339Z - server running on port 4000
+error 2020-11-25T19:53:59.321Z - Error: "expiresIn" should be a number of seconds or string representing a timespan
+info 2020-11-25T19:54:14.400Z - stopping server
+info 2020-11-25T19:54:16.513Z - starting server
+info 2020-11-25T19:54:16.607Z - server running on port 4000
+error 2020-11-25T19:54:26.948Z - ReferenceError: token is not defined
+error 2020-11-25T19:56:35.485Z - ReferenceError: token is not defined
+error 2020-11-25T19:57:38.966Z - ReferenceError: token is not defined
+error 2020-11-25T19:58:59.402Z - ReferenceError: token is not defined
+error 2020-11-25T19:59:31.608Z - ReferenceError: token is not defined
+error 2020-11-25T20:00:39.609Z - ReferenceError: token is not defined
+error 2020-11-25T20:01:40.492Z - ReferenceError: token is not defined
+error 2020-11-25T20:02:16.174Z - ReferenceError: token is not defined
+info 2020-11-25T20:03:19.201Z - stopping server
+info 2020-11-25T20:03:28.331Z - starting server
+info 2020-11-25T20:03:28.662Z - server running on port 4000
+error 2020-11-25T20:03:44.254Z - ReferenceError: jwt is not defined
+info 2020-11-25T20:05:04.244Z - stopping server
+info 2020-11-25T20:05:08.336Z - starting server
+info 2020-11-25T20:05:08.590Z - server running on port 4000
+error 2020-11-25T20:05:46.051Z - Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+info 2020-11-25T20:09:09.464Z - stopping server
+info 2020-11-25T20:09:14.386Z - starting server
+info 2020-11-25T20:09:14.672Z - server running on port 4000
+error 2020-11-25T20:09:38.914Z - Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+error 2020-11-25T20:11:24.083Z - Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+info 2020-11-25T20:14:28.983Z - stopping server
+info 2020-11-25T20:14:33.332Z - starting server
+info 2020-11-25T20:14:33.760Z - server running on port 4000
+error 2020-11-25T20:15:04.115Z - Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+info 2020-11-25T20:20:45.564Z - stopping server
+info 2020-11-25T20:20:50.973Z - starting server
+info 2020-11-25T20:20:51.338Z - server running on port 4000
+error 2020-11-25T20:21:12.461Z - Error: id length is not 24
+error 2020-11-25T20:22:35.776Z - Error: id length is not 24
+info 2020-11-25T20:23:09.877Z - stopping server
+info 2020-11-25T20:23:14.421Z - starting server
+info 2020-11-25T20:23:14.548Z - server running on port 4000
+error 2020-11-25T20:23:33.951Z - Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+info 2020-11-25T20:26:57.643Z - stopping server
+info 2020-11-25T20:27:00.180Z - starting server
+info 2020-11-25T20:27:00.283Z - server running on port 4000
+error 2020-11-25T20:27:20.136Z - TypeError: Cannot read property 'verify' of undefined
+info 2020-11-25T20:27:45.517Z - stopping server
+info 2020-11-25T20:27:47.653Z - starting server
+info 2020-11-25T20:27:47.721Z - server running on port 4000
+info 2020-11-26T12:49:18.726Z - stopping server
+info 2020-11-26T12:49:22.760Z - starting server
+info 2020-11-26T12:49:22.988Z - server running on port 4000
+error 2020-11-26T12:49:36.640Z - AuthError: wrong credentials
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/authenticate-user.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-11-26T12:51:46.786Z - ConflictError: user with e-mail putas@promises.com already registered
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js:27:31
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T14:14:09.789Z - stopping server
+info 2020-11-26T14:14:35.067Z - starting server
+info 2020-11-26T14:14:36.455Z - server running on port 4000
+error 2020-11-26T14:17:49.178Z - ReferenceError: callback is not defined
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/retrieve-notes.js:10:22)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-retrieve-notes.js:17:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/express/lib/router/index.js:275:10)
+info 2020-11-26T17:33:08.738Z - stopping server
+info 2020-11-26T18:38:45.754Z - starting server
+error 2020-11-26T18:38:45.990Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T18:38:45.991Z - stopping server
+info 2020-11-26T18:38:48.646Z - starting server
+error 2020-11-26T18:38:48.714Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T18:38:48.716Z - stopping server
+info 2020-11-26T18:38:50.621Z - starting server
+error 2020-11-26T18:38:50.680Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T18:38:50.681Z - stopping server
+info 2020-11-26T18:39:58.854Z - starting server
+error 2020-11-26T18:39:58.915Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T18:39:58.917Z - stopping server
+info 2020-11-26T18:41:07.530Z - starting server
+error 2020-11-26T18:41:07.640Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T18:41:07.641Z - stopping server
+info 2020-11-26T18:41:22.911Z - starting server
+error 2020-11-26T18:41:22.964Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T18:41:22.965Z - stopping server
+info 2020-11-26T19:01:38.525Z - starting server
+error 2020-11-26T19:01:38.614Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T19:01:38.615Z - stopping server
+info 2020-11-26T19:05:10.652Z - starting server
+error 2020-11-26T19:05:10.702Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T19:05:10.703Z - stopping server
+info 2020-11-26T19:05:26.708Z - starting server
+error 2020-11-26T19:05:26.760Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T19:05:26.761Z - stopping server
+info 2020-11-26T19:20:28.585Z - starting server
+error 2020-11-26T19:20:58.611Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/connection.js:830:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:342:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:341:10)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-11-26T19:20:58.625Z - stopping server
+info 2020-11-26T19:24:46.458Z - starting server
+error 2020-11-26T19:25:16.481Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/connection.js:830:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:342:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:341:10)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-11-26T19:25:16.485Z - stopping server
+info 2020-11-26T19:27:55.388Z - starting server
+error 2020-11-26T19:28:25.412Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/connection.js:830:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:342:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:341:10)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-11-26T19:28:25.476Z - stopping server
+info 2020-11-26T19:33:00.050Z - starting server
+info 2020-11-26T19:33:20.648Z - stopping server
+info 2020-11-26T19:33:44.097Z - starting server
+error 2020-11-26T19:34:14.122Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/connection.js:830:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:342:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:341:10)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-11-26T19:34:14.148Z - stopping server
+info 2020-11-26T19:59:30.981Z - starting server
+error 2020-11-26T19:59:31.653Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T19:59:31.658Z - stopping server
+info 2020-11-26T20:03:49.962Z - starting server
+error 2020-11-26T20:03:50.018Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:03:50.020Z - stopping server
+info 2020-11-26T20:04:18.434Z - starting server
+error 2020-11-26T20:04:18.489Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:04:18.490Z - stopping server
+info 2020-11-26T20:04:23.111Z - starting server
+error 2020-11-26T20:04:23.176Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:04:23.182Z - stopping server
+info 2020-11-26T20:07:00.903Z - starting server
+error 2020-11-26T20:07:00.962Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:07:00.963Z - stopping server
+info 2020-11-26T20:08:45.216Z - starting server
+error 2020-11-26T20:08:45.269Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:08:45.270Z - stopping server
+info 2020-11-26T20:09:13.656Z - starting server
+error 2020-11-26T20:09:13.711Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:09:13.712Z - stopping server
+info 2020-11-26T20:09:19.447Z - starting server
+error 2020-11-26T20:09:19.505Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:09:19.506Z - stopping server
+info 2020-11-26T20:09:52.394Z - starting server
+error 2020-11-26T20:09:52.459Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:09:52.461Z - stopping server
+info 2020-11-26T20:09:54.758Z - starting server
+error 2020-11-26T20:09:54.815Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:09:54.816Z - stopping server
+info 2020-11-26T20:10:00.477Z - starting server
+error 2020-11-26T20:10:00.545Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:10:00.546Z - stopping server
+info 2020-11-26T20:10:08.184Z - starting server
+error 2020-11-26T20:10:08.243Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:10:08.245Z - stopping server
+info 2020-11-26T20:10:12.129Z - starting server
+error 2020-11-26T20:10:12.186Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:10:12.367Z - stopping server
+info 2020-11-26T20:10:16.779Z - starting server
+error 2020-11-26T20:10:16.831Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:10:16.833Z - stopping server
+info 2020-11-26T20:11:52.637Z - starting server
+error 2020-11-26T20:11:52.706Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:11:52.707Z - stopping server
+info 2020-11-26T20:14:18.864Z - starting server
+error 2020-11-26T20:14:18.983Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:14:18.986Z - stopping server
+info 2020-11-26T20:15:56.178Z - starting server
+error 2020-11-26T20:17:28.967Z - MongooseServerSelectionError: connection timed out
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/connection.js:830:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:342:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:341:10)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1012:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-11-26T20:17:28.974Z - stopping server
+info 2020-11-26T20:18:40.260Z - starting server
+error 2020-11-26T20:18:40.328Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:18:40.329Z - stopping server
+info 2020-11-26T20:21:12.878Z - starting server
+error 2020-11-26T20:21:12.946Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:21:12.947Z - stopping server
+info 2020-11-26T20:21:48.988Z - starting server
+error 2020-11-26T20:21:49.073Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:21:49.075Z - stopping server
+info 2020-11-26T20:21:52.701Z - starting server
+error 2020-11-26T20:21:52.764Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:21:52.779Z - stopping server
+info 2020-11-26T20:21:56.210Z - starting server
+error 2020-11-26T20:21:56.268Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:21:56.291Z - stopping server
+info 2020-11-26T20:23:46.707Z - starting server
+error 2020-11-26T20:23:46.779Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:23:46.780Z - stopping server
+info 2020-11-26T20:24:54.621Z - starting server
+error 2020-11-26T20:24:54.682Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:24:54.683Z - stopping server
+info 2020-11-26T20:26:06.395Z - starting server
+error 2020-11-26T20:26:06.459Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:26:06.460Z - stopping server
+info 2020-11-26T20:26:10.652Z - starting server
+error 2020-11-26T20:26:10.722Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:26:10.725Z - stopping server
+info 2020-11-26T20:29:16.145Z - starting server
+error 2020-11-26T20:29:16.279Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:29:16.281Z - stopping server
+info 2020-11-26T20:31:53.356Z - starting server
+error 2020-11-26T20:34:37.416Z - MongooseServerSelectionError: connection timed out
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/connection.js:830:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:342:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/node_modules/mongoose/lib/index.js:341:10)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1012:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-11-26T20:34:37.418Z - stopping server
+info 2020-11-26T20:34:53.778Z - starting server
+error 2020-11-26T20:34:53.842Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:34:53.843Z - stopping server
+info 2020-11-26T20:39:34.250Z - starting server
+error 2020-11-26T20:39:34.326Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:39:34.328Z - stopping server
+info 2020-11-26T20:40:51.892Z - starting server
+error 2020-11-26T20:40:51.960Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:40:51.961Z - stopping server
+info 2020-11-26T20:41:25.305Z - starting server
+error 2020-11-26T20:41:44.517Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:41:44.529Z - stopping server
+info 2020-11-26T20:42:45.734Z - starting server
+error 2020-11-26T20:42:49.521Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:42:49.527Z - stopping server
+info 2020-11-26T20:43:47.289Z - starting server
+error 2020-11-26T20:43:48.955Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:43:48.961Z - stopping server
+info 2020-11-26T20:50:35.610Z - starting server
+error 2020-11-26T20:50:36.700Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T20:50:36.702Z - stopping server
+info 2020-11-26T21:37:02.842Z - starting server
+error 2020-11-26T21:37:02.904Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T21:37:02.906Z - stopping server
+info 2020-11-26T21:37:22.762Z - starting server
+error 2020-11-26T21:37:22.833Z - Error: Cannot find module './note'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/logic/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/handle-register-user.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/schemas/index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/notes-api/models/index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-26T21:37:22.835Z - stopping server

@@ -7,5 +7,5 @@ module.exports = {
     ValueError: createCustomError('ValueError'),
     FormatError: createCustomError('FormatError'),
     ConflictError: createCustomError('ConflictError'),
-    NotFoundError: createCustomError('ContentError')
+    NotFoundError: createCustomError('NotFoundError')
 }
