@@ -1,4 +1,6 @@
-GEOGIN (la búsqueda del QR)
+# 🕵️ GEOGIN (la búsqueda del QR) v1.0.0 🕵️
+
+## 🔍 Description
 
 Geogin es un juego estilo "la búsqueda del tesoro" pero en este caso lo que deberemos encontrar
 son QRs que estarán escondidos y mediante una localización no exacta y una serie de explicaciones y pistas, deberemos ser capaces de encontrarlos.
@@ -12,3 +14,5 @@ El juego transcurrirá en un tiempo limitado, que podremos configurar al crear l
 El ganador de la búsqueda será el jugador que encuentre primero todos los Qrs escondidos o si finaliza el juego antes por el tiempo, habrá ganado el jugador que obtenga más puntos.
 
 Por cada prueba que superemos en las búsquedas el jugador obtendrá 10 puntos y por cada pista que utilicemos se nos restaran 2 puntos.
+
+![](./images/data-model.jpg)
