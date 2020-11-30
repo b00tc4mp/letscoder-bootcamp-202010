@@ -1,33 +1,30 @@
-import { validateCallback, validateNumber } from './helpers/validations';
+import { validateCallback } from './helpers/validations';
 
 const caloriesCalc = (gender, goal, age, height, weight, activity, callback) => {
 
     if(typeof goal !== 'string') throw new TypeError (`${goal} is not a valid goal`)
     validateCallback(callback)
-    validateNumber(weight)
-    validateNumber(height)
-    validateNumber(age)
 
     if (gender === 'man' && goal) {
         const tmbMan = (10 * weight) + (6.25 * height) - (5 * age) +  5
-        const totalCaloriesMan = tmbMan * activity
+        const totalCaloriesMan = tmbMan * (activity === 'sedentary'? 1.2 : 1.8)
         //return callback(Math.floor(totalCaloriesMan))
         if (goal === 'gain')
             return callback(Math.floor(totalCaloriesMan + 500))
         else if(goal === 'lose')
             return callback(Math.floor(totalCaloriesMan - 500))
-        else 
+        else if (goal === 'maintain')
             return callback(Math.floor(totalCaloriesMan))
     }
     else if (gender === 'woman' && goal) {
         const tmbWoman = (10 * weight) + (6.25 * height) - (5 * age) - 161
-        const totalCaloriesWoman = tmbWoman * activity
+        const totalCaloriesWoman = tmbWoman * (activity === 'sedentary'? 1.2 : 1.8)
         // return callback(Math.floor(totalCaloriesWoman))
         if (goal === 'gain')
             return callback(Math.floor(totalCaloriesWoman + 500))
         else if(goal === 'lose')
             return callback(Math.floor(totalCaloriesWoman - 500))
-        else 
+        else if (goal === 'maintain')
             return callback(Math.floor(totalCaloriesWoman))
     }
     else

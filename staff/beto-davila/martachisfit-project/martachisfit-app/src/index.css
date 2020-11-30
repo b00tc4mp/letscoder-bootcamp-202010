@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, a, button {
+h1, h2, a, h3, button {
   font-family: "Oswald", sans-serif;
   color: #0bb1ba;
 }

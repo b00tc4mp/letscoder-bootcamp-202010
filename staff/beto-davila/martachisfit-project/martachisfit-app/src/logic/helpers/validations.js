@@ -32,6 +32,7 @@ module.exports = {
     },
 
     validateNumber(number) {
-        if (typeof id !== 'number') throw new TypeError(number + ' is not a number')
+        if (typeof number !== 'number') throw new TypeError(number + ' is not a number')
+
     }
 }

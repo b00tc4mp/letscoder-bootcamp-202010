@@ -67,9 +67,9 @@ export default function UserInfo({onGoToGoalCaloriesAndMacros}) {
                 <input type="radio" id="athlete" name="activity" value="athlete"></input>
                 <label htmlFor="athlete">Deportista</label>
             </div>
+                <button className="user-info__next">Siguiente</button>
             </form>
           <p className="user-info__p">* Asumimos que una persona sedentaria apenas tiene actividad física diaria. Por otro lado, la persona deportista realiza ejercicio intenso al menos, 5 veces por semana.</p>
-        <button className="user-info__next">Siguiente</button>
       </section>
       </>
 }

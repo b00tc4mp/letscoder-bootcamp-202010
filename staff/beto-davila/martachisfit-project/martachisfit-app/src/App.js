@@ -1,11 +1,11 @@
 import './App.css';
-import { Landing, SignIn, CaloriesGoal, UserInfo } from './components';
+import { Landing, SignIn, CaloriesGoal, UserInfo, SignUp } from './components';
 import { useState } from 'react';
-import { macrosAfterCalories, caloriesCalc } from './logic/index';
+import { macrosAfterCalories, caloriesCalc, registerUser } from './logic/index';
 
 function App() {
-  const [view, setView] = useState('user-info')
-  // const [macros, setGoal] = useState(macros)
+  const [view, setView] = useState('landing')
+  const [goal, setGoal] = useState()
 
   const handleGoToSignIn = () => {
     setView('sign-in')
@@ -15,24 +15,43 @@ function App() {
     setView('user-info')
   }
 
-  const handleGetCaloriesAndMacros = (gender, goal, age, height, weight, activity) => {
-    caloriesCalc(gender, goal, age, height, weight, activity, (error, totalCalories) => {
+  const handleGoToRegister = () => {
+    setView('sign-up')
+  }
+
+  const handleGoToPlans = () => {
+    setView('plans')
+  }
+
+  const handleRegister = (fullname, email, password) => {
+    registerUser(fullname, email, password, error => {
       if (error) return alert(error.message)
 
-      macrosAfterCalories(totalCalories, (error, macros) => {
-        if (error) return alert(error.message)
-
-        // setGoal(macros)
+      setView('home')
     })
+  }
 
-    } )
+  const handleGetCaloriesAndMacros = (gender, goal, age, height, weight, activity) => {
+    try {
+      caloriesCalc(gender, goal, age, height, weight, activity, totalCalories => {
+  
+        macrosAfterCalories(totalCalories, goal => {
+          
+          setGoal(goal)
+          setView('calories-goal')
+        })
+      })
+    } catch (error) {
+      alert(error.message)
+    }
   }
 
   return <>
   {view === 'landing' && <Landing onUserInfo={handleGoToUserInfo} onGoToSignIn={handleGoToSignIn}/>}
   {view === 'sign-in' && <SignIn />}
   {view === 'user-info' && <UserInfo onGoToGoalCaloriesAndMacros={handleGetCaloriesAndMacros}/>}
-  {/* {<CaloriesGoal />} */}
+  {view === 'calories-goal' && goal && <CaloriesGoal macros={goal} onGoToRegister={handleGoToRegister} onGoToPlans={handleGoToPlans}/>}
+  {view === 'sign-up' && <SignUp onRegister={handleRegister}/>}
   </>
 }
 

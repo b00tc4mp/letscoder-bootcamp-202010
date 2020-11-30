@@ -10,13 +10,20 @@ const macrosAfterCalories = (totalCalories, callback) => {
     const _protein = Math.floor((totalCalories * 0.3) / 4)
     const _fats = Math.floor((totalCalories * 0.3) / 9)
 
-    const macros = {
+    // const macros = {
+    //     carbs: _carbs,
+    //     protein: _protein,
+    //     fats: _fats
+    // }
+
+    const caloriesMacros = {
+        calories: totalCalories,
         carbs: _carbs,
         protein: _protein,
         fats: _fats
     }
 
-    return callback(macros)
+    return callback(caloriesMacros)
 
 } else
     return callback(new Error('error calculating macronutrients'))
