@@ -1,5 +1,5 @@
-import dbConnect from '../../../utils'
-const { authenticateUser } = require('../../api/logic')
+import { dbConnect } from '../../utils'
+const { authenticateUser } = require('../../../api/logic')
 const jwt = require('jsonwebtoken')
 
 const { env: { JWT_SECRET, JWT_EXP } } = process

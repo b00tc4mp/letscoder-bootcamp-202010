@@ -6,7 +6,7 @@ async function dbConnect() {
     if(connection.isConnected){
         return;
     }
-
+    debugger
     const db = await mongoose.connect(process.env.MONGO_URL,{
         useNewUrlParser: true,
         useUnifiedTopology: true,

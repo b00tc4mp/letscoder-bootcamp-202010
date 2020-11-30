@@ -14,15 +14,15 @@ const productSchema = new mongoose.Schema({
         // required: [true, 'Please add a price'],
     },
     glutenFree: {
-        type: boolean,
+        type: Boolean,
         required: [true, 'Please add a glutenFree value'],
     },
     vegan: {
-        type: boolean,
+        type: Boolean,
         required: [true, 'Please add a vegan value'],
     },
     available: {
-        type: boolean,
+        type: Boolean,
         default: true,
         required: [true, 'Please add a available value']
     },

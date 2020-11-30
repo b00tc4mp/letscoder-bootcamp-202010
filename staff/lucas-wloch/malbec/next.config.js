@@ -4,7 +4,8 @@ module.exports = withSass({
         // PORT=4000
         MONGODB_URL: "mongodb://localhost:27017/malbec",
         JWT_SECRET: "un dia vi una vaca vestida de uniforme",
-        JWT_EXP: "24h"
+        JWT_EXP: "24h",
+        NODE_OPTIONS: '--inspect'
     },
     
 })
