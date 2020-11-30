@@ -12,6 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.18",
     "next": "^10.0.3",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
