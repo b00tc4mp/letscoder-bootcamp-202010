@@ -1,4 +1,4 @@
 module.exports = {
-    shelter: require('./shelter'),
+    user: require('./user'),
     pet: require('./pet')
 }

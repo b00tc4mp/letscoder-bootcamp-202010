@@ -1,7 +1,7 @@
 const { Schema } = require('mongoose')
 
 module.exports = new Schema({
-    shelterName: {
+    userName: {
         type: String,
         required: true
     },
@@ -31,7 +31,18 @@ module.exports = new Schema({
     },
 
     phone: {
-        type: Number
+        type: String
+    },
+
+    role: {
+        type: String,
+        enum: ['person', 'shelter'],
+        default: 'shelter',
+        required: true
+      },
+    
+    geo: {
+        Number
     }
 
 

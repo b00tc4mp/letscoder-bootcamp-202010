@@ -4,9 +4,9 @@ const { jsonBodyParser } = require('../../middlewares')
 const {
     
     handleRegisterUser,
-  /*   handleAuthenticateUser,
-    handleRetrieveUser,
-    handleSaveNote,
+    handleAuthenticateUser,
+  /*  handleRetrievePet,
+    handleSavePet,
    */
 } = require('./handlers')
 
@@ -17,12 +17,12 @@ const router = new Router()
 
 router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
 
-/* router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
+router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 
-router.get('/api/users', withErrorHandling(handleRetrieveUser))
+/* router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
-router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
+router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
 
-router.get('/api/notes', withErrorHandling(handleRetrieveNotes)) */
+router.get('/api/pets', withErrorHandling(handleRetrievePets)) */
 
 module.exports = router

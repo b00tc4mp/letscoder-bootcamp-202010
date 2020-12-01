@@ -1,6 +1,6 @@
 import './SignIn.sass'
 
-function SignIn(){
+function SignIn({onSignIn, onGoToSignUp}){
     return <div className='signIn'>
         <header className='signIn__header'>
             <h1 className='signIn__h1'>Welcome to ADOGTApp</h1>
@@ -14,7 +14,7 @@ function SignIn(){
 
             const { target: { email: { value: email }, password: { value: password } } } = event
 
-            //onSignIn(email, password)
+            onSignIn(email, password)
 
         }}>
             <h4 className='signIn__h6'>Are you a ANIMAL SHELTER? Please SIGN IN here, if you have an account</h4>
@@ -23,8 +23,8 @@ function SignIn(){
             <input className='signIn__input' type="password" name="password" placeholder="password" />
             <button className='signIn__button'>Send</button>
         </form>
-        {/* <p className='signIn__p'>Don´t have an account? <span className='signIn__span' onClick={onGoToSignUp}>Sign Up</span></p> */}
-        <p className='signIn__p'>Don´t have an account? <span className='signIn__span' >Sign Up</span></p>
+        <p className='signIn__p'>Don´t have an account? <span className='signIn__span' onClick={onGoToSignUp}>Sign Up</span></p>
+     
 
 </div>
 

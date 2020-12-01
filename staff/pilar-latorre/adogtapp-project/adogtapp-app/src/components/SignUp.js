@@ -8,11 +8,11 @@ function SignUp({ onSignUp, onGoToSignIn, onGoToAnimalInfo}){
         <form className="signUp__form" onSubmit={event => {
             event.preventDefault()
 
-            const { target: { shelterName: { value: shelterName }, email: { value: email }, password: { value: password }, address: {value: address},  city: {value: city}, phone: {value: phone}, } } = event
+            const { target: { userName: { value: userName }, email: { value: email }, password: { value: password }, address: {value: address},  city: {value: city}, phone: {value: phone}, } } = event
 
-            onSignUp(shelterName, email, password, address, city, phone )
+            onSignUp(userName, email, password, address, city, phone )
         }}>
-            <input className="signUp__input" type="text" name="shelterName" placeholder="shelter name" />
+            <input className="signUp__input" type="text" name="userName" placeholder="shelter name" />
             <input className="signUp__input" type="email" name="email" placeholder="e-mail" />
             <input className="signUp__input" type="password" name="password" placeholder="password" />
             <input className="signUp__input" type="text" name="address" placeholder="address" />

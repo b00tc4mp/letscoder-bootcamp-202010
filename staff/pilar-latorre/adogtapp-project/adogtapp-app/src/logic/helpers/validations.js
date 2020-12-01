@@ -1,9 +1,9 @@
 module.exports = {
 
-    validateshelterName(shelterName) {
-        if (typeof shelterName !== 'string') throw new TypeError(`${fullname} is not a fullname`)
+    validateuserName(userName) {
+        if (typeof userName !== 'string') throw new TypeError(`${userName} is not a userName`)
 
-        if (!shelterName.trim().length) throw new Error('shelterName is empty or blank')
+        if (!userName.trim().length) throw new Error('userName is empty or blank')
     },
     validateEmail(email) {
         if (typeof email !== 'string') throw new TypeError(`${email} is not an e-mail`)
@@ -19,7 +19,7 @@ module.exports = {
         if (!password.trim().length) throw new Error('password is empty or blank')
 
     },
-    validateAdress(address) {
+    validateAddress(address) {
         if (typeof address !== 'string') throw new TypeError(`${address} is not a address`)
 
         if (!address.trim().length) throw new Error('address is empty or blank')
@@ -31,9 +31,8 @@ module.exports = {
     },
 
     validatePhone(phone) {
-        if (typeof phone !== 'number') throw new TypeError(`${phone} is not a phone`)
+        if (typeof phone !== 'string') throw new TypeError(`${phone} is not a phone`)
 
-        if (!phone.trim().length) throw new Error('phone is empty or blank')
     },
 
     validateCallback(callback) {

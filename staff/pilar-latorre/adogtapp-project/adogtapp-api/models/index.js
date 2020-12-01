@@ -1,7 +1,7 @@
 const { model } = require('mongoose')
-const { shelter, pet } = require('./schemas')
+const { user, pet } = require('./schemas')
 
 module.exports = {
-    Shelter: model('Shelter', shelter),
+    User: model('User', user),
     Pet: model('Pet', pet)
 }
