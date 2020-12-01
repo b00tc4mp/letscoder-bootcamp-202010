@@ -1,15 +1,17 @@
 import dbConnect from '../../../utils/dbConnect'
-import { handleError } from '../../../utils'
+import { handleError, cors } from '../../../utils'
 import { NotFoundError } from '../../../errors'
 const { registerUser, retrieveUser } = require('../../../api/logic')
 
-// const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 
 dbConnect();
 const { env: { JWT_SECRET } } = process
 
 export default async (req, res) => {
     const { method, headers: { authorization } } = req
+    
+    cors(req, res)
 
     switch (method) {
         case 'GET':
@@ -20,9 +22,9 @@ export default async (req, res) => {
             try {
                 retrieveUser(userId)
                     .then(user => res.status(200).json(user))
-                    .catch(handleError(req, res, error))
+                    .catch(error => handleError(req, res, error))
             } catch (error) {
-                handleError(req, res, error)
+                return handleError(req, res, error)
             }
             break;
         case 'POST':

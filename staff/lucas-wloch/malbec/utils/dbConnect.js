@@ -13,6 +13,7 @@ async function dbConnect() {
     const db = await mongoose.connect(MONGODB_URL,{
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useCreateIndex: true
     })
 
     connection.isConnected = db.connections[0].readyState;
