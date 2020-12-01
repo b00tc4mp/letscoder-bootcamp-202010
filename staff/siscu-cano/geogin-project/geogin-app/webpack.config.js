@@ -3,14 +3,8 @@ const path = require('path')
 
 module.exports = {
   output: {
-    filename: 'app.bundle.js'
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000,
-    publicPath: path.join(__dirname, 'dist'),
-    open: true
+    filename: 'app.bundle.js',
+    publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -33,5 +27,12 @@ module.exports = {
         }
       }
     ]
+  },
+  devServer: {
+    port: 9000,
+    open: true
+  },
+  watchOptions: {
+    ignored: '/node_modules/'
   }
 }
