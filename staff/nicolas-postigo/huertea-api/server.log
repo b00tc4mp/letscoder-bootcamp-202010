@@ -1834,3 +1834,4 @@ error 2020-12-01T18:33:07.499Z - TypeError: Offer.insertOne is not a function
 info 2020-12-01T18:33:52.048Z - stopping server
 info 2020-12-01T18:34:04.355Z - starting server
 info 2020-12-01T18:34:04.599Z - server running on port 4000
+info 2020-12-01T18:41:23.288Z - stopping server

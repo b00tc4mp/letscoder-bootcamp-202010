@@ -43,15 +43,15 @@ function App() {
     try {
       authenticateUser(email, password, (error, token) => {
         if (error) return alert(error.message)
-        
+
         sessionStorage.token = token
-        
+
         try {
           retrieveUser(sessionStorage.token, (error, user) => {
             if (error) return alert(error.message)
-    
+
             setFullname(user.fullname)
-    
+
           })
 
           setView('hub')
@@ -83,7 +83,17 @@ function App() {
     try {
       createOffer(token, undefined, offername, titleoffer, image, error => {
         if (error) return alert(error.message)
-  
+
+        try {
+          retrieveNotes(token, (error, notes) => {
+            if (error) return alert(error.message)
+
+            setNotes(notes)
+          })
+        } catch (error) {
+          alert(error.message)
+        }
+
         setView('hub')
       })
     } catch (error) {
