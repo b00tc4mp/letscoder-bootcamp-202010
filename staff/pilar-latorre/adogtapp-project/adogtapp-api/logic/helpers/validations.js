@@ -33,10 +33,7 @@ module.exports = {
     validatePhone(phone) {
         if (typeof phone !== 'number') throw new TypeError(`${phone} is not a phone`)
 
-        if (!phone.trim().length) throw new Error('phone is empty or blank')
-    },
-
-    validateCallback(callback) {
-        if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
     }
+
+   
 }
