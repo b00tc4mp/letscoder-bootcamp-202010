@@ -400,3 +400,18 @@ error 2020-12-01T15:49:56.585Z - TypeError: retrieveUser is not a function
 info 2020-12-01T15:50:08.181Z - stopping server
 info 2020-12-01T15:50:11.341Z - starting server
 info 2020-12-01T15:50:11.490Z - server running on port 4000
+info 2020-12-01T16:28:28.142Z - stopping server
+info 2020-12-01T16:28:32.388Z - starting server
+info 2020-12-01T16:28:32.522Z - server running on port 4000
+error 2020-12-01T16:30:26.747Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:18:39
+info 2020-12-01T16:57:12.847Z - stopping server
+info 2020-12-01T16:57:16.582Z - starting server
+info 2020-12-01T16:57:16.739Z - server running on port 4000
+info 2020-12-01T17:14:49.468Z - stopping server
+info 2020-12-01T17:14:52.331Z - starting server
+info 2020-12-01T17:14:52.464Z - server running on port 4000
+info 2020-12-01T18:18:14.594Z - stopping server
+info 2020-12-01T18:18:36.379Z - starting server
+info 2020-12-01T18:18:36.507Z - server running on port 4000
+info 2020-12-01T19:36:57.780Z - stopping server
