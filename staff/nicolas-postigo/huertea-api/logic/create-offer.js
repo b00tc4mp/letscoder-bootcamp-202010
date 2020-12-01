@@ -4,7 +4,7 @@ const { ConflictError } = require('../errors')
 const { Offer } = require('../models')
 
 
-module.exports = function (offername, titleoffer) {
+module.exports = function (offername, titleoffer, image) {
     
 
     return semaphore(() =>
@@ -13,7 +13,7 @@ module.exports = function (offername, titleoffer) {
             .then(offer => {
             if (offer) throw new ConflictError(`title offer with text ${titleoffer} already registered`)
 
-            return Offer.create({ offername, titleoffer })
+            return Offer.create({ offername, titleoffer, image })
             })
             .then(() => {})
     )

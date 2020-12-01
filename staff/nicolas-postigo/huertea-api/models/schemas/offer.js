@@ -11,12 +11,17 @@ module.exports = new Schema({
         type: String,
         required: true
     },
-
+    
     offername: {
+        type: String,
+        required: 'URL can\'t be empty',
+        unique: true
+    },
+
+    image: {
         type: String,
         required: true
     },
-
 
 /*     tags: [{
         type: String
