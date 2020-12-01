@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { SignUp, SignIn } from './components'
+import { SignUp, SignIn, Home } from './components'
 import { useState } from 'react'
 import{ registerUser, authenticateUser } from './logic'
 
@@ -40,6 +40,8 @@ function App() {
 
         {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />}
         {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />}
+        {view === 'home' && <Home />}
+
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
