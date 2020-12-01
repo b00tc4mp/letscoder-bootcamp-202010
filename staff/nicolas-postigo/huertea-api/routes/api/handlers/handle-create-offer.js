@@ -1,10 +1,10 @@
 const { createOffer } = require('../../../logic/')
 
 module.exports = (req, res, handleError) => {
-    const { body: { update } } = req
+    const { body: { offername } } = req
 
     try {
-        createOffer(update)
+        createOffer(offername)
             .then(() => res.status(201).send())
             .catch(handleError)
     } catch (error) {

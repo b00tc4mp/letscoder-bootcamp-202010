@@ -1,23 +1,20 @@
 const { validateToken, validateUpdate, validateCallback } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
-const { User } = require('../models')
-const bcryptjs = require('bcryptjs')
-const offer = require('../models/schemas/offer')
+const { Offer } = require('../models')
 
-module.exports = function (token, update, callback) {
-    validateToken(token)
-    validateUpdate(update)
-    validateCallback(callback)
+
+module.exports = function (offername) {
+    
 
     return semaphore(() =>
         Offer
-            .findOne({ text })
-            .then(text => {
-            if (text) throw new ConflictError(`text with e-mail ${text} already registered`)
+            .findOne({ offername })
+            .then(offer => {
+            if (offer) throw new ConflictError(`offername with text ${offername} already registered`)
 
-            return Offer.create({ text })
+            return Offer.create({ offername })
             })
-            .then(() => { })
+            .then(() => {})
     )
 }

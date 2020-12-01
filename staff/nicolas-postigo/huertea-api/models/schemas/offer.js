@@ -2,12 +2,12 @@ const { Schema } = require('mongoose')
 const { Types: { ObjectId } } = Schema
 
 module.exports = new Schema({
-    owner: {
+/*     owner: {
         type: ObjectId,
         required: true
-    },
+    }, */
 
-    text: {
+    offername: {
         type: String,
         required: true
     },

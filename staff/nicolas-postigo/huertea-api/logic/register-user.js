@@ -4,6 +4,7 @@ const { ConflictError } = require('../errors')
 const { User } = require('../models')
 const bcryptjs = require('bcryptjs')
 
+
 module.exports = function (fullname, email, password) {
     validateFullname(fullname)
     validateEmail(email)

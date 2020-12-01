@@ -77,18 +77,17 @@ function App() {
     setView('hub')
   }
 
-  const handleCreateOffer = (offername, image, location) => {
-  debugger
-     const { token } = sessionStorage
-
-        createOffer(token, { offername, image, location }, error => {
-            if (error) alert(error.message)
-
-
-            setView('hub')
-            }) 
-        
-          }
+  const handleCreateOffer = (offername) => {
+    try {
+      createOffer(offername, error => {
+        if (error) return alert(error.message)
+  
+        setView('hub')
+      })
+    } catch (error) {
+      alert(error.message)
+    }
+  }
 
 
   return (

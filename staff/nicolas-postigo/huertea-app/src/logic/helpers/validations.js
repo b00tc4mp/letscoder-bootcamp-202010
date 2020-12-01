@@ -56,5 +56,11 @@ module.exports = {
     validateUpdate(update) {
         if (typeof update !== "object") throw new TypeError("update is not an object")
         if (Object.keys(update).length === 0) throw new TypeError("update is blank or empty")
+    },
+    
+    validateOffer(offername) {
+        if (typeof offername !== 'string') throw new TypeError(offername + ' is not a offername')
+
+        if (!offername.trim().length) throw new Error('offername is empty or blank')
     }
 }
