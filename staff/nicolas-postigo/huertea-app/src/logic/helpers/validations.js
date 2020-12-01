@@ -28,7 +28,6 @@ module.exports = {
 
         if (!id.trim().length) throw new Error('id is empty or blank')
 
-        if (id.length !== 24) throw new Error('id length is not 24')
     },
 
     validateToken(token) {
@@ -64,9 +63,11 @@ module.exports = {
         if (!offername.trim().length) throw new Error('offername is empty or blank')
     },
 
-    validatetitleoffer(titleoffer) {
+    validateTitleoffer(titleoffer) {
         if (typeof titleoffer !== 'string') throw new TypeError(titleoffer + ' is not a titleoffer')
 
         if (!titleoffer.trim().length) throw new Error('titleoffer is empty or blank')
-    }
+    },
+
+
 }

@@ -78,8 +78,10 @@ function App() {
   }
 
   const handleCreateOffer = (offername, titleoffer, image) => {
+    const { token } = sessionStorage
+
     try {
-      createOffer(offername, titleoffer, image, error => {
+      createOffer(token, undefined, offername, titleoffer, image, error => {
         if (error) return alert(error.message)
   
         setView('hub')

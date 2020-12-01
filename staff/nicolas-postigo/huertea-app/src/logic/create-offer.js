@@ -1,13 +1,18 @@
 import { call } from '../utils'
-import { validateCallback, validateOffer } from './helpers/validations'
+import { validateCallback, validateOffer, validateId, validateToken, validateTitleoffer } from './helpers/validations'
 
-export default function (offername, titleoffer, image, callback) {
+export default function (token, offerId, offername, titleoffer, image, callback) {
+    validateToken(token)
     validateOffer(offername)
+    if (typeof offerId !== 'undefined') validateId(offerId)
+    validateTitleoffer(titleoffer)
     validateCallback(callback)
 
 debugger
-    call('POST', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json' },
-    JSON.stringify({offername, titleoffer, image}),
+    call('POST', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json', 
+    Authorization: `Bearer ${token}`,
+    },
+    JSON.stringify({ offerId, offername, titleoffer, image}),
     (status, response) => {
         if (status === 0)
             return callback(new Error('server error'))

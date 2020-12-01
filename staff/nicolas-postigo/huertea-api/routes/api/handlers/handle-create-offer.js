@@ -1,10 +1,16 @@
 const { createOffer } = require('../../../logic/')
+const jwt = require('jsonwebtoken')
+
+const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
-    const { body: { offername, titleoffer, image } } = req
+    const { headers: { authorization }, body: { offerId, offername, titleoffer, image } } = req
 
+    const token = authorization.replace('Bearer ', '')
     try {
-        createOffer(offername, titleoffer, image)
+        const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
+
+        createOffer(  ownerId, offerId, offername, titleoffer, image)
             .then(() => res.status(201).send())
             .catch(handleError)
     } catch (error) {

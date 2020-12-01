@@ -29,8 +29,6 @@ module.exports = {
         if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new ContentError('id is empty or blank')
-
-        if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
     validateText(text) {
@@ -59,5 +57,18 @@ module.exports = {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
         if (!token.trim().length) throw new Error('token is empty or blank')
-    }
+    },
+
+    validateOffer(offername) {
+        if (typeof offername !== 'string') throw new TypeError(offername + ' is not a offername')
+
+        if (!offername.trim().length) throw new Error('offername is empty or blank')
+    },
+
+    validateTitleoffer(titleoffer) {
+        if (typeof titleoffer !== 'string') throw new TypeError(titleoffer + ' is not a titleoffer')
+
+        if (!titleoffer.trim().length) throw new Error('titleoffer is empty or blank')
+    },
+
 }
