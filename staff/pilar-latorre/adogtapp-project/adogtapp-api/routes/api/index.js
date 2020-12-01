@@ -5,10 +5,10 @@ const {
     
     handleRegisterUser,
     handleAuthenticateUser,
-    handleRetrieveUser
-  /*  handleRetrievePet,
+    handleRetrieveUser,
     handleSavePet,
-   */
+   // handleRetrievePet,
+  
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -22,8 +22,8 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
-/*router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
+router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
 
-router.get('/api/pets', withErrorHandling(handleRetrievePets)) */
+/*router.get('/api/pets', withErrorHandling(handleRetrievePets)) */
 
 module.exports = router

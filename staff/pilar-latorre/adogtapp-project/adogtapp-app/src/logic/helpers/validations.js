@@ -43,6 +43,24 @@ module.exports = {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
         if (!token.trim().length) throw new Error('token is empty or blank')
+    },
+    validateName(name) {
+        if (typeof name !== 'string') throw new TypeError(`${name} is not a name`)
+
+        if (!name.trim().length) throw new Error('name is empty or blank')
+    },
+    validateBreed(breed) {
+        if (typeof breed !== 'string') throw new TypeError(`${breed} is not a breed`)
+
+        if (!breed.trim().length) throw new Error('breed is empty or blank')
+    },
+    validateColor(color) {
+        if (typeof color !== 'string') throw new TypeError(`${color} is not a color`)
+    },
+
+    validateDescription(description) {
+        if (typeof description !== 'string') throw new TypeError(`${description} is not a description`)
+
     }
 
    
