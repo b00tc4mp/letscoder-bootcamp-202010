@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
     "webpack": "^5.9.0",
-    "wepack-cli": "0.0.1-security"
+    "webpack-cli": "^4.2.0"
   }
 }
