@@ -1,9 +1,9 @@
-import { SignUp, SignIn } from './components'
+import { SignUp, SignIn, Home } from './components'
 import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
 
 function App() {
-  const [view, setView] = useState(sessionStorage.token? 'sign-in' : 'sign-up')
+  const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-up')
 
   const handleSignUp = (userName, email, password, address, city, phone) => {
     try {
@@ -24,7 +24,7 @@ function App() {
 
         sessionStorage.token = token
 
-        setView('sign-up')
+        setView('home')
       })
     } catch (error) {
       alert(error.message)
@@ -47,7 +47,7 @@ function App() {
       
         {view === 'sign-up' && <SignUp onSignUp={handleSignUp} onGoToSignIn = {handleGoToSignIn}/>}
         {view === 'sign-in' && <SignIn onSignIn={handleSignIn} onGoToSignUp = {handleGoToSignUp}/>}
-        {/* {view === 'home' && <Home />} */}
+        {view === 'home' && <Home />}
 
 
       </header>

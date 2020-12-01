@@ -33,6 +33,13 @@ module.exports = {
     validatePhone(phone) {
         if (typeof phone !== 'string') throw new TypeError(`${phone} is not a phone`)
 
+    },
+    validateId(id) {
+        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
+
+        if (!id.trim().length) throw new ContentError('id is empty or blank')
+
+        if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     }
 
    

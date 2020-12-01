@@ -1,5 +1,7 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
+import { retrieveUser } from '../logic'
+
 /* import { retrieveUser, saveNote, retrieveNotes } from '../logic'
 import SaveNote from './SaveNote'
 import ListNotes from './ListNotes' */
@@ -8,18 +10,18 @@ export default function () {
     const [name, setName] = useState()
     //const [notes, setNotes] = useState()
 
-  /*   useEffect(() => {
+    useEffect(() => {
         const { token } = sessionStorage
 
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
 
-                const { fullname } = user
+                const { userName } = user
 
-                setName(fullname)
+                setName(userName)
 
-                try {
+               /*  try {
                     retrieveNotes(token, (error, notes) => {
                         if (error) return alert(error.message)
 
@@ -27,14 +29,14 @@ export default function () {
                     })
                 } catch (error) {
                     alert(error.message)
-                }
+                } */
             })
         } catch (error) {
             alert(error.message)
         }
     }, [])
 
-    const handleSaveNote = (text, visibility, tags) => {
+    /* const handleSaveNote = (text, visibility, tags) => {
         const { token } = sessionStorage
 
         try {
@@ -54,10 +56,11 @@ export default function () {
         } catch (error) {
             alert(error.message)
         }
-    }
- */
+    } */
+ 
     return <section className="home">
         <h1>Hello, {name}!</h1>
+        
         {/* <SaveNote onSaveNote={handleSaveNote} />
         <ListNotes notes={notes} /> */}
     </section>

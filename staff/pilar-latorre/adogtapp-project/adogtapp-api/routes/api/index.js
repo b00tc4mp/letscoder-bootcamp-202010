@@ -5,6 +5,7 @@ const {
     
     handleRegisterUser,
     handleAuthenticateUser,
+    handleRetrieveUser
   /*  handleRetrievePet,
     handleSavePet,
    */
@@ -19,9 +20,9 @@ router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
 
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 
-/* router.get('/api/users', withErrorHandling(handleRetrieveUser))
+router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
-router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
+/*router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
 
 router.get('/api/pets', withErrorHandling(handleRetrievePets)) */
 
