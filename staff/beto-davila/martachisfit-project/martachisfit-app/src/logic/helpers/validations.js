@@ -4,7 +4,7 @@ module.exports = {
 
         if (!email.trim().length) throw new Error('e-mail is empty or blank')
 
-        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new FormatError('invalid e-mail')
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
     },
 
     validatePassword(password) {
@@ -58,12 +58,17 @@ module.exports = {
     validateNumber(number) {
         if (typeof number !== 'number') throw new TypeError(number + ' is not a number')
 
-        // if (!number.trim().length) throw new Error('number is empty or blank')
     },
 
     validateQuery(query) {
         if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
         if (!query.trim().length) throw new Error('query is empty or blank')
+    },
+
+    validateToken(token) {
+        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+        if (!token.trim().length) throw new Error('token is empty or blank')
     }
 }

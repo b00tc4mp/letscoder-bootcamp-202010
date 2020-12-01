@@ -4,6 +4,9 @@ import authenticateUser from './authenticate-user'
 import macrosAfterCalories from './macros-after-calories'
 import retrieveUser from './retrieve-user'
 import addFood from './add-food'
+import findFood from './find-food'
+import retrieveFood from './retrieve-food'
+import toggleFoodUserDiet from './toggle-food-user-diet'
 
 export {
     caloriesCalc,
@@ -11,5 +14,8 @@ export {
     authenticateUser,
     macrosAfterCalories,
     retrieveUser,
-    addFood
+    addFood,
+    findFood,
+    retrieveFood,
+    toggleFoodUserDiet
 }

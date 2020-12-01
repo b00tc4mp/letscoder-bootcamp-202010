@@ -1,4 +1,4 @@
-import './SignUp.sass'
+import './styles/SignUp.sass'
 
 function SignUp({ onRegister }) {
     return <section className="sign-up">

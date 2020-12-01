@@ -1,4 +1,4 @@
-import './SignIn.sass'
+import './styles/SignIn.sass'
 
 function SignIn({ onLogin }) {
     return <section className="sign-in">

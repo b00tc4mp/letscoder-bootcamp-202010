@@ -48,8 +48,6 @@ function App() {
     }
   }
 
-  
-
   const handleGetCaloriesAndMacros = (gender, goal, age, height, weight, activity) => {
     try {
       caloriesCalc(gender, goal, age, height, weight, activity, totalCalories => {

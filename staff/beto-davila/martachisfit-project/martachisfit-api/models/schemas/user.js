@@ -27,6 +27,10 @@ module.exports = new Schema({
         enum: ['hombre', 'mujer']
     },
 
+    savedFood: {
+        type: Array
+    },
+
     role: {
         type: String,
         enum: ['admin', 'user']

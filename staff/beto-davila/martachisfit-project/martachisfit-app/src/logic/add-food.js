@@ -20,7 +20,7 @@ export default function addFood(token, foodId, name, serving, calories, carbs, p
     validateToken(token)
     if (typeof foodId !== 'undefined') validateId(foodId)
     validateName(name)
-    validateName(serving)
+    validateNumber(serving)
     validateNumber(calories)
     validateNumber(carbs)
     validateNumber(protein)

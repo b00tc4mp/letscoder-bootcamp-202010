@@ -1,4 +1,4 @@
-import './CaloriesGoal.sass'
+import './styles/CaloriesGoal.sass'
 import grafico from './icons/grafico.png'
 
 function CaloriesGoal ({macros, onGoToPlans, onGoToRegister}) {

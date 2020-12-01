@@ -1,8 +1,8 @@
-import './Home.sass'
+import './styles/Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser } from '../logic'
 import logo from '../../src/logo.png'
-import { DropDownMenu } from './index'
+import { DropDownMenu, DietDesign } from './index'
 
 export default function Home () {
     const [name, setName] = useState()
@@ -32,6 +32,7 @@ export default function Home () {
     <img className="home__logo" alt="logo" src={logo} height="100" width="100"></img>
     <h1 className="home__title">MartachisFIT</h1>
     <p className="home__user">¡Bienvenid@, <span className="home__user--name">{name}</span>!</p>
-    {<DropDownMenu onGoToDietDesign={handleGoToDietDesign}/>}
+    <DropDownMenu onGoToDietDesign={handleGoToDietDesign}/>
+    {view === 'diet-design' && <DietDesign />}
     </div>
 }

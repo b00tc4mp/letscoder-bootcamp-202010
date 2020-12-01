@@ -1,4 +1,4 @@
-import './UserInfo.sass'
+import './styles/UserInfo.sass'
 import genero from './icons/genero.png'
 import altura from './icons/altura.png'
 import calendario from './icons/calendario.png'

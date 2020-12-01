@@ -21,7 +21,7 @@ module.exports = function (userId, foodId, name, serving, calories, carbs, prote
     if (typeof foodId !== 'undefined') validateId(foodId)
     validateId(userId)
     validateName(name)
-    validateName(serving)
+    validateNumber(serving)
     validateNumber(calories)
     validateNumber(carbs)
     validateNumber(protein)
@@ -33,7 +33,8 @@ module.exports = function (userId, foodId, name, serving, calories, carbs, prote
         .findOne({ _id })
         .then(user => {
             if (!user) throw new Error(`user with id ${userId} not found`)
-
+            
+            // TODO validates user is admin
             if (foodId) {
                 const _id = ObjectId(foodId)
 

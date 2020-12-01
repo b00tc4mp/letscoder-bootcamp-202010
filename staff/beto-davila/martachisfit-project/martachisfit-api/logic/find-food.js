@@ -12,7 +12,7 @@ module.exports = query => {
             .then(food => {
 
             if(food) {
-                delete food[0]._id
+                // delete food[0]._id
 
                 return food
             }

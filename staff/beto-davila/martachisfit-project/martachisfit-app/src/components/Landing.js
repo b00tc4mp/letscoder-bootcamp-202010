@@ -1,4 +1,4 @@
-import './Landing.sass'
+import './styles/Landing.sass'
 
 export default function Landing({onGoToSignIn, onUserInfo}) {
   return <>

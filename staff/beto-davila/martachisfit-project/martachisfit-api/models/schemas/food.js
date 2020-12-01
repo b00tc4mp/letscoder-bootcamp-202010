@@ -7,7 +7,7 @@ module.exports = new Schema({
     },
 
     serving: {
-        type: String,
+        type: Number,
         required: true
     },
 

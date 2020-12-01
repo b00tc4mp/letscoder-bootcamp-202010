@@ -5,6 +5,9 @@ import UserInfo from './UserInfo'
 import SignUp from './SignUp'
 import Home from './Home'
 import DropDownMenu from './DropDownMenu'
+import DietDesign from './DietDesign'
+import FoodResult from './FoodResult'
+import SavedFood from './SavedFood'
 
 export {
     Landing,
@@ -13,5 +16,8 @@ export {
     UserInfo,
     SignUp,
     Home,
-    DropDownMenu
+    DropDownMenu,
+    DietDesign,
+    FoodResult,
+    SavedFood
 }
