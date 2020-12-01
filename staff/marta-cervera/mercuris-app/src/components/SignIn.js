@@ -1,9 +1,8 @@
 import './SignIn.sass'
 
-
 function SignIn({ onSignIn }) {
     return <section className= "sign-in">
-        <h2>Sign In</h2>
+        <h2 className="sign-in_title">Sign In</h2>
 
         <form onSubmit= { event => {
             event.preventDefault()

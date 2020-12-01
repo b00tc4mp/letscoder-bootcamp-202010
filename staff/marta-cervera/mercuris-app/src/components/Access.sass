@@ -4,45 +4,64 @@ $base-color: linear-gradient(to right, rgba(255,0,0,0), #d9f573)
 $font-color: #bdb9b9
 $font-main: 'Permanent Marker', cursive
 
-@media only screen and (max-width: 600px)
 
-body     
-    background-image: url("./neon.jpg")
+
+body   
+    display: block  
+    background-image: url('../images/retro.jpg')
+    background-size: cover     
+    background-position: center center    
     background-position: center
     min-height: 100vh
     opacity: 0.6
-    display: block
+    
     
 .register
+        &__maintitle
+            font-family: $font-main
+            color: #985805
+            font-size: 10vw
+            margin-left: 15vw
+            opacity: 0.9
 
         &__title
             font-family: $font-main
             font-size: 5vw
-            color: #f321d0
+            color: #DEB887
             justify-content: center
+            text-align: center
             
-        &__btn
+        &__signup
             font-family: unset
             text-align: center
             justify-content: center        
-            margin-left: 40vw
+            margin-left: 15vw
+
+        &__signin
+            font-family: unset
+            text-align: center
+            justify-content: center        
+            margin-left: 25vw
             
 
 .search
 
     &__title
         font-family: $font-main
+        text-align: center
         font-size: 5vw
-        color: #f132d8
+        color: #DEB887
     &__btn
         font-family: unset
         text-align: center
         justify-content: center        
-        margin-left: 40vw
+        margin-left: 30vw
 
-@media only screen and (min-width: 600px)
-
-*
-    box-sizing: border-box
-    margin: 0
-    padding: 0
+@media (min-width: 1000px)
+    .register
+        &__title
+            width: 45vw
+            height: 45vh
+        &__signup
+            height: 2vw
+    

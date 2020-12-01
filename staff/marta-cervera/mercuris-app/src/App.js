@@ -1,13 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { SignUp, SignIn, Home } from './components'
+import { SignUp, SignIn, Home, Access, Header, Footer} from './components/Index'
 import { useState } from 'react'
 import {registerUser, authenticateUser} from './logic'
 
 
 function App() {
 
-const [view, setView] = useState(sessionStorage.token? 'home': 'sign-up')
+const [view, setView] = useState(sessionStorage.token? 'home': 'access')
+
+
 
 const handleSignUp = (name, email, password) => {
   try {
@@ -34,33 +36,32 @@ const handleSignIn = (email, password) => {
   }
 }
 
+const handleGoToSignIn = () => {
+
+  setView('sign-in')
+}
+
+const handleGoToSignUp = () => {
+
+  setView('sign-up')
+}
+
+const handleGoToSearch = () => {
+
+  setView('sign-up')
+}
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Mercuris</h1>
-
+    <> 
+    <Header></Header>   
+      <main className="App-header">
+          {view === 'access' && <Access onGoToSignIn={handleGoToSignIn} onGoToSignUp={handleGoToSignUp} onGoToSearch={handleGoToSearch}/>}
           {view === 'sign-up' && <SignUp onSignUp={handleSignUp}/>}
           {view === 'sign-in' && <SignIn onSignIn={handleSignIn}/>}
-          {view === 'home' && <Home/>} 
-
-
-
-
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {view === 'home' && <Home/>}          
+      </main>
+      <Footer></Footer>
+   </>
   );
 }
 
