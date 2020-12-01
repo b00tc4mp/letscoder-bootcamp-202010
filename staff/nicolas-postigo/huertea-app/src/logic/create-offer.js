@@ -1,13 +1,13 @@
 import { call } from '../utils'
 import { validateCallback, validateOffer } from './helpers/validations'
 
-export default function (offername, callback) {
+export default function (offername, titleoffer, callback) {
     validateOffer(offername)
     validateCallback(callback)
 
 debugger
     call('POST', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json' },
-    JSON.stringify({offername}),
+    JSON.stringify({offername, titleoffer}),
     (status, response) => {
         if (status === 0)
             return callback(new Error('server error'))

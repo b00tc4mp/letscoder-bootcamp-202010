@@ -77,9 +77,9 @@ function App() {
     setView('hub')
   }
 
-  const handleCreateOffer = (offername) => {
+  const handleCreateOffer = (offername, titleoffer) => {
     try {
-      createOffer(offername, error => {
+      createOffer(offername, titleoffer, error => {
         if (error) return alert(error.message)
   
         setView('hub')

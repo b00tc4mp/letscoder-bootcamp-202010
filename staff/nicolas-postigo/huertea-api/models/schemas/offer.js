@@ -7,10 +7,16 @@ module.exports = new Schema({
         required: true
     }, */
 
+    titleoffer: {
+        type: String,
+        required: true
+    },
+
     offername: {
         type: String,
         required: true
     },
+
 
 /*     tags: [{
         type: String

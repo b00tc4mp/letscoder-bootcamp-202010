@@ -62,5 +62,11 @@ module.exports = {
         if (typeof offername !== 'string') throw new TypeError(offername + ' is not a offername')
 
         if (!offername.trim().length) throw new Error('offername is empty or blank')
+    },
+
+    validatetitleoffer(titleoffer) {
+        if (typeof titleoffer !== 'string') throw new TypeError(titleoffer + ' is not a titleoffer')
+
+        if (!titleoffer.trim().length) throw new Error('titleoffer is empty or blank')
     }
 }
