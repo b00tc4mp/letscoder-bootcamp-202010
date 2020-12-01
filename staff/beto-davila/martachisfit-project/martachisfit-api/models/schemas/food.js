@@ -6,6 +6,11 @@ module.exports = new Schema({
         required: true
     },
 
+    serving: {
+        type: String,
+        required: true
+    },
+
     calories: {
         type: Number,
         required: true,

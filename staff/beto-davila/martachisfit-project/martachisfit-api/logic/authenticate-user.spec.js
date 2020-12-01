@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const authenticateUser = require('./authenticate-user')
 const { User } = require('../models')
+const bcryptjs = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
 
@@ -21,17 +22,20 @@ describe('SPEC authenticateUser()', () => {
 
             const user = { fullname, email, password }
 
-            return User.create(user)
-                .then(user => userId = user.id)
+            return User
+            .findOne({ email })
+            .then(user => bcryptjs.hash(password, 10))
+            .then(hash => User.create({ fullname, email, password: hash })
+            .then(user => userId = user.id))
+
+            // return User.create(user).then(user => userId = user.id)
         })
         it('should succeed on correct credentials', () =>
-            authenticateUser(email, password)
-                .then(_userId => expect(_userId).to.equal(userId))
-        )
+            authenticateUser(email, password).then(_userId => expect(_userId).to.equal(userId)))
 
         describe('when wrong credentials', () => {
             it('should fail on wrong e-mail', () =>
-                authenticateUser(`wrong${email}`, password)
+                authenticateUser(`hola${email}`, password)
                     .catch(error => {
                         expect(error).to.be.instanceOf(Error)
 
@@ -50,10 +54,7 @@ describe('SPEC authenticateUser()', () => {
         })
 
         afterEach(() =>
-            User
-                .deleteOne({ _id: userId })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+            User.deleteOne({ _id: userId }).then(result => expect(result.deletedCount).to.equal(1)))
     })
 
     describe('when user does not exist', () => {

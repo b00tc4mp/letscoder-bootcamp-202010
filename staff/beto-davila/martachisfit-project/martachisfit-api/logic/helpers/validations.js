@@ -31,10 +31,10 @@ module.exports = {
         if (id.length !== 24) throw new Error(`id length ${id.length} is not 24`)
     },
 
-    validateText(text) {
-        if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
+    validateName(name) {
+        if (typeof name !== 'string') throw new TypeError(name + ' is not a name')
 
-        if (!text.trim().length) throw new Error('text is empty or blank')
+        if (!name.trim().length) throw new Error('name is empty or blank')
     },
 
     // validateTags(tags) {
@@ -47,12 +47,16 @@ module.exports = {
     //     })
     // },
 
-    validateVisibility(gender) {
+    validateGender(gender) {
         if (typeof gender !== 'string') throw new TypeError(gender + ' is not a gender')
 
         if (!gender.trim().length) throw new Error('gender is empty or blank')
 
-        if (gender !== 'hombre' && gender !== 'mujer') throw new Error('gender is not public or private')
+        if (gender !== 'hombre' && gender !== 'mujer') throw new Error('gender is not "hombre" or "mujer"')
+    },
+
+    validateNumber(number) {
+        if (typeof number !== 'number') throw new TypeError(number + ' is not a number')
     },
 
     validateQuery(query) {

@@ -8,7 +8,7 @@ const { User } = require('../models')
 
 const { env: { MONGODB_URL } } = process
 
-describe('registerUser()', () => {
+describe('SPEC registerUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user does not exist', () => {
@@ -19,23 +19,17 @@ describe('registerUser()', () => {
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
         })
-
+        debugger
         it('should succeed on new user', () =>
             registerUser(fullname, email, password)
-                .then(() =>
-                    User.findOne({ email, password })
-                )
+                .then(() => User.findOne({ email }))
                 .then(user => {
                     expect(user).to.exist
                     expect(user.fullname).to.equal(fullname)
                 })
         )
 
-        afterEach(() =>
-            User
-                .deleteOne({ email, password })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteOne({ email }).then(result => expect(result.deletedCount).to.equal(1)))
     })
 
     describe('when user already exists', () => {
@@ -67,7 +61,7 @@ describe('registerUser()', () => {
         )
     })
 
-    // TODO more unit test cases
+    // TODO more
 
     after(mongoose.disconnect)
 })
