@@ -1,0 +1,15 @@
+const fs = require("fs");
+const path = require("path");
+
+module.exports = (req, res, handleError) => {
+  const {
+    session: { userId, cookiesAccepted },
+  } = req;
+
+  if (!userId)
+    res.render("register", { feedback: "", cookiesAccepted }, (error, html) => {
+      if (error) return handleError(error);
+      res.send(html);
+    });
+  else res.redirect("/");
+};
