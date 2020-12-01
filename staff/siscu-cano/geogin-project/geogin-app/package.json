@@ -24,14 +24,19 @@
   },
   "dependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
   },
   "standard": {
     "ignore": [
-      "/geogin-api/**", "/geogin-doc/**", "/geogin-app/dist/**"
+      "/geogin-api/**",
+      "/geogin-doc/**",
+      "/geogin-app/dist/**"
     ]
   },
   "eslintConfig": {
-    "extends": ["./node_modules/standard/eslintrc.json"]
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
