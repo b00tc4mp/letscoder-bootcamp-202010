@@ -3,10 +3,12 @@ import { Router } from '@reach/router'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './globalStyle'
 import { adultTheme, kidTheme } from './theme'
-import { ProgressBar } from './components/ProgressBar'
-import { ToggleTheme } from './components/ToggleTheme'
 import { useAdultMode } from './hooks/useAdultMode'
+
+// Components
+import { ToggleTheme } from './components/ToggleTheme'
 import { NavBar } from './components/NavBar'
+
 // Pages
 import { Menu } from './pages/Menu'
 import { Login } from './pages/Login'
@@ -65,7 +67,6 @@ export const App = () => {
         <Profile path='/profile' />
         <Ranking path='/ranking' />
       </Router>
-      <ProgressBar done={50} />
       <NavBar />
     </ThemeProvider>
   )
