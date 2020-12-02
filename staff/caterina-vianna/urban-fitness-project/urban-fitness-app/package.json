@@ -1,0 +1,14 @@
+{
+  "name": "urban-fitness-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "caterina",
+  "license": "ISC",
+  "dependencies": {
+    "expo-cli": "^4.0.4"
+  }
+}
