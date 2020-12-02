@@ -15,7 +15,7 @@ export const ProgressBar = ({ done }) => {
 
   return (
     <Progress>
-      <div style={style}>{done}%</div>
+      <div style={style} />
     </Progress>
   )
 }
