@@ -1,11 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import { SignUp, SignIn, Home } from './components'
+import { SignUp, SignIn, Home, Access } from './components'
 import { useState } from 'react'
 import{ registerUser, authenticateUser } from './logic'
 
 function App() {
-  const [view, setView] = useState(sessionStorage.token? 'home' :'sign-up')
+  const [view, setView] = useState(sessionStorage.token? 'home' :'access')
 
   const handleSignUp = (fullname, email, password) => {
     try {
@@ -33,30 +31,28 @@ function App() {
     }
   }
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>GameLoop App</h1>
+  const handleGoToSignIn = () => {
 
+    setView('sign-in')
+  }
+
+  const handleGoToSignUp = () => {
+
+    setView('sign-up')
+  }
+
+  const handleGoToSearch = () => {
+
+    setView('home')
+  }
+
+  return (
+      <header className="App-header">
+        {view === 'access' && <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch} />}
         {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />}
         {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />}
         {view === 'home' && <Home />}
-
-
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-           Learn React
-        </a>
       </header>
-    </div>
   );
 }
 

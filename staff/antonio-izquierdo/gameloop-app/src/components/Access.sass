@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap')
+
+$Kanit: 'Kanit', sans-serif
+$Righteous: 'Righteous', cursive
+
+.access
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-end
+    align-content: stretch
+    background-image: url("../assets/img/background.jpg")
+    background-position: center center 
+    background-size: cover
+    max-width: 100%
+    height: 100vh
+
+    p
+        font-family: $Righteous
+        text-align: center
+        font-size: 55px 
+        color: #63416e
+        letter-spacing: 15pt
+
+    &__div
+        display: grid
+        grid-template-columns: 4fr 1fr
+        margin-bottom: 50px
+
+        &__signup
+            font-family: $Kanit
+            font-size: 55px 
+            color: #fffc00
+            width: 400px
+            height: 70px
+            background-color: #63416e
+            border: 0px solid
+            border-radius: 10px
+            margin-left: 80px
+            line-height: 30px
+
+        &__signin
+            font-family: $Kanit
+            font-size: 55px 
+            color: #fffc00
+            background-color: #63416e
+            width: 400px
+            height: 70px
+            border: 0px solid
+            border-radius: 10px
+            margin-left: 80px
+            margin-top: 25px
+            line-height: 30px
+
+        &__search
+            font-family: $Kanit
+            font-size: 55px 
+            background-color: #fffc00
+            color: #63416e
+            width: 450px
+            height: 215%
+            border: 0px solid
+            border-radius: 10px
+            margin-right: 50px

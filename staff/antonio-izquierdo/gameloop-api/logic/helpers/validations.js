@@ -1,4 +1,4 @@
-const { ContentError, LengthError, ValueError, FormatError } = require('../../errors')
+const { ContentError, LengthError, FormatError } = require('../../errors')
 
 module.exports = {
     validateEmail(email) {
@@ -19,6 +19,12 @@ module.exports = {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
     },
 
+    validateText(text) {
+        if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
+
+        if (!text.trim().length) throw new ContentError('text is empty or blank')
+    },
+
     validateFullname(fullname) {
         if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
 
@@ -32,4 +38,8 @@ module.exports = {
 
         if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
+
+    validatePrice(budget) {
+        if (typeof budget !== 'number') throw new TypeError(budget + 'is not a number')
+    }
 }
