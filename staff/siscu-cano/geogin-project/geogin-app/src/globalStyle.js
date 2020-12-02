@@ -18,7 +18,7 @@ body {
   margin: 0;
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  background: ${({ theme }) => theme.body};
+  background: ${({ theme }) => theme.colors.app_bg};
 }
 
 main {
