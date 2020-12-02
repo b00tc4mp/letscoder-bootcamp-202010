@@ -6,6 +6,8 @@ import { adultTheme, kidTheme } from './theme'
 import { ProgressBar } from './components/ProgressBar'
 import { ToggleTheme } from './components/ToggleTheme'
 import { useAdultMode } from './hooks/useAdultMode'
+import { NavBar } from './components/NavBar'
+// Pages
 import { Menu } from './pages/Menu'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
@@ -26,6 +28,8 @@ import { SearchLocation } from './pages/SearchLocation'
 import { SearchOpinions } from './pages/SearchOpinions'
 import { SearchStart } from './pages/SearchStart'
 import { TestPassed } from './pages/TestPassed'
+import { Profile } from './pages/Profile'
+import { Ranking } from './pages/Ranking'
 
 export const App = () => {
   const [theme, toggleTheme, componentMounted] = useAdultMode()
@@ -58,8 +62,11 @@ export const App = () => {
         <SearchOpinions path='/search-opinions' />
         <SearchStart path='/search-start' />
         <TestPassed path='/test-passed' />
+        <Profile path='/profile' />
+        <Ranking path='/ranking' />
       </Router>
       <ProgressBar done={50} />
+      <NavBar />
     </ThemeProvider>
   )
 }
