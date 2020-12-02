@@ -1,5 +1,7 @@
 # Matching pairs game
 
+View app: [Matching pairs](http://lets-coders-matching-pairs.surge.sh/)
+
 ## Intro
 
 Memory game that consists of finding out where the pair of a specific card is.
