@@ -16,7 +16,7 @@ export const App = () => {
     <ThemeProvider theme={themeMode}>
       <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
       <GlobalStyle />
-      <ProgressBar done='50' />
+      <ProgressBar done={50} />
     </ThemeProvider>
   )
 }
