@@ -1,5 +1,6 @@
 import React from 'react'
 import { Progress } from './styles'
+import { func } from 'prop-types'
 
 export const ProgressBar = ({ done }) => {
   const [style, setStyle] = React.useState({})
@@ -18,4 +19,8 @@ export const ProgressBar = ({ done }) => {
       <div style={style} />
     </Progress>
   )
+}
+
+ProgressBar.propTypes = {
+  done: func.isRequired
 }

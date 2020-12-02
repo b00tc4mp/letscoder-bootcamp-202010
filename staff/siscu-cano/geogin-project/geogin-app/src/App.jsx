@@ -7,9 +7,11 @@ import { ToggleTheme } from './components/ToggleTheme'
 import { useAdultMode } from './hooks/useAdultMode'
 
 export const App = () => {
-  const [theme, toggleTheme] = useAdultMode()
+  const [theme, toggleTheme, componentMounted] = useAdultMode()
   const themeMode = theme === 'adultTheme' ? adultTheme : kidTheme
-
+  if (!componentMounted) {
+    return <div />
+  }
   return (
     <ThemeProvider theme={themeMode}>
       <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
