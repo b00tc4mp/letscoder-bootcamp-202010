@@ -1,6 +1,11 @@
 import React from 'react'
+import GlobalStyle from './globalStyle'
 import { ProgressBar } from './components/ProgressBar'
 
 export const App = () => (
-  <ProgressBar done='50' />
+  <>
+    <GlobalStyle />
+    <ProgressBar done='50' />
+  </>
+
 )
