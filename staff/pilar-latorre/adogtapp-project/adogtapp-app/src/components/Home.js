@@ -1,4 +1,4 @@
-import './Home.sass'
+import  {Welcome}  from './'
 import { useState, useEffect } from 'react'
 import { retrieveUser } from '../logic'
 
@@ -7,6 +7,9 @@ import SaveNote from './SaveNote'
 import ListNotes from './ListNotes' */
 
 export default function () {
+
+    const [view, setView] = useState('welcome')
+
     const [name, setName] = useState()
     //const [notes, setNotes] = useState()
 
@@ -58,21 +61,13 @@ export default function () {
         }
     } */
  
-    return <section className="home">
-        
-        <h1 className="home__welcome">Welcome {name}!</h1>
-        <div>
-        <input className="home__input" type="search" name="search" placeholder="search pet"/>
-        <button className="home__search">SEARCH PET</button>
-        </div>
-        <button className="home__create">CREATE NEW PET</button>
-        <div>
-        <img className="home__img"src="paw.jpg"/>
-        </div>
-
+    return(
+    <>
+    {view === 'welcome' && <Welcome userName={name}/>}
 
         
         {/* <SaveNote onSaveNote={handleSaveNote} />
         <ListNotes notes={notes} /> */}
-    </section>
+   </>
+   )
 }

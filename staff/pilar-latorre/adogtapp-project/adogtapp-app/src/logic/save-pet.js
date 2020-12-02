@@ -10,7 +10,7 @@ export default function saveNote(token, petId, name, breed, color, description, 
     validateDescription(description)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/notes', { 
+    call('POST', 'http://localhost:4000/api/pets', { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },
