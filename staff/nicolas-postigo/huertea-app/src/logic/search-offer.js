@@ -1,3 +1,6 @@
+RETRIEVE ALL THE OFFERS
+
+
 import { call } from '../utils'
 import { validateToken, validateCallback } from './helpers/validations'
 
@@ -8,7 +11,6 @@ export default function (token, callback) {
     call('GET', 'http://localhost:4000/api/users', { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {
-            debugger
             if (status === 0)
                 return callback(new Error('server error'))
             else if (status !== 200) {

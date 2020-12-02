@@ -16,11 +16,11 @@ function Hub({ fullname, onHub, onGoCreateoffer, offers }) {
         <h3>Hey {fullname}!</h3>
         <h3>¿Qué alimento quieres hoy? </h3>
         <div>
-        {offers} 
+            {offers}
         </div>
-            <div>
-               <button onClick={onGoCreateoffer} className="offer">crea tu oferta &#127806;</button> 
-            </div>
+        <div>
+            <button onClick={onGoCreateoffer} className="offer">crea tu oferta &#127806;</button>
+        </div>
 
 
     </sections>

@@ -10,7 +10,7 @@ import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffe
 function App() {
   const [fullname, setFullname] = useState('text')
   const [view, setView] = useState('home')
-  const [offers, setOffers] = useState('offers')
+  const [offers, setOffers] = useState([])
 
   const handleGoToRegister = () => {
     console.log('fue bien')
@@ -41,7 +41,7 @@ function App() {
   }
 
   const handleLogin = (email, password) => {
-    
+
     try {
       authenticateUser(email, password, (error, token) => {
         if (error) return alert(error.message)
@@ -55,15 +55,15 @@ function App() {
             setFullname(user.fullname)
 
           })
-          try {
-            retrieveOffer(sessionStorage.token, (error, offers) => {
-              if (error) return alert(error.message)
-              debugger
-              setOffers(offers)
-            })
-          } catch (error) {
-            alert(error.message)
-          }
+        } catch (error) {
+          alert(error.message)
+        }
+        try {
+          retrieveOffer(sessionStorage.token, (error, offers) => {
+            if (error) return alert(error.message)
+            debugger
+            setOffers(offers)
+          })
           setView('hub')
         } catch (error) {
           alert(error.message)

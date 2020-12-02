@@ -15,7 +15,7 @@ module.exports = function (ownerId) {
         .then((user) => {
             if (user) {
 
-                const cursor = Offer.find({ owner: _id }).sort({ date: -1 });
+                const cursor = Offer.find({ owner: _id }).sort({ date: -1 }); 
 
                 return cursor.lean()
                     .then(_offers => {
@@ -26,4 +26,4 @@ module.exports = function (ownerId) {
 
             } else throw new NotFoundError(`the user with id ${ownerId} was not found`);
         });
-}
+} 
