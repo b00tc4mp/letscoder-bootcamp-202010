@@ -1,0 +1,29 @@
+import { call } from '../utils'
+import { validateToken, validateId, validateDescription, validatePrice, validateCallback, validateName } from './helpers/validations'
+
+export default function saveProduct(productId, token, name, description, price, callback) {
+    validateToken(token)
+    if (typeof productId !== 'undefined') validateId(productId)
+    validateDescription(description)
+    validateName(name)
+    validatePrice(price)
+    validateCallback(callback)
+
+    call('POST', 'http://localhost:4000/api/products', {    
+        'Content-type': ' application/json',
+        Authorization: `Bearer ${token}`,
+    },
+        JSON.stringify({ productId, name, description, price }),
+        (status, response) => {
+            debugger
+            if (status === 0)
+                return callback(new Error('server error'))
+            else if (status !== 200) {
+                const { error } = JSON.parse(response)
+
+                return callback(new Error(error))
+            }
+            callback(null)
+
+        })
+}

@@ -4,6 +4,7 @@ import Home from './Home'
 import Access from './Access'
 import Header from './Header'
 import Footer from './Footer'
+import SaveProduct from './SaveProduct'
 
 export {
     SignUp,
@@ -11,5 +12,6 @@ export {
     Home,
     Access,
     Header,
-    Footer
+    Footer,
+    SaveProduct
 }

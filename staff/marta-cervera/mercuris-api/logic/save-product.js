@@ -25,7 +25,7 @@ module.exports = function (productId, ownerId, name, description, price) {
                 return Product
                     .findOne({ _id })
                     .then(product => {
-                        if (!product) throw NotFoundError(`user with id ${productId} not found`)
+                        if (!product) throw NotFoundError(`product with id ${productId} not found`)
 
                         return Product
                             .updateOne({ _id }, { $set: { name, description, price } })

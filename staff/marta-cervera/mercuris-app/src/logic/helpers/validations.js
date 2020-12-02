@@ -42,4 +42,12 @@ module.exports = {
 
         if (!text.trim().length) throw new Error('text is empty or blank')
     },
+    validateDescription(description) {
+        if (typeof description !== 'string') throw new TypeError(description + ' is not a description')
+
+        if (!description.trim().length) throw new Error('description is empty or blank')
+    },
+    validatePrice(price) {
+        if (typeof price !== 'string') throw new TypeError(price + ' is not an id')
+    }
 }
