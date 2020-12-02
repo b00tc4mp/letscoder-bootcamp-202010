@@ -2,10 +2,6 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
-body {
-  border: 20px solid yellow;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -106,6 +102,11 @@ textarea {
 
 [hidden] {
   display: none;
+}
+
+#app {
+  min-height: 100vh;
+  background-color: ${props => props.theme.colors.lightBlue};
 }
 
 `
