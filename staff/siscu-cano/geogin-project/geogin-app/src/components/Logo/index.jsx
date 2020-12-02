@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoImage from '../../assets/logo.png'
+import LogoImage from '../../assets/images/logo.png'
 import { LogoApp } from './styles'
 
 export const Logo = () => {

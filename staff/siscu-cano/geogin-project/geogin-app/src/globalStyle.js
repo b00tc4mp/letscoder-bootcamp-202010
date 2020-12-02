@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import bgBottomSplash from './assets/images/bg-splashscreen-bottom.png'
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -110,5 +111,19 @@ textarea {
   max-width: ${({ theme }) => theme.colors.app_width}; 
   background-color: ${({ theme }) => theme.colors.app_bg};
   margin: 0 auto;
+}
+
+// Pages
+
+.splashscreen {
+  > div {
+    background: url(${bgBottomSplash}) center bottom no-repeat;
+    margin:  0 auto;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+    align-content: center;
+  }
 }
 `
