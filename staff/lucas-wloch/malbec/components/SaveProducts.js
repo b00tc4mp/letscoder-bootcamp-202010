@@ -1,9 +1,20 @@
-import saveProducts from "../logic/save-products"
+// import saveProducts from '../logic/save-products'
 import './SaveProducts.sass'
+import { useState } from 'react'
 
 
-function SaveProducts({ onSavedProduct }) {
-    
+function SaveProducts() {
+    const [success, setSuccess] = useState()
+
+
+    const normalizeBoolean = value => {
+        if (value === 'true') return true
+        if (value === 'false') return false
+
+        return undefined
+    }
+
+
     const handleSubmit = event => {
         event.preventDefault()
 
@@ -22,8 +33,12 @@ function SaveProducts({ onSavedProduct }) {
         if (name && description && category)
             saveProducts(name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available, error => {
                 if (error) return alert(error)
-                
-                onSavedProduct()
+
+                setSuccess(true)
+
+                setTimeout(() => {
+                    setSuccess(false)
+                }, 4000);
             })
         else return alert('name, description or category is missing')
 
@@ -31,11 +46,12 @@ function SaveProducts({ onSavedProduct }) {
 
     return <>
         <section className="saveProducts" >
-            <h1 className="saveProducts__title" >Create your Product</h1>
+            {success || <h1 className="saveProducts__title" >Create your Product</h1>}
+            {success && <h1 className="saveProducts__title" >OK, Product saved!</h1>}
             <form className="saveProducts__form" onSubmit={handleSubmit}>
                 <div className="saveProducts__div">
                     <p>Name:</p>
-                    <input className="saveProducts__inputName" type="text" id="name" name="name" placeholder="product Name"  />
+                    <input className="saveProducts__inputName" type="text" id="name" name="name" placeholder="product Name" />
                 </div>
                 <div>
                     <p>Description:</p>
@@ -79,11 +95,11 @@ function SaveProducts({ onSavedProduct }) {
                         <option className="saveProducts__optionC" value="cervezas">cervezas</option>
                     </select>
                     {/* <div className="saveProducts__div"> */}
-                        <p>Available:</p>
-                        <select className="saveProducts__available" name="available" id="available">
-                            <option className="saveProducts__option" value={true}  defaultValue>Yes</option>
-                            <option className="saveProducts__option" value={false}  >No</option>
-                        </select>
+                    <p>Available:</p>
+                    <select className="saveProducts__available" name="available" id="available">
+                        <option className="saveProducts__option" value={true} defaultValue>Yes</option>
+                        <option className="saveProducts__option" value={false}  >No</option>
+                    </select>
                     {/* </div> */}
                 </div>
 

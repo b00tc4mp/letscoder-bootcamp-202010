@@ -1,6 +1,7 @@
-const mongoose = require('mongoose')
+const { Schema } = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+
+module.exports = new Schema({
     fullname: {
         type: String,
         required: [true, 'Please add a fullname'],
@@ -29,5 +30,3 @@ const userSchema = new mongoose.Schema({
     //     [product-name]: ammount = Number/String
     // }
 })
-
-module.exports = mongoose.models.User || mongoose.model('User', userSchema)

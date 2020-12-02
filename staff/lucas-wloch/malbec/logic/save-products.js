@@ -1,7 +1,7 @@
-import { call } from '../utils'
+import  call  from '../utils/call'
 import { validateProductAlergenos, validateProductCategory, validateProductAvailable, validateProductName,validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan } from './helpers/validations'
 
-function saveProducts(name, description, price, glutenFree, vegan, alergenos, category, available, callback) {
+const saveProducts = (name, description, price, glutenFree, vegan, alergenos, category, available, callback) => {
     validateProductName(name)
     validateProductDescription(description)
     validateProductPrice(price)
@@ -12,7 +12,7 @@ function saveProducts(name, description, price, glutenFree, vegan, alergenos, ca
     validateProductAvailable(available)  
 
 
-    call('POST', 'http://localhost:3000/api/products/save', { 'Content-type': 'application/json' },
+    call('POST', 'http://localhost:3000/api/products', { 'Content-type': 'application/json' },
         JSON.stringify({ name, description, price, glutenFree, vegan, alergenos, category, available }),
         (status, response) => {
             if (status === 0) {

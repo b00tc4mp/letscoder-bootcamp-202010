@@ -1,4 +1,4 @@
-import { Layout } from '../components'
+import { Layout, SaveProducts } from '../components'
 import '../components/Home.sass'
 
 
@@ -6,9 +6,7 @@ const Home = () => {
 
     return <Layout>
         <div className="home">
-            {/* <h3></h3> */}
-            {/* <Register/>
-        <Login/> */}
+            <SaveProducts/>
         </div>
     </Layout>
 }

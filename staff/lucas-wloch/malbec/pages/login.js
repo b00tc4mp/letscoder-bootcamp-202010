@@ -5,7 +5,7 @@ import { useState } from 'react'
 import  authenticateUser  from '../logic/authenticate-user'
 // const { authenticateUser } = require('../logic')
 
-const Login = () => {
+const Login = (req, res) => {
 
     const [error, setError] = useState()
 
@@ -25,6 +25,8 @@ const Login = () => {
                 if (error) return setError( error.message )
 
                 sessionStorage.token = token
+
+                // req.url.redirect()
 
             })
         } catch (error) {
