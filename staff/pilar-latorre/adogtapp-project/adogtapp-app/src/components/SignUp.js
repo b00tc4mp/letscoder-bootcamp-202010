@@ -1,6 +1,6 @@
 import './SignUp.sass'
 
-function SignUp({ onSignUp, onGoToSignIn, onGoToAnimalInfo}){
+function SignUp({ onSignUp, onGoToSignIn}){
     return <div className="signUp">
         <h1 className="signUp__h1">Please give us some information about your shelter</h1>
         <img className='signUp__img' src="variosperretes2.jpg"/>  
@@ -18,9 +18,9 @@ function SignUp({ onSignUp, onGoToSignIn, onGoToAnimalInfo}){
             <input className="signUp__input" type="text" name="address" placeholder="address" />
             <input className="signUp__input" type="text" name="city" placeholder="city" />
             <input className="signUp__input" type="text" name="phone" placeholder="phone number" />
-            <button className="signUp__button">SAVE INFO</button>
+            <button className="signUp__button">SAVE INFO and GO TO SIGN IN</button>
         </form>
-            <button className="signUp__update">UPDATE ANIMAL´S INFO</button>
+            
             <p className="signUp__p">Already have an account? <span className="signUp__span" onClick={onGoToSignIn}>Sign In</span></p>
 
 
