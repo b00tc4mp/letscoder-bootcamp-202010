@@ -19,6 +19,7 @@ export const Progress = styled.div`
     box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
     max-width: 300px;
     margin: 0 auto;
+    box-sizing: content-box;
 
     div {
         display: block;
