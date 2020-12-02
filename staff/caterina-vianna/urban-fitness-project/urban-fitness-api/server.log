@@ -74,3 +74,81 @@ Require stack:
     at Module.load (internal/modules/cjs/loader.js:985:32)
     at Function.Module._load (internal/modules/cjs/loader.js:878:14)
 info 2020-12-01T19:43:26.098Z - stopping server
+info 2020-12-02T15:27:49.309Z - starting server
+error 2020-12-02T15:28:27.581Z - Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:510:19)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\index.js:22:8)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+info 2020-12-02T15:28:40.023Z - stopping server
+info 2020-12-02T15:30:46.446Z - starting server
+info 2020-12-02T16:10:34.769Z - starting server
+error 2020-12-02T16:10:42.351Z - Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:510:19)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\index.js:22:8)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\index.js:2:8)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+info 2020-12-02T16:10:48.694Z - stopping server
+info 2020-12-02T16:12:41.886Z - starting server
+info 2020-12-02T16:14:17.043Z - starting server
+error 2020-12-02T16:14:17.117Z - Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:510:19)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\index.js:22:8)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\index.js:2:8)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+info 2020-12-02T16:14:17.123Z - stopping server
+info 2020-12-02T16:14:51.406Z - starting server
+info 2020-12-02T16:19:07.876Z - starting server
+info 2020-12-02T16:28:00.146Z - starting server
+info 2020-12-02T16:28:06.357Z - server running on port 4000
+info 2020-12-02T16:28:54.500Z - starting server
+info 2020-12-02T16:28:54.578Z - server running on port 4000
+info 2020-12-02T16:29:29.880Z - stopping server
+info 2020-12-02T16:40:42.839Z - starting server
+info 2020-12-02T16:40:42.915Z - server running on port 4000
+info 2020-12-02T16:41:41.905Z - stopping server
+info 2020-12-02T16:46:44.500Z - starting server
+info 2020-12-02T16:49:26.434Z - starting server
+info 2020-12-02T16:49:26.511Z - server running on port 4000
+info 2020-12-02T16:50:19.184Z - stopping server
+info 2020-12-02T16:55:45.278Z - starting server
+info 2020-12-02T16:55:45.355Z - server running on port 4000
+info 2020-12-02T17:05:48.433Z - stopping server
+info 2020-12-02T17:29:11.467Z - starting server
+info 2020-12-02T17:29:23.784Z - server running on port 4000

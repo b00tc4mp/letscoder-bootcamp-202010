@@ -14,7 +14,7 @@ module.exports = function (firstName, lastName, email, password) {
   validateLastName(lastName);
   validateEmail(email);
   validatePassword(password);
-
+  debugger;
   return semaphore(() =>
     User.findOne({ email })
       .then((user) => {
@@ -22,12 +22,9 @@ module.exports = function (firstName, lastName, email, password) {
           throw new ConflictError(
             `user with e-mail ${email} already registered`
           );
-
-        return bcryptjs.hash(password, 10);
+        User.create({ firstName, lastName, email, password });
       })
-      .then((hash) =>
-        User.create({ firstName, lastName, email, password: hash })
-      )
+
       .then(() => {})
   );
 };

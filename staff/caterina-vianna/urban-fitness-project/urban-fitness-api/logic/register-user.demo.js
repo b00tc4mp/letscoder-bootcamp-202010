@@ -16,15 +16,6 @@ mongoose
       registerUser("Ho La", "hola@mail.com", "123")
         .then(console.log)
         .catch(console.error),
-      registerUser("Ho La", "hola@mail.com", "123")
-        .then(console.log)
-        .catch(console.error),
-      registerUser("Ho La", "hola@mail.com", "123")
-        .then(console.log)
-        .catch(console.error),
-      registerUser("He Llo", "hello@mail.com", "123")
-        .then(console.log)
-        .catch(console.error),
     ])
   )
   .catch(console.error)

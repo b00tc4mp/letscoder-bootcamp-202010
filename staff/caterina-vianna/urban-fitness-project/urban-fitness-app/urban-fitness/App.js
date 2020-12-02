@@ -17,6 +17,7 @@ export default function App() {
 
   const handleRegister = ({ firstName, lastName, email, password }) => {
     /* Alert.alert("aquí estan mis datos", firstName); */
+    debugger;
     try {
       registerUser(firstName, lastName, email, password, (error) => {
         if (error) return alert(error.message);

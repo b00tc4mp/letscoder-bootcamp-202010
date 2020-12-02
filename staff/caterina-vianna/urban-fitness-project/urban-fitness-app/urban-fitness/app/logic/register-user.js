@@ -8,6 +8,7 @@ import {
 } from "./helpers/validations";
 
 export default function (firstName, lastName, email, password, callback) {
+  debugger;
   validateFirstName(firstName);
   validateLastName(lastName);
   validateEmail(email);
@@ -16,7 +17,7 @@ export default function (firstName, lastName, email, password, callback) {
 
   call(
     "POST",
-    "http://localhost:4000/api/users",
+    "http://192.168.0.11:4000/api/users",
     { "Content-type": "application/json" },
     JSON.stringify({ firstName, lastName, email, password }),
     (status, response) => {
