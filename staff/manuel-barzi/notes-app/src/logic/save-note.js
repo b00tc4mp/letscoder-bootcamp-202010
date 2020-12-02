@@ -1,4 +1,4 @@
-import { call } from '../utils'
+import { call } from 'notes-utils'
 import { validateToken, validateId, validateText, validateTags, validateVisibility, validateCallback } from './helpers/validations'
 
 /**

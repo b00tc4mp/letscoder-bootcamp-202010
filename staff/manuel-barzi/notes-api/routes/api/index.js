@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const { cookieParser, cookieSession, jsonBodyParser } = require('../../middlewares')
+const { cookieParser, cookieSession, jsonBodyParser } = require('notes-middlewares')
 
 const {
     handleAcceptCookies,

@@ -1,5 +1,5 @@
 const { validateEmail, validatePassword } = require('./helpers/validations')
-const { AuthError } = require('../errors')
+const { AuthError } = require('notes-errors')
 const { User } = require('../models')
 
 module.exports = function (email, password) {

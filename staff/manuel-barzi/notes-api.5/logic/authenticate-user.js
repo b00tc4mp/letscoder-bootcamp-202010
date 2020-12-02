@@ -1,6 +1,6 @@
 const { validateEmail, validatePassword } = require('./helpers/validations')
 const context = require('./context')
-const { AuthError } = require('../errors')
+const { AuthError } = require('notes-errors')
 
 const { env: { DB_NAME } } = process
 

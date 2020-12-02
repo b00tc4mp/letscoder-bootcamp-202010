@@ -1,4 +1,4 @@
-import { call } from '../utils'
+import { call } from 'notes-utils'
 import { validateToken, validateCallback } from './helpers/validations'
 
 export default function (token, callback) {

@@ -6,7 +6,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/
 require('../utils/array-polyfills')
 const retrieveUser = require('./retrieve-user')
 const { User } = require('../models')
-const { LengthError, ContentError } = require('../errors')
+const { LengthError, ContentError } = require('notes-errors')
 
 const { env: { MONGODB_URL } } = process
 

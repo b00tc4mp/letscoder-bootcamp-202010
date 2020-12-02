@@ -1,7 +1,7 @@
 const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const context = require('./context')
-const { ConflictError } = require('../errors')
+const { ConflictError } = require('notes-errors')
 
 const { env: { DB_NAME } } = process
 

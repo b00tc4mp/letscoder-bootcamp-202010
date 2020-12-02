@@ -1,4 +1,4 @@
-import { call } from '../utils'
+import { call } from 'notes-utils'
 import { validateFullname, validateEmail, validatePassword, validateCallback } from './helpers/validations'
 
 export default function (fullname, email, password, callback) {

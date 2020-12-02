@@ -1,7 +1,7 @@
 const { validateId } = require('./helpers/validations')
 const context = require('./context')
 const { ObjectId } = require('mongodb')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('notes-errors')
 
 const { env: { DB_NAME } } = process
 

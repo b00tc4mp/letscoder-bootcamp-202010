@@ -19,6 +19,9 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
+    "notes-errors": "file:../notes-errors",
+    "notes-middlewares": "file:../notes-middlewares",
+    "notes-utils": "file:../notes-utils",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {

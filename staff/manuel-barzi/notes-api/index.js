@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const logger = require('./utils/logger')
-const { cors } = require('./middlewares')
+const { cors } = require('notes-middlewares')
 
 const { env: { PORT, MONGODB_URL }, argv: [, , port = PORT || 8080] } = process
 

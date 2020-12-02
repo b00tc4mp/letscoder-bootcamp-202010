@@ -1,4 +1,4 @@
-const { AuthError } = require('../../../errors')
+const { AuthError } = require('notes-errors')
 
 module.exports = (req, res, handleError) => {
     const { session } = req
