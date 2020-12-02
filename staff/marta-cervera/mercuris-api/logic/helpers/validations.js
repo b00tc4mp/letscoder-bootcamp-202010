@@ -31,10 +31,14 @@ module.exports = {
         if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
-    validateText(text) {
-        if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
+    validateDescription(description) {
+        if (typeof description !== 'string') throw new TypeError(description + ' is not a description')
 
-        if (!text.trim().length) throw new ContentError('text is empty or blank')
+        if (!description.trim().length) throw new ContentError('description is empty or blank')
     },
+    validatePrice(price) {
+        if (typeof price !== 'string') throw new TypeError(price + ' is not an id')
+    }
+    
 
 }
