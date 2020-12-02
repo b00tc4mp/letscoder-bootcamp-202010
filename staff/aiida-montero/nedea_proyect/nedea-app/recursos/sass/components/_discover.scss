@@ -1,0 +1,28 @@
+.discovere {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  background-image: url(../../imagenes/autismo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 11px solid #2b577b;
+  text-align: center;
+  
+  &__title {
+    font-family: "Special Elite";
+    color: #1a1b20;
+    text-align: center;
+    background: #fff;
+    padding: 10px 20px;
+  }
+  &__subtitle {
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+    background: rgb(255 255 255 / 72%);
+    padding: 10px 20px;
+    font-weight: 100;
+  }
+}

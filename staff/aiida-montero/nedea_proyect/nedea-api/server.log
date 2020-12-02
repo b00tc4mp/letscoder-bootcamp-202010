@@ -1,0 +1,1076 @@
+info 2020-11-30T20:19:37.490Z - starting server
+error 2020-11-30T20:19:37.529Z - TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\application.js:210:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:21:9
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-30T20:19:37.531Z - stopping server
+info 2020-11-30T21:18:37.349Z - starting server
+error 2020-11-30T21:18:37.389Z - TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\application.js:210:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:21:9
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-30T21:18:37.391Z - stopping server
+info 2020-11-30T22:00:31.806Z - starting server
+error 2020-11-30T22:00:31.845Z - TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\application.js:210:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:21:9
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-30T22:00:31.846Z - stopping server
+info 2020-11-30T22:13:41.988Z - starting server
+error 2020-11-30T22:13:42.039Z - Error: Cannot find module '../../../logic'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:2:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-30T22:13:42.040Z - stopping server
+info 2020-11-30T22:14:13.127Z - starting server
+error 2020-11-30T22:14:13.170Z - Error: Cannot find module '../../../logic'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:2:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-30T22:14:13.172Z - stopping server
+info 2020-11-30T22:14:23.133Z - starting server
+error 2020-11-30T22:14:23.178Z - Error: Cannot find module '../../../logic'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:2:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-30T22:14:23.180Z - stopping server
+info 2020-11-30T22:14:29.982Z - starting server
+error 2020-11-30T22:14:30.024Z - Error: Cannot find module '../../../logic'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:2:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-30T22:14:30.025Z - stopping server
+info 2020-11-30T22:17:54.831Z - starting server
+error 2020-11-30T22:17:54.876Z - Error: Cannot find module '../../../logic'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:2:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-30T22:17:54.877Z - stopping server
+info 2020-11-30T22:23:17.286Z - starting server
+error 2020-11-30T22:23:17.339Z - Error: Cannot find module '../../../logic'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:2:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-30T22:23:17.341Z - stopping server
+info 2020-11-30T22:24:02.479Z - starting server
+error 2020-11-30T22:24:02.519Z - Error: Cannot find module '../../../logic'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:2:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-11-30T22:24:02.520Z - stopping server
+info 2020-11-30T22:29:49.870Z - starting server
+error 2020-11-30T22:29:49.949Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:2:9)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:10:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:19:19
+info 2020-11-30T22:29:49.956Z - stopping server
+info 2020-12-01T08:43:26.321Z - starting server
+info 2020-12-01T08:43:37.829Z - starting server
+error 2020-12-01T08:43:56.352Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\connection.js:830:32)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:342:10
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Mongoose.connect (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:341:20)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-01T08:43:56.353Z - stopping server
+error 2020-12-01T08:44:07.845Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\connection.js:830:32)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:342:10
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Mongoose.connect (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:341:20)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-01T08:44:07.847Z - stopping server
+info 2020-12-01T08:50:57.399Z - starting server
+error 2020-12-01T08:51:27.416Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\connection.js:830:32)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:342:10
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Mongoose.connect (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:341:20)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-01T08:51:27.417Z - stopping server
+info 2020-12-01T08:54:13.586Z - starting server
+error 2020-12-01T08:54:13.654Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:2:9)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:10:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:19:19
+info 2020-12-01T08:54:13.659Z - stopping server
+info 2020-12-01T09:13:51.700Z - starting server
+error 2020-12-01T09:13:51.701Z - MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.Connection.openUri (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\connection.js:680:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-01T09:13:51.703Z - stopping server
+info 2020-12-01T09:15:43.838Z - starting server
+error 2020-12-01T09:15:43.872Z - Error: Cannot find module './routes'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-01T09:15:43.873Z - stopping server
+info 2020-12-01T09:17:19.319Z - starting server
+error 2020-12-01T09:17:19.384Z - Error: Cannot find module 'bcryptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:17:19.390Z - stopping server
+info 2020-12-01T09:18:57.750Z - starting server
+error 2020-12-01T09:18:57.824Z - Error: Cannot find module 'bcryptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:18:57.831Z - stopping server
+info 2020-12-01T09:19:12.351Z - starting server
+error 2020-12-01T09:19:12.404Z - Error: Cannot find module 'bcryptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:19:12.410Z - stopping server
+info 2020-12-01T09:21:00.036Z - starting server
+error 2020-12-01T09:21:00.101Z - Error: Cannot find module 'brcyptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:21:00.107Z - stopping server
+info 2020-12-01T09:21:06.740Z - starting server
+error 2020-12-01T09:21:06.809Z - Error: Cannot find module 'brcyptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:21:06.817Z - stopping server
+info 2020-12-01T09:24:19.499Z - starting server
+error 2020-12-01T09:24:19.558Z - Error: Cannot find module 'brcyptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:24:19.563Z - stopping server
+info 2020-12-01T09:24:38.005Z - starting server
+error 2020-12-01T09:24:38.066Z - Error: Cannot find module 'brcyptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:24:38.072Z - stopping server
+info 2020-12-01T09:28:57.374Z - starting server
+error 2020-12-01T09:28:57.434Z - Error: Cannot find module 'brcyptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:28:57.440Z - stopping server
+info 2020-12-01T09:29:06.958Z - starting server
+error 2020-12-01T09:29:07.018Z - Error: Cannot find module 'brcyptjs'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:29:07.024Z - stopping server
+info 2020-12-01T09:30:18.177Z - starting server
+error 2020-12-01T09:30:18.222Z - Error: Cannot find module '../errors'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:3:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:30:18.224Z - stopping server
+info 2020-12-01T09:30:27.970Z - starting server
+error 2020-12-01T09:30:28.011Z - Error: Cannot find module '../errors'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:3:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:30:28.012Z - stopping server
+info 2020-12-01T09:31:10.437Z - starting server
+error 2020-12-01T09:31:10.480Z - Error: Cannot find module '../errors'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:3:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:31:10.482Z - stopping server
+info 2020-12-01T09:32:38.279Z - starting server
+error 2020-12-01T09:32:38.342Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:2:9)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:10:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:18:25
+info 2020-12-01T09:32:38.348Z - stopping server
+info 2020-12-01T09:33:11.240Z - starting server
+error 2020-12-01T09:33:11.308Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:2:9)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:10:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:18:25
+info 2020-12-01T09:33:11.316Z - stopping server
+info 2020-12-01T09:33:54.807Z - starting server
+error 2020-12-01T09:33:54.873Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:2:9)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:10:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:18:25
+info 2020-12-01T09:33:54.878Z - stopping server
+info 2020-12-01T09:34:04.280Z - starting server
+error 2020-12-01T09:34:04.346Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:2:9)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:10:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:18:25
+info 2020-12-01T09:34:04.352Z - stopping server
+info 2020-12-01T09:34:18.233Z - starting server
+error 2020-12-01T09:34:18.293Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:2:9)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:10:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:18:25
+info 2020-12-01T09:34:18.299Z - stopping server
+info 2020-12-01T09:39:55.671Z - starting server
+error 2020-12-01T09:39:55.735Z - Error: Cannot find module './helpers/with-error-handling'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js:8:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T09:39:55.742Z - stopping server
+info 2020-12-01T09:41:32.351Z - starting server
+info 2020-12-01T09:41:32.434Z - server running on port 4000
+error 2020-12-01T10:06:01.850Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:07:14.362Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:07:53.447Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:08:32.381Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:10:46.476Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:10:59.902Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:11:44.014Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:12:36.783Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:13:20.413Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:14:21.403Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:15:10.178Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:18:32.689Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:21:30.041Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:21:44.707Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:21:47.338Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:21:53.389Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:23:14.309Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:24:00.089Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:27:56.349Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:30:48.688Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:31:14.309Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:33:13.443Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:35:34.523Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:37:29.038Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:39:02.376Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:39:11.639Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:40:07.566Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:46:42.677Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:48:17.662Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-01T10:49:57.377Z - TypeError: validateFullname is not a function
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js:6:11)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-01T10:50:09.598Z - stopping server
+info 2020-12-01T10:50:16.035Z - starting server
+info 2020-12-01T10:50:16.145Z - server running on port 4000
+error 2020-12-01T10:53:43.041Z - ConflictError: user with e-mail aidamontero23@gmail.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-01T11:29:25.545Z - stopping server
+info 2020-12-01T11:46:52.121Z - starting server
+info 2020-12-01T11:46:52.278Z - server running on port 4000
+info 2020-12-01T11:50:41.064Z - stopping server
+info 2020-12-01T11:50:43.975Z - starting server
+info 2020-12-01T11:50:44.114Z - server running on port 4000
+info 2020-12-01T12:15:29.231Z - stopping server
+info 2020-12-01T12:15:32.170Z - starting server
+info 2020-12-01T12:15:32.351Z - server running on port 4000
+error 2020-12-01T18:55:39.210Z - ConflictError: user with e-mail aidamontsaeroana@gmail.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-02T08:17:55.806Z - starting server
+info 2020-12-02T08:17:55.956Z - server running on port 4000
+info 2020-12-02T12:21:55.445Z - stopping server

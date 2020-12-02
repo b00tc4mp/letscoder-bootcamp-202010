@@ -1,0 +1,44 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: $text_font;
+  font-weight: 100;
+  color: #5b5b5b;
+  border-left: 4px solid #061b3a;
+  border-right: 4px solid #061b3a;
+  border-top: 4px solid #061b3a;
+  border-bottom: 4px solid;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  
+  & > main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+} 
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: stretch;
+  background-color: #ffffff99;
+
+} 
+@media (min-width: 600px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

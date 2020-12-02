@@ -1,0 +1,30 @@
+.login {
+  @extend %box;
+  @extend %center;
+  min-width: 365px;
+  max-width: 80%;
+  box-shadow: 0 0 20px 20px black;
+  background-color: #48769b;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cacaca;
+    box-shadow: inset 3px 3px 3px #0000001a;
+    border-radius: 3px/6px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2{
+    color: white
+  }
+}
+
+
+
