@@ -1,0 +1,32 @@
+body {
+    background: url(fondo.jpg);
+    background-size: cover;
+}
+
+.contenedor{
+    border: 5px solid greenyellow;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 1vw;
+    margin: 3.5vw auto;
+    width: 25vw;
+    height: 30vw;
+}
+
+button{
+    font-size: 3vw;
+}
+
+.display,.equal {
+    grid-column: 1/5;
+}
+
+h1{
+
+    font-family: fantasy;
+    color: black;
+    text-align: center;
+    font-size: 4.5vw;
+
+}

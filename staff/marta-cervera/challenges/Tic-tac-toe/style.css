@@ -1,0 +1,29 @@
+body {
+background: url(tic-tac-toe.jpg);
+
+
+}
+
+div{
+    
+    padding: 2vh;
+    text-align: center;
+    justify-content: center;
+
+}
+
+h1 {
+    color: tomato;
+    text-align: center;
+}
+
+
+.table {
+    display : grid;
+    grid-template-columns:  20% 20% 20% ;
+    grid-template-rows: 20vh 20vh 20vh ;
+    
+
+}
+ 
+

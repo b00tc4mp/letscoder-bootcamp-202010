@@ -1,0 +1,304 @@
+@mixin center-content($display,$justifyContent,$alignItems)
+        display : $display
+        justify-content : $justifyContent
+        align-items : $alignItems
+@mixin create-grid($display,$gridTemplateColumns,$gridTemplateRows,$gap)
+        display : $display
+        grid-template-columns : $gridTemplateColumns
+        grid-template-rows : $gridTemplateRows
+        gap : $gap
+@mixin size($width,$height)
+        width : $width
+        height : $height
+@mixin margin($margin-left,$margin-right,$margin-bottom,$margin-top)
+    margin-left: $margin-left
+    margin-right: $margin-right
+    margin-bottom: $margin-bottom
+    margin-top: $margin-top
+$backgroundColor-container : #63CDF1
+$backgroundColor-container-item : White
+$backgroundColor-section: rgba(38, 136, 128, 0.20)
+$backgroundColor-header: white
+@media only screen and (min-width: 665px)
+        .header
+                
+                &__login
+                        +size(158px,50px)
+                &__icons
+                        +size(210px,125px)
+                        
+        .section
+                +size(100vw,1500px)
+        .container
+                +size(618px,1100px)
+                +create-grid(grid,1fr 1fr 1fr,repeat(6,1fr),13px)
+                align-Items: center
+                justify-content: center
+
+
+                &__item
+                        +size(auto,auto)
+
+        .one
+                grid-area: 1/1/3/2
+        .two
+                grid-area: 1/2/1/4
+        .three
+                grid-area: 2/2/2/4
+        .four
+                grid-area: 3/1/4/3
+        .five
+                grid-area: 3/3/5/4
+        .six
+                grid-area: 4/1/5/3
+        .seven
+                grid-area: 5/1/7/2
+        .eight
+                grid-area: 5/2/6/4
+        .nine
+                grid-area: 6/2/7/4
+
+        .section-2
+                +size(100vw,1133px)
+                
+        .container-2
+                +size(950px,733px)
+                
+                +create-grid(grid,1fr 1fr 1fr,repeat(4,1fr),13px)
+                align-Items: center
+                justify-content: center
+                
+                &__item
+                        +size(auto,auto)
+                       
+        .one2 
+                grid-area: 1/1/3/2
+        .two2
+                grid-area: 1/2/1/4
+        .three2
+                grid-area: 2/2/2/4
+        .four2
+                grid-area: 3/1/4/3
+        .five2
+                grid-area: 3/3/5/4
+        .six2
+                grid-area: 4/1/5/3
+        
+
+        .section-3
+                +size(100vw,766px)    
+        .container-3
+                +size(950px,366px)
+                
+                +create-grid(grid,1fr 1fr 1fr,repeat(2,1fr),13px)
+                align-Items: center
+                justify-content: center
+                
+                &__item
+                        +size(auto,auto)
+                       
+        .one3
+                grid-area: 1/1/2/3
+        .two3
+                grid-area: 2/1/3/3
+        .three3
+                grid-area: 1/3/3/4
+@media only screen and (min-width: 768px)
+        .header
+                &__login
+                        +size(158px,50px)
+                &__icons
+                        +size(210px,125px)
+                        
+        .section
+                +size(100vw,1735px)
+        .container
+                +size(700px,1335px)
+                +create-grid(grid,1fr 1fr 1fr,repeat(6,1fr),13px)
+                align-Items: center
+                justify-content: center
+
+                &__item
+                        +size(auto,auto)
+                        
+        .one
+                grid-area: 1/1/3/2
+        .two
+                grid-area: 1/2/1/4
+        .three
+                grid-area: 2/2/2/4
+        .four
+                grid-area: 3/1/4/3
+        .five
+                grid-area: 3/3/5/4
+        .six
+                grid-area: 4/1/5/3
+        .seven
+                grid-area: 5/1/7/2
+        .eight
+                grid-area: 5/2/6/4
+        .nine
+                grid-area: 6/2/7/4
+        
+        .section-2
+                +size(100vw,1290px)
+        .container-2
+                +size(950px,890px)
+                
+                +create-grid(grid,1fr 1fr 1fr,repeat(4,1fr),13px)
+                align-Items: center
+                justify-content: center
+                
+                &__item
+                        +size(auto,auto)
+                       
+        .one2 
+                grid-area: 1/1/3/2
+        .two2
+                grid-area: 1/2/1/4
+        .three2
+                grid-area: 2/2/2/4
+        .four2
+                grid-area: 3/1/4/3
+        .five2
+                grid-area: 3/3/5/4
+        .six2
+                grid-area: 4/1/5/3
+        
+        .section-3
+                +size(100vw,845px)    
+        .container-3
+                +size(950px,445px)
+                
+                +create-grid(grid,1fr 1fr 1fr,repeat(2,1fr),13px)
+                align-Items: center
+                justify-content: center
+                
+                &__item
+                        +size(auto,auto)
+                       
+        .one3
+                grid-area: 1/1/2/3
+        .two3
+                grid-area: 2/1/3/3
+        .three3
+                grid-area: 1/3/3/4
+@media only screen and (min-width: 1024px)
+        .header
+                &__login
+                        +size(158px,50px)
+                &__icons
+                        +size(210px,125px)
+                        
+        .section
+                +size(100vw,2090px)
+        .container
+                +size(950px,1690px)
+                
+                +create-grid(grid,1fr 1fr 1fr,repeat(6,1fr),13px)
+                align-Items: center
+                justify-content: center
+                
+                &__item
+                        +size(auto,auto)
+                       
+        .one 
+                grid-area: 1/1/3/2
+        .two
+                grid-area: 1/2/1/4
+        .three
+                grid-area: 2/2/2/4
+        .four
+                grid-area: 3/1/4/3
+        .five
+                grid-area: 3/3/5/4
+        .six
+                grid-area: 4/1/5/3
+        .seven
+                grid-area: 5/1/7/2
+        .eight
+                grid-area: 5/2/6/4
+        .nine
+                grid-area: 6/2/7/4
+        
+        .section-2
+                +size(100vw,1526px)
+                
+        .container-2
+                +size(950px,1126px)
+                
+                +create-grid(grid,1fr 1fr 1fr,repeat(4,1fr),13px)
+                align-Items: center
+                justify-content: center
+                
+                &__item
+                        +size(auto,auto)
+                       
+        .one2 
+                grid-area: 1/1/3/2
+        .two2
+                grid-area: 1/2/1/4
+        .three2
+                grid-area: 2/2/2/4
+        .four2
+                grid-area: 3/1/4/3
+        .five2
+                grid-area: 3/3/5/4
+        .six2
+                grid-area: 4/1/5/3
+        
+        .section-3
+                +size(100vw,963px)    
+        .container-3
+                +size(950px,563px)
+                
+                +create-grid(grid,1fr 1fr 1fr,repeat(2,1fr),13px)
+                align-Items: center
+                justify-content: center
+                
+                &__item
+                        +size(auto,auto)
+                       
+        .one3
+                grid-area: 1/1/2/3
+        .two3
+                grid-area: 2/1/3/3
+        .three3
+                grid-area: 1/3/3/4
+@media(max-width: 665px)
+        .header
+                &__right-section
+                        +size(100vw,50px)
+                &__login
+                        +size(50px,50px)
+                &__icons
+                        display: none
+                        +size(100px,50px)
+                
+        .section        
+                +size(100vw,1624px)
+        .container
+                +size(325px,1224px)
+                +create-grid(grid,1fr,repeat(9,1fr),9px)
+
+                &__item
+                        +size(325px,136px)
+        .section-2   
+                +size(100vw,1216px)                
+        .container-2
+                +size(325px,816px)
+                +create-grid(grid,1fr,repeat(6,1fr),9px)
+
+                &__item
+                        +size(325px,136px)
+        .section-3   
+                +size(100vw,808px)                
+        .container-3
+                +size(325px,408px)
+                +create-grid(grid,1fr,repeat(3,1fr),9px)
+
+                &__item
+                        +size(325px,136px)
+                        
+    
+

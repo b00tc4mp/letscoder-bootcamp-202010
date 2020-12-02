@@ -1,0 +1,215 @@
+*{
+margin: 0px;
+padding: 0px;
+}
+
+.grid {
+display: grid;
+position: relative;
+width:60vw;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 15vw 15vw 15vw 15vw;
+margin-left: auto;
+margin-right: auto;
+background: black;
+margin: 2rem auto;
+}
+
+.button0 #card1{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button0 #card1 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button1 #card2{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button1 #card2 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button2 #card3{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button2 #card3 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button3 #card4{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button3 #card4 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button4 #card5{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button4 #card5 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button5 #card6{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button5 #card6 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button6 #card7{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button6 #card7 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button7 #card8{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button7 #card8 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button8 #card9{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button8 #card9 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button9 #card10{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button9 #card10 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button10 #card11{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button10 #card11 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button11 #card12{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button11 #card12 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button12 #card13{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button12 #card13 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button13 #card14{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button13 #card14 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button14 #card15{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button14 #card15 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+.button15 #card16{
+transition-property: grid button;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+transform: rotateY(180deg);
+}
+
+.button15 #card16 img{
+transition-duration: 2s;
+opacity: 1;
+}
+
+img {
+opacity: 0;
+max-width: 100%;
+height: auto;
+}
+

@@ -1,0 +1,67 @@
+.body {
+    background-attachment: black;
+}
+
+.mostrador {
+    grid-column: 1/4;
+    padding: 1.5em;
+    background-color: skyblue;
+    text-align:center;
+    margin-left: 60em;
+    margin-right: 50em;
+    width:22em;
+    margin-top:5em;
+}
+#resultado  {
+    grid-column: 1/4;
+    padding: 1.5em;
+    text-align:center;
+    margin-left: 50em;
+    width: 50em;
+    
+
+}
+
+
+    
+
+
+.botones button {
+    display: block;
+
+}
+
+.blu {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 40px 40px 40pX 40px;
+    gap: 1em;
+    margin: 0.5em;   
+    text-align:center;
+    border-color: teal;
+    margin-left: 50em;
+    margin-right: 50em;
+    margin-top: 3em;
+}
+
+
+.button {
+    border: 3px solid;
+    gap: 1em;
+    padding: 20px;
+}
+
+.boton-igual {
+    grid-column: 1/5;
+    padding: 15px;
+}
+
+.titulos {
+    padding: 50px;
+    margin: 25em;
+    margin-top: 10em;
+    height: 30px;
+    font-size:2em;
+    font-weight: 1000;
+    color:black;
+}

@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    background-color: yellow;
+    grid-gap: 10px;
+}
+
+.board > img {
+    display: block;
+    border: 1px solid black;
+}
+
+.hide {
+    display: none;
+}

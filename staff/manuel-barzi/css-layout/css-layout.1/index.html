@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.body.style.display = 'flex'
+        document.body.style.alignItems = 'center'
+        document.body.style.justifyContent = 'center'
+
+        var container = document.createElement('div')
+
+        container.style.backgroundColor = 'tomato'
+        container.style.width = '70vw'
+        container.style.height = '200vh'
+
+        var item1 = document.createElement('div')
+
+        item1.style.backgroundColor = 'greenyellow'
+        item1.style.width = '10vw'
+        item1.style.height = '10vh'
+
+        container.append(item1)
+
+        document.body.append(container)
+    </script>
+</body>
+</html>

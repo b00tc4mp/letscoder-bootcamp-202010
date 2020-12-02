@@ -1,0 +1,165 @@
+body {
+  margin: 0 auto;
+  padding: 0px;
+  background-color: #666060;
+  max-width: 1080px;
+}
+
+header .fijo {
+  height: 50px;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .fijo__etiquetas {
+  border: 2px solid red;
+  background: blue;
+}
+header .fijo__etiquetas:hover {
+  height: 300px;
+}
+
+.carrusel {
+  position: relative;
+}
+.carrusel__imagen {
+  max-width: 100%;
+}
+.carrusel__fi {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.carrusel__fd {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+}
+
+.puntos {
+  text-align: center;
+}
+
+.container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 6, 1fr;
+  text-align: center;
+  gap: 1px;
+  border: 1px solid black;
+  height: 600px;
+}
+
+.item1 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 1/1/3/2;
+}
+
+.item2 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 1/2/2/4;
+}
+
+.item3 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 2/2/3/4;
+}
+
+.item4 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 3/1/4/3;
+}
+
+.item5 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 4/1/5/3;
+}
+
+.item6 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 3/3/5/4;
+}
+
+.item7 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 5/1/7/2;
+}
+
+.item8 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 5/2/6/4;
+}
+
+.item9 {
+  background-color: #464343;
+  border: 2px solid black;
+  grid-area: 6/2/7/4;
+}
+
+.item10 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 1/1/3/2;
+}
+
+.item11 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 1/2/2/4;
+}
+
+.item12 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 2/2/3/4;
+}
+
+.item13 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 3/1/4/3;
+}
+
+.item14 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 4/1/5/3;
+}
+
+.item15 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 3/3/5/4;
+}
+
+.item16 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 5/1/7/2;
+}
+
+.item17 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 5/2/6/4;
+}
+
+.item18 {
+  background-color: #b80a0a;
+  border: 2px solid black;
+  grid-area: 6/2/7/4;
+}
+
+/*# sourceMappingURL=styleMario.css.map */

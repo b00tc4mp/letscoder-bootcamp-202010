@@ -1,0 +1,69 @@
+
+* {
+  font-family: Roboto Condensed;
+  background-color: pink;
+}
+
+button {
+  border-style: none;
+}
+button:focus {
+  outline: 0;
+}
+
+img {
+  margin-left: 23.5rem;
+
+}
+
+.title {
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.access {
+
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.access__register {
+  background-color: purple;
+  color: white;
+  padding: 0.4rem;
+}
+.access__register:hover {
+  background-color: black;
+}
+.access__login {
+  border-style: solid;
+  border-color: purple;
+  background-color: transparent;
+  padding: 0.4rem;
+}
+.access__login:hover {
+  background-color: whitesmoke;
+}
+
+.title {
+  font-family: Bebas Neue;
+}
+
+.register {
+  margin-left: 23.5rem;
+}
+
+.register-confirm {
+  margin-left: 23.5rem;
+}
+
+.login {
+  margin-left: 23.5rem;
+}
+
+.welcome {
+  margin-left: 33rem;
+}
+
+/*# sourceMappingURL=index.css.map */
