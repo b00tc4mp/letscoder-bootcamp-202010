@@ -18,7 +18,7 @@ body {
   margin: 0;
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  background: ${({ theme }) => theme.colors.app_bg};
+  background-color: ${({ theme }) => theme.colors.body_bg};
 }
 
 main {
@@ -107,5 +107,8 @@ textarea {
 
 #app {
   min-height: 100vh;
+  max-width: ${({ theme }) => theme.colors.app_width}; 
+  background-color: ${({ theme }) => theme.colors.app_bg};
+  margin: 0 auto;
 }
 `

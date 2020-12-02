@@ -1,6 +1,8 @@
 export const adultTheme = {
   colors: {
-    app_bg: '#0089fe'
+    body_bg: '#b5b7b9',
+    app_bg: '#0089fe',
+    app_width: '500px'
   },
   fonts: ['sans-serif', 'Roboto'],
   fontSizes: {
@@ -12,7 +14,9 @@ export const adultTheme = {
 
 export const kidTheme = {
   colors: {
-    app_bg: 'red'
+    body_bg: '#b5b7b9',
+    app_bg: '#000',
+    app_width: '500px'
   }
 
 }
