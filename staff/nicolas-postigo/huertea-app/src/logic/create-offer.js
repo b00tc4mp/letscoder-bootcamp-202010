@@ -8,7 +8,7 @@ export default function (token, offerId, offername, titleoffer, image, callback)
     validateTitleoffer(titleoffer)
     validateCallback(callback)
 
-debugger
+
     call('POST', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json', 
     Authorization: `Bearer ${token}`,
     },

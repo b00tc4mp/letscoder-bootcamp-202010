@@ -16,7 +16,9 @@ module.exports = function (ownerId, offerId, offername, titleoffer, image) {
             .findById(ownerId).lean()
             .then(user => {
                 if (!user) throw new NotFoundError(`user with id  ${ownerId}  not found`)
+                
                 const { _id } = user
+
                 user.id = _id.toString()
 
 

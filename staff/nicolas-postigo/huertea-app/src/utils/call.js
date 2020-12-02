@@ -11,6 +11,6 @@ module.exports = (method, url, headers, body, callback) => {
 
     for (const key in headers)
         xhr.setRequestHeader(key, headers[key])
-debugger
+
     xhr.send(body)
 }

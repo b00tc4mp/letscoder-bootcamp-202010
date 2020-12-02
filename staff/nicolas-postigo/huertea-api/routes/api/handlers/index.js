@@ -6,4 +6,5 @@ module.exports = {
     handleAuthenticateUser: require('./handle-authenticate-user'),
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleCreateOffer: require('./handle-create-offer'),
+    handleRetrieveOffer: require('./handle-retrieve-offer'),
 }

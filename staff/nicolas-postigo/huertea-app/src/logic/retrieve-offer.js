@@ -5,7 +5,7 @@ export default function (token, callback) {
     validateToken(token)
     validateCallback(callback)
 
-    call('GET', 'http://localhost:4000/api/users', { Authorization: `Bearer ${token}` },
+    call('GET', 'http://localhost:4000/api/offers', { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {
             if (status === 0)
@@ -16,8 +16,8 @@ export default function (token, callback) {
                 return callback(new Error(error))
             }
 
-            const offer = JSON.parse(response)
-
-            callback(null, offer)
+            const offers = JSON.stringify(response)
+            debugger
+            callback(null, offers)
         })
 }

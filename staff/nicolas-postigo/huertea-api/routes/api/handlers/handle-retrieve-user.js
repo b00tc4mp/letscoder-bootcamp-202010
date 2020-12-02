@@ -12,7 +12,7 @@ module.exports = (req, res, handleError) => {
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
 
         retrieveUser(userId)
-            .then(user => res.status(200).json(user))
+            .then(user => res.status(200).send())
             .catch(handleError)
     } catch (error) {
         handleError(error)

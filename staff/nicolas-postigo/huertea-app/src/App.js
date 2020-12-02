@@ -1,7 +1,7 @@
 import './App.css';
 import { Register, Login, Hub, Home, Createoffer } from './components'
 import { useState } from 'react'
-import { registerUser, authenticateUser, retrieveUser, createOffer } from './logic'
+import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer } from './logic'
 
 
 
@@ -10,6 +10,7 @@ import { registerUser, authenticateUser, retrieveUser, createOffer } from './log
 function App() {
   const [fullname, setFullname] = useState('text')
   const [view, setView] = useState('home')
+  const [offers, setOffers] = useState('offers')
 
   const handleGoToRegister = () => {
     console.log('fue bien')
@@ -40,6 +41,7 @@ function App() {
   }
 
   const handleLogin = (email, password) => {
+    
     try {
       authenticateUser(email, password, (error, token) => {
         if (error) return alert(error.message)
@@ -53,7 +55,15 @@ function App() {
             setFullname(user.fullname)
 
           })
-
+          try {
+            retrieveOffer(sessionStorage.token, (error, offers) => {
+              if (error) return alert(error.message)
+              debugger
+              setOffers(offers)
+            })
+          } catch (error) {
+            alert(error.message)
+          }
           setView('hub')
         } catch (error) {
           alert(error.message)
@@ -84,16 +94,6 @@ function App() {
       createOffer(token, undefined, offername, titleoffer, image, error => {
         if (error) return alert(error.message)
 
-        try {
-          retrieveNotes(token, (error, notes) => {
-            if (error) return alert(error.message)
-
-            setNotes(notes)
-          })
-        } catch (error) {
-          alert(error.message)
-        }
-
         setView('hub')
       })
     } catch (error) {
@@ -108,7 +108,7 @@ function App() {
         {view === 'home' && <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />}
         {view === 'register' && <Register onRegister={handleRegister} />}
         {view === 'login' && <Login onLogin={handleLogin} />}
-        {view === 'hub' && <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} />}
+        {view === 'hub' && <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} />}
         {view === 'createoffer' && <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />}
       </header>
     </div>

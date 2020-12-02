@@ -1,35 +1,29 @@
-/* const { validateId, validateCallback } = require('./helpers/validations')
-const context = require('./context')
-const { ObjectId } = require('mongodb')
+const { validateId } = require('./helpers/validations')
+const { User } = require('../models')
+const { Offer } = require('../models')
 const { NotFoundError } = require('../errors')
+const { ObjectID } = require('mongodb')
 
-const { env: { DB_NAME } } = process
-
-module.exports = function (ownerId, callback) {
+module.exports = function (ownerId) {
     validateId(ownerId)
-    validateCallback(callback)
-
-    users.findOne({ _id }, (error, user) => {
-        if (error) return callback(error)
-
-        if (!user) return callback(new NotFoundError(`user with id ${ownerId} not found`))
-
-        const notes = db.collection('notes')
-
-        const owner = _id
-
-        notes.find({ owner }, { sort: { date: -1 } }, (error, cursor) => {
-            if (error) return callback(error)
 
 
-            cursor.toArray((error, notes) => {
-                if (error) return callback(error)
+    const _id = ObjectID.createFromHexString(ownerId);
 
-                notes = notes.map(({ _id, text, tags, visibility, date }) => ({ id: _id.toString(), text, tags, visibility, date }))
+    return User
+        .findById({ _id })
+        .then((user) => {
+            if (user) {
 
-                callback(null, notes)
-            })
-        })
-    })
+                const cursor = Offer.find({ owner: _id }).sort({ date: -1 });
 
-}.bind(context) */
+                return cursor.lean()
+                    .then(_offers => {
+                        if (_offers)
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, owner }))
+                        else throw new NotFoundError('there are no offers to retrieve')
+                    });
+
+            } else throw new NotFoundError(`the user with id ${ownerId} was not found`);
+        });
+}
