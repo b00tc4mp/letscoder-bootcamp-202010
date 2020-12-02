@@ -1,0 +1,52 @@
+.result {
+  list-style: none;
+  & > li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #aec7d2;
+    clear: both;
+    min-height: 50px;
+  }
+  &__title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #3d687c;
+  }
+  &__url {
+    background: #7bb2ca;
+    color: #fff;
+    font-family: monospace;
+    font-size: 0.7rem;
+    padding: 2px 4px;
+    border-radius: 7px;
+    margin: 0px 2px;
+    word-break: break-all;
+    text-decoration: none;
+  }
+  &__preview {
+    font-size: 0.8rem;
+  }
+  &__img {
+    float: left;
+  }
+  &__id {
+    background: #afb3b5;
+    color: #fff;
+    font-family: monospace;
+    font-size: 0.5rem;
+    padding: 2px;
+    border-radius: 4px;
+    margin: 0px 5px;
+    word-break: break-all;
+    text-decoration: none;
+    display: inline-block;
+  }
+  &__price {
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #3d687c;
+    display: block;
+    &:after {
+      content: '€';
+    }
+  }
+}

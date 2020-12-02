@@ -1,0 +1,21 @@
+.access {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %box;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    &__register {
+        margin-right: 20px;
+    }
+    &__login {
+        margin-left: 20px;
+    }
+    &_banana {
+        position: absolute;
+        top: -79px;
+        max-width: 100%;
+        width: 5rem;
+    }
+}

@@ -1,0 +1,228 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+.web-app, .register, .register-confirm, .login, .access {
+  position: relative;
+  background: #F2F2F2;
+  border: 1px solid #8ebed2;
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;
+  padding: 20px;
+}
+.web-app:before, .register:before, .register-confirm:before, .login:before, .access:before {
+  content: "";
+  box-shadow: rgba(142, 193, 218, 0.41) 0 5px 3px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.error-message {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  border-color: #e09a9a;
+  margin: 10px auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  border-left-color: #d9534f;
+  background-color: #ffdbda;
+}
+.error-message img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.access {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.access__register {
+  margin-right: 20px;
+}
+.access__login {
+  margin-left: 20px;
+}
+.access_banana {
+  position: absolute;
+  top: -79px;
+  max-width: 100%;
+  width: 5rem;
+}
+
+.login {
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.login form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.login input {
+  margin-bottom: 20px;
+}
+
+.register-confirm {
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.register-confirm em {
+  color: #04a027;
+  font-weight: bold;
+}
+.register-confirm button {
+  margin: 20px 0 0 0;
+}
+
+.register {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.register form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.register input {
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  text-shadow: 2px 2px #00000014;
+  font-size: 2.4rem;
+  margin: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.web-app {
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.web-app img {
+  max-width: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+
+@keyframes movement {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 560px 0px;
+  }
+}
+html {
+  height: 100%;
+  max-height: 100%;
+}
+
+body {
+  height: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  font-family: exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  background-image: url("../images/sky.png");
+  animation: movement 10s linear infinite;
+  background-color: #BFDFEC;
+  background-repeat: repeat-x;
+}
+
+.sub-title {
+  display: block;
+  color: #b3b3b3;
+  margin-top: 0;
+  text-shadow: 2px 2px #00000014;
+  font-size: 1.4rem;
+}
+
+.btn {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#D8D9DB), color-stop(80%, #fff), to(#FDFDFD));
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 0 #CECFD1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #cacaca;
+  box-shadow: inset 3px 3px 3px #0000001a;
+  border-radius: 3px/6px;
+}
+
+@media (min-width: 600px) {
+  .register form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .register input:nth-child(1) {
+    flex-basis: calc(50% - 5px);
+  }
+  .register input:nth-child(2) {
+    flex-basis: calc(50% - 5px);
+    margin-left: 10px;
+  }
+  .register input:nth-child(3) {
+    flex-basis: calc(50% - 5px);
+  }
+  .register input:nth-child(4) {
+    flex-basis: calc(50% - 5px);
+    margin-left: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
