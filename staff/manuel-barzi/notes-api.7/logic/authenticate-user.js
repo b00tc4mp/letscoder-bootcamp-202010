@@ -1,7 +1,7 @@
 const { validateEmail, validatePassword } = require('./helpers/validations')
 const { AuthError } = require('notes-errors')
 const { User } = require('../models')
-const bcryptjs = require('bcryptjs')
+const bcrypt = require('bcryptjs')
 
 module.exports = function (email, password) {
     validateEmail(email)
@@ -13,7 +13,7 @@ module.exports = function (email, password) {
 
             const { password: hash } = user
 
-            return bcryptjs.compare(password, hash)
+            return bcrypt.compare(password, hash)
                 .then(match => {
                     if (!match) throw new AuthError('wrong credentials')
 

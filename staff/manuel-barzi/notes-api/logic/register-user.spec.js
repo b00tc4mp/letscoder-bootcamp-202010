@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
 const registerUser = require('./register-user')
 const { User } = require('../models')
+const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
 
@@ -23,17 +24,20 @@ describe('registerUser()', () => {
         it('should succeed on new user', () =>
             registerUser(fullname, email, password)
                 .then(() =>
-                    User.findOne({ email, password })
+                    User.findOne({ email })
                 )
                 .then(user => {
                     expect(user).to.exist
                     expect(user.fullname).to.equal(fullname)
+
+                    return bcrypt.compare(password, user.password)
                 })
+                .then(match => expect(match).to.be.true)
         )
 
         afterEach(() =>
             User
-                .deleteOne({ email, password })
+                .deleteOne({ email })
                 .then(result => expect(result.deletedCount).to.equal(1))
         )
     })

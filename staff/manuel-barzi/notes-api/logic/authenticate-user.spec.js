@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const authenticateUser = require('./authenticate-user')
 const { User } = require('../models')
+const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
 
@@ -19,10 +20,13 @@ describe('authenticateUser()', () => {
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
-            const user = { fullname, email, password }
+            return bcrypt.hash(password, 10)
+                .then(hash => {
+                    const user = { fullname, email, password: hash }
 
-            return User.create(user)
-                .then(user => userId = user.id)
+                    return User.create(user)
+                        .then(user => userId = user.id)
+                })
         })
 
         it('should succeed on correct credentials', () =>
