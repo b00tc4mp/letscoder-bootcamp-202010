@@ -1,7 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.js',
     publicPath: '/'
   },
@@ -29,6 +31,15 @@ module.exports = {
             plugins: [
               'babel-plugin-styled-components'
             ]
+          }
+        }
+      },
+      {
+        test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 90000
           }
         }
       }
