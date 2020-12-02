@@ -3,7 +3,7 @@ import SearchPet from './SearchPet'
 import CreatePet from './CreatePet'
 import './Welcome.sass'
 
-function Welcome({userName}){
+function Welcome({userName, onCreatePet}){
 
         const [welcomeView, setWelcomeView] = useState('welcome')
 
@@ -18,7 +18,7 @@ return <section className="welcome">
         {welcomeView === 'welcome' && <div><img className="welcome__img"src="paw.jpg"/></div>}
         
         {welcomeView === 'search-pet' && <SearchPet />}
-        {welcomeView === 'create-pet' && <CreatePet />}
+        {welcomeView === 'create-pet' && <CreatePet onCreatePet={onCreatePet}/>}
 </section>
 
 

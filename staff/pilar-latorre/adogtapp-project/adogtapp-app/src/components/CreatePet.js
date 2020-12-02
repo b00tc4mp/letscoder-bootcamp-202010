@@ -1,6 +1,6 @@
 import './CreatePet.sass'
 
-function CreatePet({onGoToCreatePet}){
+function CreatePet({onCreatePet, onGoToCreatePet}){
 
     return <div className="CreatePet">
         <h1 className="CreatePet__h1">Please fill all the information about the pet</h1>
@@ -14,7 +14,7 @@ function CreatePet({onGoToCreatePet}){
 
             const { target: { name: { value: name }, breed: { value: breed }, color: { value: color }, description: {value: description} } } = event
 
-            //onCreatePet(name, breed, color, description )
+            onCreatePet(name, breed, color, description )
         }}>
             <input className="CreatePet__input" type="text" name="name" placeholder="Pet name" />
             <input className="CreatePet__input" type="text" name="breed" placeholder="breed" />
@@ -28,8 +28,6 @@ function CreatePet({onGoToCreatePet}){
 
 
     </div>
-
-
 
 
 }

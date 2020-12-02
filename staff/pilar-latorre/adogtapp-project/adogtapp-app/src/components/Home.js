@@ -1,7 +1,7 @@
-import  {Welcome, SearchPet, CreatePet}  from './'
+import  {Welcome}  from './'
 import { useState, useEffect } from 'react'
-import { retrieveUser } from '../logic'
-import { savePet } from '../logic'
+import { retrieveUser, savePet } from '../logic'
+
 
 /* import { retrieveUser, saveNote, retrieveNotes } from '../logic'
 import SaveNote from './SaveNote'
@@ -15,9 +15,6 @@ export default function () {
     //const [notes, setNotes] = useState()
 
     
-
-
-
     useEffect(() => {
         const { token } = sessionStorage
 
@@ -44,7 +41,8 @@ export default function () {
         }
     }, [])
 
-    const handleSavePet = (name, breed, color, description) => {
+
+    const handleCreatePet = (name, breed, color, description) => {
         const { token } = sessionStorage
 
         try {
@@ -70,11 +68,9 @@ export default function () {
  
     return(
     <>
-    {view === 'welcome' && <Welcome userName={name}/>}
-  
-
-        
-       {/*  <SavePet onSavePet={handleSavePet} /> */}
+    {view === 'welcome' && <Welcome userName={name} onCreatePet={handleCreatePet}/>}
+    
+   {/*  <CreatePet  /> */}
         {/* <ListNotes notes={notes} /> */}
    </>
    )
