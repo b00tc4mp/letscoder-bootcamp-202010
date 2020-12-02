@@ -7,7 +7,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'src/index.html',
+      favicon: 'src/favicon.ico'
     })
   ],
   module: {
@@ -35,7 +36,10 @@ module.exports = {
   },
   devServer: {
     port: 9000,
-    open: true
+    open: true,
+    historyApiFallback: {
+      disableDotRule: true
+    }
   },
   watchOptions: {
     ignored: '/node_modules/'
