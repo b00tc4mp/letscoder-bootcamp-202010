@@ -9,7 +9,8 @@ mongoose.connect(MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
     try {
         retrieveSavedFood('5fc5147415ee83679fad5205')
-        .then(result => console.log('Your saved food: ', result))
+        .then(console.log)
+        .then(result => {})
         .catch(error => console.log('could not find any saved food', error))
         .then(() => mongoose.disconnect())
         .then(() => console.log('client closed'))

@@ -6,8 +6,8 @@ export default function (token, foodId, callback) {
     validateId(foodId)
     validateCallback(callback)
 
-    call('PATCH', 'http://localhost:4000/api/users', { Authorization: `Bearer ${token}`, 'Content_type': 'application/json' },
-        JSON.stringify({ foodId }),
+    call('PATCH', 'http://localhost:4000/api/users', { Authorization: `Bearer ${token}`, 'Content-type': 'application/json' },
+        JSON.stringify({ savedFood: [foodId] }),
         (status, response) => {
             if (status === 0)
                 return callback (new Error('server error'))

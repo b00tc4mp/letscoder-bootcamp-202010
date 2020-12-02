@@ -1,9 +1,11 @@
-import { retrieveFood, toggleFoodUserDiet } from '../logic'
+import { retrieveSavedFood, addFoodUserDiet } from '../logic'
 import './styles/FoodResult.sass' 
 import { useState } from 'react'
 import { SavedFood } from '.'
 
 export default function FoodResult ({ result, user }) {
+
+    const { token } = sessionStorage
 
     const [view, setView] = useState()
     const [food, setFood] = useState()
@@ -12,17 +14,22 @@ export default function FoodResult ({ result, user }) {
     const {_id: foodId, name, calories, serving, carbs, protein, fats} = result
 
     const handleSaveFood = () => {
-        toggleFoodUserDiet(userId, foodId, error => {
-            if (error) return alert(error.message)
-
-            retrieveFood(foodId, (error, food) => {
+        try {
+            addFoodUserDiet(token, foodId, error => {
                 if (error) return alert(error.message)
-
-                // const {name, calories} = food
-                setFood(food)
-                setView('saved-food')
+    
+                retrieveSavedFood(token, (error, food) => {
+                    if (error) return alert(error.message)
+    
+                    // const {name, calories} = food
+                    setFood(food)
+                    setView('saved-food')
+                })
             })
-        })
+            
+        } catch (error) {
+            return alert(error.message)
+        }
     }
 
     return <> 

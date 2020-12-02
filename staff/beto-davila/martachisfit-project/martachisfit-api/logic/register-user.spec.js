@@ -19,7 +19,6 @@ describe('SPEC registerUser()', () => {
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
         })
-        debugger
         it('should succeed on new user', () =>
             registerUser(fullname, email, password)
                 .then(() => User.findOne({ email }))

@@ -63,5 +63,11 @@ module.exports = {
         if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
         if (!query.trim().length) throw new Error('query is empty or blank')
+    },
+
+    validateToken(token) {
+        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+        if (!token.trim().length) throw new Error('token is empty or blank')
     }
 }

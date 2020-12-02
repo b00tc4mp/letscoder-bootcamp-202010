@@ -13,7 +13,6 @@ module.exports = query => {
 
             if(food) {
                 // delete food[0]._id
-
                 return food
             }
             else

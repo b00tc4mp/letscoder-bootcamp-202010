@@ -1,7 +1,6 @@
 const { validateId } = require('./helpers/validations')
 // const { NotFoundError } = require('../errors')
 const { User, Food } = require('../models')
-const {ObjectId} = require('mongodb')
 
 /**
  * Retrieves an array with the food added by the user to his/her diet
@@ -10,9 +9,11 @@ const {ObjectId} = require('mongodb')
  * 
  * @returns {Promise}
  */
+
 module.exports = function (userId) {
     validateId(userId)
-    let result = []
+
+    let addedFood = []
 
     return User.findById(userId).lean()
         .then(user => {
@@ -20,15 +21,16 @@ module.exports = function (userId) {
 
             const { savedFood } = user
 
-            savedFood.map(foodId => {
-                return Food.findById(foodId).lean()
-                .then(food => {
-                    if (!food) throw new Error(`food with id ${foodId} not found`)
+            return Promise.all(savedFood.map(foodId => 
+                 Food.findById(foodId).lean()
+                    .then(food => {
+                        if (!food) throw new Error(`food with id ${foodId} not found`)
 
-                    result.push({name, calories})
-                })
-            })
-            return result
-            
+                        const {name, calories} = food
+                         addedFood.push({ name, calories })
+                         return addedFood
+                    })
+            ))
         })
+        .then(results => {})
     }

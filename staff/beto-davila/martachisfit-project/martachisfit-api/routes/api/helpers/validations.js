@@ -27,7 +27,7 @@ module.exports = {
         if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new Error('id is empty or blank')
-
+        debugger
         if (id.length !== 24) throw new Error(`id length ${id.length} is not 24`)
     },
 
@@ -59,5 +59,11 @@ module.exports = {
         if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
         if (!query.trim().length) throw new Error('query is empty or blank')
+    },
+
+    validateToken(token) {
+        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+        if (!token.trim().length) throw new Error('token is empty or blank')
     }
 }
