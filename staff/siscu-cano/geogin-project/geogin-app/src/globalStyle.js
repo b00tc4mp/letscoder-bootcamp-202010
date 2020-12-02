@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -18,6 +18,7 @@ body {
   margin: 0;
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  background: ${({ theme }) => theme.body};
 }
 
 main {
@@ -106,9 +107,5 @@ textarea {
 
 #app {
   min-height: 100vh;
-  background-color: ${props => props.theme.colors.lightBlue};
 }
-
 `
-
-export default GlobalStyle

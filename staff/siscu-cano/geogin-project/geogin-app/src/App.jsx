@@ -1,12 +1,20 @@
 import React from 'react'
-import GlobalStyle from './globalStyle'
-import Theme from './Theme'
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle } from './globalStyle'
+import { adultTheme, kidTheme } from './theme'
 import { ProgressBar } from './components/ProgressBar'
+import { ToggleTheme } from './components/ToggleTheme'
+import { useAdultMode } from './hooks/useAdultMode'
 
-export const App = () => (
-  <Theme>
-    <GlobalStyle />
-    <ProgressBar done='50' />
-  </Theme>
+export const App = () => {
+  const [theme, toggleTheme] = useAdultMode()
+  const themeMode = theme === 'adultTheme' ? adultTheme : kidTheme
 
-)
+  return (
+    <ThemeProvider theme={themeMode}>
+      <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
+      <GlobalStyle />
+      <ProgressBar done='50' />
+    </ThemeProvider>
+  )
+}
