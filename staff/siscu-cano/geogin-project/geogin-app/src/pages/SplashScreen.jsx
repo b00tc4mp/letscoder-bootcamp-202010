@@ -9,10 +9,10 @@ import { Qrcode } from '../components/Qrcode'
 
 export const SplashScreen = () => {
   const [loading, setLoading] = useState(true)
-  const timeToLoad = 3000
+  const TIME_FAKE = 3000
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), timeToLoad)
+    setTimeout(() => setLoading(false), TIME_FAKE)
   }, [])
 
   useBodyClass('splashscreen')
@@ -22,7 +22,7 @@ export const SplashScreen = () => {
         <div>
           <Logo />
           <Qrcode />
-          <ProgressBar duration={timeToLoad} />
+          <ProgressBar duration={TIME_FAKE} />
         </div>
       ) : (
         <Redirect noThrow to='/onboarding' />
