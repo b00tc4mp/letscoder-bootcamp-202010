@@ -14,7 +14,7 @@ function Hub({ fullname, onHub, onGoCreateoffer, offers }) {
         }}>
             <input className="searcher" type="text" name="query" placeholder="🔍 Busca en huertea" />
         </form>
-        <h3>Hey {fullname}!</h3>
+        <h3>Bienvenid@ {fullname}!</h3>
         <h3>¿Qué alimento quieres hoy? </h3>
 {/*         <div>
         {offers}

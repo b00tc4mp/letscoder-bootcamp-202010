@@ -1,6 +1,3 @@
-RETRIEVE ALL THE OFFERS
-
-
 import { call } from '../utils'
 import { validateToken, validateCallback } from './helpers/validations'
 

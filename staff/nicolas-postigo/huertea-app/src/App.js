@@ -47,22 +47,22 @@ function App() {
         if (error) return alert(error.message)
         sessionStorage.token = token
 
-      })
-
+        
         retrieveUser(sessionStorage.token, (error, user) => {
           if (error) return alert(error.message)
           setFullname(user.fullname)
         })
-
+        
         retrieveOffer(sessionStorage.token, (error, offersResult) => {
           if (error) return alert(error.message)
           debugger
           setOffers(offersResult)
-
+          
         })
-
+        
         setView('hub')
-
+        
+      })
 
     } catch (error) {
       alert(error.message)

@@ -2383,3 +2383,18 @@ info 2020-12-03T15:51:33.451Z - server running on port 4000
 info 2020-12-03T15:53:15.458Z - stopping server
 info 2020-12-03T15:53:30.742Z - starting server
 info 2020-12-03T15:53:31.252Z - server running on port 4000
+error 2020-12-03T16:57:47.769Z - ValidationError: Offer validation failed: image: Path `image` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-03T17:17:42.869Z - starting server
+info 2020-12-03T17:17:43.268Z - server running on port 4000
+error 2020-12-03T17:32:41.594Z - ValidationError: Offer validation failed: image: Path `image` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-03T17:38:40.080Z - stopping server
+info 2020-12-03T17:38:55.783Z - starting server
+info 2020-12-03T17:38:56.099Z - server running on port 4000

@@ -23,10 +23,6 @@ module.exports = new Schema({
         required: true
     },
 
-/*     tags: [{
-        type: String
-    }], */
-
 
     //TODO PONER LOCALIZACIÓN
 })
