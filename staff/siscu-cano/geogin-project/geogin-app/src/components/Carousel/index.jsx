@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick'
+import { navigate } from '@reach/router'
+
 import { SliderWrapper } from './styles'
 // Images
 import onboardImageOne from '../../assets/images/bg-01-onboarding.png'
@@ -7,16 +9,22 @@ import onboardImageTwo from '../../assets/images/bg-02-onboarding.png'
 import onboardImageThree from '../../assets/images/bg-03-onboarding.png'
 
 export const Carousel = () => {
+  const [slideIndex, setSlideIndex] = useState(0)
+
   const settings = {
     dots: true,
     fade: true,
     infinite: false,
     lazyLoad: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    beforeChange: (current, next) => setSlideIndex(next)
   }
+
+  if (slideIndex === 2) navigate('/menu')
+
   return (
     <SliderWrapper>
       <Slider {...settings}>
