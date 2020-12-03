@@ -7,7 +7,7 @@ const {
     handleAuthenticateUser,
     handleRetrieveUser,
     handleSavePet,
-   // handleRetrievePet,
+    handleFindPets,
   
 } = require('./handlers')
 
@@ -23,6 +23,10 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
 router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
+
+router.get('/api/pets?q=<query>', jsonBodyParser, withErrorHandling(handleFindPets))
+
+
 
 /*router.get('/api/pets', withErrorHandling(handleRetrievePets)) */
 

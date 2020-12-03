@@ -5,7 +5,7 @@ const { Pet } = require('../models')
 const { User } = require('../models')
 
 
-module.exports = function (petId, name, breed, color, description, shelter) {
+module.exports = function (petId, name, breed, species, color, description, shelter) {
     validateId(shelter)
     if (typeof petId !== 'undefined') validateId(petId)
     validateName(name)
@@ -30,13 +30,13 @@ module.exports = function (petId, name, breed, color, description, shelter) {
                     if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
 
                 return Pet
-                    .updateOne({ _id }), { $set: { name, breed, color, description }}
+                    .updateOne({ _id }), { $set: { name, breed, species, color, description }}
                     .then (result => undefined) 
 
             })
         } else
             return Pet
-            .create({ name, breed, color, description, shelter: ObjectId(shelter) })
+            .create({ name, breed, species, color, description, shelter: ObjectId(shelter) })
             .then(result => undefined)
 
     })

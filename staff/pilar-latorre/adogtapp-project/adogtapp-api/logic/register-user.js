@@ -4,7 +4,7 @@ const { ConflictError } = require('../errors')
 const { User } = require('../models')
 const bcryptjs = require('bcryptjs')
 
-module.exports = function (userName, email, password, address, city, phone) {
+module.exports = function (userName, email, password, address, city, phone, description) {
     validateUserName(userName)
     validateEmail(email)
     validatePassword(password)
@@ -20,7 +20,7 @@ module.exports = function (userName, email, password, address, city, phone) {
 
                 return bcryptjs.hash(password, 10)
             })
-            .then(hash => User.create({ userName, email, password: hash, address, city, phone }))
+            .then(hash => User.create({ userName, email, password: hash, address, city, phone, description }))
             .then(() => { })
     )
 }

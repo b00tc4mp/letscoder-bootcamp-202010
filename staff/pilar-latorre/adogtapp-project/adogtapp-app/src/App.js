@@ -5,9 +5,9 @@ import { registerUser, authenticateUser } from './logic'
 function App() {
   const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-in')
 
-  const handleSignUp = (userName, email, password, address, city, phone) => {
+  const handleSignUp = (userName, email, password, address, city, phone, description) => {
     try {
-      registerUser(userName, email, password, address, city, phone, error => {
+      registerUser(userName, email, password, address, city, phone, description, error => {
         if (error) return alert(error.message)
 
         setView('sign-in')

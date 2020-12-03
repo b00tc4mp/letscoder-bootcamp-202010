@@ -7,6 +7,15 @@ function Welcome({userName, onCreatePet}){
 
         const [welcomeView, setWelcomeView] = useState('welcome')
 
+        //handle search pet (query, patBusqueda){ retrievePet(token, query,patBusqueda)}
+
+        /*
+                retrievePets(token, query, patBuqueda){
+                        if(patBusqueda===breed) call(token, undefined, undefined, undefined, query)
+                        if(patBusqueda=== species)  call(token, undefined, undefined, query, undefined)
+                }
+
+        */
 return <section className="welcome">
         
         <h1 className="welcome__welcome">Welcome {userName}!</h1>

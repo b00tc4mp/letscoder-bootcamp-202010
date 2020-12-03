@@ -42,11 +42,11 @@ export default function () {
     }, [])
 
 
-    const handleCreatePet = (name, breed, color, description) => {
+    const handleCreatePet = (name, breed, species, color, description) => {
         const { token } = sessionStorage
 
         try {
-            savePet( undefined, name, breed, color, description, token, error => {
+            savePet( undefined, name, breed, species, color, description, token, error => {
                 if (error) return alert(error.message)
 
                 

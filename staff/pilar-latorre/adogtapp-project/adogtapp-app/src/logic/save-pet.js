@@ -1,7 +1,7 @@
 import { call } from '../utils'
-import { validateToken, validateId, validateName, validateBreed, validateColor, validateDescription, validateCallback } from './helpers/validations'
+import { validateToken, validateId, validateName, validateBreed,  validateColor, validateDescription, validateCallback } from './helpers/validations'
 
-export default function savePet( petId, name, breed, color, description, token, callback) {
+export default function savePet( petId, name, breed, species, color, description, token, callback) {
     validateToken(token)
     if (typeof petId !== 'undefined') validateId(petId)
     validateName(name)
@@ -14,7 +14,7 @@ debugger
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },
-        JSON.stringify({ petId, name, breed, color, description }),
+        JSON.stringify({ petId, name, breed, species, color, description }),
         (status, response) => {
             if (status === 0)
                 return callback(new Error('server error'))

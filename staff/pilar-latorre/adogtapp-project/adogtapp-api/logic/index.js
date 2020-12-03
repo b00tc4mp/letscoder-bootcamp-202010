@@ -4,6 +4,6 @@ module.exports = {
     retrieveUser: require('./retrieve-user'),
     savePet: require('./save-pet'),
     findPets: require('./find-pets'),
-    findPetsByShelter: require('./find-pets-by-shelter')
+    //findPetsByShelter: require('./find-pets-by-shelter')
 
 }

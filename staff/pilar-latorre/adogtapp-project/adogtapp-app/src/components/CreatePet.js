@@ -12,12 +12,16 @@ function CreatePet({onCreatePet, onGoToCreatePet}){
         <form className="CreatePet__form" onSubmit={event => {
             event.preventDefault()
 
-            const { target: { name: { value: name }, breed: { value: breed }, color: { value: color }, description: {value: description} } } = event
+            const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} } } = event
 
-            onCreatePet(name, breed, color, description )
+            onCreatePet(name, breed, species, color, description )
         }}>
             <input className="CreatePet__input" type="text" name="name" placeholder="Pet name" />
             <input className="CreatePet__input" type="text" name="breed" placeholder="breed" />
+            <select className="CreatePet__select" name="species" id="species">
+                <option className="CreatePet__option" value="dog">Dog</option>
+                <option className="CreatePet__option" value="cat">Cat</option>
+            </select>
             <input className="CreatePet__input" type="text" name="color" placeholder="color" />
             <textarea className="CreatePet__descripcion" type="text" name="description" placeholder="please write a little description about the pet" ></textarea>
            

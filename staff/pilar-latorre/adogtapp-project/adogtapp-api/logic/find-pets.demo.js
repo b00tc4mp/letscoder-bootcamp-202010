@@ -8,7 +8,8 @@ const findPets = require('./find-pets')
 mongoose.connect( MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true})
     .then(() => {
     try {
-        findPets('perrito')
+        //findPets('5fc91d9b4127ae64a8012234',undefined, undefined, 'garrita', undefined, undefined)
+        findPets('5fc91d9b4127ae64a8012234',undefined, 'zaragoza', 'garrita', 'cat', undefined)
         .then(pets => console.log(pets))
         .catch(error => console.log('could not retrieve any pet', error))
         .then(() => mongoose.disconnect())
@@ -16,6 +17,8 @@ mongoose.connect( MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true
 
     } catch (error) {
         console.log('validation error', error)
+
+      
     }
 
 })

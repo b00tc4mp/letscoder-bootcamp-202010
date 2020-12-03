@@ -9,9 +9,18 @@ module.exports = new Schema({
         required: true
     },
 
+
     breed: {
         type: String,
         required: true
+    },
+
+    species: {
+        type: String,
+        enum: ['dog', 'cat'],
+        default: 'dog',
+        required: true
+
     },
 
     color: {

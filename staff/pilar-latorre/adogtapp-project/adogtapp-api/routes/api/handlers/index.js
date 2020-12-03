@@ -4,5 +4,5 @@ module.exports = {
     handleAuthenticateUser: require('./handle-authenticate-user'),
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleSavePet: require('./handle-save-pet'),
-    //handleRetrieveNotes: require('./handle-retrieve-notes') 
+    handleFindPets: require('./handle-find-pets') 
 }
