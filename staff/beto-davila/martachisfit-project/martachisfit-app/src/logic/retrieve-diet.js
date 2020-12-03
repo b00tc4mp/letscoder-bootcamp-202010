@@ -1,11 +1,11 @@
 import call from '../utils/call'
-import { validateToken, validateCallback } from './helpers/validations'
+import { validateCallback, validateToken } from './helpers/validations'
 
 export default function (token, callback) {
     validateToken(token)
     validateCallback(callback)
 
-    call('GET', 'http://localhost:4000/api/user/food', { Authorization: `Bearer ${token}` },
+    call('GET', 'http://localhost:4000/api/users/diets', { Authorization: `Bearer ${token}`},
         '',
         (status, response) => {
             if (status === 0)
@@ -16,8 +16,8 @@ export default function (token, callback) {
                 return callback(new Error(error))
             }
 
-            const results = JSON.parse(response)
+            const diet = JSON.parse(response)
 
-            callback(null, results)
+            callback(null, diet)
         })
 }

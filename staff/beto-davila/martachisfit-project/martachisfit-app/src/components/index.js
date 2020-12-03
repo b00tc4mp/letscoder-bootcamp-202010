@@ -8,6 +8,8 @@ import DropDownMenu from './DropDownMenu'
 import DietDesign from './DietDesign'
 import FoodResult from './FoodResult'
 import SavedFood from './SavedFood'
+import UserDiet from './UserDiet'
+import Articles from './Articles'
 
 export {
     Landing,
@@ -19,5 +21,7 @@ export {
     DropDownMenu,
     DietDesign,
     FoodResult,
-    SavedFood
+    SavedFood,
+    UserDiet,
+    Articles
 }

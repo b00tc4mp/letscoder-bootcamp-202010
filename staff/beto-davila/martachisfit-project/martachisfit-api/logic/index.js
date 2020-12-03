@@ -7,5 +7,6 @@ module.exports = {
     toggleFoodUserDiet: require('./toggle-food-user-diet'),
     retrieveFood: require('./retrieve-food'),
     retrieveSavedFood: require('./retrieve-saved-food'),
-    addFoodUserDiet: require('./add-food-user-diet')
+    addFoodUserDiet: require('./add-food-user-diet'),
+    retrieveDiet: require('./retrieve-diet')
 }

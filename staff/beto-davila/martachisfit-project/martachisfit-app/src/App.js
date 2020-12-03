@@ -23,9 +23,9 @@ function App() {
     setView('plans')
   }
 
-  const handleRegister = (fullname, email, password) => {
+  const handleRegister = (fullname, email, password, calories) => {
     try {
-      registerUser(fullname, email, password, error => {
+      registerUser(fullname, email, password, calories, error => {
         if (error) return alert(error.message)
   
         setView('home')

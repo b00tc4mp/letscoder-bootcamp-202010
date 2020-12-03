@@ -13,8 +13,8 @@ const { User, Food } = require('../models')
 module.exports = function (userId) {
     validateId(userId)
 
-    let addedFood = []
-
+    
+debugger
     return User.findById(userId).lean()
         .then(user => {
             if (!user) throw new Error(`user with id ${userId} not found`)
@@ -26,11 +26,12 @@ module.exports = function (userId) {
                     .then(food => {
                         if (!food) throw new Error(`food with id ${foodId} not found`)
 
-                        const {name, calories} = food
-                         addedFood.push({ name, calories })
-                         return addedFood
+                        const {name, calories, carbs, protein, fats} = food
+
+                         return({ name, calories, carbs, protein, fats })
+                        //  return addedFood
                     })
             ))
         })
-        .then(results => {})
+        .then(results => results)
     }

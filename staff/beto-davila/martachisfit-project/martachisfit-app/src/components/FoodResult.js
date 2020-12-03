@@ -17,19 +17,28 @@ export default function FoodResult ({ result, user }) {
         try {
             addFoodUserDiet(token, foodId, error => {
                 if (error) return alert(error.message)
+
+                setView('added-food')
+            }) 
+        } catch (error) {
+            return alert(error.message)
+        }
+    }
+
+    const handleRetrieveDiet = () => {
+        try {
+            retrieveSavedFood(token, (error, food) => {
+                if (error) return alert(error.message)
     
-                retrieveSavedFood(token, (error, food) => {
-                    if (error) return alert(error.message)
-    
-                    // const {name, calories} = food
-                    setFood(food)
-                    setView('saved-food')
-                })
+                // const {name, calories} = food
+                setFood(food)
+                setView('saved-food')
             })
             
         } catch (error) {
             return alert(error.message)
         }
+
     }
 
     return <> 
@@ -43,6 +52,7 @@ export default function FoodResult ({ result, user }) {
         <p className="food-result__item">Grasas: {fats} gr.</p>
         <button onClick={handleSaveFood}className="food-result__add">Añadir</button>
     </section>
+    {view === 'added-food' && <p className="food-result__added">¡Alimento añadido! Puede ir a visualizar su <a onClick={handleRetrieveDiet} href="#record">registro</a> o continuar añadiendo alimentos.</p>}
     {view === 'saved-food' && <SavedFood food={food} />}
 </>
 }

@@ -1,30 +1,28 @@
-const { Schema } = require('mongoose')
+const { Schema, ObjectId } = require('mongoose')
 
 module.exports = new Schema({
     type: {
         type: String,
-        enum: ['Keto', 'Low-carb', 'High-carb', 'vegan'],
+        enum: ['keto', 'low-carb', 'mediterranean', 'vegan'],
         required: true
     },
 
     calories: {
         type: Number,
-        required: true,
+        required: true
     },
 
-    carbs: {
-        type: Number,
-        required: true,
+    meals: {
+        type: Object,
+        required: true
     },
 
-    protein: {
-        type: Number,
-        required: true,
+    dieter: {
+        type: [ ObjectId ]
     },
 
-    fats: {
-        type: Number,
-        required: true,
+    macros: {
+        type: Object
     }
 
 })

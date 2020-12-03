@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose')
+const { Schema, ObjectId } = require('mongoose')
 
 module.exports = new Schema({
     fullname: {
@@ -22,17 +22,34 @@ module.exports = new Schema({
         minlength: 3
     },
 
+    calories: {
+        type: Number,
+        required: true
+    },
+
     gender: {
         type: String,
         enum: ['hombre', 'mujer']
     },
 
-    savedFood: {
-        type: Array
+    vegan: {
+        type: Boolean
+    },
+
+    chosenFoods: {
+        type: [ ObjectId ]
+    },
+
+    savedArticles: {
+        type: [ ObjectId ]
     },
 
     role: {
         type: String,
         enum: ['admin', 'user']
+    },
+
+    dietId: {
+        type: ObjectId
     }
 })

@@ -251,3 +251,188 @@ info 2020-12-02T11:55:10.526Z - server running on port 4000
 info 2020-12-02T12:01:56.335Z - starting server
 info 2020-12-02T12:01:56.441Z - server running on port 4000
 info 2020-12-02T12:03:00.128Z - stopping server
+info 2020-12-02T12:10:03.830Z - starting server
+info 2020-12-02T12:10:04.056Z - server running on port 4000
+info 2020-12-02T12:20:04.706Z - starting server
+info 2020-12-02T12:20:04.992Z - server running on port 4000
+info 2020-12-02T12:25:59.941Z - starting server
+info 2020-12-02T12:26:00.050Z - server running on port 4000
+info 2020-12-02T12:33:33.682Z - stopping server
+info 2020-12-02T12:33:36.458Z - starting server
+info 2020-12-02T12:33:36.564Z - server running on port 4000
+info 2020-12-02T12:57:51.886Z - stopping server
+info 2020-12-02T12:58:11.056Z - starting server
+info 2020-12-02T12:58:11.348Z - server running on port 4000
+info 2020-12-02T13:02:42.521Z - starting server
+error 2020-12-02T13:02:42.766Z - Error: Cannot find module './handle-retrieve-food'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:9:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:13:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-02T13:02:42.791Z - stopping server
+info 2020-12-02T13:03:17.258Z - starting server
+error 2020-12-02T13:03:17.508Z - Error: Cannot find module './handle-retrieve-food'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:9:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:13:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-02T13:03:17.524Z - stopping server
+info 2020-12-02T13:06:25.794Z - starting server
+info 2020-12-02T13:06:37.821Z - server running on port 4000
+info 2020-12-02T13:15:01.901Z - starting server
+info 2020-12-02T13:15:02.011Z - server running on port 4000
+info 2020-12-02T13:17:09.085Z - stopping server
+info 2020-12-02T13:17:35.982Z - starting server
+info 2020-12-02T13:17:36.278Z - server running on port 4000
+info 2020-12-02T13:34:49.651Z - starting server
+info 2020-12-02T13:34:49.757Z - server running on port 4000
+info 2020-12-02T13:35:58.545Z - stopping server
+info 2020-12-02T13:36:00.422Z - starting server
+info 2020-12-02T13:36:00.520Z - server running on port 4000
+info 2020-12-02T13:49:59.224Z - stopping server
+info 2020-12-02T13:50:06.264Z - starting server
+info 2020-12-02T13:50:06.368Z - server running on port 4000
+info 2020-12-02T13:50:46.007Z - stopping server
+info 2020-12-02T14:06:58.333Z - starting server
+info 2020-12-02T14:06:58.435Z - server running on port 4000
+info 2020-12-02T15:04:54.183Z - stopping server
+info 2020-12-02T15:05:25.974Z - starting server
+info 2020-12-02T15:05:26.237Z - server running on port 4000
+info 2020-12-02T15:13:17.758Z - starting server
+info 2020-12-02T15:13:17.871Z - server running on port 4000
+info 2020-12-02T15:14:53.334Z - stopping server
+info 2020-12-02T15:14:55.853Z - starting server
+info 2020-12-02T15:14:55.949Z - server running on port 4000
+info 2020-12-02T15:18:40.728Z - stopping server
+info 2020-12-02T15:18:42.741Z - starting server
+info 2020-12-02T15:18:42.852Z - server running on port 4000
+info 2020-12-02T16:46:37.456Z - stopping server
+info 2020-12-02T16:47:54.611Z - starting server
+info 2020-12-02T16:47:54.720Z - server running on port 4000
+info 2020-12-03T05:41:10.102Z - stopping server
+info 2020-12-03T05:49:38.288Z - starting server
+info 2020-12-03T05:49:38.389Z - server running on port 4000
+info 2020-12-03T06:18:31.315Z - stopping server
+info 2020-12-03T06:44:04.541Z - starting server
+info 2020-12-03T06:44:04.649Z - server running on port 4000
+info 2020-12-03T07:58:05.164Z - stopping server
+info 2020-12-03T08:16:28.494Z - starting server
+error 2020-12-03T08:16:28.520Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:14
+    handleRetrieveAllDiets
+    ^
+
+SyntaxError: Identifier 'handleRetrieveAllDiets' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-03T08:16:28.521Z - stopping server
+info 2020-12-03T08:17:21.218Z - starting server
+info 2020-12-03T08:17:21.324Z - server running on port 4000
+info 2020-12-03T09:02:49.930Z - stopping server
+info 2020-12-03T09:19:18.449Z - starting server
+info 2020-12-03T09:19:18.559Z - server running on port 4000
+info 2020-12-03T09:21:51.264Z - stopping server
+info 2020-12-03T09:22:00.404Z - starting server
+info 2020-12-03T09:22:00.507Z - server running on port 4000
+info 2020-12-03T09:44:13.359Z - stopping server
+info 2020-12-03T10:02:36.686Z - starting server
+info 2020-12-03T10:02:36.795Z - server running on port 4000
+info 2020-12-03T10:03:40.174Z - stopping server
+info 2020-12-03T10:03:49.425Z - starting server
+info 2020-12-03T10:03:49.535Z - server running on port 4000
+info 2020-12-03T10:05:55.513Z - stopping server
+info 2020-12-03T10:07:32.594Z - starting server
+info 2020-12-03T10:07:32.703Z - server running on port 4000
+info 2020-12-03T10:19:33.277Z - stopping server
+info 2020-12-03T10:20:49.371Z - starting server
+info 2020-12-03T10:20:49.486Z - server running on port 4000
+info 2020-12-03T10:20:59.518Z - stopping server
+info 2020-12-03T10:22:04.544Z - starting server
+info 2020-12-03T10:22:04.826Z - server running on port 4000
+info 2020-12-03T10:24:24.078Z - stopping server
+info 2020-12-03T10:34:20.682Z - starting server
+info 2020-12-03T10:34:20.789Z - server running on port 4000
+info 2020-12-03T12:58:59.711Z - stopping server
+info 2020-12-03T12:59:02.493Z - starting server
+info 2020-12-03T12:59:02.605Z - server running on port 4000
+info 2020-12-03T13:12:12.232Z - stopping server
+info 2020-12-03T13:12:14.332Z - starting server
+info 2020-12-03T13:12:14.434Z - server running on port 4000
+info 2020-12-03T13:16:47.083Z - stopping server
+info 2020-12-03T13:16:49.266Z - starting server
+info 2020-12-03T13:16:49.380Z - server running on port 4000
+info 2020-12-03T13:21:21.217Z - stopping server
+info 2020-12-03T13:21:35.763Z - starting server
+info 2020-12-03T13:21:36.142Z - server running on port 4000
+info 2020-12-03T13:28:31.455Z - starting server
+info 2020-12-03T13:28:31.560Z - server running on port 4000
+info 2020-12-03T13:29:22.656Z - stopping server
+info 2020-12-03T13:30:25.347Z - starting server
+info 2020-12-03T13:30:25.456Z - server running on port 4000
+info 2020-12-03T13:32:39.775Z - stopping server
+info 2020-12-03T13:32:50.272Z - starting server
+info 2020-12-03T13:32:50.648Z - server running on port 4000
+info 2020-12-03T13:38:57.255Z - starting server
+info 2020-12-03T13:38:57.360Z - server running on port 4000
+info 2020-12-03T13:48:29.648Z - stopping server
+info 2020-12-03T13:48:43.328Z - starting server
+info 2020-12-03T13:48:43.749Z - server running on port 4000
+info 2020-12-03T14:00:09.862Z - starting server
+info 2020-12-03T14:00:09.972Z - server running on port 4000
+info 2020-12-03T14:00:50.424Z - stopping server
+info 2020-12-03T14:01:22.727Z - starting server
+info 2020-12-03T14:01:22.833Z - server running on port 4000
+info 2020-12-03T14:01:40.097Z - stopping server
+info 2020-12-03T14:02:07.827Z - starting server
+info 2020-12-03T14:02:07.915Z - server running on port 4000
+info 2020-12-03T14:20:20.116Z - stopping server
+info 2020-12-03T14:20:39.585Z - starting server
+info 2020-12-03T14:20:39.690Z - server running on port 4000
+info 2020-12-03T15:59:00.779Z - stopping server

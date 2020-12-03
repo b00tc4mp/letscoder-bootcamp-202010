@@ -13,22 +13,22 @@ module.exports = new Schema({
 
     calories: {
         type: Number,
-        required: true,
+        required: true
     },
 
     carbs: {
         type: Number,
-        required: true,
+        required: true
     },
 
     protein: {
         type: Number,
-        required: true,
+        required: true
     },
 
     fats: {
         type: Number,
-        required: true,
+        required: true
     }
 
 })

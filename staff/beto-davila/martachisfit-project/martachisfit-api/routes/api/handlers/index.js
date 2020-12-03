@@ -6,6 +6,7 @@ module.exports = {
     handleFindFood: require('./handle-find-food'),
     handleToggleFoodUserDiet: require('./handle-toggle-food-user-diet'),
     handleRetrieveSavedFood: require('./handle-retrieve-saved-food'),
-    handleRetrieveFood: require('./handle-retrieve-food'),
-    handleAddFoodUserDiet: require('./handle-add-food-user-diet')
+    // handleRetrieveFood: require('./handle-retrieve-food'),
+    handleAddFoodUserDiet: require('./handle-add-food-user-diet'),
+    handleRetrieveDiet: require('./handle-retrieve-diet')
 }

@@ -9,6 +9,7 @@ import retrieveFood from './retrieve-food'
 import toggleFoodUserDiet from './toggle-food-user-diet'
 import addFoodUserDiet from './add-food-user-diet'
 import retrieveSavedFood from './retrieve-saved-food'
+import retrieveDiet from './retrieve-diet'
 
 export {
     caloriesCalc,
@@ -21,5 +22,6 @@ export {
     retrieveFood,
     toggleFoodUserDiet,
     addFoodUserDiet,
-    retrieveSavedFood
+    retrieveSavedFood,
+    retrieveDiet
 }

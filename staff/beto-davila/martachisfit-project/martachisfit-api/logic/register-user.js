@@ -1,12 +1,13 @@
-const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
+const { validateEmail, validatePassword, validateFullname, validateNumber } = require('./helpers/validations')
 // const { ConflictError } = require('../errors')
 const { User } = require('../models')
 const bcryptjs = require('bcryptjs')
 
-module.exports = function (fullname, email, password) {
+module.exports = function (fullname, email, password, calories) {
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
+    validateNumber(calories)
 
      return User
             .findOne({ email })
@@ -15,6 +16,6 @@ module.exports = function (fullname, email, password) {
 
                 return bcryptjs.hash(password, 10)
             })
-            .then(hash => User.create({ fullname, email, password: hash }))
+            .then(hash => User.create({ fullname, email, password: hash, calories }))
             .then(() => {})
 }

@@ -2,7 +2,6 @@ import call from '../utils/call'
 import { validateQuery, validateCallback } from './helpers/validations'
 
 export default function findFood(query, callback) {
-
     validateQuery(query)
     validateCallback(callback)
 

@@ -6,7 +6,7 @@ function CaloriesGoal ({macros, onGoToPlans, onGoToRegister}) {
     <h1 className="goal__title">
         Calorías objetivo
     </h1>
-    <h3 className="goal__subtitle">{macros.calories} Kcal</h3>
+    <h1 className="goal__title">{macros.calories} Kcal</h1>
 
     <div className="goal__macros">
     <img alt="grafico" src={grafico}></img>
@@ -18,7 +18,7 @@ function CaloriesGoal ({macros, onGoToPlans, onGoToRegister}) {
 
     <h3 className="goal__subtitle">¡Estamos ready!</h3>
 
-    <h3 className="goal__subtitle">Para conseguir el mejor resultado de tu nuevo estilo de vida, completa tu <a className="goal__register"onClick={onGoToRegister}>cuenta</a></h3>
+    <h3 className="goal__subtitle">Para conseguir el mejor resultado de tu nuevo estilo de vida, anota tus <span className="goal__calories">calorías objetivo</span> y completa tu <a className="goal__register"onClick={onGoToRegister}>REGISTRO</a></h3>
 
     <p className="goal__p">¿Necesitas ayuda para interpretar el resultado y un seguimiento personalizado? Tenemos el plan perfecto para ti ;)</p>
 

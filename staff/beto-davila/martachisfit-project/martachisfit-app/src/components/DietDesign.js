@@ -28,7 +28,7 @@ export default function DietDesign () {
     const handleFindFood = query => {
         try {
             findFood(query, (error, food) => {
-                if (error) alert(error.message)
+                if (error) return alert("No se han encontrado resultados")
     
                 // const {calories, serving, carbs, protein, fats} = _food
                 setFood(food)
@@ -55,6 +55,7 @@ export default function DietDesign () {
                 </form> 
                 {/* {feedback !== undefined && <p>{feedback}</p>} */}
             </section>
+
             {view === 'food-result' && <FoodResult result={food} user={user}/>}
     </>
 }

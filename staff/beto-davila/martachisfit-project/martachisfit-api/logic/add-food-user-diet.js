@@ -15,18 +15,18 @@ module.exports = (userId, foodId) => {
         
         const { _id } = user
 
-        let { savedFood } = user
+        let { chosenFoods } = user
 
-        user = { userId: _id, savedFood: [] }
+        user = { userId: _id, chosenFoods: [] }
 
         return Food.findOne({_id: ObjectId(foodId)})
             .then(food => {
 
             if (!food) throw new Error(`food with id ${foodId} not found`)
 
-            savedFood.push(ObjectId.createFromHexString(foodId))
+            chosenFoods.push(ObjectId.createFromHexString(foodId))
     
-            return User.updateOne({ _id }, { $set: { savedFood } })
+            return User.updateOne({ _id }, { $set: { chosenFoods } })
                 .then(result => {})
 
         })
