@@ -152,3 +152,94 @@ info 2020-12-02T16:55:45.355Z - server running on port 4000
 info 2020-12-02T17:05:48.433Z - stopping server
 info 2020-12-02T17:29:11.467Z - starting server
 info 2020-12-02T17:29:23.784Z - server running on port 4000
+info 2020-12-03T09:58:47.824Z - starting server
+error 2020-12-03T09:59:17.835Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\index.js:30:4)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-03T09:59:17.836Z - stopping server
+info 2020-12-03T10:09:56.996Z - starting server
+info 2020-12-03T10:09:57.092Z - server running on port 4000
+info 2020-12-03T10:46:22.536Z - starting server
+info 2020-12-03T10:46:22.640Z - server running on port 4000
+error 2020-12-03T10:46:45.458Z - ConflictError: user with e-mail cat@gmail.com already registered
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\register-user.js:22:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T10:47:20.512Z - ConflictError: user with e-mail cat@gmail.com already registered
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\register-user.js:22:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T10:47:36.967Z - ConflictError: user with e-mail cateee@gmail.com already registered
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\register-user.js:22:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T10:59:39.520Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T10:59:53.921Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:00:12.555Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:00:14.964Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:00:41.985Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:00:45.118Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:01:01.038Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:01:03.227Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:03:11.221Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:16:12.797Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+error 2020-12-03T11:19:40.727Z - ConflictError: user with e-mail hi@gmail.com already registered
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\register-user.js:22:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T11:20:01.824Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:18:27
+info 2020-12-03T11:22:37.875Z - stopping server
+info 2020-12-03T11:23:09.462Z - starting server
+info 2020-12-03T11:23:19.742Z - server running on port 4000
+info 2020-12-03T11:24:06.424Z - starting server
+info 2020-12-03T11:24:06.500Z - server running on port 4000
+info 2020-12-03T11:24:16.803Z - stopping server
+info 2020-12-03T11:24:45.785Z - starting server
+info 2020-12-03T11:40:00.169Z - starting server
+info 2020-12-03T11:40:00.242Z - server running on port 4000
+error 2020-12-03T11:44:18.125Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:14:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T11:45:30.301Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:14:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-03T12:08:28.252Z - stopping server
+info 2020-12-03T12:08:31.845Z - starting server
+info 2020-12-03T12:08:31.920Z - server running on port 4000
+error 2020-12-03T15:19:47.178Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:12:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T15:19:50.525Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:12:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T15:19:52.972Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:12:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T15:19:56.668Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:12:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T15:19:58.485Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:12:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-03T15:20:00.892Z - AuthError: wrong credentials
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\authenticate-user.js:12:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

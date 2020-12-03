@@ -6,16 +6,18 @@ import {
 } from "./helpers/validations";
 
 export default function (email, password, callback) {
+  debugger;
   validateEmail(email);
   validatePassword(password);
   validateCallback(callback);
 
   call(
     "POST",
-    "http://localhost:4000/api/users/auth",
+    "http://192.168.0.11:4000/api/users/auth",
     { "Content-type": "application/json" },
     JSON.stringify({ email, password }),
     (status, response) => {
+      debugger;
       if (status === 0) return callback(new Error("server error"));
       else if (status !== 200) {
         const { error } = JSON.parse(response);

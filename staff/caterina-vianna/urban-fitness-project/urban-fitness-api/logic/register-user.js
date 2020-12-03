@@ -10,11 +10,11 @@ const { User } = require("../models");
 const bcryptjs = require("bcryptjs");
 
 module.exports = function (firstName, lastName, email, password) {
+  debugger;
   validateFirstName(firstName);
   validateLastName(lastName);
   validateEmail(email);
   validatePassword(password);
-  debugger;
   return semaphore(() =>
     User.findOne({ email })
       .then((user) => {

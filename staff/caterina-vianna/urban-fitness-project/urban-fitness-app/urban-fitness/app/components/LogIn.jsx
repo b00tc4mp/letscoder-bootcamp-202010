@@ -10,7 +10,10 @@ import {
 } from "react-native";
 import { MaterialComunityIcons } from "@expo/vector-icons";
 
-export default function LogIn({ changeToSignUp }) {
+export default function LogIn({ changeToSignUp, onLogIn }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <View style={styles.containerSignUp}>
       {/* {icon && <MaterialComunityIcons name={icon} size={20} />} */}
@@ -29,14 +32,22 @@ export default function LogIn({ changeToSignUp }) {
         placeholder="E-MAIL"
         placeholderTextColor="#9c9c9c"
         style={styles.inputSignUp}
+        onChangeText={(text) => setEmail(text)}
       />
       <TextInput
         secureTextEntry={true}
         style={styles.inputSignUp}
         placeholderTextColor="#9c9c9c"
         placeholder="PASSWORD"
+        onChangeText={(text) => setPassword(text)}
       />
-      <TouchableOpacity style={styles.customBtnBG} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.customBtnBG}
+        onPress={() => {
+          debugger;
+          onLogIn({ email, password });
+        }}
+      >
         <Text style={styles.customBtnText}>LOG IN</Text>
       </TouchableOpacity>
     </View>

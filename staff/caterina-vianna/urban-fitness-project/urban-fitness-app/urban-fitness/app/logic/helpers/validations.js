@@ -58,6 +58,13 @@ module.exports = {
       throw new LengthError(`id length ${id.length} is not 24`);
   },
 
+  validateToken(token) {
+    if (typeof token !== "string")
+      throw new TypeError(token + " is not a token");
+
+    if (!token.trim().length) throw new Error("token is empty or blank");
+  },
+
   validateText(text) {
     if (typeof text !== "string") throw new TypeError(text + " is not a text");
 

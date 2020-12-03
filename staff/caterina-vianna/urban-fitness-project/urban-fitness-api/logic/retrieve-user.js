@@ -2,13 +2,6 @@ const { validateId } = require("./helpers/validations");
 const { NotFoundError } = require("../errors");
 const { User } = require("../models");
 
-/**
- * Retrieves a user by its id
- *
- * @param {string} userId
- *
- * @returns {Promise}
- */
 module.exports = function (userId) {
   validateId(userId);
 
