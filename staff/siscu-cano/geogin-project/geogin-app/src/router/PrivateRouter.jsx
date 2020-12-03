@@ -31,7 +31,7 @@ export const PrivateRoute = ({ isAuth }) => {
       ({ isAuth }) =>
         isAuth
           ? <Router>
-            <Menu path='/' />
+            <Menu path='/menu' />
             <FavoritesList path='/favorites' />
             <SearchAccess path='/search-access' />
             <SearchAccessNotLogged path='/search-access-not-logged' />
@@ -51,7 +51,7 @@ export const PrivateRoute = ({ isAuth }) => {
             <Ranking path='/ranking' />
             </Router>
           : <Router>
-            <Login path='/' />
+            <Login path='/menu' />
             <Login path='/favorites' />
             <Login path='/search-access' />
             <Login path='/search-access-not-logged' />

@@ -11,7 +11,7 @@ import { Register } from '../pages/Register'
 export const PublicRoute = () => (
   <>
     <Router>
-      <SplashScreen path='/splashscreen' />
+      <SplashScreen path='/' />
       <Onboarding path='/onboarding' />
       <Login path='/login' />
       <Register path='/register' />

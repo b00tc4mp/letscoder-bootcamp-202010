@@ -8,7 +8,7 @@ const ICON_SIZE = '32px'
 export const NavBar = () => {
   return (
     <Nav>
-      <Button to='/'><FcHome size={ICON_SIZE} /></Button>
+      <Button to='/menu'><FcHome size={ICON_SIZE} /></Button>
       <Button to='/favorites'><FcLike size={ICON_SIZE} /></Button>
       <Button to='/ranking'><FcBullish size={ICON_SIZE} /></Button>
       <Button to='/profile'><FcPortraitMode size={ICON_SIZE} /></Button>
