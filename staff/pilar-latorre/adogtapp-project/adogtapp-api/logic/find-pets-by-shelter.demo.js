@@ -3,12 +3,12 @@ const mongoose = require('mongoose')
 const { env: { MONGODB_URL } } = process
 
 
-const retrievePets = require('./retrieve-pets')
+const findPetsByShelter = require('./find-pets-by-shelter')
 
 mongoose.connect( MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true})
     .then(() => {
     try {
-        retrievePets('perrito')
+        findPetsByShelter('5fc6432b55ef9755202110cb')
         .then(pets => console.log(pets))
         .catch(error => console.log('could not retrieve any pet', error))
         .then(() => mongoose.disconnect())
@@ -18,4 +18,4 @@ mongoose.connect( MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true
         console.log('validation error', error)
     }
 
-})
+}) 

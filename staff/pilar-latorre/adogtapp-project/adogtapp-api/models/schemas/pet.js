@@ -26,6 +26,7 @@ module.exports = new Schema({
 
     shelter: {
         type: ObjectId,
+        ref: 'User',
         required: true
     }
 

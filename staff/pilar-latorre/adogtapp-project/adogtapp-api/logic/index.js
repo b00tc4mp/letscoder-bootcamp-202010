@@ -3,6 +3,7 @@ module.exports = {
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
     savePet: require('./save-pet'),
-    retrievePets: require('./retrieve-pets')
+    findPets: require('./find-pets'),
+    findPetsByShelter: require('./find-pets-by-shelter')
 
 }
