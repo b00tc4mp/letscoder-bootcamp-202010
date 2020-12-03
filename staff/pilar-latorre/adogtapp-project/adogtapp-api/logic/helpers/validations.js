@@ -58,6 +58,12 @@ module.exports = {
     validateDescription(description) {
         if (typeof description !== 'string') throw new TypeError(`${description} is not a description`)
 
+    },
+
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(`${query} is not a query`)
+
+        if (!query.trim().length) throw new ContentError('query is empty or blank')
     }
 
    

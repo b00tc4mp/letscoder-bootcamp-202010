@@ -19,7 +19,7 @@ function CreatePet({onCreatePet, onGoToCreatePet}){
             <input className="CreatePet__input" type="text" name="name" placeholder="Pet name" />
             <input className="CreatePet__input" type="text" name="breed" placeholder="breed" />
             <input className="CreatePet__input" type="text" name="color" placeholder="color" />
-            <textarea className="CreatePet__textarea" type="text" name="description" placeholder="please write a little description about the pet" ></textarea>
+            <textarea className="CreatePet__descripcion" type="text" name="description" placeholder="please write a little description about the pet" ></textarea>
            
             <button className="CreatePet__button">SAVE INFO</button>
         </form>

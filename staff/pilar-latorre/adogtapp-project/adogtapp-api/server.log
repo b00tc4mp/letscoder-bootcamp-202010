@@ -433,3 +433,14 @@ error 2020-12-02T16:54:25.439Z - AuthError: wrong credentials
 info 2020-12-02T17:43:47.646Z - stopping server
 info 2020-12-02T17:43:54.602Z - starting server
 info 2020-12-02T17:43:54.770Z - server running on port 4000
+info 2020-12-02T18:19:49.248Z - stopping server
+info 2020-12-02T18:19:55.484Z - starting server
+info 2020-12-02T18:19:55.666Z - server running on port 4000
+error 2020-12-02T18:20:49.558Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:18:39
+info 2020-12-02T19:10:30.956Z - stopping server
+info 2020-12-02T19:40:58.062Z - starting server
+info 2020-12-02T19:40:58.236Z - server running on port 4000
+error 2020-12-02T19:41:27.956Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:18:39
+info 2020-12-02T19:46:48.303Z - stopping server
