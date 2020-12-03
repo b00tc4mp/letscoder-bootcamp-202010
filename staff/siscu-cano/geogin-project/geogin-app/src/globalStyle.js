@@ -3,6 +3,10 @@ import bgBottomSplash from './assets/images/bg-splashscreen-bottom.png'
 
 export const GlobalStyle = createGlobalStyle`
 
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -20,6 +24,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   background-color: ${({ theme }) => theme.colors.body_bg};
+  font-family: 'Lato', sans-serif;
 }
 
 main {
@@ -114,7 +119,6 @@ textarea {
 }
 
 // Pages
-
 .splashscreen {
   > div {
     background: url(${bgBottomSplash}) center bottom no-repeat;
@@ -124,6 +128,15 @@ textarea {
     justify-content: center;
     align-items: center;        
     align-content: center;
+  }
+}
+
+.onboarding {
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
   }
 }
 `
