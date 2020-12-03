@@ -3,7 +3,7 @@ require('dotenv').config()
 const { env: { MONGODB_URL } } = process
 
 const mongoose = require('mongoose')
-const { Schema, Schema: { Types: { ObjectId } } } = mongoose
+const { Schema, Types: { ObjectId } } = mongoose
 
 // mongoose.set('debug', true)
 
@@ -187,9 +187,14 @@ mongoose.connect(MONGODB_URL, {
     })
     .then(pets => console.log(pets))*/
 
-    .then(() => {
+    .then(() => User.findOne({ email: 'email-9@mail.com'}))
+    .then(user => {
+        console.log(user)
+
+        // const userId = user._id.toString()
+        const userId = undefined
         const coords = [0, 0]
-        const distance = 1000 * 1000 * 10
+        const distance = 1000 * 1000 * 13
         // const query = 'barcelona'
         const query = 'REM'
         // const city = 'madrid'
@@ -202,15 +207,18 @@ mongoose.connect(MONGODB_URL, {
         const priceMin = 70
         const priceMax = 120
 
-        return findPets(query, city, coords, distance, species, breed, price, priceMin, priceMax)
+        return findPets(userId, query, city, coords, distance, species, breed, price, priceMin, priceMax)
     })
     .then(pets => console.log(pets))
 
     .then(mongoose.disconnect)
 
 
-const findPets = (query, city, coords, distance, species, breed, price, priceMin, priceMax) => {
+const findPets = (userId, query, city, coords, distance, species, breed, price, priceMin, priceMax) => {
     const criteria = {}
+
+    if (userId)
+        criteria._id = ObjectId(userId)
 
     if (query)
         criteria.$or = [
