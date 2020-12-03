@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hub.sass'
+
 //import { retrieveUser } from '../logic'
 
 
@@ -16,7 +17,7 @@ function Hub({ fullname, onHub, onGoCreateoffer, offers }) {
         <h3>Hey {fullname}!</h3>
         <h3>¿Qué alimento quieres hoy? </h3>
         <div>
-            {offers}
+        {offers}
         </div>
         <div>
             <button onClick={onGoCreateoffer} className="offer">crea tu oferta &#127806;</button>

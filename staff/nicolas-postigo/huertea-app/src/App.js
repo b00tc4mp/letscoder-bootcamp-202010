@@ -61,7 +61,7 @@ function App() {
         try {
           retrieveOffer(sessionStorage.token, (error, offers) => {
             if (error) return alert(error.message)
-            debugger
+
             setOffers(offers)
           })
           setView('hub')

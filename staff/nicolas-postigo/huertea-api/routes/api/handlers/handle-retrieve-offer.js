@@ -7,7 +7,7 @@ module.exports = (req, res, handleError) => {
     const { headers: { authorization } } = req
 
     const token = authorization.replace('Bearer ', '')
-
+    
     res.setHeader('Access-Control-Allow-Origin', '*')
     try {
         const { sub: offerId } = jwt.verify(token, JWT_SECRET)
