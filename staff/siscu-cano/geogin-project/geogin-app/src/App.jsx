@@ -6,7 +6,7 @@ import { adultTheme, kidTheme } from './theme'
 import { useAdultMode } from './hooks/useAdultMode'
 
 // Router
-import { Route } from './router/PublicRouter'
+import { PublicRoute } from './router/PublicRouter'
 
 // Components
 import { ToggleTheme } from './components/ToggleTheme'
@@ -22,7 +22,7 @@ export const App = () => {
     <ThemeProvider theme={themeMode}>
       <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
       <GlobalStyle />
-      <Route />
+      <PublicRoute />
       <NavBar />
     </ThemeProvider>
   )

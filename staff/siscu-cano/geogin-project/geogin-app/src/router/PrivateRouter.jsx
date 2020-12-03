@@ -1,5 +1,6 @@
 import React from 'react'
 import { Router } from '@reach/router'
+import Context from '../Context'
 
 // Pages
 import { Login } from '../pages/Login'
@@ -24,10 +25,12 @@ import { Ranking } from '../pages/Ranking'
 
 export const PrivateRoute = ({ isAuth }) => {
   return (
-    <Router>
+
+    <Context.Consumer>
       {
-        isAuth ? (
-          <>
+      ({ isAuth }) =>
+        isAuth
+          ? <Router>
             <Menu path='/' />
             <FavoritesList path='/favorites' />
             <SearchAccess path='/search-access' />
@@ -46,9 +49,8 @@ export const PrivateRoute = ({ isAuth }) => {
             <TestPassed path='/test-passed' />
             <Profile path='/profile' />
             <Ranking path='/ranking' />
-          </>
-        ) : (
-          <>
+            </Router>
+          : <Router>
             <Login path='/' />
             <Login path='/favorites' />
             <Login path='/search-access' />
@@ -67,9 +69,9 @@ export const PrivateRoute = ({ isAuth }) => {
             <Login path='/test-passed' />
             <Login path='/profile' />
             <Login path='/ranking' />
-          </>
-        )
-      }
-    </Router>
+          </Router>
+    }
+    </Context.Consumer>
+
   )
 }
