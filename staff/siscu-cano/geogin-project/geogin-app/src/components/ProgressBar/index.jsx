@@ -2,25 +2,15 @@ import React from 'react'
 import { Progress } from './styles'
 import { number } from 'prop-types'
 
-export const ProgressBar = ({ done }) => {
-  const [style, setStyle] = React.useState({})
-
-  setTimeout(() => {
-    const newStyle = {
-      opacity: 1,
-      width: `${done}%`
-    }
-
-    setStyle(newStyle)
-  }, 200)
-
+export const ProgressBar = ({ duration }) => {
+  const duratiosInSeconds = ((duration % 60000) / 1000).toFixed(0)
   return (
-    <Progress>
-      <div style={style} />
+    <Progress duration={`${duratiosInSeconds}s`}>
+      <div />
     </Progress>
   )
 }
 
 ProgressBar.propTypes = {
-  done: number.isRequired
+  duration: number.isRequired
 }
