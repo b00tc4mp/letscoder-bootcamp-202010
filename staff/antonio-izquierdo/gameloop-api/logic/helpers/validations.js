@@ -39,7 +39,11 @@ module.exports = {
         if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(query + ' is not an id')
+    },
+
     validatePrice(budget) {
-        if (typeof budget !== 'number') throw new TypeError(budget + 'is not a number')
+        if (typeof budget !== 'string') throw new TypeError(budget + 'is not a number')
     }
 }

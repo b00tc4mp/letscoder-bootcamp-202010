@@ -2,16 +2,19 @@ const { validateId, validateText, validatePrice} = require('./helpers/validation
 const { NotFoundError } = require('../errors')
 const { User } = require('../models')
 const { Game } = require('../models')
+const { ObjectId } = require('mongodb') 
 
-module.exports = function( name, description, budget, ownerId ) {
+module.exports = function( gameId, name, description, budget, ownerId) {
     validateText(name)
     validateText(description)
     validatePrice(budget)
     validateId(ownerId)
-    if (typeof ownerId !== 'undefined') validateId(ownerId)
+    if (typeof gameId !== 'undefined') validateId(gameId)
 
-    return User.findById(ObjectId())
-        .findOne({ _id })
+    const _id = ObjectId(ownerId)
+
+    return User
+        .findById({_id})
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
@@ -20,16 +23,16 @@ module.exports = function( name, description, budget, ownerId ) {
                 const _id = ObjectId(gameId)
 
                 return Game
-                    .findById({_id})
-                    .then(note => {
-                        if (!note) throw new NotFoundError(`note with id ${noteId} not found`)
+                    .findOne({_id})
+                    .then(game => {
+                        if (!game) throw new NotFoundError(`game with id ${gameId} not found`)
 
-                        return notes
-                            .updateOne({ _id }, { $set: { text, tags, visibility } })
+                        return Game
+                            .updateOne({ _id }, { $set: { name, description, budget } } )
                             .then(result => undefined)
                     })
             } else
-                return notes.insertOne({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date })
+                return Game.create({ name, description, budget, owner: ObjectId(ownerId) })
                     .then(result => undefined)
         })
 }

@@ -20,5 +20,21 @@ module.exports = new Schema({
         type: String,
         required: true,
         minlength: 8
-    }
+    },
+
+    contact: {
+        type: String,
+        default: 'no contact',
+        required: true
+    },
+
+    city: {
+        type: String,
+        default: 'no city',
+        required: true
+    },
+
+    geo: [
+        Number
+    ]
 })

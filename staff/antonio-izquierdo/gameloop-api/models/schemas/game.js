@@ -21,5 +21,12 @@ module.exports = new Schema({
     owner: {
         type: ObjectId,
         required: true
+    },
+
+    console: {
+        type: String,
+        enum: ['nintendo', 'play station', 'game boy'],
+        default: 'nintendo',
+        required: true
     }
 })

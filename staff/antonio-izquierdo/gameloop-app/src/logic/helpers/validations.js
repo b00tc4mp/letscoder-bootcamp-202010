@@ -1,8 +1,8 @@
 module.exports = {
-    validateFullname(fullname) {
-        if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
+    validateName(name) {
+        if (typeof name !== 'string') throw new TypeError(name + ' is not a game name')
 
-        if (!fullname.trim().length) throw new Error('fullname is empty or blank')
+        if (!name.trim().length) throw new Error('name is empty or blank')
     },
 
     validateEmail(email) {
@@ -11,6 +11,12 @@ module.exports = {
         if (!email.trim().length) throw new Error('e-mail is empty or blank')
 
         if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) throw new Error('invalid e-mail')
+    },
+
+    validateDescription(description) {
+        if (typeof description !== 'string') throw new TypeError(description + ' is not a game description')
+
+        if (!description.trim().length) throw new Error('description is empty or blank')
     },
 
     validatePassword(password) {
@@ -27,6 +33,18 @@ module.exports = {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
         if (!token.trim().length) throw new Error('token is empty or blank')
+    },
+
+    validatePrice(budget) {
+        if (typeof budget !== 'string') throw new TypeError(budget + 'is not a number')
+    },
+
+    validateId(id) {
+        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+
+        if (!id.trim().length) throw new Error('id is empty or blank')
+
+        if (id.length !== 24) throw new Error('id length is not 24')
     }
 
 }

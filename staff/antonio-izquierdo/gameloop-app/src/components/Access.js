@@ -3,7 +3,7 @@ import logo from "../assets/img/logo.png"
 
 function Access({ onGoToSignIn, onGoToSignUp, onGoToSearch }) {
     return <section className="access">
-        <img className="access__img" src={ logo }/>
+        <img className="access__logo" src={ logo }/>
         <p> PAY LESS <br /> <br /> PLAY MORE</p>
         <div className="access__div">
             <button onClick={onGoToSignUp} className="access__div__signup"> SIGN UP </button>

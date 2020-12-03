@@ -173,3 +173,74 @@ info 2020-12-01T16:45:16.226Z - server running on port 4000
 info 2020-12-01T16:49:43.420Z - stopping server
 info 2020-12-01T16:52:00.965Z - server running on port 4000
 info 2020-12-01T16:54:31.332Z - stopping server
+info 2020-12-02T13:40:25.289Z - server running on port 4000
+info 2020-12-02T13:40:53.370Z - stopping server
+info 2020-12-02T13:56:35.935Z - server running on port 4000
+info 2020-12-02T13:57:29.412Z - stopping server
+info 2020-12-02T15:48:05.290Z - server running on port 4000
+info 2020-12-02T16:10:59.294Z - stopping server
+info 2020-12-02T16:11:11.341Z - server running on port 4000
+info 2020-12-03T09:51:31.018Z - server running on port 4000
+info 2020-12-03T10:02:12.327Z - stopping server
+info 2020-12-03T10:02:19.795Z - server running on port 4000
+info 2020-12-03T10:16:05.555Z - stopping server
+info 2020-12-03T10:16:09.239Z - server running on port 4000
+info 2020-12-03T10:21:22.438Z - stopping server
+info 2020-12-03T10:21:33.666Z - server running on port 4000
+info 2020-12-03T10:22:39.539Z - stopping server
+info 2020-12-03T10:29:40.384Z - server running on port 4000
+info 2020-12-03T15:11:02.579Z - stopping server
+error 2020-12-03T19:44:15.924Z - Error: Cannot find module './retrieve-games'
+Require stack:
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\index.js:6:20)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-03T19:44:15.931Z - stopping server
+error 2020-12-03T19:44:56.602Z - Error: Cannot find module './retrieve-games'
+Require stack:
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\index.js
+- C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\index.js:6:20)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-03T19:44:56.607Z - stopping server
+info 2020-12-03T19:45:32.744Z - server running on port 4000
+info 2020-12-03T19:46:25.881Z - stopping server
+info 2020-12-03T19:46:48.833Z - server running on port 4000
+info 2020-12-03T20:27:53.995Z - stopping server
