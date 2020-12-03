@@ -16,8 +16,8 @@ export default function (token, callback) {
                 return callback(new Error(error))
             }
 
-            const offers = JSON.stringify(response)
-            debugger
+            const offers = JSON.parse(response)
+      
             callback(null, offers)
         })
 }

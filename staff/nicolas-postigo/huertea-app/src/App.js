@@ -45,30 +45,24 @@ function App() {
     try {
       authenticateUser(email, password, (error, token) => {
         if (error) return alert(error.message)
-
         sessionStorage.token = token
 
-        try {
-          retrieveUser(sessionStorage.token, (error, user) => {
-            if (error) return alert(error.message)
-
-            setFullname(user.fullname)
-
-          })
-        } catch (error) {
-          alert(error.message)
-        }
-        try {
-          retrieveOffer(sessionStorage.token, (error, offers) => {
-            if (error) return alert(error.message)
-
-            setOffers(offers)
-          })
-          setView('hub')
-        } catch (error) {
-          alert(error.message)
-        }
       })
+
+        retrieveUser(sessionStorage.token, (error, user) => {
+          if (error) return alert(error.message)
+          setFullname(user.fullname)
+        })
+
+        retrieveOffer(sessionStorage.token, (error, offersResult) => {
+          if (error) return alert(error.message)
+          debugger
+          setOffers(offersResult)
+
+        })
+
+        setView('hub')
+
 
     } catch (error) {
       alert(error.message)

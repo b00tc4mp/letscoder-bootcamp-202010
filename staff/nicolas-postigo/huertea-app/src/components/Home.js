@@ -4,6 +4,7 @@ import './Home.sass'
 
 function Home({ onHome, onGoRegister, onGoLogin }) {
     
+
     return <sections>
 
         <form onSubmit={function (event) {
