@@ -1,5 +1,4 @@
 import './SignIn.sass'
-import { Link } from 'react-router-dom'
 
 function SignIn({ onSignIn }) {
     return <section className="sign-in">
@@ -15,8 +14,6 @@ function SignIn({ onSignIn }) {
             <input type="password" name="password" placeholder="password" />
             <button>Send</button>
         </form>
-
-        Go to <Link to="/sign-up">Sign Up</Link>
     </section>
 }
 
