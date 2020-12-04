@@ -2,7 +2,7 @@ import './ResultList.scss'
 
 export default function ResultList ({pictograms}) {
   return <section >
-    {pictograms && pictograms.length ?  pictograms.map(({title,description})=>(<> 
+    {pictograms && pictograms.length ? pictograms.map(({title,description})=>(<> 
       <article className="card">
           <header className="card-header">
             <img
@@ -21,7 +21,7 @@ export default function ResultList ({pictograms}) {
             </p>
           </div>
         </article>
-     </>)): <p>No result found :(</p>}
+     </>)): <p>Not Found Result :(</p>}
       
   </section>
 }

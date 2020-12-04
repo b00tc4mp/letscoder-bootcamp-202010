@@ -1,12 +1,13 @@
-header {
+.header_home {
   position: relative;
   flex: none;
   display: flex;
   height: 80px;
   align-items: center;
   justify-content: space-between;
-  background: #2d6ba8; 
-  cursor: pointer;
+  background:#6d4453;
+ 
+
   direction: rtl;
 
 
@@ -32,12 +33,32 @@ header {
   .avatar {
     margin-right: 10px;
     gap: 10px;
-    color: white
+    color: white;
+    
   }
+
   .avatar__initials{
     margin: 0px;
     color: white;
+    background-color:#6d4453;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
+
+  .logo_puzzle {
+    color: white;
+    background-color:#6d4453;
+
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    cursor: pointer;
+    
+
+  }
+
 }
 
 @media (min-width: 600px) {
