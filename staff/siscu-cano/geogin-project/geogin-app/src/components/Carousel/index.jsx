@@ -23,7 +23,7 @@ export const Carousel = () => {
     beforeChange: (current, next) => setSlideIndex(next)
   }
 
-  if (slideIndex === 2) navigate('/menu')
+  if (slideIndex === 3) navigate('/menu')
 
   return (
     <SliderWrapper>
@@ -57,7 +57,7 @@ export const Carousel = () => {
           <p>Diviértete, mientras descubres sitios nuevos</p>
 
         </div>
-
+        <div />
       </Slider>
     </SliderWrapper>
   )

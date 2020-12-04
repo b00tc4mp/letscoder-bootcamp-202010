@@ -117,8 +117,7 @@ textarea {
   background-color: ${({ theme }) => theme.colors.app_bg};
   margin: 0 auto;
   > div {
-    border: 1px solid red;
-    height: calc(100vh - 50px)
+    height: calc(100vh - 50px);
   }
 }
 
@@ -126,17 +125,19 @@ textarea {
 .splashscreen {
   #app {
     > div {
-    height: calc(100vh)
+      height: calc(100vh);
+    }
   }
   > div {
-    background: url(${bgBottomSplash}) center bottom no-repeat;
-    margin:  0 auto;
-    background-size: contain;
-  > div {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+      background: url(${bgBottomSplash}) center bottom no-repeat;
+      margin:  0 auto;
+      background-size: contain;
+  > div > div {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
+  }
 }
 
 .onboarding {
