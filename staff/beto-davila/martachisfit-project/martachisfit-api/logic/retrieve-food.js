@@ -1,5 +1,5 @@
 const { validateId } = require('./helpers/validations')
-// const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('../errors')
 const { Food } = require('../models')
 
 /**
@@ -14,7 +14,7 @@ module.exports = function (foodId) {
 
     return Food.findById(foodId).lean()
         .then(food => {
-            if (!food) throw new Error(`food with id ${foodId} not found`)
+            if (!food) throw new NotFoundError(`food with id ${foodId} not found`)
 
             const { _id } = food
 

@@ -44,6 +44,10 @@ module.exports = new Schema({
         type: [ ObjectId ]
     },
 
+    savedRecipes: {
+        type: [ ObjectId ]
+    },
+
     role: {
         type: String,
         enum: ['admin', 'user']

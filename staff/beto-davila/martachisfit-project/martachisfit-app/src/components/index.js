@@ -10,6 +10,9 @@ import FoodResult from './FoodResult'
 import SavedFood from './SavedFood'
 import UserDiet from './UserDiet'
 import Articles from './Articles'
+import Feedback from './Feedback'
+import UserProfile from './UserProfile'
+import ChosenArticle from './ChosenArticle'
 
 export {
     Landing,
@@ -23,5 +26,8 @@ export {
     FoodResult,
     SavedFood,
     UserDiet,
-    Articles
+    Articles,
+    Feedback,
+    UserProfile,
+    ChosenArticle
 }

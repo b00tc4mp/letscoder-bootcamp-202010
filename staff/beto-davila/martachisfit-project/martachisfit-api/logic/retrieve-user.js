@@ -1,5 +1,5 @@
 const { validateId } = require('./helpers/validations')
-// const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('../errors')
 const { User } = require('../models')
 
 /**
@@ -14,7 +14,7 @@ module.exports = function (userId) {
 
     return User.findById(userId).lean()
         .then(user => {
-            if (!user) throw new Error(`user with id ${userId} not found`)
+            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
             const { _id } = user
 

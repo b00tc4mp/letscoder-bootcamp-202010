@@ -1,5 +1,5 @@
 const { validateId } = require('./helpers/validations')
-// const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('../errors')
 const { User, Diet } = require('../models')
 
 /**
@@ -14,7 +14,7 @@ module.exports = function (userId) {
 
     return User.findById(userId).lean()
         .then(user => {
-            if (!user) throw new Error(`user with id ${userId} not found`)
+            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
             const { _id, calories } = user
 
@@ -34,7 +34,7 @@ module.exports = function (userId) {
 
                 return Diet.findById(dietId).lean()
                     .then(_diet => {
-                    if (!_diet) throw new Error(`diet with id ${dietId} not found`)
+                    if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
 
                     return _diet
             })
@@ -45,7 +45,7 @@ module.exports = function (userId) {
 
                 return Diet.findById(_dietId).lean()
                     .then(_diet => {
-                    if (!_diet) throw new Error(`diet with id ${_dietId} not found`)
+                    if (!_diet) throw new NotFoundError(`diet with id ${_dietId} not found`)
 
                     return _diet
         })

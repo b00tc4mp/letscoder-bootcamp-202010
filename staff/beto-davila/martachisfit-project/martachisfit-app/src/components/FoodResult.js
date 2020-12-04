@@ -3,14 +3,13 @@ import './styles/FoodResult.sass'
 import { useState } from 'react'
 import { SavedFood } from '.'
 
-export default function FoodResult ({ result, user }) {
+export default function FoodResult ({ result }) {
 
     const { token } = sessionStorage
 
     const [view, setView] = useState()
     const [food, setFood] = useState()
 
-    const { id: userId } = user
     const {_id: foodId, name, calories, serving, carbs, protein, fats} = result
 
     const handleSaveFood = () => {

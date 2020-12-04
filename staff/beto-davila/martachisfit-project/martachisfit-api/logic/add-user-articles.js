@@ -1,0 +1,49 @@
+const { validateId } = require('./helpers/validations')
+const { ObjectId } = require('mongodb')
+const { NotFoundError } = require('../errors')
+const { Article, User } = require('../models')
+
+module.exports = (userId, articleId) => {
+    validateId(userId)
+    validateId(articleId)
+
+    return User.findOne({_id: ObjectId(userId)})
+        .then(user => {
+
+        if (!user) throw new NotFoundError(`user with id ${userId} not found`)
+        
+        const { _id } = user
+
+        let { savedArticles } = user
+
+        user = { userId: _id, savedArticles: [] }
+
+        return Article.findOne({_id: ObjectId(articleId)})
+            .then(article => {
+
+            if (!article) throw new NotFoundError(`article with id ${articleId} not found`)
+
+            // look for articleId before adding. If it exists remove it, otherwise add it to 'savedArticles' array
+            if (savedArticles.length) {
+                // Store index position
+                const index = savedArticles.findIndex(article => article.toString() === articleId)
+    
+                // if < 0, does not exist in array, add it, else, remove it with splice method
+                index < 0? savedArticles.push(ObjectId.createFromHexString(articleId)) : savedArticles.splice(index, 1)
+    
+                return User.updateOne({ _id }, { $set: { savedArticles } })
+                    .then(result => {})
+    
+            } else {
+                // add new article to empty array
+                savedArticles.push(ObjectId.createFromHexString(articleId))
+    
+                return User.updateOne({ _id }, { $set: { savedArticles } })
+                    .then(result => {})
+            }
+
+        })
+
+    })
+
+}

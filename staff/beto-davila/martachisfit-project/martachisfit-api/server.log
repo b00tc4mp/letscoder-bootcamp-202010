@@ -436,3 +436,449 @@ info 2020-12-03T14:20:20.116Z - stopping server
 info 2020-12-03T14:20:39.585Z - starting server
 info 2020-12-03T14:20:39.690Z - server running on port 4000
 info 2020-12-03T15:59:00.779Z - stopping server
+info 2020-12-04T06:42:53.113Z - starting server
+error 2020-12-04T06:42:53.150Z - Error: Cannot find module './create-custom-error'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/errors/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-register-user.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/errors/index.js:1:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:1:64)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-04T06:42:53.151Z - stopping server
+info 2020-12-04T06:44:53.852Z - starting server
+info 2020-12-04T06:44:53.963Z - server running on port 4000
+error 2020-12-04T06:45:22.998Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:45:45.846Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:46:20.464Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:46:27.837Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:48:53.678Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T06:51:15.102Z - stopping server
+info 2020-12-04T06:51:17.245Z - starting server
+error 2020-12-04T06:51:17.351Z - ReferenceError: query is not defined
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:36:29)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-04T06:51:17.355Z - stopping server
+info 2020-12-04T06:52:45.573Z - starting server
+info 2020-12-04T06:52:45.686Z - server running on port 4000
+info 2020-12-04T07:11:14.837Z - stopping server
+info 2020-12-04T07:21:54.549Z - starting server
+info 2020-12-04T07:21:54.669Z - server running on port 4000
+info 2020-12-04T07:25:12.481Z - stopping server
+info 2020-12-04T07:25:14.312Z - starting server
+info 2020-12-04T07:25:14.423Z - server running on port 4000
+info 2020-12-04T07:59:35.474Z - stopping server
+info 2020-12-04T08:04:42.980Z - starting server
+info 2020-12-04T08:04:43.103Z - server running on port 4000
+info 2020-12-04T09:01:10.738Z - stopping server
+info 2020-12-04T09:02:55.044Z - starting server
+info 2020-12-04T09:02:55.163Z - server running on port 4000
+error 2020-12-04T09:57:42.105Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-04T10:17:15.759Z - stopping server
+info 2020-12-04T10:21:32.734Z - starting server
+error 2020-12-04T10:21:32.837Z - Error: Cannot find module '/handle-add-user-articles'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:13:28)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:16:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-04T10:21:32.841Z - stopping server
+info 2020-12-04T10:23:14.857Z - starting server
+info 2020-12-04T10:23:14.968Z - server running on port 4000
+info 2020-12-04T12:29:56.229Z - stopping server
+info 2020-12-04T12:58:56.614Z - starting server
+info 2020-12-04T12:58:56.790Z - server running on port 4000
+info 2020-12-04T13:24:16.725Z - stopping server
+info 2020-12-04T13:34:44.147Z - starting server
+info 2020-12-04T13:34:44.324Z - server running on port 4000
+error 2020-12-04T13:35:10.610Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:36:09.234Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:37:18.662Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:37:43.424Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:39:54.490Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+info 2020-12-04T13:43:01.877Z - stopping server
+info 2020-12-04T13:43:54.899Z - starting server
+info 2020-12-04T13:43:55.067Z - server running on port 4000
+info 2020-12-04T13:54:43.295Z - stopping server
+info 2020-12-04T14:23:06.091Z - starting server
+info 2020-12-04T14:23:06.291Z - server running on port 4000
+error 2020-12-04T14:23:23.191Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:23:40.549Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:26:08.452Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:26:13.950Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:27:19.128Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:28:18.303Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:35:07.330Z - stopping server
+info 2020-12-04T14:35:09.708Z - starting server
+info 2020-12-04T14:35:09.869Z - server running on port 4000
+error 2020-12-04T14:35:21.627Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:35:55.475Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:36:10.328Z - stopping server
+info 2020-12-04T14:36:15.741Z - starting server
+info 2020-12-04T14:36:15.985Z - server running on port 4000
+error 2020-12-04T14:36:18.643Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:38:39.281Z - stopping server
+info 2020-12-04T14:38:41.421Z - starting server
+info 2020-12-04T14:38:41.602Z - server running on port 4000
+error 2020-12-04T14:39:06.736Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:39:25.982Z - stopping server
+info 2020-12-04T14:39:47.851Z - starting server
+info 2020-12-04T14:39:48.617Z - server running on port 4000
+error 2020-12-04T14:40:32.767Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:41:32.916Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:42:45.260Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:43:25.415Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:44:55.996Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:47:43.126Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:47:52.272Z - starting server
+info 2020-12-04T14:47:52.472Z - server running on port 4000
+info 2020-12-04T14:48:53.563Z - stopping server
+info 2020-12-04T14:48:55.643Z - starting server
+info 2020-12-04T14:48:55.834Z - server running on port 4000
+info 2020-12-04T14:50:40.999Z - stopping server
+info 2020-12-04T14:50:52.845Z - starting server
+info 2020-12-04T14:50:53.919Z - server running on port 4000
+info 2020-12-04T16:11:18.453Z - starting server
+info 2020-12-04T16:11:18.584Z - server running on port 4000

@@ -5,7 +5,7 @@ export default function (token, callback) {
     validateToken(token)
     validateCallback(callback)
 
-    call('GET', 'http://localhost:4000/api/user/food', { Authorization: `Bearer ${token}` },
+    call('GET', 'http://localhost:4000/api/users/foods', { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {
             if (status === 0)

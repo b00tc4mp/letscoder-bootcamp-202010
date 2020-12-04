@@ -1,7 +1,7 @@
 import { findFood, retrieveUser } from '../logic'
 import { useState, useEffect } from 'react'
 import './styles/DietDesign.sass'
-import { FoodResult } from './index'
+import { Feedback, FoodResult } from './index'
 import lupa from './icons/lupa.png'
 
 export default function DietDesign () {
@@ -9,6 +9,7 @@ export default function DietDesign () {
     const [food, setFood] = useState()
     const [view, setView] = useState()
     const [user, setUser] = useState()
+    const [error, setError] = useState()
 
     useEffect(() => {
         const { token } = sessionStorage
@@ -28,9 +29,9 @@ export default function DietDesign () {
     const handleFindFood = query => {
         try {
             findFood(query, (error, food) => {
-                if (error) return alert("No se han encontrado resultados")
+                if (error) return alert(error.message)
     
-                // const {calories, serving, carbs, protein, fats} = _food
+                if (food === undefined) return setError(error='Lo siento, no hay resultados')
                 setFood(food)
                 setView('food-result')
             })
@@ -56,8 +57,7 @@ export default function DietDesign () {
                 {/* {feedback !== undefined && <p>{feedback}</p>} */}
             </section>
 
-            {view === 'food-result' && <FoodResult result={food} user={user}/>}
+            {((view === 'food-result' && !error) || (view === 'food-result' && error)) && <FoodResult result={food}/>}
+            {(error && view !== 'food-result') && <Feedback error={error}></Feedback>}
     </>
 }
-
-// TODO feedback when there are no results

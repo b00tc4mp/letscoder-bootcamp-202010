@@ -1,6 +1,6 @@
 const { validateQuery } = require('./helpers/validations')
 const { Food } = require('../models')
-// const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('../errors')
 
 module.exports = query => {
 
@@ -16,7 +16,7 @@ module.exports = query => {
                 return food
             }
             else
-                throw new Error('No results')
+                throw new NotFoundError('No results')
     })
 
 }

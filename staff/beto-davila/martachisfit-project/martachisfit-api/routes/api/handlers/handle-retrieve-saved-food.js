@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 
 const { env: { JWT_SECRET } } = process
 
-module.exports = (req, res) => {
+module.exports = (req, res, handleError) => {
     
     const { headers: { authorization } } = req
 
@@ -14,8 +14,8 @@ debugger
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
         retrieveSavedFood(userId)
             .then(result => res.status(200).json(result))
-            .catch(console.error)
+            .catch(handleError)
     } catch (error) {
-        console.error(error.message)
+        handleError(error)
     }
 }

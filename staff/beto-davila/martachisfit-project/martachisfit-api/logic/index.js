@@ -8,5 +8,9 @@ module.exports = {
     retrieveFood: require('./retrieve-food'),
     retrieveSavedFood: require('./retrieve-saved-food'),
     addFoodUserDiet: require('./add-food-user-diet'),
-    retrieveDiet: require('./retrieve-diet')
+    retrieveDiet: require('./retrieve-diet'),
+    retrieveArticles: require('./retrieve-articles'),
+    addUserArticles: require('./add-user-articles'),
+    retrieveSavedArticles: require('./retrieve-saved-articles'),
+    retrieveChosenArticle: require('./retrieve-chosen-article')
 }

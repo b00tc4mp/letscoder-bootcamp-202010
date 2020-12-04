@@ -27,7 +27,7 @@ export default function addFood(token, foodId, name, serving, calories, carbs, p
     validateNumber(fats)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/food', { 
+    call('POST', 'http://localhost:4000/api/foods', { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { macrosAfterCalories, caloriesCalc, registerUser, authenticateUser } from './logic/index';
 
 function App() {
-  const [view, setView] = useState(sessionStorage.token? 'home' : 'landing')
+  const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-in')
   const [goal, setGoal] = useState()
 
   const handleGoToSignIn = () => {
@@ -35,6 +35,22 @@ function App() {
     }
   }
 
+  
+  const handleGetCaloriesAndMacros = (gender, goal, age, height, weight, activity) => {
+    try {
+      caloriesCalc(gender, goal, age, height, weight, activity, totalCalories => {
+        
+        macrosAfterCalories(totalCalories, goal => {
+          
+          setGoal(goal)
+          setView('calories-goal')
+        })
+      })
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+  
   const handleAuthenticateUser = (email, password) => {
     try {
       authenticateUser(email, password, (error, token) => {
@@ -47,22 +63,7 @@ function App() {
       alert(error.message)
     }
   }
-
-  const handleGetCaloriesAndMacros = (gender, goal, age, height, weight, activity) => {
-    try {
-      caloriesCalc(gender, goal, age, height, weight, activity, totalCalories => {
   
-        macrosAfterCalories(totalCalories, goal => {
-          
-          setGoal(goal)
-          setView('calories-goal')
-        })
-      })
-    } catch (error) {
-      alert(error.message)
-    }
-  }
-
   return <>
   {view === 'landing' && <Landing onUserInfo={handleGoToUserInfo} onGoToSignIn={handleGoToSignIn}/>}
   {view === 'sign-in' && <SignIn onLogin={handleAuthenticateUser}/>}

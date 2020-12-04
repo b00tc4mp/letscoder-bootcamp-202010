@@ -1,6 +1,6 @@
 const { findFood } = require('../../../logic')
 
-module.exports = (req, res) => {
+module.exports = (req, res, handleError) => {
 
     const { body: { query } } = req
 
@@ -9,8 +9,8 @@ module.exports = (req, res) => {
     try {
         findFood(query)
         .then(food => res.status(200).json(food))
-        .catch(console.error)
+        .catch(handleError)
     } catch (error) {
-        console.error(error.message)
+        handleError(error)
     }
 }

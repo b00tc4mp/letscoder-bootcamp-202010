@@ -1,5 +1,5 @@
 const { validateId } = require('./helpers/validations')
-// const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('../errors')
 const { User, Food } = require('../models')
 
 /**
@@ -17,14 +17,14 @@ module.exports = function (userId) {
 debugger
     return User.findById(userId).lean()
         .then(user => {
-            if (!user) throw new Error(`user with id ${userId} not found`)
+            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
             const { savedFood } = user
 
             return Promise.all(savedFood.map(foodId => 
                  Food.findById(foodId).lean()
                     .then(food => {
-                        if (!food) throw new Error(`food with id ${foodId} not found`)
+                        if (!food) throw new NotFoundError(`food with id ${foodId} not found`)
 
                         const {name, calories, carbs, protein, fats} = food
 

@@ -1,6 +1,7 @@
 const { validateId, validateName, validateNumber } = require('./helpers/validations')
 const { ObjectId } = require('mongodb')
 const { User, Food } = require('../models')
+const { NotFoundError } = require('../errors')
 
 /**
  * Adds a food item to the db
@@ -32,7 +33,7 @@ module.exports = function (userId, foodId, name, serving, calories, carbs, prote
     return User
         .findOne({ _id })
         .then(user => {
-            if (!user) throw new Error(`user with id ${userId} not found`)
+            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
             
             // TODO validates user is admin
             if (foodId) {
@@ -41,7 +42,7 @@ module.exports = function (userId, foodId, name, serving, calories, carbs, prote
                 return Food
                     .findOne({ _id })
                     .then(food => {
-                        if (!food) throw new Error(`food with id ${foodId} not found`)
+                        if (!food) throw new NotFoundError(`food with id ${foodId} not found`)
 
                         return Food
                             .updateOne({ _id }, { $set: { name, serving, calories, carbs, protein, fats } })

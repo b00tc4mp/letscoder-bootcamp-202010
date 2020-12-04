@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 
 const { env: { JWT_SECRET } } = process
 
-module.exports = (req, res) => {
+module.exports = (req, res, handleError) => {
     
     const { headers: { authorization }} = req
 
@@ -13,8 +13,8 @@ module.exports = (req, res) => {
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
         retrieveDiet(userId)
             .then(diet => res.status(200).json(diet))
-            .catch(console.error)
+            .catch(handleError)
     } catch (error) {
-        console.error(error.message)
+        handleError(error)
     }
 }
