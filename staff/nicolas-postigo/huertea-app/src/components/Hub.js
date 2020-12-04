@@ -23,6 +23,7 @@ function Hub({ fullname, onHub, onGoCreateoffer, offers }) {
             <button onClick={onGoCreateoffer} className="offer">crea tu oferta &#127806;</button>
         </div>
         <ListOffers offers={offers} />
+        <ListOffersFound/>
 
     </sections>
 

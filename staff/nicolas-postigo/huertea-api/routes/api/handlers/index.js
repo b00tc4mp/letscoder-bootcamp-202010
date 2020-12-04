@@ -7,4 +7,5 @@ module.exports = {
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleCreateOffer: require('./handle-create-offer'),
     handleRetrieveOffer: require('./handle-retrieve-offer'),
+    handleFindOffer: require('./handle-find-offer')
 }
