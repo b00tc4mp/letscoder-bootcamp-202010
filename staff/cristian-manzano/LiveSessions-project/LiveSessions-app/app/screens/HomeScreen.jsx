@@ -5,11 +5,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 // Logic
 import { retrieveUser } from '../logic';
 import ProfileScreen from './ProfileScreen'
+import EditProfileScreen from './EditProfileScreen'
 //Screens
 
 
 export default function Home() {
     const [name, setName] = useState()
+
+    const [view, setView] = useState('sign-in')
 
     useEffect(() => { 
         AsyncStorage.getItem('token')
@@ -27,12 +30,16 @@ export default function Home() {
     })
   },[])
 
+  const handleGoToEditProfile = () => {
+    setView('edit-profile')
+  }
 
   return (
 
     <View>
 
-      <ProfileScreen name={name}/>
+      <ProfileScreen onGoToEditProfile={handleGoToEditProfile}/>
+      { view === 'edit-profile' && <EditProfileScreen />}
     </View>
     
   );
