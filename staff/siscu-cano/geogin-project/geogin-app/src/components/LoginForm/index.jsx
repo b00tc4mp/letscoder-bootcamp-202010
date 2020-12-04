@@ -4,7 +4,7 @@ import Context from '../../Context'
 import { Title, Anchor, Form, Input, Button } from './styles'
 import { authenticateUser } from '../../logic'
 
-export const LoginForm = ({ onSubmit }) => {
+export const LoginForm = () => {
   const email = useInputValue('')
   const password = useInputValue('')
 
