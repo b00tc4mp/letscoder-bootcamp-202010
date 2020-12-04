@@ -1,13 +1,13 @@
 import { call } from '../utils'
-import { validateToken, validateCallback } from './helpers/validations'
+import { validateCallback } from './helpers/validations'
 
-export default function (token, query, city, name, species, breed, callback) {
-    validateToken(token)
+export default function (token, queryShelter, city, queryPet, species, breed, callback) {
+    
     validateCallback(callback)
-    //poner las putas validations
+    //poner  validations
 
-    call('GET', 'http://localhost:4000/api/pets?q=<query>', { Authorization: `Bearer ${token}` },
-    JSON.stringify({ token, query, city, name, species, breed }),
+    call('POST', 'http://localhost:4000/api/pets/find', {'Content-type': 'application/json' },
+    JSON.stringify({ token, queryShelter, city, queryPet, species, breed }),
         (status, response) => {
             if (status === 0)
                 return callback(new Error('server error'))

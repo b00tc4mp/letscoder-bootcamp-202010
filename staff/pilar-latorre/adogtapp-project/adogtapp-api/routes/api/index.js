@@ -24,7 +24,7 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
 router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
 
-router.get('/api/pets?q=<query>', jsonBodyParser, withErrorHandling(handleFindPets))
+router.post('/api/pets/find', jsonBodyParser, withErrorHandling(handleFindPets))
 
 
 

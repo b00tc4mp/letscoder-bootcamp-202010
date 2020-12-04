@@ -3,7 +3,7 @@ import SignIn from './SignIn'
 import Home from './Home'
 import Welcome from './Welcome'
 import CreatePet from './CreatePet'
-import SearchPet from './SearchPet'
+import FindPets from './FindPets'
 
 
 export {
@@ -12,7 +12,7 @@ export {
     Home,
     Welcome,
     CreatePet,
-    SearchPet
+    FindPets
 
     
 

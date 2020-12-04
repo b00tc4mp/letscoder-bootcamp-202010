@@ -2,19 +2,19 @@ const mongoose = require('mongoose')
 const { Types: { ObjectId } } = mongoose
 const { User, Pet } = require('../models')
 
-module.exports = function (userId, query, city, name, species, breed) {
+module.exports = function (shelterId, queryShelter, city, queryPet, species, breed ) {
     //poner validations
     
     const criteria = {}
+debugger
+    if (shelterId)
+        criteria._id = ObjectId(shelterId)
 
-    if (userId)
-        criteria._id = ObjectId(userId)
-
-    if (query)
+    if (queryShelter)
         criteria.$or = [
-            { name: { $regex: new RegExp(query, 'i') } },
-            { email: { $regex: new RegExp(query, 'i') } },
-            { description: { $regex: new RegExp(query, 'i') } }
+            { name: { $regex: new RegExp(queryShelter, 'i') } },
+            { email: { $regex: new RegExp(queryShelter, 'i') } },
+            { description: { $regex: new RegExp(queryShelter, 'i') } }
         ]
 
     if (city)
@@ -29,16 +29,20 @@ module.exports = function (userId, query, city, name, species, breed) {
 
             const criteria = {
                 shelter: { $in: ids }
-            }
-
-            if (name)
-                criteria.name = { $regex: new RegExp(name, 'i') }
-
+            } 
+            
+            if (queryPet)
+            criteria.$or = [
+                { name: { $regex: new RegExp(queryPet, 'i') } },
+                { description: { $regex: new RegExp(queryPet, 'i') } }
+            ]
             if (species)
                 criteria.species = { $regex: new RegExp(species, 'i') }
 
             if (breed)
                 criteria.breed = { $regex: new RegExp(breed, 'i') }
+               
+            
 
             return Pet.find(criteria).lean()
         })
