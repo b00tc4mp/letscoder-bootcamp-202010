@@ -1,0 +1,23 @@
+.discover{
+   
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vw;
+    background-size: contain; 
+    border-bottom: 11px solid #fdfeff;
+    text-align: center;
+    min-height: 37vh;
+         &__image{
+          width: 100%;
+          height: 100%;
+          max-width: 80%;
+          border-radius: 20px;
+
+            }     
+
+  }
+ 

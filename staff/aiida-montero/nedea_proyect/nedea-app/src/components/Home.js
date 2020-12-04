@@ -1,11 +1,18 @@
 import './Home.scss'
 import {useEffect, useState} from 'react'
 import {retrieveUser} from '../logic'
+import Discover from './Discover'
+import Search from './Search'
+import Slider from './Slider'
+import ResultList from './ResultList'
+import SearchPictogram from '../logic/search-pictogram'
 export default function() {
     const [name, setName] = useState()
+    const [queryResults, setQueryResults] = useState()
+
 useEffect(() => { 
     const {token} = sessionStorage
-    try {
+    if (token) { try {
         retrieveUser(token, (error, user) => {
             if(error) return alert(error.message)
 
@@ -15,91 +22,26 @@ useEffect(() => {
         })
     }catch(error) {
         alert(error.message)
-    }
+    }}
 
 }, [])
 
-    return <section className = "home">
-        <h1>Hello, {name}</h1>
-       <div class="discovere"> 
-           <img className=" discovere__image" src="../imagenes/fondo_madera.jpg"></img>
-      </div>
-      
-      <div className="search">
-        <div className="search-content">
-          <input
-            type="text"
-            className="search-content__input"
-            placeholder="Encuentra tu pictograma"
-          />
-          <button type="submit" class="search-content__submit">
-            <i className="search-content__icon fa fa-search"></i>
-          </button>
-        </div>
-      </div>
-  
+ const handleSearchPictogram = (query) => {
+  try{
+   SearchPictogram(query, result => setQueryResults(result)) 
+  }catch(error){
+    alert(error.message)
+  }
 
-       <div className="u-box">
-    
-        <h1> PICTOGRAMAS MAS FRECUENTES</h1>
-        <div className="scrollable-carousel">
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-          <div className="scrollable-carousel__item">
-            <img
-              src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1707/alekseyvanin170700458/82556443-botella-con-icono-plana-de-agua-signo-de-vector-pictograma-colorido-aislado-en-blanco-s%C3%ADmbolo-de-bebid.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-      </div> 
-     
+ }
 
-    </section>
+
+ return <section className = 'home'>
+      <h1>Hello, {name}</h1>
+      <Discover/>
+      <Search onSearchPictograms = {handleSearchPictogram}/>
+      {queryResults && <ResultList pictograms = {queryResults}/>}
+      <Slider/>
+
+ </section>
 }

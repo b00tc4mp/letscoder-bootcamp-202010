@@ -12,7 +12,7 @@ import "./Initial.scss"
                 <img className="logo_central_initial"
                     src="imagenes/logocentral.png" alt="imagenes" />
 
-                <button onClick = {onGoToRegister}><i className="far fa-arrow-alt-circle-right fa-5x"></i></button>
+                <button class =" flecha" onClick = {onGoToRegister}><i className="far fa-arrow-alt-circle-right fa-5x"></i></button>
             </div>
 
         </main>

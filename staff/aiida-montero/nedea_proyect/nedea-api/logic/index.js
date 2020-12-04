@@ -6,5 +6,6 @@ module.exports = {
     registerUser: require('./register-user'),
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
-    savePictogram : require('./save-pictogram')
+    savePictogram : require('./save-pictogram'),
+    findPictogram : require('./find-pictogram')
 }

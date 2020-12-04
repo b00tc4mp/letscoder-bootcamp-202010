@@ -1,5 +1,19 @@
-.sign-up {
-      
+.update-image {
+    max-height: 70%;
+      h2{
+          text-align: center;
+          color: black;
+          font-size: 30px;
+          font-family: Special Elite ;
+          margin-top: 10px;
+      }
+      body {
+        font-family: 'Open Sans';
+        font-weight: 100;
+        display: flex;
+        overflow: hidden;
+        background-color: blue;
+      }
       input {
         ::-webkit-input-placeholder {
            color: rgba(255,255,255,0.7);
@@ -24,7 +38,7 @@
         }
       }
       
-      .register_form {
+      .update{
         background: #222;
         box-shadow: 0 0 1rem rgba(0,0,0,0.3);
         min-height: 10rem;
@@ -35,7 +49,7 @@
         border-radius: 50px;
         margin-top: 117px
       }
-      .register-text {
+      .login-text {
         //background: hsl(40,30,60);
         //border-bottom: .5rem solid white;
         color: white;
@@ -45,15 +59,17 @@
         padding: .5rem;
         text-align: center;
         //text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
-        .fa-stack-3x {
+        .fa-stack-1x {
           color: black;
         }
       }
       
-      .register-username, .register-password ,.register-fullname{
+      .login-title, .login-description {
         border-radius: 50px;
+        background: transparent;
         border: 0 solid;
         border-bottom: 1px solid rgba(white, .5);
+  
         color: white;
         display: block;
         margin: 1rem;
@@ -66,7 +82,7 @@
           transition: 250ms background ease-in;
         }
       }
-      .register-submit {
+      .send-submit {
         border: 1px solid white;
         background: transparent;
         color: white;
@@ -80,30 +96,23 @@
           color: black;
         
         }
-      } 
+      }
       
-    }
+}
 body {
     font-family: 'Open Sans';
     font-weight: 100;
     display: flex;
     background-color: rgba(251, 251, 255, 0.637);
   }
-.register{
+.login{
     margin-bottom: 150px;
 }
 
 .input{
     border-radius: 5px;
 }
-
 h2{
     text-align: center;
-    margin-top: 20px;
-}
-
-.imagen_camara{
-  max-height: 25vw;
-  margin-left: 17%;
-  margin-right: 17%;
+    margin-top:20p ;
 }

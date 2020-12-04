@@ -1,13 +1,13 @@
-const {validateId, validateTittle} = require('./helpers/validations')
+const {validateId, validateTitle} = require('./helpers/validations')
 const{ObjectId} = require('mongodb')
 const{NotFoundError} = require('../errors')
 const {User} = require('../models')
 const {Pictogram} = require('../models')
 
-module.exports = function (PictogramId, ownerId, tittle, description) {
+module.exports = function (pictogramId, ownerId, title, description) {
     validateId(ownerId)
-    if (typeof PictogramId !== 'undefined') validateId(PictogramId)
-    validateTittle(tittle)
+    if (typeof pictogramId !== 'undefined') validateId(pictogramId)
+    validateTitle(title)
     
     const _id = ObjectId(ownerId)
 
@@ -17,8 +17,8 @@ module.exports = function (PictogramId, ownerId, tittle, description) {
             if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
 
-        if (PictogramId) {
-            const _id = ObjectId(PictogramId)
+        if (pictogramId) {
+            const _id = ObjectId(pictogramId)
 
             return Pictogram
                 .findOne({ _id })
@@ -26,13 +26,13 @@ module.exports = function (PictogramId, ownerId, tittle, description) {
                     if (!pictogram) throw new NotFoundError(`note with id ${pictogramId} not found`)
 
                 return Pictogram
-                    .updateOne({_id}), {$set : {tittle, description}}
+                    .updateOne({_id}), {$set : {title, description}}
                     .then (result => undefined) 
 
             })
         } else
             return Pictogram
-            .create({owner: ObjectId(ownerId), tittle, description})
+            .create({owner: ObjectId(ownerId), title, description})
             .then(result => undefined)
 
     })

@@ -1074,3 +1074,178 @@ error 2020-12-01T18:55:39.210Z - ConflictError: user with e-mail aidamontsaeroan
 info 2020-12-02T08:17:55.806Z - starting server
 info 2020-12-02T08:17:55.956Z - server running on port 4000
 info 2020-12-02T12:21:55.445Z - stopping server
+info 2020-12-02T13:27:21.481Z - starting server
+info 2020-12-02T13:27:21.641Z - server running on port 4000
+info 2020-12-02T14:46:15.161Z - starting server
+info 2020-12-02T14:46:15.291Z - server running on port 4000
+info 2020-12-02T17:44:02.698Z - stopping server
+info 2020-12-02T17:52:11.542Z - starting server
+info 2020-12-02T17:52:11.694Z - server running on port 4000
+info 2020-12-02T18:18:21.934Z - stopping server
+info 2020-12-02T18:18:24.315Z - starting server
+info 2020-12-02T18:18:24.442Z - server running on port 4000
+error 2020-12-02T18:19:57.495Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-02T18:23:02.928Z - ConflictError: user with e-mail aidamonterosa@gmail.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-02T18:32:36.456Z - TypeError: undefined is not an id
+    at validateId (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\helpers\validations.js:29:43)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\save-pictogram.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram.js:15:9)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-02T18:37:39.046Z - TypeError: undefined is not an id
+    at validateId (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\helpers\validations.js:29:43)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\save-pictogram.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram.js:15:9)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-02T18:42:38.921Z - TypeError: undefined is not an id
+    at validateId (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\helpers\validations.js:29:43)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\save-pictogram.js:8:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram.js:15:9)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-02T18:44:24.287Z - stopping server
+info 2020-12-02T18:44:27.382Z - starting server
+info 2020-12-02T18:44:27.529Z - server running on port 4000
+error 2020-12-02T18:44:56.118Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-02T18:54:31.621Z - ConflictError: user with e-mail aidamonterozsa@gmail.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-03T01:13:10.904Z - starting server
+info 2020-12-03T01:13:11.010Z - server running on port 4000
+info 2020-12-03T09:45:09.607Z - starting server
+info 2020-12-03T09:45:09.777Z - server running on port 4000
+info 2020-12-03T15:43:30.607Z - stopping server
+info 2020-12-03T20:06:29.979Z - starting server
+error 2020-12-03T20:06:30.114Z - Error: Cannot find module './ids'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\utils\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\utils\index.js:3:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:1:20)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-03T20:06:30.121Z - stopping server
+info 2020-12-03T20:06:40.793Z - starting server
+error 2020-12-03T20:06:40.907Z - Error: Cannot find module './ids'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\utils\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\utils\index.js:3:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:1:20)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-03T20:06:40.913Z - stopping server
+info 2020-12-03T20:10:09.883Z - starting server
+error 2020-12-03T20:10:09.998Z - Error: Cannot find module './ids'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\utils\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\utils\index.js:3:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:1:20)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-03T20:10:10.004Z - stopping server
+info 2020-12-03T20:10:33.574Z - starting server
+info 2020-12-03T20:10:33.701Z - server running on port 4000
+info 2020-12-04T10:06:03.356Z - starting server
+info 2020-12-04T10:06:03.548Z - server running on port 4000
+info 2020-12-04T10:39:28.861Z - stopping server
+info 2020-12-04T10:39:56.270Z - starting server
+info 2020-12-04T10:39:56.588Z - server running on port 4000
+info 2020-12-04T10:44:23.275Z - starting server
+info 2020-12-04T10:44:23.402Z - server running on port 4000
+info 2020-12-04T10:52:55.287Z - stopping server
+info 2020-12-04T10:53:06.950Z - starting server
+info 2020-12-04T10:53:07.245Z - server running on port 4000
+info 2020-12-04T10:53:40.359Z - starting server
+info 2020-12-04T10:53:40.547Z - server running on port 4000
+info 2020-12-04T10:57:50.710Z - starting server
+info 2020-12-04T10:57:50.900Z - server running on port 4000
+info 2020-12-04T10:59:21.761Z - starting server
+info 2020-12-04T10:59:21.915Z - server running on port 4000
+info 2020-12-04T11:00:47.740Z - stopping server
+info 2020-12-04T11:00:53.143Z - starting server
+info 2020-12-04T11:00:53.297Z - server running on port 4000
+error 2020-12-04T11:19:28.187Z - ConflictError: user with e-mail azucaaena@gmail.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-04T11:19:31.664Z - ConflictError: user with e-mail azucaaaena@gmail.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-04T11:32:19.832Z - stopping server
+info 2020-12-04T11:32:23.250Z - starting server
+info 2020-12-04T11:32:23.416Z - server running on port 4000
+info 2020-12-04T11:35:20.101Z - stopping server
+info 2020-12-04T11:41:00.575Z - starting server
+info 2020-12-04T11:41:00.703Z - server running on port 4000
+info 2020-12-04T11:41:12.755Z - stopping server
+info 2020-12-04T11:41:15.347Z - starting server
+info 2020-12-04T11:41:15.494Z - server running on port 4000
+info 2020-12-04T11:52:51.123Z - stopping server

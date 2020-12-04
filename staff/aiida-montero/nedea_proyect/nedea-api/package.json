@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "style": "sass public/style.sass public/style.css"
+    "style": "sass public/style.sass public/style.css",
+    "inspect": "node inspect .",
+    "test": "npx mocha logic/*.spec.js",
+    "test-inspect": "npx mocha inspect logic/*.spec.js",
+    "test-coverage": "npx nyc --reporter=html --exclude=**/*.spec.js mocha logic/*.spec.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +20,10 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.0",
     "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
   }
 }

@@ -4,6 +4,10 @@ import Footer from './Footer'
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 import Home from './Home'
+import Update from './Update'
+import Search from './Search'
+import Slider from './Slider'
+import ResultList from './ResultList'
 
 
 export{
@@ -12,5 +16,9 @@ export{
     Footer,
     SignUp,
     SignIn,
-    Home
+    Home,
+    Update,
+    Search,
+    Slider,
+    ResultList
 }

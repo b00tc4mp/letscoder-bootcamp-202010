@@ -37,10 +37,16 @@ module.exports = {
         if (!token.trim().length) throw new Error('token is empty or blank')
     },
 
-    validateTittle(tittle) {
-        if (typeof text !== 'string') throw new TypeError(tittle + ' is not a text')
+    validateTitle(title) {
+        if (typeof title !== 'string') throw new TypeError(title + ' is not a string')
 
-        if (!tittle.trim().length) throw new Error('text is empty or blank')
-    }
+        if (!title.trim().length) throw new Error('title is empty or blank')
+    },
+
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(`${query} is not a string`);
+        
+        if (!query.trim().length) throw new Error (`${query} is empty or blank`);
+        }
 
 }

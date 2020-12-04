@@ -7,7 +7,7 @@ module.exports = new Schema ({
       required: true
   },
 
-  tittle: {
+  title: {
       type: String,
       required: true
   },

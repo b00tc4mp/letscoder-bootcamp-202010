@@ -33,7 +33,7 @@ module.exports = {
         if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
-    validateTittle(tittle) {
+    validateTitle(tittle) {
         if (typeof tittle!== 'string') throw new TypeError(tittle + ' is not a text')
 
         if (!tittle.trim().length) throw new ContentError('tittle is empty or blank')
