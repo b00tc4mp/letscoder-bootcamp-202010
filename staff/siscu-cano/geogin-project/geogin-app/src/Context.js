@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 const Context = createContext()
 
 export const Provider = ({ children }) => {
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(true)
 
   const value = {
     isAuth,

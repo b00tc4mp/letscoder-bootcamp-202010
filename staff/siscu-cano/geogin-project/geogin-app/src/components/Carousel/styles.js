@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export const SliderWrapper = styled.div`
-  background: #fff;
-  border-radius: 16px;
+    background: #fff;
+    border-radius: 16px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 
   .slick-dots {
     bottom: -40px;

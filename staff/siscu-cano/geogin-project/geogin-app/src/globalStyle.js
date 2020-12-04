@@ -116,27 +116,36 @@ textarea {
   max-width: ${({ theme }) => theme.colors.app_width}; 
   background-color: ${({ theme }) => theme.colors.app_bg};
   margin: 0 auto;
+  > div {
+    border: 1px solid red;
+    height: calc(100vh - 50px)
+  }
 }
 
 // Pages
 .splashscreen {
+  #app {
+    > div {
+    height: calc(100vh)
+  }
   > div {
     background: url(${bgBottomSplash}) center bottom no-repeat;
     margin:  0 auto;
     background-size: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;        
-    align-content: center;
-  }
+  > div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    }
 }
 
 .onboarding {
-  > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px;
+  #app {
+    padding: 0 40px 0 40px;
+    > div {
+    height: calc(100vh)
   }
+  }
+  
 }
 `
