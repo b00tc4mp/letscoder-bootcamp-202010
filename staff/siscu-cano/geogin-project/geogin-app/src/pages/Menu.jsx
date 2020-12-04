@@ -1,11 +1,12 @@
 import React from 'react'
 import { useBodyClass } from '../hooks/useBodyClass'
+import { MenuList } from '../components/MenuList'
 
 export const Menu = () => {
   useBodyClass('menu')
   return (
     <>
-      <h1>Componente: Menu</h1>
+      <MenuList />
     </>
   )
 }
