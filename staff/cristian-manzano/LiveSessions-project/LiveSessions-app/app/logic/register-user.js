@@ -1,16 +1,16 @@
 import { call } from '../../utils'
 import { validateName, validateEmail, validatePassword, validateCallback, validateCity, validateArtistName, validateDescription, validateLastName } from './helpers/validations'
 
-export default function (artistName, email, password, callback) {
+export default function (fullname, email, password, callback) {
 debugger
     validateEmail(email)
-    validateArtistName(artistName)
+    validatefullname(fullname)
     validatePassword(password)
     validateCallback(callback)
 
 
     call('POST', 'http://192.168.1.129:4000/api/users', { 'Content-type': 'application/json' }, 
-    JSON.stringify({ artistName, email,  password }),
+    JSON.stringify({ fullname, email,  password }),
     (status, response) => {
         if (status === 0)
             return callback(new Error('server error'))

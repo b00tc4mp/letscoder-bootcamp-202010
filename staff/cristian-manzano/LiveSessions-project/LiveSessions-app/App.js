@@ -19,18 +19,6 @@ import authenticateUser from './app/logic/authenticate-user';
 export default function App() {
   const [view, setView] = useState('sign-in')
 
-  const [token, setToken] = useState()
-  
-
-  const storeData = async (token) => {
-    try {
-      await AsyncStorage.setItem('token', token)
-    } catch (error) {
-      alert(error.message)
-    }
-  }
-
-
   const handleGoToSignUp = () => {
     setView("sign-up")
   }
@@ -39,11 +27,11 @@ export default function App() {
     setView("sign-in")
   }
 
-  const handleSignUp = ({ artistName, email, password }) => {
-    console.log(artistName, email, password)
+  const handleSignUp = ({ fullname, email, password }) => {
+    console.log(fullname, email, password)
     debugger
     try{
-    registerUser( artistName, email, password, error => {
+    registerUser( fullname, email, password, error => {
       if (error) return alert(error.message)
       
       setView('sign-in')
@@ -53,33 +41,25 @@ export default function App() {
   }
 }
   const handleSignIn = ({ email, password }) => {
-    debugger
     try{
       authenticateUser( email, password, (error, token) => {
-        debugger
         if (error) return alert(error.message)
 
-        storeData(token)
-        setView('home')
+        AsyncStorage.setItem('token', token)
+        .then(() => setView('home'))
       })
     } catch (error) {
       alert(error.message)
     }
   }
 
+      useEffect(() => { 
+        AsyncStorage.getItem('token')
+        .then(token => {
+          token && setView('home')
+    })
+  },[])
 
-  useEffect(() => {
-    (async () => {
-      try {
-        setToken(await AsyncStorage.getItem('token'));
-        if (token) {
-          setView("home");
-        }
-      } catch (error) {
-        alert(error.message);
-      }
-    })();
-  });
 
   return <ImageBackground 
   style={styles.background}
@@ -88,7 +68,7 @@ export default function App() {
     { view === "" && <WelcomeScreen onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn}/>}
     { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} />}
     { view === "sign-in" && <SignInScreen onSignIn={handleSignIn}/>}
-    { view === "home" && <HomeScreen token={token}/>}
+    { view === "home" && <HomeScreen />}
     
   </ImageBackground> 
 };

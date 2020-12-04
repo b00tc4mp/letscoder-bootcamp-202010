@@ -11,27 +11,34 @@ module.exports = new Schema({
         }
     },
 
-    name: {
-        type: String,
-        required: false
-    },
-
-    lastName: {
-        type: String,
-        required: false
-    },
-
-    artistName: {
+    fullname: {
         type: String,
         required: true
     },
 
+    email: {
+        type: String,
+        required: true
+    },
 
     password: {
         type: String,
         required: true,
         minlength: 8
     },
+
+    role: {
+        type: String,
+        required: true,
+        default: 'ARTIST'
+        enum: ['ARTIST', 'PROMOTER']
+    }
+
+    artistName: {
+        type: String,
+        required: false
+    },
+
 
     city: {
         type: String,

@@ -9,13 +9,13 @@ function SignUpScreen({ onSignIn }) {
     return (
         <SafeAreaView>
         <KeyboardAvoidingView
-      behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
+      //behavior={Platform.OS == "ios" ? "padding" : "height"}
     >
         <ScrollView>
             <View style={styles.formSignUp}>
                 <View style={styles.signUpHeader}>
                 <Image style={styles.logo} source={require('../assets/logo.png')} />
-
+    
                 </View>
 
 
@@ -53,14 +53,14 @@ function SignUpScreen({ onSignIn }) {
 const styles = StyleSheet.create({
     formSignUp: {
         justifyContent: "space-evenly",
-        marginTop: "-25%",
+        // marginTop: "-25%",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
     },
 
     signUpHeader: {
         backgroundColor: "#343a40",
-        marginTop: "-10%",
+        // marginTop: "-10%",
         display: "flex",
         justifyContent: "center",
         alignContent: "center",
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
 
     inputsSignUp: {
         marginLeft: "5%",
-        marginBottom:"-20%",
+        // marginBottom:"-20%",
         width: "50%",
         height: "5%",
         borderWidth: 1,

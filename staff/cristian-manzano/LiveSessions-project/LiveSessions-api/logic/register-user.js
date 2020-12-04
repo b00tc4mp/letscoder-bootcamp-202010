@@ -3,10 +3,10 @@ const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
 const { User } = require('../models')
 
-module.exports = function (email, artistName, password) {
+module.exports = function (email, fullname, password) {
     debugger
     validateEmail(email)
-    validateArtistName(artistName)
+    validatefullname(fullname)
     validatePassword(password)
 
     return semaphore(() =>
@@ -16,7 +16,7 @@ module.exports = function (email, artistName, password) {
                 if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
                 
 
-                return User.create({ email, artistName, password })
+                return User.create({ email, fullname, password })
             })
             .then(() => {})
     )

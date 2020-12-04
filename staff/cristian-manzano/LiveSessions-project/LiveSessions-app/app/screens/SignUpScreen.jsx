@@ -20,7 +20,7 @@ function SignUpScreen({ onSignUp }) {
                 </View>
 
                 <TextInput
-                    placeholder=" Artist Name"
+                    placeholder=" Fullname"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40" 
                     onChangeText={artistName => setArtistName(artistName)}
@@ -82,7 +82,7 @@ function SignUpScreen({ onSignUp }) {
 
 
                 <TouchableOpacity style={styles.signUpButton}
-                onPress={ () => {onSignUp ({ email, artistName, password })}}>
+                onPress={ () => {onSignUp ({ email, fullname, password })}}>
                     <Text style={styles.buttonText}>Sign Up!</Text>
                 </TouchableOpacity>
 
