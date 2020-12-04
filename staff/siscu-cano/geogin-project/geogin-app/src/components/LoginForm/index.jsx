@@ -13,8 +13,7 @@ export const LoginForm = () => {
     try {
       authenticateUser(email.value, password.value, (error, token) => {
         if (error) return window.alert(error.message)
-        activateAuth()
-        window.sessionStorage.token = token
+        activateAuth(token)
       })
     } catch (error) {
       window.alert(error.message)

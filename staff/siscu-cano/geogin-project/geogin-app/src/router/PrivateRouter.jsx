@@ -23,7 +23,7 @@ import { TestPassed } from '../pages/TestPassed'
 import { Profile } from '../pages/Profile'
 import { Ranking } from '../pages/Ranking'
 
-export const PrivateRoute = ({ isAuth }) => {
+export const PrivateRoute = () => {
   return (
 
     <Context.Consumer>
@@ -49,7 +49,7 @@ export const PrivateRoute = ({ isAuth }) => {
             <TestPassed path='/test-passed' />
             <Profile path='/profile' />
             <Ranking path='/ranking' />
-            </Router>
+          </Router>
           : <Router>
             <Login path='/menu' />
             <Login path='/favorites' />
@@ -69,7 +69,7 @@ export const PrivateRoute = ({ isAuth }) => {
             <Login path='/test-passed' />
             <Login path='/profile' />
             <Login path='/ranking' />
-          </Router>
+            </Router>
     }
     </Context.Consumer>
 

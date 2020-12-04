@@ -18,15 +18,17 @@ export const SplashScreen = () => {
   useBodyClass('splashscreen')
   return (
     <>
-      {loading === true ? (
-        <div>
-          <Logo />
-          <Qrcode />
-          <ProgressBar duration={TIME_FAKE} />
-        </div>
-      ) : (
-        <Redirect noThrow to='/onboarding' />
-      )}
+      {loading === true
+        ? (
+          <div>
+            <Logo />
+            <Qrcode />
+            <ProgressBar duration={TIME_FAKE} />
+          </div>
+          )
+        : (
+          <Redirect noThrow to='/onboarding' />
+          )}
     </>
   )
 }
