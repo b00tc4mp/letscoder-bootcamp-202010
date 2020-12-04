@@ -49,7 +49,7 @@ export const PrivateRoute = () => {
             <TestPassed path='/test-passed' />
             <Profile path='/profile' />
             <Ranking path='/ranking' />
-          </Router>
+            </Router>
           : <Router>
             <Login path='/menu' />
             <Login path='/favorites' />
@@ -69,7 +69,7 @@ export const PrivateRoute = () => {
             <Login path='/test-passed' />
             <Login path='/profile' />
             <Login path='/ranking' />
-            </Router>
+          </Router>
     }
     </Context.Consumer>
 
