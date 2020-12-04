@@ -1,11 +1,12 @@
-const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
+const { validateName, validateEmail, validatePassword, validateCity, validateArtistName, validateDescription, validateLastName } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
 const { User } = require('../models')
 
-module.exports = function (fullname, email, password) {
-    validateFullname(fullname)
+module.exports = function (email, artistName, password) {
+    debugger
     validateEmail(email)
+    validateArtistName(artistName)
     validatePassword(password)
 
     return semaphore(() =>
@@ -15,7 +16,7 @@ module.exports = function (fullname, email, password) {
                 if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
                 
 
-                return User.create({ fullname, email, password })
+                return User.create({ email, artistName, password })
             })
             .then(() => {})
     )

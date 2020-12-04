@@ -1,28 +1,20 @@
 const { validateId } = require('./helpers/validations')
-const context = require('./context')
-const { ObjectId } = require('mongodb')
 const { NotFoundError } = require('../errors')
+const { User } = require('../models')
 
-const { env: { DB_NAME } } = process
-
+/**
+ * Retrieves a user by its id
+ * 
+ * @param {string} userId 
+ * 
+ * @returns {Promise}
+ */
 module.exports = function (userId) {
     validateId(userId)
 
-    const { connection } = this
-
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
-    const _id = ObjectId(userId)
-
-    return users.findOne({ _id })
+    return User.findById(userId).lean()
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
-
-            //const { _id, fullname, email } = user
-
-            //user = { id: _id.toString(), fullname, email } // sanitise  
 
             const { _id } = user
 
@@ -33,4 +25,4 @@ module.exports = function (userId) {
 
             return user
         })
-}.bind(context)
+}

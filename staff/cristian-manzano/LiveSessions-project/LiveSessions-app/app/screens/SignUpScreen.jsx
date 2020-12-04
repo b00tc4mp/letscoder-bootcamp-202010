@@ -3,13 +3,9 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 
 
 function SignUpScreen({ onSignUp }) {
-    const [ email, setEmail ] = React.useState('')
-    const [ name, setName ] = React.useState('')
-    const [ lastName, setLastName ] = React.useState('')
-    const [ artistName, setArtistName ] = React.useState('')
-    const [ password , setPassword ] = React.useState('')
-    const [ city, setCity ] = React.useState('')
-    const [ description, setDescription ] = React.useState('')
+    const [ email, setEmail ] = useState('')
+    const [ artistName, setArtistName ] = useState('')
+    const [ password , setPassword ] = useState('')
     
     return (
         <SafeAreaView>
@@ -18,15 +14,38 @@ function SignUpScreen({ onSignUp }) {
     >
         <ScrollView>
             <View style={styles.formSignUp}>
+                <View style={styles.signUpHeader}>
                 <Image style={styles.logo} source={require('../assets/logo.png')} />
+
+                </View>
+
+                <TextInput
+                    placeholder=" Artist Name"
+                    style={styles.inputsSignUp}
+                    placeholderTextColor="#343a40" 
+                    onChangeText={artistName => setArtistName(artistName)}
+                    value={artistName}>
+                </TextInput>
 
                 <TextInput
                     placeholder=" e-mail"
                     style={styles.inputsSignUp}
-                    placeholderTextColor="white" 
+                    placeholderTextColor="#343a40" 
                     onChangeText={email => setEmail(email)}
                     email={email}>
                 </TextInput>
+
+                <TextInput
+                    secureTextEntry={true}
+                    placeholder=" Password"
+                    style={styles.inputsSignUp}
+                    placeholderTextColor="#343a40"
+                    onChangeText={password => setPassword(password)}
+                    value={password} >
+                </TextInput>
+
+
+                {/* Add the TextInput bellow on edit profice
 
                 <TextInput
                     placeholder=" Name"
@@ -46,23 +65,6 @@ function SignUpScreen({ onSignUp }) {
                 </TextInput>
 
                 <TextInput
-                    placeholder=" Artist Name"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white" 
-                    onChangeText={artistName => setArtistName(artistName)}
-                    value={artistName}>
-                </TextInput>
-
-                <TextInput
-                    secureTextEntry={true}
-                    placeholder=" Password"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={password => setPassword(password)}
-                    value={password} >
-                </TextInput>
-
-                <TextInput
                     placeholder=" City"
                     style={styles.inputsSignUp}
                     placeholderTextColor="white"
@@ -76,11 +78,11 @@ function SignUpScreen({ onSignUp }) {
                     placeholderTextColor="white"
                     onChangeText={description => setDescription(description)}
                     value={description} >
-                </TextInput>
+                </TextInput> */}
 
 
-                <TouchableOpacity style={styles.signInButton}
-                onPress={ () => {onSignUp ()}}>
+                <TouchableOpacity style={styles.signUpButton}
+                onPress={ () => {onSignUp ({ email, artistName, password })}}>
                     <Text style={styles.buttonText}>Sign Up!</Text>
                 </TouchableOpacity>
 
@@ -92,14 +94,23 @@ function SignUpScreen({ onSignUp }) {
 }
 
 const styles = StyleSheet.create({
+    formSignUp: {
+        justifyContent: "space-evenly",
+        marginTop: "-15%",
+        height: Dimensions.get("window").height,
+        width: Dimensions.get("window").width,
+    },
+
+    signUpHeader: {
+        backgroundColor: "gray",
+        marginTop: "-8%",
+        width: "100%",
+        height: "10%",
+    },
+
     logo: {
         width: 50,
         height: 50,
-    },
-    formSignUp: {
-        justifyContent: "space-around",
-        height: Dimensions.get("window").height,
-        width: Dimensions.get("window").width,
     },
 
     inputsSignUp: {
@@ -107,20 +118,20 @@ const styles = StyleSheet.create({
         width: "50%",
         height: "5%",
         borderWidth: 1,
-        borderColor: "white",
-        color: "white"
+        borderColor: "#343a40",
+        color: "#343a40"
     },
 
-    descriptionSignUp: {
-        marginLeft: "5%",
-        width: "90%",
-        height: "25%",
-        borderWidth: 1,
-        borderColor: "white",
-        color: "white"
-    },
+    // descriptionSignUp: {
+    //     marginLeft: "5%",
+    //     width: "90%",
+    //     height: "25%",
+    //     borderWidth: 1,
+    //     borderColor: "white",
+    //     color: "white"
+    // },
 
-    signInButton: {
+    signUpButton: {
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "center",
