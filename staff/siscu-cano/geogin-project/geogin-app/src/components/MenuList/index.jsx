@@ -1,13 +1,13 @@
 import React from 'react'
-import { MenuListWrapper, MenuListItem } from './styles'
+import { MenuListWrapper, Link } from './styles'
 
 export const MenuList = () => {
   return (
     <MenuListWrapper>
-      <MenuListItem>Participar en una búsqueda</MenuListItem>
-      <MenuListItem>Crear una nueva búsqueda</MenuListItem>
-      <MenuListItem>Listado de búsquedas</MenuListItem>
-      <MenuListItem>Ranking</MenuListItem>
+      <Link to='/search-access'>Participar en una búsqueda</Link>
+      <Link to='/search-create'>Crear una nueva búsqueda</Link>
+      <Link to='/search-list'>Listado de búsquedas</Link>
+      <Link to='/ranking'>Ranking</Link>
     </MenuListWrapper>
   )
 }
