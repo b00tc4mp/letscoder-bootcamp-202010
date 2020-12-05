@@ -12,6 +12,7 @@ export const Provider = ({ children }) => {
     activateAuth: (token) => {
       window.sessionStorage.token = token
       setIsAuth(true)
+      navigate('/menu')
     },
     disableAuth: (token) => {
       window.sessionStorage.removeItem(token)
