@@ -8,22 +8,22 @@ module.exports = new Schema({
         required: true
     },
 
-    description: [{
+    description: {
         type: String,
         required: true
-    }],
+    },
 
-    budget: [{
+    budget: {
         type: Number,
         required: true
-    }],
+    },
 
     owner: {
         type: ObjectId,
         required: true
     },
 
-    console: {
+    gameconsole: {
         type: String,
         enum: ['nintendo', 'play station', 'game boy'],
         default: 'nintendo',

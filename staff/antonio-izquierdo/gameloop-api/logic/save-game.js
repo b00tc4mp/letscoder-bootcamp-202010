@@ -4,11 +4,12 @@ const { User } = require('../models')
 const { Game } = require('../models')
 const { ObjectId } = require('mongodb') 
 
-module.exports = function( gameId, name, description, budget, ownerId) {
+module.exports = function( gameId, name, description, gameconsole, budget, ownerId) {
     validateText(name)
     validateText(description)
     validatePrice(budget)
     validateId(ownerId)
+    validateText(gameconsole)
     if (typeof gameId !== 'undefined') validateId(gameId)
 
     const _id = ObjectId(ownerId)
@@ -32,7 +33,7 @@ module.exports = function( gameId, name, description, budget, ownerId) {
                             .then(result => undefined)
                     })
             } else
-                return Game.create({ name, description, budget, owner: ObjectId(ownerId) })
+                return Game.create({ name, description, gameconsole, budget, owner: ObjectId(ownerId) })
                     .then(result => undefined)
         })
 }

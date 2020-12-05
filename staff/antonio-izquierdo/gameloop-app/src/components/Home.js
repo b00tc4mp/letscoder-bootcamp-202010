@@ -2,6 +2,7 @@ import './Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser, saveGame } from '../logic'
 import SaveGame from './SaveGame'
+//import FindGames from './FindGames'
 
 export default function () {
     const [name, setName] = useState()
@@ -22,12 +23,12 @@ export default function () {
         }
     }, [])
 
-    const handleSaveGame = (name, description, budget) => {
+    const handleSaveGame = (name, description, gameconsole, budget) => {
 
         const { token } = sessionStorage
         try {
             debugger
-            saveGame(undefined, name, description, budget, token, error => {
+            saveGame(undefined, name, description, gameconsole, budget, token, error => {
                 if(error) return alert(error.message)
             })
         } catch (error) {
@@ -37,7 +38,7 @@ export default function () {
  
     return <section className="home">
         <h1>Hello, {name}!</h1>
-        {< SaveGame onSaveGame={handleSaveGame} />}
-        {}
+        {<SaveGame onSaveGame={handleSaveGame} />}
+        {/* {<FindGames />} */}
     </section>
 }

@@ -244,3 +244,95 @@ info 2020-12-03T19:45:32.744Z - server running on port 4000
 info 2020-12-03T19:46:25.881Z - stopping server
 info 2020-12-03T19:46:48.833Z - server running on port 4000
 info 2020-12-03T20:27:53.995Z - stopping server
+error 2020-12-04T19:25:22.490Z - ReferenceError: handleFindGames is not defined
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\index.js:23:66)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\index.js:16:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-04T19:25:22.499Z - stopping server
+error 2020-12-05T08:40:02.292Z - ReferenceError: handleFindGames is not defined
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\index.js:23:66)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\index.js:16:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T08:40:02.298Z - stopping server
+error 2020-12-05T08:43:23.883Z - ReferenceError: handleFindGames is not defined
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\index.js:23:66)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\index.js:16:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T08:43:23.889Z - stopping server
+info 2020-12-05T08:48:52.495Z - server running on port 4000
+info 2020-12-05T08:51:56.719Z - stopping server
+info 2020-12-05T08:52:48.680Z - server running on port 4000
+info 2020-12-05T09:05:27.877Z - stopping server
+info 2020-12-05T09:05:36.475Z - server running on port 4000
+info 2020-12-05T09:13:33.605Z - stopping server
+info 2020-12-05T09:20:08.221Z - server running on port 4000
+info 2020-12-05T09:21:09.388Z - stopping server
+info 2020-12-05T09:21:12.733Z - server running on port 4000
+info 2020-12-05T09:23:10.567Z - stopping server
+info 2020-12-05T09:24:14.771Z - server running on port 4000
+info 2020-12-05T09:25:27.461Z - stopping server
+info 2020-12-05T09:26:07.969Z - server running on port 4000
+info 2020-12-05T09:43:13.452Z - server running on port 4000
+info 2020-12-05T09:43:59.110Z - stopping server
+info 2020-12-05T09:44:03.421Z - server running on port 4000
+error 2020-12-05T09:44:22.220Z - Error: user with e-mail lasandra@lacamellona.com already registered
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\register-user.js:15:28
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T09:45:00.598Z - ReferenceError: AuthError is not defined
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:11:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T09:45:03.418Z - ReferenceError: AuthError is not defined
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:11:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T09:45:37.667Z - ReferenceError: AuthError is not defined
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:11:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T09:46:23.045Z - stopping server
+info 2020-12-05T09:46:31.755Z - server running on port 4000
+error 2020-12-05T09:46:50.419Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T09:51:45.036Z - stopping server
+info 2020-12-05T09:51:52.806Z - server running on port 4000
+info 2020-12-05T10:00:29.334Z - stopping server
+info 2020-12-05T10:00:35.985Z - server running on port 4000
+info 2020-12-05T10:08:12.243Z - stopping server
