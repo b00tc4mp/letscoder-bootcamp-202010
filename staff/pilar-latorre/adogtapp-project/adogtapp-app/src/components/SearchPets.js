@@ -71,6 +71,7 @@ function SearchPets(){
      
                 </form>
                 {results && results.length && <FindPets results={results} />}
+                {!results && <div><img className="search__img"src="patitas.jpg"/></div>}
             </>
         );
     }

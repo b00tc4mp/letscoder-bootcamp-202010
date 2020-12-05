@@ -17,7 +17,7 @@ return <section className="welcome">
         <button className="welcome__search" onClick={()=>{setWelcomeView('search-pet')}}>SEARCH PET</button>
         
         <button className="welcome__create" onClick={()=>{setWelcomeView('create-pet')}}>CREATE NEW PET</button>
-        {welcomeView === 'welcome' && <div><img className="welcome__img"src="paw.jpg"/></div>}
+        {welcomeView === 'welcome' && <div><img className="welcome__img"src="variosperretes4.jpg"/></div>}
         
         {welcomeView === 'search-pet' && <SearchPets />}
         {welcomeView === 'create-pet' && <CreatePet onCreatePet={onCreatePet}/>}
