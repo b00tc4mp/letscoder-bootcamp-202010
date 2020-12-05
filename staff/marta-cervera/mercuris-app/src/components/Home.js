@@ -4,6 +4,7 @@ import { retrieveUser, saveProduct } from '../logic'
 import SaveProduct from './SaveProduct'
 import SearchProducts from './SearchProducts'
 import Profile from './Profile'
+import {Link} from 'react-router-dom'
 
 export default function Home() {
 

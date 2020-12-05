@@ -20,7 +20,7 @@ function SignUp({ onSignUp }) {
             <button>Send</button>
 
         </form>
-        <p className="signUp">Already have an account? <span className="signUp__span" onClick={onSignUp}>Sign In</span></p> 
+        
     </section>
 }
 
