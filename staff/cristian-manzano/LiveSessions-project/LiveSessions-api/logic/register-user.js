@@ -6,18 +6,20 @@ const { User } = require('../models')
 module.exports = function (email, fullname, password) {
     debugger
     validateEmail(email)
-    validatefullname(fullname)
+    validateFullname(fullname)
     validatePassword(password)
 
     return semaphore(() =>
         User
             .findOne({ email })
             .then(user => {
-                if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
+                if (user) throw new ConflictError(`user with e-mail ${email} already exists`)
                 
 
-                return User.create({ email, fullname, password })
+                return User
+                .create({ email, fullname, password })
             })
             .then(() => {})
+            
     )
 }

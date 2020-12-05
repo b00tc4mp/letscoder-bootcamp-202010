@@ -30,9 +30,9 @@ module.exports = new Schema({
     role: {
         type: String,
         required: true,
-        default: 'ARTIST'
+        default: 'ARTIST',
         enum: ['ARTIST', 'PROMOTER']
-    }
+    },
 
     artistName: {
         type: String,

@@ -59,14 +59,14 @@ function SignUpScreen({ onSignUp }) {
 const styles = StyleSheet.create({
     formSignUp: {
         justifyContent: "space-evenly",
-        marginTop: "-15%",
+        // marginTop: "-15%",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
     },
 
     signUpHeader: {
         backgroundColor: "gray",
-        marginTop: "-8%",
+        // marginTop: "-8%",
         width: "100%",
         height: "10%",
     },

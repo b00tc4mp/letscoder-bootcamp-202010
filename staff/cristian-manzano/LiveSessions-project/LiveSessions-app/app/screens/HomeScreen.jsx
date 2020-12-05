@@ -11,8 +11,7 @@ import EditProfileScreen from './EditProfileScreen'
 
 
 export default function Home() {
-    const [name, setName] = useState()
-
+    const [email, setEmail] = useState()
 
     const [view, setView] = useState('')
 
@@ -22,9 +21,9 @@ export default function Home() {
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return Alert.alert(error.message)
-              const { fullname } = user
+              const { email } = user
 
-                setName(fullname)
+                setEmail(email)
                 setView('profile')
             })
         } catch (error) {
@@ -40,21 +39,20 @@ export default function Home() {
   const handleCancelEditProfile = () => {
     setView('profile')
   }
-
+  
   const handleEditProfile = ({ fullname, artistName, city, description, tags }) => {
-    console.log(fullname, artistName, city, description, tags)
-    debugger
-    try{
-      editUser( fullname, artistName, city, description, tags, error => {
-        if (error) return Alert.alert(error.message)
+      console.log(email, fullname, artistName, city, description, tags)
+      debugger
+      try{
+        editUser(email, fullname, artistName, city, description, tags, error => {
+          if (error) return Alert.alert(error.message)
 
-        setView('profile')
-      })
-    } catch(error) {
-      Alert.alert(error.message)
+          setView('profile')
+        })
+      } catch(error) {
+        Alert.alert(error.message)
+      }
     }
-
-  }
 
   return (
 
