@@ -19,7 +19,9 @@ router.post(
   jsonBodyParser,
   withErrorHandling(handleRegisterUser)
 );
-
+/* 
+// .get /api/activites/all
+ */
 router.post(
   "/api/users/auth",
   jsonBodyParser,

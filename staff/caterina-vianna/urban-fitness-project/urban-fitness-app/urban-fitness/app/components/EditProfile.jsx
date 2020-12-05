@@ -31,7 +31,7 @@ export default function EditProfile({ onCloseProfile }) {
           <TouchableOpacity style={styles.avatarImg} onPress={() => {}}>
             <Avatar.Image
               size={200}
-              source={require("../assets/avatar-app2.png")}
+              source={require("../assets/avatarEj.jpg")}
             />
           </TouchableOpacity>
           <TouchableOpacity>

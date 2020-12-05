@@ -21,6 +21,8 @@ import EditProfile from "./EditProfile";
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
+  /*  const [toggleStatus, setToggleStatus] = useState("map"); // list */
+  /* const [activities, setActivities] = useState([]); */
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -46,6 +48,10 @@ export default function Home({ token }) {
     setView("profile");
   };
 
+  /* useEffect(() => {
+    // TODO: fetch activities and store in state
+  }, []);
+ */
   return (
     <View style={styles.backgroundDefault}>
       <View>
@@ -53,6 +59,13 @@ export default function Home({ token }) {
         {view === "edit-profile" && (
           <EditProfile onCloseProfile={handleChangeToProfile} />
         )}
+        {/**
+         * TODO:
+         * 1. Fetch Activities (call('GET' urlActivities))
+         * 2. Add Header component (Avatar, Search, ListToggle) <Header onSearchClick={} onProfileClick={} onListToggle={} toggleStatus={toggleStatus} />
+         * 3. Add Map component and pass Activities prop <Map activities={activites} onActivityClick={handleActivityClick} />
+         * 4. Add Activities carousel <ActivitiesCarousel activities={activites} activeActivity={activityId} onActivityClick={handleActivityClick} />
+         */}
       </View>
     </View>
   );

@@ -4,7 +4,6 @@
     "slug": "urban-fitness",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/welcome-screen",
     "splash": {
       "image": "",
       "resizeMode": "contain",
