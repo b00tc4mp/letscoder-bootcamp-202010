@@ -12,15 +12,6 @@ import { registerUser, authenticateUser } from "./app/logic";
 
 export default function App() {
   const [view, setView] = useState("log-in");
-  const [token, setToken] = useState();
-
-  const storeData = async (token) => {
-    try {
-      await AsyncStorage.setItem("@storage_Key", token);
-    } catch (error) {
-      alert(error.message);
-    }
-  };
 
   const handleChangeToLogin = () => {
     setView("log-in");
@@ -35,7 +26,7 @@ export default function App() {
     debugger;
     try {
       registerUser(firstName, lastName, email, password, (error) => {
-        if (error) return alert(error.message);
+        if (error) return Alert.alert(error.message);
       });
     } catch (error) {
       alert(error.message);
@@ -46,27 +37,19 @@ export default function App() {
     try {
       debugger;
       authenticateUser(email, password, (error, token) => {
-        if (error) return alert(error.message);
-        storeData(token);
-        setView("home");
+        if (error) return Alert.alert(error.message);
+        AsyncStorage.setItem("token", token).then(() => setView("home"));
       });
     } catch (error) {
-      alert(error.message);
+      Alert.alert(error.message);
     }
   };
 
   useEffect(() => {
-    (async () => {
-      try {
-        setToken(await AsyncStorage.getItem("@storage_Key"));
-        if (token) {
-          setView("home");
-        }
-      } catch (error) {
-        alert(error.message);
-      }
-    })();
-  });
+    AsyncStorage.getItem("token").then((token) => {
+      token && setView("home");
+    });
+  }, []);
 
   return (
     <View style={styles.backgroundDefault}>
@@ -77,7 +60,7 @@ export default function App() {
         <LogIn onLogIn={handleLogIn} changeToSignUp={handleChangeToSignUp} />
       )}
       {view === "welcome" && <WelcomeScreen />}
-      {view === "home" && <Home token={token} />}
+      {view === "home" && <Home />}
     </View>
   );
 }

@@ -4,6 +4,7 @@ import React, {
   useReducer,
   useState,
 } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   Alert,
   StyleSheet,
@@ -11,30 +12,47 @@ import {
   SafeAreaView,
   View,
   Button,
+  TextInput,
 } from "react-native";
 import { retrieveUser } from "../logic";
+import Profile from "./Profile";
+import EditProfile from "./EditProfile";
 
 export default function Home({ token }) {
   const [name, setName] = useState();
+  const [view, setView] = useState();
 
   useEffect((token) => {
-    debugger;
-    try {
-      retrieveUser(token, (error, user) => {
-        if (error) return alert(error.message);
-        debugger;
-        const { firstName } = user;
-        setName(firstName);
-      });
-    } catch (error) {
-      alert(error.message);
-    }
-  });
+    AsyncStorage.getItem("token").then((token) => {
+      try {
+        retrieveUser(token, (error, user) => {
+          if (error) return Alert.alert(error.message);
+          debugger;
+          const { firstName } = user;
+          setName(firstName);
+          setView("profile");
+        });
+      } catch (error) {
+        Alert.alert(error.message);
+      }
+    });
+  }, []);
+
+  const handleChangeToEditProfile = () => {
+    setView("edit-profile");
+  };
+
+  const handleChangeToProfile = () => {
+    setView("profile");
+  };
+
   return (
-    <View>
+    <View style={styles.backgroundDefault}>
       <View>
-        <Text style={styles.textToken}>{token}</Text>
-        <Text style={styles.textToken}>{name}</Text>
+        {view === "profile" && <Profile onAvatar={handleChangeToEditProfile} />}
+        {view === "edit-profile" && (
+          <EditProfile onCloseProfile={handleChangeToProfile} />
+        )}
       </View>
     </View>
   );
@@ -45,9 +63,6 @@ export default function Home({ token }) {
   // </View>
 }
 const styles = StyleSheet.create({
-  backgroundHome: {
-    backgroundColor: "blue",
-  },
   textToken: {
     color: "pink",
   },
@@ -69,5 +84,8 @@ const styles = StyleSheet.create({
     marginRight: 60,
     marginLeft: 60,
     marginTop: 60,
+  },
+  backgroundDefault: {
+    backgroundColor: "black",
   },
 });
