@@ -3,26 +3,23 @@ const { NotFoundError } = require('geogin-errors')
 const { User } = require('../models')
 
 /**
- * Retrieves a user by its id
+ * Retrieve user
  * 
- * @param {string} userId 
+ * @param {string} id user id
  * 
- * @returns {Promise}
+ * @throws {NotFoundError} if user id dos not exist
+ * 
+ * @return {object} user object
  */
-module.exports = function (userId) {
-    validateId(userId)
 
-    return User.findById(userId).lean()
-        .then(user => {
-            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
+module.exports = function (id) {
+    validateId(id)
 
-            const { _id } = user
+    return User.findById(id)
+    .then(user => {
+        if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            user.id = _id.toString()
-            
-            delete user._id
-            delete user.password
-
-            return user
-        })
+        return user.save()
+    })
+    .then(({ id, fullname, email, image, score, favorites }) => ({ id, fullname, email, image, score, favorites }))
 }

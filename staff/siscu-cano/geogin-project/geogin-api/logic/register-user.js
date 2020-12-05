@@ -4,6 +4,25 @@ const { ConflictError } = require('geogin-errors')
 const { User } = require('../models')
 const bcrypt = require('bcryptjs')
 
+/**
+ * Register a user.
+ * 
+ * @param {String} fullname 
+ * @param {String} email 
+ * @param {String} password 
+ * 
+ * @throws {TypeError} - if is not a fullname (string)
+ * @throws {ContentError} - if fullname is empty or blank
+ * 
+ * @throws {TypeError} - if is not an e-mail (string)
+ * @throws {ContentError} - if e-mail is empty or blank
+ * @throws {FormatError} - if invalid e-mail (regex)
+ * 
+ * @throws {TypeError} - if password is not a password (string)
+ * @throws {ContentError} - if password is empty or blank
+ * 
+ * @returns {String} - id. 
+ */
 module.exports = function (fullname, email, password) {
     validateFullname(fullname)
     validateEmail(email)

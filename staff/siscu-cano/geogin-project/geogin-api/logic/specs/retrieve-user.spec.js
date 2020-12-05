@@ -2,10 +2,10 @@ require('dotenv').config()
 
 const { expect } = require('chai')
 const mongoose = require('mongoose')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
-require('../utils/array-polyfills')
-const retrieveUser = require('./retrieve-user')
-const { User } = require('../models')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../../utils/randoms')
+require('../../utils/array-polyfills')
+const retrieveUser = require('../retrieve-user')
+const { User } = require('../../models')
 const { LengthError, ContentError } = require('geogin-errors')
 
 const { env: { MONGODB_URL } } = process

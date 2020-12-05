@@ -3,6 +3,22 @@ const { AuthError } = require('geogin-errors')
 const { User } = require('../models')
 const bcrypt = require('bcryptjs')
 
+ /**
+ * Authenticate a user.
+ * 
+ * @param {String} email 
+ * @param {String} password
+ * 
+ * @throws {TypeError} - if is not an e-mail (string)
+ * @throws {ContentError} - if e-mail is empty or blank
+ * @throws {FormatError} - if invalid e-mail (regex)
+ * 
+ * @throws {TypeError} - if password is not a password (string)
+ * @throws {ContentError} - if password is empty or blank
+ * 
+ * @returns {String} - id.  
+ */
+
 module.exports = function (email, password) {
     validateEmail(email)
     validatePassword(password)
