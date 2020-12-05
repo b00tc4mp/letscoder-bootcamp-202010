@@ -5,10 +5,13 @@ import { findProducts } from '../logic'
 
 function SearchProducts() {
 
+    const [view, setView] = useState('find-products')
+
     let query
     const [results, setResults] = useState()
+    
 
-    const handleSearchProduct = (queryCompany,queryProduct, price, priceMin,priceMax) => {
+    const handleSearchProducts = (queryCompany,queryProduct, price, priceMin,priceMax) => {
 
         const { token } = sessionStorage
 
@@ -18,6 +21,8 @@ function SearchProducts() {
                 if (error) return alert(error.message)
 
                 setResults(products)
+
+                setView('find-products')
             })
         } catch (error) {
             alert(error.message)
@@ -38,33 +43,33 @@ function SearchProducts() {
                 />
                 <button
                     className="searchByName__button"
-                    onClick={() => handleSearchProduct(query, undefined, undefined, undefined, undefined)}
+                    onClick={() => handleSearchProducts(query, undefined, undefined, undefined, undefined)}
                 >
                     Company
                 </button>
                 <button
                     className="searchByName__button"
-                    onClick={() => handleSearchProduct(undefined, query, undefined, undefined, undefined)}
+                    onClick={() => handleSearchProducts(undefined, query, undefined, undefined, undefined)}
                 >
                     Product
                 </button>
                 <button
                     className="searchByName__button"
-                    onClick={() => handleSearchProduct(undefined, undefined, query, undefined, undefined)}
+                    onClick={() => handleSearchProducts(undefined, undefined, query, undefined, undefined)}
                 >
                     Price
                 </button>
 
                 <button
                     className="searchByName__button"
-                    onClick={() => handleSearchProduct(undefined, undefined, undefined, query, undefined)}
+                    onClick={() => handleSearchProducts(undefined, undefined, undefined, query, undefined)}
                 >
                     PriceMin
                 </button>
 
                 <button
                     className="searchByName__button"
-                    onClick={() => handleFindProduct(undefined, undefined, undefined, undefined, query)}
+                    onClick={() => handleSearchProducts(undefined, undefined, undefined, undefined, query)}
                 >
                     PriceMax
                 </button>

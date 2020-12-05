@@ -2,11 +2,15 @@ import './Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser, saveProduct } from '../logic'
 import SaveProduct from './SaveProduct'
+import SearchProducts from './SearchProducts'
 
-export default function () {
+export default function Home () {
+
+    const [view, setView] = useState(sessionStorage.token? 'home' :'access')
 
     const [name, setName] = useState()
     //const [products, setProducts] = useState()
+    
 
     useEffect(() => {
         const { token } = sessionStorage
@@ -38,13 +42,15 @@ export default function () {
     // const handleGoToProfile =() => {
     //     setView('profile')
     // }
+   
 
 
     
     return ( 
     <section className="home">
         <h1>Hello, {name}</h1>
-        {< SaveProduct onSaveProduct={handleSaveProduct} />}
+        {view === 'home' &&<SaveProduct onSaveProduct={handleSaveProduct} />}
+        {view ==='home'&& <SearchProducts/>}
         {/* <button onClick={handleGoToProfile}></button> */}
         
     </section >

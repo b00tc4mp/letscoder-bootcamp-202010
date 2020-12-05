@@ -1,6 +1,6 @@
 import './SaveProduct.sass'
 
-export default function ({onSaveProduct}) {
+export default function SaveProduct({onSaveProduct}) {
     const handleSubmitProduct = event => {
         event.preventDefault()
 
