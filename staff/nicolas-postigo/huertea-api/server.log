@@ -2406,3 +2406,88 @@ info 2020-12-04T13:04:09.727Z - starting server
 info 2020-12-04T13:04:10.546Z - server running on port 4000
 info 2020-12-04T13:05:10.288Z - starting server
 info 2020-12-04T13:05:11.465Z - server running on port 4000
+info 2020-12-05T08:36:28.685Z - starting server
+info 2020-12-05T08:36:29.955Z - server running on port 4000
+info 2020-12-05T08:37:51.295Z - stopping server
+info 2020-12-05T08:37:59.075Z - starting server
+info 2020-12-05T08:37:59.282Z - server running on port 4000
+info 2020-12-05T09:19:46.544Z - stopping server
+info 2020-12-05T09:19:53.201Z - starting server
+info 2020-12-05T09:19:53.410Z - server running on port 4000
+info 2020-12-05T10:03:09.856Z - starting server
+info 2020-12-05T10:03:10.156Z - server running on port 4000
+info 2020-12-05T11:13:48.411Z - stopping server
+info 2020-12-05T11:14:03.409Z - starting server
+info 2020-12-05T11:14:03.795Z - server running on port 4000
+info 2020-12-05T11:15:54.925Z - stopping server
+info 2020-12-05T11:16:06.776Z - starting server
+info 2020-12-05T11:16:06.978Z - server running on port 4000
+error 2020-12-05T11:20:16.942Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "5 euros" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\create-offer.js:38:34
+error 2020-12-05T11:20:26.947Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "6 euros" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\create-offer.js:38:34
+info 2020-12-05T11:34:20.453Z - stopping server
+info 2020-12-05T11:34:32.647Z - starting server
+info 2020-12-05T11:34:32.849Z - server running on port 4000
+info 2020-12-05T12:02:00.852Z - stopping server
+info 2020-12-05T12:02:15.588Z - starting server
+info 2020-12-05T12:02:15.874Z - server running on port 4000
+info 2020-12-05T12:03:11.333Z - stopping server
+info 2020-12-05T12:04:44.264Z - starting server
+info 2020-12-05T12:04:44.581Z - server running on port 4000
+error 2020-12-05T12:05:38.589Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-05T15:18:20.571Z - stopping server
+info 2020-12-05T15:18:37.466Z - starting server
+info 2020-12-05T15:18:37.855Z - server running on port 4000
+info 2020-12-05T15:23:18.484Z - stopping server
+info 2020-12-05T15:23:53.816Z - starting server
+info 2020-12-05T15:23:54.028Z - server running on port 4000
+info 2020-12-05T15:32:03.696Z - stopping server
+info 2020-12-05T15:32:47.367Z - starting server
+info 2020-12-05T15:32:47.703Z - server running on port 4000
+info 2020-12-05T15:53:54.890Z - stopping server
+info 2020-12-05T15:54:07.988Z - starting server
+info 2020-12-05T15:54:08.187Z - server running on port 4000
+info 2020-12-05T16:20:25.974Z - stopping server
+info 2020-12-05T16:22:10.116Z - starting server
+info 2020-12-05T16:22:10.463Z - server running on port 4000
+info 2020-12-05T21:12:26.249Z - stopping server
+info 2020-12-05T21:12:46.670Z - starting server
+info 2020-12-05T21:12:47.306Z - server running on port 4000
+info 2020-12-05T22:06:47.184Z - stopping server
+info 2020-12-05T22:06:54.422Z - starting server
+info 2020-12-05T22:06:55.248Z - server running on port 4000
+info 2020-12-05T22:11:19.465Z - stopping server
+info 2020-12-05T22:11:25.916Z - starting server
+info 2020-12-05T22:11:26.116Z - server running on port 4000

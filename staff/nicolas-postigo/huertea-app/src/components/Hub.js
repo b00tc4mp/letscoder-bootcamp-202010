@@ -1,10 +1,19 @@
 import React from 'react'
 import './Hub.sass'
-
+import { useState } from 'react'
 //import { retrieveUser } from '../logic'
-import ListOffers from './ListOffers'
+import ListOffersRetrieve from './ListOffersRetrieve'
+import SearchOffers from './SearchOffers'
+import Detail from './Detail'
 
 function Hub({ fullname, onHub, onGoCreateoffer, offers }) {
+
+    const [view, setView] = useState('hub')
+
+    const handleGoDetail = () => {
+        setView('detail')
+      }
+
 
     return <sections>
         <form className="search_form" onSubmit={function (event) {
@@ -22,9 +31,9 @@ function Hub({ fullname, onHub, onGoCreateoffer, offers }) {
  */}        <div>
             <button onClick={onGoCreateoffer} className="offer">crea tu oferta &#127806;</button>
         </div>
-        <ListOffers offers={offers} />
-        <ListOffersFound/>
-
+        {<ListOffersRetrieve offers={offers} onGoDetail={handleGoDetail} />}
+        {<SearchOffers />}
+        {view === 'detail' && <Detail />}
     </sections>
 
 }

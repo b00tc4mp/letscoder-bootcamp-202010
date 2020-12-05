@@ -4,6 +4,7 @@ import Home from './Home'
 import Hub from './Hub'
 import Createoffer from './Createoffer'
 import Detailoffer from './Detailoffer'
+import FindOffer from './FindOffer'
 
 export {
     Register,
@@ -11,5 +12,6 @@ export {
     Home,
     Hub,
     Createoffer,
-    Detailoffer
+    Detailoffer,
+    FindOffer
 }

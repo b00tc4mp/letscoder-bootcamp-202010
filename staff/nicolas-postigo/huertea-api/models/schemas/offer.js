@@ -23,14 +23,15 @@ module.exports = new Schema({
         required: true
     },
 
+    price: {
+        type: Number,
+    },
+    
 /*     city: {
         type: String,
         required: true
     },
 
-/*     price: {
-        type: Number,
-    },
 
     location: {
         type: point,

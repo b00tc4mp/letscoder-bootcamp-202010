@@ -20,7 +20,7 @@ module.exports = function (ownerId) {
                 return cursor.lean()
                     .then(_offers => {
                         if (_offers)
-                            return _offers = _offers.map(({ _id, offername, titleoffer, image, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, owner }))
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, price, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, price, owner }))
                         else throw new NotFoundError('there are no offers to retrieve')
                     });
 

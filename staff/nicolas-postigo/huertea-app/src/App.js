@@ -2,12 +2,13 @@ import './App.css';
 import { Register, Login, Hub, Home, Createoffer } from './components'
 import { useState } from 'react'
 import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer } from './logic'
-
+import {Route, withRouter, Redirect} from 'react-router-dom'
 
 
 
 
 function App() {
+  // function App(props) {
   const [fullname, setFullname] = useState('text')
   const [view, setView] = useState('home')
   const [offers, setOffers] = useState([])
@@ -81,11 +82,11 @@ function App() {
     setView('hub')
   }
 
-  const handleCreateOffer = (offername, titleoffer, image) => {
+  const handleCreateOffer = (offername, titleoffer, image, price) => {
     const { token } = sessionStorage
 
     try {
-      createOffer(token, undefined, offername, titleoffer, image, error => {
+      createOffer(token, undefined, offername, titleoffer, image, price, error => {
         if (error) return alert(error.message)
 
         setView('hub')
@@ -99,6 +100,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* <Route exact path='/path' render={() => <Home onRegisterClick={this.handleRegisterClick} onLoginClick={this.handleLoginClick} /> } /> */}
         {view === 'home' && <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />}
         {view === 'register' && <Register onRegister={handleRegister} />}
         {view === 'login' && <Login onLogin={handleLogin} />}

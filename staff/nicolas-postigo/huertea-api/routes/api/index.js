@@ -27,7 +27,7 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
-router.get('/api/offers/find', jsonBodyParser, withErrorHandling(handleFindOffer))
+router.post('/api/offers/find', jsonBodyParser, withErrorHandling(handleFindOffer))
 
 
 module.exports = router
