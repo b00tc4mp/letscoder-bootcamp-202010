@@ -1,4 +1,4 @@
-const { validateUserName, validateEmail, validatePassword, validateAddress, validateCity, validatePhone } = require('./helpers/validations')
+const { validateUserName, validateEmail, validatePassword, validateAddress, validateCity, validatePhone, validateDescription } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
 const { User } = require('../models')
@@ -11,6 +11,7 @@ module.exports = function (userName, email, password, address, city, phone, desc
     validateAddress(address)
     validateCity(city)
     validatePhone(phone)
+    validateDescription(description)
 
     return semaphore(() =>
         User

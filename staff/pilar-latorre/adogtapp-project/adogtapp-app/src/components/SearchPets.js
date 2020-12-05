@@ -1,4 +1,4 @@
-//import './FindPets'
+import './SearchPets.sass'
 import FindPets from './FindPets'
 import { useState } from 'react'
 import {findPets} from '../logic'
@@ -15,7 +15,7 @@ function SearchPets(){
             findPets( token, queryShelter, city, queryPet, species, breed, (error, pets) => {
 
                 if (error) return alert(error.message)
-debugger
+
                 setResults(pets)
 
             })
@@ -36,36 +36,36 @@ debugger
                     />
     
                     <button
-                        className="searchByName__button"
+                        className="searchByName__button1"
                         onClick={() => handleFindPets(query, undefined, undefined, undefined, undefined)}
                     >
-                        Shelter
+                        SHELTER
                 </button>
                 <button
-                        className="searchByName__button"
+                        className="searchByName__button1"
                         onClick={() => handleFindPets( undefined, query, undefined, undefined, undefined)}
                     >
-                        City
+                        CITY
                 </button>
                 <button
                         className="searchByName__button"
                         onClick={() => handleFindPets( undefined, undefined, query, undefined, undefined)}
                     >
-                        Pet
+                        PET
                 </button>
 
                 <button
                         className="searchByName__button"
                         onClick={() => handleFindPets( undefined, undefined, undefined, query, undefined)}
                     >
-                        Species
+                        SPECIES
                 </button>
 
                 <button
                         className="searchByName__button"
                         onClick={() => handleFindPets( undefined, undefined, undefined, undefined, query)}
                     >
-                        Breed
+                        BREED
                 </button>
 
      

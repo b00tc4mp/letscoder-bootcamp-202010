@@ -1,0 +1,48 @@
+$fontmain: Nerko One, cursive
+
+
+.search
+    margin-top: 2vw
+    &__input
+        margin: .2vw
+        height: 4vh
+        border-radius: 20px
+        outline: none
+        border: .5px solid purple
+        margin-bottom: 2vw
+        font-family: $fontmain
+        font-size: 1.2rem
+        &::placeholder
+            padding-left: 5px
+ 
+.searchByName
+    text-align: center
+    color: purple
+    
+    &__button
+        border-radius: 20px
+        background-color: purple
+        height: 5vw
+        font-size: 1.2rem
+        font-weight: bold
+        outline: none
+        color: white
+        font-family: $fontmain
+    &__button1
+        display: none
+    
+
+@media (min-width: 1000px)
+    .search
+        &__input
+            height: 4vh
+            margin: 0.2vw
+    .searchByName
+        &__button
+            margin: 0.2vw
+            height: 2.5vw
+
+            
+
+
+

@@ -6,12 +6,13 @@ const { User } = require('../models')
 
 
 module.exports = function (petId, name, breed, species, color, description, shelter) {
-    validateId(shelter)
+    
     if (typeof petId !== 'undefined') validateId(petId)
     validateName(name)
     validateBreed(breed)
     validateColor(color)
     validateDescription(description)
+    validateId(shelter)
 
     const _id = ObjectId(shelter)
 

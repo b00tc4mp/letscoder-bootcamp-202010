@@ -20,9 +20,8 @@ module.exports = {
 
     },
     validateAddress(address) {
-        if (typeof address !== 'string') throw new TypeError(`${address} is not a address`)
+        if (typeof address !== 'string') throw new TypeError(`${address} is not an address`)
 
-        if (!address.trim().length) throw new Error('address is empty or blank')
     },
     validateCity(city) {
         if (typeof city !== 'string') throw new TypeError(`${city} is not a city`)
@@ -33,13 +32,21 @@ module.exports = {
     validatePhone(phone) {
         if (typeof phone !== 'string') throw new TypeError(`${phone} is not a phone`)
 
+        if (!phone.trim().length) throw new Error('phone is empty or blank')
     },
+
+    validateDescription(description) {
+        if (typeof description !== 'string') throw new TypeError(`${description} is not a description`)
+       
+    },
+
+
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
+        if (typeof id !== 'string') throw new TypeError(`${id} is not an id`)
 
-        if (!id.trim().length) throw new ContentError('id is empty or blank')
+        if (!id.trim().length) throw new Error('id is empty or blank')
 
-        if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
+        if (id.length !== 24) throw new Error(`id length ${id.length} is not 24`)
     },
     validateName(name) {
         if (typeof name !== 'string') throw new TypeError(`${name} is not a name`)
@@ -53,17 +60,15 @@ module.exports = {
     },
     validateColor(color) {
         if (typeof color !== 'string') throw new TypeError(`${color} is not a color`)
-    },
 
-    validateDescription(description) {
-        if (typeof description !== 'string') throw new TypeError(`${description} is not a description`)
+        if (!color.trim().length) throw new Error('color is empty or blank')
 
     },
 
     validateQuery(query) {
         if (typeof query !== 'string') throw new TypeError(`${query} is not a query`)
 
-        if (!query.trim().length) throw new ContentError('query is empty or blank')
+        if (!query.trim().length) throw new Error('query is empty or blank')
     }
 
    
