@@ -17,7 +17,7 @@ const router = new Router()
 
 router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
 
-router.put('api/users', jsonBodyParser, withErrorHandling(handleEditUser))
+router.post('/api/users/edit', jsonBodyParser, withErrorHandling(handleEditUser))
 
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 

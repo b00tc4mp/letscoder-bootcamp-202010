@@ -12,7 +12,7 @@ export default function (email, fullname, artistName, city, description, tags, c
     validateCallback(callback)
 
 
-    call('PUT', 'http://192.168.0.21:4000/api/v2/users', { 'Content-type': 'application/json' }, 
+    call('POST', 'http://192.168.0.21:4000/api/users/edit', { 'Content-type': 'application/json' }, 
     JSON.stringify({ email, fullname, artistName, city, description, tags }),
     (status, response) => {
         debugger

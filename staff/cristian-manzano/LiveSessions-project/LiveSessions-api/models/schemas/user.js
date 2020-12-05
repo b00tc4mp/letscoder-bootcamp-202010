@@ -45,6 +45,11 @@ module.exports = new Schema({
         required: false
     },
 
+    tags: {
+        type: String,
+        required: false
+    },
+    
     description: {
         type: String,
         required: false
