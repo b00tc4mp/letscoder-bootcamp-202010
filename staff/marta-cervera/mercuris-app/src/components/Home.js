@@ -24,8 +24,7 @@ export default function () {
         }
     },[])
     const handleSaveProduct = (name, description, price) => {
-        debugger
-        const { token } = sessionStorage
+         const { token } = sessionStorage
         
         try {
             saveProduct(undefined, token, name, description, price, error=> {
@@ -36,13 +35,18 @@ export default function () {
         }
     }
 
+    // const handleGoToProfile =() => {
+    //     setView('profile')
+    // }
+
 
     
     return ( 
     <section className="home">
         <h1>Hello, {name}</h1>
         {< SaveProduct onSaveProduct={handleSaveProduct} />}
-    
+        {/* <button onClick={handleGoToProfile}></button> */}
+        
     </section >
     );
 }

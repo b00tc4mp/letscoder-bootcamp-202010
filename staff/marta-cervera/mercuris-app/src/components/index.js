@@ -5,6 +5,9 @@ import Access from './Access'
 import Header from './Header'
 import Footer from './Footer'
 import SaveProduct from './SaveProduct'
+import SearchProducts from'./SearchProducts'
+import FindProducts from './FindProducts'
+import SearchProductClient from './SearchProductClient'
 
 export {
     SignUp,
@@ -12,6 +15,11 @@ export {
     Home,
     Access,
     Header,
-    Footer,
-    SaveProduct
+    Footer,    
+    SaveProduct,
+    SearchProducts,
+    FindProducts,
+    SearchProductClient
+    
+    
 }

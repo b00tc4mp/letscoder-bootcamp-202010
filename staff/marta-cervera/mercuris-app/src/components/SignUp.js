@@ -11,14 +11,16 @@ function SignUp({ onSignUp }) {
         
             onSignUp(name, email, password)
         }}>
-            <input type ="text" name="name" placeholder="Company Name" />
+            <input type ="text" name ="name" placeholder="Company Name" />
             <input type="email" name="email" placeholder="e-mail"/>
             <input type="password" name="password" placeholder="password" />
-            {/* <input type="text" name="contact" placeholder="Contact required" /> */}
+            {/* <input type="text" name="contact" placeholder="contact" /> */}
+            
+            
             <button>Send</button>
 
         </form>
-
+        <p className="signUp">Already have an account? <span className="signUp__span" onClick={onSignUp}>Sign In</span></p> 
     </section>
 }
 

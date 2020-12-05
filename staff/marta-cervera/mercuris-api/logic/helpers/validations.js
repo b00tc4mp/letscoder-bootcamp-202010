@@ -38,7 +38,13 @@ module.exports = {
     },
     validatePrice(price) {
         if (typeof price !== 'string') throw new TypeError(price + ' is not an id')
-    }
+    },
     
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
+        if (!query.trim().length) throw new ContentError('query is empty or blank')
+    }
 }
+
+

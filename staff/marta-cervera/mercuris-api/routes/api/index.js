@@ -5,21 +5,23 @@ const {
     handleRegisterUser,
     handleAuthenticateUser,
     handleRetrieveUser,
-    handleSaveProduct
+    handleSaveProduct,
+    handleFindProduct
 
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
 
 const router = new Router()
-//register
+//registerUser
 router.post('/api/users', jsonBodyParser,(handleRegisterUser))
-//authenticate
+//authenticateUser
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
-//retrieve
+//retrieveUser
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 //saveProduct
 router.post('/api/products',jsonBodyParser, withErrorHandling(handleSaveProduct))
-
+//findProduct
+router.post('/api/products/find', jsonBodyParser, withErrorHandling(handleFindProduct))
 
 module.exports = router

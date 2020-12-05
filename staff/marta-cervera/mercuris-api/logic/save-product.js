@@ -2,12 +2,14 @@ const { validateId, validateDescription,validatePrice } = require('./helpers/val
 const { Product, User } = require('../models')
 const { NotFoundError } = require('../errors')
 const { ObjectId } = require('mongodb')
+const { validateName } = require('../../mercuris-app/src/logic/helpers/validations')
 
 
 
 module.exports = function (productId, ownerId, name, description, price) {
     validateId(ownerId)
     if (typeof productId !== 'undefined') validateId(productId)
+    validateName(name)
     validateDescription(description)
     validatePrice(price)
 

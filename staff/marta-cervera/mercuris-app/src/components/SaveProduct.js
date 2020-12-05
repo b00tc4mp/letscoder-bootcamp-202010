@@ -25,3 +25,8 @@ export default function ({onSaveProduct}) {
     </section>
 
 }
+
+{/* <select className="CreatePet__select" name="visibility" id="visibility">
+                <option className="CreatePet__option" value="dog">Dog</option>
+                <option className="CreatePet__option" value="cat">Cat</option>
+            </select> */}

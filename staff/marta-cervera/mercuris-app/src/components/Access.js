@@ -15,15 +15,12 @@ function Access({ onGoToSignUp, onGoToSignIn, onGoToSearch }){
             <h1 className="search__title">Search your favourite product</h1>
             <button onClick = {onGoToSearch} className="search__btn" >Search</button>
 
-        </div>      
+        </div>       
 
-    
-
+        
     </section>
 
 }
 
 export default Access
 
-
-{/* <p className="signUp__p">Already have an account? <span className="signUp__span" onClick={onGoToSignIn}>Sign In</span></p> */}

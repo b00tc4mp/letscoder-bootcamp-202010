@@ -1,6 +1,6 @@
 
 import './App.css';
-import { SignUp, SignIn, Home, Access, Header, Footer} from './components/Index'
+import { SignUp, SignIn, Home, Access, Header, Footer, SearchProductClient} from './components/Index'
 import { useState } from 'react'
 import {registerUser, authenticateUser} from './logic'
 
@@ -48,7 +48,7 @@ const handleGoToSignUp = () => {
 
 const handleGoToSearch = () => {
 
-  setView('sign-up')
+  setView('search')
 }
 
   return (
@@ -58,6 +58,7 @@ const handleGoToSearch = () => {
           {view === 'access' && <Access onGoToSignIn={handleGoToSignIn} onGoToSignUp={handleGoToSignUp} onGoToSearch={handleGoToSearch}/>}
           {view === 'sign-up' && <SignUp onSignUp={handleSignUp}/>}
           {view === 'sign-in' && <SignIn onSignIn={handleSignIn}/>}
+          {view==='search'&& <SearchProductClient/>}
           {view === 'home' && <Home/>}          
       </main>
       <Footer></Footer>
