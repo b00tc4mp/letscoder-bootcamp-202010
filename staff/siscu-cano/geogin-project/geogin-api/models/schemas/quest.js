@@ -45,7 +45,14 @@ module.exports = new Schema(
           type: Point
         }
       }
-    ]
+    ],
+    description: {
+      type: String
+    },
+    owner: {
+      type: ObjectId,
+      ref: 'User'
+    }
   },
   { timestamps: true }
 )
