@@ -6,7 +6,7 @@ export default function (token, articleId, callback) {
     validateId(articleId)
     validateCallback(callback)
 
-    call('PATCH', 'http://localhost:4000/api/users/articles', { Authorization: `Bearer ${token}`, 'Content-type': 'application/json' },
+    call('PATCH', `http://localhost:4000/api/users/articles/${articleId}`, { Authorization: `Bearer ${token}`, 'Content-type': 'application/json' },
         JSON.stringify({ savedArticles: [articleId] }),
         (status, response) => {
             if (status === 0)

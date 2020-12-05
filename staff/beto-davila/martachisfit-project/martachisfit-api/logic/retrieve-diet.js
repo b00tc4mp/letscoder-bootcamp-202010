@@ -41,7 +41,11 @@ module.exports = function (userId) {
 
             } else if ( calories < 2000 ) {
 
-                let _dietId = '5fc8838518ca4960a2a83720'
+                let diets = ['5fc8838518ca4960a2a83720', '5fc8838518ca4960a2a83722', '5fc8838518ca4960a2a8371e']
+
+                let random = Math.floor(Math.random() * diets.length)
+
+                const _dietId = diets[random]
 
                 return Diet.findById(_dietId).lean()
                     .then(_diet => {

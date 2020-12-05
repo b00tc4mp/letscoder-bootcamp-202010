@@ -19,16 +19,16 @@ debugger
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            const { savedFood } = user
+            const { chosenFoods } = user
 
-            return Promise.all(savedFood.map(foodId => 
+            return Promise.all(chosenFoods.map(foodId => 
                  Food.findById(foodId).lean()
                     .then(food => {
                         if (!food) throw new NotFoundError(`food with id ${foodId} not found`)
 
-                        const {name, calories, carbs, protein, fats} = food
+                        const {name, calories, carbs, protein, fats, _id} = food
 
-                         return({ name, calories, carbs, protein, fats })
+                         return({ name, calories, carbs, protein, fats, _id })
                         //  return addedFood
                     })
             ))

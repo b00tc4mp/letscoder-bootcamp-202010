@@ -9,7 +9,7 @@ module.exports = (req, res, handleError) => {
     const { headers: { authorization } } = req
 
     const token = authorization.replace('Bearer ', '')
-debugger
+
     try {
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
         retrieveSavedArticles(userId)

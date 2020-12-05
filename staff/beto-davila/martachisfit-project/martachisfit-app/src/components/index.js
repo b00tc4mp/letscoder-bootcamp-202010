@@ -13,6 +13,7 @@ import Articles from './Articles'
 import Feedback from './Feedback'
 import UserProfile from './UserProfile'
 import ChosenArticle from './ChosenArticle'
+import Logout from './Logout'
 
 export {
     Landing,
@@ -29,5 +30,6 @@ export {
     Articles,
     Feedback,
     UserProfile,
-    ChosenArticle
+    ChosenArticle,
+    Logout
 }

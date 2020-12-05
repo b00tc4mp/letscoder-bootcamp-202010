@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { macrosAfterCalories, caloriesCalc, registerUser, authenticateUser } from './logic/index';
 
 function App() {
-  const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-in')
+  const [view, setView] = useState(sessionStorage.token? 'home' : 'landing')
   const [goal, setGoal] = useState()
 
   const handleGoToSignIn = () => {
@@ -28,7 +28,7 @@ function App() {
       registerUser(fullname, email, password, calories, error => {
         if (error) return alert(error.message)
   
-        setView('home')
+        setView('sign-in')
       })
     } catch (error) {
         alert(error.message)

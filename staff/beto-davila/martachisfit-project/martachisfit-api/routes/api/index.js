@@ -7,7 +7,7 @@ const {
     handleRetrieveUser,
     // handleAddFood,
     handleFindFood,
-    // handleToggleFoodUserDiet,
+    handleToggleFoodUserDiet,
     handleRetrieveSavedFood,
     handleAddFoodUserDiet,
     handleRetrieveDiet,
@@ -40,13 +40,13 @@ router.get('/api/users/foods', withErrorHandling(handleRetrieveSavedFood))
 router.post('/api/foods', jsonBodyParser, withErrorHandling(handleFindFood))
 
 // toggle food
-// router.patch('/api/users', jsonBodyParser, withErrorHandling(handleToggleFoodUserDiet))
+router.patch('/api/users/foods/:foodId', jsonBodyParser, withErrorHandling(handleToggleFoodUserDiet))
 
 // add food to user diet
 router.patch('/api/users/foods', jsonBodyParser, withErrorHandling(handleAddFoodUserDiet))
 
 // add article to read later
-router.patch('/api/users/articles', jsonBodyParser, withErrorHandling(handleAddUserArticles))
+router.patch('/api/users/articles/:articleId', jsonBodyParser, withErrorHandling(handleAddUserArticles))
 
 // retrieve user diet
 router.get('/api/users/diets', withErrorHandling(handleRetrieveDiet))

@@ -1,14 +1,14 @@
-import { retrieveSavedFood, addFoodUserDiet } from '../logic'
+import { addFoodUserDiet } from '../logic'
 import './styles/FoodResult.sass' 
 import { useState } from 'react'
-import { SavedFood } from '.'
+// import { SavedFood } from '.'
 
-export default function FoodResult ({ result }) {
+export default function FoodResult ({ result, onGoToProfile }) {
 
     const { token } = sessionStorage
 
     const [view, setView] = useState()
-    const [food, setFood] = useState()
+    // const [food, setFood] = useState()
 
     const {_id: foodId, name, calories, serving, carbs, protein, fats} = result
 
@@ -17,28 +17,31 @@ export default function FoodResult ({ result }) {
             addFoodUserDiet(token, foodId, error => {
                 if (error) return alert(error.message)
 
-                setView('added-food')
+                setView(true)
+                setTimeout(() => {
+                    setView(false)
+                    }, 4000)
             }) 
         } catch (error) {
             return alert(error.message)
         }
     }
 
-    const handleRetrieveDiet = () => {
-        try {
-            retrieveSavedFood(token, (error, food) => {
-                if (error) return alert(error.message)
+    // const handleRetrieveDiet = () => {
+    //     try {
+    //         retrieveSavedFood(token, (error, food) => {
+    //             if (error) return alert(error.message)
     
-                // const {name, calories} = food
-                setFood(food)
-                setView('saved-food')
-            })
+    //             // const {name, calories} = food
+    //             setFood(food)
+    //             setView('saved-food')
+    //         })
             
-        } catch (error) {
-            return alert(error.message)
-        }
+    //     } catch (error) {
+    //         return alert(error.message)
+    //     }
 
-    }
+    // }
 
     return <> 
     <section className="food-result">
@@ -51,7 +54,7 @@ export default function FoodResult ({ result }) {
         <p className="food-result__item">Grasas: {fats} gr.</p>
         <button onClick={handleSaveFood}className="food-result__add">Añadir</button>
     </section>
-    {view === 'added-food' && <p className="food-result__added">¡Alimento añadido! Puede ir a visualizar su <a onClick={handleRetrieveDiet} href="#record">registro</a> o continuar añadiendo alimentos.</p>}
-    {view === 'saved-food' && <SavedFood food={food} />}
+    {view === true && <p className="food-result__added">¡Alimento añadido! Puede ir a visualizarlo en su perfil o continuar añadiendo alimentos.</p>}
+    {/* {view === 'saved-food' && <SavedFood food={food} />} */}
 </>
 }

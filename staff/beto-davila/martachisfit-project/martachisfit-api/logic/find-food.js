@@ -11,10 +11,8 @@ module.exports = query => {
             //.toArray()
             .then(food => {
 
-            if(food) {
-                // delete food[0]._id
+            if(food) 
                 return food
-            }
             else
                 throw new NotFoundError('No results')
     })

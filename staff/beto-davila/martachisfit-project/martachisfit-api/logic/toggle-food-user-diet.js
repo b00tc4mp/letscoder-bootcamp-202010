@@ -14,31 +14,31 @@ module.exports = (userId, foodId) => {
         
         const { _id } = user
 
-        let { savedFood } = user
+        let { chosenFoods } = user
 
-        user = { userId: _id, savedFood: [] }
+        user = { userId: _id, chosenFoods: [] }
 
         return Food.findOne({_id: ObjectId(foodId)})
             .then(food => {
 
             if (!food) throw new NotFoundError(`food with id ${foodId} not found`)
 
-            // look for foodId before adding. If it exists remove it, otherwise add it to 'savedFood' array
-            if (savedFood.length) {
+            // look for foodId before adding. If it exists remove it, otherwise add it to 'chosenFoods' array
+            if (chosenFoods.length) {
                 // Store index position
-                const index = savedFood.findIndex(food => food.toString() === foodId)
+                const index = chosenFoods.findIndex(food => food.toString() === foodId)
     
                 // if < 0, does not exist in array, add it, else, remove it with splice method
-                index < 0? savedFood.push(ObjectId.createFromHexString(foodId)) : savedFood.splice(index, 1)
+                index < 0? chosenFoods.push(ObjectId.createFromHexString(foodId)) : chosenFoods.splice(index, 1)
     
-                return User.updateOne({ _id }, { $set: { savedFood } })
+                return User.updateOne({ _id }, { $set: { chosenFoods } })
                     .then(result => {})
     
             } else {
                 // add new food to empty array
-                savedFood.push(ObjectId.createFromHexString(foodId))
+                chosenFoods.push(ObjectId.createFromHexString(foodId))
     
-                return User.updateOne({ _id }, { $set: { savedFood } })
+                return User.updateOne({ _id }, { $set: { chosenFoods } })
                     .then(result => {})
             }
 

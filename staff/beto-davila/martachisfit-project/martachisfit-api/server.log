@@ -882,3 +882,111 @@ info 2020-12-04T14:50:52.845Z - starting server
 info 2020-12-04T14:50:53.919Z - server running on port 4000
 info 2020-12-04T16:11:18.453Z - starting server
 info 2020-12-04T16:11:18.584Z - server running on port 4000
+info 2020-12-05T04:20:00.087Z - stopping server
+info 2020-12-05T05:57:30.448Z - starting server
+info 2020-12-05T05:57:30.587Z - server running on port 4000
+info 2020-12-05T06:01:51.664Z - stopping server
+info 2020-12-05T06:07:45.408Z - starting server
+info 2020-12-05T06:07:45.542Z - server running on port 4000
+info 2020-12-05T06:17:23.292Z - stopping server
+info 2020-12-05T06:17:32.596Z - starting server
+info 2020-12-05T06:17:32.706Z - server running on port 4000
+info 2020-12-05T06:19:04.955Z - stopping server
+info 2020-12-05T06:19:30.831Z - starting server
+info 2020-12-05T06:19:30.943Z - server running on port 4000
+info 2020-12-05T06:30:34.945Z - stopping server
+info 2020-12-05T06:30:48.026Z - starting server
+info 2020-12-05T06:30:48.167Z - server running on port 4000
+info 2020-12-05T09:06:13.663Z - stopping server
+info 2020-12-05T11:17:48.294Z - starting server
+error 2020-12-05T11:17:48.347Z - TypeError: Invalid schema configuration: `True` is not a valid type at path `img.required`. See http://bit.ly/mongoose-schematypes for a list of valid schema types.
+    at Schema.interpretAsType (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:998:11)
+    at Schema.path (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:674:27)
+    at Schema.add (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:496:12)
+    at Schema.add (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:507:12)
+    at new Schema (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:127:10)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/models/schemas/recipe-img.js:3:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/models/schemas/index.js:6:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+info 2020-12-05T11:17:48.349Z - stopping server
+info 2020-12-05T11:18:43.319Z - starting server
+info 2020-12-05T11:18:43.456Z - server running on port 4000
+error 2020-12-05T12:20:52.813Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:22:26.283Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:23:06.029Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:23:39.242Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:27:41.567Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T12:29:02.410Z - stopping server
+info 2020-12-05T12:29:13.186Z - starting server
+info 2020-12-05T12:29:13.685Z - server running on port 4000
+info 2020-12-05T12:31:46.411Z - starting server
+info 2020-12-05T12:31:46.864Z - server running on port 4000
+error 2020-12-05T12:36:27.426Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T12:39:20.811Z - starting server
+info 2020-12-05T12:39:21.236Z - server running on port 4000
+error 2020-12-05T12:40:47.362Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:40:52.761Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T12:41:01.995Z - starting server
+info 2020-12-05T12:41:02.117Z - server running on port 4000
+info 2020-12-05T13:37:15.488Z - stopping server
+info 2020-12-05T13:38:38.885Z - starting server
+info 2020-12-05T13:38:39.009Z - server running on port 4000
+error 2020-12-05T13:38:56.453Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T15:26:33.970Z - stopping server
+info 2020-12-05T15:26:36.516Z - starting server
+info 2020-12-05T15:26:36.646Z - server running on port 4000
+info 2020-12-05T16:56:43.530Z - stopping server
+info 2020-12-05T16:56:45.275Z - starting server
+info 2020-12-05T16:56:45.398Z - server running on port 4000
+error 2020-12-05T16:57:32.009Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T16:57:53.514Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T16:58:21.277Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T16:59:12.612Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T17:43:54.829Z - stopping server
+info 2020-12-05T17:44:09.130Z - starting server
+info 2020-12-05T17:44:09.492Z - server running on port 4000
+info 2020-12-05T17:47:40.385Z - starting server
+info 2020-12-05T17:47:40.499Z - server running on port 4000
+info 2020-12-05T18:13:16.522Z - stopping server
+info 2020-12-05T18:13:20.421Z - starting server
+info 2020-12-05T18:13:20.557Z - server running on port 4000
+info 2020-12-05T18:38:47.369Z - stopping server

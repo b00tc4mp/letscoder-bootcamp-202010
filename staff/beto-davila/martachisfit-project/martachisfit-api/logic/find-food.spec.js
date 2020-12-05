@@ -47,7 +47,7 @@ describe('SPEC findFood()', () => {
             let query
 
             beforeEach(() => query = ['unacomidainventada', '123123123', 'otroalimentoquenocomeria', 'siexisteestacomidaquevengadiosylovea'].random())
-
+            
             it('should succeed on showing no results', () =>
                 findFood(query)
                     .then(result => {
@@ -56,7 +56,6 @@ describe('SPEC findFood()', () => {
                     })
             )
         })
-        debugger
         afterEach(() =>
             Food
                 .deleteOne({_id: foodId})

@@ -13,23 +13,23 @@ describe('SPEC authenticateUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {
-        let userId, fullname, email, password
+        let userId, fullname, email, password, calories
 
         beforeEach(() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
+            calories = Math.floor(Math.random() * 3000)
 
-            const user = { fullname, email, password }
+            return bcryptjs.hash(password, 10)
+                .then(hash => {
+                    const user = { fullname, email, password: hash, calories }
 
-            return User
-            .findOne({ email })
-            .then(user => bcryptjs.hash(password, 10))
-            .then(hash => User.create({ fullname, email, password: hash })
-            .then(user => userId = user.id))
-
-            // return User.create(user).then(user => userId = user.id)
+                    return User.create(user)
+                        .then(user => userId = user.id)
+                })
         })
+
         it('should succeed on correct credentials', () =>
             authenticateUser(email, password).then(_userId => expect(_userId).to.equal(userId)))
 

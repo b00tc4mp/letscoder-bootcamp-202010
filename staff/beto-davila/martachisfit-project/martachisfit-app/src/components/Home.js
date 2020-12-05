@@ -2,7 +2,7 @@ import './styles/Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser, retrieveArticles, addUserArticles, retrieveSavedArticles, retrieveChosenArticle } from '../logic'
 import logo from '../../src/logo.png'
-import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle } from './index'
+import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout } from './index'
 
 export default function Home () {
     const [name, setName] = useState()
@@ -64,21 +64,16 @@ export default function Home () {
         }
     }
 
-    const handleSaveArticle = () => {
+    const handleSaveArticle = articleId => {
         try {
-            retrieveArticles(token, (error, articles) => {
+            addUserArticles(token, articleId, error => {
                 if (error) return alert(error.message)
 
-                const { id: articleId } = articles
-                addUserArticles(token, articleId, error => {
-                    if (error) return alert(error.message)
-
-                    setMessage(true)
-                    setTimeout(() => {
-                        setMessage(false)
-                    }, 4000)
-                }) 
-            })
+                setMessage(true)
+                setTimeout(() => {
+                    setMessage(false)
+                }, 4000)
+            }) 
         } catch (error) {
             return alert(error.message)
         }
@@ -121,10 +116,15 @@ export default function Home () {
         })
     }
 
-    const handleLogOut = () => {
-        delete sessionStorage.token
+    const handleGoToLogOut = () => {
+        setView('logout')
     }
 
+    const handleGoToLanding = () => {
+        delete sessionStorage.token
+        window.location.reload(false)
+    }
+ 
 
     return <><div className="home">
     <img className="home__logo" alt="logo" src={logo} height="100" width="100"></img>
@@ -134,8 +134,9 @@ export default function Home () {
     {view === 'diet-design' && <DietDesign />}
     {view === 'user-diet' && <UserDiet onGoToUserDiet={handleGoToUserDiet}/>}
     {(view === 'articles' && article) && <Articles source={article} message={message} onGoToRandomArticle={handleGoToRandomArticle} onSaveArticle={handleSaveArticle}/>}
-    {view === 'profile' && <UserProfile onLogOut={handleLogOut} name={name} savedArticles={savedArticles} onGoToChosenArticle={handleGoToChosenArticle}/>}
+    {view === 'profile' && <UserProfile onLogout={handleGoToLogOut} name={name} savedArticles={savedArticles} onGoToChosenArticle={handleGoToChosenArticle}/>}
     {view === 'chosen-article' && <ChosenArticle source={chosenArticle} onReadArticle={handleReadArticle}/>}
+    {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name}/>}
     </div>
     </>
 }

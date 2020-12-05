@@ -14,14 +14,15 @@ describe('SPEC retrieveUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {
-        let userId, fullname, email, password
+        let userId, fullname, email, password, calories
 
         beforeEach(() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
+            calories = Math.floor(Math.random() * 3000)
 
-            const user = { fullname, email, password }
+            const user = { fullname, email, password, calories }
 
             return User.create(user)
                 .then(user => userId = user.id)
@@ -34,6 +35,7 @@ describe('SPEC retrieveUser()', () => {
                     expect(user.fullname).to.equal(fullname)
                     expect(user.email).to.equal(email)
                     expect(user.password).to.be.undefined
+                    expect(user.calories).to.equal(calories)
                 })
         )
 
