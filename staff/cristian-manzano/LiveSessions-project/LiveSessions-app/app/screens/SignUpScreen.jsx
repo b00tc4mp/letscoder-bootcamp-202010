@@ -4,13 +4,13 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 
 function SignUpScreen({ onSignUp }) {
     const [ email, setEmail ] = useState('')
-    const [ artistName, setArtistName ] = useState('')
+    const [ fullname, setFullname ] = useState('')
     const [ password , setPassword ] = useState('')
     
     return (
         <SafeAreaView>
         <KeyboardAvoidingView
-      behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
+    //   behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
     >
         <ScrollView>
             <View style={styles.formSignUp}>
@@ -23,8 +23,8 @@ function SignUpScreen({ onSignUp }) {
                     placeholder=" Fullname"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40" 
-                    onChangeText={artistName => setArtistName(artistName)}
-                    value={artistName}>
+                    onChangeText={fullname => setFullname(fullname)}
+                    value={fullname}>
                 </TextInput>
 
                 <TextInput
@@ -43,43 +43,6 @@ function SignUpScreen({ onSignUp }) {
                     onChangeText={password => setPassword(password)}
                     value={password} >
                 </TextInput>
-
-
-                {/* Add the TextInput bellow on edit profice
-
-                <TextInput
-                    placeholder=" Name"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={name => setName(name)}
-                    name={name}
-                     >
-                </TextInput>
-
-                <TextInput
-                    placeholder=" Last Name"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={lastName => setLastName(lastName)}
-                    value={lastName} >
-                </TextInput>
-
-                <TextInput
-                    placeholder=" City"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={city => setCity(city)}
-                    value={city} >
-                </TextInput>
-
-                <TextInput
-                    placeholder=" Description"
-                    style={styles.descriptionSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={description => setDescription(description)}
-                    value={description} >
-                </TextInput> */}
-
 
                 <TouchableOpacity style={styles.signUpButton}
                 onPress={ () => {onSignUp ({ email, fullname, password })}}>
@@ -121,15 +84,6 @@ const styles = StyleSheet.create({
         borderColor: "#343a40",
         color: "#343a40"
     },
-
-    // descriptionSignUp: {
-    //     marginLeft: "5%",
-    //     width: "90%",
-    //     height: "25%",
-    //     borderWidth: 1,
-    //     borderColor: "white",
-    //     color: "white"
-    // },
 
     signUpButton: {
         alignSelf: "center",

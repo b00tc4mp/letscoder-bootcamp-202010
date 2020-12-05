@@ -4,15 +4,17 @@ import { Alert, StyleSheet, Text, SafeAreaView, View, TouchableOpacity } from "r
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // Logic
 import { retrieveUser } from '../logic';
+import { editUser } from '../logic';
+//Screens
 import ProfileScreen from './ProfileScreen'
 import EditProfileScreen from './EditProfileScreen'
-//Screens
 
 
 export default function Home() {
     const [name, setName] = useState()
 
-    const [view, setView] = useState('sign-in')
+
+    const [view, setView] = useState('')
 
     useEffect(() => { 
         AsyncStorage.getItem('token')
@@ -23,6 +25,7 @@ export default function Home() {
               const { fullname } = user
 
                 setName(fullname)
+                setView('profile')
             })
         } catch (error) {
             Alert.alert(error.message)
@@ -34,12 +37,30 @@ export default function Home() {
     setView('edit-profile')
   }
 
+  const handleCancelEditProfile = () => {
+    setView('profile')
+  }
+
+  const handleEditProfile = ({ fullname, artistName, city, description, tags }) => {
+    console.log(fullname, artistName, city, description, tags)
+    debugger
+    try{
+      editUser( fullname, artistName, city, description, tags, error => {
+        if (error) return Alert.alert(error.message)
+
+        setView('profile')
+      })
+    } catch(error) {
+      Alert.alert(error.message)
+    }
+
+  }
+
   return (
 
     <View>
-
-      <ProfileScreen onGoToEditProfile={handleGoToEditProfile}/>
-      { view === 'edit-profile' && <EditProfileScreen />}
+      { view ===  'profile' && <ProfileScreen onGoToEditProfile={handleGoToEditProfile}/>}
+      { view === 'edit-profile' && <EditProfileScreen onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile}/>}
     </View>
     
   );

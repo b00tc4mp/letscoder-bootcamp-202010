@@ -4,10 +4,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
-function SignUpScreen({ onSignUp }) {
+function SignUpScreen({ onCancelEditProfile, onEditProfile }) {
     const [ fullname, setFullname ] = useState('')
     const [ artistName, setArtistName ] = useState('')
     const [ city, setCity ] = useState('')
+    const [ tags, setTags ] = useState('')
     const [ description, setDescription ] = useState('')
     
     return (
@@ -16,7 +17,7 @@ function SignUpScreen({ onSignUp }) {
     //   behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
     >
         <ScrollView>
-            <View style={styles.formSignUp}>
+            <View style={styles.formEditProfile}>
                 <View style={styles.signUpHeader}>
                 <Image style={styles.logo} source={require('../assets/logo.png')} />
        
@@ -26,17 +27,15 @@ function SignUpScreen({ onSignUp }) {
                     placeholder= "fullname"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40" 
-                    onChangeText={artistName => setArtistName(artistName)}
-                    value={artistName}>
+                    onChangeText={fullname => setFullname(fullname)}
+                    value={fullname}>
                 </TextInput>
 
                 <TextInput
                     placeholder=" Artist Name"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
-                    onChangeText={name => setName(name)}
-                    name={name}
-                     >
+                    onChangeText={artistName => setArtistName(artistName)}>
                 </TextInput>
 
                 <TextInput
@@ -44,6 +43,14 @@ function SignUpScreen({ onSignUp }) {
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
                     onChangeText={city => setCity(city)}
+                    >
+                </TextInput>
+
+                <TextInput
+                    placeholder=" Music Tags (Rock, Jazz, punk, etc) "
+                    style={styles.inputsSignUp}
+                    placeholderTextColor="#343a40"
+                    onChangeText={tags => setTags(tags ? tags.split(', ') : [])}
                     >
                 </TextInput>
 
@@ -56,8 +63,13 @@ function SignUpScreen({ onSignUp }) {
                 </TextInput>
 
                 <TouchableOpacity style={styles.editProfileButton}
-                onPress={ () => {onSignUp ({ fullname, artistName, city, description })}}>
-                    <Text style={styles.buttonText}>Sign Up!</Text>
+                onPress={ () => {onEditProfile ({ fullname, artistName, city, description, tags })}}>
+                    <Text style={styles.buttonText}>Save!</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.editProfileButton}
+                onPress={ () => {onCancelEditProfile()}}>
+                    <Text style={styles.buttonText}>Cancel!</Text>
                 </TouchableOpacity>
 
             </View>
@@ -68,16 +80,16 @@ function SignUpScreen({ onSignUp }) {
 }
 
 const styles = StyleSheet.create({
-    formSignUp: {
+    formEditProfile: {
         justifyContent: "space-evenly",
-        //marginTop: "-15%",
+        // marginTop: "-15%",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
     },
 
     signUpHeader: {
         backgroundColor: "gray",
-        //marginTop: "-8%",
+        // marginTop: "-8%",
         width: "100%",
         height: "10%",
     },
