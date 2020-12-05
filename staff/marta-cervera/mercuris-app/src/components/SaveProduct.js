@@ -1,24 +1,26 @@
 import './SaveProduct.sass'
 
-export default function SaveProduct({onSaveProduct}) {
+export default function SaveProduct({ onSaveProduct , name}) {
     const handleSubmitProduct = event => {
         event.preventDefault()
 
         let { target: {
             name: { value: name },
             description: { value: description },
-            price: { value: price}           
+            price: { value: price }
 
-        }} =event
+        } } = event
 
         onSaveProduct(name, description, price)
+        event.target.reset()
 
     }
     return <section className="save-product">
-        <form onSubmit={handleSubmitProduct}> 
+        <h1>Welcome to the registration product page, {name}</h1>
+        <form className="save-product__form" onSubmit={handleSubmitProduct}>
             <input name="name" type="text" placeholder="Product Name"></input>
-            <textarea name="description" type ="text" placeholder="Descrption"></textarea>
-            <input name="price" type ="text" placeholder="Price"></input>
+            <textarea name="description" type="text" placeholder="Description"></textarea>
+            <input name="price" type="text" placeholder="Price"></input>
             <button>Save</button>
 
         </form>
@@ -26,7 +28,3 @@ export default function SaveProduct({onSaveProduct}) {
 
 }
 
-{/* <select className="CreatePet__select" name="visibility" id="visibility">
-                <option className="CreatePet__option" value="dog">Dog</option>
-                <option className="CreatePet__option" value="cat">Cat</option>
-            </select> */}

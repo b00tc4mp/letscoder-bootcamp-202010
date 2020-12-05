@@ -3,14 +3,16 @@ import { useState, useEffect } from 'react'
 import { retrieveUser, saveProduct } from '../logic'
 import SaveProduct from './SaveProduct'
 import SearchProducts from './SearchProducts'
+import Profile from './Profile'
 
-export default function Home () {
+export default function Home() {
 
-    const [view, setView] = useState(sessionStorage.token? 'home' :'access')
+    const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
 
     const [name, setName] = useState()
     //const [products, setProducts] = useState()
-    
+
+
 
     useEffect(() => {
         const { token } = sessionStorage
@@ -26,33 +28,36 @@ export default function Home () {
         } catch (error) {
             alert(error.message)
         }
-    },[])
+    }, [])
     const handleSaveProduct = (name, description, price) => {
-         const { token } = sessionStorage
-        
+        const { token } = sessionStorage
+
         try {
-            saveProduct(undefined, token, name, description, price, error=> {
-                if (error) return alert(error.message)                
+            saveProduct(undefined, token, name, description, price, error => {
+                if (error) return alert(error.message)
             })
         } catch (error) {
             alert(error.message)
         }
     }
 
-    // const handleGoToProfile =() => {
-    //     setView('profile')
-    // }
-   
+    const handleGoToProfile = () => {
+        setView('profile')
+    }
+    const handleGoToHome = () => {
+
+        setView('home')
+    }
 
 
-    
-    return ( 
-    <section className="home">
-        <h1>Hello, {name}</h1>
-        {view === 'home' &&<SaveProduct onSaveProduct={handleSaveProduct} />}
-        {view ==='home'&& <SearchProducts/>}
-        {/* <button onClick={handleGoToProfile}></button> */}
-        
-    </section >
+    return (
+        <section className="home">            
+            { <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
+            { <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
+            {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name = {name} />}
+            {view === 'profile' && <SearchProducts />}
+            {view === 'profile' && <Profile/>}
+
+        </section >
     );
 }
