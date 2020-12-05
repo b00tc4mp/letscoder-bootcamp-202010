@@ -3,11 +3,15 @@ import SignIn from './SignIn'
 import Home from './Home'
 import Access from './Access'
 import SaveGame from './SaveGame'
+import SearchGames from './SearchGames'
+import FindGames from './FindGames'
 
 export {
     SignUp,
     SignIn,
     Home,
     Access,
-    SaveGame
+    SearchGames,
+    SaveGame,
+    FindGames
 }

@@ -1,20 +1,24 @@
 import FindGames from './FindGames'
-import { useState } from 'react'
-import {FindGames} from '../logic'
+import {useState, useEffect } from 'react'
+import {findGames} from '../logic'
 
 function SearchGames(){
-
+    const [view, setView] = useState('find-games')
+    
     let query;
     const [results, setResults] = useState()
 
     const handleFindGames = (query, gameconsole, budget, priceMin, priceMax) => {
+
         //const { token } = sessionStorage
 
         try {
-            FindGames( query, gameconsole, budget, priceMin, priceMax, (error, games) => {
+            findGames( query, gameconsole, budget, priceMin, priceMax, (error, games) => {
 
                 if (error) return alert(error.message)
                 setResults(games)
+
+                setView('find-games')
 
             })
         } catch (error) {
@@ -45,12 +49,12 @@ function SearchGames(){
                     >
                         Console
                 </button>
-                <button
+                {/* <button
                         className="searchByName__button"
                         onClick={() => handleFindGames( undefined, undefined, query, undefined, undefined)}
                     >
                         Price
-                </button>
+                </button> */}
 
                 <button
                         className="searchByName__button"
@@ -68,7 +72,7 @@ function SearchGames(){
 
      
                 </form>
-                {results && results.length && <Games results={results} />}
+                {results && results.length && <FindGames results={results} />}
             </>
         );
     }

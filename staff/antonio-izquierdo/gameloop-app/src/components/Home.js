@@ -2,10 +2,12 @@ import './Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser, saveGame } from '../logic'
 import SaveGame from './SaveGame'
+import SearchGames from './SearchGames'
 //import FindGames from './FindGames'
 
-export default function () {
+export default function Home () {
     const [name, setName] = useState()
+    const [view, setView] = useState(sessionStorage.token? 'home' :'access')
 
     useEffect(() => {
         const { token } = sessionStorage
@@ -35,10 +37,16 @@ export default function () {
             alert(error.message)
         }
     }
- 
+
+   /*  const handleGoToFindGames = () => {
+
+        setView('find-games')
+      }
+  */
     return <section className="home">
         <h1>Hello, {name}!</h1>
-        {<SaveGame onSaveGame={handleSaveGame} />}
-        {/* {<FindGames />} */}
+        {/* {view === 'access' && <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch} />} */}
+        {view === 'home' && <SaveGame onSaveGame={handleSaveGame} />}
+        {view === 'home' && <SearchGames />}
     </section>
 }

@@ -1,6 +1,6 @@
 import './SaveGame.sass'
 
-export default function ({onSaveGame}) {
+export default function SaveGame ({onSaveGame}) {
     const handleSubmitGame = event => {
         event.preventDefault()
 

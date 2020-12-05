@@ -17,8 +17,8 @@ export default function (query, gameconsole, budget, priceMin, priceMax, callbac
                 return callback(new Error(error))
             }
 
-            const pets = JSON.parse(response)
+            const games = JSON.parse(response)
 
-            callback(null, pets)
+            callback(null, games)
         })
 }
