@@ -53,11 +53,11 @@ export default function Home() {
 
     return (
         <section className="home">            
-            { <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
-            { <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
+            {view ==='home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
+            { view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
             {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name = {name} />}
+            {view === 'profile' && <Profile name={name}/>}
             {view === 'profile' && <SearchProducts />}
-            {view === 'profile' && <Profile/>}
 
         </section >
     );

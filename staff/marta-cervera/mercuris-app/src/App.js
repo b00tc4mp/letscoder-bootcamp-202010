@@ -3,7 +3,7 @@ import './App.css';
 import { SignUp, SignIn, Home, Access, Header, Footer, SearchProductClient } from './components/Index'
 import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
-import {Link} from 'react-router-dom'
+
 
 
 function App(props) {
@@ -54,12 +54,11 @@ function App(props) {
   }
 
   return (
-    <>
-      <Header></Header>
+    <>      
       <main className="App-header">
         <Route exact path='/' render={() => <Access onGoToSignIn={handleGoToSignIn} onGoToSignUp={handleGoToSignUp} onGoToSearch={handleGoToSearch} />} />
-        <Route exact path='/sign-up' render={() => <SignUp onSignUp={handleSignUp} />} /> <Link to = '/sign-in'>Redirect to Sign In</Link>
-        <Route exact path='/sign-in' render={() => <SignIn onSignIn={handleSignIn} />} /> <Link to = '/sign-up'>Redirect to Sign Up</Link>
+        <Route exact path='/sign-up' render={() => <SignUp onSignUp={handleSignUp} />} /> 
+        <Route exact path='/sign-in' render={() => <SignIn onSignIn={handleSignIn} />} /> 
         <Route exact path='/search-product-client' render={() => <SearchProductClient />} />
         <Route exact path='/home' render={() => token ? <Home /> : <Redirect to ='/'/>} />
         {/* {view === 'access' && <Access onGoToSignIn={handleGoToSignIn} onGoToSignUp={handleGoToSignUp} onGoToSearch={handleGoToSearch} />}
@@ -68,7 +67,7 @@ function App(props) {
         {view === 'search' && <SearchProductClient />}
         {view === 'home' && <Home />} */}
       </main>
-      <Footer></Footer>
+      
     </>
   );
 }

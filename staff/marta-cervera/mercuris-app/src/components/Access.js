@@ -12,9 +12,7 @@ function Access({ onGoToSignUp, onGoToSignIn, onGoToSearch }){
         <h1 className="search__title">Search your favourite product</h1>
         <button onClick = {onGoToSearch} className="search__btn" >Search</button>
         
-        </div>
-
-               
+        </div>              
 
         
     </section>

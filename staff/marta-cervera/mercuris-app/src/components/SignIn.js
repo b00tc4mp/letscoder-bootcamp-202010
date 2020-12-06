@@ -1,10 +1,11 @@
 import './SignIn.sass'
+import {Link} from 'react-router-dom'
 
 function SignIn({ onSignIn }) {
     return <section className= "sign-in">
-        <h2 className="sign-in_title">Sign In</h2>
+        <h2 className="sign-in__title">Sign In</h2>        
 
-        <form onSubmit= { event => {
+        <form className="sign-in__form"onSubmit= { event => {
             event.preventDefault()
 
             const { target: {email : { value: email}, password: { value:password}}} = event
@@ -17,6 +18,7 @@ function SignIn({ onSignIn }) {
 
         </form>
        
+        <Link to = '/sign-up'>Redirect to Sign Up</Link>
 
     </section>
 }

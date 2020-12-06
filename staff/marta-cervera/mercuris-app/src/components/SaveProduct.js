@@ -1,6 +1,6 @@
 import './SaveProduct.sass'
 
-export default function SaveProduct({ onSaveProduct , name }) {
+export default function SaveProduct({ onSaveProduct, name }) {
     const handleSubmitProduct = event => {
         event.preventDefault()
 
@@ -15,8 +15,9 @@ export default function SaveProduct({ onSaveProduct , name }) {
         event.target.reset()
 
     }
-    return <section className="save-product">
+    return <main className="save-product">
         <h1>Welcome to the registration product page, {name}</h1>
+        <h2>Register your product</h2>
         <form className="save-product__form" onSubmit={handleSubmitProduct}>
             <input name="name" type="text" placeholder="Product Name"></input>
             <textarea name="description" type="text" placeholder="Description"></textarea>
@@ -24,7 +25,7 @@ export default function SaveProduct({ onSaveProduct , name }) {
             <button>Save</button>
 
         </form>
-    </section>
+    </main>
 
 }
 
