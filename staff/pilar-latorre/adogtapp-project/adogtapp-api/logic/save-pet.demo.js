@@ -9,8 +9,7 @@ const { env: { MONGODB_URL } } = process
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => Pet.deleteMany())
     .then(() => Promise.all([
-        savePet(undefined,'India', 'no tiene', 'negro','la mejor perra pero con mala leche', '5fc629cead96ca6b10a63836').then(console.log).catch(console.error),
-
+        savePet(undefined,'India', 'no tiene', 'dog','negro','la mejor perra pero con mala leche', '5fccb72f989a5757e03df82f').then(console.log).catch(console.error),
 
       
     ])

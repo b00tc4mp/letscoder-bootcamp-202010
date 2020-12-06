@@ -61,7 +61,7 @@ module.exports = {
     validateColor(color) {
         if (typeof color !== 'string') throw new TypeError(`${color} is not a color`)
 
-        if (!color.trim().length) throw new Error('color is empty or blank')
+       
 
     },
 
