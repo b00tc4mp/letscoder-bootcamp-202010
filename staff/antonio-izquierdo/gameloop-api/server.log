@@ -344,3 +344,262 @@ info 2020-12-05T11:58:33.833Z - server running on port 4000
 info 2020-12-05T11:59:07.213Z - stopping server
 info 2020-12-05T11:59:15.513Z - server running on port 4000
 info 2020-12-05T12:29:52.389Z - stopping server
+info 2020-12-05T12:31:24.598Z - server running on port 4000
+info 2020-12-06T09:44:51.092Z - server running on port 4000
+info 2020-12-06T09:51:15.848Z - stopping server
+info 2020-12-06T13:40:49.396Z - server running on port 4000
+info 2020-12-06T15:41:36.500Z - stopping server
+info 2020-12-06T15:41:47.153Z - server running on port 4000
+error 2020-12-06T15:44:17.785Z - ValidationError: User validation failed: password: Path `password` (`$2a$10$UhYuDxsRyxx/hKm.o4fxB.DhAkQF8O5Bi4jrcqSD5WtPM7qiKqwVi`) is longer than the maximum allowed length (32).
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T15:44:30.995Z - ValidationError: User validation failed: password: Path `password` (`$2a$10$fDURHsN/dCHmaJsyeF8gpuccJMplhwtrE/yYnJR9E86XkelU.bD7.`) is longer than the maximum allowed length (32).
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T15:44:53.023Z - ValidationError: User validation failed: password: Path `password` (`$2a$10$roKKmecW.M4Q6iwSAvZrHuTf/cFXPbR29K.ZZ/Kj3gOUyR9Fw0dmC`) is longer than the maximum allowed length (32).
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T15:45:53.615Z - ValidationError: User validation failed: password: Path `password` (`$2a$10$WU6J6fEwBJoi4ARcizadGeMFwrGr5444lNVip.LKWOJOkwlt5S0jK`) is longer than the maximum allowed length (32).
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T15:46:25.013Z - ValidationError: User validation failed: password: Path `password` (`$2a$10$JxXkPTVOs0X557S.O6UzYuK5lY4dPyKmrBMWgJ0l3Y2m9P/.UDisG`) is longer than the maximum allowed length (32).
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-06T15:46:37.576Z - stopping server
+info 2020-12-06T15:46:44.816Z - server running on port 4000
+error 2020-12-06T15:48:33.203Z - ValidationError: Game validation failed: gameconsole: `playstation` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T15:49:46.302Z - Error: user with e-mail car@men.com is already registered
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\register-user.js:15:28
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T15:52:07.373Z - stopping server
+info 2020-12-06T15:52:14.637Z - server running on port 4000
+info 2020-12-06T15:53:50.445Z - stopping server
+error 2020-12-06T15:53:53.863Z - C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\schemas\game.js:25
+    owner: {
+    ^^^^^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\schemas\index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-06T15:53:53.865Z - stopping server
+error 2020-12-06T15:54:29.086Z - C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\schemas\game.js:25
+    owner: {
+    ^^^^^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\schemas\index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-06T15:54:29.087Z - stopping server
+error 2020-12-06T15:55:04.321Z - C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\schemas\game.js:25
+    owner: {
+    ^^^^^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\schemas\index.js:3:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\models\index.js:2:24)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-06T15:55:04.323Z - stopping server
+info 2020-12-06T15:55:43.255Z - server running on port 4000
+info 2020-12-06T15:57:18.600Z - stopping server
+info 2020-12-06T15:57:28.660Z - server running on port 4000
+error 2020-12-06T16:00:58.598Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T16:08:18.096Z - stopping server
+info 2020-12-06T16:08:25.740Z - server running on port 4000
+info 2020-12-06T16:19:39.436Z - stopping server
+info 2020-12-06T16:22:34.341Z - server running on port 4000
+info 2020-12-06T16:25:01.840Z - stopping server
+info 2020-12-06T16:27:13.994Z - server running on port 4000
+info 2020-12-06T16:33:26.970Z - stopping server
+info 2020-12-06T16:34:14.595Z - server running on port 4000
+info 2020-12-06T16:56:00.882Z - server running on port 4000
+info 2020-12-06T17:04:24.525Z - server running on port 4000
+info 2020-12-06T17:07:12.862Z - stopping server
+info 2020-12-06T17:07:18.585Z - server running on port 4000
+info 2020-12-06T17:10:43.087Z - stopping server
+info 2020-12-06T17:10:55.095Z - server running on port 4000
+error 2020-12-06T17:14:50.084Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T17:19:46.946Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T17:19:49.221Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T17:20:18.710Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:18:39
+error 2020-12-06T17:21:06.281Z - ValidationError: Game validation failed: gameconsole: `playstation` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:21:53.561Z - ValidationError: Game validation failed: gameconsole: `playstation` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:22:05.825Z - ValidationError: Game validation failed: gameconsole: `playstation` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:22:44.225Z - ValidationError: Game validation failed: gameconsole: `playstation` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:35:07.057Z - ValidationError: Game validation failed: gameconsole: `game boy advance` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:36:17.601Z - ValidationError: Game validation failed: gameconsole: `game boy advance` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:36:20.248Z - ValidationError: Game validation failed: gameconsole: `game boy color` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:36:23.649Z - ValidationError: Game validation failed: gameconsole: `nintendo ds` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:36:25.975Z - ValidationError: Game validation failed: gameconsole: `nintendo 3ds` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-06T17:37:16.281Z - stopping server
+info 2020-12-06T17:37:19.259Z - server running on port 4000
+error 2020-12-06T17:37:41.376Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T17:37:43.743Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T17:38:39.344Z - ValidationError: Game validation failed: gameconsole: `Xbox 360` is not a valid enum value for path `gameconsole`.
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:48:01.898Z - ContentError: text is empty or blank
+    at validateText (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\helpers\validations.js:32:40)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\save-game.js:8:5)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-save-game.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-06T17:48:05.782Z - ContentError: text is empty or blank
+    at validateText (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\helpers\validations.js:32:40)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\save-game.js:8:5)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-save-game.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-06T17:48:09.642Z - ValidationError: Game validation failed: budget: -12 negative numbers are not allowed
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:48:24.697Z - ValidationError: Game validation failed: budget: -30 negative numbers are not allowed
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:51:41.267Z - ValidationError: Game validation failed: budget: -30 negative numbers are not allowed
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:53:35.731Z - ValidationError: Game validation failed: budget: 0 negative numbers are not allowed
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:53:56.162Z - ValidationError: Game validation failed: budget: 0 negative numbers are not allowed
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-06T17:55:04.091Z - ValidationError: Game validation failed: budget: 0 negative numbers are not allowed
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-06T17:55:18.708Z - stopping server
+info 2020-12-06T17:55:26.631Z - server running on port 4000
+error 2020-12-06T18:02:54.262Z - ValidationError: Game validation failed: budget: -2323 negative numbers are not allowed
+    at model.Document.invalidate (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-06T18:05:00.236Z - stopping server

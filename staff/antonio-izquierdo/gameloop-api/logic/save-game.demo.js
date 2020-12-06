@@ -11,16 +11,16 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true,
             .then(() => Promise.all([
                 
                 //JUEGOS DE PEDRO PICAPIEDRA
-                saveGame(undefined, 'Call Of Duty', 'Juego numero 1', 'nintendo', '33', '5fcb4a3b093dcc3624cacf06'),
-                saveGame(undefined, 'Crash Bandicoot', 'Juego numero 2', 'nintendo', '15', '5fcb4a3b093dcc3624cacf06'),
-                saveGame(undefined, 'Super Mario Bros', 'Juego numero 3', 'nintendo', '26', '5fcb4a3b093dcc3624cacf06'),
-                saveGame(undefined, 'Luigis Mansion', 'Juego numero 4', 'nintendo', '29', '5fcb4a3b093dcc3624cacf06'),
+                saveGame(undefined, 'Call Of Duty', 'Juego numero 1', 'nintendo', '33', '5fcb4f41ab9d7d27389235d1'),
+                saveGame(undefined, 'Crash Bandicoot', 'Juego numero 2', 'nintendo', '15', '5fcb4f41ab9d7d27389235d1'),
+                saveGame(undefined, 'Super Mario Bros', 'Juego numero 3', 'nintendo', '26', '5fcb4f41ab9d7d27389235d1'),
+                saveGame(undefined, 'Luigis Mansion', 'Juego numero 4', 'nintendo', '29', '5fcb4f41ab9d7d27389235d1'),
 
                 //JUEGOS DE PEPIGRIS
-                saveGame(undefined, 'Tetrix', 'Juego numero 5', 'nintendo', '12', '5fcb4a3b093dcc3624cacf07'),
-                saveGame(undefined, 'Detective Pikachu', 'Juego numero 6', 'nintendo', '32', '5fcb4a3b093dcc3624cacf07'),
-                saveGame(undefined, 'The Legend of Zelda', 'Juego numero 7', 'nintendo', '18', '5fcb4a3b093dcc3624cacf07'),
-                saveGame(undefined, 'Luigis Mansion', 'Juego numero 8', 'nintendo', '23', '5fcb4a3b093dcc3624cacf07')
+                saveGame(undefined, 'Tetrix', 'Juego numero 5', 'nintendo', '12', '5fcb4f41ab9d7d27389235d2'),
+                saveGame(undefined, 'Detective Pikachu', 'Juego numero 6', 'nintendo', '32', '5fcb4f41ab9d7d27389235d2'),
+                saveGame(undefined, 'The Legend of Zelda', 'Juego numero 7', 'nintendo', '18', '5fcb4f41ab9d7d27389235d2'),
+                saveGame(undefined, 'Luigis Mansion', 'Juego numero 8', 'nintendo', '23', '5fcb4f41ab9d7d27389235d2')
             ])
             )
             .catch(console.error)

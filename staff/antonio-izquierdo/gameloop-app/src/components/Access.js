@@ -6,9 +6,9 @@ function Access({ onGoToSignIn, onGoToSignUp, onGoToSearch }) {
         <img className="access__logo" src={ logo }/>
         <p> PAY LESS <br /> <br /> PLAY MORE</p>
         <div className="access__div">
-            <button onClick={onGoToSignUp} className="access__div__signup"> SIGN UP </button>
-            <button onClick={onGoToSearch} className="access__div__search"> SEARCH GAMES </button>
-            <button onClick={onGoToSignIn} className="access__div__signin"> SIGN IN</button>
+            <button onClick={onGoToSignUp} className="access__div__signbutton"> SIGN UP </button>
+            <button onClick={onGoToSearch} className="access__div__searchbutton"> SEARCH GAMES </button>
+            <button onClick={onGoToSignIn} className="access__div__signbutton"> SIGN IN</button>
         </div>
     </section>
 }

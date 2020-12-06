@@ -1,6 +1,13 @@
 const { ContentError, LengthError, FormatError } = require('../../errors')
 
 module.exports = {
+    
+    validateFullname(fullname) {
+        if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
+
+        if (!fullname.trim().length) throw new ContentError('fullname is empty or blank')
+    },
+
     validateEmail(email) {
         if (typeof email !== 'string') throw new TypeError(`${email} is not an e-mail`)
 
@@ -25,12 +32,6 @@ module.exports = {
         if (!text.trim().length) throw new ContentError('text is empty or blank')
     },
 
-    validateFullname(fullname) {
-        if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
-
-        if (!fullname.trim().length) throw new ContentError('fullname is empty or blank')
-    },
-
     validateId(id) {
         if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
@@ -40,10 +41,10 @@ module.exports = {
     },
 
     validateQuery(query) {
-        if (typeof query !== 'string') throw new TypeError(query + ' is not an id')
+        if (typeof query !== 'string') throw new TypeError(`${query} is not a query`)
     },
 
     validatePrice(budget) {
-        if (typeof budget !== 'string') throw new TypeError(budget + 'is not a number')
+        if (typeof budget !== 'string') throw new TypeError(`${budget} is not a number`)
     }
 }

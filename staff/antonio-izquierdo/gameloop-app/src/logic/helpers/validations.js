@@ -1,8 +1,8 @@
 module.exports = {
-    validateName(name) {
-        if (typeof name !== 'string') throw new TypeError(name + ' is not a game name')
+    validateFullname(fullname) {
+        if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
 
-        if (!name.trim().length) throw new Error('name is empty or blank')
+        if (!fullname.trim().length) throw new Error('name is empty or blank')
     },
 
     validateEmail(email) {

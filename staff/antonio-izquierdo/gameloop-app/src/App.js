@@ -3,7 +3,7 @@ import { useState } from 'react'
 import{ registerUser, authenticateUser } from './logic'
 
 function App() {
-  debugger
+
   const [view, setView] = useState(sessionStorage.token? 'home' :'access')
 
   const handleSignUp = (fullname, email, password) => {
@@ -50,8 +50,8 @@ function App() {
   return (
       <header className="App-header">
         {view === 'access' && <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch} />}
-        {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />}
-        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />}
+        {view === 'sign-up' && <SignUp onGoToSignIn={handleGoToSignIn} onSignUp={handleSignUp} />}
+        {view === 'sign-in' && <SignIn onGoToSignUp={handleGoToSignUp} onSignIn={handleSignIn} />}
         {view === 'home' && <Home />}
       </header>
   );

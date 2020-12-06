@@ -15,7 +15,11 @@ module.exports = new Schema({
 
     budget: {
         type: Number,
-        required: true
+        required: true,
+        validate: {
+            validator: value => { return value >= 0 },
+            message: props => `${props.value} negative numbers are not allowed`
+        } 
     },
 
     owner: {
@@ -25,7 +29,7 @@ module.exports = new Schema({
 
     gameconsole: {
         type: String,
-        enum: ['nintendo', 'play station', 'game boy'],
+        enum: ['game boy', 'game boy advance', 'game boy color', 'nintendo ds', 'nintendo 3ds', 'nintendo switch', 'wii', 'wii u', 'play station 1', 'play station 2', 'play station 3', 'play station 4', 'play station 5', 'xbox', 'xbox 360', 'xbox one'],
         default: 'nintendo',
         required: true
     }

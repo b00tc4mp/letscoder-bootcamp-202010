@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node .",
     "inspect": "node inspect .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx mocha logic/*.spec.js",
+    "test-inspect": "npx mocha inspect logic/*.spec.js",
+    "test-coverage": "npx nyc --reporter=html --exclude=**/*.spec.js mocha logic/*.spec.js",
     "style": "sass public/style.sass public/style.css"
   },
   "author": "",
@@ -18,5 +20,10 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.18",
     "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
   }
 }

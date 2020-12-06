@@ -2,11 +2,12 @@ import { call } from '../utils'
 //import { validateFullname, validateEmail, validatePassword, validateCallback } from './helpers/validations'
 
 export default function (fullname, email, password, callback) {
-   /*  validateFullname(fullname)
+    /* validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
-    validateCallback(callback) */
-debugger
+    validateCallback(callback) 
+ */
+    debugger
     call('POST', 'http://localhost:4000/api/users', { 'Content-type': 'application/json' },
         JSON.stringify({ fullname, email, password }),
         (status, response) => {
