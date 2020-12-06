@@ -37,7 +37,7 @@ module.exports = {
         if (!description.trim().length) throw new ContentError('description is empty or blank')
     },
     validatePrice(price) {
-        if (typeof price !== 'string') throw new TypeError(price + ' is not an id')
+        if (typeof price !== 'string') throw new TypeError(price + ' is not a number')
     },
     
     validateQuery(query) {

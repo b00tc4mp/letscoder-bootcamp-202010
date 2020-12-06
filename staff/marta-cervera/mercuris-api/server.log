@@ -371,3 +371,27 @@ info 2020-12-05T12:16:07.346Z - starting server
 info 2020-12-05T12:17:02.741Z - stopping server
 info 2020-12-05T12:17:07.758Z - starting server
 info 2020-12-05T12:17:07.862Z - undefined
+error 2020-12-05T17:08:24.439Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T17:08:35.116Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T17:09:01.997Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T12:26:56.806Z - starting server
+info 2020-12-06T12:26:56.920Z - undefined
+error 2020-12-06T12:29:26.728Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T12:29:33.189Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T13:06:12.938Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T18:05:08.721Z - stopping server

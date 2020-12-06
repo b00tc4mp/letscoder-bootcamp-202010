@@ -1,5 +1,6 @@
 const { validateEmail, validatePassword, validateName } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
+const { ConflictError} = require('../errors')
 const { User } = require('../models')
 const bcryptjs = require('bcryptjs')
 
@@ -11,7 +12,7 @@ module.exports = function(name, email, password){
         User
             .findOne({ email })
             .then( user =>{
-                if ( user) throw new Error(`user with ${email} already registerd`)
+                if ( user) throw new ConflictError(`user with ${email} already registered`)
 
                 return bcryptjs.hash(password, 10)
             })
