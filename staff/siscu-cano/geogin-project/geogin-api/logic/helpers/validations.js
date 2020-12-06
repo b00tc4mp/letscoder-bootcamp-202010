@@ -98,12 +98,12 @@ module.exports = {
   },
 
   validateHomeLocation (homeLocation) {
-    if (!(homeLocation instanceof Array))
+    if (!(homeLocation instanceof Object))
       throw new TypeError(`${homeLocation} is not a homeLocation`)
   },
 
   validateEndLocation (endLocation) {
-    if (!(endLocation instanceof Array))
+    if (!(endLocation instanceof Object))
       throw new TypeError(`${endLocation} is not a endLocation`)
   },
 
@@ -133,5 +133,21 @@ module.exports = {
   validateOwner (owner) {
     if (!(owner instanceof Object))
       throw new TypeError(`${owner} is not a owner`)
-  }
+  },
+  validateImage (image) {
+    if (typeof image !== 'string')
+    throw new TypeError(image + ' is not a image')
+  },
+  validateScore (score) {
+      if (typeof score !== 'Number')
+      throw new TypeError(score + ' is not a score')
+  },
+   validateFavorites (favorites) {
+    if (!(favorites instanceof Array))
+    throw new TypeError(`${favorites} is not a favorites`)
+   },
+   validateData(data) {
+    if (!(data instanceof Object))
+    throw new TypeError(`${data} is not a data`)
+   },
 }
