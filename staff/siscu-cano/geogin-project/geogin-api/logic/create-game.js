@@ -1,22 +1,37 @@
-const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
-const semaphore = require('./helpers/semaphore')
-const { ConflictError } = require('geogin-errors')
-const { Game } = require('../models')
+const { validateQrCode, validateTeams, validatePlayers, validateId, validateProgress, validateOrganizerId } = require('./helpers/validations')
+const { NotFoundError } = require('geogin-errors')
+const { User, Game, Quest } = require('../models')
+const mongoose = require('mongoose')
 
-module.exports = function (qrCode, id_game, teams, players, quest, progress, organizer) {
-    validateFullname(fullname)
-    validateEmail(email)
-    validatePassword(password)
+module.exports = function (qrCode, teams, players, quest, progress, organizer) {
+    validateQrCode(qrCode)
+    validateTeams(teams)
+    validatePlayers(players)
+    validateId(quest)
+    validateProgress(progress)
+    validateId(organizer)
 
-    return semaphore(() =>
-        User
-            .findOne({ email })
-            .then(user => {
-                if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
+    return User.findById(organizer).lean()
+    .then(user => {
+      if (!user) throw new NotFoundError(`user with id ${organizer} not found`)
+      
+      return Quest.findById(quest).lean()
+      .then(quest => {
+        if (!quest) throw new NotFoundError(`quest with id ${quest} not found`)
 
-                return bcrypt.hash(password, 10)
-            })
-            .then(hash => User.create({ fullname, email, password: hash }))
-            .then(() => { })
-    )
+      return Game.create({
+        qrCode, 
+        teams, 
+        players, 
+        quest, 
+        progress, 
+        organizer: new mongoose.mongo.ObjectId(organizer)
+      }).then(game => {
+        game.qrCode = qrCode.replace(/id_game/,game._id);
+        return game.save()
+      }
+      )
+    })
+  })
+
 }

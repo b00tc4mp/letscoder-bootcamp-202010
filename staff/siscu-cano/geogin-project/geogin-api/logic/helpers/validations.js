@@ -49,7 +49,8 @@ module.exports = {
     if (id.length !== 24)
       throw new LengthError(`id length ${id.length} is not 24`)
 
-    if (!id.match(/^[0-9a-fA-F]{24}$/)) throw new TypeError(id + ' is not a valid id')
+    if (!id.match(/^[0-9a-fA-F]{24}$/))
+      throw new TypeError(id + ' is not a valid id')
   },
 
   validateText (text) {
@@ -112,7 +113,14 @@ module.exports = {
   },
 
   validateKidsOk (kids_ok) {
-    if (!(kids_ok === true || kids_ok === false || toString.call(kids_ok) === '[object Boolean]')) throw new TypeError(kids_ok + ' is not a kids_ok')
+    if (
+      !(
+        kids_ok === true ||
+        kids_ok === false ||
+        toString.call(kids_ok) === '[object Boolean]'
+      )
+    )
+      throw new TypeError(kids_ok + ' is not a kids_ok')
   },
 
   validateEvaluations (evaluations) {
@@ -136,18 +144,41 @@ module.exports = {
   },
   validateImage (image) {
     if (typeof image !== 'string')
-    throw new TypeError(image + ' is not a image')
+      throw new TypeError(image + ' is not a image')
   },
   validateScore (score) {
-      if (typeof score !== 'Number')
+    if (typeof score !== 'Number')
       throw new TypeError(score + ' is not a score')
   },
-   validateFavorites (favorites) {
+  validateFavorites (favorites) {
     if (!(favorites instanceof Array))
-    throw new TypeError(`${favorites} is not a favorites`)
-   },
-   validateData(data) {
-    if (!(data instanceof Object))
-    throw new TypeError(`${data} is not a data`)
-   },
+      throw new TypeError(`${favorites} is not a favorites`)
+  },
+  validateData (data) {
+    if (!(data instanceof Object)) throw new TypeError(`${data} is not a data`)
+  },
+  validateQrCode (qrCode) {
+    if (typeof qrCode !== 'string')
+      throw new TypeError(qrCode + ' is not a qrCode')
+    if (!qrCode.match(/^(https:|http:)\S*/))
+      throw new TypeError(`${qrCode} is not a valid qrCode miising: http/s`)
+    if (!qrCode.includes('id_game'))
+      throw new TypeError(`${qrCode} is not a valid Qrcode missing: id_game`)
+  },
+  validateTeams (teams) {
+    if (!(teams instanceof Array))
+      throw new TypeError(`${teams} is not an teams`)
+  },
+  validatePlayers (players) {
+    if (!(players instanceof Array))
+      throw new TypeError(`${players} is not an players`)
+  },
+  validateProgress (progress) {
+    if (!(progress instanceof Object))
+      throw new TypeError(`${progress} is not a progress`)
+  },
+  validateOrganizer (organizer) {
+    if (!(organizer instanceof Object))
+      throw new TypeError(`${organizer} is not a organizer`)
+  }
 }

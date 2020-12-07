@@ -79,5 +79,5 @@ module.exports = (id, data) => {
             data,
           );
     })
-    .catch(error => console.error(error));
+    .then(() => { })
 }
