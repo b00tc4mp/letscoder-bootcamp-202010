@@ -22,7 +22,6 @@ router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 router.patch('/api/users', jsonBodyParser, withErrorHandling(handleUpdateUser))
 
-
 // image upload API
 router.post("/api/image-upload", jsonBodyParser, withErrorHandling(handleImageUpload))
    
