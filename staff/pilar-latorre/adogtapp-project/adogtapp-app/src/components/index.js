@@ -5,6 +5,7 @@ import Welcome from './Welcome'
 import CreatePet from './CreatePet'
 import FindPets from './FindPets'
 import DetailPet from './DetailPet'
+import Main from './Main'
 
 
 export {
@@ -14,7 +15,8 @@ export {
     Welcome,
     CreatePet,
     FindPets,
-    DetailPet
+    DetailPet,
+    Main
 
     
 

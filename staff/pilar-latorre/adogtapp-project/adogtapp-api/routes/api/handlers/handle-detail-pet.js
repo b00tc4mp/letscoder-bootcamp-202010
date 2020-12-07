@@ -4,6 +4,7 @@ module.exports = (req, res, handleError) => {
 
     const { params: {petId} } = req
    
+    
     try {
         detailPet(petId)
             .then(pet => res.status(200).json(pet))

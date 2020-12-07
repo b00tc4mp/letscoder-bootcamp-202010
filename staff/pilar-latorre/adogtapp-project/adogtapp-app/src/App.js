@@ -1,4 +1,4 @@
-import { SignUp, SignIn, Home } from './components'
+import { SignUp, SignIn, Home, Main } from './components'
 import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
 
@@ -41,13 +41,21 @@ function App() {
     setView('sign-up')
   }
 
+  const handleGoToMain = () => {
+
+    setView('main')
+  }
+
+
+
   return (
     <div className="App">
       <header className="App-header">
       
         {view === 'sign-up' && <SignUp onSignUp={handleSignUp} onGoToSignIn = {handleGoToSignIn}/>}
-        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} onGoToSignUp = {handleGoToSignUp}/>}
+        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} onGoToSignUp = {handleGoToSignUp} onGoToMain = {handleGoToMain}/>}
         {view === 'home' && <Home />}
+        {view === 'main' && <Main />}
 
 
       </header>

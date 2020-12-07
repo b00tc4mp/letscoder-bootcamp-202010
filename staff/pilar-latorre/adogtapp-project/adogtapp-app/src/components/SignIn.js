@@ -1,13 +1,13 @@
 import './SignIn.sass'
 
-function SignIn({onSignIn, onGoToSignUp}){
+function SignIn({onSignIn, onGoToSignUp, onGoToMain}){
     return <div className='signIn'>
         <header className='signIn__header'>
             <h1 className='signIn__h1'>Welcome to ADOGTApp</h1>
             <h3 className='signIn__h3'>In our APP you will find your four-legged BF</h3>
         </header>
         <section className='signIn__section'>
-        <img className='signIn__img' src="adoptUs.jpg"/>   
+        <img className='signIn__img' src="adoptUs.jpg" onClick={ onGoToMain }/>   
         </section>
         <form className='signIn__form' onSubmit={event => {
             event.preventDefault()
