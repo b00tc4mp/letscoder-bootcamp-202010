@@ -2491,3 +2491,127 @@ info 2020-12-05T22:06:55.248Z - server running on port 4000
 info 2020-12-05T22:11:19.465Z - stopping server
 info 2020-12-05T22:11:25.916Z - starting server
 info 2020-12-05T22:11:26.116Z - server running on port 4000
+info 2020-12-06T08:45:19.633Z - stopping server
+info 2020-12-06T08:45:26.768Z - starting server
+info 2020-12-06T08:45:27.116Z - server running on port 4000
+info 2020-12-06T09:22:30.092Z - stopping server
+info 2020-12-06T09:22:36.260Z - starting server
+info 2020-12-06T09:22:36.432Z - server running on port 4000
+info 2020-12-06T10:26:49.818Z - stopping server
+info 2020-12-06T10:26:55.683Z - starting server
+info 2020-12-06T10:26:55.942Z - server running on port 4000
+error 2020-12-06T10:27:42.814Z - ReferenceError: cursor is not defined
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\retrieve-offer.js:12:17)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-retrieve-offer.js:15:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+info 2020-12-06T10:28:08.880Z - stopping server
+info 2020-12-06T10:28:14.484Z - starting server
+info 2020-12-06T10:28:14.652Z - server running on port 4000
+error 2020-12-06T10:28:51.115Z - ReferenceError: ownerId is not defined
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\retrieve-offer.js:11:46)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-retrieve-offer.js:15:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+error 2020-12-06T10:31:11.441Z - ReferenceError: ownerId is not defined
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\retrieve-offer.js:11:46)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-retrieve-offer.js:15:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+info 2020-12-06T10:31:17.876Z - stopping server
+info 2020-12-06T10:31:23.958Z - starting server
+info 2020-12-06T10:31:24.178Z - server running on port 4000
+error 2020-12-06T10:32:20.319Z - ReferenceError: _id is not defined
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\retrieve-offer.js:11:40)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-retrieve-offer.js:15:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\express\lib\router\index.js:335:12)
+info 2020-12-06T10:33:31.414Z - stopping server
+info 2020-12-06T10:33:37.328Z - starting server
+info 2020-12-06T10:33:37.563Z - server running on port 4000
+info 2020-12-06T10:35:56.467Z - stopping server
+info 2020-12-06T10:36:03.102Z - starting server
+info 2020-12-06T10:36:03.313Z - server running on port 4000
+info 2020-12-06T18:12:39.532Z - stopping server
+info 2020-12-06T18:12:45.722Z - starting server
+info 2020-12-06T18:12:46.160Z - server running on port 4000
+info 2020-12-06T19:03:33.581Z - stopping server
+info 2020-12-06T19:03:48.001Z - starting server
+info 2020-12-06T19:03:48.219Z - server running on port 4000
+info 2020-12-07T09:18:52.415Z - stopping server
+info 2020-12-07T09:19:12.613Z - starting server
+info 2020-12-07T09:19:13.050Z - server running on port 4000
+info 2020-12-07T09:36:21.022Z - stopping server
+info 2020-12-07T09:36:34.348Z - starting server
+info 2020-12-07T09:36:34.590Z - server running on port 4000
+info 2020-12-07T09:42:30.529Z - stopping server
+info 2020-12-07T09:43:21.561Z - starting server
+info 2020-12-07T09:43:21.760Z - server running on port 4000
+info 2020-12-07T09:46:13.854Z - stopping server
+info 2020-12-07T09:46:30.314Z - starting server
+info 2020-12-07T09:46:30.549Z - server running on port 4000
+info 2020-12-07T09:59:27.475Z - stopping server
+info 2020-12-07T10:00:41.742Z - starting server
+info 2020-12-07T10:00:42.166Z - server running on port 4000
+error 2020-12-07T10:04:37.390Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-07T10:25:35.076Z - stopping server
+info 2020-12-07T10:25:51.731Z - starting server
+info 2020-12-07T10:25:52.090Z - server running on port 4000
+info 2020-12-07T10:26:41.139Z - stopping server
+info 2020-12-07T10:26:56.327Z - starting server
+info 2020-12-07T10:26:56.553Z - server running on port 4000
+info 2020-12-07T10:32:23.880Z - stopping server
+info 2020-12-07T10:32:36.322Z - starting server
+info 2020-12-07T10:32:36.542Z - server running on port 4000
+info 2020-12-07T10:33:25.111Z - stopping server
+info 2020-12-07T10:34:14.925Z - starting server
+info 2020-12-07T10:34:15.111Z - server running on port 4000

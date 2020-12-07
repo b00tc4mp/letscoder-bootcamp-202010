@@ -7,7 +7,6 @@ const { ObjectID } = require('mongodb')
 module.exports = function (ownerId) {
     validateId(ownerId)
 
-
     const _id = ObjectID.createFromHexString(ownerId);
 
     return User

@@ -13,8 +13,12 @@ function App() {
   const [view, setView] = useState('home')
   const [offers, setOffers] = useState([])
 
+  const {token} = sessionStorage
+
+
   const handleGoToRegister = () => {
     console.log('fue bien')
+
 
     setView('register')
   }
@@ -22,10 +26,12 @@ function App() {
   const handleGoToLogin = () => {
     console.log('fue bien')
 
+
     setView('login')
   }
 
   const handleShowOffers = () => {
+
     setView('home')
   }
 
@@ -61,8 +67,8 @@ function App() {
           
         })
         
+
         setView('hub')
-        
       })
 
     } catch (error) {
@@ -74,10 +80,12 @@ function App() {
 
   const handleGoCreateoffer = () => {
     setView('createoffer')
+ 
   }
 
   const handleGoHub = () => {
     console.log('fue bien')
+
 
     setView('hub')
   }
@@ -88,6 +96,7 @@ function App() {
     try {
       createOffer(token, undefined, offername, titleoffer, image, price, error => {
         if (error) return alert(error.message)
+
 
         setView('hub')
       })
@@ -100,15 +109,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Route exact path='/path' render={() => <Home onRegisterClick={this.handleRegisterClick} onLoginClick={this.handleLoginClick} /> } /> */}
+{/*         <Route exact path='/' render={() => <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} /> } /> 
+        <Route exact path='/register' render={() => <Register onRegister={handleRegister} /> } /> 
+        <Route exact path='/login' render={() => <Login onLogin={handleLogin} /> } /> 
+        <Route exact path='/hub' render={() => token ? <Hub/> : <Redirect to ='/'/> } /> 
+        <Route exact path='/createoffer' render={() => <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer}  /> } /> 
+ */}  
         {view === 'home' && <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />}
         {view === 'register' && <Register onRegister={handleRegister} />}
         {view === 'login' && <Login onLogin={handleLogin} />}
         {view === 'hub' && <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} />}
-        {view === 'createoffer' && <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />}
+        {view === 'createoffer' && <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />} 
+
       </header>
     </div>
   );
 }
-
-export default App;
+export default App
+// export default withRouter(App);

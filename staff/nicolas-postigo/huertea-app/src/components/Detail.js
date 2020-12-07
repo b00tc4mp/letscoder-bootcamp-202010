@@ -3,11 +3,11 @@ import React from 'react'
 
 
 function Detail({}) {
-    return <sections>
-            <h1>Accede</h1>
-       
-    </sections>
-
+    return <section className="list-offers">
+REVISIÓN
+        
+    </section>
 }
 
 export default Detail
+

@@ -1,12 +1,12 @@
-import { useState } from 'react'
+
 import {findOffer} from '../logic'
 import './FindOffer'
-import FindOffer from './FindOffer'
 
-function SearchOffers(){
+
+function SearchOffers({onGoSearcher}){
 
     let query;
-    const [results, setResults] = useState()
+    
 
     const handleFindOffers = (titleoffer, offername, price) => {
 
@@ -16,7 +16,7 @@ function SearchOffers(){
 
                 if (error) return alert(error.message)
 
-                setResults(offers)
+                onGoSearcher(offers)
 
             })
         } catch (error) {
@@ -28,10 +28,7 @@ function SearchOffers(){
             <>
                 <form className="search" onSubmit={(event) => event.preventDefault()}>
                     <input
-                        className="search__input"
-                        name="query"
-                        type="text"
-                        placeholder="Search"
+                        className="searcher" type="text" name="query" placeholder="🔍 Busca en huertea"
                         onChange={(event) => (query = event.target.value)}
                     />
     
@@ -57,7 +54,7 @@ function SearchOffers(){
      
                 </form>
                 
-                {results && results.length && <FindOffer results={results} />}
+                
             </>
         );
     }
