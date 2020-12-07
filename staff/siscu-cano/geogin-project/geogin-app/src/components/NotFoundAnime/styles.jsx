@@ -3,8 +3,6 @@ import styled from 'styled-components'
 export const NotFoundWrapper = styled.div`
 
 .space {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
