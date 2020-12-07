@@ -20,7 +20,7 @@ export default function SaveProduct({ onSaveProduct, name }) {
         <h2>Register your product</h2>
         <form className="save-product__form" onSubmit={handleSubmitProduct}>
             <input name="name" type="text" placeholder="Product Name"></input>
-            <textarea name="description" type="text" placeholder="Description"></textarea>
+            <textarea className="save-product__textarea"name="description" type="text" placeholder="Description"></textarea>
             <input name="price" type="text" placeholder="Price"></input>
             <button>Save</button>
 
