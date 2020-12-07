@@ -34,7 +34,7 @@ describe('registerUser()', () => {
         afterEach(() =>
             User
                 .deleteOne({ email, password })
-                .then(result => expect(result.deletedCount).to.equal(1))
+                .then(result => expect(result.deletedCount).to.equal(0))
         )
     })
 

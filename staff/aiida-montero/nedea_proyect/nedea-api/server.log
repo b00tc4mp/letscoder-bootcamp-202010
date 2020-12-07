@@ -1264,3 +1264,14 @@ info 2020-12-04T18:34:53.877Z - stopping server
 info 2020-12-04T18:35:48.201Z - starting server
 info 2020-12-04T18:35:48.371Z - server running on port 4000
 info 2020-12-04T18:41:02.984Z - stopping server
+info 2020-12-04T18:43:31.523Z - starting server
+info 2020-12-04T18:43:31.683Z - server running on port 4000
+info 2020-12-05T18:27:47.587Z - starting server
+info 2020-12-05T18:27:47.771Z - server running on port 4000
+error 2020-12-05T19:39:14.562Z - ConflictError: user with e-mail azucaaena@gmail.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T11:47:36.721Z - starting server
+info 2020-12-06T11:47:36.917Z - server running on port 4000
+info 2020-12-06T17:45:31.585Z - stopping server

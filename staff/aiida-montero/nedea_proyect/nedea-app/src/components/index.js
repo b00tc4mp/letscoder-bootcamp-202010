@@ -8,6 +8,7 @@ import Update from './Update'
 import Search from './Search'
 import Slider from './Slider'
 import ResultList from './ResultList'
+import Profile from './Profile'
 
 
 export{
@@ -20,5 +21,6 @@ export{
     Update,
     Search,
     Slider,
-    ResultList
+    ResultList,
+    Profile
 }

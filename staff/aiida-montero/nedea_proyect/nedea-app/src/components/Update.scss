@@ -1,5 +1,5 @@
 .update-image {
-    max-height: 70%;
+      min-height: 50vw;
       h2{
           text-align: center;
           color: black;
@@ -45,9 +45,11 @@
         margin: auto;
         max-width: 50%;
         padding: .5rem;
-        background-color: rgb(27, 126, 219);
+        background-color: #6d4453;
         border-radius: 50px;
-        margin-top: 117px
+        margin-top: 15px;
+        margin-bottom:25px;
+        
       }
       .login-text {
         //background: hsl(40,30,60);
@@ -97,7 +99,14 @@
         
         }
       }
-      
+      h4{
+      font-size: 15px;
+      margin-top: 10px;
+      }
+      h3{
+        margin-top: 15px;
+        text-align: center;
+      }
 }
 body {
     font-family: 'Open Sans';
@@ -115,4 +124,10 @@ body {
 h2{
     text-align: center;
     margin-top:20p ;
+}
+
+.link_profile{
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
 }

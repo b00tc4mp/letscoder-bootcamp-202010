@@ -1,13 +1,13 @@
 import './ResultList.scss'
 
 export default function ResultList ({pictograms}) {
-  return <section >
+  return <section className = "section_card" >
     {pictograms && pictograms.length ? pictograms.map(({title,description})=>(<> 
       <article className="card">
           <header className="card-header">
             <img
               className="card-header__image"
-              src="https://i.pinimg.com/474x/d4/39/3b/d4393be1766b6b41448a1e2a9722d8e0.jpg"
+              src="https://previews.123rf.com/images/rondale/rondale1507/rondale150700270/42792510-carta-de-vector-may%C3%BAscula-x-dibujado-a-mano-con-pincel-seco.jpg"
               height="120"
               alt="Api"
             />

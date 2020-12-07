@@ -35,6 +35,14 @@
     gap: 10px;
     color: white;
     
+  .exit{
+    margin-right: 20px;
+    border: none;
+    background-color: #6d4453;
+    color: white;
+    outline: none;
+  }
+    
   }
 
   .avatar__initials{
@@ -55,6 +63,7 @@
     outline: none;
     margin-left: 10px;
     cursor: pointer;
+
     
 
   }

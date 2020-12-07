@@ -1,8 +1,9 @@
-import {Initial, Header, Footer, SignUp, SignIn, Home, Update, Search} from './components'
+import {Initial, Header, Footer, SignUp, SignIn, Home, Update, Profile} from './components'
 //import './App.scss';
 import { useState } from 'react'
 import {registerUser, authenticateUser, savePictogram} from './logic';
 import {withRouter, Route, Redirect } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function App(props) {
@@ -25,7 +26,7 @@ function App(props) {
 
         sessionStorage.token = token
 
-        props.history.push('/')
+        props.history.push('/home')
       })
     } catch (error) {
       alert(error.message)
@@ -42,7 +43,7 @@ function App(props) {
     try{
       savePictogram(undefined, token, title, description, (error) =>{
           if(error) return alert(error.message)
-          props.history.push('/initial')
+          props.history.push('/home')
       })
 
     }catch (error){
@@ -56,26 +57,24 @@ function App(props) {
   }
 
   const handleGoToHome = () =>{
-    props.history.push ('/')
+    props.history.push ('/home')
   }
 
+  const handleGoToInitial =() =>{
+    props.history.push('/')
+  }
   const { token } = sessionStorage
 
   return (
     < >
-       <Header onGoToUpdate = {handleGoToUpdate} onGoToHome={handleGoToHome} />
+       <Header onGoToUpdate = {handleGoToUpdate} onGoToHome={handleGoToHome}  onGoInitial={handleGoToInitial}/>
       
-      <Route path ='/update' render={()=> token ? <Redirect to = "/"/> : <Update onSavePictogram= {handleSavePictogram} />}/>
-      <Route path ='/initial' render ={() => <Initial onGoToRegister = {handleGoToRegister}/>}/>
-      <Route path = '/sign-up' render ={()=><SignUp onSignUp = {handleSignUp}/>}/>
-      <Route path = '/sign-in' render = {()=> <SignIn onSignIn = {handleSignIn}/>}/>
-      <Route exact path = '/' render = {()=> <Home/>}/>
-      {/* {view === 'update'  && <Update  onSavePictogram = {handleSavePictogram}/>} */}
-      {/* {view === 'initial' && <Initial onGoToRegister = {handleGoToRegister}/> } */}
-     {/*  {view === 'sign-up' && <SignUp onSignUp={handleSignUp} />} */}
-      {/* {view === 'sign-in' && <SignIn onSignIn={handleSignIn} />} */}
-     {/*  {view === 'home' && <Home/>}   */} 
-      
+      <Route exact path ='/update' render={()=> token ?<Update onSavePictogram= {handleSavePictogram} /> : <Redirect to = "/"/> }/>
+      <Route exact path ='/' render ={() => <Initial onGoToHome = {handleGoToHome} />}/>
+      <Route exact path = '/sign-up' render ={()=><SignUp onSignUp = {handleSignUp}/>}/>
+      <Route exact path = '/sign-in' render = {()=> <SignIn onSignIn = {handleSignIn}/>}/>
+      <Route exact path = '/home' render = {()=> <Home />}/>
+      <Route exact path = '/profile' render = {()=> <Profile/>}/>
       <Footer/> 
     </>
   );
