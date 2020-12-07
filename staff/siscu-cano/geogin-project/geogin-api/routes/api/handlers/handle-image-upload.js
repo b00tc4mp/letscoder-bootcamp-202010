@@ -4,15 +4,16 @@ const cloudinary = require('cloudinary').v2
 module.exports = async (req, res, handleError) => {
 
     try {
-        const fileStr = req.body.data;
-        const uploadResponse = await cloudinary.uploader.upload(fileStr, {});
+        const dataImage = req.body.data;
+        const uploadResponse = await cloudinary.uploader.upload(dataImage);
         res.status(200).json({
-            message: "success",
+            message: "success upload image",
             uploadResponse: uploadResponse, }).send();
 
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ err: 'Something went wrong' });
+    } catch (error) {
+        res.status(500)
+           .json({ message: 'failure upload image', error })
+           .send();
     }
 
 }
