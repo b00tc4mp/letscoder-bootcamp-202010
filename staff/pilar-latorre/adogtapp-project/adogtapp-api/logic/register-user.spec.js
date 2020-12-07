@@ -6,6 +6,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const registerUser = require('./register-user')
 const { User } = require('../models')
 const bcrypt = require('bcryptjs')
+const {ContentError} = require('../errors')
 
 
 
@@ -116,7 +117,7 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on an empty or blank email', () => {
-                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(Error, 'e-mail is empty or blank')
+                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(ContentError, 'e-mail is empty or blank')
                 })
             })
 
@@ -136,7 +137,7 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on an empty or blank password', () => {
-                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(Error, 'password is empty or blank')
+                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(ContentError, 'password is empty or blank')
                 })
             })
 
@@ -174,7 +175,7 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on an empty or blank userName', () => {
-                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(Error, 'userName is empty or blank')
+                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(ContentError, 'userName is empty or blank')
                 })
             })
 
@@ -234,7 +235,7 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on an empty or blank city', () => {
-                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(Error, 'city is empty or blank')
+                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(ContentError, 'city is empty or blank')
                 })
             })
 
@@ -272,7 +273,7 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on an empty or blank phone', () => {
-                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(Error, 'phone is empty or blank')
+                    expect(() => registerUser(userName, email, password, address, city, phone, description, () => { })).to.throw(ContentError, 'phone is empty or blank')
                 })
             })
 

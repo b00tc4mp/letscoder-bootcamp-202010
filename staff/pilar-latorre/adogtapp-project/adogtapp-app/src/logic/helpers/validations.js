@@ -61,7 +61,15 @@ module.exports = {
     validateDescription(description) {
         if (typeof description !== 'string') throw new TypeError(`${description} is not a description`)
 
-    }
+    },
+
+    validateId(id) {
+        if (typeof id !== 'string') throw new TypeError(`${id} is not an id`)
+
+        if (!id.trim().length) throw new Error('id is empty or blank')
+
+       // if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
+    },
 
    
 

@@ -1,12 +1,16 @@
 import './SearchPets.sass'
 import FindPets from './FindPets'
 import { useState } from 'react'
-import {findPets} from '../logic'
+import {findPets, detailPet} from '../logic'
+import DetailPet from './DetailPet'
+
+
 
 function SearchPets(){
 
     let query;
     const [results, setResults] = useState()
+    const [result, setResult] = useState()
 
     const handleFindPets = (queryShelter, city, queryPet, species, breed) => {
         const { token } = sessionStorage
@@ -17,12 +21,29 @@ function SearchPets(){
                 if (error) return alert(error.message)
 
                 setResults(pets)
+                setResult(null)
 
             })
         } catch (error) {
             alert(error.message)
         }
-    }    
+    } 
+    
+    const handleDetailPet = id => {
+        try {
+            detailPet( id, (error, pet) => {
+
+                if (error) return alert(error.message)
+
+                setResult(pet)
+                setResults(null)
+
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+
+    }
     
         return (
             <>
@@ -70,8 +91,9 @@ function SearchPets(){
 
      
                 </form>
-                {results && results.length && <FindPets results={results} />}
+                {!result && results && results.length && <FindPets results={results} onDetailPet={handleDetailPet} />}
                 {!results && <div><img className="search__img"src="patitas.jpg"/></div>}
+                {!results && result && <DetailPet result={result}/>}
             </>
         );
     }

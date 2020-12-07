@@ -6,6 +6,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 require('../utils/array-polyfills')
 const savePet = require('./save-pet')
 const { User, Pet } = require('../models')
+const { ContentError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -110,7 +111,7 @@ describe('savePet()', () => {
                 })
 
                 it('should fail on an empty or blank name', () => {
-                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(Error, 'name is empty or blank')
+                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(ContentError, 'name is empty or blank')
                 })
             })
 
@@ -145,7 +146,7 @@ describe('savePet()', () => {
                 })
 
                 it('should fail on an empty or blank breed', () => {
-                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(Error, 'breed is empty or blank')
+                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(ContentError, 'breed is empty or blank')
                 })
             })
 

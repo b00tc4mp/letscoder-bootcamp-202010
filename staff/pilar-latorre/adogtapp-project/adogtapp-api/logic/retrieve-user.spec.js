@@ -6,7 +6,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/
 require('../utils/array-polyfills')
 const retrieveUser = require('./retrieve-user')
 const { User } = require('../models')
-//const { LengthError, ContentError } = require('notes-errors')
+const { LengthError, ContentError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -80,7 +80,7 @@ describe('retrieveUser()', () => {
             beforeEach(() => userId = ['', ' ', '\t', '\t', '\r'].random())
 
             it('should fail on empty or blank user id', () => {
-                expect(() => retrieveUser(userId, () => { })).to.throw(Error, `id is empty or blank`)
+                expect(() => retrieveUser(userId, () => { })).to.throw(ContentError, `id is empty or blank`)
             })
         })
 
@@ -90,7 +90,7 @@ describe('retrieveUser()', () => {
             beforeEach(() => userId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5? 3 : 3)))
 
             it('should fail on user id length different from 24', () => {
-                expect(() => retrieveUser(userId, () => { })).to.throw(Error, `id length ${userId.length} is not 24`)
+                expect(() => retrieveUser(userId, () => { })).to.throw(LengthError, `id length ${userId.length} is not 24`)
             })
         })
     })

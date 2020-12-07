@@ -9,7 +9,7 @@ export default function savePet( petId, name, breed, species, color, description
     validateColor(color)
     validateDescription(description)
     validateCallback(callback)
-debugger
+
     call('POST', 'http://localhost:4000/api/pets', { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,

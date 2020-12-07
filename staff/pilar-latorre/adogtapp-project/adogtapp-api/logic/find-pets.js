@@ -6,7 +6,6 @@ module.exports = function (shelterId, queryShelter, city, queryPet, species, bre
     //poner validations
     
     const criteria = {}
-debugger
     if (shelterId)
         criteria._id = ObjectId(shelterId)
 
@@ -25,7 +24,7 @@ debugger
         .then(users => {
             const ids = users.map(({ _id }) => _id)
 
-            console.log(ids)
+
 
             const criteria = {
                 shelter: { $in: ids }

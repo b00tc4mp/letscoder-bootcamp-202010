@@ -6,6 +6,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const authenticateUser = require('./authenticate-user')
 const { User } = require('../models')
 const bcrypt = require('bcryptjs')
+const { ContentError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -94,7 +95,7 @@ describe('authenticateUser()', () => {
                     password = randomStringWithPrefix('password')
                 })
 
-                it('should fail on empty or blank email', () => {
+                it('should fail on a non string e-mail', () => {
                     expect(() => authenticateUser(email, password, () => { })).to.throw(TypeError, `${email} is not an e-mail`)
                 })
             })
@@ -107,8 +108,8 @@ describe('authenticateUser()', () => {
                     password = randomStringWithPrefix('password')
                 })
 
-                it('should fail on non-string email', () => {
-                    expect(() => authenticateUser(email, password, () => { })).to.throw(Error, 'e-mail is empty or blank')
+                it('should fail on an empty or blank', () => {
+                    expect(() => authenticateUser(email, password, () => { })).to.throw(ContentError, 'e-mail is empty or blank')
                 })
             })
         })
@@ -136,7 +137,7 @@ describe('authenticateUser()', () => {
                 })
 
                 it('should fail on non-string password', () => {
-                    expect(() => authenticateUser(email, password, () => { })).to.throw(Error, 'password is empty or blank')
+                    expect(() => authenticateUser(email, password, () => { })).to.throw(ContentError, 'password is empty or blank')
                 })
             })
         })

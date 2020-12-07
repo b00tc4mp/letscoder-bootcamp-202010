@@ -4,6 +4,7 @@ import Home from './Home'
 import Welcome from './Welcome'
 import CreatePet from './CreatePet'
 import FindPets from './FindPets'
+import DetailPet from './DetailPet'
 
 
 export {
@@ -12,7 +13,8 @@ export {
     Home,
     Welcome,
     CreatePet,
-    FindPets
+    FindPets,
+    DetailPet
 
     
 
