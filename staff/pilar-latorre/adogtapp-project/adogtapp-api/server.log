@@ -810,3 +810,75 @@ info 2020-12-07T12:11:48.510Z - stopping server
 info 2020-12-07T12:12:54.769Z - starting server
 info 2020-12-07T12:12:54.897Z - server running on port 4000
 info 2020-12-07T12:19:21.081Z - stopping server
+info 2020-12-07T14:31:33.560Z - starting server
+info 2020-12-07T14:31:33.695Z - server running on port 4000
+info 2020-12-07T14:34:16.469Z - stopping server
+info 2020-12-07T14:34:22.618Z - starting server
+info 2020-12-07T14:34:22.794Z - server running on port 4000
+info 2020-12-07T14:36:00.722Z - stopping server
+info 2020-12-07T14:36:08.810Z - starting server
+info 2020-12-07T14:36:08.927Z - server running on port 4000
+info 2020-12-07T18:05:56.487Z - stopping server
+info 2020-12-07T18:05:59.911Z - starting server
+info 2020-12-07T18:06:00.097Z - server running on port 4000
+info 2020-12-07T18:10:40.063Z - stopping server
+info 2020-12-07T18:10:44.076Z - starting server
+info 2020-12-07T18:10:44.188Z - server running on port 4000
+info 2020-12-07T18:25:32.182Z - stopping server
+info 2020-12-07T18:25:35.490Z - starting server
+info 2020-12-07T18:25:35.798Z - server running on port 4000
+info 2020-12-07T18:31:57.702Z - stopping server
+info 2020-12-07T18:32:02.854Z - starting server
+info 2020-12-07T18:32:03.763Z - server running on port 4000
+info 2020-12-07T18:32:57.989Z - stopping server
+info 2020-12-07T18:33:01.067Z - starting server
+info 2020-12-07T18:33:01.183Z - server running on port 4000
+info 2020-12-07T18:44:07.246Z - stopping server
+info 2020-12-07T18:44:17.166Z - starting server
+info 2020-12-07T18:44:17.380Z - server running on port 4000
+error 2020-12-07T18:45:52.748Z - CastError: Cast to ObjectId failed for value "{ petId: '5fce7821c3b0642c706d57bc' }" at path "_id" for model "Pet"
+    at model.Query.exec (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\mongoose\lib\query.js:4358:21)
+    at model.Query.Query.then (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js:16:10)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-delete-pet.js:12:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:23:12)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:410:3)
+error 2020-12-07T18:46:24.547Z - CastError: Cast to ObjectId failed for value "{ petId: '5fce7821c3b0642c706d57bc' }" at path "_id" for model "Pet"
+    at model.Query.exec (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\mongoose\lib\query.js:4358:21)
+    at model.Query.Query.then (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js:16:10)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-delete-pet.js:12:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:23:12)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:410:3)
+info 2020-12-07T18:46:33.159Z - stopping server
+info 2020-12-07T18:46:43.044Z - starting server
+info 2020-12-07T18:46:43.229Z - server running on port 4000
+info 2020-12-07T18:50:02.174Z - stopping server
+info 2020-12-07T18:50:05.265Z - starting server
+info 2020-12-07T18:50:05.418Z - server running on port 4000
+info 2020-12-07T18:52:17.715Z - stopping server
+info 2020-12-07T18:52:20.863Z - starting server
+info 2020-12-07T18:52:21.012Z - server running on port 4000
+error 2020-12-07T18:52:42.882Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:18:39
+info 2020-12-07T19:03:50.313Z - stopping server

@@ -1,6 +1,22 @@
+import { deletePet, findPets } from '../logic'
 import './DetailPet.sass'
 
-function DetailPet({result: {id, name, breed, species, color, description } }){
+function DetailPet({result: {id, name, breed, species, color, description } , onFindPets}){
+
+    const handleDeletePet = id => {
+        //const { token } = sessionStorage
+
+        try {
+            deletePet(  id, (error) => {
+
+                if (error) return alert(error.message)
+
+            }) 
+            onFindPets()
+        } catch (error) {
+            alert(error.message)
+        }
+    } 
 
     
     return <div className="result">
@@ -14,6 +30,7 @@ function DetailPet({result: {id, name, breed, species, color, description } }){
             <p className="result__p">species: {species}</p>
             <p className="result__p">color: {color}</p>
             <p className="result__p">description: {description}</p>
+            <button className="result__button" onClick={()=>handleDeletePet(id) }>DELETE PET</button>
             </div>
         </li>
 

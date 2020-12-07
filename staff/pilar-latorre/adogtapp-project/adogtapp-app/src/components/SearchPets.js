@@ -93,7 +93,7 @@ function SearchPets(){
                 </form>
                 {!result && results && results.length && <FindPets results={results} onDetailPet={handleDetailPet} />}
                 {!results && <div><img className="search__img"src="patitas.jpg"/></div>}
-                {!results && result && <DetailPet result={result}/>}
+                {!results && result && <DetailPet result={result} onFindPets = {handleFindPets}/>}
             </>
         );
     }

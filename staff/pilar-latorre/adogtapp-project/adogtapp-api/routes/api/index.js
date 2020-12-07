@@ -8,7 +8,8 @@ const {
     handleRetrieveUser,
     handleSavePet,
     handleFindPets,
-    handleDetailPet
+    handleDetailPet,
+    handleDeletePet
   
 } = require('./handlers')
 
@@ -29,8 +30,9 @@ router.post('/api/pets/find', jsonBodyParser, withErrorHandling(handleFindPets))
 
 router.get('/api/pets/:petId', withErrorHandling(handleDetailPet))
 
+router.delete('/api/pets/:petId', jsonBodyParser, withErrorHandling(handleDeletePet))
 
 
-/*router.get('/api/pets', withErrorHandling(handleRetrievePets)) */
+
 
 module.exports = router
