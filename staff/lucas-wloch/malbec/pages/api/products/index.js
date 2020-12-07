@@ -7,7 +7,7 @@ dbConnect();
 
 export default async (req, res) => {
     const { method } = req
-    
+
     cors(req, res)
 
     switch (method) {
@@ -26,8 +26,9 @@ export default async (req, res) => {
             // res.status(200).json({fullname, email, password})
 
             try {
+                debugger
                 saveProducts(name, description, price, glutenFree, vegan, alergenos, category, available)
-                    .then(result => res.status(201).json({success: true}))
+                    .then(result => res.status(201).json({ success: true }))
                     .catch(error => handleError(req, res, error))
             } catch (error) {
                 return handleError(req, res, error)

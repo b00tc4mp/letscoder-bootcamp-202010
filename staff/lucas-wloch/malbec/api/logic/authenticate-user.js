@@ -1,6 +1,8 @@
 const { validateEmail, validatePassword } = require('./helpers/validations')
 const { AuthError } = require('../../errors')
-const { User } = require('../models')
+// const { User } = require('../models')
+const  { User } = require('../models')
+
 const bcryptjs = require('bcryptjs')
 
 module.exports = (email, password) => {

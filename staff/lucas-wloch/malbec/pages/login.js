@@ -2,13 +2,14 @@ import { Layout, Feedback } from '../components'
 import '../components/Login.sass'
 import Link from 'next/link'
 import { useState } from 'react'
-import  authenticateUser  from '../logic/authenticate-user'
+import authenticateUser from '../logic/authenticate-user'
+import { useRouter } from 'next/router'
 // const { authenticateUser } = require('../logic')
 
 const Login = (req, res) => {
 
     const [error, setError] = useState()
-
+    const router = useRouter()
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -22,15 +23,14 @@ const Login = (req, res) => {
     const handleLogin = (email, password) => {
         try {
             authenticateUser(email, password, (error, token) => {
-                if (error) return setError( error.message )
+                if (error) return setError(error.message)
 
                 sessionStorage.token = token
 
-                // req.url.redirect()
-
+                router.push('/')
             })
         } catch (error) {
-            setError( error.message )
+            setError(error.message)
         }
 
     }

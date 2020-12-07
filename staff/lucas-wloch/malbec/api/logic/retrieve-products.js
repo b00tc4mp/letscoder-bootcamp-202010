@@ -1,11 +1,10 @@
 // const { validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateProductAlergenos, validateProductCategory, validateProductAvailable } = require('./helpers/validations')
-const { Product } = require('../models')
+const  { Product }  = require('../models')
 // import { Product } from '../models'
 
 
 module.exports = () =>
-    Product
-        .find().lean()
+    Product.find().lean()
         .then(products => {
             if (!products) return []
 

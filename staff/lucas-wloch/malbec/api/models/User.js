@@ -1,6 +1,7 @@
-const { Schema } = require('mongoose')
+const { Schema, model } = require('mongoose')
+const user = require('./schemas/user')
 
-module.exports = new Schema({
+const userSchema = new Schema({
     fullname: {
         type: String,
         required: [true, 'Please add a fullname'],
@@ -18,15 +19,7 @@ module.exports = new Schema({
         type: String,
         required: [true, 'Please add a password'],
         minlength: 3
-    } // o implementar verificacion con telefono
-    // type [ owner, client ]
-    // phoneNumber: {
-    //     type: String,
-    //     trim: true,
-    //     maxlength: [11, 'Phone number cannot have more than 11 characters']
-    // },
-    // historial-pedidos: {
-    //     [product-name]: ammount = Number/String
-    // }
+    }
 })
 
+module.exports = model('User', user)

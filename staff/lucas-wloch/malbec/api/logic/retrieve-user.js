@@ -1,7 +1,7 @@
 const { validateId } = require('./helpers/validations')
 
 const { NotFoundError } = require('../../errors')
-const { User } = require('../models')
+const  { User }  = require('../models')
 
 module.exports = (id) => {
     validateId(id)

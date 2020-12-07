@@ -3,7 +3,7 @@ const { ConflictError } = require('../../errors')
 const { Product } = require('../models')
 
 
-module.exports = ((name, description, price, glutenFree, vegan, alergenos, category, available) => {
+module.exports = (name, description, price, glutenFree, vegan, alergenos, category, available) => {
     validateProductName(name)
     validateProductDescription(description)
     validateProductPrice(price)
@@ -13,16 +13,19 @@ module.exports = ((name, description, price, glutenFree, vegan, alergenos, categ
     validateProductCategory(category)
     validateProductAvailable(available)
 
+    // .findOne({ $or: [{ name }, { description }] })
 
-    return Product
-        .findOne({ $or: [{ name }, { description }] })
+    // return Product.findOne().lean()
+    return Product.findOne({ $or: [{ name }, { description }] })
         .then(product => {
+            debugger
             if (product) throw new ConflictError(`product with name ${name} already exists`)
 
             return Product.create({ name, description, price, glutenFree, vegan, alergenos, category, available })
         })
-        .then(() => { })
-})
+    // .then(() => { })
+
+}
     //user = new User({ fullname, email, password })
     // return user.save()
 

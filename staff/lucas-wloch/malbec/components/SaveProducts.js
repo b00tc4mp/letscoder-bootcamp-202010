@@ -1,9 +1,9 @@
-// import saveProducts from '../logic/save-products'
+import saveProducts from '../logic/save-products'
 import './SaveProducts.sass'
 import { useState } from 'react'
 
 
-function SaveProducts() {
+function SaveProducts({onExit}) {
     const [success, setSuccess] = useState()
 
 
@@ -46,6 +46,7 @@ function SaveProducts() {
 
     return <>
         <section className="saveProducts" >
+            <button onClick={onExit}>❌</button>
             {success || <h1 className="saveProducts__title" >Create your Product</h1>}
             {success && <h1 className="saveProducts__title" >OK, Product saved!</h1>}
             <form className="saveProducts__form" onSubmit={handleSubmit}>
