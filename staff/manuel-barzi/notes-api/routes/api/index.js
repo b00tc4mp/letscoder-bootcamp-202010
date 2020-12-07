@@ -7,7 +7,8 @@ const {
     handleAuthenticateUser,
     handleRetrieveUser,
     handleSaveNote,
-    handleRetrieveNotes
+    handleRetrieveNotes,
+    handleSaveNoteImage
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -27,5 +28,7 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
 
 router.get('/api/notes', withErrorHandling(handleRetrieveNotes))
+
+router.post('/api/notes/:noteId/images', withErrorHandling(handleSaveNoteImage))
 
 module.exports = router

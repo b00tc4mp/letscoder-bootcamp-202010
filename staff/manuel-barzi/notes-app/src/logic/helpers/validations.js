@@ -59,5 +59,9 @@ module.exports = {
         if (!visibility.trim().length) throw new Error('visibility is empty or blank')
 
         if (visibility !== 'public' && visibility !== 'private') throw new Error('visibility is not public or private')
+    },
+
+    validateFile(file) {
+        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
     }
 }

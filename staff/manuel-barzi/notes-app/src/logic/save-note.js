@@ -38,6 +38,8 @@ export default function saveNote(token, noteId, text, tags, visibility, callback
                 return callback(new Error(error))
             }
 
-            callback(null)
+            const { noteId } = JSON.parse(response)
+
+            callback(null, noteId)
         })
 }

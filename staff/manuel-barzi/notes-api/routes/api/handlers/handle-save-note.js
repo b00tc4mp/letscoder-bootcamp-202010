@@ -13,7 +13,7 @@ module.exports = (req, res, handleError) => {
         const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
         
         saveNote(ownerId, noteId, text, tags, visibility)
-            .then(() => res.status(200).send())
+            .then(noteId => res.status(200).send({ noteId }))
             .catch(handleError)
     } catch (error) {
         handleError(error)

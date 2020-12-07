@@ -4,5 +4,6 @@ module.exports = {
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
     saveNote: require('./save-note'),
-    retrieveNotes: require('./retrieve-notes')
+    retrieveNotes: require('./retrieve-notes'),
+    saveNoteImage: require('./save-note-image')
 }

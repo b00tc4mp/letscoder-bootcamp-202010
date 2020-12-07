@@ -7,12 +7,13 @@ export default function ({ onSaveNote }) {
         let { target: {
             text: { value: text },
             visibility: { value: visibility },
-            tags: { value: tags }
+            tags: { value: tags },
+            image
         } } = event
 
         tags = tags.trim()
 
-        onSaveNote(text, visibility, tags ? tags.split(' ') : [])
+        onSaveNote(text, visibility, tags ? tags.split(' ') : [], image.files[0])
     }
 
     return <section className="save-note">
@@ -24,6 +25,9 @@ export default function ({ onSaveNote }) {
             <label htmlFor="public">public</label>
             <input type="text" id="tags" name="tags" />
             <label htmlFor="tags">tags</label>
+            <input type="file" id="image" name="image" />
+            <label htmlFor="image">Photo</label>
+
             <button>sAVe</button>
         </form>
     </section>

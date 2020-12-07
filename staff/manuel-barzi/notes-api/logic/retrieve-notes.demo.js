@@ -1,17 +1,11 @@
 require('dotenv').config()
 
-const { MongoClient } = require('mongodb')
-const context = require('./context')
+const mongoose = require('mongoose')
 const retrieveNotes = require('./retrieve-notes')
 
 const { env: { MONGODB_URL } } = process
 
-const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-client.connect((error, connection) => {
-    if (error) return console.error(error)
-
-    context.connection = connection
-
-    retrieveNotes('5fb7f43bcf65c468175af431', console.log)
-})
+mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
+    .then(() => retrieveNotes('5fca5b424d1115677f6fe2e6'))
+    .then(console.log)
+    .then(mongoose.disconnect)

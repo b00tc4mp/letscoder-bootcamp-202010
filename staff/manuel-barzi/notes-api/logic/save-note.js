@@ -1,46 +1,35 @@
-const { validateId, validateText, validateTags, validateVisibility, validateCallback } = require('./helpers/validations')
-const context = require('./context')
+const { validateId, validateText, validateTags, validateVisibility } = require('./helpers/validations')
 const { ObjectId } = require('mongodb')
 const { NotFoundError } = require('notes-errors')
+const { User, Note } = require('../models')
 
-const { env: { DB_NAME } } = process
-
-module.exports = function (ownerId, noteId, text, tags, visibility) {
+module.exports = (ownerId, noteId, text, tags, visibility) => {
     validateId(ownerId)
     if (typeof noteId !== 'undefined') validateId(noteId)
     validateText(text)
     validateTags(tags)
     validateVisibility(visibility)
 
-    const { connection } = this
-
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
-    const _id = ObjectId(ownerId)
-
-    return users
-        .findOne({ _id })
+    return User
+        .findById(ownerId)
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
-            const notes = db.collection('notes')
-
             if (noteId) {
-                const _id = ObjectId(noteId)
-
-                return notes
-                    .findOne({ _id })
+                return Notes
+                    .findById(noteId)
                     .then(note => {
                         if (!note) throw new NotFoundError(`note with id ${noteId} not found`)
 
-                        return notes
-                            .updateOne({ _id }, { $set: { text, tags, visibility } })
-                            .then(result => undefined)
+                        note.text = text
+                        note.tags = tags
+                        note.visibility = visibility
+
+                        return note.save()
                     })
+                    .then(note => note.id)
             } else
-                return notes.insertOne({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date })
-                    .then(result => undefined)
+                return Note.create({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date })
+                    .then(note => note.id)
         })
-}.bind(context)
+}

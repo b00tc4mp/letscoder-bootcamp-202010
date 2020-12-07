@@ -600,3 +600,73 @@ error 2020-12-04T16:16:30.460Z - TypeError: Cannot read property 'db' of undefin
     at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
     at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
     at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:335:12)
+info 2020-12-07T15:32:51.022Z - stopping server
+info 2020-12-07T15:32:51.023Z - stopping server
+info 2020-12-07T15:38:22.186Z - starting server
+info 2020-12-07T15:38:22.268Z - server running on port 4000
+info 2020-12-07T15:43:06.171Z - stopping server
+info 2020-12-07T15:43:38.765Z - starting server
+info 2020-12-07T15:43:38.853Z - server running on port 4000
+info 2020-12-07T15:45:17.651Z - stopping server
+info 2020-12-07T15:45:18.866Z - starting server
+info 2020-12-07T15:45:18.951Z - server running on port 4000
+info 2020-12-07T15:47:53.028Z - stopping server
+info 2020-12-07T15:49:20.400Z - starting server
+info 2020-12-07T15:49:20.488Z - server running on port 4000
+error 2020-12-07T15:50:54.281Z - TypeError: Cannot read property 'db' of undefined
+    at Object.<anonymous> (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/retrieve-notes.js:14:27)
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-notes.js:15:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:335:12)
+info 2020-12-07T15:51:13.269Z - stopping server
+info 2020-12-07T16:15:08.121Z - starting server
+info 2020-12-07T16:15:08.209Z - server running on port 4000
+info 2020-12-07T16:17:31.628Z - stopping server
+info 2020-12-07T16:17:31.629Z - stopping server
+info 2020-12-07T16:17:33.131Z - starting server
+info 2020-12-07T16:17:33.219Z - server running on port 4000
+info 2020-12-07T16:41:54.416Z - stopping server
+info 2020-12-07T16:41:54.416Z - stopping server
+info 2020-12-07T16:41:55.634Z - starting server
+info 2020-12-07T16:41:55.724Z - server running on port 4000
+info 2020-12-07T16:59:03.022Z - stopping server
+info 2020-12-07T16:59:03.022Z - stopping server
+info 2020-12-07T16:59:04.352Z - starting server
+info 2020-12-07T16:59:04.438Z - server running on port 4000
+info 2020-12-07T17:01:06.171Z - starting server
+info 2020-12-07T17:01:06.258Z - server running on port 4000
+info 2020-12-07T17:02:39.214Z - starting server
+info 2020-12-07T17:02:39.300Z - server running on port 4000
+info 2020-12-07T17:03:42.961Z - starting server
+info 2020-12-07T17:03:43.048Z - server running on port 4000
+info 2020-12-07T17:06:55.232Z - starting server
+info 2020-12-07T17:06:55.321Z - server running on port 4000
+info 2020-12-07T17:08:57.040Z - starting server
+info 2020-12-07T17:08:57.130Z - server running on port 4000
+info 2020-12-07T17:09:43.075Z - starting server
+info 2020-12-07T17:09:43.164Z - server running on port 4000
+info 2020-12-07T17:13:29.097Z - stopping server
+info 2020-12-07T17:13:32.096Z - starting server
+info 2020-12-07T17:13:32.183Z - server running on port 4000
+info 2020-12-07T17:13:42.169Z - stopping server
+info 2020-12-07T17:13:42.169Z - stopping server
+info 2020-12-07T17:13:43.566Z - starting server
+info 2020-12-07T17:13:43.652Z - server running on port 4000
+info 2020-12-07T17:15:37.230Z - starting server
+info 2020-12-07T17:15:37.317Z - server running on port 4000
+info 2020-12-07T17:16:05.897Z - starting server
+info 2020-12-07T17:16:05.985Z - server running on port 4000
+info 2020-12-07T17:19:03.129Z - stopping server
+info 2020-12-07T17:19:03.129Z - stopping server
