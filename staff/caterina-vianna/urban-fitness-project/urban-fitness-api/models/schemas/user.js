@@ -26,4 +26,10 @@ module.exports = new Schema({
     required: true,
     minlength: 8,
   },
+  role: {
+    type: String,
+    required: true,
+    default: "Alum",
+    enum: ["Alum", "Trainer"],
+  },
 });

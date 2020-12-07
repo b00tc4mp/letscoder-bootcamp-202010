@@ -17,6 +17,7 @@ import {
 import { retrieveUser } from "../logic";
 import Profile from "./Profile";
 import EditProfile from "./EditProfile";
+import Card from "./Card";
 
 export default function Home({ token }) {
   const [name, setName] = useState();
@@ -46,12 +47,24 @@ export default function Home({ token }) {
     setView("profile");
   };
 
+  const handleListMode = () => {
+    setView("list-mode");
+  };
+
   return (
     <View style={styles.backgroundDefault}>
       <View>
-        {view === "profile" && <Profile onAvatar={handleChangeToEditProfile} />}
+        {view === "profile" && (
+          <Profile
+            onAvatar={handleChangeToEditProfile}
+            onListMode={handleListMode}
+          />
+        )}
         {view === "edit-profile" && (
           <EditProfile onCloseProfile={handleChangeToProfile} />
+        )}
+        {view === "list-mode" && (
+          <Card title="Red jacket for sale" subTitle="$100" />
         )}
       </View>
     </View>

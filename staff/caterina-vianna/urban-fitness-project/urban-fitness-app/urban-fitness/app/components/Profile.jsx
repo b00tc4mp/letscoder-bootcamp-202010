@@ -15,7 +15,14 @@ import MapView, { AnimatedRegion } from "react-native-maps";
 
 import React from "react";
 
-export default function Profile({ onAvatar }) {
+export default function Profile({ onAvatar, onListMode }) {
+  const initialRegion = {
+    latitude: 41.390205,
+    longitude: 2.154007,
+    latitudeDelta: 0.04,
+    longitudeDelta: 0.05,
+  };
+
   return (
     <View>
       <View style={styles.containerNavigation}>
@@ -28,7 +35,11 @@ export default function Profile({ onAvatar }) {
           onChangeText={() => {}}
         />
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              onListMode();
+            }}
+          >
             <Image
               source={require("../assets/icon_list_app.png")}
               style={styles.listIcon}
@@ -41,6 +52,7 @@ export default function Profile({ onAvatar }) {
           style={styles.mapStyle}
           provider={MapView.PROVIDER_GOOGLE}
           customMapStyle={generatedMapStyle}
+          initialRegion={initialRegion}
         />
       </View>
     </View>
