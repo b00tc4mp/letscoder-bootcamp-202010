@@ -17,7 +17,7 @@ describe('authenticateUser()', () => {
         let userId, name, email, password
 
         beforeEach(() => {
-            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+            name = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 

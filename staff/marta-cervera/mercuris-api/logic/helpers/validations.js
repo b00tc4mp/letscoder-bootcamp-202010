@@ -1,3 +1,5 @@
+const { ContentError, LengthError, FormatError} = require('../../errors')
+
 module.exports = {
     validateEmail(email) {
         if (typeof email !== 'string') throw new TypeError(`${email} is not an e-mail`)

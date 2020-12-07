@@ -130,7 +130,7 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on an empty or blank email', () => {
-                    expect(() => registerUser(name, email, password, () => { })).to.throw(ContentError, 'email is empty or blank')
+                    expect(() => registerUser(name, email, password, () => { })).to.throw(ContentError, 'e-mail is empty or blank')
                 })
             })
 
