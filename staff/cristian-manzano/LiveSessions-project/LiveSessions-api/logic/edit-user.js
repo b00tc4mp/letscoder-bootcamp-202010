@@ -1,4 +1,4 @@
-const { validateEmail, validateCity, validateDescription, validateTags, validateArtistName, validateFullname, validateDescription } = require('./helpers/validations')
+const { validateEmail, validateCity, validateDescription, validateTags, validateArtistName, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
 const { User } = require('../models')
@@ -16,7 +16,6 @@ module.exports = function (email, fullname, artistName, city, tags, description)
             .findOne({ email })
             .then(user => {
                 if (!user) throw new ConflictError(`user with email ${email} does not exists`)
-
                 User.updateOne({ email }, {$set: { fullname, artistName, city, tags, description } })
                 .then(result => undefined)
             })

@@ -17,7 +17,7 @@ import authenticateUser from './app/logic/authenticate-user';
 
 
 export default function App() {
-  const [view, setView] = useState('sign-in')
+  const [view, setView] = useState('sign-up')
 
   const handleGoToSignUp = () => {
     setView("sign-up")
@@ -27,11 +27,11 @@ export default function App() {
     setView("sign-in")
   }
 
-  const handleSignUp = ({ fullname, email, password }) => {
-    console.log(fullname, email, password)
+  const handleSignUp = ({ fullname, email, password, role }) => {
+    console.log(fullname, email, password, role)
     debugger
     try{
-    registerUser( fullname, email, password, error => {
+    registerUser( fullname, email, password, role, error => {
       if (error) return alert(error.message)
       
       setView('sign-in')

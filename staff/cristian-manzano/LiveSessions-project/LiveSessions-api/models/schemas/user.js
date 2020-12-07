@@ -30,8 +30,8 @@ module.exports = new Schema({
     role: {
         type: String,
         required: true,
-        default: 'ARTIST',
-        enum: ['ARTIST', 'PROMOTER']
+        enum: ['ARTIST', 'PROMOTER'],
+        default: 'ARTIST'
     },
 
     artistName: {
@@ -39,14 +39,13 @@ module.exports = new Schema({
         required: false
     },
 
-
     city: {
         type: String,
         required: false
     },
 
     tags: {
-        type: String,
+        type: Array,
         required: false
     },
     
@@ -54,4 +53,5 @@ module.exports = new Schema({
         type: String,
         required: false
     },
+    
 })

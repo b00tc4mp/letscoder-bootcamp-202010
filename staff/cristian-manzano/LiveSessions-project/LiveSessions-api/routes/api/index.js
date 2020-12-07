@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const { cookieParser, cookieSession, jsonBodyParser } = require('../../middlewares')
+const { jsonBodyParser } = require('../../middlewares')
 
 const {
     handleRegisterUser,

@@ -23,6 +23,12 @@ module.exports = {
         if (!fullname.trim().length) throw new Error('fullname is empty or blank')
     },
 
+    validateRole(role) {
+        if (typeof role !== 'string') throw new TypeError(role + ' is not a role')
+
+        if (!role.trim().length) throw new Error('role is empty or blank')
+    },
+
 
     validateArtistName(artistName) {
         if (typeof artistName !== 'string') throw new TypeError(artistName + ' is not a artistName')

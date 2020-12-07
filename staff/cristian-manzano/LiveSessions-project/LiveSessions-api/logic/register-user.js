@@ -1,13 +1,13 @@
-const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
+const { validateEmail, validatePassword, validateFullname, validateRole } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
 const { User } = require('../models')
 
-module.exports = function (email, fullname, password) {
-    debugger
-    validateEmail(email)
+module.exports = function (fullname, email, password, role) {
     validateFullname(fullname)
+    validateEmail(email)
     validatePassword(password)
+    validateRole(role)
 
     return semaphore(() =>
         User
@@ -17,7 +17,7 @@ module.exports = function (email, fullname, password) {
                 
 
                 return User
-                .create({ email, fullname, password })
+                .create({ email, fullname, password, role })
             })
             .then(() => {})
             

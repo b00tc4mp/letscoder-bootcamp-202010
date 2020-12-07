@@ -3,6 +3,8 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 
 
 function SignUpScreen({ onSignUp }) {
+    const[role,setRole]=useState('')
+
     const [ email, setEmail ] = useState('')
     const [ fullname, setFullname ] = useState('')
     const [ password , setPassword ] = useState('')
@@ -44,11 +46,30 @@ function SignUpScreen({ onSignUp }) {
                     value={password} >
                 </TextInput>
 
+
+            <View style={styles.roleContainer}>
+            <TouchableOpacity style={role==='ARTIST'?styles.roleImageClicked:styles.roleImage} onPress={(event)=>{
+            event.preventDefault();
+            
+            setRole('ARTIST')
+        }}>
+            <Image style={styles.logo} source={require('../assets/artist-role-image.png')} 
+            value={role}
+            />
+        </TouchableOpacity>
+        <TouchableOpacity style={role==='PROMOTER'?styles.roleImageClicked:styles.roleImage} onPress={(event)=>{
+            event.preventDefault();
+            setRole('PROMOTER')
+        }}>
+           <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} 
+            value={role}/>
+        </TouchableOpacity>
+            </View>
+
                 <TouchableOpacity style={styles.signUpButton}
-                onPress={ () => {onSignUp ({ email, fullname, password })}}>
+                onPress={ () => {onSignUp ({ email, fullname, password, role })}}>
                     <Text style={styles.buttonText}>Sign Up!</Text>
                 </TouchableOpacity>
-
             </View>
         </ScrollView>
         </KeyboardAvoidingView>
@@ -83,6 +104,27 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#343a40",
         color: "#343a40"
+    },
+
+    roleContainer: {
+        display: "flex",
+        flexDirection : "row",
+        justifyContent: "center"
+    },
+
+    roleImage: {
+        width: 50,
+        height: 50,
+        opacity: "50%",
+        color: "red"
+        
+    },
+
+    roleImageClicked: {
+        width: 50,
+        height: 50,
+        opacity: "100%",
+        color: "green"
     },
 
     signUpButton: {
