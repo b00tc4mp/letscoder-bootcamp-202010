@@ -2,10 +2,18 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
+const cloudinary = require("cloudinary").v2;
 const logger = require('./utils/logger')
 const { cors } = require('geogin-middlewares')
+const { env: { PORT, MONGODB_URL, CLOUD_NAME, API_KEY, API_SECRET }, argv: [, , port = PORT || 8080] } = process
 
-const { env: { PORT, MONGODB_URL }, argv: [, , port = PORT || 8080] } = process
+// cloudinary configuration
+cloudinary.config({
+    cloud_name: CLOUD_NAME,
+    api_key: API_KEY,
+    api_secret: API_SECRET
+  });
+
 
 logger.log('starting server', 'info')
 
