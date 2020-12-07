@@ -5,6 +5,7 @@ module.exports = new Schema({
         data: Buffer,
         ContentType: String
     },
+
     title: {
         type: String,
         required: true

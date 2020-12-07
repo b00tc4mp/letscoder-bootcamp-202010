@@ -3,5 +3,6 @@ module.exports = {
     food: require('./food'),
     diet: require('./diet'),
     article: require('./article'),
-    recipeImg: require('./recipe-img')
+    recipeImg: require('./recipe-img'),
+    recipe: require('./recipe')
 }

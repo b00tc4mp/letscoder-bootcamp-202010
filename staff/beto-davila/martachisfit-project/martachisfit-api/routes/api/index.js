@@ -14,7 +14,9 @@ const {
     handleRetrieveArticles,
     handleAddUserArticles,
     handleRetrieveSavedArticles,
-    handleRetrieveChosenArticle
+    handleRetrieveChosenArticle,
+    handleRetrieveRecipesImg,
+    handleRetrieveRecipes
 } = require('./handlers/index')
 
 const router = new Router()
@@ -50,6 +52,12 @@ router.patch('/api/users/articles/:articleId', jsonBodyParser, withErrorHandling
 
 // retrieve user diet
 router.get('/api/users/diets', withErrorHandling(handleRetrieveDiet))
+
+// retrieve recipes img
+router.get('/api/recipes/img', withErrorHandling(handleRetrieveRecipesImg))
+
+// retrieve recipes
+router.get('/api/recipes', withErrorHandling(handleRetrieveRecipes))
 
 // retrieve user articles
 router.get('/api/users/articles', withErrorHandling(handleRetrieveSavedArticles))

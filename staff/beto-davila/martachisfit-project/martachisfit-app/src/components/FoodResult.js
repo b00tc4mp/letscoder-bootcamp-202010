@@ -46,12 +46,12 @@ export default function FoodResult ({ result, onGoToProfile }) {
     return <> 
     <section className="food-result">
         <h4 className="food-result__title">Resultado</h4>
-        <p className="food-result__item">Alimento: {name}</p>
-        <p className="food-result__item">Calorías: {calories} Kcal</p>
-        <p className="food-result__item">Porción: {serving} (gramos o unidad) </p>
-        <p className="food-result__item">Carbohidratos: {carbs} gr.</p>
-        <p className="food-result__item">Proteínas: {protein} gr.</p>
-        <p className="food-result__item">Grasas: {fats} gr.</p>
+        <p className="food-result__item"><span className="food-result__category">Alimento:</span> {name}</p>
+        <p className="food-result__item"><span className="food-result__category">Calorías:</span> {calories} Kcal</p>
+        <p className="food-result__item"><span className="food-result__category">Porción:</span> {serving} (gramos o unidad) </p>
+        <p className="food-result__item"><span className="food-result__category">Carbohidratos:</span> {carbs} gr.</p>
+        <p className="food-result__item"><span className="food-result__category">Proteínas:</span> {protein} gr.</p>
+        <p className="food-result__item"><span className="food-result__category">Grasas:</span> {fats} gr.</p>
         <button onClick={handleSaveFood}className="food-result__add">Añadir</button>
     </section>
     {view === true && <p className="food-result__added">¡Alimento añadido! Puede ir a visualizarlo en su perfil o continuar añadiendo alimentos.</p>}

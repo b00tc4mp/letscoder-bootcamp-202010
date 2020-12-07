@@ -20,11 +20,11 @@ module.exports = function (userId) {
 
             user.id = _id.toString()
 
-            if (calories >= 2000) {
+            if (calories < 2000) {
 
                 // var item = items[Math.floor(Math.random() * items.length)]
 
-                const diets = ['5fc8838518ca4960a2a83721', '5fc8838518ca4960a2a83723', '5fc8838518ca4960a2a8371f']
+                const diets = ['5fcdf030c36fd45719909463', '5fcdf030c36fd45719909466', '5fcdf030c36fd45719909469']
 
                 let random = Math.floor(Math.random() * diets.length)
 
@@ -39,9 +39,9 @@ module.exports = function (userId) {
                     return _diet
             })
 
-            } else if ( calories < 2000 ) {
+            } else if ( calories >= 2000 && calories < 2500) {
 
-                let diets = ['5fc8838518ca4960a2a83720', '5fc8838518ca4960a2a83722', '5fc8838518ca4960a2a8371e']
+                let diets = ['5fcdf030c36fd45719909464', '5fcdf030c36fd45719909467', '5fcdf030c36fd4571990946a']
 
                 let random = Math.floor(Math.random() * diets.length)
 
@@ -52,7 +52,22 @@ module.exports = function (userId) {
                     if (!_diet) throw new NotFoundError(`diet with id ${_dietId} not found`)
 
                     return _diet
-        })
-    }
+                })
+            } else if ( calories >= 2500) {
+
+                let diets = ['5fcdf030c36fd45719909465', '5fcdf030c36fd45719909468', '5fcdf030c36fd4571990946b']
+
+                let random = Math.floor(Math.random() * diets.length)
+
+                const _dietId = diets[random]
+
+                return Diet.findById(_dietId).lean()
+                    .then(_diet => {
+                    if (!_diet) throw new NotFoundError(`diet with id ${_dietId} not found`)
+
+                    return _diet
+                })
+            } 
+
     })
 }

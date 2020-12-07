@@ -12,5 +12,7 @@ module.exports = {
     retrieveArticles: require('./retrieve-articles'),
     addUserArticles: require('./add-user-articles'),
     retrieveSavedArticles: require('./retrieve-saved-articles'),
-    retrieveChosenArticle: require('./retrieve-chosen-article')
+    retrieveChosenArticle: require('./retrieve-chosen-article'),
+    retrieveRecipesImg: require('./retrieve-recipes-img'),
+    retrieveRecipes: require('./retrieve-recipes')
 }

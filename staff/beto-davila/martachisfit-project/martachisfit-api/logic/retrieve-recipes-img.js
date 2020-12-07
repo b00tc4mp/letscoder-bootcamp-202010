@@ -1,9 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Recipe, User } = require('../models')
-const fs = require('fs')
-
-const imgPath = '../data/test-img/donuts-blue.png'
+const { RecipeImg, User } = require('../models')
 
 /**
  * Retrieves an article
@@ -19,20 +16,26 @@ module.exports = function (userId) {
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            const recipes = ['']
+            // const recipes = ['']
 
-            let random = Math.floor(Math.random() * recipes.length)
+            // let random = Math.floor(Math.random() * recipes.length)
 
-            const recipeId = recipes[random]
+            // const recipeId = recipes[random]
 
-            return Recipe.findById(recipeId).lean()
-                .then(recipe => {
-                    if (!recipe) throw new NotFoundError(`recipe with id ${recipeId} not found`)
+            recipeImgId = '5fcd38349943ba45f9f98869'
 
-                    const { _id } = recipe
-                    recipe.id = _id.toString()
+            return RecipeImg.findById(recipeImgId).lean()
+                .then(recipeImg => {
+                    if (!recipeImg) throw new NotFoundError(`recipeImg with id ${recipeImgId} not found`)
 
-                    return recipe
+                    const { _id, title, img: { data }, recipeId } = recipeImg
+                    recipeImg.id = _id.toString()
+
+                    const newData = data.toString('base64')
+
+                    const { id } = recipeImg
+
+                    return { id, title, newData, recipeId }
         })
     })
 }

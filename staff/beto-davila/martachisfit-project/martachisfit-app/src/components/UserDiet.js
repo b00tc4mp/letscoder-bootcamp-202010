@@ -62,14 +62,14 @@ export default function UserDiet ({}) {
         <hr className="user-diet__line"></hr>
         {diet && <div className="user-diet__meals">
             <h4>Comida 1</h4>
-            <p>{diet.meals.meal1}</p>
+            <p className="user-diet__meal">{diet.meals.meal1}</p>
             <h4>Comida 2</h4>
-            <p>{diet.meals.meal2}</p>
+            <p className="user-diet__meal">{diet.meals.meal2}</p>
             <h4>Comida 3</h4>
-            <p>{diet.meals.meal3}</p>
+            <p className="user-diet__meal">{diet.meals.meal3}</p>
             <h4>Comida 4</h4>
             {diet.meals.meal4?
-            <p>{diet.meals.meal4}</p> : <p>No disponible. Cumplimos objetivo con las comidas anteriores.</p> }
+            <p className="user-diet__meal">{diet.meals.meal4}</p> : <p className="user-diet__meal">No disponible. Cumplimos objetivo con las comidas anteriores.</p> }
         </div>}
         <hr className="user-diet__line"></hr>
         <p className="user-diet__random">¿No te gusta tu dieta de hoy? ¡No hay drama!, te ofrecemos <a href="#" onClick = {handleGoToRandomDiet} className="user-diet__other">más</a> opciones ;)</p>

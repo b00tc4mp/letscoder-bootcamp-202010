@@ -1,10 +1,40 @@
 .user-profile
+    background-color: #e8ebeb
+    width: 70%
+    margin: .5rem auto
+    box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+    padding: .5rem 0
+
+    &__recipes-container
+        background-color: #dbdfdf
+        width: 80%
+        margin: auto
+        border-radius: 1rem
+        padding: 0 0 .5rem 0
+
+    &__articles-container
+        background-color: #dbdfdf
+        width: 80%
+        margin: auto
+        border-radius: 1rem
+        padding: 0 0 .5rem 0
+
+    &__record-container
+        background-color: #dbdfdf
+        width: 80%
+        margin: auto
+        border-radius: 1rem
+        padding: 0 0 .5rem 0
+
+    &__question
+        margin-top: 1rem
+        
     &__name-pic
         display: flex
         justify-content: space-evenly
     
     &__name
-        font-size: 1.5rem
+        font-size: 1rem
         font-weight: bold
         margin: .2rem
 
@@ -18,16 +48,18 @@
     &__no-articles
         text-align: center
 
-    &__articles
-        list-style: none
-        font-size: .6rem
-        padding: .1rem 0
-        // text-align: center
+    &__recipes
+        margin: 0
 
-        &--list
-            width: 70%
-            margin: auto
-        
+    &__articles
+        padding: 0
+  
         &--link
             color: #303236
+
+    &__articles-list
+        list-style: none
+        font-size: .6rem
+        text-align: center
+        margin: 0
             

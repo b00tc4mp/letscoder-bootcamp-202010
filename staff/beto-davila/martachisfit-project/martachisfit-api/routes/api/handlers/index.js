@@ -12,5 +12,7 @@ module.exports = {
     handleRetrieveArticles: require('./handle-retrieve-articles'),
     handleAddUserArticles: require('./handle-add-user-articles'),
     handleRetrieveSavedArticles: require('./handle-retrieve-saved-articles'),
-    handleRetrieveChosenArticle: require('./handle-retrieve-chosen-article')
+    handleRetrieveChosenArticle: require('./handle-retrieve-chosen-article'),
+    handleRetrieveRecipesImg: require('./handle-retrieve-recipes-img'),
+    handleRetrieveRecipes: require('./handle-retrieve-recipes')
 }

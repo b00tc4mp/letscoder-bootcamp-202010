@@ -14,6 +14,9 @@ import Feedback from './Feedback'
 import UserProfile from './UserProfile'
 import ChosenArticle from './ChosenArticle'
 import Logout from './Logout'
+import RecipesImg from './RecipesImg'
+import Welcome from './Welcome'
+import Recipes from './Recipes'
 
 export {
     Landing,
@@ -31,5 +34,8 @@ export {
     Feedback,
     UserProfile,
     ChosenArticle,
-    Logout
+    Logout,
+    RecipesImg,
+    Welcome,
+    Recipes
 }

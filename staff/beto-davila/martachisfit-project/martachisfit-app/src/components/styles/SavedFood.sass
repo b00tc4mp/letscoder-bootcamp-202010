@@ -1,26 +1,46 @@
 .saved-food
+    min-height: 15vh
+
+    &__list
+        padding: 0
+        width: 80%
+        margin: auto
+
     &__food
         list-style: none
         font-size: .8rem
 
     &__block
         display: grid
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        grid-template-columns: repeat(6, 1fr)
+        grid-column-gap: .5rem
+    
+    &__row-header
+        display: flex
+        font-size: .8rem
+        justify-content: space-around
+        width: 60%
+        margin: auto
+        font-weight: bold
 
     &__total
         text-align: center
-        margin: 0
+        font-weight: bold
+        margin-bottom: 1rem
 
     &__name
         font-weight: bold
 
     &__delete
         font-size: .6rem
-        margin: .7rem 0
+        margin: .8rem 0
 
     &__deleted
         text-align: center
 
+    &__no-food
+        text-align: center
+        margin: 0
 
 
     

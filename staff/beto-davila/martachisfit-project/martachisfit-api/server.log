@@ -990,3 +990,95 @@ info 2020-12-05T18:13:16.522Z - stopping server
 info 2020-12-05T18:13:20.421Z - starting server
 info 2020-12-05T18:13:20.557Z - server running on port 4000
 info 2020-12-05T18:38:47.369Z - stopping server
+info 2020-12-05T18:44:56.380Z - starting server
+info 2020-12-05T18:44:56.508Z - server running on port 4000
+info 2020-12-06T16:42:02.854Z - stopping server
+info 2020-12-06T18:53:07.799Z - starting server
+info 2020-12-06T18:53:07.922Z - server running on port 4000
+error 2020-12-06T18:54:10.252Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:55:42.998Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:55:53.643Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:56:29.630Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:57:38.147Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:58:46.371Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:59:22.350Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T19:00:04.066Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:01:40.076Z - stopping server
+info 2020-12-06T19:02:55.042Z - starting server
+info 2020-12-06T19:02:55.376Z - server running on port 4000
+error 2020-12-06T19:26:09.065Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:42:16.982Z - starting server
+info 2020-12-06T19:42:17.103Z - server running on port 4000
+error 2020-12-06T19:42:30.874Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T19:42:39.695Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T19:43:46.599Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:43:51.892Z - stopping server
+info 2020-12-06T19:43:59.666Z - starting server
+info 2020-12-06T19:44:00.033Z - server running on port 4000
+error 2020-12-06T19:45:18.702Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:46:53.583Z - starting server
+info 2020-12-06T19:46:54.018Z - server running on port 4000
+info 2020-12-06T19:48:15.243Z - starting server
+info 2020-12-06T19:48:15.636Z - server running on port 4000
+info 2020-12-06T19:50:44.667Z - starting server
+info 2020-12-06T19:50:44.798Z - server running on port 4000
+error 2020-12-06T19:52:11.627Z - ReferenceError: recipeId is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:36:47
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:52:58.342Z - stopping server
+info 2020-12-06T19:53:00.201Z - starting server
+info 2020-12-06T19:53:00.323Z - server running on port 4000
+info 2020-12-06T19:57:17.788Z - stopping server
+info 2020-12-06T20:02:20.052Z - starting server
+info 2020-12-06T20:02:20.179Z - server running on port 4000
+info 2020-12-06T20:06:38.283Z - stopping server
+info 2020-12-06T20:06:40.052Z - starting server
+info 2020-12-06T20:06:40.183Z - server running on port 4000
+error 2020-12-06T20:06:46.354Z - TypeError: Assignment to constant variable.
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:33:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T20:07:29.394Z - stopping server
+info 2020-12-06T20:07:31.415Z - starting server
+info 2020-12-06T20:07:31.538Z - server running on port 4000
+info 2020-12-06T20:08:45.712Z - stopping server
+info 2020-12-07T04:30:21.586Z - starting server
+info 2020-12-07T04:30:21.729Z - server running on port 4000
+info 2020-12-07T09:02:52.851Z - stopping server
+info 2020-12-07T09:11:47.167Z - starting server
+info 2020-12-07T09:11:47.305Z - server running on port 4000
+info 2020-12-07T10:20:20.053Z - stopping server
+info 2020-12-07T11:03:21.280Z - starting server
+info 2020-12-07T11:03:21.429Z - server running on port 4000
+info 2020-12-07T13:48:40.304Z - stopping server
+info 2020-12-07T14:15:13.793Z - starting server
+info 2020-12-07T14:15:13.929Z - server running on port 4000
+info 2020-12-07T14:20:06.033Z - stopping server
+info 2020-12-07T14:26:57.278Z - starting server
+info 2020-12-07T14:26:57.409Z - server running on port 4000
+info 2020-12-07T14:54:29.521Z - stopping server
