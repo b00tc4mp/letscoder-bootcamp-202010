@@ -1,4 +1,4 @@
-require('dotenv').config()
+/* require('dotenv').config()
 
 const { expect } = require('chai')
 const mongoose = require('mongoose')
@@ -24,7 +24,7 @@ describe('savegame()', () => {
 
             name = randomStringWithPrefix('name')
             description = randomStringWithPrefix('description')
-            gameconsole = randomGameConsole() 
+            gameconsole = randomGameConsole()
             budget = randomNotNumber()
 
             const user = { fullname, email, password }
@@ -37,7 +37,7 @@ describe('savegame()', () => {
             saveGame(undefined, name, description, gameconsole, budget)
 
                 .then(() =>
-                    game.findOne({ name })
+                    Game.findOne({ name })
                 )
                 .then(game => {
                     expect(game).to.exist
@@ -45,7 +45,6 @@ describe('savegame()', () => {
                     expect(game.breed).to.equal(breed)
                     expect(game.description).to.equal(description)
                     expect(game.color).to.equal(color)
-
                 })
         })
 
@@ -53,8 +52,8 @@ describe('savegame()', () => {
             User
                 .deleteOne({ fullname, email })
                 .then(result => expect(result.deletedCount).to.equal(1))
-                .then(game
-                    .deleteOne({ name, breed, color })
+                .then(Game
+                    .deleteOne({undefined, name, description, gameconsole, budget })
                     .then(result => expect(result.deletedCount).to.equal(1))
                 )
         )
@@ -196,4 +195,4 @@ describe('savegame()', () => {
         })
     })
     after(mongoose.disconnect)
-})
+}) */

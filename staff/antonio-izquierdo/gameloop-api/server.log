@@ -603,3 +603,121 @@ error 2020-12-06T18:02:54.262Z - ValidationError: Game validation failed: budget
     at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\mongoose\lib\schematype.js:1225:9
     at processTicksAndRejections (internal/process/task_queues.js:79:11)
 info 2020-12-06T18:05:00.236Z - stopping server
+info 2020-12-07T08:55:11.067Z - server running on port 4000
+info 2020-12-07T09:04:45.412Z - stopping server
+error 2020-12-07T12:47:02.608Z - ReferenceError: handleDetailGame is not defined
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\index.js:26:52)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\index.js:16:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-07T12:47:02.616Z - stopping server
+error 2020-12-07T12:47:59.239Z - ReferenceError: handleDetailGame is not defined
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\index.js:26:52)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\index.js:16:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-07T12:47:59.245Z - stopping server
+info 2020-12-07T12:49:07.633Z - server running on port 4000
+error 2020-12-07T12:51:52.707Z - TypeError: detailGame is not a function
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-detail-game.js:8:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-07T12:52:23.816Z - TypeError: detailGame is not a function
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-detail-game.js:8:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-07T12:52:57.316Z - TypeError: detailGame is not a function
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-detail-game.js:8:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-07T12:54:01.099Z - TypeError: detailGame is not a function
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-detail-game.js:8:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-07T12:54:16.586Z - stopping server
+info 2020-12-07T12:54:20.762Z - server running on port 4000
+info 2020-12-07T13:00:14.974Z - stopping server
+info 2020-12-07T13:00:17.350Z - server running on port 4000
+info 2020-12-07T17:42:26.225Z - stopping server
+info 2020-12-07T19:21:34.952Z - server running on port 4000
+info 2020-12-07T19:33:29.614Z - stopping server
+info 2020-12-07T19:33:33.421Z - server running on port 4000
+info 2020-12-07T19:36:43.880Z - stopping server
+info 2020-12-07T19:36:47.991Z - server running on port 4000
+info 2020-12-07T19:49:47.970Z - stopping server

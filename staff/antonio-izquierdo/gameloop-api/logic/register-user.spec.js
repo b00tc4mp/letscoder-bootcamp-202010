@@ -73,7 +73,6 @@ describe('registerUser()', () => {
     })
 
     describe('when any parameter is wrong', () => {
-
         describe('when fullname is wrong', () => {
             describe('when fullname is empty or blank', () => {
                 let fullname, email, password
@@ -132,7 +131,6 @@ describe('registerUser()', () => {
                     expect(() => registerUser(fullname, email, password, () => { })).to.throw(ContentError, 'e-mail is empty or blank')
                 })
             })
-
         })
         describe('when password is wrong', () => {
             describe('when password is empty or blank', () => {
@@ -145,7 +143,7 @@ describe('registerUser()', () => {
                 })
 
                 it('should fail on an empty or blank password', () => {
-                    expect(() => registerUser(fullname, email, password, () => { })).to.throw(Error, 'password is empty or blank')
+                    expect(() => registerUser(fullname, email, password, () => { })).to.throw(ContentError, 'password is empty or blank')
                 })
             })
 

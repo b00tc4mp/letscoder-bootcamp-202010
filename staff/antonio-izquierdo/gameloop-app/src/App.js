@@ -1,17 +1,15 @@
 import { SignUp, SignIn, Home, Access } from './components'
-import { useState } from 'react'
 import{ registerUser, authenticateUser } from './logic'
+import { Route, withRouter, Redirect } from 'react-router-dom'
 
-function App() {
-
-  const [view, setView] = useState(sessionStorage.token? 'home' :'access')
+export default withRouter(props => {
 
   const handleSignUp = (fullname, email, password) => {
     try {
       registerUser(fullname, email, password, error => {
         if(error) return alert(error.message)
 
-        setView('sign-in')
+        props.history.push('/sign-in')
       })
     } catch (error) {
       alert(error.message)
@@ -25,7 +23,7 @@ function App() {
 
         sessionStorage.token = token
 
-        setView('home')
+        props.history.push('/')
       })
     } catch (error) {
       alert(error.message)
@@ -34,27 +32,38 @@ function App() {
 
   const handleGoToSignIn = () => {
 
-    setView('sign-in')
+    props.history.push('/sign-in')
   }
 
   const handleGoToSignUp = () => {
 
-    setView('sign-up')
+    props.history.push('/sign-up')
   }
 
   const handleGoToSearch = () => {
 
-    setView('home')
+    props.history.push('/')
   }
+
+  const { token } = sessionStorage
 
   return (
       <header className="App-header">
-        {view === 'access' && <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch} />}
-        {view === 'sign-up' && <SignUp onGoToSignIn={handleGoToSignIn} onSignUp={handleSignUp} />}
-        {view === 'sign-in' && <SignIn onGoToSignUp={handleGoToSignUp} onSignIn={handleSignIn} />}
-        {view === 'home' && <Home />}
+
+        <Route path='/access' render={() => token ? <Redirect to="/" /> : <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch}/>} />
+        <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} />} />
+        <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} />} />
+        <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/access" />} />
+
+  {/*     <button onClick={() => props.history.push('/items/1239711293712389/color/red')}>Go to one detail RED (demo)</button>
+      <button onClick={() => props.history.push('/items/1239711293712390/color/green')}>Go to one detail GREEN (demo)</button>
+      <button onClick={() => props.history.push('/items/1239711293712391/color/blue')}>Go to one detail BLUE (demo)</button>
+      
+      <Route path='/items/:itemId/color/:color' render={props => {const { match: { params: { itemId, color } } } = props
+      
+      return <Detail itemId={itemId} color={color} />
+      }} /> */}
       </header>
   );
-}
+})
 
-export default App;

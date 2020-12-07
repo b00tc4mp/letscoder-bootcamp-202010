@@ -5,6 +5,8 @@ import Access from './Access'
 import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
 import FindGames from './FindGames'
+import DetailGame from './DetailGame'
+import Detail from './Detail'
 
 export {
     SignUp,
@@ -13,5 +15,7 @@ export {
     Access,
     SearchGames,
     SaveGame,
-    FindGames
+    FindGames,
+    DetailGame,
+    Detail
 }

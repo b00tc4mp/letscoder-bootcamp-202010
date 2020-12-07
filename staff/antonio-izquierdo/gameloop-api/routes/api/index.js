@@ -6,7 +6,8 @@ const {
     handleAuthenticateUser,
     handleRetrieveUser,
     handleSaveGame,
-    handleFindGames
+    handleFindGames,
+    handleDetailGame
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -22,5 +23,7 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 router.post('/api/games', jsonBodyParser, withErrorHandling(handleSaveGame))
 
 router.post('/api/games/find', jsonBodyParser, withErrorHandling(handleFindGames))
+
+router.get('/api/games/:gameId', withErrorHandling(handleDetailGame))
 
 module.exports = router

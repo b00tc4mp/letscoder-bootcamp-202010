@@ -3,5 +3,6 @@ module.exports = {
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
     saveGame: require('./save-game'),
-    findGames: require('./find-games')
+    findGames: require('./find-games'),
+    detailGame: require('./detail-game')
 }
