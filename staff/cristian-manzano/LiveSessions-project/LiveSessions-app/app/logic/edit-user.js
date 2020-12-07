@@ -1,7 +1,7 @@
 import { call } from '../../utils'
 import { validateFullname, validateTags, validateCallback, validateCity, validateArtistName, validateDescription, validateEmail } from './helpers/validations'
 
-export default function (email, fullname, artistName, city, description, tags, callback) {
+export default function (email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, callback) {
 
     validateEmail(email)
     validateFullname(fullname)
@@ -13,7 +13,7 @@ export default function (email, fullname, artistName, city, description, tags, c
 
 
     call('POST', 'http://192.168.1.131:4000/api/users/edit', { 'Content-type': 'application/json' }, 
-    JSON.stringify({ email, fullname, artistName, city, description, tags }),
+    JSON.stringify({ email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description }),
     (status, response) => {
         debugger
         if (status === 0)

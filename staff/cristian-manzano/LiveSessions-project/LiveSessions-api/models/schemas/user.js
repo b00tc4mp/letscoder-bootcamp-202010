@@ -48,7 +48,22 @@ module.exports = new Schema({
         type: Array,
         required: false
     },
-    
+
+    youtubeLink: {
+        type: String,
+        required: false
+    },
+
+    bandcampLink: {
+        type: String,
+        required: false
+    },
+
+    spotifyLink: {
+        type: String,
+        required: false
+    },
+
     description: {
         type: String,
         required: false

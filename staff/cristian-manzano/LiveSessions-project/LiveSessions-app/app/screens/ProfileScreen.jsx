@@ -2,35 +2,48 @@ import React from 'react';
 import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function ProfileScreen({onGoToEditProfile, onGoToSearch, onGoToPetitions}) {
+function ProfileScreen({onGoToEditProfile, onGoToSearch, onGoToPetitions, onLogOut, user}) {
     return (
+        
         <SafeAreaView>
             <KeyboardAvoidingView
         //behavior={Platform.OS == "ios" ? "padding" : "height"}
         >
             <ScrollView>
-        <View style={styles.editProfile}>
+        {/* How to paint component if Artist or if Promoter
+         {user.role === 'ARTIST' ? <Text>I'm an Artist</Text> : <Text>
+            I'm not an Artist :( </Text>} */}
+        <View style={styles.profileContainer}>
 
         <View style={styles.profileHeader}>
         <Image style={styles.logo} source={require('../assets/logo.png')} />
         </View>
         <TouchableOpacity onPress={onGoToEditProfile}>
         <Avatar.Image size={100} source={require('../assets/default-profile-image.png')} />
+        <Text>{user.artistName}</Text>
+
+        <TouchableOpacity onPress={() => Linking.openURL(user.youtubeLink)}>
+            <Text>Youtube</Text>
+        </TouchableOpacity>
         </TouchableOpacity>
 
         <View style={styles.navBar}>
 
         <TouchableOpacity onPress={onGoToSearch}>
-        <Text style={styles.searchNavBar}>Search</Text>
+        <Text style={styles.navBarButtons}>Search</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={onGoToPetitions}>
-        <Text style={styles.petitionsNavBar}>Petitions</Text>
+        <Text style={styles.navBarButtons}>Petitions</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={onLogOut}>
+        <Text style={styles.navBarButtons}>Log Out!</Text>
         </TouchableOpacity>
 
         </View>
 
-        </View>
+    </View>
 
     </ScrollView>
         </KeyboardAvoidingView>
@@ -39,7 +52,7 @@ function ProfileScreen({onGoToEditProfile, onGoToSearch, onGoToPetitions}) {
 }
 
 const styles = StyleSheet.create({
-        editProfile: {
+        profileContainer: {
             justifyContent: "space-around",
             height: Dimensions.get("window").height,
             width: Dimensions.get("window").width,
@@ -58,7 +71,7 @@ const styles = StyleSheet.create({
     },
     
 
-    searchNavBar: {
+    navBarButtons: {
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "center",
@@ -68,15 +81,6 @@ const styles = StyleSheet.create({
         height: "5%" ,
     },
 
-    petitionsNavBar: {
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 1,
-        backgroundColor: "gray",
-        width: "30%",
-        height: "5%" 
-    }
 })
 
 export default ProfileScreen;

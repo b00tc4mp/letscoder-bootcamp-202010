@@ -17,7 +17,7 @@ import authenticateUser from './app/logic/authenticate-user';
 
 
 export default function App() {
-  const [view, setView] = useState('sign-up')
+  const [view, setView] = useState('sign-in')
 
   const handleGoToSignUp = () => {
     setView("sign-up")
@@ -53,6 +53,11 @@ export default function App() {
     }
   }
 
+  const handleLogOut = () => {
+    AsyncStorage.removeItem('token')
+    setView('sign-in')
+  }
+
       useEffect(() => { 
         AsyncStorage.getItem('token')
         .then(token => {
@@ -68,7 +73,7 @@ export default function App() {
     { view === "" && <WelcomeScreen onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn}/>}
     { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} />}
     { view === "sign-in" && <SignInScreen onSignIn={handleSignIn}/>}
-    { view === "home" && <HomeScreen />}
+    { view === "home" && <HomeScreen onHandleLogout={handleLogOut}/>}
     
   </ImageBackground> 
 };

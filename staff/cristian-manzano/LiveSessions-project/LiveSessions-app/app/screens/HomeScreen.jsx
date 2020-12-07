@@ -10,8 +10,8 @@ import ProfileScreen from './ProfileScreen'
 import EditProfileScreen from './EditProfileScreen'
 
 
-export default function Home() {
-    const [email, setEmail] = useState()
+export default function Home({ onHandleLogout }) {
+    const [user, setUser] = useState()
 
     const [view, setView] = useState('')
 
@@ -21,9 +21,9 @@ export default function Home() {
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return Alert.alert(error.message)
-              const { email } = user
+              
 
-                setEmail(email)
+                setUser(user)
                 setView('profile')
             })
         } catch (error) {
@@ -40,11 +40,11 @@ export default function Home() {
     setView('profile')
   }
   
-  const handleEditProfile = ({ fullname, artistName, city, description, tags }) => {
-      console.log(email, fullname, artistName, city, description, tags)
+  const handleEditProfile = ({ fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description }) => {
+      console.log(user.email, fullname, artistName, city, description, tags)
       debugger
       try{
-        editUser(email, fullname, artistName, city, description, tags, error => {
+        editUser(user.email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, error => {
           if (error) return Alert.alert(error.message)
 
           setView('profile')
@@ -54,11 +54,13 @@ export default function Home() {
       }
     }
 
+
+
   return (
 
     <View>
-      { view ===  'profile' && <ProfileScreen onGoToEditProfile={handleGoToEditProfile}/>}
-      { view === 'edit-profile' && <EditProfileScreen onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile}/>}
+      { view ===  'profile' && <ProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
+      { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile}/>}
     </View>
     
   );
