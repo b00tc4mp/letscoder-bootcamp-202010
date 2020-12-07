@@ -2615,3 +2615,87 @@ info 2020-12-07T10:32:36.542Z - server running on port 4000
 info 2020-12-07T10:33:25.111Z - stopping server
 info 2020-12-07T10:34:14.925Z - starting server
 info 2020-12-07T10:34:15.111Z - server running on port 4000
+info 2020-12-07T11:51:55.949Z - stopping server
+info 2020-12-07T11:52:11.138Z - starting server
+info 2020-12-07T11:52:12.115Z - server running on port 4000
+info 2020-12-07T12:11:07.559Z - stopping server
+info 2020-12-07T12:11:16.009Z - starting server
+error 2020-12-07T12:11:16.090Z - Error: Cannot find module './retrieve-offer'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\index.js:1:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-07T12:11:16.092Z - stopping server
+info 2020-12-07T12:13:24.647Z - starting server
+error 2020-12-07T12:13:24.715Z - Error: Cannot find module './retrieve-offer'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\index.js:1:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-07T12:13:24.719Z - stopping server
+info 2020-12-07T12:14:14.352Z - starting server
+error 2020-12-07T12:14:14.414Z - Error: Cannot find module './retrieve-offer'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\index.js:1:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-07T12:14:14.416Z - stopping server
+info 2020-12-07T12:14:37.989Z - starting server
+info 2020-12-07T12:14:38.227Z - server running on port 4000
