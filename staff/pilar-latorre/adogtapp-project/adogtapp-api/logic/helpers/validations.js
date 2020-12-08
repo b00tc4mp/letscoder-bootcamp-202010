@@ -63,15 +63,17 @@ module.exports = {
     validateColor(color) {
         if (typeof color !== 'string') throw new TypeError(`${color} is not a color`)
 
-       
-
     },
 
     validateQuery(query) {
         if (typeof query !== 'string') throw new TypeError(`${query} is not a query`)
 
         if (!query.trim().length) throw new ContentError('query is empty or blank')
-    }
+    },
+
+    validateCallback(callback) {
+        if (typeof callback !== 'function') throw new TypeError(`${callback} is not a callback`)
+    },
 
    
 }

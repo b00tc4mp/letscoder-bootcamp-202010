@@ -1,6 +1,10 @@
-import  {Welcome}  from './'
+import './Welcome.sass'
 import { useState, useEffect } from 'react'
-import { retrieveUser, savePet } from '../logic'
+import {  retrieveUser, savePet, } from '../logic'
+import SearchPets from './SearchPets'
+import PetResults from './PetResults'
+import CreatePet from './CreatePet'
+
 
 
 /* import { retrieveUser, saveNote, retrieveNotes } from '../logic'
@@ -9,10 +13,10 @@ import ListNotes from './ListNotes' */
 
 export default function () {
 
-    const [view, setView] = useState('welcome')
+    const [view, setView] = useState('home')
 
     const [name, setName] = useState()
-    //const [notes, setNotes] = useState()
+ 
 
     
     useEffect(() => {
@@ -26,15 +30,7 @@ export default function () {
 
                 setName(userName)
 
-               /*  try {
-                    retrieveNotes(token, (error, notes) => {
-                        if (error) return alert(error.message)
-
-                        setNotes(notes)
-                    })
-                } catch (error) {
-                    alert(error.message)
-                } */
+              
             })
         } catch (error) {
             alert(error.message)
@@ -42,24 +38,26 @@ export default function () {
     }, [])
 
 
-    const handleCreatePet = (name, breed, species, color, description) => {
+    const handleCreatePet = (name, breed, species, color, description, image) => {
         const { token } = sessionStorage
 
         try {
-            savePet( undefined, name, breed, species, color, description, token, error => {
+            savePet( undefined, name, breed, species, color, description, token, (error, petId) => {
                 if (error) return alert(error.message)
 
-                
+                /* savePetImage(petId, image, error => {
+                    if (error) return alert(error.message)
+                    try {
+                        
+                        
 
-               /*  try {
-                    retrieveNotes(token, (error, notes) => {
-                        if (error) return alert(error.message)
-
-                        setNotes(notes)
-                    })
-                } catch (error) {
-                    alert(error.message)
-                } */
+                        
+                    } catch (error) {
+                        alert(error.message)
+                    }
+                }) */
+                alert('pet created')
+               
             })
         } catch (error) {
             alert(error.message)
@@ -68,10 +66,19 @@ export default function () {
  
     return(
     <>
-    {view === 'welcome' && <Welcome userName={name} onCreatePet={handleCreatePet}/>}
     
-   {/*  <CreatePet  /> */}
-        {/* <ListNotes notes={notes} /> */}
+    <h1 className="welcome__welcome">Welcome {name}!</h1>
+
+    <button className="welcome__search" onClick={()=>{setView('search-pet')}}>SEARCH PET</button>
+
+    <button className="welcome__create" onClick={()=>{setView('create-pet')}}>CREATE NEW PET</button>
+    {view === 'home' && <div><img className="welcome__img"src="variosperretes4.jpg"/></div>}
+
+    {view === 'search-pet' && <SearchPets />}
+    {view === 'create-pet' && <CreatePet onCreatePet={handleCreatePet}/>}
+    
+        
+ 
    </>
    )
 }

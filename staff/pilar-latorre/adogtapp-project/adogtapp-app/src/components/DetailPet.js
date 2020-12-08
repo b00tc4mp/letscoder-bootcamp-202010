@@ -1,7 +1,7 @@
-import { deletePet, findPets } from '../logic'
+import { deletePet } from '../logic'
 import './DetailPet.sass'
 
-function DetailPet({result: {id, name, breed, species, color, description } , onFindPets}){
+function DetailPet({result: {id, name, breed, species, color, description } , onPetResults}){
 
     const handleDeletePet = id => {
         //const { token } = sessionStorage
@@ -12,7 +12,7 @@ function DetailPet({result: {id, name, breed, species, color, description } , on
                 if (error) return alert(error.message)
 
             }) 
-            onFindPets()
+            onPetResults()
         } catch (error) {
             alert(error.message)
         }

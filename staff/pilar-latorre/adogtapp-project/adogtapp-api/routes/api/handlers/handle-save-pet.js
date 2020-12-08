@@ -12,7 +12,7 @@ module.exports = (req, res, handleError) => {
         const { sub: shelter } = jwt.verify(token, JWT_SECRET)
         
         savePet( petId, name, breed, species, color, description, shelter)
-            .then(() => res.status(200).send())
+            .then((petId) => res.status(200).send(petId))
             .catch(handleError)
     } catch (error) {
         handleError(error)

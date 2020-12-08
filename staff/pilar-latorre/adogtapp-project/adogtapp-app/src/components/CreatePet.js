@@ -1,6 +1,6 @@
 import './CreatePet.sass'
 
-function CreatePet({onCreatePet, onGoToCreatePet}){
+function CreatePet({onCreatePet}){
 
     return <div className="CreatePet">
         <h1 className="CreatePet__h1">Please fill all the information about the pet</h1>
@@ -28,7 +28,7 @@ function CreatePet({onCreatePet, onGoToCreatePet}){
             <button className="CreatePet__button">SAVE INFO</button>
         </form>
             
-            <p className="CreatePet__p">Do you want to introduce another animal? <span className="CreatePet__span" onClick={onGoToCreatePet}>New Animal</span></p>
+         {/*    <p className="CreatePet__p">Do you want to introduce another animal? <span className="CreatePet__span" onClick={onGoToCreatePet}>New Animal</span></p> */}
 
 
     </div>

@@ -1,5 +1,5 @@
 import './SearchPets.sass'
-import FindPets from './FindPets'
+import PetResults from './PetResults'
 import { useState } from 'react'
 import {findPets, detailPet} from '../logic'
 import DetailPet from './DetailPet'
@@ -12,7 +12,7 @@ function SearchPets(){
     const [results, setResults] = useState()
     const [result, setResult] = useState()
 
-    const handleFindPets = (queryShelter, city, queryPet, species, breed) => {
+    const handleResults = (queryShelter, city, queryPet, species, breed) => {
         const { token } = sessionStorage
 
         try {
@@ -58,42 +58,42 @@ function SearchPets(){
     
                     <button
                         className="searchByName__button1"
-                        onClick={() => handleFindPets(query, undefined, undefined, undefined, undefined)}
+                        onClick={() => handleResults(query, undefined, undefined, undefined, undefined)}
                     >
                         SHELTER
                 </button>
                 <button
                         className="searchByName__button1"
-                        onClick={() => handleFindPets( undefined, query, undefined, undefined, undefined)}
+                        onClick={() => handleResults( undefined, query, undefined, undefined, undefined)}
                     >
                         CITY
                 </button>
                 <button
                         className="searchByName__button"
-                        onClick={() => handleFindPets( undefined, undefined, query, undefined, undefined)}
+                        onClick={() => handleResults( undefined, undefined, query, undefined, undefined)}
                     >
                         PET
                 </button>
 
                 <button
                         className="searchByName__button"
-                        onClick={() => handleFindPets( undefined, undefined, undefined, query, undefined)}
+                        onClick={() => handleResults( undefined, undefined, undefined, query, undefined)}
                     >
                         SPECIES
                 </button>
 
                 <button
                         className="searchByName__button"
-                        onClick={() => handleFindPets( undefined, undefined, undefined, undefined, query)}
+                        onClick={() => handleResults( undefined, undefined, undefined, undefined, query)}
                     >
                         BREED
                 </button>
 
      
                 </form>
-                {!result && results && results.length && <FindPets results={results} onDetailPet={handleDetailPet} />}
+                {!result && results && results.length && <PetResults results={results} onDetailPet={handleDetailPet} />}
                 {!results && <div><img className="search__img"src="patitas.jpg"/></div>}
-                {!results && result && <DetailPet result={result} onFindPets = {handleFindPets}/>}
+                {!results && result && <DetailPet result={result} onPetResults = {handleResults}/>}
             </>
         );
     }

@@ -1,8 +1,8 @@
 
-import './FindPets.sass'
+import './PetResults.sass'
 
 
-function FindPets({results, onDetailPet}){
+function PetResults({results, onDetailPet}){
 
     
 
@@ -31,5 +31,5 @@ function FindPets({results, onDetailPet}){
 
 }
 
-export default FindPets
+export default PetResults
 
