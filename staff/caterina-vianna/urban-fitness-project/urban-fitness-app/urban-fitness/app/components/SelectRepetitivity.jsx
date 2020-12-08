@@ -9,9 +9,6 @@ export default class SelectRepetitivity extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>
-          What's your favorite programming language?
-        </Text>
         <View style={styles.item}>
           <CheckBox
             checked={this.state.selectedLang === 1}

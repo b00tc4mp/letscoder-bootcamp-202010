@@ -16,12 +16,24 @@ module.exports = new Schema({
     type: String,
     required: true,
   },
-  materialRequired: {
+  price: {
+    type: String,
+    required: true,
+  },
+  checked: {
     type: Boolean,
     required: false,
     default: false,
   },
   address: {
+    type: String,
+    required: true,
+  },
+  repeat: {
+    type: String,
+    required: false,
+  },
+  sport: {
     type: String,
     required: true,
   },
@@ -37,11 +49,12 @@ module.exports = new Schema({
     type: String,
     required: true,
   },
+  /* 
   sessions: {
     type: [ObjectId],
     ref: "Session",
-  },
-  date: {
+  }, */
+  activityDate: {
     type: Date,
     required: true,
   },

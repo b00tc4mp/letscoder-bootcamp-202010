@@ -18,6 +18,7 @@ import { retrieveUser } from "../logic";
 import Profile from "./Profile";
 import EditProfile from "./EditProfile";
 
+
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();

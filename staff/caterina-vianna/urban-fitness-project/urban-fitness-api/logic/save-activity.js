@@ -13,6 +13,7 @@ module.exports = (
   activityId,
   title,
   description,
+  price,
   checked,
   address,
   sport,
@@ -20,6 +21,7 @@ module.exports = (
   spots,
   activityDate
 ) => {
+  debugger;
   validateId(ownerId);
   if (typeof activityId !== "undefined") validateId(activityId);
   //TODO validations
@@ -28,21 +30,22 @@ module.exports = (
     /* if (!user) throw new NotFoundError(`user with id ${ownerId} not found`); */
 
     if (activityId) {
+      debugger;
       return Activity.findById(activityId)
         .then((activity) => {
-          if (!activity)
+          /*  if (!activity)
             throw new NotFoundError(`activity with id ${activityId} not found`);
-
+ */
           activityId.title = title;
           activityId.description = description;
+          activityId.price = price;
           activityId.checked = checked;
           activityId.address = address;
           activityId.sport = sport;
           activityId.repeat = repeat;
           activityId.spots = spots;
           activityId.activityDate = activityDate;
-          //TODO ADD INPUT PRICE
-          activityId.price = price;
+          debugger;
           return activity.save();
         })
         .then((activity) => activity.id);
@@ -50,13 +53,13 @@ module.exports = (
       return Activity.create({
         title,
         description,
+        price,
         checked,
         address,
         sport,
         repeat,
         spots,
         activityDate,
-        price,
         owner: ObjectId(ownerId),
         date: new Date(),
       }).then((activity) => activity.id);

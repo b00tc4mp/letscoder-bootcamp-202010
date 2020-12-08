@@ -2,12 +2,15 @@ import { call } from "../utils";
 
 export default function saveActivity(
   token,
+  activityId,
   title,
   description,
+  price,
   checked,
   address,
   sport,
   repeat,
+  spots,
   date,
   callback
 ) {
@@ -21,8 +24,10 @@ export default function saveActivity(
       Authorization: `Bearer ${token}`,
     },
     JSON.stringify({
+      activityId,
       title,
       description,
+      price,
       checked,
       address,
       sport,
@@ -31,6 +36,7 @@ export default function saveActivity(
       date,
     }),
     (status, response) => {
+      debugger;
       if (status === 0) return callback(new Error("server error"));
       else if (status !== 200) {
         const { error } = JSON.parse(response);

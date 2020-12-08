@@ -7,6 +7,8 @@ import {
   Text,
   View,
   Button,
+  SafeAreaView,
+  ScrollView,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import DateTimePicker from "@react-native-community/datetimepicker";
@@ -23,6 +25,7 @@ export default function CreateActivity({ onSubmitActivity }) {
   const [description, setDescription] = useState("");
   const [address, setAddress] = useState("");
   const [spots, setSpots] = useState("");
+  const [price, setPrice] = useState("");
 
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate || activityDate;
@@ -44,102 +47,112 @@ export default function CreateActivity({ onSubmitActivity }) {
   };
 
   return (
-    <View style={styles.backgroundNewActivity}>
-      <Text style={styles.textNewActivity}>New Activity</Text>
-      <TouchableOpacity onPress={() => {}}>
-        <Image source={require("../assets/upload-photo.png")}></Image>
-      </TouchableOpacity>
-      <TextInput
-        placeholder="Title"
-        onChangeText={(text) => setTitle(text)}
-      ></TextInput>
-      <TextInput
-        placeholder="Description"
-        onChangeText={(text) => setDescription(text)}
-      ></TextInput>
-      <Text>Material required</Text>
-      <Checkbox
-        style={styles.checkbox}
-        status={checked ? "checked" : "unchecked"}
-        onPress={() => {
-          setChecked(!checked);
-        }}
-      />
-      <View paddingVertical={5} style={styles.pickerList} />
-      <RNPickerSelect
-        onValueChange={(value) => setSport(value)}
-        items={[
-          { label: "Baseball", value: "baseball" },
-          { label: "Boxing", value: "boxing" },
-          { label: "Crossfit", value: "crossfit" },
-          { label: "Football", value: "football" },
-          { label: "Hockey", value: "hockey" },
-          { label: "Kayak", value: "kayak" },
-          { label: "Pilates", value: "pilates" },
-          { label: "Running", value: "running" },
-          { label: "Skating", value: "skating" },
-          { label: "Yoga", value: "yoga" },
-        ]}
-      />
-      <View paddingVertical={5} />
-      <View paddingVertical={5} style={styles.pickerList} />
-      <RNPickerSelect
-        onValueChange={(value) => setRepetitivity(value)}
-        items={[
-          { label: "Daily", value: "daily" },
-          { label: "Weekly", value: "weekly" },
-          { label: "Biweekly", value: "biweekly" },
-          { label: "Monthly", value: "monthly" },
-        ]}
-      />
-      <View paddingVertical={5} />
-      <TextInput
-        placeholder="Address"
-        onChangeText={(text) => setAddress(text)}
-      ></TextInput>
-
-      <TextInput
-        keyboardType="numeric"
-        placeholder="Spots Available"
-        onChangeText={(text) => setSpots(text)}
-      ></TextInput>
-      <Text style={styles.textNewActivity}>Sessions</Text>
-      <View>
-        <View>
-          <Button onPress={showDatepicker} title="Select start date" />
-        </View>
-        <View>
-          <Button onPress={showTimepicker} title="Select time" />
-        </View>
-        {show && (
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={activityDate}
-            mode={mode}
-            is24Hour={true}
-            display="default"
-            onChange={onChange}
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.backgroundNewActivity}>
+          <Text style={styles.textNewActivity}>New Activity</Text>
+          <TouchableOpacity onPress={() => {}}>
+            <Image source={require("../assets/upload-photo.png")}></Image>
+          </TouchableOpacity>
+          <TextInput
+            placeholder="Title"
+            onChangeText={(text) => setTitle(text)}
+          ></TextInput>
+          <TextInput
+            placeholder="Description"
+            onChangeText={(text) => setDescription(text)}
+          ></TextInput>
+          <TextInput
+            keyboardType="numeric"
+            placeholder="Price"
+            onChangeText={(text) => setPrice(text)}
+          ></TextInput>
+          <Text>Material required</Text>
+          <Checkbox
+            style={styles.checkbox}
+            status={checked ? "checked" : "unchecked"}
+            onPress={() => {
+              setChecked(!checked);
+            }}
           />
-        )}
-      </View>
-      <TouchableOpacity
-        style={styles.customBtnBG}
-        onPress={() => {
-          onSubmitActivity({
-            title,
-            description,
-            checked,
-            address,
-            sport,
-            repeat,
-            spots,
-            activityDate,
-          });
-        }}
-      >
-        <Text style={styles.customBtnText}>SIGN UP</Text>
-      </TouchableOpacity>
-    </View>
+          <View paddingVertical={5} style={styles.pickerList} />
+          <RNPickerSelect
+            onValueChange={(value) => setSport(value)}
+            items={[
+              { label: "Baseball", value: "baseball" },
+              { label: "Boxing", value: "boxing" },
+              { label: "Crossfit", value: "crossfit" },
+              { label: "Football", value: "football" },
+              { label: "Hockey", value: "hockey" },
+              { label: "Kayak", value: "kayak" },
+              { label: "Pilates", value: "pilates" },
+              { label: "Running", value: "running" },
+              { label: "Skating", value: "skating" },
+              { label: "Yoga", value: "yoga" },
+            ]}
+          />
+          <View paddingVertical={5} />
+          <View paddingVertical={5} style={styles.pickerList} />
+          <RNPickerSelect
+            onValueChange={(value) => setRepetitivity(value)}
+            items={[
+              { label: "Daily", value: "daily" },
+              { label: "Weekly", value: "weekly" },
+              { label: "Biweekly", value: "biweekly" },
+              { label: "Monthly", value: "monthly" },
+            ]}
+          />
+          <View paddingVertical={5} />
+          <TextInput
+            placeholder="Address"
+            onChangeText={(text) => setAddress(text)}
+          ></TextInput>
+
+          <TextInput
+            keyboardType="numeric"
+            placeholder="Spots Available"
+            onChangeText={(text) => setSpots(text)}
+          ></TextInput>
+          <Text style={styles.textNewActivity}>Sessions</Text>
+          <View>
+            <View>
+              <Button onPress={showDatepicker} title="Select start date" />
+            </View>
+            <View>
+              <Button onPress={showTimepicker} title="Select time" />
+            </View>
+            {show && (
+              <DateTimePicker
+                testID="dateTimePicker"
+                value={activityDate}
+                mode={mode}
+                is24Hour={true}
+                display="default"
+                onChange={onChange}
+              />
+            )}
+          </View>
+          <TouchableOpacity
+            style={styles.customBtnBG}
+            onPress={() => {
+              onSubmitActivity({
+                title,
+                description,
+                price,
+                checked,
+                address,
+                sport,
+                repeat,
+                spots,
+                activityDate,
+              });
+            }}
+          >
+            <Text style={styles.customBtnText}>SIGN UP</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 

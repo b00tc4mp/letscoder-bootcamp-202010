@@ -66,6 +66,7 @@ export default function Home({ token }) {
   const handleSubmitActivity = ({
     title,
     description,
+    price,
     checked,
     address,
     sport,
@@ -76,11 +77,13 @@ export default function Home({ token }) {
     debugger;
     try {
       AsyncStorage.getItem("token").then((token) => {
-        saveNote(
+        debugger;
+        saveActivity(
           token,
           undefined,
           title,
           description,
+          price,
           checked,
           address,
           sport,

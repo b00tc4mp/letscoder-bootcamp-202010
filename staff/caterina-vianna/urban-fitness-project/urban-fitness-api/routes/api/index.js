@@ -6,8 +6,8 @@ const {
   handleRegisterUser,
   handleAuthenticateUser,
   handleRetrieveUser,
+  handleSaveActivity,
 } = require("./handlers");
-const handleSaveActivity = require("./handlers/handle-save-activity");
 
 const withErrorHandling = require("./helpers/with-error-handling");
 
