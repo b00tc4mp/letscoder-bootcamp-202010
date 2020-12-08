@@ -6,7 +6,8 @@ module.exports = {
     findPets: require('./find-pets'),
     detailPet: require('./detail-pet'),
     deletePet: require('./delete-pet'),
-    savePetImage: require('./save-pet-image')
+    savePetImage: require('./save-pet-image'),
+    retrievePetImage: require('./retrieve-pet-image')
     
 
 }

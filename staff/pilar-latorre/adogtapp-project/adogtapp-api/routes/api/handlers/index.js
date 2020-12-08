@@ -7,5 +7,6 @@ module.exports = {
     handleFindPets: require('./handle-find-pets'), 
     handleDetailPet: require('./handle-detail-pet'),
     handleDeletePet: require('./handle-delete-pet'),
-    handleSavePetImage: require('./handle-save-pet-image')
+    handleSavePetImage: require('./handle-save-pet-image'),
+    handleRetrievePetImage: require('./handle-retrieve-pet-image')
 }

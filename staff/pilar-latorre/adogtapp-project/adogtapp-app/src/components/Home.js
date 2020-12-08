@@ -1,8 +1,7 @@
-import './Welcome.sass'
+import './Home.sass'
 import { useState, useEffect } from 'react'
-import {  retrieveUser, savePet, } from '../logic'
+import {  retrieveUser, savePet, savePetImage } from '../logic'
 import SearchPets from './SearchPets'
-import PetResults from './PetResults'
 import CreatePet from './CreatePet'
 
 
@@ -45,34 +44,44 @@ export default function () {
             savePet( undefined, name, breed, species, color, description, token, (error, petId) => {
                 if (error) return alert(error.message)
 
-                /* savePetImage(petId, image, error => {
+                savePetImage(petId, image, error => {
                     if (error) return alert(error.message)
                     try {
                         
-                        
-
+                        alert('pet created')
                         
                     } catch (error) {
                         alert(error.message)
                     }
-                }) */
-                alert('pet created')
+                }) 
                
             })
         } catch (error) {
             alert(error.message)
         }
     } 
+
+    const handleGoToSearch = () => {
+
+        setView('search-pet')
+      }
+
+    const handleGoToCreate = () => {
+
+        setView('create-pet')
+      }
+    
+    
  
     return(
     <>
+    <header className="home">
+    <h1 className="home__welcome">Welcome {name}!</h1>
     
-    <h1 className="welcome__welcome">Welcome {name}!</h1>
+    <button className="home__search" onClick={handleGoToSearch}>SEARCH PET</button>
 
-    <button className="welcome__search" onClick={()=>{setView('search-pet')}}>SEARCH PET</button>
-
-    <button className="welcome__create" onClick={()=>{setView('create-pet')}}>CREATE NEW PET</button>
-    {view === 'home' && <div><img className="welcome__img"src="variosperretes4.jpg"/></div>}
+    <button className="home__create" onClick={handleGoToCreate}>CREATE NEW PET</button></header>
+    {view === 'home' && <div><img className="home__img"src="variosperretes4.jpg"/></div>}
 
     {view === 'search-pet' && <SearchPets />}
     {view === 'create-pet' && <CreatePet onCreatePet={handleCreatePet}/>}

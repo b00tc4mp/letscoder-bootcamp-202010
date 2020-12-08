@@ -71,6 +71,10 @@ module.exports = {
        // if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
+    validateFile(file) {
+        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
+    }
+
    
 
    

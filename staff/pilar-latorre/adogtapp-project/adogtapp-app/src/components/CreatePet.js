@@ -3,19 +3,17 @@ import './CreatePet.sass'
 function CreatePet({onCreatePet}){
 
     return <div className="CreatePet">
-        <h1 className="CreatePet__h1">Please fill all the information about the pet</h1>
-        <img className='CreatePet__img' src="protectora.jpg"/>  
-        <div><button className="CreatePet__button">UPDATE WITH PET PHOTO</button></div>
-        
-
-        
+        <h1 className="CreatePet__h1">Please fill all the information about the pet</h1> 
+    
         <form className="CreatePet__form" onSubmit={event => {
             event.preventDefault()
 
-            const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} } } = event
+            const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} }, image } = event
 
-            onCreatePet(name, breed, species, color, description )
+            onCreatePet(name, breed, species, color, description, image.files[0] )
         }}>
+            <input type="file" id="image" name="image" />
+            <label className="CreatePet__button" htmlFor="image">UPDATE PHOTO</label>
             <input className="CreatePet__input" type="text" name="name" placeholder="Pet name" />
             <input className="CreatePet__input" type="text" name="breed" placeholder="breed" />
             <select className="CreatePet__select" name="species" id="species">
@@ -28,7 +26,7 @@ function CreatePet({onCreatePet}){
             <button className="CreatePet__button">SAVE INFO</button>
         </form>
             
-         {/*    <p className="CreatePet__p">Do you want to introduce another animal? <span className="CreatePet__span" onClick={onGoToCreatePet}>New Animal</span></p> */}
+      
 
 
     </div>

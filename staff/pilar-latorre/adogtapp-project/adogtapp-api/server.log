@@ -907,3 +907,33 @@ info 2020-12-08T16:50:46.931Z - server running on port 4000
 info 2020-12-08T17:06:56.131Z - stopping server
 info 2020-12-08T17:06:59.337Z - starting server
 info 2020-12-08T17:06:59.538Z - server running on port 4000
+info 2020-12-08T17:50:32.126Z - stopping server
+info 2020-12-08T17:50:41.337Z - starting server
+info 2020-12-08T17:50:41.550Z - server running on port 4000
+info 2020-12-08T18:45:42.419Z - stopping server
+info 2020-12-08T18:46:07.125Z - starting server
+info 2020-12-08T18:46:07.583Z - server running on port 4000
+info 2020-12-08T18:59:44.499Z - stopping server
+info 2020-12-08T18:59:51.935Z - starting server
+info 2020-12-08T18:59:52.087Z - server running on port 4000
+info 2020-12-08T19:14:02.679Z - stopping server
+info 2020-12-08T19:14:05.215Z - starting server
+info 2020-12-08T19:14:05.329Z - server running on port 4000
+info 2020-12-08T19:14:45.872Z - stopping server
+info 2020-12-08T19:14:48.326Z - starting server
+info 2020-12-08T19:14:48.443Z - server running on port 4000
+info 2020-12-08T19:20:45.250Z - stopping server
+info 2020-12-08T19:20:47.941Z - starting server
+info 2020-12-08T19:20:48.077Z - server running on port 4000
+info 2020-12-08T19:21:29.431Z - stopping server
+info 2020-12-08T19:21:32.161Z - starting server
+info 2020-12-08T19:21:32.282Z - server running on port 4000
+info 2020-12-08T19:26:17.963Z - stopping server
+info 2020-12-08T19:26:21.134Z - starting server
+info 2020-12-08T19:26:21.283Z - server running on port 4000
+info 2020-12-08T19:57:16.868Z - stopping server
+info 2020-12-08T19:58:31.555Z - starting server
+info 2020-12-08T19:58:31.742Z - server running on port 4000
+error 2020-12-08T20:13:05.461Z - ConflictError: shelter with e-mail mo@no.es already registered
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:20:37
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)

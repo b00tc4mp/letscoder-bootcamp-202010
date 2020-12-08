@@ -1,7 +1,9 @@
 import { call } from '../utils'
 import { validateToken, validateId, validateName, validateBreed,  validateColor, validateDescription, validateCallback } from './helpers/validations'
+import context from './context'
 
-export default function savePet( petId, name, breed, species, color, description, token, callback) {
+
+export default (function savePet( petId, name, breed, species, color, description, token, callback) {
     validateToken(token)
     if (typeof petId !== 'undefined') validateId(petId)
     validateName(name)
@@ -10,7 +12,9 @@ export default function savePet( petId, name, breed, species, color, description
     validateDescription(description)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/pets', { 
+    const { API_URL } = this
+debugger
+    call('POST', `${API_URL}/pets`, { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },
@@ -24,6 +28,8 @@ export default function savePet( petId, name, breed, species, color, description
                 return callback(new Error(error))
             }
 
-            callback(null)
+            const { petId } = JSON.parse(response)
+
+            callback(null, petId)
         })
-}
+}).bind(context)

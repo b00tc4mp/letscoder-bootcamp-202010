@@ -10,7 +10,8 @@ const {
     handleFindPets,
     handleDetailPet,
     handleDeletePet,
-    handleSavePetImage
+    handleSavePetImage,
+    handleRetrievePetImage
   
 } = require('./handlers')
 
@@ -33,7 +34,10 @@ router.get('/api/pets/:petId', withErrorHandling(handleDetailPet))
 
 router.delete('/api/pets/:petId', jsonBodyParser, withErrorHandling(handleDeletePet))
 
-router.post('/api/notes/:petId/images', withErrorHandling(handleSavePetImage))
+router.post('/api/pets/:petId/images', withErrorHandling(handleSavePetImage))
+
+router.get('/api/notes/:petId/images', withErrorHandling(handleRetrievePetImage))
+
 
 
 

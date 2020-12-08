@@ -5,6 +5,8 @@ import savePet from './save-pet'
 import findPets from './find-pets' 
 import detailPet from './detail-pet'
 import deletePet from './delete-pet'
+import context from './context'
+import savePetImage from './save-pet-image'
 
 export {
     registerUser,
@@ -13,5 +15,7 @@ export {
     savePet,
     findPets,
     detailPet,
-    deletePet
+    deletePet,
+    context,
+    savePetImage
 }
