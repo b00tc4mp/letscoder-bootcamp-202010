@@ -46,7 +46,19 @@ export default function Home({ onHandleLogout }) {
       try{
         editUser(user.email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, error => {
           if (error) return Alert.alert(error.message)
-
+          AsyncStorage.getItem('token')
+          .then(token => {
+          try {
+              retrieveUser(token, (error, user) => {
+                  if (error) return Alert.alert(error.message)
+                
+  
+                  setUser(user)
+              })
+          } catch (error) {
+              Alert.alert(error.message)
+          }  
+      })
           setView('profile')
         })
       } catch(error) {

@@ -5,14 +5,14 @@ import { Alert, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text
 
 
 function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
-    const [ fullname, setFullname ] = useState('')
-    const [ artistName, setArtistName ] = useState('')
-    const [ city, setCity ] = useState('')
-    const [ tags, setTags ] = useState('')
-    const [ youtubeLink, setYoutubeLink ] = useState('')
-    const [ bandcampLink, setBandcampLink ] = useState('')
-    const [ spotifyLink, setSpotifyLink ] = useState('')
-    const [ description, setDescription ] = useState('')
+    const [ fullname, setFullname ] = useState(user.fullname)
+    const [ artistName, setArtistName ] = useState(user.artistName)
+    const [ city, setCity ] = useState(user.city)
+    const [ tags, setTags ] = useState(user.tags)
+    const [ youtubeLink, setYoutubeLink ] = useState(user.youtubeLink)
+    const [ bandcampLink, setBandcampLink ] = useState(user.bandcampLink)
+    const [ spotifyLink, setSpotifyLink ] = useState(user.spotifyLink)
+    const [ description, setDescription ] = useState(user.description)
     
     return (
         <SafeAreaView>
@@ -27,72 +27,76 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                 </View>
 
                 <TextInput
-                    placeholder={(user.fullname ? ' ' + user.fullname : ' Fullname')}
+                    placeholder=' Fullname'
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40" 
                     onChangeText={fullname => setFullname(fullname)}
-                    value={fullname}>
+                    
+                    defaultValue={(user.fullname ? ' ' + user.fullname : '')}
+                    >
+                    
                 </TextInput>
 
                 <TextInput
-                    placeholder={(user.artistName ? ' ' + user.artistName : ' City')}
+                    placeholder=' Artist Name'
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
                     onChangeText={artistName => setArtistName(artistName)}
-                    value={artistName}>
+                    defaultValue={user.artistName ? ' ' + user.artistName : ''}
+                    >
                 </TextInput>
 
                 <TextInput
-                    placeholder={(user.city ? ' ' + user.city : ' City')}
+                    placeholder=' City'
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
                     onChangeText={city => setCity(city)}
-                    value={city}
+                    defaultValue={user.city ? ' ' + user.city : ''}
                     >
                 </TextInput>
 
                 <TextInput
-                    placeholder={(user.tags ? ' ' + user.tags : ' Music Tags (Rock, Jazz, punk, etc)')}
+                    placeholder=' Music Tags (Rock, Jazz, punk, etc)'
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
-                    onChangeText={tags => setTags(tags ? tags.split(', ') : [])}
-                    value={tags}
+                    onChangeText={tags => setTags(tags ? tags.split(',') : [])}
+                    defaultValue={user.tags ? ' ' + user.tags : ''}
                     >
                 </TextInput>
 
                 <TextInput
-                    placeholder={(user.youtubeLink ? ' ' + user.youtubeLink : " Youtube Link")}
+                    placeholder=" Youtube Link"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
                     onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
-                    value={youtubeLink}
+                    defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
                     >
                 </TextInput>
 
                 <TextInput
-                    placeholder={(user.bandcampLink ? ' ' + user.bandcampLink : " Bandcamp Link")}
+                    placeholder=" Bandcamp Link"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
                     onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
-                    value={bandcampLink}
+                    defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
                     >
                 </TextInput>
 
                 <TextInput
-                    placeholder={(user.spotifyLink ? ' ' + user.spotifyLink : " Spotify Link")}
+                    placeholder=" Spotify Link"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
                     onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
-                    value={spotifyLink}
+                    defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
                     >
                 </TextInput>
 
                 <TextInput
-                    placeholder={(user.description ? ' ' + user.description : ' Description')}
+                    placeholder=' Description'
                     style={styles.descriptionSignUp}
                     placeholderTextColor="#343a40"
                     onChangeText={description => setDescription(description)}
-                    value={description}
+                    defaultValue={user.description ? ' ' + user.description : ""}
                     >
                 </TextInput>
 

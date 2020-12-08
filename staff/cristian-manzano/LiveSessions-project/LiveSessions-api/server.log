@@ -1314,3 +1314,66 @@ error 2020-12-07T16:08:45.531Z - TokenExpiredError: jwt expired
     at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
     at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
 info 2020-12-07T20:20:54.952Z - stopping server
+info 2020-12-08T08:13:13.571Z - starting server
+error 2020-12-08T08:13:43.592Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T08:13:43.593Z - stopping server
+info 2020-12-08T08:18:30.440Z - starting server
+error 2020-12-08T08:19:00.461Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T08:19:00.462Z - stopping server
+info 2020-12-08T08:21:40.210Z - starting server
+info 2020-12-08T08:21:40.750Z - server running on port 4000
+info 2020-12-08T09:51:35.380Z - stopping server
+info 2020-12-08T09:51:41.500Z - starting server
+info 2020-12-08T09:51:41.790Z - server running on port 4000
+info 2020-12-08T09:51:45.297Z - stopping server
+info 2020-12-08T09:51:47.199Z - starting server
+info 2020-12-08T09:51:47.344Z - server running on port 4000
+info 2020-12-08T09:53:21.726Z - stopping server
+info 2020-12-08T09:53:52.656Z - starting server
+info 2020-12-08T09:53:53.881Z - server running on port 4000
+info 2020-12-08T09:54:45.595Z - starting server
+info 2020-12-08T09:54:45.753Z - server running on port 4000
+info 2020-12-08T09:58:52.027Z - stopping server
+info 2020-12-08T09:58:54.331Z - starting server
+info 2020-12-08T09:58:54.538Z - server running on port 4000
+info 2020-12-08T10:02:48.300Z - stopping server
+info 2020-12-08T10:02:51.197Z - starting server
+info 2020-12-08T10:02:51.339Z - server running on port 4000
+info 2020-12-08T10:03:53.216Z - stopping server
+info 2020-12-08T10:03:56.156Z - starting server
+info 2020-12-08T10:03:56.409Z - server running on port 4000
+info 2020-12-08T10:05:20.581Z - stopping server
+info 2020-12-08T10:05:23.322Z - starting server
+info 2020-12-08T10:05:23.460Z - server running on port 4000
+info 2020-12-08T10:08:57.369Z - stopping server
+info 2020-12-08T10:09:00.757Z - starting server
+info 2020-12-08T10:09:00.955Z - server running on port 4000
+info 2020-12-08T10:21:04.385Z - stopping server
