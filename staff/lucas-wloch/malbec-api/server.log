@@ -384,3 +384,119 @@ info 2020-12-08T11:05:13.581Z - starting server
 info 2020-12-08T11:05:13.748Z - server running on port 4000
 info 2020-12-08T11:06:06.638Z - starting server
 info 2020-12-08T11:06:06.834Z - server running on port 4000
+info 2020-12-08T15:06:44.278Z - stopping server
+info 2020-12-08T15:06:47.473Z - starting server
+info 2020-12-08T15:06:47.601Z - server running on port 4000
+info 2020-12-08T16:00:58.804Z - starting server
+error 2020-12-08T16:01:28.823Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js:13:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T16:01:28.827Z - stopping server
+info 2020-12-08T16:02:02.259Z - starting server
+error 2020-12-08T16:02:32.282Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js:13:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T16:02:32.286Z - stopping server
+info 2020-12-08T16:03:59.417Z - starting server
+error 2020-12-08T16:04:29.451Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js:13:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T16:04:29.464Z - stopping server
+info 2020-12-08T16:05:18.207Z - starting server
+info 2020-12-08T16:05:18.821Z - server running on port 4000
+error 2020-12-08T16:06:51.384Z - LengthError: id length is not 24
+    at validateId (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:33:37)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:7:43)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:9:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T16:07:22.463Z - stopping server
+info 2020-12-08T16:07:34.388Z - starting server
+info 2020-12-08T16:07:34.849Z - server running on port 4000
+error 2020-12-08T16:09:30.703Z - TypeError: false is not a price
+    at validateProductPrice (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:90:46)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:10:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:9:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T16:10:36.996Z - stopping server
+info 2020-12-08T16:11:10.824Z - starting server
+info 2020-12-08T16:11:11.032Z - server running on port 4000
+error 2020-12-08T16:11:31.833Z - CastError: Cast to ObjectId failed for value "{ productId: '5fcf4dc5c7089455a08a8759' }" at path "_id" for model "Product"
+    at model.Query.exec (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\query.js:4358:21)
+    at model.Query.Query.then (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:26:14)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:9:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T16:13:40.983Z - stopping server
+info 2020-12-08T16:13:50.249Z - starting server
+info 2020-12-08T16:13:50.385Z - server running on port 4000
+error 2020-12-08T16:14:46.238Z - NotFoundError: product with id 5fcf4dc5c7089455a08a8759 not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:27:36
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T16:17:01.829Z - starting server
+info 2020-12-08T16:17:01.951Z - server running on port 4000
+error 2020-12-08T16:19:48.228Z - NotFoundError: product with id 5fcf4dc5c7089455a08a8759 not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:27:36
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T16:20:21.441Z - starting server
+info 2020-12-08T16:20:21.560Z - server running on port 4000
+error 2020-12-08T16:45:48.596Z - ConflictError: product with name Lucas already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:20:36
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T16:46:24.481Z - stopping server
+info 2020-12-08T17:12:30.961Z - starting server
+info 2020-12-08T17:12:31.322Z - server running on port 4000
+info 2020-12-08T18:00:25.116Z - stopping server

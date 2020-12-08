@@ -4,6 +4,7 @@ import Feedback from './Feedback'
 import Profile from './Profile'
 import SaveProducts from './SaveProducts'
 import MyProducts from './MyProducts'
+import EditProduct from './EditProduct'
 
 export  {
     NavBar,
@@ -11,5 +12,6 @@ export  {
     Feedback,
     SaveProducts,
     Profile,
-    MyProducts
+    MyProducts,
+    EditProduct
 }
