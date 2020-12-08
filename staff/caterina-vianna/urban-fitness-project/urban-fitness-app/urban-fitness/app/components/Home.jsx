@@ -20,10 +20,12 @@ import EditProfile from "./EditProfile";
 import Card from "./Card";
 import ProfileList from "./ProfileList";
 import CreateActivity from "./CreateActivity";
+import saveActivity from "../logic/save-activity";
 
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
+  const [activity, setActivity] = useState();
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -59,6 +61,50 @@ export default function Home({ token }) {
 
   const handleChangeToTrainerMode = () => {
     setView("trainer-mode");
+  };
+
+  const handleSubmitActivity = ({
+    title,
+    description,
+    checked,
+    address,
+    sport,
+    repeat,
+    spots,
+    activityDate,
+  }) => {
+    debugger;
+    try {
+      AsyncStorage.getItem("token").then((token) => {
+        saveNote(
+          token,
+          undefined,
+          title,
+          description,
+          checked,
+          address,
+          sport,
+          repeat,
+          spots,
+          activityDate,
+          (error) => {
+            if (error) return alert(error.message);
+
+            try {
+              retrieveActivity(token, (error, activity) => {
+                if (error) return alert(error.message);
+
+                setActivity(activity);
+              });
+            } catch (error) {
+              alert(error.message);
+            }
+          }
+        );
+      });
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   return (
@@ -100,7 +146,9 @@ export default function Home({ token }) {
             onListMode={handleListMode}
           />
         )}
-        {view === "trainer-mode" && <CreateActivity />}
+        {view === "trainer-mode" && (
+          <CreateActivity onSubmitActivity={handleSubmitActivity} />
+        )}
       </View>
     </View>
   );

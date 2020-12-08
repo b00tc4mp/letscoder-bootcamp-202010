@@ -1,27 +1,51 @@
 const { Schema } = require("mongoose");
+const {
+  Types: { ObjectId },
+} = Schema;
 
 module.exports = new Schema({
-  trainer: {
-    type: "String",
+  owner: {
+    type: ObjectId,
     required: true,
   },
   title: {
-    type: "String",
+    type: String,
     required: true,
   },
   description: {
-    type: "String",
+    type: String,
     required: true,
   },
   materialRequired: {
-    type: "Boolean",
-    required: true,
+    type: Boolean,
+    required: false,
     default: false,
   },
-  coordinates: {
-    type: "String",
+  address: {
+    type: String,
     required: true,
   },
+  coordinates: {
+    type: String,
+    required: false,
+  },
+  coverImage: {
+    type: String,
+    required: false,
+  },
+  spots: {
+    type: String,
+    required: true,
+  },
+  sessions: {
+    type: [ObjectId],
+    ref: "Session",
+  },
+  date: {
+    type: Date,
+    required: true,
+  },
+
   // firstName: {
   //   type: String,
   //   required: true,

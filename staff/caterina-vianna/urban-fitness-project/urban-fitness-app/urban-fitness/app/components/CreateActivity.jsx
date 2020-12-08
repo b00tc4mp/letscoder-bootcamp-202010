@@ -12,14 +12,20 @@ import * as ImagePicker from "expo-image-picker";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import RNPickerSelect from "react-native-picker-select";
 
-export default function CreateActivity(props) {
+export default function CreateActivity({ onSubmitActivity }) {
   const [checked, setChecked] = React.useState(false);
-  const [date, setDate] = useState(new Date(1598051730000));
+  const [activityDate, setDate] = useState(new Date(1598051730000));
   const [mode, setMode] = useState("date");
   const [show, setShow] = useState(false);
+  const [sport, setSport] = useState("");
+  const [repeat, setRepetitivity] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [address, setAddress] = useState("");
+  const [spots, setSpots] = useState("");
 
   const onChange = (event, selectedDate) => {
-    const currentDate = selectedDate || date;
+    const currentDate = selectedDate || activityDate;
     setShow(Platform.OS === "ios");
     setDate(currentDate);
   };
@@ -43,8 +49,14 @@ export default function CreateActivity(props) {
       <TouchableOpacity onPress={() => {}}>
         <Image source={require("../assets/upload-photo.png")}></Image>
       </TouchableOpacity>
-      <TextInput placeholder="Title"></TextInput>
-      <TextInput placeholder="Description"></TextInput>
+      <TextInput
+        placeholder="Title"
+        onChangeText={(text) => setTitle(text)}
+      ></TextInput>
+      <TextInput
+        placeholder="Description"
+        onChangeText={(text) => setDescription(text)}
+      ></TextInput>
       <Text>Material required</Text>
       <Checkbox
         style={styles.checkbox}
@@ -55,7 +67,7 @@ export default function CreateActivity(props) {
       />
       <View paddingVertical={5} style={styles.pickerList} />
       <RNPickerSelect
-        onValueChange={(value) => console.log(value)}
+        onValueChange={(value) => setSport(value)}
         items={[
           { label: "Baseball", value: "baseball" },
           { label: "Boxing", value: "boxing" },
@@ -72,7 +84,7 @@ export default function CreateActivity(props) {
       <View paddingVertical={5} />
       <View paddingVertical={5} style={styles.pickerList} />
       <RNPickerSelect
-        onValueChange={(value) => console.log(value)}
+        onValueChange={(value) => setRepetitivity(value)}
         items={[
           { label: "Daily", value: "daily" },
           { label: "Weekly", value: "weekly" },
@@ -81,11 +93,15 @@ export default function CreateActivity(props) {
         ]}
       />
       <View paddingVertical={5} />
-      <TextInput placeholder="Address"></TextInput>
+      <TextInput
+        placeholder="Address"
+        onChangeText={(text) => setAddress(text)}
+      ></TextInput>
 
       <TextInput
         keyboardType="numeric"
         placeholder="Spots Available"
+        onChangeText={(text) => setSpots(text)}
       ></TextInput>
       <Text style={styles.textNewActivity}>Sessions</Text>
       <View>
@@ -98,7 +114,7 @@ export default function CreateActivity(props) {
         {show && (
           <DateTimePicker
             testID="dateTimePicker"
-            value={date}
+            value={activityDate}
             mode={mode}
             is24Hour={true}
             display="default"
@@ -106,7 +122,21 @@ export default function CreateActivity(props) {
           />
         )}
       </View>
-      <TouchableOpacity style={styles.customBtnBG} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.customBtnBG}
+        onPress={() => {
+          onSubmitActivity({
+            title,
+            description,
+            checked,
+            address,
+            sport,
+            repeat,
+            spots,
+            activityDate,
+          });
+        }}
+      >
         <Text style={styles.customBtnText}>SIGN UP</Text>
       </TouchableOpacity>
     </View>

@@ -1,18 +1,21 @@
+import { call } from "../utils";
+
 export default function saveActivity(
   token,
   title,
   description,
-  materialRequired,
-  coordinates,
-  coverImage,
-  spots,
+  checked,
+  address,
+  sport,
+  repeat,
+  date,
   callback
 ) {
   //TODO VALIDATIONS
 
   call(
     "POST",
-    "http://localhost:4000/api/activity",
+    "http://192.168.0.11:4000/api/activity",
     {
       "Content-type": "application/json",
       Authorization: `Bearer ${token}`,
@@ -20,10 +23,12 @@ export default function saveActivity(
     JSON.stringify({
       title,
       description,
-      materialRequired,
-      coordinates,
-      coverImage,
+      checked,
+      address,
+      sport,
+      repeat,
       spots,
+      date,
     }),
     (status, response) => {
       if (status === 0) return callback(new Error("server error"));

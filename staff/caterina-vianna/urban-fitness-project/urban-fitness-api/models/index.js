@@ -1,6 +1,7 @@
 const { model } = require("mongoose");
-const { user } = require("./schemas");
+const { user, activity } = require("./schemas");
 
 module.exports = {
   User: model("User", user),
+  Activity: model("Activity", activity),
 };
