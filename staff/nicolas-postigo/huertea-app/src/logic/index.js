@@ -4,6 +4,8 @@ import retrieveUser from './retrieve-user'
 import createOffer from './create-offer'
 import retrieveOffer from './retrieve-offer'
 import findOffer from './find-offer'
+import deleteOffer from './delete-offer'
+// import saveOfferImage from './save-offer-image'
 
 export {
     registerUser,
@@ -11,5 +13,7 @@ export {
     retrieveUser,
     createOffer,
     retrieveOffer,
-    findOffer
+    findOffer,
+    deleteOffer
+    // saveOfferImage
 }

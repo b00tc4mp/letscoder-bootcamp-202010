@@ -8,7 +8,8 @@ const {
     handleRetrieveUser,
     handleCreateOffer,
     handleRetrieveOffer,
-    handleFindOffer
+    handleFindOffer,
+    handleSaveOfferImage
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -28,6 +29,9 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
 router.post('/api/offers/find', jsonBodyParser, withErrorHandling(handleFindOffer))
+
+router.post('/api/notes/:offerId/pics', withErrorHandling(handleSaveOfferImage))
+
 
 
 module.exports = router

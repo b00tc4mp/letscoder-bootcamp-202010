@@ -5,6 +5,7 @@ import Hub from './Hub'
 import Createoffer from './Createoffer'
 import Detailoffer from './Detailoffer'
 import FindOffer from './FindOffer'
+import ListOffersRetrieve from './ListOffersRetrieve'
 
 export {
     Register,
@@ -13,5 +14,6 @@ export {
     Hub,
     Createoffer,
     Detailoffer,
-    FindOffer
+    FindOffer,
+    ListOffersRetrieve
 }

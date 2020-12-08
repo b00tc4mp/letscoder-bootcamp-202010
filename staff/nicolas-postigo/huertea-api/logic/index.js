@@ -6,5 +6,6 @@ module.exports = {
     retrieveUser: require('./retrieve-user'),
     createOffer: require('./create-offer.js'),
     retrieveOffer: require('./retrieve-all-offers.js'),
-    findOffer: require('./find-offer.js')
+    findOffer: require('./find-offer.js'),
+    SaveOfferImage: require('./save-offer-image.js'),
 }

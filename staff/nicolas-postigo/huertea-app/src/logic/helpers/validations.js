@@ -68,6 +68,9 @@ module.exports = {
 
         if (!titleoffer.trim().length) throw new Error('titleoffer is empty or blank')
     },
-
+    
+    validateFile(file) {
+        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
+    }
 
 }

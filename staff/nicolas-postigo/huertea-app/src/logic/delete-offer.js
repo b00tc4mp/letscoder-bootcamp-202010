@@ -9,21 +9,20 @@ export default function (token, offerId, offername, titleoffer, image, price, ca
     validateCallback(callback)
 
 
-    call('POST', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json', 
-    Authorization: `Bearer ${token}`,
+    call('DELETE', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json', 
+    Authorization: `Bearer ${token}`, 'Content-type': 'application/json'
     },
     JSON.stringify({ offerId, offername, titleoffer, image, price}),
     (status, response) => {
         if (status === 0)
             return callback(new Error('server error'))
-        else if (status !== 201) {
+        else if (status !== 204) {
             const { error } = JSON.parse(response)
 
             return callback(new Error(error))
         }
-        const { offerId } = JSON.parse(response)
 
-        callback(null, offerId)
+        callback(null)
     })
 
 }

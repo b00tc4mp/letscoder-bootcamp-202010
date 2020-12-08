@@ -1,8 +1,9 @@
 import './App.css';
 import { Register, Login, Hub, Home, Createoffer } from './components'
 import { useState } from 'react'
+// import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer, saveOfferImage } from './logic'
 import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer } from './logic'
-import {Route, withRouter, Redirect} from 'react-router-dom'
+import { Route, withRouter, Redirect } from 'react-router-dom'
 
 
 
@@ -13,7 +14,7 @@ function App() {
   const [view, setView] = useState('home')
   const [offers, setOffers] = useState([])
 
-  const {token} = sessionStorage
+  const { token } = sessionStorage
 
 
   const handleGoToRegister = () => {
@@ -54,19 +55,19 @@ function App() {
         if (error) return alert(error.message)
         sessionStorage.token = token
 
-        
+
         retrieveUser(sessionStorage.token, (error, user) => {
           if (error) return alert(error.message)
           setFullname(user.fullname)
         })
-        
+
         retrieveOffer(sessionStorage.token, (error, offersResult) => {
           if (error) return alert(error.message)
-          debugger
+
           setOffers(offersResult)
-          
+
         })
-        
+
 
         setView('hub')
       })
@@ -80,7 +81,7 @@ function App() {
 
   const handleGoCreateoffer = () => {
     setView('createoffer')
- 
+
   }
 
   const handleGoHub = () => {
@@ -90,9 +91,38 @@ function App() {
     setView('hub')
   }
 
-  const handleCreateOffer = (offername, titleoffer, image, price) => {
+/*   const handleCreateOffer = (offername, titleoffer, image, price, pic) => {
     const { token } = sessionStorage
 
+    try {
+      createOffer(token, undefined, offername, titleoffer, image, price, pic, (error, offerId) => {
+        if (error) return alert(error.message)
+
+         saveOfferImage(offerId, pic, error => {
+          if (error) return alert(error.message) 
+
+          try {
+            retrieveOffer(token, (error, offersResult) => {
+              if (error) return alert(error.message)
+
+              setOffers(offersResult)
+              setView('hub')
+
+            })
+          } catch (error) {
+            alert(error.message)
+          }
+
+        })
+
+       })
+     } catch (error) {
+      alert(error.message)
+    }
+  } */
+
+  const handleCreateOffer = (offername, titleoffer, image, price) => {
+    const { token } = sessionStorage
     try {
       createOffer(token, undefined, offername, titleoffer, image, price, error => {
         if (error) return alert(error.message)
@@ -109,17 +139,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-{/*         <Route exact path='/' render={() => <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} /> } /> 
+        {/*         <Route exact path='/' render={() => <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} /> } /> 
         <Route exact path='/register' render={() => <Register onRegister={handleRegister} /> } /> 
         <Route exact path='/login' render={() => <Login onLogin={handleLogin} /> } /> 
         <Route exact path='/hub' render={() => token ? <Hub/> : <Redirect to ='/'/> } /> 
         <Route exact path='/createoffer' render={() => <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer}  /> } /> 
- */}  
+ */}
         {view === 'home' && <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />}
         {view === 'register' && <Register onRegister={handleRegister} />}
         {view === 'login' && <Login onLogin={handleLogin} />}
         {view === 'hub' && <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} />}
-        {view === 'createoffer' && <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />} 
+        {view === 'createoffer' && <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />}
 
       </header>
     </div>

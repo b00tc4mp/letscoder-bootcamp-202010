@@ -1,8 +1,15 @@
+import React from 'react'
 import './ListOffersRetrieve.sass'
 
 
 // export default function ({ offers, onGoDetail }) {
-    export default function ({ offers }) {
+function ListOffersRetrieve ({ offers, onGoDetail }) {
+    
+    
+    
+    
+    
+    
     return <section className="list-offers">
 {/*offers ? <p>{offers.titleoffer}</p> : <p>no definido</p>*/}
            {offers && offers.map(({ id, titleoffer, offername, image, price }) => 
@@ -11,9 +18,13 @@ import './ListOffersRetrieve.sass'
                 <h5>{titleoffer}</h5>
                 <p>{offername}</p>
                 <p>{price} €</p>
-                {/* <a onClick={onGoDetail} href="#" className="button_detail_offer">Detalle Oferta</a> */}
-                <a href="#" className="button_detail_offer">Detalle Oferta</a>
+                <button onClick={()=>{onGoDetail({id,titleoffer,offername,image,price})}} href="#" className="button_detail_offer">Detalle Oferta</button> 
+                {/* <a href="#" className="button_detail_offer">Detalle Oferta</a> */}
             </li>)}  
         
+
+
+
     </section>
 }
+export default ListOffersRetrieve
