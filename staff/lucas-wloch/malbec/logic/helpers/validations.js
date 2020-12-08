@@ -32,7 +32,6 @@ module.exports = {
 
         if (!id.trim().length) throw new Error('id is empty or blank')
 
-        if (id.length !== 24) throw new Error('id length is not 24')
     },
 
     validateText(text){

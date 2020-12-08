@@ -31,7 +31,7 @@ function SaveProducts({onExit}) {
 
 
         if (name && description && category)
-            saveProducts(name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available, error => {
+            saveProducts(undefined, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available, error => {
                 if (error) return alert(error)
 
                 setSuccess(true)

@@ -1,6 +1,7 @@
 import './MyProducts.sass'
 import { useState, useEffect } from 'react'
 import { retrieveProducts } from '../logic'
+import { EditProduct } from '.'
 
 function MyProducts() {
     // const [products, setProducts] = useState()
@@ -153,112 +154,74 @@ function MyProducts() {
             <button className="myProducts__acordion" onClick={toggleView} name="parrilla">Parrilla</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {parrilla && parrilla.length > 0 && parrilla.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {parrilla && parrilla.length > 0 && parrilla.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="pescados">Pescados</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {pescados && pescados.length > 0 && pescados.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {pescados && pescados.length > 0 && pescados.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="empanadas" >Empanadas</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {empanadas && empanadas.length > 0 && empanadas.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {empanadas && empanadas.length > 0 && empanadas.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="ensaladas">Ensaladas</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {ensaladas && ensaladas.length > 0 && ensaladas.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {ensaladas && ensaladas.length > 0 && ensaladas.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="entrantes-parrilla">Entrantes Parrilla</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {entrantesParrilla && entrantesParrilla.length > 0 && entrantesParrilla.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {entrantesParrilla && entrantesParrilla.length > 0 && entrantesParrilla.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="acompañamientos-guarniciones">Acompañamientos y Guarniciones</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {acompañamientosGuarniciones && acompañamientosGuarniciones.length > 0 && acompañamientosGuarniciones.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {acompañamientosGuarniciones && acompañamientosGuarniciones.length > 0 && acompañamientosGuarniciones.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="otras-sugerencias">Otras Sugerencias</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {otrasSugerencias && otrasSugerencias.length > 0 && otrasSugerencias.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {otrasSugerencias && otrasSugerencias.length > 0 && otrasSugerencias.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="postres">Postres</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {postres && postres.length > 0 && postres.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {postres && postres.length > 0 && postres.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="aguas-refrescos"> Aguas y Refrescos</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {aguasRefrescos && aguasRefrescos.length > 0 && aguasRefrescos.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {aguasRefrescos && aguasRefrescos.length > 0 && aguasRefrescos.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="vinos">Vinos</button>
+            <div className="myProducts__panel">
+                <ul className="myProducts__ul">
+                    {vinos && vinos.length > 0 && vinos.map(product => <EditProduct product={product}/>)}
+                </ul>
+            </div>
+            
+            {/* <button className="myProducts__acordion" onClick={toggleView} name="vinos">Vinos</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
                     {vinos && vinos.length > 0 && vinos.map(({ name, description, category, price }) => <li className="myProducts__li">
@@ -268,17 +231,12 @@ function MyProducts() {
                         <span className="myProducts__price">{price}€</span>
                     </li>)}
                 </ul>
-            </div>
+            </div> */}
 
             <button className="myProducts__acordion" onClick={toggleView} name="cervezas">Cervezas</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {cervezas && cervezas.length > 0 && cervezas.map(({ name, description, category, price }) => <li className="myProducts__li">
-                        <h4 className="myProducts__h4">{name}</h4>
-                        <p className="myProducts__p">{category}</p>
-                        <p className="myProducts__p">{description}</p>
-                        <span className="myProducts__price">{price}€</span>
-                    </li>)}
+                    {cervezas && cervezas.length > 0 && cervezas.map(product => <EditProduct product={product}/>)}
                 </ul>
             </div>
         </section>

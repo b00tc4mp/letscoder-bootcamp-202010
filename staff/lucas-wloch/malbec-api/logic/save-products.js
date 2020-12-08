@@ -1,9 +1,10 @@
-const { validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateProductAlergenos, validateProductCategory, validateProductAvailable } = require('./helpers/validations')
-const { ConflictError } = require('../errors')
+const { validateId, validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateProductAlergenos, validateProductCategory, validateProductAvailable } = require('./helpers/validations')
+const { ConflictError, NotFoundError } = require('../errors')
 const { Product } = require('../models')
 
 
-module.exports = (name, description, price, glutenFree, vegan, alergenos, category, available) => {
+module.exports = (productId, name, description, price, glutenFree, vegan, alergenos, category, available) => {
+    if (typeof productId !== "undefined") validateId(productId)
     validateProductName(name)
     validateProductDescription(description)
     validateProductPrice(price)
@@ -12,23 +13,29 @@ module.exports = (name, description, price, glutenFree, vegan, alergenos, catego
     validateProductAlergenos(alergenos)
     validateProductCategory(category)
     validateProductAvailable(available)
+debugger
+    if (!productId)
+        return Product.findOne({ $or: [{ name }, { description }] })
+            .then(product => {
+                if (product) throw new ConflictError(`product with name ${name} already exists`)
 
-    // .findOne({ $or: [{ name }, { description }] })
+                return Product.create({ name, description, price, glutenFree, vegan, alergenos, category, available })
+            })
+    else
+        return Product.findById(productId)
+            .then(product => {
+                if (!product) throw new NotFoundError(`product with id ${productId} not found`)
 
-    // return Product.findOne().lean()
-    return Product.findOne({ $or: [{ name }, { description }] })
-        .then(product => {
-            debugger
-            if (product) throw new ConflictError(`product with name ${name} already exists`)
+                product.name = name
+                product.description = description
+                product.price = price
+                product.glutenFree = glutenFree
+                product.alergenos = alergenos
+                product.category = category
+                product.available = available
 
-            return Product.create({ name, description, price, glutenFree, vegan, alergenos, category, available })
-        })
-    // .then(() => { })
+
+                return product.save()
+            })
 
 }
-    //user = new User({ fullname, email, password })
-    // return user.save()
-
-    //user = { fullname, email, password }
-    //return new User(user).save()
-    //return User.create(user)
