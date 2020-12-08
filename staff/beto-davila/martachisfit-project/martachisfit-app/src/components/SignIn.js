@@ -12,7 +12,7 @@ function SignIn({ onLogin }) {
         }}>
             <input className='sign-in__input' type="email" name="email" placeholder="Introduce tu e-mail" required/>
             <input className='sign-in__input' type="password" name="password" placeholder="Introduce tu contraseña" required/>
-            <button className='sign-in__btn'>Acceder</button>
+            <button to="/" className='sign-in__btn'>Acceder</button>
         </form>
     </section>
 }

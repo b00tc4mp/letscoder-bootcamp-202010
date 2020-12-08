@@ -1,31 +1,30 @@
-.recipe
-    width: 75%
-    margin: auto
-    padding-bottom: 1rem
+.recipes
+    &__intro
+        width: 75%
+        margin: auto
+
+    &__intro-description
+        line-height: 1.8rem
+        font-size: 1.1rem
+
+    &__intro-title
+        font-size: 2rem
+
+    &__list
+        list-style: none
+        margin: 0
+        padding: 0
 
     &__img
-        margin-left: 1.7rem
-
-    &__btns
-        display: flex
-        justify-content: space-between
-
-    
-    &__btn
-        border: none
-        background-color: transparent
-        padding: .2rem
+        display: block
+        margin: 1rem auto
         cursor: pointer
-        margin: .2rem 1rem
-        background-color: #e8ebeb
-        border-radius: .3rem
 
-    &__btn:hover
-        background-color: #cdd1d1
-    
-    &__added
-        font-size: 0.8rem
-        margin-left: .4rem
+    &__container
+        background-color: #E3E5E5
+        width: 60%
+        margin: .5rem auto
+        padding: .1rem 0
 
-h3, h4
-    text-align: center
+    &__item
+        padding: .2rem 0

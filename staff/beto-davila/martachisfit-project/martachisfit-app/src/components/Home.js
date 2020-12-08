@@ -1,11 +1,11 @@
 import './styles/Home.sass'
 import { useState } from 'react'
-import { retrieveUser, retrieveArticles, addUserArticles, retrieveSavedArticles, retrieveChosenArticle, retrieveRecipesImg, retrieveRecipes } from '../logic'
+import { retrieveUser, retrieveArticles, addUserArticles, retrieveSavedArticles, retrieveChosenArticle, retrieveRecipes, retrieveRecipe, addUserRecipes, retrieveSavedRecipes } from '../logic'
 import logo from '../../src/logo.png'
 import facebook from './icons/social/facebook.png'
 import instagram from './icons/social/instagram.png'
 import linkedin from './icons/social/linkedin.png'
-import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, RecipesImg, Welcome, Recipes } from './index'
+import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe } from './index'
 
 export default function Home () {
     const [name, setName] = useState()
@@ -14,8 +14,9 @@ export default function Home () {
     const [message, setMessage] = useState()
     const [savedArticles, setSavedArticles] = useState()
     const [chosenArticle, setChosenArticle] = useState()
-    // const [recipesImg, setRecipesImg] = useState()
     const [recipes, setRecipes] = useState()
+    const [recipe, setRecipe] = useState()
+    const [savedRecipes, setSavedRecipes] = useState()
      
     const { token } = sessionStorage
 
@@ -80,7 +81,22 @@ export default function Home () {
                 setMessage(true)
                 setTimeout(() => {
                     setMessage(false)
-                }, 4000)
+                }, 2000)
+            }) 
+        } catch (error) {
+            return alert(error.message)
+        }
+    }
+
+    const handleSaveRecipe = recipeId => {
+        try {
+            addUserRecipes(token, recipeId, error => {
+                if (error) return alert(error.message)
+
+                setMessage(true)
+                setTimeout(() => {
+                    setMessage(false)
+                }, 2000)
             }) 
         } catch (error) {
             return alert(error.message)
@@ -95,7 +111,7 @@ export default function Home () {
                 setMessage(true)
                 setTimeout(() => {
                     setMessage(false)
-                    }, 4000)
+                    }, 2000)
                 }) 
         } catch (error) {
             return alert(error.message)
@@ -108,7 +124,12 @@ export default function Home () {
                 if (error) return alert(error.message)
 
                 setSavedArticles(articles)
-                setView("profile")
+                retrieveSavedRecipes(token, (error, savedRecipes) => {
+                    if (error) return alert(error.message)
+
+                    setSavedRecipes(savedRecipes)
+                    setView("profile")
+                })
             })
         } catch (error) {
             alert(error.message)
@@ -124,6 +145,15 @@ export default function Home () {
         })
     }
 
+    const handleGoToRecipe = recipeId => {
+        retrieveRecipe(recipeId, (error, recipe) => {
+            if (error) return alert(error.message)
+
+            setRecipe(recipe)
+            setView('recipe')
+        })
+    }
+ 
     const handleGoToLogOut = () => {
         setView('logout')
     }
@@ -135,20 +165,24 @@ export default function Home () {
  
 
     return <><div className="home">
+    <div className="home__header">
     <img className="home__logo" alt="logo" src={logo} height="100" width="100"></img>
+    <div className="home__title-user">
     <h1 className="home__title">MartachisFIT</h1>
-    <p className="home__user">¡Bienvenid@, <span className="home__user--name">{name}</span>!</p>
+    {name && <p className="home__user">¡Hola, <span className="home__user--name">{name}</span>!</p>}
+    </div>
     <nav className="home__social">
         <a href="https://es-es.facebook.com/m.albimuro?fref=nf"><img className="home__social-logo" alt="facebook" src={facebook} width="13"></img></a><a href="https://www.instagram.com/martachis.fit/"><img alt="instagram" width="13" className="home__social-logo" src={instagram}></img></a><a href="https://www.linkedin.com/in/alberto-davila-gomez-250460b0"><img className="home__social-logo" alt="linkedin" width="13" src={linkedin}></img></a>
     </nav>
+    </div>
     <DropDownMenu onGoToDietDesign={handleGoToDietDesign} onGoToWelcome={handleGoToWelcome} onGoToRecipes={handleGoToRecipes} onGoToUserDiet={handleGoToUserDiet} onGoToBlog={handleGoToBlog} onGoToProfile={handleGoToProfile}/>
     {view === 'welcome' && <Welcome />}
     {view === 'diet-design' && <DietDesign />}
-    {view === 'recipes' && recipes && <Recipes source={recipes}/>}
-    {/* {view === 'recipes-img' && recipesImg && <RecipesImg recipesImg={recipesImg} />} */}
+    {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe}/>}
+    {view === 'recipe' && recipe && <Recipe onSaveRecipe={handleSaveRecipe} source={recipe} message={message}/>}
     {view === 'user-diet' && <UserDiet onGoToUserDiet={handleGoToUserDiet}/>}
-    {view === 'articles' && article && <Articles source={article} message={message} onGoToRandomArticle={handleGoToRandomArticle} onSaveArticle={handleSaveArticle}/>}
-    {view === 'profile' && <UserProfile onLogout={handleGoToLogOut} name={name} savedArticles={savedArticles} onGoToChosenArticle={handleGoToChosenArticle}/>}
+    {view === 'articles' && article && <Articles source={article} message={message} onGoToRandomArticle={handleGoToRandomArticle} onGoToProfile={handleGoToProfile} onSaveArticle={handleSaveArticle}/>}
+    {view === 'profile' && <UserProfile onLogout={handleGoToLogOut} savedRecipes={savedRecipes} name={name} savedArticles={savedArticles} onGoToChosenArticle={handleGoToChosenArticle}/>}
     {view === 'chosen-article' && <ChosenArticle source={chosenArticle} onReadArticle={handleReadArticle}/>}
     {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name}/>}
     </div>

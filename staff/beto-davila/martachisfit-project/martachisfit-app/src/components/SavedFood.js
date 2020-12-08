@@ -4,15 +4,19 @@ export default function SavedFood ({ food, onDelete, message }) {
 
     return <section className="saved-food">
         {food && food.length !== 0? <div className="saved-food__row-header">
-        <p>Kcal</p><p>HC</p><p>Pr.</p><p>Gr.</p>
+        <p>Kcal</p><p>HC(g)</p><p>Pr.(g)</p><p>Gr.(g)</p>
         </div> : "" }
         {food && food.length && 
         <ul className="saved-food__list">
         {food.map(({ name, calories, carbs, protein, fats, _id }) => <li key={_id} className="saved-food__food">
         <div className="saved-food__block">
-            <p><span className="saved-food__name">{name}</span></p><p>{calories}</p><p>{carbs} gr.</p><p>{protein} gr.</p><p>{fats} gr.</p>
+                <p className="saved-food__block-item"><span className="saved-food__name">{name}</span></p>
+                <p className="saved-food__block-item">{calories}</p>
+                <p className="saved-food__block-item">{carbs}</p>
+                <p className="saved-food__block-item">{protein}</p>
+                <p className="saved-food__block-item">{fats}</p>
             {<a onClick={event => {
-                event.stopPropagation()
+                event.preventDefault()
 
                 onDelete(_id)
                 }} className="saved-food__delete" href="#">Borrar</a>}

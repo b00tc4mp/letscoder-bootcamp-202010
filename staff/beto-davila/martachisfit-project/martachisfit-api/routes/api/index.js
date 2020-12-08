@@ -1,5 +1,6 @@
 const { Router } = require('express')
 const jsonBodyParser = require('../../middlewares/json-body-parser')
+const handleAddUserRecipes = require('./handlers/handle-add-user-recipes')
 
 const {
     handleRegisterUser,
@@ -15,8 +16,9 @@ const {
     handleAddUserArticles,
     handleRetrieveSavedArticles,
     handleRetrieveChosenArticle,
-    handleRetrieveRecipesImg,
-    handleRetrieveRecipes
+    handleRetrieveRecipe,
+    handleRetrieveRecipes,
+    handleRetrieveSavedRecipes
 } = require('./handlers/index')
 
 const router = new Router()
@@ -53,14 +55,20 @@ router.patch('/api/users/articles/:articleId', jsonBodyParser, withErrorHandling
 // retrieve user diet
 router.get('/api/users/diets', withErrorHandling(handleRetrieveDiet))
 
-// retrieve recipes img
-router.get('/api/recipes/img', withErrorHandling(handleRetrieveRecipesImg))
+// retrieve one recipe
+router.get('/api/recipes/:recipeId', withErrorHandling(handleRetrieveRecipe))
 
 // retrieve recipes
 router.get('/api/recipes', withErrorHandling(handleRetrieveRecipes))
 
 // retrieve user articles
 router.get('/api/users/articles', withErrorHandling(handleRetrieveSavedArticles))
+
+// retrieve user recipes
+router.get('/api/users/recipes', withErrorHandling(handleRetrieveSavedRecipes))
+
+// add recipe to personal collection
+router.patch('/api/users/recipes/:recipeId', jsonBodyParser, withErrorHandling(handleAddUserRecipes))
 
 // retrieve user chosen article
 router.get('/api/users/articles/:articleId', withErrorHandling(handleRetrieveChosenArticle))

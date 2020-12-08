@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const mongoose = require('mongoose')
 const { RecipeImg } = require('../models') 
-var imageData = fs.readFileSync(__dirname + '/static/assets/images/donuts-blue.png');
+var imageData = fs.readFileSync(__dirname + '/static/assets/images/tronco-navidad.jpg');
 const { env: { MONGODB_URL } } = process
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
@@ -13,8 +13,10 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
         const image = new RecipeImg
 
         image.img.data = imageData
-        image.img.Contentype = 'image/png'
-        image.title = 'DONUTS BLUE'
+        image.img.Contentype = 'image/jpg'
+        image.recipeId = '5fce3b1b9ee99c988a1205bb'
+        image.title = 'TRONCO DE NAVIDAD'
+        image.urlPath = 'https://res.cloudinary.com/beto-cloud-name/image/upload/v1607405602/tronco-navidad_hnm6nb.jpg'
 
         image.save()
         .then(img => {
@@ -23,7 +25,7 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
         RecipeImg.findById(img, (err, image) => {
             if (err) throw err;
             try{
-            fs.writeFileSync(__dirname + '/static/assets/tmp/tmp-donuts-blue.png', image.data);
+            fs.writeFileSync(__dirname + '/static/assets/tmp/tmp-tronco-navidad.jpg', image.data);
             }catch(error){
             console.log(error.message);
             }

@@ -11,8 +11,10 @@ module.exports = {
     handleRetrieveDiet: require('./handle-retrieve-diet'),
     handleRetrieveArticles: require('./handle-retrieve-articles'),
     handleAddUserArticles: require('./handle-add-user-articles'),
+    handleAddUserRecipes: require('./handle-add-user-recipes'),
     handleRetrieveSavedArticles: require('./handle-retrieve-saved-articles'),
     handleRetrieveChosenArticle: require('./handle-retrieve-chosen-article'),
-    handleRetrieveRecipesImg: require('./handle-retrieve-recipes-img'),
-    handleRetrieveRecipes: require('./handle-retrieve-recipes')
+    handleRetrieveRecipe: require('./handle-retrieve-recipe'),
+    handleRetrieveRecipes: require('./handle-retrieve-recipes'),
+    handleRetrieveSavedRecipes: require('./handle-retrieve-saved-recipes')
 }

@@ -8,45 +8,30 @@ const { env: { MONGODB_URL } } = process
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
-        Recipe.create({text: `        
-    \n\n Me encanta la Navidad, aunque suene absurdo, me sigo emocionando cada vez que escucho una canción, veo luces, me aparecen las películas navideñas en Netflix…
+        Recipe.create({text: `
+            \n\n El postre de nuestra infancia en versión saludable y encima, ¡súper fácil y rápido de hacer!
 
-    \n\n Por lo tanto, a partir de ahora muchas de las recetas que suba, serán versiones de Navidad.
-
-    \n\n **INGREDIENTES:**
-    \n\n 🎄 100gr de harina de avena
-    \n\n 🎄 50gr de harina de almendra
-    \n\n 🎄 2 huevos
-    \n\n 🎄 2 yogures o 150gr de queso fresco batido
-    \n\n 🎄 Esencia de vainilla
-    \n\n 🎄 Media cucharadita de levadura
-    \n\n 🎄 Stevia al gusto
-
-    \n\n **Para el relleno:** 1,5 cazos de proteína de chocolate, una cucharada de cacao en polvo y unas gotitas de leche.
-
-    \n\n **Para el topping:** 100gr de queso fresco batido, cacao desgrasado, 2 láminas de gelatina y stevia al gusto.
-
-    \n\n **ELABORACIÓN:**
-    \n\n Precalentamos el horno a 180° arriba y abajo.
-
-    \n\n En un recipiente batimos bien todos los ingredientes de nuestra base.
-
-    \n\n Una vez que consigamos una textura homogénea, ponemos papel de horno en la bandeja del horno, engrasamos con unas gotitas de aceite y vertemos nuestra masa directamente, para que quede toda la bandeja cubierta (tipo alfombra rectangular).
-
-    \n\n Metemos al horno durante 15 o 20 minutos hasta que esté hecho (cuidado, no te pases o se quiebra la masa)
-
-    \n\n Cuando esté hecho, sacamos y dejamos enfriar
-
-    \n\n **Para el relleno:** Mezclamos los ingredientes hasta conseguir una textura tipo Nutella.
-
-    \n\n Una vez que el bizcocho esté a temperatura ambiente, lo ponemos sobre film transparente y untamos nuestro relleno. Con cuidado, vamos enrollando nuestro tronco, lo envolvemos bien apretado en film transparente y metemos nuestro tronco a la nevera durante 2-3 horas.
-
-    \n\n Cuando ha pasado ese tiempo, ponemos las láminas de gelatina a hidratar y en una taza mezclamos el queso fresco batido, cacao y stevia. Derretimos la gelatina en 30ml de leche caliente y mezclamos todo. Dejamos reposar 10 min en la nevera y después, vertemos sobre nuestro tronco.
-
-    \n\n Metemos a la nevera 1 hora, sacamos, decoramos con coco rallado (opcional) y ¡Listo!
-
-    \n\n ¿Te animas a hacerlo? `,
-        title: '### TRONCO DE NAVIDAD'})
+            \n\n Si te gusta la receta, coméntamelo y haz una captura de pantalla, a mí me anima mucho a seguir publicando, win-win!!
+            
+            \n\n **INGREDIENTES:**
+            \n\n 👩‍🍳 200ml de clara de huevos
+            \n\n 👩‍🍳 100ml de leche (la que uséis)
+            \n\n 👩‍🍳 Esencia de vainilla
+            \n\n 👩‍🍳 Stevia al gusto
+            \n\n 👩‍🍳 Canela en polvo
+            
+            \n\n **ELABORACIÓN:**
+            
+            \n\n Es tan sencillo como batir las claras con la leche, la esencia de vainilla y la stevia en un bowl.
+            
+            \n\n Metemos el recipiente en el microondas en intervalos de 1 minuto (y vamos sacando y removiendo), en total suele hacerse en 3-4 minutos.
+            
+            \n\n Al sacarlo, batimos bien con la batidora, vertemos en recipientes y lo metemos a la nevera (mínimo 30′).
+            
+            \n\n Para servir, espolvoreamos canela por encima y !listas!`        
+        ,
+        title: '### NATILLAS FIT',
+        urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/v1607405459/natillas_uywwtp.jpg'})
             .then(() => console.log('Recipe inserted'))
             .catch(error => console.error('There was an error: ', error))
     })      

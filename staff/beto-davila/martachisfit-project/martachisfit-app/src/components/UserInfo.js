@@ -6,11 +6,12 @@ import escala from './icons/escala.png'
 import correr from './icons/correr.png'
 import sedentario from './icons/sedentario.png'
 import atras from './icons/atras.png'
+import { Link } from 'react-router-dom'
 
 export default function UserInfo({onGoToGoalCaloriesAndMacros}) {
   return <>
       <section className="user-info">
-        <button className="user-info__back"><img alt="back" src={atras} height="20" width="20"/></button>
+        <Link to="/landing" className="user-info__back"><img alt="back" src={atras} height="20" width="20"/></Link>
 
         <h2 className="user-info__title">
           Cuéntanos sobre ti y tus objetivos

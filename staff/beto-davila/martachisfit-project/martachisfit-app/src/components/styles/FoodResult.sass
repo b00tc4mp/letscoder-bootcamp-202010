@@ -1,18 +1,31 @@
 .food-result
-    text-align: center
+    display: flex
+    flex-direction: column
+
+    &__title
+        margin: .5rem 0
 
     &__item
         font-size: .8rem
+        margin: .5rem
         
     &__add
         border: none
-        background-color: transparent
-        margin-bottom: 1rem
-    
-    &__added
-        width: 90%
-        margin: auto
-        font-size: .8rem
+        padding: .2rem
+        cursor: pointer
+        background-color: #e8ebeb
+        border-radius: .3rem
+        align-self: center
+
+    &__add:hover
+        background-color: #cdd1d1
 
     &__category
         font-weight: bold
+
+    &__added
+        font-weight: bold
+        position: absolute
+        padding: .5rem
+        background-color: #dee0e0
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)

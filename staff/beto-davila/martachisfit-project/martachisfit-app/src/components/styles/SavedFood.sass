@@ -13,12 +13,19 @@
     &__block
         display: grid
         grid-template-columns: repeat(6, 1fr)
-        grid-column-gap: .5rem
+        text-align: center
+
+    &__block-item
+        // width: 40px
+        // white-space: nowrap
+        overflow: hidden
+        margin: .2rem
+        // text-overflow: ellipsis
     
     &__row-header
         display: flex
-        font-size: .8rem
-        justify-content: space-around
+        font-size: .7rem
+        justify-content: space-evenly
         width: 60%
         margin: auto
         font-weight: bold
@@ -33,10 +40,14 @@
 
     &__delete
         font-size: .6rem
-        margin: .8rem 0
 
     &__deleted
         text-align: center
+        background-color: #c6caca
+        padding: .5rem
+        position: absolute
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        width: 30%
 
     &__no-food
         text-align: center

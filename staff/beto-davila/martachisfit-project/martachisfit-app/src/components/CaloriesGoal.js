@@ -1,7 +1,8 @@
 import './styles/CaloriesGoal.sass'
 import grafico from './icons/grafico.png'
+import { Link } from 'react-router-dom'
 
-function CaloriesGoal ({macros, onGoToPlans, onGoToRegister}) {
+function CaloriesGoal ({macros}) {
     return <section className="goal">
     <h1 className="goal__title">
         Calorías objetivo
@@ -18,7 +19,7 @@ function CaloriesGoal ({macros, onGoToPlans, onGoToRegister}) {
 
     <h3 className="goal__subtitle">¡Estamos ready!</h3>
 
-    <h3 className="goal__subtitle">Para conseguir el mejor resultado de tu nuevo estilo de vida, anota tus <span className="goal__calories">calorías objetivo</span> y completa tu <a className="goal__register"onClick={onGoToRegister}>REGISTRO</a></h3>
+    <h3 className="goal__subtitle">Para conseguir el mejor resultado de tu nuevo estilo de vida, anota tus <span className="goal__calories">calorías objetivo</span> y completa tu <Link to="/sign-up" className="goal__register">REGISTRO</Link></h3>
 
     <p className="goal__p">¿Necesitas ayuda para interpretar el resultado y un seguimiento personalizado? Tenemos el plan perfecto para ti ;)</p>
 

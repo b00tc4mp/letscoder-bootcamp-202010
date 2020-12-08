@@ -4,7 +4,7 @@ import {SavedFood} from '.'
 import { retrieveSavedFood, toggleFoodUserDiet } from '../logic'
 import { useState, useEffect } from 'react'
 
-export default function UserProfile ({ name ,onLogout, savedArticles, savedRecipes, onGoToChosenArticle }) {
+export default function UserProfile ({ name ,onLogout, savedArticles, savedRecipes, onRecipe, onGoToChosenArticle }) {
 
     const [userChosenFoods, setUserChosenFoods] = useState()
     const [message, setMessage] = useState()
@@ -53,17 +53,19 @@ export default function UserProfile ({ name ,onLogout, savedArticles, savedRecip
             </div>
             </div>
         </div>
+
+
         <div className="user-profile__recipes-container">
         <h3>¡Ponte el delantal!</h3>
-        {/* {savedRecipes.length === 0 && <p>No has añadido recetas a tu lista</p>} */}
-        {savedRecipes && savedRecipes.length && <ul className="user-profile__recipes">
-        {savedRecipes.map(({ _id , title, img }) => <li key={_id} >
-        <div className="user-profile__recipes-list">
-            <a href="#recipes">{title}</a>
+        {!savedRecipes.length && <p className="user-profile__no-recipess">No has añadido recetas a tu colleción</p>}
+        <div className="user-profile__recipes-carousel">
+        {savedRecipes.map(({_id, urlPathImg}) => <div className="user-profile__recipes-carousel-recipe" key={_id} onClick={() => onRecipe(_id)}>
+        {urlPathImg && <img src={urlPathImg} alt="recipe-img-saved"/>}
+        </div>)}
         </div>
-        </li>)}
-        </ul>}
         </div>
+
+
         <div className="user-profile__articles-container">
         <h3>Para leer....</h3>
         {!savedArticles.length && <p className="user-profile__no-articles">No tienes artículos por leer</p>}
@@ -75,6 +77,8 @@ export default function UserProfile ({ name ,onLogout, savedArticles, savedRecip
         </li>)}
         </ul>}
         </div>
+
+
         <div className="user-profile__record-container">
         <h3>Registro de alimentos</h3>
         <SavedFood onDelete={handleDeleteFood} message={message} food={userChosenFoods}/>

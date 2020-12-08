@@ -1,6 +1,7 @@
 import './styles/Landing.sass'
+import { Link } from 'react-router-dom'
 
-export default function Landing({onGoToSignIn, onUserInfo}) {
+export default function Landing() {
   return <>
       <section className="landing">
         <h1 className="landing__title">
@@ -9,9 +10,9 @@ export default function Landing({onGoToSignIn, onUserInfo}) {
         <h4 className="landing_subtitle">Tu mejor versión, ¡aquí y ahora!</h4>
         
         <div className="landing__buttons">
-          <a onClick={onUserInfo} className="landing__reg-btn btn">Registrarse</a>
+          <Link to="/user-info" className="landing__reg-btn btn">Registrarse</Link>
           <p className="landing__p">¿Tienes ya una cuenta?, ¡Entra!</p>
-          <a onClick={onGoToSignIn} className="landing__log-btn btn">Iniciar sesión</a>
+          <Link to="/sign-in" className="landing__log-btn btn">Iniciar sesión</Link>
         </div>
       </section>
       </>

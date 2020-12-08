@@ -1,21 +1,26 @@
 import ReactMarkdown from 'react-markdown'
 import './styles/Recipes.sass'
 
-export default function Recipes ({source, onGoToRandomRecipe, onSaveRecipe, onGoToProfile, message}) {
+export default function Recipes ({ onGoToRecipe, source }) {
 
-    const { text, id, title } = source
+    return <section className="recipes">
+        <div className="recipes__intro">
+            <h1 className="recipes__intro-title">Recetas saludables</h1>
+            <p className="recipes__intro-description">No te pierdas las mejores recetas elaboradas con productos saludables y naturales, ¡dulces y saladas!</p>
+        </div>
+        {source && source.length && 
+        <ul className="recipes__list">
+        {source.map(({ _id, title, urlPathImg }) => <li key={_id} className="recipes__item">
+            <div className="recipes__container">
+                <ReactMarkdown className="recipes__title" source={title} />
+                <img onClick={() => 
 
-    return <>
-    <div className="recipe__btns">
-        <button onClick={() => onSaveRecipe(id)} className="recipe__read-later-btn recipe__btn">Añadir a mi colección</button>
-        <button onClick={onGoToRandomRecipe} className="recipe__read-other-btn recipe__btn">Muéstrame otra</button>
-    </div>
-    {message && <p className="recipe__added">¡Receta añadida en su <a onClick={onGoToProfile} href="#profile">perfil</a>!</p>}
-    <article className="recipe">
-    {source && <ReactMarkdown className="recipe__title" source={title} />}
-    <img className="recipe__img" alt="tronco-navidad" src="https://fakeimg.pl/350x200/ff0000,128/000,255"></img>
-    {source && <ReactMarkdown source={text} />}
-    </article>
-    </>
+                    onGoToRecipe(_id)} className="recipes__img" alt="recipe-item" src={urlPathImg} height="200" width="300" />
+            </div>
+        </li>)}
+    </ul>}
+    </section>
+
+
 }
 

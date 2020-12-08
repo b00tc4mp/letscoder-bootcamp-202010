@@ -1,4 +1,4 @@
-const { Schema, ObjectId } = require('mongoose')
+const { Schema } = require('mongoose')
 
 module.exports = new Schema({
     img: {
@@ -12,6 +12,10 @@ module.exports = new Schema({
     },
 
     recipeId: {
-        type: [ ObjectId ]
+        type: String
+    },
+
+    urlPath: {
+        type: String
     }
 })

@@ -2,33 +2,19 @@ import './App.css';
 import { Landing, SignIn, CaloriesGoal, UserInfo, SignUp, Home } from './components';
 import { useState } from 'react';
 import { macrosAfterCalories, caloriesCalc, registerUser, authenticateUser } from './logic/index';
+import { Route, withRouter, Redirect } from 'react-router-dom'
 
-function App() {
-  const [view, setView] = useState(sessionStorage.token? 'home' : 'landing')
+  
+export default withRouter(props => {
+    
   const [goal, setGoal] = useState()
-
-  const handleGoToSignIn = () => {
-    setView('sign-in')
-  }
-
-  const handleGoToUserInfo = () => {
-    setView('user-info')
-  }
-
-  const handleGoToRegister = () => {
-    setView('sign-up')
-  }
-
-  const handleGoToPlans = () => {
-    setView('plans')
-  }
-
+  
   const handleRegister = (fullname, email, password, calories) => {
     try {
       registerUser(fullname, email, password, calories, error => {
         if (error) return alert(error.message)
   
-        setView('sign-in')
+        props.history.push('/sign-in')
       })
     } catch (error) {
         alert(error.message)
@@ -43,7 +29,7 @@ function App() {
         macrosAfterCalories(totalCalories, goal => {
           
           setGoal(goal)
-          setView('calories-goal')
+          props.history.push('/calories-goal')
         })
       })
     } catch (error) {
@@ -57,21 +43,22 @@ function App() {
         if (error) return alert(error.message)
   
         sessionStorage.token = token
-        setView('home')
+        props.history.push('/')
       })    
     } catch (error) {
       alert(error.message)
     }
   }
+  const { token } = sessionStorage
   
-  return <>
-  {view === 'landing' && <Landing onUserInfo={handleGoToUserInfo} onGoToSignIn={handleGoToSignIn}/>}
-  {view === 'sign-in' && <SignIn onLogin={handleAuthenticateUser}/>}
-  {view === 'user-info' && <UserInfo onGoToGoalCaloriesAndMacros={handleGetCaloriesAndMacros}/>}
-  {view === 'calories-goal' && goal && <CaloriesGoal macros={goal} onGoToRegister={handleGoToRegister} onGoToPlans={handleGoToPlans}/>}
-  {view === 'sign-up' && <SignUp onRegister={handleRegister}/>}
-  {view === 'home' && <Home />}
-  </>
-}
+  return <div className="App">
+  <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onRegister={handleRegister} />} />
+  <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onLogin={handleAuthenticateUser} />} />
+  <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/sign-in" />} />
+  <Route path='/landing' render={() => <Landing />} />
+  <Route path='/user-info' render={() => <UserInfo onGoToGoalCaloriesAndMacros={handleGetCaloriesAndMacros}/>} />
+  <Route path= '/calories-goal' render={() => <CaloriesGoal macros={goal}/>} />
 
-export default App;
+  </div>
+})
+

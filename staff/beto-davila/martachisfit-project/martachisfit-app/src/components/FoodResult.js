@@ -3,7 +3,7 @@ import './styles/FoodResult.sass'
 import { useState } from 'react'
 // import { SavedFood } from '.'
 
-export default function FoodResult ({ result, onGoToProfile }) {
+export default function FoodResult ({ result }) {
 
     const { token } = sessionStorage
 
@@ -12,7 +12,10 @@ export default function FoodResult ({ result, onGoToProfile }) {
 
     const {_id: foodId, name, calories, serving, carbs, protein, fats} = result
 
-    const handleSaveFood = () => {
+    const handleSaveFood = event => {
+
+        event.preventDefault()
+
         try {
             addFoodUserDiet(token, foodId, error => {
                 if (error) return alert(error.message)
@@ -20,7 +23,7 @@ export default function FoodResult ({ result, onGoToProfile }) {
                 setView(true)
                 setTimeout(() => {
                     setView(false)
-                    }, 4000)
+                    }, 2000)
             }) 
         } catch (error) {
             return alert(error.message)
@@ -53,8 +56,8 @@ export default function FoodResult ({ result, onGoToProfile }) {
         <p className="food-result__item"><span className="food-result__category">Proteínas:</span> {protein} gr.</p>
         <p className="food-result__item"><span className="food-result__category">Grasas:</span> {fats} gr.</p>
         <button onClick={handleSaveFood}className="food-result__add">Añadir</button>
+    {view === true && <p className="food-result__added">¡Alimento añadido!</p>}
     </section>
-    {view === true && <p className="food-result__added">¡Alimento añadido! Puede ir a visualizarlo en su perfil o continuar añadiendo alimentos.</p>}
     {/* {view === 'saved-food' && <SavedFood food={food} />} */}
 </>
 }

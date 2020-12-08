@@ -14,7 +14,6 @@ module.exports = function (userId) {
     validateId(userId)
 
     
-debugger
     return User.findById(userId).lean()
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
