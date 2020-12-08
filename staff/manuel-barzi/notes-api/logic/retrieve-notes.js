@@ -9,7 +9,7 @@ module.exports = ownerId => {
         .then(user => {
             if (!user) new NotFoundError(`user with id ${ownerId} not found`)
 
-            return Note.find({ owner: ownerId }).lean()
+            return Note.find({ owner: ownerId }, null, { sort: { date: -1 } }).lean()
         })
         .then(notes => {
             notes.forEach(note => {

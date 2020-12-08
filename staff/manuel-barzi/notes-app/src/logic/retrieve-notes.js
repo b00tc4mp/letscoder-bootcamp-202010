@@ -1,5 +1,6 @@
 import { call } from 'notes-utils'
 import { validateToken, validateCallback } from './helpers/validations'
+import context from './context'
 
 /**
  * Retrieve user notes
@@ -10,11 +11,13 @@ import { validateToken, validateCallback } from './helpers/validations'
  * @param {*} token 
  * @param {*} callback 
  */
-export default function retrieveNotes(token, callback) {
+export default (function retrieveNotes(token, callback) {
     validateToken(token)
     validateCallback(callback)
 
-    call('GET', 'http://localhost:4000/api/notes', { Authorization: `Bearer ${token}` },
+    const { API_URL } =  this
+
+    call('GET', `${API_URL}/notes`, { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {
             if (status === 0)
@@ -29,4 +32,4 @@ export default function retrieveNotes(token, callback) {
 
             callback(null, notes)
         })
-}
+}).bind(context)

@@ -1,5 +1,6 @@
 import { call } from 'notes-utils'
 import { validateToken, validateId, validateText, validateTags, validateVisibility, validateCallback } from './helpers/validations'
+import context from './context'
 
 /**
  * Saves a user note
@@ -16,7 +17,7 @@ import { validateToken, validateId, validateText, validateTags, validateVisibili
  * @param {string} visibility 
  * @param {function} callback 
  */
-export default function saveNote(token, noteId, text, tags, visibility, callback) {
+export default (function saveNote(token, noteId, text, tags, visibility, callback) {
     validateToken(token)
     if (typeof noteId !== 'undefined') validateId(noteId)
     validateText(text)
@@ -24,7 +25,9 @@ export default function saveNote(token, noteId, text, tags, visibility, callback
     validateVisibility(visibility)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/notes', { 
+    const { API_URL } = this
+
+    call('POST', `${API_URL}/notes`, { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },
@@ -42,4 +45,4 @@ export default function saveNote(token, noteId, text, tags, visibility, callback
 
             callback(null, noteId)
         })
-}
+}).bind(context)

@@ -1,7 +1,8 @@
 import { call } from 'notes-utils'
 import { validateId, validateFile, validateCallback } from './helpers/validations'
+import context from './context'
 
-export default function (noteId, image, callback) {
+export default (function (noteId, image, callback) {
     validateId(noteId)
     validateFile(image)
     validateCallback(callback)
@@ -9,7 +10,9 @@ export default function (noteId, image, callback) {
     var formData = new FormData();
     formData.append("image", image);
 
-    call('POST', `http://localhost:4000/api/notes/${noteId}/images`, {},
+    const { API_URL } = this
+
+    call('POST', `${API_URL}/notes/${noteId}/images`, {},
         formData,
         (status, response) => {
             if (status === 0)
@@ -22,4 +25,4 @@ export default function (noteId, image, callback) {
 
             callback(null)
         })
-}
+}).bind(context)
