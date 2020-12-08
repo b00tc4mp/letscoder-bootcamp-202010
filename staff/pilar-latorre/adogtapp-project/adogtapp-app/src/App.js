@@ -1,16 +1,15 @@
 import { SignUp, SignIn, Home, Main } from './components'
-import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
+import { Route, withRouter, Redirect } from 'react-router-dom'
 
-function App() {
-  const [view, setView] = useState(sessionStorage.token? 'home' : 'sign-in')
+export default withRouter(props => {
 
   const handleSignUp = (userName, email, password, address, city, phone, description) => {
     try {
       registerUser(userName, email, password, address, city, phone, description, error => {
         if (error) return alert(error.message)
 
-        setView('sign-in')
+        props.history.push('/sign-in')
       })
     } catch (error) {
       alert(error.message)
@@ -24,43 +23,31 @@ function App() {
 
         sessionStorage.token = token
 
-        setView('home')
+        props.history.push('/')
       })
     } catch (error) {
       alert(error.message)
     }
   }
 
-  const handleGoToSignIn = () => {
-
-    setView('sign-in')
-  }
-
-  const handleGoToSignUp = () => {
-
-    setView('sign-up')
-  }
-
   const handleGoToMain = () => {
 
-    setView('main')
+    props.history.push('/main')
   }
 
-
+  const { token } = sessionStorage
 
   return (
     <div className="App">
       <header className="App-header">
-      
-        {view === 'sign-up' && <SignUp onSignUp={handleSignUp} onGoToSignIn = {handleGoToSignIn}/>}
-        {view === 'sign-in' && <SignIn onSignIn={handleSignIn} onGoToSignUp = {handleGoToSignUp} onGoToMain = {handleGoToMain}/>}
-        {view === 'home' && <Home />}
-        {view === 'main' && <Main />}
 
+      <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} />} />
+      <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} onGoToMain = {handleGoToMain}/>} />
+      <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/sign-in" />} />
+      <Route path='/main' render = {()=> <Main/> }/>
+      
 
       </header>
     </div>
   );
-}
-
-export default App;
+})

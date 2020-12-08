@@ -1,6 +1,7 @@
 import './SignUp.sass'
+import { Link } from 'react-router-dom'
 
-function SignUp({ onSignUp, onGoToSignIn}){
+function SignUp({ onSignUp}){
     return <div className="signUp">
         <h1 className="signUp__h1">Please give us some information about your shelter</h1>
         <img className='signUp__img' src="variosperretes2.jpg"/>  
@@ -22,7 +23,7 @@ function SignUp({ onSignUp, onGoToSignIn}){
             <button className="signUp__button">SAVE INFO and GO TO SIGN IN</button>
         </form>
             
-            <p className="signUp__p">Already have an account? <span className="signUp__span" onClick={onGoToSignIn}>Sign In</span></p>
+            <p className="signUp__p">Already have an account? <Link to = 'sign-in'><span className="signUp__span">Sign In</span></Link></p>
 
 
     </div>
