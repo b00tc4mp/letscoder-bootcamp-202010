@@ -1,17 +1,22 @@
-const { validateId, validateCallback } = require('./helpers/validations')
+const { validateId } = require('./helpers/validations')
 const path = require('path')
 const fs = require('fs')
 
-module.exports = (offerId, file, callback) => {
+module.exports = (offerId, stream) => {
+    debugger
     validateId(offerId)
-    // TODO validate file
-    validateCallback(callback)
 
-    const ws = fs.createWriteStream(path.join(__dirname, `../data/offers/${offerId}.jpg`))
 
-    file.pipe(ws)
+    return new Promise((resolve, reject) => {
+        try {
+            const toStream = fs.createWriteStream(path.join(__dirname, `../data/offers/${offerId}.jpg`))
 
-    // file.on('end', callback(null))
+            stream.pipe(toStream)
 
-    // file.on('error', callback)
+
+            resolve()
+        } catch (error) {
+            reject(error)
+        }
+    })
 }

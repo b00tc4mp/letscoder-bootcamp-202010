@@ -1,11 +1,7 @@
 import React from 'react'
 import './Createoffer.sass'
-
-
 function Createoffer({ backHub, offername, titleoffer, onCreateoffer, image, price }) {
     return <sections>
-
-
         <form className="offer__form" onSubmit={function (event) {
             event.preventDefault()
 
@@ -27,9 +23,6 @@ function Createoffer({ backHub, offername, titleoffer, onCreateoffer, image, pri
 
             <button className="saveOffer">guardar oferta &#128077;</button>
         </form>
-
     </sections>
-
 }
-
 export default Createoffer

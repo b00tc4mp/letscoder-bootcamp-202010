@@ -9,7 +9,8 @@ const {
     handleCreateOffer,
     handleRetrieveOffer,
     handleFindOffer,
-    handleSaveOfferImage
+    handleSaveOfferImage,
+    handleRetrieveOfferImage
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -30,8 +31,8 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
 router.post('/api/offers/find', jsonBodyParser, withErrorHandling(handleFindOffer))
 
-router.post('/api/notes/:offerId/pics', withErrorHandling(handleSaveOfferImage))
+router.post('/api/offers/:offerId/pics', withErrorHandling(handleSaveOfferImage))
 
-
+router.get('/api/offers/:offerId/pics', withErrorHandling(handleRetrieveOfferImage))
 
 module.exports = router

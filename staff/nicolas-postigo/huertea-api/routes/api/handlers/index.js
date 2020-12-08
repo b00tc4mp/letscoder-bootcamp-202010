@@ -1,4 +1,4 @@
-const offer = require('../../../models/schemas/offer');
+
 
 module.exports = {
     handleAcceptCookies: require('./handle-accept-cookies'),
@@ -8,5 +8,6 @@ module.exports = {
     handleCreateOffer: require('./handle-create-offer'),
     handleRetrieveOffer: require('./handle-retrieve-offer'),
     handleFindOffer: require('./handle-find-offer'),
-    // handleSaveOfferImage: require('./handle-save-image')
+    handleSaveOfferImage: require('./handle-save-image'),
+    handleRetrieveOfferImage: require('./handle-retrieve-image')
 }

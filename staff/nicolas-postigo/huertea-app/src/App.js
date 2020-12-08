@@ -91,14 +91,14 @@ function App() {
     setView('hub')
   }
 
-/*   const handleCreateOffer = (offername, titleoffer, image, price, pic) => {
+/*   const handleCreateOffer = (offername, titleoffer, price, , pic) => {
     const { token } = sessionStorage
 
     try {
-      createOffer(token, undefined, offername, titleoffer, image, price, pic, (error, offerId) => {
+      createOffer(token, undefined, offername, titleoffer, price, , pic, (error, offerId) => {
         if (error) return alert(error.message)
 
-         saveOfferImage(offerId, pic, error => {
+         saveOfferImage(offerId, , pic, error => {
           if (error) return alert(error.message) 
 
           try {

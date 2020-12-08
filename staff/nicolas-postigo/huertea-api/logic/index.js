@@ -8,4 +8,5 @@ module.exports = {
     retrieveOffer: require('./retrieve-all-offers.js'),
     findOffer: require('./find-offer.js'),
     SaveOfferImage: require('./save-offer-image.js'),
+    retrieveOfferImage: require('./retrieve-offer-image')
 }

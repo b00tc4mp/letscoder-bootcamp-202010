@@ -1,7 +1,10 @@
 import { call } from '../utils'
 import { validateFile, validateCallback } from './helpers/validations'
+import context from './context'
 
-export default function (offerId, pic, callback) {
+
+export default (function (offerId, pic, callback) {
+
     validateCallback(callback)
     validateFile(pic)
 
@@ -9,7 +12,9 @@ export default function (offerId, pic, callback) {
     formData.append("image", pic);
 
 
-    call('POST', `http://localhost:4000/api/notes/${offerId}/pics`, {},
+    const { API_URL } = this
+
+    call('POST', `${API_URL}/offers/${offerId}/pics`, {},
         formData,
         (status, response) => {
             if (status === 0)
@@ -22,4 +27,4 @@ export default function (offerId, pic, callback) {
 
             callback(null)
         })
-}
+    }).bind(context) 

@@ -1,6 +1,7 @@
 import { call } from '../utils'
 import { validateCallback, validateOffer, validateId, validateToken, validateTitleoffer } from './helpers/validations'
 
+
 export default function (token, offerId, offername, titleoffer, image, price, callback) {
     validateToken(token)
     validateOffer(offername)
