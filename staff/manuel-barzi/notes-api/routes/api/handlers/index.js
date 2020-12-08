@@ -5,5 +5,6 @@ module.exports = {
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleSaveNote: require('./handle-save-note'),
     handleRetrieveNotes: require('./handle-retrieve-notes'),
-    handleSaveNoteImage: require('./handle-save-note-image')
+    handleSaveNoteImage: require('./handle-save-note-image'),
+    handleRetrieveNoteImage: require('./handle-retrieve-note-image')
 }

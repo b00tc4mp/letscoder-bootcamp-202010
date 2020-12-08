@@ -5,5 +5,6 @@ module.exports = {
     retrieveUser: require('./retrieve-user'),
     saveNote: require('./save-note'),
     retrieveNotes: require('./retrieve-notes'),
-    saveNoteImage: require('./save-note-image')
+    saveNoteImage: require('./save-note-image'),
+    retrieveNoteImage: require('./retrieve-note-image')
 }

@@ -61,5 +61,9 @@ module.exports = {
         if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
 
         if (!query.trim().length) throw new ContentError('query is empty or blank')
+    },
+
+    validateStream(stream) {
+        // TODO where the f*ck is the the class to validate this instance!!?
     }
 }

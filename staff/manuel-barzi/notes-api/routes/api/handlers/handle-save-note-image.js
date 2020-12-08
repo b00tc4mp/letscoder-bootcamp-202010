@@ -6,14 +6,12 @@ module.exports = (req, res, handleError) => {
 
     const busboy = new Busboy({ headers: req.headers })
 
-    busboy.on('file', (fieldname, file, filename, encoding, mimetype) => saveNoteImage(noteId, file, error => {
-        if (error) return handleError(error)
+    busboy.on('file', (fieldname, file, filename, encoding, mimetype) =>
+        saveNoteImage(noteId, file)
+            .catch(handleError)
+    )
 
-        //res.status(204).send()
-
-    }))
-    
     busboy.on('finish', () => res.status(204).send())
-    
+
     req.pipe(busboy)
 }

@@ -8,7 +8,8 @@ const {
     handleRetrieveUser,
     handleSaveNote,
     handleRetrieveNotes,
-    handleSaveNoteImage
+    handleSaveNoteImage,
+    handleRetrieveNoteImage
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -30,5 +31,20 @@ router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
 router.get('/api/notes', withErrorHandling(handleRetrieveNotes))
 
 router.post('/api/notes/:noteId/images', withErrorHandling(handleSaveNoteImage))
+
+// const fs = require('fs')
+// const path = require('path')
+
+// router.get('/api/notes/:noteId/images', (req, res) => {
+//     const { params: { noteId } } = req
+
+//     const file = fs.createReadStream(path.join(__dirname, `../../data/notes/${noteId}.jpg`))
+
+//     res.setHeader('Content-type', 'image/jpeg')
+
+//     file.pipe(res)
+// })
+
+router.get('/api/notes/:noteId/images', withErrorHandling(handleRetrieveNoteImage))
 
 module.exports = router

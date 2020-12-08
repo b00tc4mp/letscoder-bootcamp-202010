@@ -670,3 +670,739 @@ info 2020-12-07T17:16:05.897Z - starting server
 info 2020-12-07T17:16:05.985Z - server running on port 4000
 info 2020-12-07T17:19:03.129Z - stopping server
 info 2020-12-07T17:19:03.129Z - stopping server
+info 2020-12-08T11:07:50.061Z - starting server
+info 2020-12-08T11:07:50.173Z - server running on port 4000
+info 2020-12-08T11:09:27.076Z - starting server
+info 2020-12-08T11:09:27.167Z - server running on port 4000
+info 2020-12-08T11:10:55.201Z - stopping server
+info 2020-12-08T11:10:56.306Z - starting server
+info 2020-12-08T11:10:56.395Z - server running on port 4000
+info 2020-12-08T11:12:18.228Z - stopping server
+info 2020-12-08T11:12:18.228Z - stopping server
+info 2020-12-08T11:27:24.263Z - starting server
+info 2020-12-08T11:27:24.350Z - server running on port 4000
+error 2020-12-08T11:28:47.414Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.415Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.416Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.420Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.421Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.425Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.429Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.430Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.438Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.440Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.442Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.444Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.446Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.447Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.448Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.451Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.455Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.457Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:28:47.458Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:30:01.733Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.135Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.135Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.137Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.140Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.141Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.149Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.152Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.153Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.156Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.157Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.159Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.161Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.162Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.165Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.167Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.170Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.172Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.175Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+error 2020-12-08T11:31:40.184Z - TypeError: retrieveNoteImage is not a function
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:284:7
+info 2020-12-08T11:32:33.108Z - stopping server
+info 2020-12-08T11:32:33.108Z - stopping server
+info 2020-12-08T11:34:00.409Z - starting server
+info 2020-12-08T11:34:00.499Z - server running on port 4000
+info 2020-12-08T11:35:36.150Z - starting server
+info 2020-12-08T11:35:36.238Z - server running on port 4000
+info 2020-12-08T11:36:07.800Z - starting server
+info 2020-12-08T11:36:07.888Z - server running on port 4000
+info 2020-12-08T11:37:36.471Z - starting server
+info 2020-12-08T11:37:36.560Z - server running on port 4000
+info 2020-12-08T11:38:44.556Z - starting server
+info 2020-12-08T11:38:44.645Z - server running on port 4000
+info 2020-12-08T11:39:39.467Z - stopping server
+info 2020-12-08T11:39:39.468Z - stopping server
+info 2020-12-08T11:40:33.647Z - starting server
+info 2020-12-08T11:40:33.736Z - server running on port 4000
+error 2020-12-08T11:40:42.838Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/6fce5ccca081ac1f4aecf452.jpg'
+error 2020-12-08T11:41:14.087Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce53e9c9b1aa1e8ad5b6fd.jpg'
+error 2020-12-08T11:41:14.089Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce54147e7c1f1e8f785b16.jpg'
+error 2020-12-08T11:41:14.094Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce5532bec19b1eae022190.jpg'
+error 2020-12-08T11:41:14.096Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce56823691541ed40a1445.jpg'
+error 2020-12-08T11:41:14.100Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce56aa3691541ed40a1446.jpg'
+error 2020-12-08T11:41:14.102Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce5b6ea081ac1f4aecf450.jpg'
+error 2020-12-08T11:41:14.106Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce5b94a081ac1f4aecf451.jpg'
+error 2020-12-08T11:41:14.112Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce5f7b8e66ab1fb993ac37.jpg'
+error 2020-12-08T11:41:14.113Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce5fd97d1bda1fc80352d0.jpg'
+error 2020-12-08T11:41:14.115Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce60368e4de31fdbf6e5ff.jpg'
+error 2020-12-08T11:41:14.120Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce607a39bfb81fe7b59bd4.jpg'
+error 2020-12-08T11:41:14.122Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce613510479a1ff9c8e92f.jpg'
+error 2020-12-08T11:41:14.123Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce61adc2c95d200559441c.jpg'
+error 2020-12-08T11:41:14.134Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce61fc277739200fa0caec.jpg'
+error 2020-12-08T11:41:14.135Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce62eb092d9b2032986c9f.jpg'
+error 2020-12-08T11:41:14.137Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce633fc282e820414d22f3.jpg'
+error 2020-12-08T11:41:14.138Z - Error: ENOENT: no such file or directory, open '/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/data/notes/5fce635bfc6ff320482900cb.jpg'
+info 2020-12-08T11:43:55.904Z - stopping server
+info 2020-12-08T11:43:55.904Z - stopping server
+info 2020-12-08T11:52:43.001Z - starting server
+info 2020-12-08T11:52:43.088Z - server running on port 4000
+error 2020-12-08T11:52:45.681Z - ReferenceError: file is not defined
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/retrieve-note-image.js:9:23)
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-note-image.js:7:9)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+info 2020-12-08T11:53:52.281Z - stopping server
+info 2020-12-08T11:53:52.281Z - stopping server
+info 2020-12-08T11:53:53.347Z - starting server
+info 2020-12-08T11:53:53.437Z - server running on port 4000
+info 2020-12-08T11:56:44.487Z - stopping server
+info 2020-12-08T11:57:05.047Z - starting server
+info 2020-12-08T11:57:05.187Z - server running on port 4000
