@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import { UploadImageWrapper } from './styles'
 import ImageUploader from 'react-images-upload'
 import { toast } from 'react-toastify'
+import NoImage from '../../assets/images/no-image.png'
 
 // Test
 import { uploadImage } from '../../logic'
 
 export const UploadImage = () => {
   const [pictures, setPictures] = useState([])
-  const [previewUrl, setPreviewUrl] = useState([])
+  const [previewUrl, setPreviewUrl] = useState([NoImage])
 
   const handleUploadImage = picture => {
     setPictures([...pictures, picture])
@@ -49,7 +50,6 @@ export const UploadImage = () => {
       <img src={previewUrl} />
       <ImageUploader
         withIcon
-        withPreview
         singleImage
         withLabel
         onChange={handleUploadImage}
