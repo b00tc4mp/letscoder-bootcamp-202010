@@ -7,7 +7,7 @@ const registerUser = (fullname, email, password, callback) => {
     // validatePassword(password)
     // validateCallback(callback)
 
-    call('POST', 'http://localhost:3000/api/users', { 'Content-type': 'application/json' },
+    call('POST', 'http://localhost:4000/api/users', { 'Content-type': 'application/json' },
         JSON.stringify({ fullname, email, password }),
         (status, response) => {
             if (status === 0) {

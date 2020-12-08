@@ -6,7 +6,7 @@ function retrieveUser(token,callback){
     validateToken(token)
     validateCallback(callback)
 
-    call('GET','http://localhost:3000/api/users',
+    call('GET','http://localhost:4000/api/users',
     {Authorization:`Bearer ${token}`},'',function(status,response){
         if(status === 0){
             callback(new Error('server down'))

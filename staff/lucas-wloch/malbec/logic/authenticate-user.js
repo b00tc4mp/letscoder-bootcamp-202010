@@ -6,7 +6,7 @@ const authenticateUser = (email, password, callback) => {
     validatePassword(password)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:3000/api/users/auth', { 'Content-type': 'application/json' },
+    call('POST', 'http://localhost:4000/api/users/auth', { 'Content-type': 'application/json' },
         JSON.stringify({ email, password }),
         (status, response) => {
             if (status === 0) {
