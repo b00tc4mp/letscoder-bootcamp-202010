@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     roleImage: {
         width: 50,
         height: 50,
-        opacity: "50%",
+        //opacity: "50%",
         color: "red"
         
     },
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     roleImageClicked: {
         width: 50,
         height: 50,
-        opacity: "100%",
+        //opacity: "100%",
         color: "green"
     },
 
