@@ -47,18 +47,21 @@ export const UploadImage = () => {
 
   return (
     <UploadImageWrapper>
-      <img src={previewUrl} />
       <ImageUploader
         withIcon
         singleImage
         withLabel
         onChange={handleUploadImage}
-        buttonText='Subir imagen de avatar'
-        label='Imagen principal de tu perfil'
+        buttonText='Subir imagen'
+        label='Imagen de portada en la búsqueda'
         imgExtension={['.jpg', '.png', '.gif']}
         maxFileSize={5242880}
         fileSizeError='La imagen no debe exceder los 5 megas'
       />
+      <div className='preview'>
+        <img src={previewUrl} />
+      </div>
     </UploadImageWrapper>
+
   )
 }

@@ -1,71 +1,93 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useBodyClass } from '../hooks/useBodyClass'
 import { UploadImage } from '../components/UploadImage'
-import StepProgressBar from 'react-step-progress'
-import 'react-step-progress/dist/index.css'
-import { DefaultLayout } from './searchCreateStyles'
+import { Switch } from '../components/Switch'
+import { Wizard, Steps, Step } from 'react-albus'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { Input, DefaultLayout } from './searchCreateStyles'
+import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi'
+import { Line } from 'rc-progress'
+
+const ICON_SIZE = '22px'
 
 export const SearchCreate = () => {
+  const [privateSearch, setPrivateSearch] = useState(false)
+  const [suitableChilds, setSuitableChilds] = useState(false)
+
   useBodyClass('searchcreate')
-
-  // setup the step content
-  const step1Content = (
-    <>
-      <p className='description'>1.) Inserta la imagen que deseas que aparezca como portada de la búqueda.</p>
-      <UploadImage />
-    </>
-  )
-
-  const step2Content = <h1>Step 2 Content</h1>
-  const step3Content = <h1>Step 3 Content</h1>
-
-  // setup step validators, will be called before proceeding to the next step
-  function step2Validator () {
-  // return a boolean
-  }
-
-  function step3Validator () {
-  // return a boolean
-  }
-
-  function onFormSubmit () {
-  // handle the submit logic here
-  // This function will be executed at the last step
-  // when the submit button (next button in the previous steps) is pressed
-  }
 
   return (
     <DefaultLayout>
       <h1>Crear nueva búsqueda</h1>
-      <StepProgressBar
-        startingStep={0}
-        onSubmit={onFormSubmit}
-        completeColor='#4db193'
-        defaultColor='#4db193'
-        activeColor='#4db193'
-        circleFontColor='#4db193'
-        steps={[
-          {
-            label: 'Búsqueda',
-            subtitle: '',
-            name: 'step 1',
-            content: step1Content
-          },
-          {
-            label: 'Pruebas',
-            subtitle: '',
-            name: 'step 2',
-            content: step2Content,
-            validator: step2Validator
-          },
-          {
-            label: 'Participantes',
-            subtitle: '',
-            name: 'step 3',
-            content: step3Content,
-            validator: step3Validator
-          }
-        ]}
+      <Wizard render={({ step, steps }) => (
+        <div>
+          <Line
+            percent={(steps.indexOf(step) + 1) / steps.length * 100}
+            className='pad-b'
+          />
+          <TransitionGroup>
+            <CSSTransition
+              key={step.id}
+              classNames='wizard'
+              timeout={{ enter: 500, exit: 500 }}
+            >
+              <div className='wizard-steps'>
+                <Steps key={step.id} step={step}>
+                  <Step
+                    id='coverStep'
+                    render={({ next }) => (
+                      <div>
+                        <p className='description'>Inserta la imagen que deseas que aparezca como portada de la búsqueda, tambien aparecerá en los listados.</p>
+                        <UploadImage />
+                        <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
+                      </div>
+                    )}
+                  />
+                  <Step
+                    id='searchStep'
+                    render={({ next, previous }) => (
+                      <div>
+                        <p className='description'>Rellena los siguientes campos sobre la BÚSQUEDA:</p>
+                        <Input placeholder='Nombre de la búqueda' />
+                        <Input placeholder='Ubicación de inicio' />
+                        <Input placeholder='Ubicación de fin' />
+                        <Input placeholder='Duración' />
+                        <p className='switch-wrapper'><Switch
+                          isOn={privateSearch}
+                          onColor='#3780e9'
+                          handleToggle={() => {
+                            setPrivateSearch(!privateSearch)
+                          }}
+                                                      /> Búsqueda privada
+                        </p>
+                        <p className='switch-wrapper'><Switch
+                          isOn={suitableChilds}
+                          onColor='#3780e9'
+                          handleToggle={() => {
+                            setSuitableChilds(!suitableChilds)
+                          }}
+                                                      /> Apto para niños
+                        </p>
+                        <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
+                        <button className='btn btn-previous' onClick={previous}>Anterior <BiChevronsLeft size={ICON_SIZE} /></button>
+                      </div>
+                    )}
+                  />
+                  <Step
+                    id='quizStep'
+                    render={({ previous }) => (
+                      <div>
+                        <h1>Dumbledore</h1>
+                        <button className='btn btn-previous' onClick={previous}>Anterior <BiChevronsLeft size={ICON_SIZE} /></button>
+                      </div>
+                    )}
+                  />
+                </Steps>
+              </div>
+            </CSSTransition>
+          </TransitionGroup>
+        </div>
+      )}
       />
     </DefaultLayout>
   )
