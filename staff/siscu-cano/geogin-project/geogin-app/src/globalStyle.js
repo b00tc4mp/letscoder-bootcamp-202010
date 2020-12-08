@@ -116,7 +116,7 @@ textarea {
   max-width: ${({ theme }) => theme.colors.app_width}; 
   background-color: ${({ theme }) => theme.colors.app_bg};
   margin: 0 auto;
-  > div {
+  > div[tabindex='-1'] {
     height: calc(100vh - 50px);
   }
 }
@@ -124,7 +124,7 @@ textarea {
 // Pages
 .splashscreen {
   #app {
-    > div {
+    > div[tabindex='-1'] {
       height: calc(100vh);
     }
   }
@@ -143,7 +143,7 @@ textarea {
 .onboarding {
   #app {
     padding: 0 40px 0 40px;
-    > div {
+    > div[tabindex='-1'] {
     height: calc(100vh)
   }
   }

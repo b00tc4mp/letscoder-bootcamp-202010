@@ -11,6 +11,9 @@ import { PublicRoute } from './router/PublicRouter'
 // Components
 import { ToggleTheme } from './components/ToggleTheme'
 import { NavBar } from './components/NavBar'
+import { ToastContainer } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.css'
 
 export const App = () => {
   const [theme, toggleTheme, componentMounted] = useAdultMode()
@@ -22,6 +25,7 @@ export const App = () => {
     <ThemeProvider theme={themeMode}>
       <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
       <GlobalStyle />
+      <ToastContainer />
       <PublicRoute />
       <NavBar />
     </ThemeProvider>

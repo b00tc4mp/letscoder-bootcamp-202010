@@ -3,6 +3,7 @@ import { useInputValue } from '../../hooks/useInputValue'
 import Context from '../../Context'
 import { Title, Anchor, Form, Input, Button } from './styles'
 import { authenticateUser } from '../../logic'
+import { toast } from 'react-toastify'
 
 export const LoginForm = () => {
   const email = useInputValue('')
@@ -12,11 +13,27 @@ export const LoginForm = () => {
     event.preventDefault()
     try {
       authenticateUser(email.value, password.value, (error, token) => {
-        if (error) return window.alert(error.message)
+        if (error) {
+          return toast.error(`⛔️ ${error.message}!`, {
+            position: 'top-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false
+          })
+        }
         activateAuth(token)
       })
     } catch (error) {
-      window.alert(error.message)
+      toast.error(`⛔️ ${error.message}!`, {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false
+      })
     }
   }
 
