@@ -7,5 +7,8 @@ module.exports = {
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
     savePictogram : require('./save-pictogram'),
-    findPictogram : require('./find-pictogram')
+    findPictogram : require('./find-pictogram'),
+    findPictogramByUser : require('./find-pictograms-by-user'),
+    savePictogramImage: require ('./save-pictogram-image')
+
 }

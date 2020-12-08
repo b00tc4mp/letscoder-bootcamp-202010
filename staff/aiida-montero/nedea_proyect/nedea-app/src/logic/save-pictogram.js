@@ -20,7 +20,8 @@ export default function savePictogram( pictogramId, token, title, description,  
 
                 return callback(new Error(error))
             }
-
-            callback(null)
+            debugger
+            const  { pictogramId } = JSON.parse(response)
+            callback(null, pictogramId)
         })
 }

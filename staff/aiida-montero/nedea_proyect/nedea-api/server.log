@@ -1275,3 +1275,181 @@ error 2020-12-05T19:39:14.562Z - ConflictError: user with e-mail azucaaena@gmail
 info 2020-12-06T11:47:36.721Z - starting server
 info 2020-12-06T11:47:36.917Z - server running on port 4000
 info 2020-12-06T17:45:31.585Z - stopping server
+info 2020-12-07T09:12:54.100Z - starting server
+info 2020-12-07T09:12:54.309Z - server running on port 4000
+info 2020-12-07T10:04:14.736Z - stopping server
+info 2020-12-07T11:14:26.696Z - starting server
+info 2020-12-07T11:14:26.869Z - server running on port 4000
+info 2020-12-07T11:23:14.982Z - stopping server
+info 2020-12-07T13:02:55.251Z - starting server
+info 2020-12-07T13:02:55.482Z - server running on port 4000
+info 2020-12-07T13:04:34.951Z - stopping server
+info 2020-12-07T13:06:31.112Z - starting server
+info 2020-12-07T13:06:31.265Z - server running on port 4000
+info 2020-12-07T17:36:33.120Z - stopping server
+info 2020-12-07T17:42:24.210Z - starting server
+info 2020-12-07T17:42:24.351Z - server running on port 4000
+info 2020-12-07T17:44:13.880Z - stopping server
+info 2020-12-07T17:48:06.505Z - starting server
+info 2020-12-07T17:48:06.636Z - server running on port 4000
+info 2020-12-07T18:32:26.952Z - stopping server
+info 2020-12-07T19:45:06.613Z - starting server
+error 2020-12-07T19:45:06.863Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram-image.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:9:31)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-07T19:45:06.874Z - stopping server
+info 2020-12-07T20:10:00.505Z - starting server
+error 2020-12-07T20:10:00.663Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram-image.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:9:31)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-07T20:10:00.674Z - stopping server
+info 2020-12-07T20:10:09.638Z - starting server
+error 2020-12-07T20:10:09.747Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram-image.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-save-pictogram-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:9:31)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-07T20:10:09.755Z - stopping server
+info 2020-12-07T20:11:02.682Z - starting server
+info 2020-12-07T20:11:56.155Z - starting server
+info 2020-12-07T20:11:56.304Z - server running on port 4000
+error 2020-12-07T20:12:12.426Z - JsonWebTokenError: invalid signature
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\jsonwebtoken\verify.js:133:19
+    at getSecret (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-find-pictogram-by-user.js:14:33)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-07T20:12:54.239Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-07T20:13:03.362Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-07T20:13:21.252Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-07T20:13:45.641Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+error 2020-12-07T20:14:03.667Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+info 2020-12-07T20:25:05.537Z - stopping server
+info 2020-12-07T20:25:10.088Z - starting server
+info 2020-12-07T20:25:10.245Z - server running on port 4000
+info 2020-12-07T20:28:32.623Z - stopping server
+info 2020-12-07T20:28:34.904Z - starting server
+info 2020-12-07T20:28:35.063Z - server running on port 4000
+info 2020-12-07T20:32:10.696Z - starting server
+info 2020-12-07T20:32:10.877Z - server running on port 4000
+error 2020-12-07T20:32:33.922Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\helpers\validations.js:44:46)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\find-pictogram.js:7:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-find-pictogram.js:11:9)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-07T20:33:38.999Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\helpers\validations.js:44:46)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\find-pictogram.js:7:5)
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-find-pictogram.js:11:9)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-07T20:50:09.897Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+error 2020-12-07T20:50:23.699Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+error 2020-12-07T20:50:46.335Z - ConflictError: user with e-mail hasta@loscojones.com already registered
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\register-user.js:16:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T10:39:27.858Z - starting server
+info 2020-12-08T10:39:28.096Z - server running on port 4000
+info 2020-12-08T14:38:19.646Z - stopping server

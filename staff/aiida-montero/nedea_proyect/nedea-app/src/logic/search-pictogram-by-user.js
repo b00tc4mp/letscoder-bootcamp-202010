@@ -1,13 +1,13 @@
 import { call } from '../utils'
-import { validateQuery } from './helpers/validations'
-export default function searchPictogram( query, callback) {
-    validateQuery(query)
+import { validateToken } from './helpers/validations'
+export default function searchPictogramByUser(token, callback) {
+    validateToken(token)
     
-    call('GET', `http://localhost:4000/api/pictograms?search=${query}`, { 
+    call('GET', `http://localhost:4000/api/my-pictograms`, { 
         'Content-type': 'application/json',
-        
+        Authorization: `Bearer ${token}`,
     },
-    JSON.stringify({ query }),
+    null, 
     (status, response) => {
         if (status === 0)
                 return callback(new Error('server error'))

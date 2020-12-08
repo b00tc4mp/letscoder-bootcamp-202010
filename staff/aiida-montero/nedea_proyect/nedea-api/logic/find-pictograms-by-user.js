@@ -1,12 +1,11 @@
-const { validateQuery } = require('./helpers/validations')
+const { validateId} = require('./helpers/validations')
 const { Pictogram } = require('../models')
+const {ObjectId} = require ('mongodb')
 
-
-
-module.exports = function (query) {
-    validateQuery(query)
+module.exports = function (ownerId) {
+    validateId(ownerId)
     //db.pictogram.createIndex({"title":'text',"description":'text'})
-    const cursor = Pictogram.find({ $text: { $search: query, $caseSensitive: false, $diacriticSensitive: false } })
+    const cursor = Pictogram.find({ owner : ObjectId(ownerId) })
 
     return cursor.lean()
         .then(pictogram => {

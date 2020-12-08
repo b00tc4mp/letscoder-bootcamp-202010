@@ -9,6 +9,8 @@ import Search from './Search'
 import Slider from './Slider'
 import ResultList from './ResultList'
 import Profile from './Profile'
+import Pictogram from './Pictogram'
+import MyPictograms from './MyPictograms'
 
 
 export{
@@ -22,5 +24,7 @@ export{
     Search,
     Slider,
     ResultList,
-    Profile
+    Profile,
+    Pictogram,
+    MyPictograms
 }

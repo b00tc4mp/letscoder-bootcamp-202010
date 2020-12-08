@@ -27,13 +27,13 @@ module.exports = function (pictogramId, ownerId, title, description) {
 
                 return Pictogram
                     .updateOne({_id}), {$set : {title, description}}
-                    .then (result => undefined) 
+                    .then (result => result.id) 
 
             })
         } else
             return Pictogram
             .create({owner: ObjectId(ownerId), title, description})
-            .then(result => undefined)
+            .then(result => result.id)
 
     })
 } 

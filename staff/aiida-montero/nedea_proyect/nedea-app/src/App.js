@@ -1,12 +1,28 @@
-import {Initial, Header, Footer, SignUp, SignIn, Home, Update, Profile} from './components'
-//import './App.scss';
-import { useState } from 'react'
-import {registerUser, authenticateUser, savePictogram} from './logic';
+import {Initial, Header, Footer, SignUp, SignIn, Home, Update, Profile, MyPictograms} from './components'
+
+import {registerUser, authenticateUser, savePictogram, savePictogramImage, retrievePictograms} from './logic';
 import {withRouter, Route, Redirect } from 'react-router-dom';
-import {Link} from 'react-router-dom';
+import {useEffect, useState} from 'react'
+import {searchPictogramsByUser} from './logic'
+
+
 
 
 function App(props) {
+   const [pictograms, setPictograms] = useState([])
+  useEffect(()=>{
+    const { token } = sessionStorage;
+
+    if (token) {
+      
+
+      searchPictogramsByUser(token, pictograms => {
+          setPictograms(pictograms);
+      });
+  }
+
+}, []); 
+
   
   const handleSignUp = (fullname, email, password) => {
     try{
@@ -26,6 +42,10 @@ function App(props) {
 
         sessionStorage.token = token
 
+          searchPictogramsByUser(token, pictograms => {
+              setPictograms(pictograms);
+          });
+      
         props.history.push('/home')
       })
     } catch (error) {
@@ -33,17 +53,28 @@ function App(props) {
     }
   }
   
-  const handleGoToRegister = () =>{
-    props.history.push('/sign-up')
-  }
-
-  const handleSavePictogram = (title, description) => {
+  const handleSavePictogram = (title, description,image) => {
     debugger
     const {token}  = sessionStorage
     try{
-      savePictogram(undefined, token, title, description, (error) =>{
+      savePictogram(undefined, token, title, description, (error,pictogramId) =>{
           if(error) return alert(error.message)
-          props.history.push('/home')
+         
+         savePictogramImage(pictogramId, image, error => {
+          if (error) return alert(error.message)
+          
+          try {
+            searchPictogramsByUser(token, pictograms => {
+              if (error) return alert(error.message)
+              /*  props.history.push('/home') */
+             setPictograms(pictograms)
+          });
+          } catch (error) {
+              alert(error.message)
+          }
+      })
+
+
       })
 
     }catch (error){
@@ -69,12 +100,14 @@ function App(props) {
     < >
        <Header onGoToUpdate = {handleGoToUpdate} onGoToHome={handleGoToHome}  onGoInitial={handleGoToInitial}/>
       
-      <Route exact path ='/update' render={()=> token ?<Update onSavePictogram= {handleSavePictogram} /> : <Redirect to = "/"/> }/>
+      <Route exact path ='/update' render={()=> token ?<Update onSavePictogram= {handleSavePictogram} pictograms = {pictograms} /> :
+       <Redirect to = "/"/> }/>
       <Route exact path ='/' render ={() => <Initial onGoToHome = {handleGoToHome} />}/>
       <Route exact path = '/sign-up' render ={()=><SignUp onSignUp = {handleSignUp}/>}/>
       <Route exact path = '/sign-in' render = {()=> <SignIn onSignIn = {handleSignIn}/>}/>
       <Route exact path = '/home' render = {()=> <Home />}/>
       <Route exact path = '/profile' render = {()=> <Profile/>}/>
+
       <Footer/> 
     </>
   );
