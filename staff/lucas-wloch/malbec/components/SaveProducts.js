@@ -60,7 +60,7 @@ function SaveProducts({onExit}) {
                 </div>
                 <div className="saveProducts__div">
                     <p>Price:</p>
-                    <input className="saveProducts__inputPrice" type="text" id="price" name="price" placeholder="product Price" />
+                    <input className="saveProducts__inputPrice" type="number" id="price" name="price" placeholder="product Price" />
                 </div>
                 <div className="saveProducts__div">
                     <p>Gluten Free:</p>

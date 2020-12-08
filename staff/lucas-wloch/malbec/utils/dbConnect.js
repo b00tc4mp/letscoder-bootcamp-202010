@@ -6,9 +6,11 @@ const connection = {}
 const { env: { MONGODB_URL } } = process
 
 async function dbConnect() {
+    debugger
     if(connection.isConnected){
         return;
     }
+    
     console.log(MONGODB_URL)
     const db = await mongoose.connect(MONGODB_URL,{
         useNewUrlParser: true,
