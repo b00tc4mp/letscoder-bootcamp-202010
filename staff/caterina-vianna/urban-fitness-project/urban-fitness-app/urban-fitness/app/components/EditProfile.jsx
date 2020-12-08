@@ -9,7 +9,7 @@ import {
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Avatar } from "react-native-paper";
 import { LinearTextGradient } from "react-native-text-gradient";
-export default function EditProfile({ onCloseProfile }) {
+export default function EditProfile({ onCloseProfile, onTrainerMode }) {
   return (
     <View>
       <View>
@@ -43,7 +43,11 @@ export default function EditProfile({ onCloseProfile }) {
           <TouchableOpacity>
             <Text style={styles.profileOptions}>HISTORY</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              onTrainerMode();
+            }}
+          >
             <Text style={styles.profileOptions}>TRAINER MODE</Text>
           </TouchableOpacity>
           <TouchableOpacity>

@@ -1,14 +1,14 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text, Image } from "react-native";
 import AppText from "./AppText";
 
-function Card({ title, subTitle, image }) {
+export default function Card() {
   return (
     <View style={styles.card}>
-      <Image style={styles.image} />
+      <Image style={styles.image} source={require("../assets/yoga.jpg")} />
       <View style={styles.detailsContainer}>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
+        <Text style={styles.titleActivity}>Yoga</Text>
+        <Text style={styles.subTitleActivity}>Parc de la ciutadella</Text>
       </View>
     </View>
   );
@@ -20,6 +20,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     marginBottom: 20,
     overflow: "hidden",
+  },
+
+  titleActivity: {
+    color: "black",
+    fontSize: 18,
+    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
   },
 
   detailsContainer: {

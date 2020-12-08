@@ -20,6 +20,8 @@ import EditProfile from "./EditProfile";
 import Card from "./Card";
 import ProfileList from "./ProfileList";
 import CreateActivity from "./CreateActivity";
+import Constants from "expo-constants";
+import MapContainer from "./MapContainer";
 
 export default function Home({ token }) {
   const [name, setName] = useState();
@@ -100,7 +102,11 @@ export default function Home({ token }) {
             onListMode={handleListMode}
           />
         )}
-        {view === "trainer-mode" && <CreateActivity />}
+        {view === "trainer-mode" && (
+          <View style={styles.container}>
+            <MapContainer />
+          </View>
+        )}
       </View>
     </View>
   );
@@ -130,5 +136,10 @@ const styles = StyleSheet.create({
   },
   backgroundDefault: {
     backgroundColor: "black",
+  },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    paddingTop: Constants.statusBarHeight,
   },
 });

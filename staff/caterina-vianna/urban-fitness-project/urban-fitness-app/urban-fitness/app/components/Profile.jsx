@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
-    backgroundColor: "grey",
+    backgroundColor: "black",
     marginBottom: 20,
   },
   inputSearchActivity: {
