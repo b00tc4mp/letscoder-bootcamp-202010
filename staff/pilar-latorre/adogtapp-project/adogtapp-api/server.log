@@ -969,3 +969,13 @@ info 2020-12-09T15:12:32.720Z - server running on port 4000
 info 2020-12-09T15:20:38.615Z - starting server
 info 2020-12-09T15:20:38.965Z - server running on port 4000
 info 2020-12-09T15:29:38.072Z - stopping server
+info 2020-12-09T15:45:21.458Z - starting server
+info 2020-12-09T15:45:21.627Z - server running on port 4000
+info 2020-12-09T17:31:00.909Z - starting server
+info 2020-12-09T17:31:01.076Z - server running on port 4000
+error 2020-12-09T18:02:30.335Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-09T18:02:37.181Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)

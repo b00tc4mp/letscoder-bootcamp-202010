@@ -4,7 +4,7 @@ import Home from './Home'
 import CreatePet from './CreatePet'
 import PetResults from './PetResults'
 import DetailPet from './DetailPet'
-import Main from './Main'
+import MainSearch from './MainSearch'
 
 
 export {
@@ -14,7 +14,7 @@ export {
     CreatePet,
     PetResults,
     DetailPet,
-    Main
+    MainSearch
 
 
 }

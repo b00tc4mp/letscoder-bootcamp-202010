@@ -2,14 +2,14 @@ import './SignIn.sass'
 import { Link } from 'react-router-dom'
 
 
-function SignIn({onSignIn, onGoToMain}){
+function SignIn({onSignIn, onGoToMainSearch}){
     return <div className='signIn'>
         <header className='signIn__header'>
             <h1 className='signIn__h1'>Welcome to ADOGTApp</h1>
             <h3 className='signIn__h3'>In our APP you will find your four-legged BF</h3>
         </header>
         <section className='signIn__section'>
-        <Link to = '/main'><img className='signIn__img' src="adoptUs.jpg" onClick={ onGoToMain }/></Link>   
+        <Link to = 'MainSearch'><img className='signIn__img' src="adoptUs.jpg" onClick={ onGoToMainSearch }/></Link>   
         </section>
         <form className='signIn__form' onSubmit={event => {
             event.preventDefault()

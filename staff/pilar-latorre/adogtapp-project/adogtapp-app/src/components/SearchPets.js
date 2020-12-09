@@ -44,9 +44,11 @@ function SearchPets(){
         }
 
     }
+    const { token } = sessionStorage
     
         return (
             <>
+                {!token && <h1>Welcome to ADOGTAPP, here you can search </h1>}
                 <form className="search" onSubmit={(event) => event.preventDefault()}>
                     <input
                         className="search__input"

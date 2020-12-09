@@ -5,8 +5,8 @@ const API_URL = process.env.REACT_APP_API_URL
 
 function DetailPet({result: {id, name, breed, species, color, description } , onPetResults}){
 
+    const { token } = sessionStorage
     const handleDeletePet = id => {
-        //const { token } = sessionStorage
 
         try {
             deletePet(  id, (error) => {
@@ -32,7 +32,8 @@ function DetailPet({result: {id, name, breed, species, color, description } , on
             <p className="result__p">species: {species}</p>
             <p className="result__p">color: {color}</p>
             <p className="result__p">description: {description}</p>
-            <button className="result__button" onClick={()=>handleDeletePet(id) }>DELETE PET</button>
+            {token && <button className="result__button" onClick={()=>handleDeletePet(id) }>DELETE PET</button>}
+            
             </div>
         </li>
 

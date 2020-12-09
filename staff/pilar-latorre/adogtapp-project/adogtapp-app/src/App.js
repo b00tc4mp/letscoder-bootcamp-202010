@@ -1,6 +1,7 @@
-import { SignUp, SignIn, Home, Main } from './components'
-import { registerUser, authenticateUser } from './logic'
+import { SignUp, SignIn, Home, MainSearch } from './components'
+import { registerUser, authenticateUser, findPets } from './logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
+import SearchPets from './components/SearchPets'
 
 export default withRouter(props => {
 
@@ -30,10 +31,21 @@ export default withRouter(props => {
     }
   }
 
-  const handleGoToMain = () => {
+  const handleGoToMainSearch = () => {
 
-    props.history.push('/main')
+    props.history.push('/mainSearch')
   }
+
+  const handleSearchPets = (queryShelter, city, queryPet, species, breed) => {
+    try {
+
+        findPets(queryShelter || undefined, city || undefined, queryPet || undefined, species || undefined, breed || undefined)
+            .then(console.log)
+            .catch(alert)
+    } catch(error) {
+        alert(error)
+    }
+}
 
   const { token } = sessionStorage
 
@@ -42,9 +54,9 @@ export default withRouter(props => {
       <header className="App-header">
 
       <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} />} />
-      <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} onGoToMain = {handleGoToMain}/>} />
+      <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} onGoToMainSearch = {handleGoToMainSearch}/>} />
       <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/sign-in" />} />
-      <Route path='/main' render = {()=> <Main/> }/>
+      <Route path='/mainSearch' render = {()=> <SearchPets onSearch= {handleSearchPets}/> }/>
       
 
       </header>
