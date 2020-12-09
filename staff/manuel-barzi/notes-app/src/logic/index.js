@@ -5,6 +5,7 @@ import saveNote from './save-note'
 import retrieveNotes from './retrieve-notes'
 import saveNoteImage from './save-note-image'
 import context from './context'
+import findNotes from './find-notes'
 
 export {
     registerUser,
@@ -13,5 +14,6 @@ export {
     saveNote,
     retrieveNotes,
     saveNoteImage,
-    context
+    context,
+    findNotes
 }

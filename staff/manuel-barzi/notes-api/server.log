@@ -1414,3 +1414,22 @@ info 2020-12-08T12:24:54.701Z - starting server
 info 2020-12-08T12:24:54.792Z - server running on port 4000
 info 2020-12-08T12:25:09.286Z - stopping server
 info 2020-12-08T12:25:09.287Z - stopping server
+info 2020-12-09T16:02:02.695Z - starting server
+info 2020-12-09T16:02:02.813Z - server running on port 4000
+error 2020-12-09T16:02:17.732Z - TokenExpiredError: jwt expired
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)

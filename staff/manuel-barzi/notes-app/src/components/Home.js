@@ -1,8 +1,9 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
-import { retrieveUser, saveNote, retrieveNotes, saveNoteImage } from '../logic'
+import { retrieveUser, saveNote, retrieveNotes, saveNoteImage, findNotes } from '../logic'
 import SaveNote from './SaveNote'
 import ListNotes from './ListNotes'
+import SearchNotes from './SearchNotes'
 
 export default function () {
     const [name, setName] = useState()
@@ -62,8 +63,20 @@ export default function () {
         }
     }
 
+    const handleSearchNotes = (query, tags, visibility) => {
+        try {
+
+            findNotes(query || undefined, tags && tags.split(' ') || undefined, visibility || undefined)
+                .then(console.log)
+                .catch(alert)
+        } catch(error) {
+            alert(error)
+        }
+    }
+
     return <section className="home">
         <h1>Hello, {name}!</h1>
+        <SearchNotes onSearch={handleSearchNotes} />
         <SaveNote onSaveNote={handleSaveNote} />
         <ListNotes notes={notes} />
     </section>
