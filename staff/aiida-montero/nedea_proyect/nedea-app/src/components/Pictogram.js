@@ -1,12 +1,12 @@
 import './Pictogram.scss'
-
-export default function ({data:{title, description}}) {
-
+const API_URL = process.env.REACT_APP_API_URL
+export default function ({data:{id, title, description}}) {
+debugger
     return <article className="card">
           <header className="card-header">
             <img
               className="card-header__image"
-              src="https://previews.123rf.com/images/rondale/rondale1507/rondale150700270/42792510-carta-de-vector-may%C3%BAscula-x-dibujado-a-mano-con-pincel-seco.jpg"
+              src={`${API_URL}/pictograms/${id}/images`} width = "600px"
               height="120"
               alt="Api"
             />

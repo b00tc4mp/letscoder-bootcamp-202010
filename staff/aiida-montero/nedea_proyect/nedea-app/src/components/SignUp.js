@@ -2,7 +2,7 @@ import './SignUp.scss'
 
 function SignUp({ onSignUp }) {
     return <section className="sign-up">
-        <h2 >Sign Up</h2>
+       
        <div className = "register">
     
         <form className = "register_form" onSubmit={event => {
@@ -13,8 +13,9 @@ function SignUp({ onSignUp }) {
             onSignUp(fullname, email, password)
         }}>
           <p class="register-text">
-    <span class="fas fa-user-graduate fa-5x ">
+    <span class="fas fa-user-graduate fa-3x ">
     </span>
+    <h2 >Registrate</h2>
   </p>
   <input type="text" name= "fullname" class="register-fullname"  placeholder="Fullname" />
   <input type="email" name= "email" class="register-username"  placeholder="Email" />

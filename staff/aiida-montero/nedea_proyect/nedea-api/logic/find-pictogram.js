@@ -16,7 +16,7 @@ module.exports = function (query) {
                 pictogram.id = _id.toString()
 
                 delete pictogram._id
-                delete pictogram.id
+               
               
             })
             return pictogram

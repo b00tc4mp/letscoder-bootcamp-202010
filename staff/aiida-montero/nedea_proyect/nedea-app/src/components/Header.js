@@ -8,7 +8,7 @@ export default function ({onGoToUpdate, onGoToHome, onGoInitial}) {
      <button onClick = {onGoToUpdate} class="avatar__initials"><i class="fas fa-user-graduate fa-3x"></i></button>
      <button onClick = {onGoInitial} class = "exit"><i class="fas fa-door-open fa-3x"></i></button>
     </div>
-     <button onClick = {onGoToHome} class = "logo_puzzle"><i class="fas fa-puzzle-piece fa-3x"></i></button>
+     <button onClick = {onGoToHome} class = "logo_puzzle"><img class = "logo_button" src = "imagenes/logo_button.png"/></button>
      
      
 </header>

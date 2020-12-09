@@ -9,6 +9,7 @@ module.exports = {
     savePictogram : require('./save-pictogram'),
     findPictogram : require('./find-pictogram'),
     findPictogramByUser : require('./find-pictograms-by-user'),
-    savePictogramImage: require ('./save-pictogram-image')
+    savePictogramImage: require ('./save-pictogram-image'),
+    retrievePictogramImage: require('./retrieve-pictogram-image')
 
 }

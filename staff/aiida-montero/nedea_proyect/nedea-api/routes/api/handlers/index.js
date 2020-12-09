@@ -6,5 +6,6 @@ module.exports = {
     handleSavePictogram: require('./handle-save-pictogram'),
     handleFindPictogram: require('./handle-find-pictogram'),
     handleFindPictogramByUser: require ('./handle-find-pictogram-by-user'),
-    handleSavePictogramImage: require('./handle-save-pictogram-image')
+    handleSavePictogramImage: require('./handle-save-pictogram-image'),
+    handleRetrievePictogramImage: require('./handle-retrieve-pictogram-image')
 }

@@ -9,28 +9,28 @@ module.exports = function (pictogramId, ownerId, title, description) {
     if (typeof pictogramId !== 'undefined') validateId(pictogramId)
     validateTitle(title)
     
-    const _id = ObjectId(ownerId)
+  
 
     return User
-        .findOne({ _id })
+        .findById(ownerId)
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
 
         if (pictogramId) {
-            const _id = ObjectId(pictogramId)
 
             return Pictogram
-                .findOne({ _id })
+                .findOne(ownerId)
                 .then (pictogram => {
                     if (!pictogram) throw new NotFoundError(`note with id ${pictogramId} not found`)
+                     pictogram.title = title
+                     pictogram.description = description
 
-                return Pictogram
-                    .updateOne({_id}), {$set : {title, description}}
+                     return pictogram.save()
+                     
+                    })
                     .then (result => result.id) 
-
-            })
-        } else
+                } else
             return Pictogram
             .create({owner: ObjectId(ownerId), title, description})
             .then(result => result.id)

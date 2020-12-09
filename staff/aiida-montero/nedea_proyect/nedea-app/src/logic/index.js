@@ -5,6 +5,7 @@ import savePictogram from './save-pictogram'
 import searchPictogramsByUser from './search-pictogram-by-user'
 import retrievePictograms from './retrieve-pictograms'
 import savePictogramImage from './save-pictogram-image'
+import context from './context'
 
 export{
     registerUser,
@@ -13,5 +14,6 @@ export{
     savePictogram,
     searchPictogramsByUser,
     retrievePictograms,
-    savePictogramImage
+    savePictogramImage,
+    context
 }

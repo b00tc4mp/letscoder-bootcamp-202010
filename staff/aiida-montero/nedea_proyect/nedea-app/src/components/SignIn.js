@@ -3,7 +3,7 @@ import './SignIn.scss'
 function SignIn({ onSignIn }) {
     return <section className="sign-in">
         <div className = 'login'>
-        <h2>Sign In</h2>
+        
         <form className = "login-form" onSubmit={event => {
             event.preventDefault()
 
@@ -17,6 +17,7 @@ function SignIn({ onSignIn }) {
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-lock fa-stack-1x"></i>
     </span>
+    <h2>Entra</h2>
   </p>
   <input type="email" name= "email" class="login-username" autofocus="true" required="true" placeholder="Email" />
   <input type="password" name = "password" class="login-password" required="true" placeholder="Password" />

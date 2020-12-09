@@ -1,23 +1,30 @@
-html {
+/* html {
   font-size: 62.5%;
   background-image: url("../imagenes/autismo.png"); 
   background-size: cover;
-} 
+}  */
+
+* {
+  
+}
 header{
   background-color: #2d6ba8;;
   border: none;
 }
 body {
   background-color: none;
+  
+
 }
 
 h1{
   font-family: 'Courier New', Courier, monospace;
   width: 100%;
   display: block;
+  font-size: 30px;
   text-align: center;
-  margin-bottom: 77px;
-  margin-top: 38px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   color:rgb(107, 107, 110)
 }
 .initial {
@@ -28,23 +35,33 @@ h1{
     align-items: flex-start;
     align-content: center;
     position: relative;
-}
+    background-color: rgba(255, 255, 255, 0.863);
+    min-height:80vh ;
+    &_form{
+        display: flex;
+        justify-content: space-between;
+        background-color:  rgba(255, 255, 255, 0.863);
+      }
+      &_body{
+          min-width: 100%;
+          background-color: transparent;
+          font-size: 62.5%;
+        background-image: url("../imagenes/autismo.png"); 
+        background-size: cover;
+        
+      }
+    }
 
-.initial_form{
-    display: flex;
-    justify-content: space-between;
-}
 
-.initial_body{
-    min-width: 100%;
-    background-color: transparent;
+.logo_central_initial{
+  max-height: 65vh;
+  margin-left: 10vh;
 }
-
 .flecha {
     margin-top: 268px;
     border: none;
     background-color: #ffffff00;
-    color: #1843a9;
+    color: #6d4453;
 }
 *,
 *:after,

@@ -8,7 +8,8 @@ const{
     handleSavePictogram,
     handleFindPictogram,
     handleFindPictogramByUser,
-    handleSavePictogramImage
+    handleSavePictogramImage,
+    handleRetrievePictogramImage
 } =require('./handlers')
 
 
@@ -22,5 +23,5 @@ router.post('/api/pictograms', jsonBodyParser, withErrorHandling(handleSavePicto
 router.get('/api/pictograms', withErrorHandling(handleFindPictogram))
 router.get('/api/my-pictograms', withErrorHandling(handleFindPictogramByUser))
 router.post('/api/pictograms/:pictogramId/images', withErrorHandling(handleSavePictogramImage))
-
+router.get('/api/pictograms/:pictogramId/images', withErrorHandling(handleRetrievePictogramImage))
 module.exports = router

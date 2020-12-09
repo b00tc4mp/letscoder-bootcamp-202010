@@ -15,7 +15,7 @@ module.exports = function (ownerId) {
                 pictogram.id = _id.toString()
 
                 delete pictogram._id
-                delete pictogram.id
+               
               
             })
             return pictogram

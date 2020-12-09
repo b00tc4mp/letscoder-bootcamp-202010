@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html{
+  font-size: 15px;
+  background-color: #6d4453ba;
+}
  body {
   box-sizing: border-box;
   min-height: 100vh;
@@ -13,9 +17,9 @@
   font-family: $text_font;
   font-weight: 100;
   color: #5b5b5b;
-  border-left: 4px solid #061b3a;
-  border-right: 4px solid #061b3a;
-  border-top: 4px solid #061b3a;
+  border-left: 4px solid #6d4453;
+  border-right: 4px solid #6d4453;
+  border-top: 4px solid #6d4453;
   border-bottom: 4px solid;
   display: flex;
   flex-direction: column;

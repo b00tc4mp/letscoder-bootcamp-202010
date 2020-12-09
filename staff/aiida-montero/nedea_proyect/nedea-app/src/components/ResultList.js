@@ -2,9 +2,11 @@ import './ResultList.scss'
 import Pictogram from './Pictogram'
 export default function ResultList ({pictograms}) {
   return <section className = "section_card" >
-    {pictograms && pictograms.length ? pictograms.map((pictogram)=>(<> 
+    {pictograms && pictograms.length ? pictograms.map((pictogram)=> {
+      debugger
+      return (<> 
       <Pictogram data = {pictogram}/>
-     </>)): <p>Not Found Result :(</p>}
+     </>)}): <p>Not Found Result :(</p>}
       
   </section>
 }
