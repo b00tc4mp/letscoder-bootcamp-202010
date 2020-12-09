@@ -9,7 +9,7 @@ const ATTRIBUTION = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>
 const URLGAME = 'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg'
 const ATTRIBUTIONGAME = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 
-export const MapGetPos = () => {
+export const MapGetPos = ({ onAddMarker }) => {
   const [marker, setMarker] = useState()
   const [position, setPosition] = useState()
   let map
@@ -20,6 +20,7 @@ export const MapGetPos = () => {
         const newMarker = e.latlng
         console.log('newMarker', newMarker)
         setMarker(newMarker)
+        onAddMarker(newMarker)
       }
     })
     return (marker
