@@ -12,8 +12,8 @@ export const ModalWrapper = styled.div`
     background: #fff;
     margin: 0 auto;
     top: 0;
-    bottom: 43px;
-    position: absolute;
+    bottom: 50px;
+    position: fixed;
     left: 0;
     right: 0;
     max-width: 500px;
@@ -44,5 +44,9 @@ export const ModalWrapper = styled.div`
     > svg {
     vertical-align: middle;
     } 
+  }
+  .leaflet-container {
+      width: 100%;
+      height: 100%;
   }
 `

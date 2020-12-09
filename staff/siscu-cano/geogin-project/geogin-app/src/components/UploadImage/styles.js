@@ -5,6 +5,7 @@ export const UploadImageWrapper = styled.div`
     max-width: 100%;
     width: 80%;
     margin: 0 auto;
+    min-width: 320px;
     .preview {
         width: 100%;
         margin-top: 30px;
@@ -13,12 +14,14 @@ export const UploadImageWrapper = styled.div`
         box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.05);
         background-color: #fff;
         border-radius: 10px;
+        text-align: center;
         img {
             max-width: 100%;
             display: inline-block;
             margin: 0 auto; 
             opacity: 0.7;
             max-height: 180px;
+            transform: scale(.6);
         }
     }
     .fileContainer {
