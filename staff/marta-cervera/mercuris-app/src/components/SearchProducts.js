@@ -1,81 +1,62 @@
+import './SearchProducts.sass'
 import FindProducts from './FindProducts'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { findProducts } from '../logic'
 
 
-function SearchProducts() {
 
+
+
+export default function () {
     const [view, setView] = useState('find-products')
 
-    let query
     const [results, setResults] = useState()
-    
 
-    const handleSearchProducts = (queryCompany,queryProduct, price, priceMin,priceMax) => {
+
+    const handleSearchProducts = event => {
+        debugger
+        
 
         const { token } = sessionStorage
 
+        event.preventDefault()
+
+        const { target: {
+            queryCompany: { value: queryCompany },
+            queryProduct: { value: queryProduct },
+            price: { value: price },
+            priceMin: { value: priceMin },
+            priceMax: { value: priceMax }
+        } } = event
+
+        //onSearch(query, gameconsole, budget, priceMin, priceMax)
+
         try {
-            findProducts( token, queryCompany,queryProduct, price, priceMin,priceMax, (error, products) => {
+            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) => {
 
                 if (error) return alert(error.message)
 
                 setResults(products)
 
+
                 setView('find-products')
+
             })
         } catch (error) {
             alert(error.message)
         }
     }
-   /*  query, price, priceMin,priceMax
- */
     return (
         <>
-            <form className="find" onSubmit={(event) => event.preventDefault()}>
-                <input
-                    className="find__input"
-                    name="query"
-                    type="text"
-                    placeholder="Search"
-                    onChange={(event) => (query = event.target.value)}
-
-                />
-                <button
-                    className="searchByName__button"
-                    onClick={() => handleSearchProducts(query, undefined, undefined, undefined, undefined)}
-                >
-                    Company
-                </button>
-                <button
-                    className="searchByName__button"
-                    onClick={() => handleSearchProducts(undefined, query, undefined, undefined, undefined)}
-                >
-                    Product
-                </button>
-                <button
-                    className="searchByName__button"
-                    onClick={() => handleSearchProducts(undefined, undefined, query, undefined, undefined)}
-                >
-                    Price
-                </button>
-
-                <button
-                    className="searchByName__button"
-                    onClick={() => handleSearchProducts(undefined, undefined, undefined, query, undefined)}
-                >
-                    PriceMin
-                </button>
-
-                <button
-                    className="searchByName__button"
-                    onClick={() => handleSearchProducts(undefined, undefined, undefined, undefined, query)}
-                >
-                    PriceMax
-                </button>
-
-
+            <form onSubmit={handleSearchProducts}>
+                <input type="text" name="queryCompany" placeholder="Info Company" />
+                <input type="text" name="queryProduct" placeholder="Info Product" />
+                <input type="text" name="price" placeholder="Introduce price" />
+                <input type="text" name="priceMin" placeholder="priceMin" />
+                <input type="text" name="priceMax" placeholder="priceMax" />
+                <button>Search</button>
             </form>
+
             {results && results.length && <FindProducts results={results} />}
         </>
     );
@@ -84,4 +65,42 @@ function SearchProducts() {
 
 
 
-export default SearchProducts
+
+/*
+
+
+
+
+
+
+
+
+
+    //const { token } = sessionStorage
+
+    //NO TOCAR ESTE MIERDÓN
+    const handleDetailGame = id => {
+        try {
+            detailGame(id, (error, game) => {
+
+                if (error) return alert(error.message)
+
+                setResult(game)
+                setResults(null)
+
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+    return (
+        <>
+
+
+        {!result && results && results.length && <FindGames results={results} onDetailGame={handleDetailGame} />}
+        {!results && <div><img className="results__li__logo" src={logo} /></div>}
+        {!results && result && <DetailGame result={result} />}
+        </>
+    );
+} */

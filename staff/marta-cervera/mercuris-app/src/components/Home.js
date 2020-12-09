@@ -41,15 +41,15 @@ export default function Home() {
 
                 saveProductImage(productId, image, error => {
                     if (error) return alert(error.message)
-                    try {
+                    /* try {
                         findProducts(token, (error, products) => {
                             if (error) return alert(error.message)
 
                             setProducts(products)
                         })
-                    } catch (error) {
+                    }  catch (error) {
                         alert(error.message)
-                    }
+                    } */
                   })
             }
             )
@@ -70,7 +70,7 @@ export default function Home() {
     return (
         <section className="home">
             {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
-            { view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
+            {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
             {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={name} />}
             {view === 'profile' && <Profile name={name} />}
             {view === 'profile' && <SearchProducts />}

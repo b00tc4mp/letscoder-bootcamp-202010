@@ -18,8 +18,8 @@ export default function SaveProduct({ onSaveProduct, name }) {
 
     }
     return <main className="save-product">
-        <h1>Welcome to the registration product page, {name}</h1>
-        <h2>Register your product</h2>
+        <h1 classname="save-product__maintitle">Welcome to the registration product page, {name}</h1>
+        <h2 className="save-product__h2">Register your product</h2>
         <form className="save-product__form" onSubmit={handleSubmitProduct}>
             <input name="name" type="text" placeholder="Product Name"></input>
             <textarea className="save-product__textarea"name="description" type="text" placeholder="Description"></textarea>

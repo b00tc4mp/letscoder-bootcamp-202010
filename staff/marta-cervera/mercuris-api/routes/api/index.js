@@ -12,6 +12,7 @@ const {
     
 
 } = require('./handlers')
+const handleRetrieveProductImage = require('./handlers/handle-retrieve-product-image')
 
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -26,13 +27,15 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 //saveProduct
 router.post('/api/products',jsonBodyParser, withErrorHandling(handleSaveProduct))
 //findProduct
-// /api/products?queryCompany=<queryCompany>&queryProduct=<queryProduct>&price=<price>&priceMin=<priceMin&priceMax=<priceMax>
-// Example API call: https://localhost:4000/api/products?queryCompany='1423423'&queryProduct='sdjkfsd'&price='sdfgsfgdf'
-// you access this (only in express) in the req object, req.query ==> for example const { queryCompany } = req.query 
-router.get('/api/products', withErrorHandling(handleFindProduct))
+router.get('/api/products/', withErrorHandling(handleFindProduct))
 //retrieveProduct
 router.get('/api/products', withErrorHandling,(handleRetrieveProduct))
 //saveProductImage
 router.post('/api/products/:productId/images', withErrorHandling(handleSaveProductImage))
+//retrieveProductImage
+router.get('/api/products/:productId/images', withErrorHandling(handleRetrieveProductImage))
+
+
 
 module.exports = router
+

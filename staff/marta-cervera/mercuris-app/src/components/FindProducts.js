@@ -1,9 +1,10 @@
 import './FindProducts.sass'
 
 
+const API_URL = process.env.REACT_APP_API_URL
+
 function FindProducts({results}){
-    const API_URL = process.env.REACT_APP_API_URL
-    
+    debugger
     return <div className="results">
         <ul className="results__ul">
         {results.map( ({id, name, description, price }) => 
@@ -11,7 +12,7 @@ function FindProducts({results}){
             <p className="results__p">{name}</p>            
             <p className="results__p">description: {description}</p>
             <p className="results__p">price: {price}</p>
-            <img src={`${API_URL}/products/${id}/images`} width="600px" />
+            <img src={`${API_URL}/products/${id}/images`} width="90px" />
             
         </li>)}
 

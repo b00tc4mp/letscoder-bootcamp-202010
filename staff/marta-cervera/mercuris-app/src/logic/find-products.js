@@ -1,13 +1,13 @@
 import { call } from '../utils'
 import { validateCallback } from './helpers/validations'
 
-export default function (token,callback) {
+export default function ( token, queryCompany, queryProduct, price, priceMin, priceMax,callback) {
     debugger
 
     validateCallback(callback)
     //poner  validations
 
-    call('GET', 'http://localhost:4000/api/products/?q=<queryCompany>&q=:queryProduct&price=:price>&priceMin=:priceMin&priceMax=:priceMax', {'Content-type': 'application/json' },
+    call('GET', `http://localhost:4000/api/products/?queryCompany=${queryCompany}&queryProduct=${queryProduct}&price=${price}&priceMin=${priceMin}&priceMax=${priceMax}`, 
     { Authorization: `Bearer ${token}` },
     '',
         (status, response) => {
@@ -19,7 +19,7 @@ export default function (token,callback) {
                 return callback(new Error(error))
             }
 
-            const products = JSON.parse(response)
+             const products = JSON.parse(response)
 
             callback(null, products)
         })
