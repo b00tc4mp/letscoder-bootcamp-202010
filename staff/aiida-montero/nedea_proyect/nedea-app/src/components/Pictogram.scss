@@ -1,0 +1,28 @@
+.heart {
+    width: 57px;
+    height: 53px;
+    left: 50%;
+    top: -19px;
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png)
+      no-repeat;
+    background-position: -20px -31px;
+    cursor: pointer;
+    z-index: 999;
+    border: none;
+    clear:both;
+    overflow: hidden;
+    outline: none;
+    float: right;
+  }
+  .heart.active {
+    background-position: -2721px -31px;
+  }
+  @keyframes fave-heart {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2800px 0;
+    }
+  }
+

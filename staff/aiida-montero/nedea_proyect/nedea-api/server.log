@@ -2002,3 +2002,66 @@ error 2020-12-09T01:49:16.942Z - Error: ENOENT: no such file or directory, open 
 error 2020-12-09T01:49:16.944Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
 error 2020-12-09T01:49:16.945Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
 info 2020-12-09T01:53:05.187Z - stopping server
+info 2020-12-09T09:54:10.156Z - starting server
+info 2020-12-09T09:54:10.428Z - server running on port 4000
+info 2020-12-09T11:22:58.413Z - stopping server
+info 2020-12-09T12:01:22.074Z - starting server
+info 2020-12-09T12:01:22.243Z - server running on port 4000
+error 2020-12-09T12:01:58.594Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T12:01:58.595Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T12:01:58.596Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T12:01:58.599Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T12:01:58.598Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T12:01:58.600Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T12:01:58.603Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T12:01:58.604Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.516Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.523Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.524Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.522Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.525Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.526Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.527Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:11.529Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:25:19.600Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.793Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.794Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.796Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.798Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.798Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.800Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.802Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.803Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.805Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.807Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.808Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.809Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.811Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.823Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.824Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T13:42:56.826Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+info 2020-12-09T15:34:40.505Z - stopping server
+info 2020-12-09T17:41:45.507Z - starting server
+info 2020-12-09T17:41:45.768Z - server running on port 4000
+error 2020-12-09T17:41:51.042Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.046Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.045Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.048Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.049Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.047Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.051Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.052Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.055Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.056Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.059Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.060Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.061Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.071Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.074Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T17:41:51.081Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T18:01:55.410Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-09T18:02:09.708Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+info 2020-12-09T18:11:39.736Z - stopping server
+info 2020-12-09T18:15:51.709Z - starting server
+info 2020-12-09T18:15:51.884Z - server running on port 4000
+info 2020-12-09T18:16:22.241Z - stopping server

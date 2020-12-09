@@ -1,4 +1,5 @@
-const { Schema } = require('mongoose')
+const { Schema, ObjectId } = require('mongoose')
+
 
 module.exports = new Schema({
     fullname: {
@@ -20,5 +21,9 @@ module.exports = new Schema({
         type: String,
         required: true,
         minlength: 8
-    }
+    },
+
+    likes:[ {
+        type: ObjectId
+    }]
 })

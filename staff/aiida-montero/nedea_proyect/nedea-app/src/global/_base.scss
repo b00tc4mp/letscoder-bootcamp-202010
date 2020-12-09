@@ -23,7 +23,7 @@ html{
   border-bottom: 4px solid;
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  min-width: 70vw; 
 
   
   & > main {

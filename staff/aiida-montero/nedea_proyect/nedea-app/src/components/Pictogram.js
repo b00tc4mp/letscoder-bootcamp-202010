@@ -1,7 +1,13 @@
 import './Pictogram.scss'
+import {useState} from 'react'
 const API_URL = process.env.REACT_APP_API_URL
 export default function ({data:{id, title, description}}) {
-debugger
+  const [isActive, setActive] = useState(false);
+  
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
     return <article className="card">
           <header className="card-header">
             <img
@@ -12,6 +18,7 @@ debugger
             />
           </header>
           <div className="card-body">
+            <button onClick = {toggleClass} className = {isActive ? 'heart active': 'heart'} ></button>
             <h4 className="card-body__title">
               {title} 
             </h4>
