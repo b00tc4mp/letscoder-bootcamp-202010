@@ -52,21 +52,25 @@ export const SearchCreate = () => {
                         <Input placeholder='Ubicación de inicio' />
                         <Input placeholder='Ubicación de fin' />
                         <Input placeholder='Duración' />
-                        <p className='switch-wrapper'><Switch
-                          isOn={privateSearch}
-                          onColor='#3780e9'
-                          handleToggle={() => {
-                            setPrivateSearch(!privateSearch)
-                          }}
-                                                      /> Búsqueda privada
+                        <p className='switch-wrapper'>
+                          <Switch
+                            isOn={privateSearch}
+                            onColor='#3780e9'
+                            handleToggle={() => {
+                              console.log('private')
+                              setPrivateSearch(!privateSearch)
+                            }}
+                          /> Búsqueda privada
                         </p>
-                        <p className='switch-wrapper'><Switch
-                          isOn={suitableChilds}
-                          onColor='#3780e9'
-                          handleToggle={() => {
-                            setSuitableChilds(!suitableChilds)
-                          }}
-                                                      /> Apto para niños
+                        <p className='switch-wrapper'>
+                          <Switch
+                            isOn={suitableChilds}
+                            onColor='#3780e9'
+                            handleToggle={() => {
+                              console.log('suitable')
+                              setSuitableChilds(!suitableChilds)
+                            }}
+                          /> Apto para niños
                         </p>
                         <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
                         <button className='btn btn-previous' onClick={previous}>Anterior <BiChevronsLeft size={ICON_SIZE} /></button>
