@@ -7,14 +7,25 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Input, DefaultLayout } from './searchCreateStyles'
 import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi'
 import { Line } from 'rc-progress'
+import { Modal } from '../components/Modal'
+import { MapGetPos } from '../components/MapGetPos'
 
 const ICON_SIZE = '22px'
 
 export const SearchCreate = () => {
   const [privateSearch, setPrivateSearch] = useState(false)
   const [suitableChilds, setSuitableChilds] = useState(false)
+  const [show, setShow] = useState(false)
 
   useBodyClass('searchcreate')
+
+  const showModal = () => {
+    setShow(true)
+  }
+
+  const hideModal = () => {
+    setShow(false)
+  }
 
   return (
     <DefaultLayout>
@@ -37,6 +48,12 @@ export const SearchCreate = () => {
                     id='coverStep'
                     render={({ next }) => (
                       <div>
+                        <Modal show={show} handleClose={hideModal}>
+                          <MapGetPos />
+                        </Modal>
+                        <span onClick={showModal}>
+                          open
+                        </span>
                         <p className='description'>Inserta la imagen que deseas que aparezca como portada de la búsqueda, tambien aparecerá en los listados.</p>
                         <UploadImage />
                         <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
