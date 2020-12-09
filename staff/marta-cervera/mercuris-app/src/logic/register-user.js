@@ -1,7 +1,11 @@
 import { call } from '../utils'
+import context from './context'
 
-export default function(name, email,password, callback)  {
-    call('POST', 'http://localhost:4000/api/users', {'Content-type': 'application/json'},
+export default (function(name, email,password, callback)  {
+
+    const { API_URL } = this
+    
+    call('POST',  `${API_URL}/users`, {'Content-type': 'application/json'},
     JSON.stringify({ name,email,password }),
     (status, response) => {
         if(status === 0)
@@ -14,4 +18,4 @@ export default function(name, email,password, callback)  {
 
         callback(null)
     })
-}
+}).bind(context)

@@ -7,11 +7,13 @@ export default function SaveProduct({ onSaveProduct, name }) {
         let { target: {
             name: { value: name },
             description: { value: description },
-            price: { value: price }
+            price: { value: price },
+            image
+            
 
         } } = event
 
-        onSaveProduct(name, description, price)
+        onSaveProduct(name, description, price, image.files[0])
         event.target.reset()
 
     }
@@ -22,6 +24,8 @@ export default function SaveProduct({ onSaveProduct, name }) {
             <input name="name" type="text" placeholder="Product Name"></input>
             <textarea className="save-product__textarea"name="description" type="text" placeholder="Description"></textarea>
             <input name="price" type="text" placeholder="Price"></input>
+            <input type="file" id="image" name="image" />
+            <label htmlFor="image">Photo</label>
             <button>Save</button>
 
         </form>

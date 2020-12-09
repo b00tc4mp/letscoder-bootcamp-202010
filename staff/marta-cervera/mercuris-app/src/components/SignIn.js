@@ -14,7 +14,9 @@ function SignIn({ onSignIn }) {
         }}>
             <input type="email" name="email" placeholder="e-mail"/>
             <input type="password" name="password" placeholder="password" />
+            
             <button>Send</button>
+            
 
         </form>
        

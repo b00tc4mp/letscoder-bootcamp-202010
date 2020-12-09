@@ -4,6 +4,9 @@ module.exports = {
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
     saveProduct:require('./save-product'),
-    findProducts: require('./find-product')
+    findProducts: require('./find-product'),
+    retrieveProduct: require('./retrieve-product'),
+    saveProductImage: require('./save-product-image'),
+    retrieveProductImage: require('./retrieve-product-image')
 
 }

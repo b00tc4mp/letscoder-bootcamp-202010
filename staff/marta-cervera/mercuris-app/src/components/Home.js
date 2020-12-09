@@ -1,17 +1,17 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
-import { retrieveUser, saveProduct } from '../logic'
+import { retrieveUser, saveProduct, saveProductImage, findProducts } from '../logic'
 import SaveProduct from './SaveProduct'
 import SearchProducts from './SearchProducts'
 import Profile from './Profile'
-import {Link} from 'react-router-dom'
+
 
 export default function Home() {
 
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
 
     const [name, setName] = useState()
-    //const [products, setProducts] = useState()
+    const [products, setProducts] = useState()
 
 
 
@@ -30,13 +30,29 @@ export default function Home() {
             alert(error.message)
         }
     }, [])
-    const handleSaveProduct = (name, description, price) => {
+
+
+    const handleSaveProduct = (name, description, price, image) => {
         const { token } = sessionStorage
 
         try {
-            saveProduct(undefined, token, name, description, price, error => {
+            saveProduct(undefined, token, name, description, price, (error, productId) => {
                 if (error) return alert(error.message)
-            })
+
+                saveProductImage(productId, image, error => {
+                    if (error) return alert(error.message)
+                    try {
+                        findProducts(token, (error, products) => {
+                            if (error) return alert(error.message)
+
+                            setProducts(products)
+                        })
+                    } catch (error) {
+                        alert(error.message)
+                    }
+                  })
+            }
+            )
         } catch (error) {
             alert(error.message)
         }
@@ -52,11 +68,11 @@ export default function Home() {
 
 
     return (
-        <section className="home">            
-            {view ==='home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
+        <section className="home">
+            {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
             { view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
-            {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name = {name} />}
-            {view === 'profile' && <Profile name={name}/>}
+            {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={name} />}
+            {view === 'profile' && <Profile name={name} />}
             {view === 'profile' && <SearchProducts />}
 
         </section >

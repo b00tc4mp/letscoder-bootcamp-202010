@@ -4,7 +4,8 @@ const { env: { JWT_SECRET }
 } = process
 
 module.exports = (req, res, handleError) => {
-    const { body: { token, queryCompany,queryProduct, price, priceMin,priceMax } } = req
+    const { query: { queryCompany, queryProduct, price, priceMin, priceMax } } = req
+
 
     let userId
 

@@ -3,11 +3,14 @@ import './App.css';
 import { SignUp, SignIn, Home, Access, Header, Footer, SearchProductClient } from './components/Index'
 import { useState } from 'react'
 import { registerUser, authenticateUser } from './logic'
+import context from './logic/context'
 
+
+context.API_URL=process.env.REACT_APP_API_URL
 
 
 function App(props) {
-
+  
   const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
 
   const {token} = sessionStorage
@@ -25,6 +28,7 @@ function App(props) {
     }
   }
   const handleSignIn = (email, password) => {
+    
     try {
       authenticateUser(email, password, (error, token) => {
         if (error) return alert(error.message)
@@ -38,15 +42,6 @@ function App(props) {
     }
   }
 
-  const handleGoToSignIn = () => {
-
-    props.history.push('/sign-in')
-  }
-
-  const handleGoToSignUp = () => {
-
-    props.history.push('/sign-up')
-  }
 
   const handleGoToSearch = () => {
 
@@ -56,7 +51,7 @@ function App(props) {
   return (
     <>      
       <main className="App-header">
-        <Route exact path='/' render={() => <Access onGoToSignIn={handleGoToSignIn} onGoToSignUp={handleGoToSignUp} onGoToSearch={handleGoToSearch} />} />
+        <Route exact path='/' render={() => <Access  onGoToSearch={handleGoToSearch} />} />
         <Route exact path='/sign-up' render={() => <SignUp onSignUp={handleSignUp} />} /> 
         <Route exact path='/sign-in' render={() => <SignIn onSignIn={handleSignIn} />} /> 
         <Route exact path='/search-product-client' render={() => <SearchProductClient />} />

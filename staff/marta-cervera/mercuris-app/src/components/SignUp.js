@@ -15,13 +15,12 @@ function SignUp({ onSignUp }) {
             <input type ="text" name ="name" placeholder="Company Name" />
             <input type="email" name="email" placeholder="e-mail"/>
             <input type="password" name="password" placeholder="password" />
-            {/* <input type="text" name="contact" placeholder="contact" /> */}
-            
+            {/* <input type="text" name="contact" placeholder="contact" /> */}            
             
             <button>Send</button>
-
-        </form>
         
+
+        </form>        
 
         <Link to = '/sign-in'>Redirect to Sign In</Link>
         

@@ -7,6 +7,7 @@ const { validateName } = require('../../mercuris-app/src/logic/helpers/validatio
 
 
 module.exports = function (productId, ownerId, name, description, price) {
+    debugger
     validateId(ownerId)
     if (typeof productId !== 'undefined') validateId(productId)
     validateName(name)
@@ -31,12 +32,12 @@ module.exports = function (productId, ownerId, name, description, price) {
 
                         return Product
                             .updateOne({ _id }, { $set: { name, description, price } })
-                            .then(result => undefined)
+                            .then(result => result.id)
                     })
             } else
                 return Product
                     .create({ owner: ObjectId(ownerId), name, description, price })
-                    .then(result => undefined)
+                    .then(result => result.id)
 
         })
     }

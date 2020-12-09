@@ -49,5 +49,11 @@ module.exports = {
     },
     validatePrice(price) {
         if (typeof price !== 'string') throw new TypeError(price + ' is not an id')
+    },
+    validateFile(file) {
+        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
+    },
+    validateStream(stream) {
+        // TODO where the f*ck is the the class to validate this instance!!?
     }
 }

@@ -52,7 +52,7 @@ module.exports = function (userId, queryCompany,queryProduct, price, priceMin,pr
 
                 product.id = _id.toString()
 
-                delete product._id
+                
             })
 
             return products

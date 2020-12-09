@@ -1,7 +1,9 @@
 import { call } from '../utils'
 import { validateToken, validateId, validateDescription, validatePrice, validateCallback, validateName } from './helpers/validations'
+import context from './context'
 
-export default function saveProduct(productId, token, name, description, price, callback) {
+export default (function saveProduct(productId, token, name, description, price, callback) {
+    debugger
     validateToken(token)
     if (typeof productId !== 'undefined') validateId(productId)
     validateDescription(description)
@@ -9,13 +11,15 @@ export default function saveProduct(productId, token, name, description, price, 
     validatePrice(price)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/products', {    
+    const { API_URL } = this
+
+    call('POST', `${API_URL}/products`, {
         'Content-type': ' application/json',
         Authorization: `Bearer ${token}`,
     },
         JSON.stringify({ productId, name, description, price }),
         (status, response) => {
-            debugger
+
             if (status === 0)
                 return callback(new Error('server error'))
             else if (status !== 200) {
@@ -23,7 +27,10 @@ export default function saveProduct(productId, token, name, description, price, 
 
                 return callback(new Error(error))
             }
-            callback(null)
+
+            const { productId } = JSON.parse(response)
+
+            callback(null, productId)
 
         })
-}
+}).bind(context)
