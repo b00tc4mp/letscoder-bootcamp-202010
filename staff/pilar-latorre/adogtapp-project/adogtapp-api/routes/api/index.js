@@ -36,7 +36,7 @@ router.delete('/api/pets/:petId', jsonBodyParser, withErrorHandling(handleDelete
 
 router.post('/api/pets/:petId/images', withErrorHandling(handleSavePetImage))
 
-router.get('/api/notes/:petId/images', withErrorHandling(handleRetrievePetImage))
+router.get('/api/pets/:petId/images', withErrorHandling(handleRetrievePetImage))
 
 
 

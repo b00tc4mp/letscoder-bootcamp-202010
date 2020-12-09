@@ -25,7 +25,7 @@ function DetailPet({result: {id, name, breed, species, color, description } , on
         <ul className="result__ul">
        
         <li key={id} className="result__li">
-            <img className="result__img" src={`${API_URL}/notes/${id}/images`}/>
+            <img className="result__img" src={`${API_URL}/pets/${id}/images`}/>
             <div>
             <p className="result__p">{name}</p>
             <p className="result__p">breed: {breed}</p>

@@ -8,7 +8,7 @@ function CreatePet({onCreatePet}){
         <form className="CreatePet__form" onSubmit={event => {
             event.preventDefault()
 
-            const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} }, image } = event
+            const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} , image }} = event
 
             onCreatePet(name, breed, species, color, description, image.files[0] )
         }}>

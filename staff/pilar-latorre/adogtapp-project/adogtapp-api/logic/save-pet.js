@@ -12,7 +12,7 @@ module.exports = function (petId, name, breed, species, color, description, shel
     validateColor(color)
     validateDescription(description)
     validateId(shelter)
-
+debugger
     const _id = ObjectId(shelter)
 
     return User
@@ -21,23 +21,23 @@ module.exports = function (petId, name, breed, species, color, description, shel
             if (!user) throw new NotFoundError(`user with id ${shelter} not found`)
 
 
-        if (petId) {
-            const _id = ObjectId(petId)
-
-            return Pet
-                .findOne({ _id })
-                .then (pet => {
-                    if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
+            if (petId) {
+                const _id = ObjectId(petId)
 
                 return Pet
-                    .updateOne({ _id }), { $set: { name, breed, species, color, description }}
-                    .then (result => undefined) 
+                    .findOne({ _id })
+                    .then (pet => {
+                        if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
 
-            })
-        } else
-            return Pet
-            .create({ name, breed, species, color, description, shelter: ObjectId(shelter) })
-            .then(result => undefined)
+                    return Pet
+                        .updateOne({ _id }), { $set: { name, breed, species, color, description }}
+                        .then (pet => pet.id) 
+
+                })
+            } else
+                return Pet
+                .create({ name, breed, species, color, description, shelter: ObjectId(shelter) })
+                .then(pet => pet.id)
 
     })
 }

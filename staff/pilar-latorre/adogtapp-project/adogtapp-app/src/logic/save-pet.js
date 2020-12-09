@@ -28,8 +28,7 @@ debugger
                 return callback(new Error(error))
             }
 
-            const { petId } = JSON.parse(response)
 
-            callback(null, petId)
+            callback(null, response)
         })
 }).bind(context)

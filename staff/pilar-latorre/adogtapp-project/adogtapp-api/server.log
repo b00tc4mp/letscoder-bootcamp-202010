@@ -937,3 +937,35 @@ info 2020-12-08T19:58:31.742Z - server running on port 4000
 error 2020-12-08T20:13:05.461Z - ConflictError: shelter with e-mail mo@no.es already registered
     at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:20:37
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-09T08:17:31.715Z - starting server
+info 2020-12-09T08:17:31.923Z - server running on port 4000
+info 2020-12-09T11:51:21.253Z - stopping server
+info 2020-12-09T11:51:25.663Z - starting server
+info 2020-12-09T11:51:25.862Z - server running on port 4000
+info 2020-12-09T11:58:50.067Z - stopping server
+info 2020-12-09T11:58:53.443Z - starting server
+info 2020-12-09T11:58:53.694Z - server running on port 4000
+info 2020-12-09T12:17:00.549Z - stopping server
+info 2020-12-09T12:17:03.627Z - starting server
+info 2020-12-09T12:17:03.819Z - server running on port 4000
+info 2020-12-09T12:32:37.060Z - stopping server
+info 2020-12-09T12:32:40.499Z - starting server
+info 2020-12-09T12:32:40.667Z - server running on port 4000
+info 2020-12-09T12:34:02.156Z - stopping server
+info 2020-12-09T12:34:06.050Z - starting server
+info 2020-12-09T12:34:06.215Z - server running on port 4000
+info 2020-12-09T12:53:06.419Z - stopping server
+info 2020-12-09T12:53:10.123Z - starting server
+info 2020-12-09T12:53:10.328Z - server running on port 4000
+info 2020-12-09T14:48:43.005Z - stopping server
+info 2020-12-09T14:48:46.529Z - starting server
+info 2020-12-09T14:48:46.760Z - server running on port 4000
+info 2020-12-09T15:07:40.404Z - stopping server
+info 2020-12-09T15:07:44.336Z - starting server
+info 2020-12-09T15:07:44.497Z - server running on port 4000
+info 2020-12-09T15:12:20.221Z - stopping server
+info 2020-12-09T15:12:32.559Z - starting server
+info 2020-12-09T15:12:32.720Z - server running on port 4000
+info 2020-12-09T15:20:38.615Z - starting server
+info 2020-12-09T15:20:38.965Z - server running on port 4000
+info 2020-12-09T15:29:38.072Z - stopping server

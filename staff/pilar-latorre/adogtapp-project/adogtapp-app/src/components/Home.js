@@ -6,9 +6,7 @@ import CreatePet from './CreatePet'
 
 
 
-/* import { retrieveUser, saveNote, retrieveNotes } from '../logic'
-import SaveNote from './SaveNote'
-import ListNotes from './ListNotes' */
+
 
 export default function () {
 
@@ -38,12 +36,13 @@ export default function () {
 
 
     const handleCreatePet = (name, breed, species, color, description, image) => {
+        debugger
         const { token } = sessionStorage
-
+     
         try {
             savePet( undefined, name, breed, species, color, description, token, (error, petId) => {
                 if (error) return alert(error.message)
-
+                
                 savePetImage(petId, image, error => {
                     if (error) return alert(error.message)
                     try {
