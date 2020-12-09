@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useBodyClass } from '../hooks/useBodyClass'
 import { UploadImage } from '../components/UploadImage'
+import { useInputValue } from '../hooks/useInputValue'
 import { Switch } from '../components/Switch'
 import { Wizard, Steps, Step } from 'react-albus'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
@@ -13,23 +14,55 @@ import { MapGetPos } from '../components/MapGetPos'
 const ICON_SIZE = '22px'
 
 export const SearchCreate = () => {
+  const nameSearch = useInputValue('')
   const [privateSearch, setPrivateSearch] = useState(false)
   const [suitableChilds, setSuitableChilds] = useState(false)
-  const [show, setShow] = useState(false)
+  const [poiBeginGame, setPoiBeginGame] = useState()
+  const [poiEndGame, setPoiEndGame] = useState()
+  const [showModalBegin, setShowModalBegin] = useState(false)
+  const [showModalEnd, setShowModalEnd] = useState(false)
+  const [time, setTime] = useState('00:00')
 
   useBodyClass('searchcreate')
 
-  const showModal = () => {
-    setShow(true)
+  const showModalBeginGame = () => {
+    setShowModalBegin(true)
   }
 
-  const hideModal = () => {
-    setShow(false)
+  const showModalEndGame = () => {
+    setShowModalEnd(true)
+  }
+
+  const hideModalBeginGame = () => {
+    setShowModalBegin(false)
+  }
+
+  const hideModalEndGame = () => {
+    setShowModalEnd(false)
+  }
+
+  const handleClickMapBegin = (poi) => {
+    setPoiBeginGame(poi)
+  }
+
+  const handleClickMapEnd = (poi) => {
+    setPoiEndGame(poi)
+  }
+
+  const handleTime = (event, time) => {
+    console.log(typeof time)
+    setTime(time)
   }
 
   return (
     <DefaultLayout>
       <h1>Crear nueva búsqueda</h1>
+      <Modal show={showModalBegin} handleClose={hideModalBeginGame}>
+        <MapGetPos onAddMarker={handleClickMapBegin} />
+      </Modal>
+      <Modal show={showModalEnd} handleClose={hideModalEndGame}>
+        <MapGetPos onAddMarker={handleClickMapEnd} />
+      </Modal>
       <Wizard render={({ step, steps }) => (
         <div>
           <Line
@@ -48,12 +81,6 @@ export const SearchCreate = () => {
                     id='coverStep'
                     render={({ next }) => (
                       <div>
-                        <Modal show={show} handleClose={hideModal}>
-                          <MapGetPos />
-                        </Modal>
-                        <span onClick={showModal}>
-                          open
-                        </span>
                         <p className='description'>Inserta la imagen que deseas que aparezca como portada de la búsqueda, tambien aparecerá en los listados.</p>
                         <UploadImage />
                         <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
@@ -65,9 +92,9 @@ export const SearchCreate = () => {
                     render={({ next, previous }) => (
                       <div>
                         <p className='description'>Rellena los siguientes campos sobre la BÚSQUEDA:</p>
-                        <Input placeholder='Nombre de la búqueda' />
-                        <Input placeholder='Ubicación de inicio' />
-                        <Input placeholder='Ubicación de fin' />
+                        <Input {...nameSearch} placeholder='Nombre de la búqueda' />
+                        <Input onClick={showModalBeginGame} placeholder='Ubicación de inicio' value={poiBeginGame} />
+                        <Input onClick={showModalEndGame} placeholder='Ubicación de fin' value={poiEndGame} />
                         <Input placeholder='Duración' />
                         <p className='switch-wrapper'>
                           <Switch
@@ -90,7 +117,7 @@ export const SearchCreate = () => {
                           /> Apto para niños
                         </p>
                         <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
-                        <button className='btn btn-previous' onClick={previous}>Anterior <BiChevronsLeft size={ICON_SIZE} /></button>
+                        <button className='btn btn-previous' onClick={previous}><BiChevronsLeft size={ICON_SIZE} />Anterior</button>
                       </div>
                     )}
                   />
