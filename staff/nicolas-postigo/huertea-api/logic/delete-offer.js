@@ -31,12 +31,11 @@ module.exports = function (ownerId, offerId, offername, titleoffer, price) {
                             if (!offer) throw new NotFoundError(`offer with id ${offerId} not found`)
 
                             return Offer
-                                .updateOne({ ownerId }, { $set: { offername, titleoffer, price } })
+                                .deleteOne({ offername, titleoffer, price, owner: ownerId })
                                 .then(() => { })
+
                         })
-                } else
-                    return Offer.create({ offername, titleoffer, price, owner: ownerId })
-                        .then(() => { })
+                } 
             })
     )
 }

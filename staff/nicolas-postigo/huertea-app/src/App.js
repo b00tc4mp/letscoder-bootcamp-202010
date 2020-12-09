@@ -121,10 +121,10 @@ function App() {
     }
   } */
 
-  const handleCreateOffer = (offername, titleoffer, image, price) => {
+  const handleCreateOffer = (offername, titleoffer, price) => {
     const { token } = sessionStorage
     try {
-      createOffer(token, undefined, offername, titleoffer, image, price, error => {
+      createOffer(token, undefined, offername, titleoffer, price, error => {
         if (error) return alert(error.message)
 
 

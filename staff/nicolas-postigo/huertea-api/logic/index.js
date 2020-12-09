@@ -1,5 +1,3 @@
-
-
 module.exports = {
     registerUser: require('./register-user'),
     authenticateUser: require('./authenticate-user'),
@@ -8,5 +6,6 @@ module.exports = {
     retrieveOffer: require('./retrieve-all-offers.js'),
     findOffer: require('./find-offer.js'),
     SaveOfferImage: require('./save-offer-image.js'),
-    retrieveOfferImage: require('./retrieve-offer-image')
+    retrieveOfferImage: require('./retrieve-offer-image'),
+    deleteOffer: require('./delete-offer')
 }
