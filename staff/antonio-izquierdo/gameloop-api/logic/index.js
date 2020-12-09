@@ -5,5 +5,6 @@ module.exports = {
     saveGame: require('./save-game'),
     findGames: require('./find-games'),
     detailGame: require('./detail-game'),
-    saveGameImage: require('./save-game-image')
+    saveGameImage: require('./save-game-image'),
+    retrieveGameImage: require('./retrieve-game-image')
 }

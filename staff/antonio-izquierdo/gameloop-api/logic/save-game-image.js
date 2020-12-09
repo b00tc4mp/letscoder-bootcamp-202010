@@ -11,7 +11,6 @@ module.exports = (gameId, stream) => {
     return new Promise((resolve, reject) => {
 
         try {
-
             const toStream = fs.createWriteStream(path.join(__dirname, `../data/games/${gameId}.jpg`))
         
             stream.pipe(toStream)
