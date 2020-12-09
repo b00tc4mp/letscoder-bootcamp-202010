@@ -1,14 +1,18 @@
 import { call } from '../utils'
+import context from './context'
 //import { validateId, validateName, validateDescription, validatePrice, validateCallback } from './helpers/validations'
 
-export default function saveGame(gameId, name, description, gameconsole, budget, token, callback) {
+debugger
+export default (function saveGame(gameId, name, description, gameconsole, budget, token, callback) {
     //if (typeof gameId !== 'undefined') validateId(gameId)
     /*    validateName(query)
        validateDescription(description)
        validatePrice(budget)
        validateCallback(callback) */
 
-    call('POST', 'http://localhost:4000/api/games', {
+    const { API_URL } = this
+
+    call('POST', `${API_URL}/games`, {
         'Content-type': ' application/json',
         Authorization: `Bearer ${token}`,
     },
@@ -22,7 +26,8 @@ export default function saveGame(gameId, name, description, gameconsole, budget,
 
                 return callback(new Error(error))
             }
-            callback(null)
+            const { gameId } = JSON.parse(response)
+            callback(null, gameId)
 
         })
-} 
+}).bind(context) 

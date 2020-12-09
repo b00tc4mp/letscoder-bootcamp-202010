@@ -8,6 +8,9 @@ body
     margin: 0px
     padding: 0px
 
+.link
+    text-decoration: none
+
 .sign-up
     display: flex
     flex-direction: column
@@ -66,12 +69,20 @@ body
                 border: 0px solid
                 letter-spacing: 2pt
                 margin-bottom: 6vh
-            
-            &__signin
-                color: #fffc00
-                border-bottom: 5px solid
                 &:hover
+                    background-color: #fffb00d3
+                    box-shadow: 10px 10px 10px #4d2858
+
+            &__sign-in
+                color: white
+                border-bottom: 5px solid white
+                &:hover
+                    color: yellow
+                    border-bottom: 5px solid yellow
+                &:active
                     color: blue
+                    border-bottom: 5px solid blue
+                    
     
     hr
         border: 2px solid  #fffc00

@@ -12,8 +12,8 @@ module.exports = (req, res, handleError) => {
         const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
 
         saveGame(gameId, name, description, gameconsole, budget, ownerId)
-            .then(() => res.status(200).send())
-            .catch(handleError)
+        .then((gameId) => res.status(200).json({gameId}))
+        .catch(handleError)
     } catch(error) {
         handleError(error)
     }

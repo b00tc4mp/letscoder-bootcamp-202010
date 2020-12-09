@@ -8,18 +8,18 @@ const {
 
 module.exports = (req, res, handleError) => {
 
- 
+ debugger
   const {
-    body: { query, gameconsole, budget, priceMin, priceMax }
+    query: { query, gameconsole, budget, priceMin, priceMax }
   } = req;
 
-  //let shelterId
+  //let userId
 
   /* if (token) {
     const { sub } = jwt.verify(token, JWT_SECRET);
-    shelterId = sub
+    userId = sub
   } else {
-    const shelterId = undefined;
+    const userId = undefined;
   }
  */
   try {

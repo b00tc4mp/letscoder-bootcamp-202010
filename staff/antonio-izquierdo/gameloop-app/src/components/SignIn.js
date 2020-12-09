@@ -2,7 +2,7 @@ import './SignIn.sass'
 import { Link } from 'react-router-dom'
 import logo from "../assets/img/logo.png"
 
-function SignIn({ onSignIn, onGoToSignUp }) {
+function SignIn({ onSignIn }) {
     return <section className="sign-in">
         <img className="sign-in__logo" src={logo} />
         <div className="sign-in__container">
@@ -17,9 +17,9 @@ function SignIn({ onSignIn, onGoToSignUp }) {
                 <input className="sign-in__container__form__input" type="password" name="password" placeholder="PASSWORD" />
                 <button className="sign-in__container__form__button"> SEND </button>
                 <hr />
-                <p> IF YOU DONT HAVE AN ACCOUNT
-                    <Link to="/sign-up">
-                        <span className="sign-in__container__form__createone"> CREATE ONE </span>
+                <p> IF YOU DONT HAVE AN ACCOUNT&nbsp; 
+                    <Link className="link" to="/sign-up">
+                        <span className="sign-in__container__form__sign-up">CREATE ONE</span>
                     </Link>
                 </p>
             </form>

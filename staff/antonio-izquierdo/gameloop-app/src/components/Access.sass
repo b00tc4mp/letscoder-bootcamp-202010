@@ -5,6 +5,8 @@ $Kanit: 'Kanit', sans-serif
 $Righteous: 'Righteous', cursive
 
 .access
+    margin: 0px
+    padding: 0px
     display: flex
     flex-direction: row
     flex-wrap: wrap
@@ -18,33 +20,50 @@ $Righteous: 'Righteous', cursive
     height: 100vh
 
     &__logo
-    
+        padding: 20px
+
     p
         font-family: $Righteous
         text-align: center
-        font-size: 75px 
+        font-size: 68px 
         color: #63416e
         letter-spacing: 30pt
-        margin-top: 50px
     
-
     &__div
         display: grid
-        grid-template-columns: 4fr 1fr
-        margin-bottom: 50px
+        grid-template-columns: 1fr
 
-        &__signbutton
+        &__sign-up-button
             font-family: $Kanit
             font-size: 40px 
-            color: #fffc00
-            width: 400px
+            color: #fffc00 
+            width: 800px
+            height: 70px
+            background-color:#63416e
+            border: 0px solid
+            border-radius: 10px
+            line-height: 30px
+            margin-bottom: 20px
+            &:hover
+                color: #63416e
+                background-color:#fffc00 
+        
+        &__sign-in-button
+            font-family: $Kanit
+            font-size: 40px 
+            color: #fffc00  
+            width: 800px
             height: 70px
             background-color: #63416e
             border: 0px solid
             border-radius: 10px
-            margin-left: 80px
             line-height: 30px
+            margin-bottom: 50px
+            &:hover
+                color: #63416e
+                background-color:#fffc00 
 
+/** 
         &__searchbutton
             font-family: $Kanit
             font-size: 55px 
@@ -55,5 +74,5 @@ $Righteous: 'Righteous', cursive
             border: 0px solid
             border-radius: 10px
             margin-right: 50px
-        
+         **/
         

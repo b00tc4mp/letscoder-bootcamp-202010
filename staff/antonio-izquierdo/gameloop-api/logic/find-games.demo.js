@@ -7,7 +7,7 @@ const findGames = require('./find-games')
 mongoose.connect( MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true})
     .then(() => {
     try {
-        findGames('luigi', undefined, undefined, undefined, undefined)
+        findGames(undefined, undefined, undefined, undefined, undefined)
         .then(games => console.log(games))
         .catch(error => console.log('could not retrieve any game', error))
         .then(() => mongoose.disconnect())

@@ -721,3 +721,218 @@ info 2020-12-07T19:33:33.421Z - server running on port 4000
 info 2020-12-07T19:36:43.880Z - stopping server
 info 2020-12-07T19:36:47.991Z - server running on port 4000
 info 2020-12-07T19:49:47.970Z - stopping server
+info 2020-12-08T09:02:08.656Z - server running on port 4000
+info 2020-12-08T10:36:30.574Z - stopping server
+info 2020-12-08T10:36:34.568Z - server running on port 4000
+error 2020-12-08T11:08:11.862Z - ContentError: fullname is empty or blank
+    at validateFullname (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\helpers\validations.js:8:44)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\register-user.js:7:5)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js:7:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-08T11:52:35.267Z - ContentError: fullname is empty or blank
+    at validateFullname (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\helpers\validations.js:8:44)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\register-user.js:7:5)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js:7:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-08T12:12:19.556Z - ContentError: fullname is empty or blank
+    at validateFullname (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\helpers\validations.js:8:44)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\register-user.js:7:5)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js:7:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-08T12:27:50.045Z - ContentError: fullname is empty or blank
+    at validateFullname (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\helpers\validations.js:8:44)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\register-user.js:7:5)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\handlers\handle-register-user.js:7:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T14:34:44.095Z - stopping server
+info 2020-12-08T16:48:44.449Z - server running on port 4000
+info 2020-12-08T16:48:47.444Z - stopping server
+info 2020-12-08T17:24:27.306Z - server running on port 4000
+info 2020-12-08T19:45:50.855Z - stopping server
+info 2020-12-08T19:45:58.541Z - server running on port 4000
+info 2020-12-08T19:49:22.740Z - stopping server
+info 2020-12-08T19:49:25.539Z - server running on port 4000
+info 2020-12-08T19:50:30.900Z - stopping server
+info 2020-12-08T19:50:33.763Z - server running on port 4000
+info 2020-12-08T19:51:06.830Z - stopping server
+info 2020-12-08T19:51:13.945Z - server running on port 4000
+info 2020-12-08T19:51:52.942Z - stopping server
+info 2020-12-08T19:51:59.961Z - server running on port 4000
+info 2020-12-08T19:53:38.450Z - stopping server
+info 2020-12-08T19:53:47.612Z - server running on port 4000
+info 2020-12-08T19:54:55.692Z - stopping server
+info 2020-12-08T19:55:03.073Z - server running on port 4000
+info 2020-12-08T19:57:54.059Z - stopping server
+info 2020-12-08T19:58:00.562Z - server running on port 4000
+info 2020-12-08T19:59:01.148Z - stopping server
+info 2020-12-08T19:59:07.732Z - server running on port 4000
+info 2020-12-08T19:59:20.427Z - stopping server
+info 2020-12-08T19:59:26.752Z - server running on port 4000
+info 2020-12-08T20:01:20.392Z - stopping server
+info 2020-12-08T20:01:27.096Z - server running on port 4000
+info 2020-12-08T20:02:50.761Z - stopping server
+info 2020-12-08T20:02:57.122Z - server running on port 4000
+info 2020-12-08T20:05:07.349Z - stopping server
+info 2020-12-08T20:05:18.342Z - server running on port 4000
+info 2020-12-08T20:07:45.028Z - stopping server
+info 2020-12-08T20:07:47.833Z - server running on port 4000
+info 2020-12-08T20:09:41.884Z - stopping server
+info 2020-12-08T20:09:48.896Z - server running on port 4000
+info 2020-12-08T20:10:31.321Z - stopping server
+info 2020-12-08T20:10:38.032Z - server running on port 4000
+info 2020-12-08T20:11:50.038Z - stopping server
+info 2020-12-08T20:11:56.023Z - server running on port 4000
+info 2020-12-08T20:13:36.509Z - stopping server
+info 2020-12-08T20:13:43.714Z - server running on port 4000
+info 2020-12-08T20:15:37.159Z - stopping server
+info 2020-12-08T20:15:43.752Z - server running on port 4000
+info 2020-12-08T20:17:14.444Z - stopping server
+info 2020-12-08T20:17:29.822Z - server running on port 4000
+info 2020-12-08T20:21:06.990Z - stopping server
+info 2020-12-08T20:21:13.128Z - server running on port 4000
+info 2020-12-08T20:23:57.490Z - stopping server
+info 2020-12-08T20:24:03.875Z - server running on port 4000
+info 2020-12-08T20:28:11.082Z - stopping server
+info 2020-12-08T20:28:19.466Z - server running on port 4000
+info 2020-12-08T20:29:01.222Z - stopping server
+info 2020-12-08T20:29:07.976Z - server running on port 4000
+info 2020-12-08T20:30:14.570Z - stopping server
+info 2020-12-08T20:30:21.084Z - server running on port 4000
+info 2020-12-08T20:31:33.005Z - stopping server
+info 2020-12-08T20:31:41.505Z - server running on port 4000
+info 2020-12-08T20:34:20.583Z - stopping server
+info 2020-12-08T20:34:27.750Z - server running on port 4000
+info 2020-12-08T20:40:22.734Z - stopping server
+info 2020-12-08T21:12:51.191Z - server running on port 4000
+info 2020-12-08T21:22:05.944Z - stopping server
+info 2020-12-08T21:22:12.598Z - server running on port 4000
+error 2020-12-08T21:22:27.531Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:18:39
+info 2020-12-08T21:33:26.369Z - stopping server
+info 2020-12-08T21:33:33.502Z - server running on port 4000
+info 2020-12-08T21:34:51.977Z - stopping server
+info 2020-12-08T21:34:58.437Z - server running on port 4000
+info 2020-12-08T21:40:14.845Z - stopping server
+info 2020-12-08T21:40:21.920Z - server running on port 4000
+info 2020-12-09T08:52:29.163Z - server running on port 4000
+info 2020-12-09T08:57:27.700Z - stopping server
+info 2020-12-09T08:57:30.279Z - server running on port 4000
+info 2020-12-09T08:58:31.459Z - stopping server
+info 2020-12-09T08:58:49.231Z - server running on port 4000
+info 2020-12-09T09:03:46.549Z - server running on port 4000
+info 2020-12-09T09:10:23.756Z - server running on port 4000
+info 2020-12-09T09:15:00.112Z - server running on port 4000
+info 2020-12-09T09:31:50.434Z - server running on port 4000
+info 2020-12-09T09:40:09.557Z - server running on port 4000
+info 2020-12-09T09:43:07.796Z - stopping server
+info 2020-12-09T09:43:14.986Z - server running on port 4000
+info 2020-12-09T10:01:19.312Z - stopping server
+info 2020-12-09T10:11:47.453Z - server running on port 4000
+info 2020-12-09T10:17:27.162Z - stopping server
+info 2020-12-09T10:17:34.493Z - server running on port 4000
+info 2020-12-09T10:34:35.253Z - stopping server
+info 2020-12-09T10:35:04.247Z - server running on port 4000
+info 2020-12-09T10:35:21.477Z - stopping server
+info 2020-12-09T10:35:34.103Z - server running on port 4000
+info 2020-12-09T10:36:12.980Z - server running on port 4000
+info 2020-12-09T10:36:22.022Z - stopping server
+info 2020-12-09T10:36:31.148Z - server running on port 4000
+info 2020-12-09T10:38:41.237Z - stopping server
+info 2020-12-09T10:39:42.850Z - server running on port 4000
+info 2020-12-09T10:42:26.672Z - stopping server
+info 2020-12-09T10:42:35.386Z - server running on port 4000
+info 2020-12-09T10:49:13.778Z - stopping server
+info 2020-12-09T10:49:31.567Z - server running on port 4000
+info 2020-12-09T11:08:49.287Z - stopping server
+info 2020-12-09T11:08:57.417Z - server running on port 4000
+info 2020-12-09T11:12:30.200Z - stopping server
+info 2020-12-09T11:12:52.175Z - server running on port 4000
+info 2020-12-09T11:13:03.429Z - stopping server
+info 2020-12-09T11:13:10.034Z - server running on port 4000
+info 2020-12-09T11:17:26.383Z - stopping server
+info 2020-12-09T11:17:33.645Z - server running on port 4000
+info 2020-12-09T11:18:04.962Z - stopping server
+info 2020-12-09T11:18:28.608Z - server running on port 4000
+info 2020-12-09T11:25:10.688Z - server running on port 4000
+info 2020-12-09T11:28:45.284Z - server running on port 4000
+info 2020-12-09T11:32:31.354Z - server running on port 4000
+info 2020-12-09T11:39:49.533Z - server running on port 4000
+info 2020-12-09T11:42:42.556Z - server running on port 4000
+info 2020-12-09T11:44:34.404Z - server running on port 4000
+info 2020-12-09T11:48:22.728Z - server running on port 4000
+info 2020-12-09T11:50:30.693Z - server running on port 4000
+info 2020-12-09T11:51:58.014Z - server running on port 4000
+info 2020-12-09T11:56:31.110Z - server running on port 4000
+info 2020-12-09T11:58:23.652Z - server running on port 4000
+info 2020-12-09T12:04:45.068Z - server running on port 4000
+info 2020-12-09T12:06:06.881Z - server running on port 4000
+info 2020-12-09T12:10:19.785Z - server running on port 4000
+info 2020-12-09T12:23:10.232Z - server running on port 4000
+info 2020-12-09T12:26:59.910Z - server running on port 4000
+info 2020-12-09T12:54:36.458Z - server running on port 4000
+info 2020-12-09T13:04:25.549Z - server running on port 4000
+info 2020-12-09T14:35:08.251Z - server running on port 4000
+info 2020-12-09T14:35:12.881Z - stopping server
+info 2020-12-09T14:35:22.579Z - server running on port 4000
+info 2020-12-09T14:44:08.217Z - stopping server
+info 2020-12-09T14:44:14.651Z - server running on port 4000
+info 2020-12-09T14:53:36.496Z - stopping server
+info 2020-12-09T14:53:39.157Z - server running on port 4000
+info 2020-12-09T15:05:11.726Z - stopping server
+info 2020-12-09T15:05:15.771Z - server running on port 4000
+info 2020-12-09T15:17:07.826Z - stopping server
+info 2020-12-09T15:18:15.937Z - server running on port 4000
+info 2020-12-09T15:20:00.177Z - stopping server
+info 2020-12-09T15:20:03.781Z - server running on port 4000
+info 2020-12-09T15:22:52.852Z - stopping server
+info 2020-12-09T15:23:00.456Z - server running on port 4000
+info 2020-12-09T15:30:13.789Z - stopping server
+info 2020-12-09T15:30:21.678Z - server running on port 4000
+info 2020-12-09T15:50:11.011Z - stopping server
+info 2020-12-09T15:50:17.941Z - server running on port 4000
+info 2020-12-09T17:36:48.136Z - stopping server
+info 2020-12-09T17:36:51.065Z - server running on port 4000
+info 2020-12-09T17:40:00.544Z - stopping server
+info 2020-12-09T17:40:08.545Z - server running on port 4000
+info 2020-12-09T17:56:52.882Z - stopping server
+info 2020-12-09T17:56:59.864Z - server running on port 4000
+info 2020-12-09T18:03:32.877Z - stopping server
+info 2020-12-09T18:03:35.668Z - server running on port 4000
+info 2020-12-09T18:04:33.242Z - stopping server
+info 2020-12-09T18:04:49.377Z - server running on port 4000
+info 2020-12-09T18:08:47.404Z - server running on port 4000
+info 2020-12-09T18:11:08.351Z - server running on port 4000
+info 2020-12-09T18:12:34.265Z - server running on port 4000
+info 2020-12-09T18:18:13.236Z - server running on port 4000
+info 2020-12-09T18:23:36.206Z - server running on port 4000
+info 2020-12-09T18:28:03.505Z - stopping server
+info 2020-12-09T18:28:08.340Z - server running on port 4000
+info 2020-12-09T18:29:54.471Z - stopping server
+info 2020-12-09T18:29:58.516Z - server running on port 4000
+info 2020-12-09T18:30:31.787Z - stopping server
+info 2020-12-09T19:47:44.067Z - server running on port 4000
+info 2020-12-09T19:51:14.592Z - stopping server

@@ -30,10 +30,10 @@ module.exports = function( gameId, name, description, gameconsole, budget, owner
 
                         return Game
                             .updateOne({ _id }, { $set: { name, description, budget } } )
-                            .then(result => undefined)
+                            .then(result => result.id)
                     })
             } else
                 return Game.create({ name, description, gameconsole, budget, owner: ObjectId(ownerId) })
-                    .then(result => undefined)
+                    .then(result => result.id)
         })
 }

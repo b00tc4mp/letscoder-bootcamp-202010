@@ -2,6 +2,8 @@ import './FindGames.sass'
 import logo from "../assets/img/logo.png"
 
 function FindGames({ results, onDetailGame }) {
+    
+    const API_URL = process.env.REACT_APP_API_URL
 
     const handleDetailGame = (id) => {
        
@@ -17,6 +19,7 @@ function FindGames({ results, onDetailGame }) {
                     <p className="results__p">description: {description}</p>
                     <p className="results__p">gameconsole: {gameconsole}</p>
                     <p className="results__p">budget: {budget}</p>
+                    <img src={`${API_URL}/games/${id}/images`} width="600px" />
                 </li>)}
         </ul>
     </div>

@@ -46,5 +46,9 @@ module.exports = {
 
     validatePrice(budget) {
         if (typeof budget !== 'string') throw new TypeError(`${budget} is not a number`)
+    },
+
+    validateFile(file) {
+        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
     }
 }

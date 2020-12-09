@@ -19,9 +19,9 @@ function SignUp({ onSignUp, onGoToSignIn }) {
                 <button className="sign-up__container__form__button"> SEND </button>
                 <hr />
             </form>
-            <p> DO YOU HAVE AN ACCOUNT? THEN
-                <Link to="/sign-in">
-                    <span className="sign-in__container__form__signin"> SIGN IN </span>
+            <p> DO YOU HAVE AN ACCOUNT? THEN&nbsp;  
+                <Link className="link" to="/sign-in">
+                    <span className="sign-up__container__form__sign-in">SIGN IN</span>
                 </Link>
             </p>
         </div>

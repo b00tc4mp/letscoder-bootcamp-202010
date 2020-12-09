@@ -1,9 +1,11 @@
 import { SignUp, SignIn, Home, Access } from './components'
 import{ registerUser, authenticateUser } from './logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
+import context from './logic/context'
+
 
 export default withRouter(props => {
-
+  
   const handleSignUp = (fullname, email, password) => {
     try {
       registerUser(fullname, email, password, error => {
@@ -23,46 +25,23 @@ export default withRouter(props => {
 
         sessionStorage.token = token
 
-        props.history.push('/')
+        props.history.push('/home')
       })
     } catch (error) {
       alert(error.message)
     }
   }
 
-  const handleGoToSignIn = () => {
-
-    props.history.push('/sign-in')
-  }
-
-  const handleGoToSignUp = () => {
-
-    props.history.push('/sign-up')
-  }
-
-  const handleGoToSearch = () => {
-
-    props.history.push('/')
-  }
-
   const { token } = sessionStorage
+
+  context.API_URL=process.env.REACT_APP_API_URL
 
   return (
       <header className="App-header">
-
-        <Route path='/access' render={() => token ? <Redirect to="/" /> : <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch}/>} />
-        <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} />} />
-        <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} />} />
-        <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/access" />} />
-
-  {/*     <button onClick={() => props.history.push('/items/1239711293712389/color/red')}>Go to one detail RED (demo)</button>
-      <button onClick={() => props.history.push('/items/1239711293712390/color/green')}>Go to one detail GREEN (demo)</button>
-      <button onClick={() => props.history.push('/items/1239711293712391/color/blue')}>Go to one detail BLUE (demo)</button>
-      
-      <Route path='/items/:itemId/color/:color' render={props => {const { match: { params: { itemId, color } } } = props
-      
-      return <Detail itemId={itemId} color={color} />
-      }} /> */}
+        <Route exact path='/' render={() => token ? <Home/> : <Access /> } />
+        <Route exact path='/sign-up' render={() =>token ? <Home/> : <SignUp onSignUp={handleSignUp} />} />
+        <Route exact path='/sign-in' render={() => token ? <Home/> : <SignIn onSignIn={handleSignIn} />} />
+        { <Route exact path='/home' render={() => token ? <Home/> : <Redirect to='/' />} /> }
       </header>
   );
 })

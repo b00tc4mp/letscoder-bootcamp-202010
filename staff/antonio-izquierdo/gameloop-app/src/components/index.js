@@ -6,7 +6,6 @@ import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
 import FindGames from './FindGames'
 import DetailGame from './DetailGame'
-import Detail from './Detail'
 
 export {
     SignUp,
@@ -17,5 +16,4 @@ export {
     SaveGame,
     FindGames,
     DetailGame,
-    Detail
 }

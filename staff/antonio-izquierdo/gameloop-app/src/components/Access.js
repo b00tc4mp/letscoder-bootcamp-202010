@@ -1,14 +1,19 @@
 import './Access.sass'
+import { Link } from 'react-router-dom'
 import logo from "../assets/img/logo.png"
 
-function Access({ onGoToSignIn, onGoToSignUp, onGoToSearch }) {
+function Access( ) {
     return <section className="access">
-        <img className="access__logo" src={ logo }/>
+        <img className="access__logo" src={logo} />
         <p> PAY LESS <br /> <br /> PLAY MORE</p>
         <div className="access__div">
-            <button onClick={onGoToSignUp} className="access__div__signbutton"> SIGN UP </button>
-            <button onClick={onGoToSearch} className="access__div__searchbutton"> SEARCH GAMES </button>
-            <button onClick={onGoToSignIn} className="access__div__signbutton"> SIGN IN</button>
+            <Link to='/sign-up'>
+                <button className="access__div__sign-up-button"> SIGN UP</button>
+            </Link>
+         
+            <Link to='/sign-in'>
+                <button className="access__div__sign-in-button"> SIGN IN</button>
+            </Link>
         </div>
     </section>
 }

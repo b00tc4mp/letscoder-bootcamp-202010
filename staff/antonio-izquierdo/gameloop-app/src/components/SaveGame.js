@@ -8,10 +8,11 @@ export default function SaveGame ({onSaveGame}) {
             name: { value: name },
             description: { value: description },
             gameconsole: { value: gameconsole},
-            budget: { value: budget}          
+            budget: { value: budget},
+            image       
         }} =event
 
-        onSaveGame(name, description, gameconsole, budget)
+        onSaveGame(name, description, gameconsole, budget, image.files[0])
     }
  
     return <section className="save-game">
@@ -38,6 +39,8 @@ export default function SaveGame ({onSaveGame}) {
             <option className="save-game__option" value="xbox one">Xbox One</option>
             </select>
             <button>Save</button>
+            <input type="file" id="image" name="image" />
+            <label htmlFor="image"> Insert Picture </label>
         </form>
     </section>
 
