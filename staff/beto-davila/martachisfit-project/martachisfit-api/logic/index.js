@@ -16,5 +16,6 @@ module.exports = {
     retrieveChosenArticle: require('./retrieve-chosen-article'),
     retrieveRecipe: require('./retrieve-recipe'),
     retrieveRecipes: require('./retrieve-recipes'),
-    retrieveSavedRecipes: require('./retrieve-saved-recipes')
+    retrieveSavedRecipes: require('./retrieve-saved-recipes'),
+    retrieveChosenDiet: require('./retrieve-chosen-diet')
 }

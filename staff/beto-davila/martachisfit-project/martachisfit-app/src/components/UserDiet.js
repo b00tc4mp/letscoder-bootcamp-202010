@@ -1,51 +1,12 @@
 import './styles/UserDiet.sass'
-import { retrieveDiet, retrieveUser } from '../logic'
-import { useEffect, useState } from 'react'
 
-export default function UserDiet ({}) {
+export default function UserDiet ({diet}) {
 
-    const [diet, setDiet] = useState()
-
-    const { token } = sessionStorage
-
-    useEffect(() => {
-
-        try {
-            retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
-
-                retrieveDiet(token, (error, diet) => {
-                    if (error) return alert(error.message)
-
-                    const {calories, type, macros, meals} = diet
-                    setDiet({calories, type, macros, meals})
-                })
-            })
-        } catch (error) {
-            alert(error.message)
-        }
-    }, [])
-
-        const handleGoToRandomDiet = () => {
-        try {
-            retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
-
-                retrieveDiet(token, (error, diet) => {
-                    if (error) return alert(error.message)
-
-                    const {calories, type, macros, meals} = diet
-                    setDiet({calories, type, macros, meals})
-                })
-            })
-        } catch (error) {
-            alert(error.message)
-        }
-    }
     const timeElapsed = Date.now();
     const today = new Date(timeElapsed);
 
     return <section className="user-diet">
+        <div className="user-diet-pseudo">
         <h2 className="user-diet__title">Para hoy <span className="user-diet__time">{today.toDateString()}</span></h2>
 
         <p className="user-diet__description" >....una selección diaria de acuerdo a las calorías objetivo en tu caso.</p>
@@ -72,6 +33,7 @@ export default function UserDiet ({}) {
             <p className="user-diet__meal">{diet.meals.meal4}</p> : <p className="user-diet__meal">No disponible. Cumplimos objetivo con las comidas anteriores.</p> }
         </div>}
         <hr className="user-diet__line"></hr>
-        <p className="user-diet__random">¿No te gusta tu dieta de hoy? ¡No hay drama!, te ofrecemos <a href="#" onClick = {handleGoToRandomDiet} className="user-diet__other">más</a> opciones ;)</p>
+        {/* <p className="user-diet__random">¿No te gusta tu dieta de hoy? ¡No hay drama!, te ofrecemos <a href="#" onClick = {handleGoToRandomDiet} className="user-diet__other">más</a> opciones ;)</p> */}
+        </div>
     </section>
 }

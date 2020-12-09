@@ -18,6 +18,8 @@ import addUserRecipes from './add-user-recipes'
 import retrieveChosenArticle from './retrieve-chosen-article'
 import retrieveRecipe from './retrieve-recipe'
 import retrieveRecipes from './retrieve-recipes'
+import retrieveChosenDiet from './retrieve-chosen-diet'
+import retrieveLikedRecipes from './retrieve-liked-recipes'
 
 export {
     caloriesCalc,
@@ -39,5 +41,7 @@ export {
     retrieveRecipe,
     retrieveRecipes,
     addUserRecipes,
-    retrieveSavedRecipes
+    retrieveSavedRecipes,
+    retrieveChosenDiet,
+    retrieveLikedRecipes
 }

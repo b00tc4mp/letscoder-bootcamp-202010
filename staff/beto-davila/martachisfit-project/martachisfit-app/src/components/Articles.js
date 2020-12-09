@@ -6,6 +6,7 @@ export default function Articles ({source, onGoToRandomArticle, onSaveArticle, o
     const { text, _id } = source
 
     return <>
+    <div className="article-pseudo">
     <div className="article__btns">
         <button onClick={() => onSaveArticle(_id)} className="article__read-later-btn article__btn">Leer más tarde</button>
         <button onClick={onGoToRandomArticle} className="article__read-other-btn article__btn">Muéstrame otro</button>
@@ -14,6 +15,7 @@ export default function Articles ({source, onGoToRandomArticle, onSaveArticle, o
     <article className="article">
     <ReactMarkdown source={text} />
     </article>
+    </div>
     </>
 }
 

@@ -1,11 +1,11 @@
 import './styles/Home.sass'
 import { useState } from 'react'
-import { retrieveUser, retrieveArticles, addUserArticles, retrieveSavedArticles, retrieveChosenArticle, retrieveRecipes, retrieveRecipe, addUserRecipes, retrieveSavedRecipes } from '../logic'
+import { retrieveUser, retrieveArticles, addUserArticles, retrieveSavedArticles, retrieveChosenArticle, retrieveRecipes, retrieveRecipe, addUserRecipes, retrieveSavedRecipes, retrieveChosenDiet, retrieveLikedRecipes } from '../logic'
 import logo from '../../src/logo.png'
 import facebook from './icons/social/facebook.png'
 import instagram from './icons/social/instagram.png'
 import linkedin from './icons/social/linkedin.png'
-import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe } from './index'
+import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe, Diets } from './index'
 
 export default function Home () {
     const [name, setName] = useState()
@@ -14,10 +14,13 @@ export default function Home () {
     const [message, setMessage] = useState()
     const [savedArticles, setSavedArticles] = useState()
     const [chosenArticle, setChosenArticle] = useState()
+    const [chosenDiet, setChosenDiet] = useState()
     const [recipes, setRecipes] = useState()
     const [recipe, setRecipe] = useState()
     const [savedRecipes, setSavedRecipes] = useState()
-     
+    const [calories, setCalories] = useState()
+    const [likedRecipe, setLikedRecipe] = useState()
+
     const { token } = sessionStorage
 
     const handleGoToWelcome = () => {
@@ -33,7 +36,7 @@ export default function Home () {
                 setName(fullname)
                 retrieveRecipes(token, (error, recipes) => {
                     if (error) return alert(error.message)
-        
+
                     setRecipes(recipes)
                     setView("recipes")
                 })
@@ -48,7 +51,19 @@ export default function Home () {
     }
 
     const handleGoToUserDiet = () => {
-        setView("user-diet")
+        try {
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
+    
+                const { calories } = user
+                setCalories(calories)
+                setView("diets")
+            })
+            
+        } catch (error) {
+            alert(error.message)
+            
+        }
     }
 
     const handleGoToBlog = () => {
@@ -64,7 +79,7 @@ export default function Home () {
         try {
             retrieveArticles(token, (error, articles) => {
                 if (error) return alert(error.message)
-    
+
                 setArticle(articles)
                 setView("articles")
             })     
@@ -93,10 +108,19 @@ export default function Home () {
             addUserRecipes(token, recipeId, error => {
                 if (error) return alert(error.message)
 
-                setMessage(true)
-                setTimeout(() => {
-                    setMessage(false)
-                }, 2000)
+                retrieveUser(token, (error, user) => {
+                    if (error) return alert(error.message)
+    
+                    const { savedRecipes } = user
+                    retrieveRecipe(recipeId, (error, recipe) => {
+                        if (error) return alert(error.message)
+    
+                        const { id: recipeId } = recipe
+                        savedRecipes.includes(recipeId) ? setLikedRecipe(true) : setLikedRecipe(false)
+                        setRecipe(recipe)
+                        setView('recipe')
+                    })  
+                })
             }) 
         } catch (error) {
             return alert(error.message)
@@ -146,14 +170,34 @@ export default function Home () {
     }
 
     const handleGoToRecipe = recipeId => {
-        retrieveRecipe(recipeId, (error, recipe) => {
-            if (error) return alert(error.message)
+        try {
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
 
-            setRecipe(recipe)
-            setView('recipe')
+                const { savedRecipes } = user
+                retrieveRecipe(recipeId, (error, recipe) => {
+                    if (error) return alert(error.message)
+
+                    const { id: recipeId } = recipe
+                    savedRecipes.includes(recipeId) ? setLikedRecipe(true) : setLikedRecipe(false)
+                    setRecipe(recipe)
+                    setView('recipe')
+                })  
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+    const handleRetrieveChosenDiet = dietType => {
+            retrieveChosenDiet(token, dietType, (error, chosenDiet) => {
+                if (error) alert(error.message)
+
+                setChosenDiet(chosenDiet)
+                setView('chosen-diet')
         })
     }
- 
+
     const handleGoToLogOut = () => {
         setView('logout')
     }
@@ -162,7 +206,7 @@ export default function Home () {
         delete sessionStorage.token
         window.location.reload(false)
     }
- 
+
 
     return <><div className="home">
     <div className="home__header">
@@ -179,10 +223,11 @@ export default function Home () {
     {view === 'welcome' && <Welcome />}
     {view === 'diet-design' && <DietDesign />}
     {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe}/>}
-    {view === 'recipe' && recipe && <Recipe onSaveRecipe={handleSaveRecipe} source={recipe} message={message}/>}
-    {view === 'user-diet' && <UserDiet onGoToUserDiet={handleGoToUserDiet}/>}
+    {view === 'recipe' && recipe && <Recipe onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe}/>}
+    {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToUserDiet={handleGoToUserDiet}/>}
+    {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} goal={calories}/>}
     {view === 'articles' && article && <Articles source={article} message={message} onGoToRandomArticle={handleGoToRandomArticle} onGoToProfile={handleGoToProfile} onSaveArticle={handleSaveArticle}/>}
-    {view === 'profile' && <UserProfile onLogout={handleGoToLogOut} savedRecipes={savedRecipes} name={name} savedArticles={savedArticles} onGoToChosenArticle={handleGoToChosenArticle}/>}
+    {view === 'profile' && <UserProfile onGoToRecipe={handleGoToRecipe} onLogout={handleGoToLogOut} savedRecipes={savedRecipes} name={name} savedArticles={savedArticles} onGoToChosenArticle={handleGoToChosenArticle}/>}
     {view === 'chosen-article' && <ChosenArticle source={chosenArticle} onReadArticle={handleReadArticle}/>}
     {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name}/>}
     </div>

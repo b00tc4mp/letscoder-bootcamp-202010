@@ -18,6 +18,7 @@ import RecipesImg from './Recipes'
 import Welcome from './Welcome'
 import Recipes from './Recipes'
 import Recipe from './Recipe'
+import Diets from './Diets'
 
 export {
     Landing,
@@ -39,5 +40,6 @@ export {
     RecipesImg,
     Welcome,
     Recipes,
-    Recipe
+    Recipe,
+    Diets
 }

@@ -41,6 +41,7 @@ export default function DietDesign () {
     }
 
     return <>
+            <div className="diet-design-pseudo">
             <section className="diet-design">
                 <h3 className="diet-design__title">Busca un alimento</h3>
                     <p className="diet-design__description"> Conoce tus alimentos y añádelos a tu registro diario para ser más consciente de tu consumo calórico.</p>
@@ -59,5 +60,6 @@ export default function DietDesign () {
                         {(error && view !== 'food-result') && <Feedback error={error}></Feedback>} 
                     </div>
             </section>
+        </div>
     </>
 }

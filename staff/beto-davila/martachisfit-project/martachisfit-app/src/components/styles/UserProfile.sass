@@ -1,30 +1,29 @@
 .user-profile
-    background-color: #e8ebeb
-    width: 70%
-    margin: .5rem auto
-    box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
-    padding: .5rem 0
+    // background-color: #e8ebeb
+    // margin: .5rem auto
+    // box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+    // padding: .5rem 0
 
     &__recipes-container
-        background-color: #dbdfdf
-        width: 80%
-        margin: auto
+        background-color: #eceeee
+        width: 70%
+        margin: 2rem auto
         border-radius: 1rem
-        padding: 0 0 .5rem 0
+        padding: 0 0 .3rem 0
 
     &__articles-container
-        background-color: #dbdfdf
-        width: 80%
-        margin: auto
+        background-color: #eceeee
+        width: 70%
+        margin: 2rem auto
         border-radius: 1rem
-        padding: 0 0 .5rem 0
+        padding: 0 0 .3rem 0
 
     &__record-container
-        background-color: #dbdfdf
-        width: 80%
-        margin: auto
+        background-color: #eceeee
+        width: 70%
+        margin: 2rem auto
         border-radius: 1rem
-        padding: 0 0 .5rem 0
+        padding: 0 0 .3rem 0
 
     &__question
         margin-top: 1rem
@@ -59,7 +58,7 @@
 
     &__articles-list
         list-style: none
-        font-size: .6rem
+        font-size: .8rem
         text-align: center
         margin: 0
 
@@ -74,14 +73,33 @@
         margin: 0 .2rem
         cursor: pointer
 
-    &__recipes-carousel-recipe > img
-        height: 100px
-        width: 100px
+    &__recipes-carousel-recipe > &__recipes-carousel-img
+        height: 110px
+        width: 150px
+        -webkit-filter: brightness(100%)
+
+    &__recipes-carousel-recipe > &__recipes-carousel-img:hover
+        -webkit-filter: brightness(55%)
+        -webkit-transition: all 1s ease
+        -moz-transition: all 1s ease
+        -o-transition: all 1s ease
+        -ms-transition: all 1s ease
+        transition: all 1s ease
+
+    // &__recipe-delete-btn
+    //     display: none
+
+    // &__recipes-carousel-recipe > &__recipes-carousel-img:hover + &__recipe-delete-btn, &__recipe-delete-btn:hover 
+    //     display: flex
+    //     position: absolute
+    //     top: 55%
+    //     left: 35%
+
 
 /* width */
 ::-webkit-scrollbar
   width: .3rem
-  height: .5rem
+  height: .4rem
 
 /* Track */
 ::-webkit-scrollbar-track 
@@ -92,4 +110,20 @@
 ::-webkit-scrollbar-thumb
   background: #489899
   border-radius: 10px
+
+.user-profile-pseudo
+    display: block
+    position: relative
+    height: 100vh
+    
+.user-profile-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-profile.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
             

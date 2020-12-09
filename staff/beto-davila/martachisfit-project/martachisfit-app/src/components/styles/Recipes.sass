@@ -1,4 +1,5 @@
 .recipes
+
     &__intro
         width: 75%
         margin: auto
@@ -9,6 +10,7 @@
 
     &__intro-title
         font-size: 2rem
+        margin: 0
 
     &__list
         list-style: none
@@ -22,9 +24,27 @@
 
     &__container
         background-color: #E3E5E5
-        width: 60%
+        width: 50%
         margin: .5rem auto
         padding: .1rem 0
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        overflow: auto
 
     &__item
         padding: .2rem 0
+
+.recipes-pseudo
+    display: block
+    position: relative
+    height: 85vh
+    
+.recipes-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-recipes.jpg")
+    opacity: .4
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1

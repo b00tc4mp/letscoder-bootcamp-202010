@@ -4,6 +4,7 @@ import './styles/Recipes.sass'
 export default function Recipes ({ onGoToRecipe, source }) {
 
     return <section className="recipes">
+        <div className="recipes-pseudo">
         <div className="recipes__intro">
             <h1 className="recipes__intro-title">Recetas saludables</h1>
             <p className="recipes__intro-description">No te pierdas las mejores recetas elaboradas con productos saludables y naturales, ¡dulces y saladas!</p>
@@ -15,10 +16,11 @@ export default function Recipes ({ onGoToRecipe, source }) {
                 <ReactMarkdown className="recipes__title" source={title} />
                 <img onClick={() => 
 
-                    onGoToRecipe(_id)} className="recipes__img" alt="recipe-item" src={urlPathImg} height="200" width="300" />
+                    onGoToRecipe(_id)} className="recipes__img" alt="recipe-item" src={urlPathImg} height="200" width="275" />
             </div>
         </li>)}
     </ul>}
+    </div>
     </section>
 
 

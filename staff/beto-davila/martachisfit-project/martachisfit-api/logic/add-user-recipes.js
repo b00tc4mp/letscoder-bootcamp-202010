@@ -26,7 +26,7 @@ module.exports = (userId, recipeId) => {
             // look for recipeId before adding. If it exists remove it, otherwise add it to 'savedRecipes' array
             if (savedRecipes.length) {
                 // Store index position
-                const index = savedRecipes.findIndex(Recipe => Recipe.toString() === recipeId)
+                const index = savedRecipes.findIndex(recipe => recipe.toString() === recipeId)
     
                 // if < 0, does not exist in array, add it, else, remove it with splice method
                 index < 0? savedRecipes.push(ObjectId.createFromHexString(recipeId)) : savedRecipes.splice(index, 1)

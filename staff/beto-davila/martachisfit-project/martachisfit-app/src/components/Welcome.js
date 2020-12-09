@@ -2,8 +2,9 @@ import './styles/Welcome.sass'
 
 export default function Welcome () {
 
-    return ( <> 
-    
+    return ( <>
+    <div className="welcome-pseudo"> 
+    <div className="welcome">
     <h1 className="welcome__title"> Acomódate.... </h1>
 
     <div className="welcome__container">
@@ -23,6 +24,8 @@ export default function Welcome () {
         <h3 className="welcome__subtitle">Información y consejos</h3>
         <p>El conocimiento es la clave del éxito. Aquí podrás encontrar las nociones básicas de alimentación y deporte para conseguir tu mejor versión</p>
         </div>
+    </div>
+    </div>
     </div>
 
     </>

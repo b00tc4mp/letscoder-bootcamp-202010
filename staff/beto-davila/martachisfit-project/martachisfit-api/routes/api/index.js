@@ -18,7 +18,8 @@ const {
     handleRetrieveChosenArticle,
     handleRetrieveRecipe,
     handleRetrieveRecipes,
-    handleRetrieveSavedRecipes
+    handleRetrieveSavedRecipes,
+    handleRetrieveChosenDiet
 } = require('./handlers/index')
 
 const router = new Router()
@@ -34,7 +35,7 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 // authenticate user
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 
-// add food to db
+// add food to db (not for users)
 // router.post('/api/foods', jsonBodyParser, withErrorHandling(handleAddFood))
 
 // retrieve saved food
@@ -54,6 +55,9 @@ router.patch('/api/users/articles/:articleId', jsonBodyParser, withErrorHandling
 
 // retrieve user diet
 router.get('/api/users/diets', withErrorHandling(handleRetrieveDiet))
+
+// retrieve chosen diet
+router.get('/api/users/diets/:dietType', withErrorHandling(handleRetrieveChosenDiet))
 
 // retrieve one recipe
 router.get('/api/recipes/:recipeId', withErrorHandling(handleRetrieveRecipe))

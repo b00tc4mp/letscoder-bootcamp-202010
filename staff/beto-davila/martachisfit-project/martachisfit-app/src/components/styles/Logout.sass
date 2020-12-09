@@ -1,19 +1,36 @@
 .logout
+    display: flex
     text-align: center
-    background-color: #e8ebeb
-    width: 90%
-    margin: 1rem auto
-    padding: 2rem 0
-    height: 50vh
+    flex-direction: column
+    // background-color: #e8ebeb
+    // margin: 1rem auto
+    // padding: 2rem 0
+
+    &__text
+        margin-top: 8rem
 
     &__bye
-        padding: 1rem
+        padding: 0
         font-size: 1rem
-
-    &__img
-        margin-top: 3rem
+        margin: 0
 
     &__signin
         margin: 1rem 0
         font-size: .8rem
         color: #303236
+
+.logout-pseudo
+    display: block
+    position: relative
+    height: 100vh
+    
+.logout-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-profile.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1

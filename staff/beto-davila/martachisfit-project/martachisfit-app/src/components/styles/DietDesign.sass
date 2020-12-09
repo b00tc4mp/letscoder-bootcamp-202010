@@ -20,14 +20,30 @@
         background-color: transparent
 
     &__search-form
-        padding: 1rem
+        padding: 1.5rem
 
     &__description
         width: 65%
         margin: auto
         line-height: 1.8rem
-        background-color: #edf1f5
+        background-color: #e6eaee
         padding: 1rem
         box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+.diet-design-pseudo
+    display: block
+    position: relative
+    height: 100vh
+    
+.diet-design-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-dietdesign.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
 
     

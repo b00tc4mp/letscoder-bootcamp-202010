@@ -1,7 +1,9 @@
 .welcome
+    // min-height: 100vh
 
     &__title
         text-align: center
+        margin: 0
 
     &__container
         width: 70%
@@ -11,19 +13,35 @@
         font-size: 1rem
 
     &__recipes
-        background-color: #e8ebeb
+        background-color: #d9dddd
         padding: .3rem 1rem
-        margin: 1rem 0
+        margin: 2rem 0
         box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
 
     &__diets
-        background-color: #e8ebeb
+        background-color: #d9dddd
         padding: .3rem 1rem
-        margin: 1rem 0
+        margin: 2rem 0
         box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
 
     &__tips
-        background-color: #e8ebeb
+        background-color: #d9dddd
         padding: .3rem 1rem
-        margin: 1rem 0
+        margin: 2rem 0
         box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+.welcome-pseudo
+    min-height: 100vh
+    display: block
+    position: relative
+
+.welcome-pseudo::after
+    content: ""
+    background-image: url("../images/background-img.png")
+    opacity: .4
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1

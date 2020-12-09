@@ -16,5 +16,6 @@ module.exports = {
     handleRetrieveChosenArticle: require('./handle-retrieve-chosen-article'),
     handleRetrieveRecipe: require('./handle-retrieve-recipe'),
     handleRetrieveRecipes: require('./handle-retrieve-recipes'),
-    handleRetrieveSavedRecipes: require('./handle-retrieve-saved-recipes')
+    handleRetrieveSavedRecipes: require('./handle-retrieve-saved-recipes'),
+    handleRetrieveChosenDiet: require('./handle-retrieve-chosen-diet')
 }

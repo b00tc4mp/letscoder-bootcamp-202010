@@ -1,7 +1,10 @@
 .article
     width: 75%
-    margin: auto
-    padding-bottom: 1rem
+    margin: 1rem auto
+    padding: .2rem
+    background-color: #dde2e2
+    box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+    min-height: 100vh
 
     &__btns
         display: flex
@@ -23,5 +26,38 @@
         font-size: 0.8rem
         margin-left: .4rem
 
+    &__added:focus
+        outline: none
+
+    &__read-later-btn
+        float: left
+        margin-top: 1rem
+
+    &__read-later-btn:focus
+        outline: none
+
+    &__read-other-btn
+        margin-top: 1rem
+
+    &__read-other-btn:focus
+        outline: none
+
 h3, h4
     text-align: center
+    margin: .7rem
+
+.article-pseudo
+    display: block
+    position: relative
+    height: 95vh
+    
+.article-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-article.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1

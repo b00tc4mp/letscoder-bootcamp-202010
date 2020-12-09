@@ -66,6 +66,12 @@ module.exports = {
         if (!query.trim().length) throw new Error('query is empty or blank')
     },
 
+    validateDietType(dietType) {
+        if (typeof dietType !== 'string') throw new TypeError(dietType + ' is not a diet type')
+
+        if (dietType !== 'mediterranean' && dietType !== 'keto' && dietType !== 'vegan') throw new Error('diet type is not "vegan" or "mediterranean" or "keto"')
+    },
+
     validateToken(token) {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 

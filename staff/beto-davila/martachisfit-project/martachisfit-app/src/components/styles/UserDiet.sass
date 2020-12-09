@@ -1,11 +1,9 @@
 .user-diet
-    background-color: #f0f3f3
-    width: 90%
-    margin: auto
+    min-height: 100vh
     
     &__title
         text-align: center
-        margin: .5rem 0
+        margin: 0
 
     &__time
         font-size: 1rem
@@ -29,7 +27,7 @@
         width: 75%
         margin: .5rem auto
         text-align: center
-        background-color: #e2e7e7
+        background-color: #eaf0f0
         padding: .2rem
         border-radius: 1rem
 
@@ -45,3 +43,19 @@
         border: 1px solid #0bb1ba
         width: 50%
         margin: auto
+
+.user-diet-pseudo
+    display: block
+    position: relative
+    min-height: 100vh
+    
+.user-diet-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-userdiet.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
