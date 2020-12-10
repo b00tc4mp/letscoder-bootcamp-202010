@@ -27,7 +27,7 @@ module.exports = (req, res, handleError) => {
 
   try {
     const { sub: ownerId } = jwt.verify(token, JWT_SECRET);
-
+    debugger;
     saveActivity(
       ownerId,
       activityId,

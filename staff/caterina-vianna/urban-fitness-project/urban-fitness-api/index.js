@@ -43,7 +43,10 @@ mongoose
 
     app.get("/*", (req, res) => res.status(404).send("Not found :("));
 
-    app.listen(port, () => logger.log(`server running on port ${port}`));
+    app.listen(port, () => {
+      console.log(`server running on port ${port}`);
+      logger.log(`server running on port ${port}`);
+    });
   })
   .catch((error) =>
     logger.log(error, "error", (error) => {

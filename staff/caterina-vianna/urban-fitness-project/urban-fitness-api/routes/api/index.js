@@ -7,6 +7,7 @@ const {
   handleAuthenticateUser,
   handleRetrieveUser,
   handleSaveActivity,
+  handleRetrieveActivity,
 } = require("./handlers");
 
 const withErrorHandling = require("./helpers/with-error-handling");
@@ -34,6 +35,8 @@ router.post(
   jsonBodyParser,
   withErrorHandling(handleSaveActivity)
 );
+
+router.get("/api/activity", withErrorHandling(handleRetrieveActivity));
 
 router.get("/api/users", withErrorHandling(handleRetrieveUser));
 

@@ -21,18 +21,17 @@ import Card from "./Card";
 import ProfileList from "./ProfileList";
 import CreateActivity from "./CreateActivity";
 import saveActivity from "../logic/save-activity";
-
+import retrieveActivity from "../logic/retrieve-activity";
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
-  const [activity, setActivity] = useState();
+  const [activities, setActivity] = useState();
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
       try {
         retrieveUser(token, (error, user) => {
           if (error) return Alert.alert(error.message);
-          debugger;
           const { firstName } = user;
           setName(firstName);
           setView("profile");
@@ -92,12 +91,13 @@ export default function Home({ token }) {
           activityDate,
           (error) => {
             if (error) return alert(error.message);
-
+            debugger;
             try {
-              retrieveActivity(token, (error, activity) => {
+              retrieveActivity(token, (error, activities) => {
+                debugger;
                 if (error) return alert(error.message);
 
-                setActivity(activity);
+                setActivity(activities);
               });
             } catch (error) {
               alert(error.message);

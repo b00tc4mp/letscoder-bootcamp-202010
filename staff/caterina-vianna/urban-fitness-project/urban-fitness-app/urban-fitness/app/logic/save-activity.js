@@ -11,7 +11,7 @@ export default function saveActivity(
   sport,
   repeat,
   spots,
-  date,
+  activityDate,
   callback
 ) {
   //TODO VALIDATIONS
@@ -33,7 +33,7 @@ export default function saveActivity(
       sport,
       repeat,
       spots,
-      date,
+      activityDate,
     }),
     (status, response) => {
       debugger;

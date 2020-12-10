@@ -4,8 +4,9 @@ const {
   validateTags,
   validateVisibility,
 } = require("./helpers/validations");
+//TODO VALIDATIONS
 const { ObjectId } = require("mongodb");
-/* const { NotFoundError } = require("notes-errors"); */
+const { NotFoundError } = require("../routes/api/helpers/with-error-handling");
 const { User, Activity } = require("../models");
 
 module.exports = (
@@ -27,15 +28,15 @@ module.exports = (
   //TODO validations
 
   return User.findById(ownerId).then((user) => {
-    /* if (!user) throw new NotFoundError(`user with id ${ownerId} not found`); */
-
+    if (!user) throw new NotFoundError(`user with id ${ownerId} not found`);
+    debugger;
     if (activityId) {
       debugger;
       return Activity.findById(activityId)
         .then((activity) => {
-          /*  if (!activity)
+          if (!activity)
             throw new NotFoundError(`activity with id ${activityId} not found`);
- */
+
           activityId.title = title;
           activityId.description = description;
           activityId.price = price;

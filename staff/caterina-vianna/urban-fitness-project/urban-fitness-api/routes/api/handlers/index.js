@@ -3,4 +3,5 @@ module.exports = {
   handleAuthenticateUser: require("./handle-authenticate-user"),
   handleRetrieveUser: require("./handle-retrieve-user"),
   handleSaveActivity: require("./handle-save-activity"),
+  handleRetrieveActivity: require("./handle-retrieve-activity"),
 };

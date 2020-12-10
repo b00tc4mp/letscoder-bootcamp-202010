@@ -878,3 +878,55 @@ info 2020-12-08T17:39:42.314Z - server running on port 4000
 info 2020-12-08T17:39:51.070Z - stopping server
 info 2020-12-08T17:40:05.333Z - starting server
 info 2020-12-08T17:40:05.413Z - server running on port 4000
+error 2020-12-09T10:39:08.901Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-user.js:16:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+info 2020-12-09T10:44:06.197Z - stopping server
+info 2020-12-09T10:44:09.912Z - starting server
+info 2020-12-09T10:44:09.992Z - server running on port 4000
+info 2020-12-09T10:51:07.707Z - stopping server
+info 2020-12-09T11:32:37.301Z - starting server
+info 2020-12-09T11:32:37.381Z - server running on port 4000
+info 2020-12-09T14:35:30.552Z - stopping server
+info 2020-12-09T14:38:18.077Z - starting server
+info 2020-12-09T14:38:22.706Z - server running on port 4000
+info 2020-12-09T15:03:47.173Z - starting server
+info 2020-12-09T15:03:47.256Z - server running on port 4000
+info 2020-12-09T15:03:51.388Z - stopping server
+info 2020-12-09T15:04:04.566Z - starting server
+info 2020-12-09T15:05:02.855Z - starting server
+info 2020-12-09T15:07:36.372Z - starting server
+info 2020-12-09T15:07:36.452Z - server running on port 4000
+info 2020-12-09T15:07:38.356Z - stopping server
+info 2020-12-09T15:07:53.340Z - starting server
+info 2020-12-09T15:07:55.258Z - server running on port 4000
+info 2020-12-09T15:23:28.599Z - starting server
+info 2020-12-09T15:23:29.759Z - server running on port 4000
+info 2020-12-09T15:25:32.946Z - starting server
+info 2020-12-09T15:25:34.999Z - server running on port 4000
+info 2020-12-09T15:27:23.075Z - starting server
+info 2020-12-09T15:27:24.059Z - server running on port 4000
+info 2020-12-09T15:30:44.924Z - starting server
+info 2020-12-09T15:30:46.004Z - server running on port 4000
+info 2020-12-09T15:46:26.909Z - starting server
+info 2020-12-09T15:46:27.730Z - server running on port 4000
+info 2020-12-09T15:50:12.818Z - starting server
+info 2020-12-09T15:50:12.900Z - server running on port 4000
+info 2020-12-10T10:40:04.000Z - stopping server
+info 2020-12-10T10:40:09.056Z - starting server
+info 2020-12-10T10:40:09.150Z - server running on port 4000
+info 2020-12-10T10:50:32.974Z - stopping server
