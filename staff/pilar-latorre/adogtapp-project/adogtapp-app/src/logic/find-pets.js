@@ -5,13 +5,27 @@ import context from './context'
 export default (function (token, queryShelter, city, queryPet, species, breed, callback) {
     
     validateCallback(callback)
-
+debugger
     //poner  validations
 
     const { API_URL } =  this
 
-    call('POST',  `${API_URL}/pets/find`, {'Content-type': 'application/json' },
-    JSON.stringify({ token, queryShelter, city, queryPet, species, breed }),
+    const queryParams = {}
+
+    if (queryShelter) queryParams.queryShelter = queryShelter
+    if (city) queryParams.city = city
+    if (queryPet) queryParams.queryPet = queryPet
+    if (species) queryParams.species = species
+    if (breed) queryParams.breed = breed
+    
+
+    const queryString = Object.keys(queryParams).map(key => `${key}=${queryParams[key]}`).join('&') 
+
+
+
+    call('GET', `${API_URL}/pets/?${queryString}`, 
+    {Authorization: `Bearer ${token}` },
+    '',
         (status, response) => {
             if (status === 0)
                 return callback(new Error('server error'))
@@ -26,3 +40,4 @@ export default (function (token, queryShelter, city, queryPet, species, breed, c
             callback(null, pets)
         })
 }).bind(context)
+

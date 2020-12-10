@@ -2,26 +2,27 @@ const { findPets } = require("../../../logic");
 
 const jwt = require("jsonwebtoken");
 
-
+debugger
 const {
   env: { JWT_SECRET }
 } = process;
 
 module.exports = (req, res, handleError) => {
 
- 
-  const {
-    body: { token, queryShelter, city, queryPet, species, breed }
+  let { headers: {authorization},
+    query: { queryShelter, city, queryPet, species, breed }
   } = req;
 
-  let shelterId
-
-  if (token) {
+  
+  let shelterId = null
+  
+  if (authorization) {
+    const token = authorization.replace('Bearer ', '')
+    if (token !== 'undefined'){
     const { sub } = jwt.verify(token, JWT_SECRET);
     shelterId = sub
-  } else {
-    const shelterId = undefined;
   }
+  } 
 
   try {
     findPets(shelterId, queryShelter, city, queryPet, species, breed)
