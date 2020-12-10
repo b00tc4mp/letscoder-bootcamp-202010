@@ -7,6 +7,7 @@ module.exports = new Schema({
     },
     owner: {
         type: ObjectId,
-        required: true
+        required: true,
+        ref: 'User'
     }
 })
