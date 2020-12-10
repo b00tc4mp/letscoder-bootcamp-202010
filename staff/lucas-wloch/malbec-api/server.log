@@ -500,3 +500,126 @@ info 2020-12-08T16:46:24.481Z - stopping server
 info 2020-12-08T17:12:30.961Z - starting server
 info 2020-12-08T17:12:31.322Z - server running on port 4000
 info 2020-12-08T18:00:25.116Z - stopping server
+info 2020-12-08T18:29:57.665Z - starting server
+info 2020-12-08T18:29:57.778Z - server running on port 4000
+info 2020-12-08T18:30:13.282Z - starting server
+info 2020-12-08T18:30:13.395Z - server running on port 4000
+info 2020-12-08T19:17:01.952Z - stopping server
+info 2020-12-09T08:11:14.216Z - starting server
+info 2020-12-09T08:11:14.667Z - server running on port 4000
+info 2020-12-09T08:21:53.797Z - stopping server
+info 2020-12-09T08:22:03.517Z - starting server
+info 2020-12-09T08:22:04.155Z - server running on port 4000
+info 2020-12-09T10:16:14.012Z - stopping server
+info 2020-12-09T10:16:23.349Z - starting server
+info 2020-12-09T10:16:24.350Z - server running on port 4000
+info 2020-12-09T10:42:57.048Z - stopping server
+info 2020-12-09T10:43:15.485Z - starting server
+info 2020-12-09T10:43:15.894Z - server running on port 4000
+info 2020-12-09T11:40:55.615Z - stopping server
+info 2020-12-09T11:40:58.988Z - starting server
+info 2020-12-09T11:40:59.136Z - server running on port 4000
+info 2020-12-09T11:43:36.328Z - stopping server
+info 2020-12-09T11:43:40.341Z - starting server
+info 2020-12-09T11:43:40.489Z - server running on port 4000
+info 2020-12-09T11:44:50.022Z - stopping server
+info 2020-12-09T11:44:58.171Z - starting server
+info 2020-12-09T11:44:58.307Z - server running on port 4000
+info 2020-12-09T11:45:50.451Z - starting server
+info 2020-12-09T11:45:50.639Z - server running on port 4000
+info 2020-12-09T11:46:55.815Z - starting server
+info 2020-12-09T11:46:55.921Z - server running on port 4000
+info 2020-12-09T14:25:34.763Z - stopping server
+info 2020-12-09T14:37:52.450Z - starting server
+info 2020-12-09T14:37:52.760Z - server running on port 4000
+info 2020-12-10T09:00:49.876Z - starting server
+info 2020-12-10T09:00:50.119Z - server running on port 4000
+info 2020-12-10T09:51:33.509Z - stopping server
+info 2020-12-10T09:51:36.488Z - starting server
+info 2020-12-10T09:51:36.598Z - server running on port 4000
+error 2020-12-10T09:52:17.747Z - TypeError: undefined is not a name
+    at validateProductName (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:84:45)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:9:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:17:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-10T09:54:55.956Z - TypeError: undefined is not a name
+    at validateProductName (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:84:45)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:9:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:17:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-10T09:55:01.862Z - stopping server
+info 2020-12-10T09:55:04.568Z - starting server
+info 2020-12-10T09:55:04.692Z - server running on port 4000
+info 2020-12-10T09:58:09.034Z - stopping server
+info 2020-12-10T10:35:17.134Z - starting server
+error 2020-12-10T10:35:17.834Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-product-image.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-product-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\index.js:8:29)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-10T10:35:17.848Z - stopping server
+info 2020-12-10T10:35:40.765Z - starting server
+error 2020-12-10T10:35:40.878Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-product-image.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-product-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\index.js:8:29)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-10T10:35:40.884Z - stopping server
+info 2020-12-10T10:36:37.476Z - starting server
+info 2020-12-10T10:36:37.634Z - server running on port 4000
+error 2020-12-10T10:39:04.177Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T14:22:19.599Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-10T15:56:20.123Z - stopping server

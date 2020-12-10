@@ -31,6 +31,12 @@ module.exports = {
         if (!id.trim().length) throw new ContentError('id is empty or blank')
 
     },
+    validateToken(token) {
+        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+        if (!token.trim().length) throw new ContentError('token is empty or blank')
+
+    },
 
     validateText(text) {
         if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
@@ -126,5 +132,10 @@ module.exports = {
 
     validateProductAvailable(available){
         if (!(available === true || available === false)) throw new TypeError('available has to be true or false')
+    },
+    
+    validateStream(stream) {
+        // TODO where the f*ck is the the class to validate this instance!!?
     }
+
 }

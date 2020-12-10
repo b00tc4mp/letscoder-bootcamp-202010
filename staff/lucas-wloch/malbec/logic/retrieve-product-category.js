@@ -1,12 +1,14 @@
 import call from '../utils/call'
 import { validateProductCategory } from './helpers/validations'
+import context from './context'
 
-
-const retrieveProducts = (category) => {
+const retrieveProductCategory = (category) => {
     validateProductCategory(category)
+    
+    const { API_URL } = context
 
     return new Promise((resolve, reject) => {
-        call('GET', `http://localhost:4000/api/products/${category}`, {},'',
+        call('GET', `${API_URL}/products/category/${category}`, {},'',
             (status, response) => {
                 if (status === 0) {
                     return reject(new Error('server down'))
@@ -23,4 +25,4 @@ const retrieveProducts = (category) => {
     })
 }
 
-export default retrieveProducts
+export default retrieveProductCategory

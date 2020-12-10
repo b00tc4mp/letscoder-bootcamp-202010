@@ -5,6 +5,7 @@ import Profile from './Profile'
 import SaveProducts from './SaveProducts'
 import MyProducts from './MyProducts'
 import EditProduct from './EditProduct'
+import CartaProduct from './CartaProduct'
 
 export  {
     NavBar,
@@ -13,5 +14,6 @@ export  {
     SaveProducts,
     Profile,
     MyProducts,
-    EditProduct
+    EditProduct,
+    CartaProduct
 }

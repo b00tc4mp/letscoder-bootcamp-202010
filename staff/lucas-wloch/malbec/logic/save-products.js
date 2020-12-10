@@ -1,8 +1,10 @@
 import call from '../utils/call'
-import { validateProductAlergenos, validateProductCategory, validateProductAvailable, validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateId } from './helpers/validations'
+import { validateProductAlergenos, validateProductCategory, validateProductAvailable, validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateId, validateToken } from './helpers/validations'
+import context from './context'
 
-const saveProducts = (productId, name, description, price, glutenFree, vegan, alergenos, category, available, callback) => {
+const saveProducts = (token, productId, name, description, price, glutenFree, vegan, alergenos, category, available, callback) => {
     if (typeof productId !== "undefined") validateId(productId)
+    if (typeof token !== "undefined") validateToken(token)
     validateProductName(name)
     validateProductDescription(description)
     validateProductPrice(price)
@@ -12,7 +14,9 @@ const saveProducts = (productId, name, description, price, glutenFree, vegan, al
     validateProductCategory(category)
     validateProductAvailable(available)
 
-        call('POST', 'http://localhost:4000/api/products', { 'Content-type': 'application/json' },
+    const { API_URL } = context
+
+        call('POST', `${API_URL}/products`, { 'Content-type': 'application/json', Authorization:`Bearer ${token}` },
             JSON.stringify({ productId, name, description, price, glutenFree, vegan, alergenos, category, available }),
             (status, response) => {
                 if (status === 0) {
@@ -22,7 +26,9 @@ const saveProducts = (productId, name, description, price, glutenFree, vegan, al
 
                     return callback(new Error(error))
                 }
-                callback(null)
+                const { productId } = JSON.parse(response)
+
+                callback(null, productId)
             })
     
 }

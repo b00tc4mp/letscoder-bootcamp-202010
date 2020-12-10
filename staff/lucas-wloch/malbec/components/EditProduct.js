@@ -21,7 +21,7 @@ const EditProduct = ({ product }) => {
 
         let { target: { name: { value: name }, description: { value: description }, price: { value: price },
             glutenFree: { value: glutenFree }, vegan: { value: vegan }, alergenos: { value: alergenos }, category: { value: category },
-            available: { value: available }
+            available: { value: available }, image
         } } = event
 
         glutenFree = normalizeBoolean(glutenFree)
@@ -30,24 +30,33 @@ const EditProduct = ({ product }) => {
 
         alergenos = alergenos.trim()
 
+        const { token } = sessionStorage
 
         if (name && description && category)
-            saveProducts(product.id, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available, error => {
-                if (error) return alert(error)
+            saveProducts(token, product.id, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available,
+                (error, productId) => {
+                    if (error) return alert(error.message)
 
-                setSuccess(true)
+                    if (productId && image.files[0])
+                        saveProductImage(token, productId, image.files[0], error => {
+                            if (error) return alert(error.message)
 
-                setTimeout(() => {
-                    setSuccess(false)
-                }, 4000);
-            })
+
+                            setSuccess(true)
+
+                            setTimeout(() => {
+                                setSuccess(false)
+                            }, 4000);
+                        })
+
+                })
         else return alert('name, description or category is missing')
 
     }
 
-    return <li key={product.id} className="editProduct">
+    return <li className="editProduct" key={product.id} >
         {success && <h1 className="editProduct__title" >OK, Product saved!</h1>}
-        <form className="editProduct__form" onSubmit={handleSubmit}>
+        <form key={product.id} className="editProduct__form" onSubmit={handleSubmit}>
             <div className="editProduct__div">
                 <p>Name:</p>
                 <input className="editProduct__inputName" type="text" id="name" name="name" defaultValue={product.name} placeholder="product Name" />
@@ -69,20 +78,20 @@ const EditProduct = ({ product }) => {
                     <label htmlFor="true">true</label>
                 </select> */}
                 <select className="editProduct__gluten-free" defaultValue={product.glutenFree} name="glutenFree" id="gluten-free">
-                <option className="editProduct__option" value={false} >No</option>
-                <option className="editProduct__option" value={true} >yes</option>
-            </select>
+                    <option className="editProduct__option" value={false} >No</option>
+                    <option className="editProduct__option" value={true} >Yes</option>
+                </select>
                 <p>Vegan:</p>
                 <select className="editProduct__vegan" name="vegan" defaultValue={product.vegan} id="vegan">
-                    <option className="editProduct__option" value="false">No</option>
-                    <option className="editProduct__option" value="true" >Yes</option>
+                    <option className="editProduct__option" value={false}>No</option>
+                    <option className="editProduct__option" value={true} >Yes</option>
                 </select>
             </div>
             {/* <div className="editProduct__div">
             </div> */}
             <div className="editProduct__div">
                 <p>Alergenos:</p>
-                <input className="editProduct__inputAlergenos" type="text" id="alergenos" name="alergenos" defaultValue={product.alergenos} placeholder="product Alergenos" />
+                <input className="editProduct__inputAlergenos" type="text" id="alergenos" name="alergenos" defaultValue={product.alergenos.join(' ')} placeholder="product Alergenos" />
             </div>
             <div className="editProduct__div">
                 <p>Category:</p>
@@ -107,6 +116,8 @@ const EditProduct = ({ product }) => {
                 </select>
                 {/* </div> */}
             </div>
+            <p>Image:</p>
+            <input type="file" id="image" name="image" />
 
             <button className="editProduct__button">Save</button>
 

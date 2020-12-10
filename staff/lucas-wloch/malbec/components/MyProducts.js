@@ -1,7 +1,7 @@
 import './MyProducts.sass'
 import { useState, useEffect } from 'react'
-import { retrieveProducts } from '../logic'
-import { EditProduct } from '.'
+import { retrieveProductCategory } from '../logic'
+import { EditProduct, SaveProducts } from '.'
 
 function MyProducts() {
     // const [products, setProducts] = useState()
@@ -16,7 +16,8 @@ function MyProducts() {
     const [aguasRefrescos, setProductsAguasRefrescos] = useState()
     const [vinos, setProductsVinos] = useState()
     const [cervezas, setProductsCervezas] = useState()
-
+    
+    const [add, setAdd] = useState()
     // useEffect(() => {
     // try {
     //     retrieveProducts()
@@ -29,12 +30,14 @@ function MyProducts() {
     // }, [])
 
     const toggleView = (event) => {
+        //// PREGUNTARLE A MANU SI SE PUEDE MEJORAR ESTO PARA QUE APAREZCAN LOS PRODUCTOS EN EL CODIGO FUENTE DE LA PAG ( CARGADOS DESDE EL SERVER)
         const { target } = event
+        
         if (!target.classList.contains("active"))
             switch (target.name) {
                 case "parrilla":
                     try {
-                        retrieveProducts("parrilla")
+                        retrieveProductCategory("parrilla")
                             .then(results => setProductsParrilla(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -43,7 +46,7 @@ function MyProducts() {
                     break;
                 case "pescados":
                     try {
-                        retrieveProducts("pescados")
+                        retrieveProductCategory("pescados")
                             .then(results => setProductsPescados(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -52,7 +55,7 @@ function MyProducts() {
                     break;
                 case "empanadas":
                     try {
-                        retrieveProducts("empanadas")
+                        retrieveProductCategory("empanadas")
                             .then(results => setProductsEmpanadas(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -61,7 +64,7 @@ function MyProducts() {
                     break;
                 case "ensaladas":
                     try {
-                        retrieveProducts("ensaladas")
+                        retrieveProductCategory("ensaladas")
                             .then(results => setProductsEnsaladas(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -70,7 +73,7 @@ function MyProducts() {
                     break;
                 case "entrantes-parrilla":
                     try {
-                        retrieveProducts("entrantes-parrilla")
+                        retrieveProductCategory("entrantes-parrilla")
                             .then(results => setProductsEntrantesParrilla(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -79,7 +82,7 @@ function MyProducts() {
                     break;
                 case "acompañamientos-guarniciones":
                     try {
-                        retrieveProducts("acompañamientos-guarniciones")
+                        retrieveProductCategory("acompañamientos-guarniciones")
                             .then(results => setProductsAcompañamientosGuarniciones(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -88,7 +91,7 @@ function MyProducts() {
                     break;
                 case "otras-sugerencias":
                     try {
-                        retrieveProducts("otras-sugerencias")
+                        retrieveProductCategory("otras-sugerencias")
                             .then(results => setProductsOtrasSugerencias(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -97,7 +100,7 @@ function MyProducts() {
                     break;
                 case "postres":
                     try {
-                        retrieveProducts("postres")
+                        retrieveProductCategory("postres")
                             .then(results => setProductsPostres(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -106,7 +109,7 @@ function MyProducts() {
                     break;
                 case "aguas-refrescos":
                     try {
-                        retrieveProducts("aguas-refrescos")
+                        retrieveProductCategory("aguas-refrescos")
                             .then(results => setProductsAguasRefrescos(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -115,7 +118,7 @@ function MyProducts() {
                     break;
                 case "vinos":
                     try {
-                        retrieveProducts("vinos")
+                        retrieveProductCategory("vinos")
                             .then(results => setProductsVinos(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -124,7 +127,7 @@ function MyProducts() {
                     break;
                 case "cervezas":
                     try {
-                        retrieveProducts("cervezas")
+                        retrieveProductCategory("cervezas")
                             .then(results => setProductsCervezas(results))
                             .catch(error => alert(error))
                     } catch (error) {
@@ -146,6 +149,12 @@ function MyProducts() {
         }
     }
 
+    const handleAdd = (event) => {
+        const category = event.target.parentElement.parentElement.previousElementSibling.name
+
+        setAdd(category)
+    }
+
 
     return <>
         <section className="myProducts" >
@@ -154,73 +163,96 @@ function MyProducts() {
             <button className="myProducts__acordion" onClick={toggleView} name="parrilla">Parrilla</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {parrilla && parrilla.length > 0 && parrilla.map(product => <EditProduct product={product}/>)}
+                    {parrilla && parrilla.length > 0 && parrilla.map(product => <EditProduct product={product} />)}
+                    {/* <AddOrRemove/> */}
+                    {/* <div className="myProducts__addOrRemove"> */}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="pescados">Pescados</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {pescados && pescados.length > 0 && pescados.map(product => <EditProduct product={product}/>)}
+                    {pescados && pescados.length > 0 && pescados.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="empanadas" >Empanadas</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {empanadas && empanadas.length > 0 && empanadas.map(product => <EditProduct product={product}/>)}
+                    {empanadas && empanadas.length > 0 && empanadas.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="ensaladas">Ensaladas</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {ensaladas && ensaladas.length > 0 && ensaladas.map(product => <EditProduct product={product}/>)}
+                    {ensaladas && ensaladas.length > 0 && ensaladas.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="entrantes-parrilla">Entrantes Parrilla</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {entrantesParrilla && entrantesParrilla.length > 0 && entrantesParrilla.map(product => <EditProduct product={product}/>)}
+                    {entrantesParrilla && entrantesParrilla.length > 0 && entrantesParrilla.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="acompañamientos-guarniciones">Acompañamientos y Guarniciones</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {acompañamientosGuarniciones && acompañamientosGuarniciones.length > 0 && acompañamientosGuarniciones.map(product => <EditProduct product={product}/>)}
+                    {acompañamientosGuarniciones && acompañamientosGuarniciones.length > 0 && acompañamientosGuarniciones.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="otras-sugerencias">Otras Sugerencias</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {otrasSugerencias && otrasSugerencias.length > 0 && otrasSugerencias.map(product => <EditProduct product={product}/>)}
+                    {otrasSugerencias && otrasSugerencias.length > 0 && otrasSugerencias.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="postres">Postres</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {postres && postres.length > 0 && postres.map(product => <EditProduct product={product}/>)}
+                    {postres && postres.length > 0 && postres.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="aguas-refrescos"> Aguas y Refrescos</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {aguasRefrescos && aguasRefrescos.length > 0 && aguasRefrescos.map(product => <EditProduct product={product}/>)}
+                    {aguasRefrescos && aguasRefrescos.length > 0 && aguasRefrescos.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
 
             <button className="myProducts__acordion" onClick={toggleView} name="vinos">Vinos</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {vinos && vinos.length > 0 && vinos.map(product => <EditProduct product={product}/>)}
+                    {vinos && vinos.length > 0 && vinos.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
-            
+
             {/* <button className="myProducts__acordion" onClick={toggleView} name="vinos">Vinos</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
@@ -236,7 +268,9 @@ function MyProducts() {
             <button className="myProducts__acordion" onClick={toggleView} name="cervezas">Cervezas</button>
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
-                    {cervezas && cervezas.length > 0 && cervezas.map(product => <EditProduct product={product}/>)}
+                    {cervezas && cervezas.length > 0 && cervezas.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
                 </ul>
             </div>
         </section>

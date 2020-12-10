@@ -1,12 +1,19 @@
 import { Layout, Feedback } from '../components'
 import '../components/Register.sass'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import  registerUser  from '../logic/register-user'
 
-
+import { useRouter } from 'next/router'
 
 const Register = () => {
+    const router = useRouter()
+
+    useEffect(() => {
+        const { token } = sessionStorage
+
+        if (token) return router.push('/')
+    }, [])
 
     const [error, setError] = useState()
     const [registerSuccess, setRegisterSuccess] = useState()

@@ -3,5 +3,7 @@ module.exports = {
     handleAuthenticateUser: require('./handle-authenticate-user'),
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleSaveProducts: require('./handle-save-products'),
-    handleRetrieveProducts: require('./handle-retrieve-products')
+    handleRetrieveProductCategory: require('./handle-retrieve-product-category'),
+    handleRetrieveProductById: require('./handle-retrieve-product-by-id'),
+    handleSaveProductImage: require('./handle-save-product-image')
 } 

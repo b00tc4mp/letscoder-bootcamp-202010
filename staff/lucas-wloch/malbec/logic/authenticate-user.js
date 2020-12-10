@@ -1,12 +1,16 @@
 import call  from '../utils/call'
 import { validateEmail, validatePassword, validateCallback } from './helpers/validations'
+import context from './context'
 
 const authenticateUser = (email, password, callback) => {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/users/auth', { 'Content-type': 'application/json' },
+    const { API_URL } = context
+
+    
+    call('POST', `${API_URL}/users/auth`, { 'Content-type': 'application/json' },
         JSON.stringify({ email, password }),
         (status, response) => {
             if (status === 0) {

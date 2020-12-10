@@ -1,12 +1,13 @@
 import  call  from '../utils/call'
 import { validateToken, validateCallback } from './helpers/validations'
-
+import context from './context'
 
 function retrieveUser(token,callback){
     validateToken(token)
     validateCallback(callback)
-
-    call('GET','http://localhost:4000/api/users',
+    const { API_URL } = context
+    
+    call('GET',`${API_URL}/users`,
     {Authorization:`Bearer ${token}`},'',function(status,response){
         if(status === 0){
             callback(new Error('server down'))
