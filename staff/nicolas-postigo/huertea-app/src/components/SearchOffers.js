@@ -1,7 +1,7 @@
 
 import {findOffer} from '../logic'
 import './FindOffer'
-
+import './SearchOffers.sass'
 
 function SearchOffers({onGoSearcher}){
 
@@ -26,7 +26,7 @@ function SearchOffers({onGoSearcher}){
     
         return (
             <>
-                <form className="search" onSubmit={(event) => event.preventDefault()}>
+                <form className="searchhub" onSubmit={(event) => event.preventDefault()}>
                     <input
                         className="searcher" type="text" name="query" placeholder="🔍 Busca en huertea"
                         onChange={(event) => (query = event.target.value)}

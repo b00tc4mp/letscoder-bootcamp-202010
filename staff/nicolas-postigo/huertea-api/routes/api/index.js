@@ -11,7 +11,8 @@ const {
     handleFindOffer,
     handleSaveOfferImage,
     handleRetrieveOfferImage,
-    handleDeleteOffer
+    handleDeleteOffer,
+    handleRetrieveUserOffers
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -38,4 +39,5 @@ router.get('/api/offers/:offerId/pics', withErrorHandling(handleRetrieveOfferIma
 
 router.delete('/api/offer', jsonBodyParser, withErrorHandling(handleDeleteOffer))
 
+router.get('/api/offers', withErrorHandling(handleRetrieveUserOffers))
 module.exports = router

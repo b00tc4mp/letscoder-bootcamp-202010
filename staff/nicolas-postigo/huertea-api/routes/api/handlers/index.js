@@ -10,5 +10,6 @@ module.exports = {
     handleFindOffer: require('./handle-find-offer'),
     handleSaveOfferImage: require('./handle-save-image'),
     handleRetrieveOfferImage: require('./handle-retrieve-image'),
-    handleDeleteOffer: require('./handle-delete-offer')
+    handleDeleteOffer: require('./handle-delete-offer'),
+    handleRetrieveUserOffers: require('./handle-retrieve-user-offers')
 }

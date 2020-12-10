@@ -453,3 +453,61 @@ error 2020-12-09T12:56:04.227Z - MongoError: E11000 duplicate key error collecti
     at Socket.ondata (_stream_readable.js:719:22)
     at Socket.emit (events.js:314:20)
     at addChunk (_stream_readable.js:298:12)
+info 2020-12-09T14:42:03.477Z - stopping server
+info 2020-12-09T14:42:17.430Z - starting server
+info 2020-12-09T14:42:17.940Z - server running on port 4000
+info 2020-12-09T15:01:50.784Z - stopping server
+info 2020-12-09T15:02:00.716Z - starting server
+info 2020-12-09T15:02:00.986Z - server running on port 4000
+error 2020-12-09T16:57:47.900Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "jndfijj" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-09T19:15:30.881Z - stopping server
+info 2020-12-09T19:15:46.370Z - starting server
+info 2020-12-09T19:15:46.936Z - server running on port 4000
+info 2020-12-09T20:00:26.360Z - starting server
+info 2020-12-09T20:00:27.022Z - server running on port 4000
+error 2020-12-09T20:01:31.550Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "2 kilos de tomates" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-10T09:25:24.623Z - starting server
+info 2020-12-10T09:25:25.059Z - server running on port 4000
+info 2020-12-10T09:37:26.200Z - starting server
+info 2020-12-10T09:37:26.541Z - server running on port 4000
+info 2020-12-10T09:38:06.592Z - stopping server
+info 2020-12-10T09:38:17.799Z - starting server
+info 2020-12-10T09:38:18.072Z - server running on port 4000
+info 2020-12-10T09:45:07.124Z - stopping server
+info 2020-12-10T09:45:21.906Z - starting server
+info 2020-12-10T09:45:22.202Z - server running on port 4000
+error 2020-12-10T10:38:14.315Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-10T10:40:46.921Z - stopping server

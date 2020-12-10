@@ -2,7 +2,8 @@ import React from 'react'
 import './Register.sass'
 
 
-function Register({ onRegister }) {
+function Register({ onRegister, history }) {
+    console.log({history})
     return <sections>
             <h1>¡Únete a huertea!</h1>
         <form onSubmit={event => {

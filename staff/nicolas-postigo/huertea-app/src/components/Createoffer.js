@@ -8,7 +8,7 @@ function Createoffer({ backHub, offername, titleoffer, onCreateoffer, price }) {
             const { target: { offername: { value: offername }, titleoffer: { value: titleoffer }, price: { value: price }, pic } } = event
 
 
-            onCreateoffer(offername, titleoffer, price, pic.files[0])
+            onCreateoffer({offername, titleoffer, price, pic: pic.files[0]})
         }}>
             <button className="backhub" onclick={backHub}>&#128072;</button>
 
