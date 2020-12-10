@@ -14,7 +14,7 @@ module.exports = function (ownerId) {
         .then((user) => {
             if (user) {
 
-                const cursor = Offer.find({ owner: _id }).sort({ date: -1 }); 
+                const cursor = Offer.find({ owner: ownerId }).sort({ date: -1 }); 
 
                 return cursor.lean()
                     .then(_offers => {

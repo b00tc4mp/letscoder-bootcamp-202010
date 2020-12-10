@@ -153,18 +153,18 @@ function App(props) {
 
 
   const handleRetrieveUserOffers = () => {
-    debugger
+  
     try {
 
       retrieveUserOffer(sessionStorage.token, (error, offersResult) => {
         if (error) return alert(error.message)
-
+debugger
         setUseroffers(offersResult)
+        props.history.push('/hub')
 
       })
 
 
-      props.history.push('/hub')
 
 
     } catch (error) {

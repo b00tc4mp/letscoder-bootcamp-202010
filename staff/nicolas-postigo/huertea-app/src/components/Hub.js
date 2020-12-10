@@ -45,7 +45,7 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, offers, u
 return <sections>
         <div>
         {/* <button onClick={(evento)=>onRetrieveUserOffers(evento)} className="retrieve-offer">mis ofertas &#127806;</button> */}
-        <button onClick={onRetrieveUserOffers} className="retrieve-offer">mis ofertas &#127806;</button>
+        <button onClick={()=>{onRetrieveUserOffers(); handleGoUserOffers()}} className="retrieve-offer">mis ofertas &#127806;</button>
     </div>
     <form className="search_form" onSubmit={function (event) {
         event.preventDefault()
@@ -59,7 +59,7 @@ return <sections>
     <div>
         <button onClick={onGoCreateoffer} className="offer">crea tu oferta &#127806;</button>
     </div>
-    <SearchOffers onGoSearcher={handleGoSearcher} onGoUserOffers={handleGoUserOffers} />
+    <SearchOffers onGoSearcher={handleGoSearcher} />
     {/* <Link to ='/register'>tu</Link> */}
     {view === 'offersfound' && <FindOffer results={results} onGoDetail={handleGoDetail} />}
 

@@ -511,3 +511,10 @@ info 2020-12-10T09:45:22.202Z - server running on port 4000
 error 2020-12-10T10:38:14.315Z - AuthError: wrong credentials
     at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
 info 2020-12-10T10:40:46.921Z - stopping server
+info 2020-12-10T10:46:31.451Z - starting server
+info 2020-12-10T10:46:31.843Z - server running on port 4000
+info 2020-12-10T10:49:21.543Z - starting server
+info 2020-12-10T10:49:22.175Z - server running on port 4000
+info 2020-12-10T11:19:09.917Z - stopping server
+info 2020-12-10T11:19:17.262Z - starting server
+info 2020-12-10T11:19:17.566Z - server running on port 4000

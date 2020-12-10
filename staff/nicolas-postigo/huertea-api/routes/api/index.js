@@ -39,5 +39,5 @@ router.get('/api/offers/:offerId/pics', withErrorHandling(handleRetrieveOfferIma
 
 router.delete('/api/offer', jsonBodyParser, withErrorHandling(handleDeleteOffer))
 
-router.get('/api/offers', withErrorHandling(handleRetrieveUserOffers))
+router.get('/api/myoffers', withErrorHandling(handleRetrieveUserOffers))
 module.exports = router
