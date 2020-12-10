@@ -10,6 +10,7 @@ import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi'
 import { Line } from 'rc-progress'
 import { Modal } from '../components/Modal'
 import { MapGetPos } from '../components/MapGetPos'
+import TimeInput from 'react-time-input'
 
 const ICON_SIZE = '22px'
 
@@ -49,7 +50,7 @@ export const SearchCreate = () => {
     setPoiEndGame(poi)
   }
 
-  const handleTime = (event, time) => {
+  const handleTime = (time) => {
     console.log(typeof time)
     setTime(time)
   }
@@ -95,7 +96,11 @@ export const SearchCreate = () => {
                         <Input {...nameSearch} placeholder='Nombre de la búqueda' />
                         <Input onClick={showModalBeginGame} placeholder='Ubicación de inicio' value={poiBeginGame} />
                         <Input onClick={showModalEndGame} placeholder='Ubicación de fin' value={poiEndGame} />
-                        <Input placeholder='Duración' />
+                        <TimeInput
+                          initTime={time}
+                          className='time-input'
+                          onTimeChange={handleTime}
+                        />
                         <p className='switch-wrapper'>
                           <Switch
                             isOn={privateSearch}
@@ -125,8 +130,18 @@ export const SearchCreate = () => {
                     id='quizStep'
                     render={({ previous }) => (
                       <div>
-                        <h1>Dumbledore</h1>
-                        <button className='btn btn-previous' onClick={previous}>Anterior <BiChevronsLeft size={ICON_SIZE} /></button>
+                        <div className='game-feature'>
+                          {time && <div className='game-feature__time'>
+                            <div>{time}</div>
+                                   </div>}
+                          <img src='https://i.ytimg.com/vi/gPUQwk_pjTg/maxresdefault.jpg' />
+                          <div>
+                            {nameSearch.value && <p className='game-feature__title'>{nameSearch.value}</p>}
+                            {suitableChilds && <p className='game-feature__tag'>Apta para niños</p>}
+                            {privateSearch && <p className='game-feature__tag'>Búsqueda privada</p>}
+                          </div>
+                        </div>
+                        <button className='btn btn-previous' onClick={previous}><BiChevronsLeft size={ICON_SIZE} />Anterior</button>
                       </div>
                     )}
                   />

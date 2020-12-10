@@ -41,6 +41,7 @@
     "react-leaflet": "^3.0.2",
     "react-slick": "^0.27.13",
     "react-step-progress": "^1.0.3",
+    "react-time-input": "0.0.19",
     "react-toastify": "^6.1.0",
     "styled-components": "^5.2.1"
   },
