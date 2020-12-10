@@ -7,7 +7,8 @@ import { retrieveUser } from '../logic';
 import { editUser } from '../logic';
 //Screens
 import ArtistProfileScreen from './ArtistProfileScreen'
-import PromoterProfileScreen from './ArtistProfileScreen'
+import PromoterProfileScreen from './PromoterProfileScreen'
+
 import EditProfileScreen from './EditProfileScreen'
 
 
@@ -25,10 +26,11 @@ export default function Home({ onHandleLogout }) {
               
 
                 setUser(user)
-                if (user.role === 'ARTIST')
-                setView('artist-profile')
-                else (user.role === 'PROMOTER')
-                setView('promoter-profile')
+                if (user.role === 'ARTIST'){
+                setView('artist-profile')}
+                  else {
+                
+                setView('promoter-profile')}
             })
         } catch (error) {
             Alert.alert(error.message)
@@ -75,8 +77,8 @@ export default function Home({ onHandleLogout }) {
   return (
 
     <View>
-      { view ===  'artist-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
-      { view ===  'promoter-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
+      { view ===  'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
+      { view ===  'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
       { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile}/>}
     </View>
     

@@ -2,8 +2,8 @@ import React from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, user }) {
-    if (user.role === 'ARTIST')
+function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onGoToSearch, onGoToCreateEvent, user }) {
+    if (user.role === 'PROMOTER')
         return (
 
             <SafeAreaView style={styles.artistProfileContainer}>
@@ -40,22 +40,22 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, u
                                     <TouchableOpacity onPress={() => Linking.openURL(user.youtubeLink)}>
                                         <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
                                     </TouchableOpacity>
-
-                                    <TouchableOpacity onPress={() => Linking.openURL(user.bandcampLink)}>
-                                        <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
-                                    </TouchableOpacity>
-
-                                    <TouchableOpacity onPress={() => Linking.openURL(user.spotifyLink)}>
-                                        <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
-                                    </TouchableOpacity>
-
                                 </View>
 
                             </View>
+                            <TouchableOpacity onPress={onGoToSearch}>
+                                <Text style={styles.petitionsButton}>Search!</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={onGoToCreateEvent}>
+                                <Text style={styles.petitionsButton}>Create Event :)</Text>
+                            </TouchableOpacity>
+                            
 
                             <TouchableOpacity onPress={onGoToPetitions}>
                                 <Text style={styles.petitionsButton}>Petitions</Text>
                             </TouchableOpacity>
+
 
                       
                     </ScrollView>
