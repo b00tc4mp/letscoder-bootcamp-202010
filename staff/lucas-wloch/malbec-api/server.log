@@ -623,3 +623,73 @@ error 2020-12-10T14:22:19.599Z - ConflictError: product with name a already exis
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-10T15:56:20.123Z - stopping server
+info 2020-12-10T18:54:46.061Z - starting server
+error 2020-12-10T18:54:46.150Z - Error: Cannot find module './retrieve-product-image'
+Require stack:
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-register-user.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\index.js:9:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-10T18:54:46.160Z - stopping server
+info 2020-12-10T18:57:03.114Z - starting server
+info 2020-12-10T18:57:03.537Z - server running on port 4000
+error 2020-12-10T18:57:09.645Z - AuthError: wrong credentials
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\authenticate-user.js:15:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:03:38.308Z - NotFoundError: product with id 5fd086f66cf72549d007e495 not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\retrieve-product-by-id.js:15:31
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:03:38.311Z - NotFoundError: product with id 5fd09854e85f215b78c5bae4 not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\retrieve-product-by-id.js:15:31
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:03:38.683Z - NotFoundError: product with id 5fd086f66cf72549d007e495 not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\retrieve-product-by-id.js:15:31
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:03:38.691Z - NotFoundError: product with id 5fd09854e85f215b78c5bae4 not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\retrieve-product-by-id.js:15:31
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:08:44.613Z - ConflictError: product with name Atun Rojo already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:11:10.611Z - ConflictError: product with name Vacio already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:11:53.136Z - ConflictError: product with name Vacio already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:12:49.952Z - ConflictError: product with name Vacio already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:20:29.075Z - ConflictError: product with name coca cola already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:31:56.281Z - ConflictError: product with name Trumpeter already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-10T19:32:17.314Z - ConflictError: product with name Trumpeter already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-10T20:49:15.203Z - stopping server
+info 2020-12-10T20:49:18.573Z - starting server
+info 2020-12-10T20:49:18.725Z - server running on port 4000
+info 2020-12-10T21:39:46.677Z - stopping server

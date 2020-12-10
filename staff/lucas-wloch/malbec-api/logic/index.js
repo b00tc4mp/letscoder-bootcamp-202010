@@ -5,6 +5,6 @@ module.exports = {
     saveProducts: require('./save-products'),
     retrieveProductCategory: require('./retrieve-product-category'),
     retrieveProductById: require('./retrieve-product-by-id'),
-    saveProductImage: require('./save-product-image'),
-    retrieveProductImage: require('./retrieve-product-image')
+    saveProductImage: require('./save-product-image')
+    // retrieveProductImage: require('./retrieve-product-image')
 } 

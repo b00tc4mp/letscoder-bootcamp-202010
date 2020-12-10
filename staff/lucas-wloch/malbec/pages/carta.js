@@ -3,24 +3,75 @@ import '../components/Carta.sass'
 import Image from 'next/image'
 // import { retrieveProducts } from '../api/logic'
 import { useEffect, useState } from 'react'
-import { retrieveProductById } from '../logic'
+import { retrieveProductCategory } from '../logic'
+
+// var platosPrincipales = ['Platos Principales', {
+//     "id": "5fd270466e06c444d854d6c3",
+//     "available": true,
+//     "alergenos": [],
+//     "name": "Entraña",
+//     "description": "Pieza de 400gr asada en parrilla a leña",
+//     "price": 13,
+//     "glutenFree": true,
+//     "vegan": false,
+//     "category": "parrilla"
+// }, {
+//         "id": "5fd278456e06c444d854d6cd",
+//         "available": true,
+//         "alergenos": [],
+//         "name": "Empanada de Carne",
+//         "description": "Empanada de carne cortada a cuchillo",
+//         "price": 3,
+//         "glutenFree": false,
+//         "vegan": false,
+//         "category": "empanadas"
+//     }]
+// var platosSecundarios = ['Platos Secundarios', {
+//     "id": "5fd278b66e06c444d854d6ce",
+//     "available": true,
+//     "alergenos": [],
+//     "name": "Ensalada Rucula ",
+//     "description": "Ensalada de Rucula, Jamon Iberico y queso parmecciano",
+//     "price": 9,
+//     "glutenFree": false,
+//     "vegan": false,
+//     "category": "ensaladas"
+// }, {
+//         "id": "5fd274b56e06c444d854d6c9",
+//         "available": true,
+//         "alergenos": [],
+//         "name": "Patatas Fritas",
+//         "description": "porcion de patatas fritas",
+//         "price": 6,
+//         "glutenFree": true,
+//         "vegan": true,
+//         "category": "acompañamientos-guarniciones"
+//     }]
+
+// var carta = [platosPrincipales, platosSecundarios]
 
 
 const Carta = () => {
-    const [cartaProducts, setCartaProducts] = useState()
-    const [cartaTitles, setCartaTitles] = useState()
-    // carta = {
-    //     'Platos-Principales': ["5fd086f66cf72549d007e495","5fd09854e85f215b78c5bae4"]
-    // }
+    const [carta, setCarta] = useState([])
 
     useEffect(() => {
-        var ProductIds = ["5fd086f66cf72549d007e495", "5fd09854e85f215b78c5bae4", "5fd086f66cf72549d007e495", "5fd09854e85f215b78c5bae4"]
 
-        const retrievals = ProductIds.map(id => retrieveProductById(id))
+        Promise.all([
+            retrieveProductCategory('parrilla')
+                .then(products => {
+                    products.splice(0, 0, 'Parrilla')
+                    return products
+                }).catch(alert)
+            ,
+            retrieveProductCategory('empanadas')
+                .then(products => {
+                    products.splice(0, 0, 'Empanadas')
+                    return products
+                }).catch(alert)
+        ]).then(carta => {
+            setCarta(carta)
+        }).catch(alert)
 
-        Promise.all(retrievals)
-            .then(products => setCartaProducts(products))
-            .catch(alert)
     }, [])
 
     return <Layout>
@@ -31,22 +82,26 @@ const Carta = () => {
                     background-color: white;
                 `}
                 </style>
-                <button onClick={() => { debugger }}>hola</button>
-                {cartaProducts && cartaProducts.length > 0 && <ul className="carta__ul">
-                {/* <ul> */}
-                    {cartaProducts.map(
-                        ({ id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                            <h4 className="carta__name">{name}hola</h4>
+                {/* <button onClick={() => { debugger }}>hola</button> */}
+                {/* {cartaProducts && cartaProducts.length > 0 && <ul className="carta__ul"> */}
+                {carta.map(section => <>
+                    {/* <button onClick={() => { debugger }}>hola</button> */}
+                    <h2>{section ? section.splice(0, 1)[0] : ''}</h2>
+                    <ul className="carta__ul">
+                        {/* <ul> */}
+                        {section && section.map(({ id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
                             <p className="carta__description">{description}</p>
-                            <p className="carta__price">{price}</p>
-                            <p className="carta__glutenFree">{glutenFree? "glutenFree" : "not glutenFree"}</p>
-                            <p className="carta__vegan">{vegan? "vegan" : "not vegan"}</p>
+                            <p className="carta__price">{price}€</p>
+                            <p className="carta__glutenFree">{glutenFree ? "glutenFree" : "not glutenFree"}</p>
+                            <p className="carta__vegan">{vegan ? "vegan" : "not vegan"}</p>
                             <p className="carta__alergenos">{alergenos}</p>
                             <p className="carta__category">{category}</p>
-                            <p className="carta__available">{available? "available" : "not available"}</p>
+                            <p className="carta__available">{available ? "available" : "not available"}</p>
                         </li>)}
-                {/* </ul> */}
-                </ul>}
+                    </ul>
+                </>)}
+                {/* </ul>} */}
             </div>
         </div>
     </Layout>
