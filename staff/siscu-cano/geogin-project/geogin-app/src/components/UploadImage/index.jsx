@@ -7,19 +7,15 @@ import NoImage from '../../assets/images/no-image.png'
 // Test
 import { uploadImage } from '../../logic'
 
-export const UploadImage = () => {
+export const UploadImage = ({ onUploadImage }) => {
   const [pictures, setPictures] = useState([])
   const [previewUrl, setPreviewUrl] = useState([NoImage])
 
   const handleUploadImage = picture => {
     setPictures([...pictures, picture])
-
     try {
       uploadImage(picture, (error, response) => {
-        console.log(error)
-        console.log(response)
         if (error) {
-          console.log(error)
           toast.error(`⛔️ a${error.message}!`, {
             position: 'top-center',
             autoClose: 5000,
@@ -29,8 +25,8 @@ export const UploadImage = () => {
             draggable: false
           })
         } else {
-          console.log(response.uploadResponse.url)
           setPreviewUrl(response.uploadResponse.url)
+          onUploadImage(response.uploadResponse.url)
         }
       })
     } catch (error) {

@@ -11,17 +11,20 @@ import { Line } from 'rc-progress'
 import { Modal } from '../components/Modal'
 import { MapGetPos } from '../components/MapGetPos'
 import TimeInput from 'react-time-input'
+import NoImage from '../assets/images/no-image.png'
 
 const ICON_SIZE = '22px'
 
 export const SearchCreate = () => {
   const nameSearch = useInputValue('')
+  const descriptionSearch = useInputValue('')
   const [privateSearch, setPrivateSearch] = useState(false)
   const [suitableChilds, setSuitableChilds] = useState(false)
   const [poiBeginGame, setPoiBeginGame] = useState()
   const [poiEndGame, setPoiEndGame] = useState()
   const [showModalBegin, setShowModalBegin] = useState(false)
   const [showModalEnd, setShowModalEnd] = useState(false)
+  const [picture, setPicture] = useState(NoImage)
   const [time, setTime] = useState('00:00')
 
   useBodyClass('searchcreate')
@@ -51,8 +54,11 @@ export const SearchCreate = () => {
   }
 
   const handleTime = (time) => {
-    console.log(typeof time)
     setTime(time)
+  }
+
+  const handleImage = (image) => {
+    setPicture(image)
   }
 
   return (
@@ -83,7 +89,7 @@ export const SearchCreate = () => {
                     render={({ next }) => (
                       <div>
                         <p className='description'>Inserta la imagen que deseas que aparezca como portada de la búsqueda, tambien aparecerá en los listados.</p>
-                        <UploadImage />
+                        <UploadImage onUploadImage={handleImage} />
                         <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
                       </div>
                     )}
@@ -93,7 +99,8 @@ export const SearchCreate = () => {
                     render={({ next, previous }) => (
                       <div>
                         <p className='description'>Rellena los siguientes campos sobre la BÚSQUEDA:</p>
-                        <Input {...nameSearch} placeholder='Nombre de la búqueda' />
+                        <Input {...nameSearch} placeholder='Título' />
+                        <Input {...descriptionSearch} placeholder='Descripción' />
                         <Input onClick={showModalBeginGame} placeholder='Ubicación de inicio' value={poiBeginGame} />
                         <Input onClick={showModalEndGame} placeholder='Ubicación de fin' value={poiEndGame} />
                         <TimeInput
@@ -106,7 +113,6 @@ export const SearchCreate = () => {
                             isOn={privateSearch}
                             onColor='#3780e9'
                             handleToggle={() => {
-                              console.log('private')
                               setPrivateSearch(!privateSearch)
                             }}
                           /> Búsqueda privada
@@ -116,11 +122,24 @@ export const SearchCreate = () => {
                             isOn={suitableChilds}
                             onColor='#3780e9'
                             handleToggle={() => {
-                              console.log('suitable')
                               setSuitableChilds(!suitableChilds)
                             }}
                           /> Apto para niños
                         </p>
+                        <hr />
+                        <p className='description'>Previsualización de tú búsqueda:</p>
+                        <div className='game-feature'>
+                          {time && <div className='game-feature__time'>
+                            <div>{time}</div>
+                          </div>}
+                          <img src={picture} />
+                          <div>
+                            {nameSearch.value && <p className='game-feature__title'>{nameSearch.value}</p>}
+                            {descriptionSearch.value && <p className='game-feature__descrition'>{descriptionSearch.value}</p>}
+                            {suitableChilds && <p className='game-feature__tag'>Apta para niños</p>}
+                            {privateSearch && <p className='game-feature__tag'>Búsqueda privada</p>}
+                          </div>
+                        </div>
                         <button className='btn btn-next' onClick={next}>Siguiente <BiChevronsRight size={ICON_SIZE} /></button>
                         <button className='btn btn-previous' onClick={previous}><BiChevronsLeft size={ICON_SIZE} />Anterior</button>
                       </div>
@@ -130,17 +149,8 @@ export const SearchCreate = () => {
                     id='quizStep'
                     render={({ previous }) => (
                       <div>
-                        <div className='game-feature'>
-                          {time && <div className='game-feature__time'>
-                            <div>{time}</div>
-                                   </div>}
-                          <img src='https://i.ytimg.com/vi/gPUQwk_pjTg/maxresdefault.jpg' />
-                          <div>
-                            {nameSearch.value && <p className='game-feature__title'>{nameSearch.value}</p>}
-                            {suitableChilds && <p className='game-feature__tag'>Apta para niños</p>}
-                            {privateSearch && <p className='game-feature__tag'>Búsqueda privada</p>}
-                          </div>
-                        </div>
+                        <p className='description'>Rellena las pruebas a realizar:</p>
+
                         <button className='btn btn-previous' onClick={previous}><BiChevronsLeft size={ICON_SIZE} />Anterior</button>
                       </div>
                     )}

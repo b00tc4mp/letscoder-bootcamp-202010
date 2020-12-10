@@ -65,7 +65,7 @@ export const DefaultLayout = styled.div`
   .switch-wrapper {
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 13px;
     color: #636363;
     > div {
       display: flex;
@@ -143,11 +143,12 @@ export const DefaultLayout = styled.div`
     position: relative;
     display: flex;
     width: 100%;
-    max-height: 80px;
+    height: 90px;
     background-color: #fff;
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     gap: 10px;
     border: 1px solid #d8d8d8;
+    padding: 4px;
     img {
       max-width: 150px;
     }
@@ -159,7 +160,9 @@ export const DefaultLayout = styled.div`
       overflow: hidden;
       font-weight: bold;
       color: #3572b1;
+      margin: 10px 44px 4px 0;
     }
+    &__title { margin-top: 0 }
     &__tag {
       background: linear-gradient(#92bca6, #a2ccb6);
       display: inline-block;
@@ -170,6 +173,12 @@ export const DefaultLayout = styled.div`
       margin: 0 10px 0 0;
       font-size: 9px;
       font-family: 'Lato';
+    }
+    &__description {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     &__time {
       width: 197px;
