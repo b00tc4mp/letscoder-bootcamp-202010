@@ -27,11 +27,11 @@ export default function App() {
     setView("sign-in")
   }
 
-  const handleSignUp = ({ fullname, email, password }) => {
-    console.log(fullname, email, password)
+  const handleSignUp = ({ fullname, email, password, role }) => {
+    console.log(fullname, email, password, role)
     debugger
     try{
-    registerUser( fullname, email, password, error => {
+    registerUser( fullname, email, password, role, error => {
       if (error) return alert(error.message)
       
       setView('sign-in')
@@ -49,15 +49,25 @@ export default function App() {
         .then(() => setView('home'))
       })
     } catch (error) {
-      alert(error.message)
+      Alert.alert(error.message)
     }
   }
 
+  const handleLogOut = () => {
+    AsyncStorage.removeItem('token')
+    setView('sign-in')
+  }
+
       useEffect(() => { 
-        AsyncStorage.getItem('token')
-        .then(token => {
-          token && setView('home')
-    })
+        try{
+          AsyncStorage.getItem('token')
+          .then(token => {
+            token && setView('home')
+      })
+        } catch(error) {
+          AsyncStorage.removeItem('token')
+          setView('sign-in')
+        }
   },[])
 
 
@@ -68,7 +78,7 @@ export default function App() {
     { view === "" && <WelcomeScreen onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn}/>}
     { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} />}
     { view === "sign-in" && <SignInScreen onSignIn={handleSignIn}/>}
-    { view === "home" && <HomeScreen />}
+    { view === "home" && <HomeScreen onHandleLogout={handleLogOut}/>}
     
   </ImageBackground> 
 };

@@ -1,10 +1,11 @@
 const { Router } = require('express')
-const { cookieParser, cookieSession, jsonBodyParser } = require('../../middlewares')
+const { jsonBodyParser } = require('../../middlewares')
 
 const {
     handleRegisterUser,
     handleAuthenticateUser,
     handleRetrieveUser,
+    handleEditUser
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -15,6 +16,8 @@ const router = new Router()
 
 
 router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
+
+router.post('/api/users/edit', jsonBodyParser, withErrorHandling(handleEditUser))
 
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 

@@ -30,17 +30,36 @@ module.exports = new Schema({
     role: {
         type: String,
         required: true,
+        enum: ['ARTIST', 'PROMOTER'],
         default: 'ARTIST'
-        enum: ['ARTIST', 'PROMOTER']
-    }
+    },
 
     artistName: {
         type: String,
         required: false
     },
 
-
     city: {
+        type: String,
+        required: false
+    },
+
+    tags: {
+        type: Array,
+        required: false
+    },
+
+    youtubeLink: {
+        type: String,
+        required: false
+    },
+
+    bandcampLink: {
+        type: String,
+        required: false
+    },
+
+    spotifyLink: {
         type: String,
         required: false
     },
@@ -49,4 +68,5 @@ module.exports = new Schema({
         type: String,
         required: false
     },
+    
 })

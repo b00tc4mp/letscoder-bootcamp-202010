@@ -552,3 +552,893 @@ info 2020-12-03T17:44:12.035Z - server running on port 4000
 info 2020-12-03T17:45:53.246Z - stopping server
 info 2020-12-03T17:45:59.333Z - starting server
 info 2020-12-03T17:46:00.075Z - server running on port 4000
+error 2020-12-05T10:57:16.810Z - TypeError: undefined is not a artistName
+    at validateArtistName (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:33:51)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:9:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T10:59:24.760Z - TypeError: undefined is not a artistName
+    at validateArtistName (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:33:51)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:9:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-05T11:03:21.495Z - stopping server
+info 2020-12-05T11:03:31.207Z - starting server
+error 2020-12-05T11:03:31.339Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:03:31.340Z - stopping server
+info 2020-12-05T11:04:04.720Z - starting server
+error 2020-12-05T11:04:04.852Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:04:04.853Z - stopping server
+info 2020-12-05T11:04:22.887Z - starting server
+error 2020-12-05T11:04:23.051Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:04:23.053Z - stopping server
+info 2020-12-05T11:04:32.296Z - starting server
+error 2020-12-05T11:04:32.337Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:04:32.339Z - stopping server
+info 2020-12-05T11:04:34.557Z - starting server
+error 2020-12-05T11:04:34.605Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:04:34.606Z - stopping server
+info 2020-12-05T11:06:28.075Z - starting server
+error 2020-12-05T11:06:28.121Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:06:28.122Z - stopping server
+info 2020-12-05T11:22:04.961Z - starting server
+error 2020-12-05T11:22:34.994Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-05T11:22:35.018Z - stopping server
+info 2020-12-05T11:31:04.010Z - starting server
+error 2020-12-05T11:31:04.091Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:31:04.092Z - stopping server
+info 2020-12-05T11:31:31.215Z - starting server
+error 2020-12-05T11:31:31.259Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:31:31.307Z - stopping server
+info 2020-12-05T11:31:57.790Z - starting server
+error 2020-12-05T11:31:57.837Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/user.js:34
+        enum: ['ARTIST', 'PROMOTER']
+        ^^^^
+
+SyntaxError: Unexpected reserved word
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/schemas/index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/models/index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T11:31:57.838Z - stopping server
+info 2020-12-05T11:32:52.574Z - starting server
+info 2020-12-05T11:32:53.923Z - server running on port 4000
+error 2020-12-05T11:33:05.644Z - ReferenceError: validatefullname is not defined
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:9:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T11:33:22.932Z - ReferenceError: validatefullname is not defined
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:9:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T11:33:54.959Z - ReferenceError: validatefullname is not defined
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:9:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T11:34:51.892Z - ReferenceError: validatefullname is not defined
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:9:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-05T11:35:57.655Z - stopping server
+info 2020-12-05T11:35:59.793Z - starting server
+info 2020-12-05T11:35:59.899Z - server running on port 4000
+info 2020-12-05T11:36:08.439Z - stopping server
+info 2020-12-05T11:36:11.112Z - starting server
+info 2020-12-05T11:36:11.197Z - server running on port 4000
+error 2020-12-05T11:37:24.637Z - TypeError: undefined is not an e-mail
+    at validateEmail (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:3:46)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:8:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T11:38:39.073Z - TypeError: undefined is not an e-mail
+    at validateEmail (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:3:46)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:8:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T11:40:17.143Z - TypeError: undefined is not an e-mail
+    at validateEmail (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:3:46)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:8:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T17:38:44.291Z - TypeError: undefined is not an e-mail
+    at validateEmail (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:3:46)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:8:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T17:55:54.479Z - TypeError: undefined is not an e-mail
+    at validateEmail (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:3:46)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:8:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-05T18:20:35.418Z - stopping server
+info 2020-12-05T18:20:41.259Z - starting server
+info 2020-12-05T18:20:41.532Z - server running on port 4000
+error 2020-12-05T18:24:06.471Z - ConflictError: user with e-mail mr.cristian95@gmail.com already registered
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:16:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T18:43:23.701Z - stopping server
+info 2020-12-05T18:43:27.950Z - starting server
+info 2020-12-05T18:43:28.182Z - server running on port 4000
+info 2020-12-05T18:59:30.431Z - stopping server
+info 2020-12-05T18:59:34.645Z - starting server
+info 2020-12-05T18:59:34.875Z - server running on port 4000
+info 2020-12-05T19:11:48.127Z - stopping server
+info 2020-12-05T19:11:52.988Z - starting server
+info 2020-12-05T19:11:53.281Z - server running on port 4000
+info 2020-12-05T19:13:10.725Z - stopping server
+info 2020-12-05T19:13:15.260Z - starting server
+info 2020-12-05T19:13:15.586Z - server running on port 4000
+info 2020-12-05T19:13:38.254Z - stopping server
+info 2020-12-05T19:13:47.970Z - starting server
+info 2020-12-05T19:13:48.278Z - server running on port 4000
+error 2020-12-05T19:14:21.922Z - TypeError: undefined is not a password
+    at validatePassword (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:11:49)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:10:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-05T19:15:44.135Z - stopping server
+info 2020-12-05T19:15:48.766Z - starting server
+info 2020-12-05T19:15:49.063Z - server running on port 4000
+error 2020-12-05T19:19:57.902Z - TypeError: undefined is not a password
+    at validatePassword (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:11:49)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:10:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-05T20:11:06.052Z - TypeError: undefined is not a password
+    at validatePassword (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:11:49)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:10:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-05T20:13:07.992Z - stopping server
+info 2020-12-05T20:13:31.754Z - starting server
+info 2020-12-05T20:13:32.135Z - server running on port 4000
+error 2020-12-05T20:15:47.496Z - TypeError: undefined is not a password
+    at validatePassword (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:11:49)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:10:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-05T20:17:15.232Z - starting server
+info 2020-12-05T20:17:15.532Z - server running on port 4000
+info 2020-12-05T20:20:06.266Z - starting server
+info 2020-12-05T20:20:06.670Z - server running on port 4000
+info 2020-12-05T20:23:44.039Z - starting server
+info 2020-12-05T20:23:44.443Z - server running on port 4000
+info 2020-12-05T20:31:51.567Z - starting server
+info 2020-12-05T20:31:51.783Z - server running on port 4000
+info 2020-12-05T20:50:58.965Z - stopping server
+info 2020-12-05T20:51:03.920Z - starting server
+info 2020-12-05T20:51:04.298Z - server running on port 4000
+info 2020-12-05T20:54:03.258Z - stopping server
+info 2020-12-05T20:57:09.162Z - starting server
+info 2020-12-05T20:57:09.763Z - server running on port 4000
+error 2020-12-05T20:57:22.229Z - TypeError: editUser is not a function
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-edit-user.js:7:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-05T20:59:23.134Z - starting server
+error 2020-12-05T20:59:23.377Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/edit-user.js:1
+const { validateEmail, validateCity, validateDescription, validateTags, validateArtistName, validateFullname, validateDescription } = require('./helpers/validations')
+                                                                                                              ^
+
+SyntaxError: Identifier 'validateDescription' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:5:15)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T20:59:23.381Z - stopping server
+info 2020-12-05T21:00:11.344Z - starting server
+error 2020-12-05T21:00:11.418Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/edit-user.js:1
+const { validateEmail, validateCity, validateDescription, validateTags, validateArtistName, validateFullname, validateDescription } = require('./helpers/validations')
+                                                                                                              ^
+
+SyntaxError: Identifier 'validateDescription' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:5:15)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T21:00:11.420Z - stopping server
+info 2020-12-05T21:00:25.105Z - starting server
+error 2020-12-05T21:00:25.185Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/edit-user.js:1
+const { validateEmail, validateCity, validateDescription, validateTags, validateArtistName, validateFullname, validateDescription } = require('./helpers/validations')
+                                                                                                              ^
+
+SyntaxError: Identifier 'validateDescription' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:5:15)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-05T21:00:25.188Z - stopping server
+info 2020-12-06T11:10:16.497Z - starting server
+error 2020-12-06T11:10:46.521Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-06T11:10:46.522Z - stopping server
+info 2020-12-06T11:15:42.492Z - starting server
+error 2020-12-06T11:16:12.513Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-06T11:16:12.515Z - stopping server
+info 2020-12-06T11:17:02.734Z - starting server
+error 2020-12-06T11:17:32.761Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-06T11:17:32.762Z - stopping server
+info 2020-12-06T11:17:55.363Z - starting server
+error 2020-12-06T11:18:25.388Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-06T11:18:25.390Z - stopping server
+info 2020-12-06T11:22:36.173Z - starting server
+error 2020-12-06T11:22:36.371Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/edit-user.js:1
+const { validateEmail, validateCity, validateDescription, validateTags, validateArtistName, validateFullname, validateDescription } = require('./helpers/validations')
+                                                                                                              ^
+
+SyntaxError: Identifier 'validateDescription' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:5:15)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-06T11:22:36.373Z - stopping server
+info 2020-12-06T11:24:19.649Z - starting server
+info 2020-12-06T11:24:20.007Z - server running on port 4000
+info 2020-12-06T11:25:35.138Z - stopping server
+info 2020-12-06T11:25:37.627Z - starting server
+info 2020-12-06T11:25:38.967Z - server running on port 4000
+info 2020-12-06T11:35:23.984Z - stopping server
+info 2020-12-06T11:35:33.374Z - starting server
+info 2020-12-06T11:35:33.724Z - server running on port 4000
+info 2020-12-06T11:35:35.143Z - stopping server
+info 2020-12-06T11:35:37.484Z - starting server
+info 2020-12-06T11:35:37.569Z - server running on port 4000
+info 2020-12-06T11:38:25.269Z - stopping server
+info 2020-12-06T11:38:29.672Z - starting server
+error 2020-12-06T11:38:29.763Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/edit-user.js:23
+    )
+    ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:5:15)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-06T11:38:29.806Z - stopping server
+info 2020-12-06T11:38:34.956Z - starting server
+error 2020-12-06T11:38:35.033Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/edit-user.js:23
+    )
+    ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:5:15)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-06T11:38:35.040Z - stopping server
+info 2020-12-06T11:38:47.543Z - starting server
+info 2020-12-06T11:38:47.638Z - server running on port 4000
+info 2020-12-06T11:40:36.678Z - stopping server
+info 2020-12-06T11:40:38.294Z - starting server
+info 2020-12-06T11:40:38.488Z - server running on port 4000
+info 2020-12-06T11:40:40.780Z - stopping server
+info 2020-12-06T11:40:42.883Z - starting server
+info 2020-12-06T11:40:42.993Z - server running on port 4000
+info 2020-12-06T18:10:18.532Z - stopping server
+info 2020-12-06T18:10:21.588Z - starting server
+info 2020-12-06T18:10:21.839Z - server running on port 4000
+info 2020-12-06T18:11:56.001Z - stopping server
+info 2020-12-07T09:11:35.526Z - starting server
+info 2020-12-07T09:11:36.091Z - server running on port 4000
+info 2020-12-07T09:12:57.288Z - stopping server
+info 2020-12-07T09:12:59.592Z - starting server
+info 2020-12-07T09:13:00.135Z - server running on port 4000
+info 2020-12-07T09:13:39.481Z - stopping server
+info 2020-12-07T09:13:41.320Z - starting server
+info 2020-12-07T09:13:41.925Z - server running on port 4000
+info 2020-12-07T09:21:07.211Z - stopping server
+info 2020-12-07T09:21:17.241Z - starting server
+info 2020-12-07T09:21:18.141Z - server running on port 4000
+info 2020-12-07T09:29:54.702Z - stopping server
+info 2020-12-07T09:29:57.990Z - starting server
+info 2020-12-07T09:29:58.328Z - server running on port 4000
+info 2020-12-07T09:31:03.139Z - stopping server
+info 2020-12-07T09:31:06.020Z - starting server
+info 2020-12-07T09:31:06.277Z - server running on port 4000
+info 2020-12-07T09:37:53.299Z - stopping server
+info 2020-12-07T09:37:55.071Z - starting server
+info 2020-12-07T09:37:55.268Z - server running on port 4000
+info 2020-12-07T09:40:42.091Z - stopping server
+info 2020-12-07T09:40:45.302Z - starting server
+info 2020-12-07T09:40:45.487Z - server running on port 4000
+info 2020-12-07T09:42:56.143Z - stopping server
+info 2020-12-07T09:42:58.747Z - starting server
+info 2020-12-07T09:42:58.920Z - server running on port 4000
+info 2020-12-07T11:37:41.187Z - stopping server
+info 2020-12-07T11:37:52.082Z - starting server
+info 2020-12-07T11:37:53.331Z - server running on port 4000
+info 2020-12-07T12:05:26.135Z - stopping server
+info 2020-12-07T12:05:38.197Z - starting server
+info 2020-12-07T12:05:39.793Z - server running on port 4000
+info 2020-12-07T12:06:43.715Z - stopping server
+info 2020-12-07T12:06:57.929Z - starting server
+info 2020-12-07T12:06:59.570Z - server running on port 4000
+error 2020-12-07T12:14:43.421Z - TypeError: PROMOTER is not a role
+    at validateRole (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/helpers/validations.js:27:45)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/register-user.js:11:5)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:8:9)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-07T12:45:02.439Z - stopping server
+info 2020-12-07T12:45:07.651Z - starting server
+info 2020-12-07T12:45:08.362Z - server running on port 4000
+info 2020-12-07T12:46:49.021Z - stopping server
+info 2020-12-07T13:52:45.222Z - starting server
+info 2020-12-07T13:52:46.144Z - server running on port 4000
+info 2020-12-07T14:29:28.360Z - stopping server
+info 2020-12-07T14:29:48.743Z - starting server
+info 2020-12-07T14:29:50.783Z - server running on port 4000
+info 2020-12-07T14:43:22.379Z - stopping server
+info 2020-12-07T14:43:32.105Z - starting server
+info 2020-12-07T14:43:32.615Z - server running on port 4000
+error 2020-12-07T14:52:21.974Z - ReferenceError: youtubeLink is not defined
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-edit-user.js:7:59)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-07T14:53:12.180Z - stopping server
+info 2020-12-07T14:53:19.138Z - starting server
+info 2020-12-07T14:53:19.661Z - server running on port 4000
+error 2020-12-07T16:08:45.531Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+info 2020-12-07T20:20:54.952Z - stopping server
+info 2020-12-08T08:13:13.571Z - starting server
+error 2020-12-08T08:13:43.592Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T08:13:43.593Z - stopping server
+info 2020-12-08T08:18:30.440Z - starting server
+error 2020-12-08T08:19:00.461Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T08:19:00.462Z - stopping server
+info 2020-12-08T08:21:40.210Z - starting server
+info 2020-12-08T08:21:40.750Z - server running on port 4000
+info 2020-12-08T09:51:35.380Z - stopping server
+info 2020-12-08T09:51:41.500Z - starting server
+info 2020-12-08T09:51:41.790Z - server running on port 4000
+info 2020-12-08T09:51:45.297Z - stopping server
+info 2020-12-08T09:51:47.199Z - starting server
+info 2020-12-08T09:51:47.344Z - server running on port 4000
+info 2020-12-08T09:53:21.726Z - stopping server
+info 2020-12-08T09:53:52.656Z - starting server
+info 2020-12-08T09:53:53.881Z - server running on port 4000
+info 2020-12-08T09:54:45.595Z - starting server
+info 2020-12-08T09:54:45.753Z - server running on port 4000
+info 2020-12-08T09:58:52.027Z - stopping server
+info 2020-12-08T09:58:54.331Z - starting server
+info 2020-12-08T09:58:54.538Z - server running on port 4000
+info 2020-12-08T10:02:48.300Z - stopping server
+info 2020-12-08T10:02:51.197Z - starting server
+info 2020-12-08T10:02:51.339Z - server running on port 4000
+info 2020-12-08T10:03:53.216Z - stopping server
+info 2020-12-08T10:03:56.156Z - starting server
+info 2020-12-08T10:03:56.409Z - server running on port 4000
+info 2020-12-08T10:05:20.581Z - stopping server
+info 2020-12-08T10:05:23.322Z - starting server
+info 2020-12-08T10:05:23.460Z - server running on port 4000
+info 2020-12-08T10:08:57.369Z - stopping server
+info 2020-12-08T10:09:00.757Z - starting server
+info 2020-12-08T10:09:00.955Z - server running on port 4000
+info 2020-12-08T10:21:04.385Z - stopping server
+info 2020-12-08T10:25:19.048Z - starting server
+info 2020-12-08T10:25:19.241Z - server running on port 4000
+error 2020-12-08T10:30:24.165Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2020-12-08T10:32:18.926Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2020-12-08T10:39:45.373Z - AuthError: wrong credentials
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T10:43:35.610Z - stopping server
+info 2020-12-08T10:44:14.906Z - starting server
+info 2020-12-08T10:44:15.076Z - server running on port 4000
+info 2020-12-08T15:00:36.931Z - starting server
+error 2020-12-08T15:01:06.954Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:345:10
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-08T15:01:06.955Z - stopping server
+info 2020-12-08T15:35:59.553Z - starting server
+info 2020-12-08T15:36:03.219Z - server running on port 4000
+info 2020-12-09T16:44:30.582Z - stopping server
+                                                info 2020-12-10T10:06:53.960Z - starting server
+info 2020-12-10T10:07:08.500Z - server running on port 4000
+info 2020-12-10T16:35:42.969Z - stopping server

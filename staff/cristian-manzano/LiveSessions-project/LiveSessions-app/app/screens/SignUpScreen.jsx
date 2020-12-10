@@ -3,14 +3,16 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 
 
 function SignUpScreen({ onSignUp }) {
+    const[role,setRole]=useState('')
+
     const [ email, setEmail ] = useState('')
-    const [ artistName, setArtistName ] = useState('')
+    const [ fullname, setFullname ] = useState('')
     const [ password , setPassword ] = useState('')
     
     return (
         <SafeAreaView>
         <KeyboardAvoidingView
-      behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
+    //   behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
     >
         <ScrollView>
             <View style={styles.formSignUp}>
@@ -23,8 +25,8 @@ function SignUpScreen({ onSignUp }) {
                     placeholder=" Fullname"
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40" 
-                    onChangeText={artistName => setArtistName(artistName)}
-                    value={artistName}>
+                    onChangeText={fullname => setFullname(fullname)}
+                    value={fullname}>
                 </TextInput>
 
                 <TextInput
@@ -45,47 +47,29 @@ function SignUpScreen({ onSignUp }) {
                 </TextInput>
 
 
-                {/* Add the TextInput bellow on edit profice
-
-                <TextInput
-                    placeholder=" Name"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={name => setName(name)}
-                    name={name}
-                     >
-                </TextInput>
-
-                <TextInput
-                    placeholder=" Last Name"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={lastName => setLastName(lastName)}
-                    value={lastName} >
-                </TextInput>
-
-                <TextInput
-                    placeholder=" City"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={city => setCity(city)}
-                    value={city} >
-                </TextInput>
-
-                <TextInput
-                    placeholder=" Description"
-                    style={styles.descriptionSignUp}
-                    placeholderTextColor="white"
-                    onChangeText={description => setDescription(description)}
-                    value={description} >
-                </TextInput> */}
-
+            <View style={styles.roleContainer}>
+            <TouchableOpacity style={role==='ARTIST'?styles.roleImageClicked:styles.roleImage} onPress={(event)=>{
+            event.preventDefault();
+            
+            setRole('ARTIST')
+        }}>
+            <Image style={styles.logo} source={require('../assets/artist-role-image.png')} 
+            value={role}
+            />
+        </TouchableOpacity>
+        <TouchableOpacity style={role==='PROMOTER'?styles.roleImageClicked:styles.roleImage} onPress={(event)=>{
+            event.preventDefault();
+            setRole('PROMOTER')
+        }}>
+           <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} 
+            value={role}/>
+        </TouchableOpacity>
+            </View>
 
                 <TouchableOpacity style={styles.signUpButton}
-                onPress={ () => {onSignUp ({ email, fullname, password })}}>
+                onPress={ () => {onSignUp ({ email, fullname, password, role })}}>
                     <Text style={styles.buttonText}>Sign Up!</Text>
                 </TouchableOpacity>
-
             </View>
         </ScrollView>
         </KeyboardAvoidingView>
@@ -96,14 +80,14 @@ function SignUpScreen({ onSignUp }) {
 const styles = StyleSheet.create({
     formSignUp: {
         justifyContent: "space-evenly",
-        marginTop: "-15%",
+        // marginTop: "-15%",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
     },
 
     signUpHeader: {
         backgroundColor: "gray",
-        marginTop: "-8%",
+        // marginTop: "-8%",
         width: "100%",
         height: "10%",
     },
@@ -122,14 +106,26 @@ const styles = StyleSheet.create({
         color: "#343a40"
     },
 
-    // descriptionSignUp: {
-    //     marginLeft: "5%",
-    //     width: "90%",
-    //     height: "25%",
-    //     borderWidth: 1,
-    //     borderColor: "white",
-    //     color: "white"
-    // },
+    roleContainer: {
+        display: "flex",
+        flexDirection : "row",
+        justifyContent: "center"
+    },
+
+    roleImage: {
+        width: 50,
+        height: 50,
+        //opacity: "50%",
+        color: "red"
+        
+    },
+
+    roleImageClicked: {
+        width: 50,
+        height: 50,
+        //opacity: "100%",
+        color: "green"
+    },
 
     signUpButton: {
         alignSelf: "center",
