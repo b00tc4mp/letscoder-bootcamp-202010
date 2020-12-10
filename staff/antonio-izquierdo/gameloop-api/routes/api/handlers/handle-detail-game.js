@@ -2,7 +2,7 @@ const { detailGame } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
 
-    const { params: {gameId} } = req
+    const { params: { gameId } } = req
    
     try {
         detailGame(gameId)

@@ -24,7 +24,7 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
 router.post('/api/games', jsonBodyParser, withErrorHandling(handleSaveGame))
 
-router.get('/api/games/', jsonBodyParser, withErrorHandling(handleFindGames))
+router.get('/api/games', withErrorHandling(handleFindGames))
 
 router.get('/api/games/:gameId', withErrorHandling(handleDetailGame))
 

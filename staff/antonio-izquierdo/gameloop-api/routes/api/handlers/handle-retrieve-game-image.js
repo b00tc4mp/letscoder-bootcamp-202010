@@ -1,6 +1,7 @@
 const { retrieveGameImage } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
+    
     const { params: { gameId } } = req
 
     try {

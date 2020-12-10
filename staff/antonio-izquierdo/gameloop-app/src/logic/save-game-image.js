@@ -5,7 +5,7 @@ import context from './context'
 debugger
 export default (function (gameId, image, callback) {
     validateId(gameId)
-    validateFile(image)
+    if (typeof image !== 'undefined') validateFile(image)
     validateCallback(callback)
     
 

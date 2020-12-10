@@ -1,20 +1,28 @@
 import { call } from '../utils'
+import context from './context'
 //import { validateCallback } from './helpers/validations'
 
-export default function ( query, gameconsole, budget, priceMin, priceMax, callback) {
+export default (function (query, gameconsole, budget, priceMin, priceMax, callback) {
 
-    //validateCallback(callback)
-    //poner  validations
-    //https://localhost:4000/api/products?queryCompany='1423423'&queryProduct='sdjkfsd'&price='sdfgsfgdf'
+   /*  validateToken(token)
+    validateCallback(callback)
+ */
 
+    const { API_URL } = this
 
-    // /api/products?queryCompany=<queryCompany>&queryProduct=<queryProduct>&price=<price>&priceMin=<priceMin&priceMax=<priceMax>
+    const queryParams = {}
 
+    if (query) queryParams.query = query
+    if (gameconsole) queryParams.gameconsole = gameconsole
+    if (budget) queryParams.budget = budget
+    if (priceMin) queryParams.priceMin = priceMin
+    if (priceMax) queryParams.priceMax = priceMax
 
-    //query, gameconsole, budget, priceMin, priceMax 
+    const queryString = Object.keys(queryParams).map(key =>`${key}=${queryParams[key]}`).join('&')
 
-    debugger
-    call('GET', `http://localhost:4000/api/games/?query=${query}&gameconsole=${gameconsole}&budget=${budget}&priceMin=${priceMin}&priceMax=${priceMax}`,
+//ESTO ESTABA ASÍ: call('GET', `${API_URL}/games/?${queryString}`
+
+    call('GET', `${API_URL}/games/?${queryString}`,
         { },
         '',
         (status, response) => {
@@ -31,4 +39,4 @@ export default function ( query, gameconsole, budget, priceMin, priceMax, callba
             callback(null, games)
         })
     
-}
+}).bind(context)

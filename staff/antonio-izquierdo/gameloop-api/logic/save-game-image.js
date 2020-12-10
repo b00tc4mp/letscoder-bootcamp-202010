@@ -5,7 +5,7 @@ const fs = require('fs')
 debugger
 module.exports = (gameId, stream) => {
     validateId(gameId)
-    // TODO validate file
+    //validateStream(stream)
     // validateCallback(callback)
 
     return new Promise((resolve, reject) => {
