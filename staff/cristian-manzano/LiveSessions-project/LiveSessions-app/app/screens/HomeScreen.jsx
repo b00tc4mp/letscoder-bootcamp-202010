@@ -6,7 +6,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { retrieveUser } from '../logic';
 import { editUser } from '../logic';
 //Screens
-import ProfileScreen from './ProfileScreen'
+import ArtistProfileScreen from './ArtistProfileScreen'
+import PromoterProfileScreen from './ArtistProfileScreen'
 import EditProfileScreen from './EditProfileScreen'
 
 
@@ -24,7 +25,10 @@ export default function Home({ onHandleLogout }) {
               
 
                 setUser(user)
-                setView('profile')
+                if (user.role === 'ARTIST')
+                setView('artist-profile')
+                else (user.role === 'PROMOTER')
+                setView('promoter-profile')
             })
         } catch (error) {
             Alert.alert(error.message)
@@ -71,7 +75,8 @@ export default function Home({ onHandleLogout }) {
   return (
 
     <View>
-      { view ===  'profile' && <ProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
+      { view ===  'artist-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
+      { view ===  'promoter-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
       { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile}/>}
     </View>
     

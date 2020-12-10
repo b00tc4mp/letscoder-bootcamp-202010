@@ -46,6 +46,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                     >
                 </TextInput>
 
+
                 <TextInput
                     placeholder=' City'
                     style={styles.inputsSignUp}
