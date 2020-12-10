@@ -10,6 +10,8 @@ module.exports = {
     findPictogram : require('./find-pictogram'),
     findPictogramByUser : require('./find-pictograms-by-user'),
     savePictogramImage: require ('./save-pictogram-image'),
-    retrievePictogramImage: require('./retrieve-pictogram-image')
+    retrievePictogramImage: require('./retrieve-pictogram-image'),
+    toggleLikePictogram : require('./toggle-like-pictogram'),
+    retrieveFavouritePictogram : require('./retrieve-favourite-pictogram')
 
 }

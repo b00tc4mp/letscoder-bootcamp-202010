@@ -1,12 +1,15 @@
 import './Pictogram.scss'
 import {useState} from 'react'
-const API_URL = process.env.REACT_APP_API_URL
-export default function ({data:{id, title, description}}) {
-  const [isActive, setActive] = useState(false);
-  
+import {toggleLikePictogram} from '../logic'
 
-  const toggleClass = () => {
+const API_URL = process.env.REACT_APP_API_URL
+export default function ({likedPictograms = [], data:{id, title, description}}) {
+  const [isActive, setActive] = useState(likedPictograms.includes(id)? true : false);
+  const token = sessionStorage.token
+
+  const handleLike = () => {
     setActive(!isActive);
+    toggleLikePictogram (token, id , error => console.log(error))
   };
     return <article className="card">
           <header className="card-header">
@@ -18,7 +21,7 @@ export default function ({data:{id, title, description}}) {
             />
           </header>
           <div className="card-body">
-            <button onClick = {toggleClass} className = {isActive ? 'heart active': 'heart'} ></button>
+            <button onClick = {handleLike} className = {isActive ? 'heart active': 'heart'} ></button>
             <h4 className="card-body__title">
               {title} 
             </h4>

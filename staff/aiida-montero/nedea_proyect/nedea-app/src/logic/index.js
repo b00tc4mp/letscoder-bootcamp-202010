@@ -5,6 +5,7 @@ import savePictogram from './save-pictogram'
 import searchPictogramsByUser from './search-pictogram-by-user'
 import retrievePictograms from './retrieve-pictograms'
 import savePictogramImage from './save-pictogram-image'
+import toggleLikePictogram from './toggle-like-pictogram'
 import context from './context'
 
 export{
@@ -15,5 +16,6 @@ export{
     searchPictogramsByUser,
     retrievePictograms,
     savePictogramImage,
+    toggleLikePictogram,
     context
 }

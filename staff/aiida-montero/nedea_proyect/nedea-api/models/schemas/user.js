@@ -24,6 +24,7 @@ module.exports = new Schema({
     },
 
     likes:[ {
-        type: ObjectId
+        type: ObjectId,
+        ref : 'Pictogram'
     }]
 })

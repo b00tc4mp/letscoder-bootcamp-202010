@@ -9,6 +9,7 @@ import SearchPictogram from '../logic/search-pictogram'
 
 export default function() {
     const [name, setName] = useState()
+    const [likedPictograms, setLikedPictograms] = useState([])
     const [queryResults, setQueryResults] = useState()
 
 useEffect(() => { 
@@ -17,9 +18,10 @@ useEffect(() => {
         retrieveUser(token, (error, user) => {
             if(error) return alert(error.message)
 
-            const {fullname} = user
+            const {fullname, likes} = user
 
             setName(fullname)
+            setLikedPictograms(likes)
         })
     }catch(error) {
         alert(error.message)
@@ -41,7 +43,7 @@ useEffect(() => {
       <h1>Hello, {name}</h1>
       <Discover/>
       <Search onSearchPictograms = {handleSearchPictogram}/>
-      {queryResults && <ResultList pictograms = {queryResults}/>}
+      {queryResults && <ResultList pictograms = {queryResults} likedPictograms = {likedPictograms}/>}
       <Slider/>
 
  </section>

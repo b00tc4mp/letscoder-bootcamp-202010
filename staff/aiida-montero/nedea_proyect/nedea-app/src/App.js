@@ -54,7 +54,6 @@ function App(props) {
   }
   
   const handleSavePictogram = (title, description,image) => {
-    debugger
     const {token}  = sessionStorage
     try{
       savePictogram(undefined, token, title, description, (error,pictogramId) =>{
