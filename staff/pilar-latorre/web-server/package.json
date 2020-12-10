@@ -1,0 +1,24 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "inspect": "node inspect .",
+    "test": "npx mocha logic/*.spec.js",
+    "test-inspect": "npx mocha inspect logic/*.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
