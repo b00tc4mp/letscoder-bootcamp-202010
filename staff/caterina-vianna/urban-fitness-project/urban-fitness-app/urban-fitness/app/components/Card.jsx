@@ -1,14 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Text, Image } from "react-native";
-import AppText from "./AppText";
 
-export default function Card() {
+export default function Card({ title, subTitle, image }) {
   return (
     <View style={styles.card}>
-      <Image style={styles.image} source={require("../assets/yoga.jpg")} />
+      <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.titleActivity}>Yoga</Text>
-        <Text style={styles.subTitleActivity}>Parc de la ciutadella</Text>
+        <Text style={styles.titleActivity}>{title}</Text>
+        <Text style={styles.subTitleActivity}>{subTitle}</Text>
       </View>
     </View>
   );

@@ -22,10 +22,13 @@ import ProfileList from "./ProfileList";
 import CreateActivity from "./CreateActivity";
 import saveActivity from "../logic/save-activity";
 import retrieveActivity from "../logic/retrieve-activity";
+import ListingDetailsScreen from "./ListingDetailsScreen";
+import Listing from "./Listing";
+
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
-  const [activities, setActivity] = useState();
+  const [activities, setActivity] = useState([]);
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -38,6 +41,15 @@ export default function Home({ token }) {
         });
       } catch (error) {
         Alert.alert(error.message);
+      }
+      try {
+        retrieveActivity(token, (error, activities) => {
+          debugger;
+          if (error) return alert(error.message);
+          setActivity(activities);
+        });
+      } catch (error) {
+        alert(error.message);
       }
     });
   }, []);
@@ -98,6 +110,7 @@ export default function Home({ token }) {
                 if (error) return alert(error.message);
 
                 setActivity(activities);
+                setView("list-mode");
               });
             } catch (error) {
               alert(error.message);
@@ -138,8 +151,14 @@ export default function Home({ token }) {
                 paddingTop: 100,
               }}
             >
-              <Card />
+              <Listing activities={activities} />
             </View>
+          </>
+        )}
+
+        {view === "listing-details" && (
+          <>
+            <ListingDetailsScreen />
           </>
         )}
 
