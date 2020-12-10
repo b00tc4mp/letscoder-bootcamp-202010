@@ -19,6 +19,7 @@ import Welcome from './Welcome'
 import Recipes from './Recipes'
 import Recipe from './Recipe'
 import Diets from './Diets'
+import Workouts from './Workouts'
 
 export {
     Landing,
@@ -41,5 +42,6 @@ export {
     Welcome,
     Recipes,
     Recipe,
-    Diets
+    Diets,
+    Workouts
 }

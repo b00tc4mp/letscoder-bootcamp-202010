@@ -31,6 +31,12 @@ module.exports = {
         if (id.length !== 24) throw new Error(`id length ${id.length} is not 24`)
     },
 
+    validateLevel(level) {
+        if (typeof level !== 'string') throw new TypeError(level + ' is not a level')
+
+        if (level !== 'beginner' && level !== 'intermediate' && level !== 'advanced') throw new Error('level is neither "beginner" nor "intermediate" nor "advanced"')
+    },
+
     validateText(text) {
         if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
 

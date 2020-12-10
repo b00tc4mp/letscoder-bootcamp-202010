@@ -3,6 +3,6 @@ module.exports = {
     food: require('./food'),
     diet: require('./diet'),
     article: require('./article'),
-    recipeImg: require('./recipe-img'),
+    workout: require('./workout'),
     recipe: require('./recipe')
 }

@@ -1,4 +1,4 @@
-const { validateId } = require('./helpers/validations')
+const { validateId, validateDietType } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { User, Diet } = require('../models')
 
@@ -11,6 +11,7 @@ const { User, Diet } = require('../models')
  */
 module.exports = function (userId, dietType) {
     validateId(userId)
+    validateDietType(dietType)
 
     return User.findById(userId).lean()
         .then(user => {

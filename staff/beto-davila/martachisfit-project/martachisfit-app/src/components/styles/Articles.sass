@@ -1,6 +1,6 @@
 .article
     width: 75%
-    margin: 1rem auto
+    margin: 0 auto
     padding: .2rem
     background-color: #dde2e2
     box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
@@ -42,9 +42,20 @@
     &__read-other-btn:focus
         outline: none
 
-h3, h4
+.article > h3
     text-align: center
     margin: .7rem
+
+.article > h4
+    text-align: center
+    margin: .7rem
+    color: #4b4e4e
+    font-style: italic
+
+.article > p
+    text-align: left
+    width: 95%
+    margin: 1rem auto
 
 .article-pseudo
     display: block

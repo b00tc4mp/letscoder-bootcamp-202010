@@ -19,7 +19,8 @@ const {
     handleRetrieveRecipe,
     handleRetrieveRecipes,
     handleRetrieveSavedRecipes,
-    handleRetrieveChosenDiet
+    handleRetrieveChosenDiet,
+    handleRetrieveWorkout
 } = require('./handlers/index')
 
 const router = new Router()
@@ -55,6 +56,9 @@ router.patch('/api/users/articles/:articleId', jsonBodyParser, withErrorHandling
 
 // retrieve user diet
 router.get('/api/users/diets', withErrorHandling(handleRetrieveDiet))
+
+// retrieve workout by level
+router.get('/api/users/:level/workouts', withErrorHandling(handleRetrieveWorkout))
 
 // retrieve chosen diet
 router.get('/api/users/diets/:dietType', withErrorHandling(handleRetrieveChosenDiet))

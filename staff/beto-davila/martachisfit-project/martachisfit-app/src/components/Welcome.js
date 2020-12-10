@@ -2,6 +2,8 @@ import './styles/Welcome.sass'
 
 export default function Welcome () {
 
+    const martaIg = "https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_520/v1607586947/marta-ig_xgxisr.jpg"
+
     return ( <>
     <div className="welcome-pseudo"> 
     <div className="welcome">
@@ -25,9 +27,13 @@ export default function Welcome () {
         <p>El conocimiento es la clave del éxito. Aquí podrás encontrar las nociones básicas de alimentación y deporte para conseguir tu mejor versión</p>
         </div>
     </div>
+        <div className="welcome__instagram">
+            <a href="https://www.instagram.com/martachis.fit/">
+            <h3 className="welcome__instagram-title">¡Y también en Instagram!</h3>
+            <img src={martaIg} alt="marta-instagram"/></a>
+        </div>
     </div>
     </div>
-
     </>
 
     )

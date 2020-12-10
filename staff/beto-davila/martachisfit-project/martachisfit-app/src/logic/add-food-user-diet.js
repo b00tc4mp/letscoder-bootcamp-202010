@@ -6,7 +6,9 @@ export default function (token, foodId, callback) {
     validateId(foodId)
     validateCallback(callback)
 
-    call('PATCH', 'http://localhost:4000/api/users/foods', { Authorization: `Bearer ${token}`, 'Content-type': 'application/json' },
+    // const API_URL = process.env.REACT_APP_API_URL
+
+    call('PATCH', `http://localhost:4000/api/users/foods`, { Authorization: `Bearer ${token}`, 'Content-type': 'application/json' },
         JSON.stringify({ savedFood: [foodId] }),
         (status, response) => {
             if (status === 0)

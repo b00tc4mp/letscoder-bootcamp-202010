@@ -1,0 +1,34 @@
+.bold
+    font-weight: bold
+
+.workout-pseudo
+    display: block
+    position: relative
+    height: 95vh
+    
+.workout-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-workouts.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+    
+.workout
+    &__title
+        margin: 0
+        
+    &__level
+        cursor: pointer
+        background-color: #dde2e2
+        width: 70%
+        margin: 1rem auto
+        padding: .5rem
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+    &__level-description
+        text-align: left
+        font-size: .9rem

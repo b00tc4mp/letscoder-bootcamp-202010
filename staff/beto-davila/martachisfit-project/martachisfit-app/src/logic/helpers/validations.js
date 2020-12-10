@@ -72,6 +72,12 @@ module.exports = {
         if (dietType !== 'mediterranean' && dietType !== 'keto' && dietType !== 'vegan') throw new Error('diet type is not "vegan" or "mediterranean" or "keto"')
     },
 
+    validateLevel(level) {
+        if (typeof level !== 'string') throw new TypeError(level + ' is not a level')
+
+        if (level !== 'beginner' && level !== 'intermediate' && level !== 'advanced') throw new Error('level is neither "beginner" nor "intermediate" nor "advanced"')
+    },
+
     validateToken(token) {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 

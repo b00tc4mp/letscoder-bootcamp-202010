@@ -12,6 +12,7 @@ const { User, Article } = require('../models')
 
 module.exports = function (userId, articleId) {
     validateId(userId)
+    validateId(articleId)
 
     return User.findById(userId).lean()
         .then(user => {

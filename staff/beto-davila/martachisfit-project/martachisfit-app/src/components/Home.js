@@ -1,11 +1,22 @@
 import './styles/Home.sass'
 import { useState } from 'react'
-import { retrieveUser, retrieveArticles, addUserArticles, retrieveSavedArticles, retrieveChosenArticle, retrieveRecipes, retrieveRecipe, addUserRecipes, retrieveSavedRecipes, retrieveChosenDiet, retrieveLikedRecipes } from '../logic'
+import { retrieveUser, 
+        retrieveArticles, 
+        addUserArticles, 
+        retrieveSavedArticles, 
+        retrieveChosenArticle, 
+        retrieveRecipes, 
+        retrieveRecipe, 
+        addUserRecipes, 
+        retrieveSavedRecipes, 
+        retrieveChosenDiet, 
+        retrieveWorkout 
+    } from '../logic'
 import logo from '../../src/logo.png'
 import facebook from './icons/social/facebook.png'
 import instagram from './icons/social/instagram.png'
 import linkedin from './icons/social/linkedin.png'
-import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe, Diets } from './index'
+import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe, Diets, Workouts } from './index'
 
 export default function Home () {
     const [name, setName] = useState()
@@ -20,6 +31,7 @@ export default function Home () {
     const [savedRecipes, setSavedRecipes] = useState()
     const [calories, setCalories] = useState()
     const [likedRecipe, setLikedRecipe] = useState()
+    const [workout, setWorkout] = useState()
 
     const { token } = sessionStorage
 
@@ -46,6 +58,10 @@ export default function Home () {
         }
     }
 
+    const handleGoToWorkouts = () => {
+        setView("workouts")
+    }
+
     const handleGoToDietDesign = () => {
         setView("diet-design")
     }
@@ -67,12 +83,16 @@ export default function Home () {
     }
 
     const handleGoToBlog = () => {
-        retrieveArticles(token, (error, articles) => {
-            if (error) return alert(error.message)
-
-            setArticle(articles)
-            setView("articles")
-        })
+        try {
+            retrieveArticles(token, (error, articles) => {
+                if (error) return alert(error.message)
+    
+                setArticle(articles)
+                setView("articles")
+            })
+        } catch (error) {
+            alert(error.message)
+        }
     }
 
     const handleGoToRandomArticle = () => {
@@ -161,12 +181,17 @@ export default function Home () {
     }
 
     const handleGoToChosenArticle = articleId => {
-        retrieveChosenArticle(token, articleId, (error, chosenArticle) => {
-            if (error) return alert (error.message)
-
-            setChosenArticle(chosenArticle)
-            setView('chosen-article')
-        })
+        try {
+            retrieveChosenArticle(token, articleId, (error, chosenArticle) => {
+                if (error) return alert (error.message)
+    
+                setChosenArticle(chosenArticle)
+                setView('chosen-article')
+            })
+            
+        } catch (error) {
+            alert(error.message)
+        }
     }
 
     const handleGoToRecipe = recipeId => {
@@ -190,12 +215,31 @@ export default function Home () {
     }
 
     const handleRetrieveChosenDiet = dietType => {
+        try {
             retrieveChosenDiet(token, dietType, (error, chosenDiet) => {
                 if (error) alert(error.message)
 
                 setChosenDiet(chosenDiet)
                 setView('chosen-diet')
         })
+            
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+    const handleRetrieveWorkout = level => {
+        try {
+            retrieveWorkout(level, (error, workout) => {
+                if (error) alert(error.message)
+    
+                setWorkout(workout)
+                setView('workout')
+        })
+            
+        } catch (error) {
+            alert(error.message)
+        }
     }
 
     const handleGoToLogOut = () => {
@@ -219,15 +263,37 @@ export default function Home () {
         <a href="https://es-es.facebook.com/m.albimuro?fref=nf"><img className="home__social-logo" alt="facebook" src={facebook} width="13"></img></a><a href="https://www.instagram.com/martachis.fit/"><img alt="instagram" width="13" className="home__social-logo" src={instagram}></img></a><a href="https://www.linkedin.com/in/alberto-davila-gomez-250460b0"><img className="home__social-logo" alt="linkedin" width="13" src={linkedin}></img></a>
     </nav>
     </div>
-    <DropDownMenu onGoToDietDesign={handleGoToDietDesign} onGoToWelcome={handleGoToWelcome} onGoToRecipes={handleGoToRecipes} onGoToUserDiet={handleGoToUserDiet} onGoToBlog={handleGoToBlog} onGoToProfile={handleGoToProfile}/>
+    <DropDownMenu 
+        onGoToDietDesign={handleGoToDietDesign} 
+        onGoToWelcome={handleGoToWelcome} 
+        onGoToRecipes={handleGoToRecipes} 
+        onGoToUserDiet={handleGoToUserDiet} 
+        onGoToBlog={handleGoToBlog} 
+        onGoToProfile={handleGoToProfile} 
+        onGoToWorkouts={handleGoToWorkouts}
+    />
     {view === 'welcome' && <Welcome />}
     {view === 'diet-design' && <DietDesign />}
+    {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout}/>}
     {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe}/>}
     {view === 'recipe' && recipe && <Recipe onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe}/>}
     {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToUserDiet={handleGoToUserDiet}/>}
     {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} goal={calories}/>}
-    {view === 'articles' && article && <Articles source={article} message={message} onGoToRandomArticle={handleGoToRandomArticle} onGoToProfile={handleGoToProfile} onSaveArticle={handleSaveArticle}/>}
-    {view === 'profile' && <UserProfile onGoToRecipe={handleGoToRecipe} onLogout={handleGoToLogOut} savedRecipes={savedRecipes} name={name} savedArticles={savedArticles} onGoToChosenArticle={handleGoToChosenArticle}/>}
+    {view === 'articles' && article && 
+        <Articles source={article} 
+                message={message} 
+                onGoToRandomArticle={handleGoToRandomArticle} 
+                onGoToProfile={handleGoToProfile} 
+                onSaveArticle={handleSaveArticle}
+                />}
+    {view === 'profile' && 
+        <UserProfile onGoToRecipe={handleGoToRecipe} 
+                onLogout={handleGoToLogOut} 
+                savedRecipes={savedRecipes} 
+                name={name} 
+                savedArticles={savedArticles} 
+                onGoToChosenArticle={handleGoToChosenArticle}
+                />}
     {view === 'chosen-article' && <ChosenArticle source={chosenArticle} onReadArticle={handleReadArticle}/>}
     {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name}/>}
     </div>
