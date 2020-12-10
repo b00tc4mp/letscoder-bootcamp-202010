@@ -3,25 +3,27 @@ import styled from 'styled-components'
 export const UploadImageWrapper = styled.div`
   display: block;
   max-width: 100%;
-  width: 80%;
-  margin: 0 auto;
-  min-width: 320px;
   .preview {
     width: 100%;
     margin-top: 30px;
     border: 1px solid #ccc;
     max-width: 100%;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.05);
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
+    height: 200px;
+    position: relative;
+    background: #eeebe7;
     img {
-      max-width: 100%;
-      display: inline-block;
-      margin: 0 auto;
-      opacity: 0.7;
-      max-height: 180px;
-      transform: scale(0.6);
+    display: inline-block;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
     }
   }
   .fileContainer {
@@ -49,14 +51,11 @@ export const UploadImageWrapper = styled.div`
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
     color: rgb(13 107 202);
     font-size: 13px;
-    position: absolute;
-    left: 0;
-    right: 0;
   }
 
-  .small-upload .fileContainer .chooseFileButton {
+  .small-upload .chooseFileButton {
     top: 0;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -64,5 +63,12 @@ export const UploadImageWrapper = styled.div`
     width: 100%;
     background: transparent;
     color: #696868;
+    margin: 0;
+    text-align: left;
   }
+  .small-upload .uploadIcon {
+    width: 30px;
+    height: 30px;
+  }
+  
 `
