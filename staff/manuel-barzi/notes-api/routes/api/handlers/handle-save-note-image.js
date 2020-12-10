@@ -8,10 +8,9 @@ module.exports = (req, res, handleError) => {
 
     busboy.on('file', (fieldname, file, filename, encoding, mimetype) =>
         saveNoteImage(noteId, file)
+            .then(() => res.status(204).send())
             .catch(handleError)
     )
-
-    busboy.on('finish', () => res.status(204).send())
 
     req.pipe(busboy)
 }

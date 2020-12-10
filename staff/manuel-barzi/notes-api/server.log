@@ -1433,3 +1433,35 @@ error 2020-12-09T16:02:17.732Z - TokenExpiredError: jwt expired
     at router (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:47:12)
     at Layer.handle [as handle_request] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/layer.js:95:5)
     at trim_prefix (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:317:13)
+info 2020-12-10T13:00:54.997Z - starting server
+info 2020-12-10T13:00:55.120Z - server running on port 4000
+error 2020-12-10T13:00:57.568Z - ReferenceError: fromStream is not defined
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/save-note-image.js:20:13
+    at new Promise (<anonymous>)
+    at module.exports (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/save-note-image.js:10:12)
+    at Busboy.<anonymous> (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/handlers/handle-save-note-image.js:10:9)
+    at Busboy.emit (node:events:327:20)
+    at Busboy.emit (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/busboy/lib/main.js:37:33)
+    at PartStream.<anonymous> (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/busboy/lib/types/multipart.js:214:13)
+    at PartStream.emit (node:events:327:20)
+    at HeaderParser.<anonymous> (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/dicer/lib/Dicer.js:50:16)
+    at HeaderParser.emit (node:events:327:20)
+    at HeaderParser._finish (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/dicer/lib/HeaderParser.js:68:8)
+    at SBMH.<anonymous> (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/dicer/lib/HeaderParser.js:40:12)
+    at SBMH.emit (node:events:327:20)
+    at SBMH._sbmh_feed (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/streamsearch/lib/sbmh.js:159:14)
+    at SBMH.push (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/streamsearch/lib/sbmh.js:56:14)
+    at HeaderParser.push (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/dicer/lib/HeaderParser.js:46:19)
+info 2020-12-10T13:01:07.401Z - stopping server
+info 2020-12-10T13:01:07.402Z - stopping server
+info 2020-12-10T13:01:22.667Z - starting server
+info 2020-12-10T13:01:22.754Z - server running on port 4000
+info 2020-12-10T13:01:54.236Z - stopping server
+info 2020-12-10T13:01:54.236Z - stopping server
+info 2020-12-10T13:01:55.880Z - starting server
+info 2020-12-10T13:01:55.967Z - server running on port 4000
+info 2020-12-10T13:02:09.884Z - stopping server
+info 2020-12-10T13:02:09.885Z - stopping server
+info 2020-12-10T13:02:34.305Z - starting server
+info 2020-12-10T13:02:34.393Z - server running on port 4000
+info 2020-12-10T13:02:38.898Z - stopping server
