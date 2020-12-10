@@ -3,7 +3,8 @@ const { Types: { ObjectId } } = mongoose
 const { User, Product } = require('../models')
 
 module.exports = function (userId, queryCompany,queryProduct, price, priceMin,priceMax) {
-    //poner validations
+    debugger
+    
     
     const criteria = {}
 
@@ -23,7 +24,7 @@ module.exports = function (userId, queryCompany,queryProduct, price, priceMin,pr
         .then(users => {
             const ids = users.map(({ _id }) => _id)
 
-            console.log(ids)
+            
 
             const criteria = {
                 owner : { $in: ids }
@@ -34,14 +35,14 @@ module.exports = function (userId, queryCompany,queryProduct, price, priceMin,pr
                 { description: { $regex: new RegExp(queryProduct, 'i') } }
             ]
             
-            if (price >= '0')
+            if (price >= 0)
                 criteria.price = price
             else
-                if (priceMin >= '0' && typeof priceMax === 'undefined')
+                if (priceMin >= 0 && typeof priceMax === 'undefined')
                     criteria.price = { $gte: priceMin }
-                else if (priceMax >= '0' && typeof priceMin === 'undefined')
+                else if (priceMax >= 0 && typeof priceMin === 'undefined')
                     criteria.price = { $lte: priceMax }
-                else if (priceMin >= '0' && priceMax >= priceMin)
+                else if (priceMin >= 0 && priceMax >= priceMin)
                     criteria.price = { $gte: priceMin, $lte: priceMax }
 
             return Product.find(criteria).lean()
@@ -51,6 +52,9 @@ module.exports = function (userId, queryCompany,queryProduct, price, priceMin,pr
                 const { _id } = product
 
                 product.id = _id.toString()
+
+                delete product._id
+                delete product.__v
 
                 
             })

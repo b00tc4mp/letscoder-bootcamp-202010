@@ -8,7 +8,7 @@ const {
     handleSaveProduct,
     handleFindProduct,
     handleSaveProductImage,
-    handleRetrieveProduct
+   
     
 
 } = require('./handlers')
@@ -27,9 +27,7 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 //saveProduct
 router.post('/api/products',jsonBodyParser, withErrorHandling(handleSaveProduct))
 //findProduct
-router.get('/api/products/', withErrorHandling(handleFindProduct))
-//retrieveProduct
-router.get('/api/products', withErrorHandling,(handleRetrieveProduct))
+router.get('/api/products', withErrorHandling(handleFindProduct))
 //saveProductImage
 router.post('/api/products/:productId/images', withErrorHandling(handleSaveProductImage))
 //retrieveProductImage

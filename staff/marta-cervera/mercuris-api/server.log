@@ -886,3 +886,81 @@ error 2020-12-09T20:32:54.712Z - TypeError: "/api/products/:productId/images".wi
 info 2020-12-09T20:32:54.718Z - stopping server
 info 2020-12-09T20:33:48.978Z - starting server
 info 2020-12-09T20:33:49.106Z - undefined
+info 2020-12-09T20:57:15.676Z - starting server
+info 2020-12-09T21:03:37.287Z - stopping server
+info 2020-12-09T21:03:57.431Z - starting server
+info 2020-12-09T21:03:57.594Z - undefined
+info 2020-12-09T21:04:09.135Z - starting server
+info 2020-12-09T21:04:09.292Z - undefined
+info 2020-12-09T21:06:47.738Z - starting server
+info 2020-12-09T21:06:47.877Z - undefined
+info 2020-12-09T22:15:01.882Z - starting server
+info 2020-12-09T22:15:02.019Z - undefined
+info 2020-12-10T08:43:04.814Z - starting server
+info 2020-12-10T08:43:04.967Z - undefined
+info 2020-12-10T10:26:53.731Z - stopping server
+info 2020-12-10T10:26:57.463Z - starting server
+info 2020-12-10T10:26:57.638Z - undefined
+info 2020-12-10T10:31:45.036Z - stopping server
+info 2020-12-10T10:31:57.985Z - starting server
+info 2020-12-10T10:31:58.191Z - undefined
+info 2020-12-10T11:12:16.973Z - starting server
+info 2020-12-10T11:12:17.129Z - undefined
+info 2020-12-10T11:14:37.410Z - stopping server
+info 2020-12-10T11:14:41.218Z - starting server
+info 2020-12-10T11:14:41.415Z - undefined
+info 2020-12-10T11:20:46.964Z - stopping server
+info 2020-12-10T11:20:56.998Z - starting server
+info 2020-12-10T11:22:02.043Z - undefined
+info 2020-12-10T11:40:11.724Z - starting server
+info 2020-12-10T11:40:11.878Z - undefined
+info 2020-12-10T11:45:52.539Z - stopping server
+info 2020-12-10T11:45:56.547Z - starting server
+info 2020-12-10T11:45:56.702Z - undefined
+info 2020-12-10T12:15:41.273Z - stopping server
+info 2020-12-10T12:54:48.990Z - starting server
+info 2020-12-10T12:54:49.118Z - undefined
+info 2020-12-10T13:00:58.047Z - stopping server
+info 2020-12-10T13:01:00.954Z - starting server
+info 2020-12-10T13:01:01.109Z - undefined
+info 2020-12-10T13:04:04.032Z - stopping server
+info 2020-12-10T13:04:15.783Z - starting server
+info 2020-12-10T13:05:50.992Z - starting server
+info 2020-12-10T13:07:41.983Z - starting server
+info 2020-12-10T13:08:59.613Z - starting server
+info 2020-12-10T13:09:33.584Z - undefined
+info 2020-12-10T13:31:34.567Z - starting server
+info 2020-12-10T13:31:34.794Z - undefined
+info 2020-12-10T13:34:47.026Z - starting server
+info 2020-12-10T13:35:12.380Z - undefined
+info 2020-12-10T14:05:30.715Z - starting server
+info 2020-12-10T14:05:30.837Z - undefined
+info 2020-12-10T14:07:35.340Z - stopping server
+info 2020-12-10T14:07:38.204Z - starting server
+info 2020-12-10T14:07:38.330Z - undefined
+info 2020-12-10T15:03:17.757Z - stopping server
+info 2020-12-10T15:04:06.639Z - starting server
+info 2020-12-10T15:04:23.763Z - undefined
+error 2020-12-10T15:09:32.498Z - MongooseServerSelectionError: connection timed out
+    at Function.Model.$wrapCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4858:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4369:10)
+    at model.Query.Query.then (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4450:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-10T17:14:10.174Z - starting server
+info 2020-12-10T17:14:10.316Z - undefined
+info 2020-12-10T17:21:10.746Z - stopping server
+info 2020-12-10T17:22:02.530Z - starting server
+info 2020-12-10T17:22:02.677Z - undefined
+info 2020-12-10T17:26:05.070Z - stopping server
+info 2020-12-10T17:26:08.475Z - starting server
+info 2020-12-10T17:26:08.609Z - undefined
+info 2020-12-10T17:33:17.298Z - stopping server
+info 2020-12-10T17:33:20.105Z - starting server
+info 2020-12-10T17:33:20.237Z - undefined
+info 2020-12-10T17:34:00.283Z - stopping server
+info 2020-12-10T17:34:07.138Z - starting server
+info 2020-12-10T17:34:07.257Z - undefined

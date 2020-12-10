@@ -4,18 +4,13 @@ import { useState, useEffect } from 'react'
 import { findProducts } from '../logic'
 
 
-
-
-
-export default function () {
+export default function ({onSearch}) {
     const [view, setView] = useState('find-products')
 
     const [results, setResults] = useState()
 
 
-    const handleSearchProducts = event => {
-        debugger
-        
+    const handleFindProducts = event => {             
 
         const { token } = sessionStorage
 
@@ -29,9 +24,11 @@ export default function () {
             priceMax: { value: priceMax }
         } } = event
 
-        //onSearch(query, gameconsole, budget, priceMin, priceMax)
-
+        onSearch(queryCompany || undefined, queryProduct || undefined, price? Number(price) : undefined, priceMin? Number(priceMin) : undefined, priceMax? Number(priceMax) : undefined)
+        
+                                                               
         try {
+            debugger
             findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) => {
 
                 if (error) return alert(error.message)
@@ -48,16 +45,16 @@ export default function () {
     }
     return (
         <>
-            <form onSubmit={handleSearchProducts}>
+            <form onSubmit={handleFindProducts}>
                 <input type="text" name="queryCompany" placeholder="Info Company" />
                 <input type="text" name="queryProduct" placeholder="Info Product" />
-                <input type="text" name="price" placeholder="Introduce price" />
-                <input type="text" name="priceMin" placeholder="priceMin" />
-                <input type="text" name="priceMax" placeholder="priceMax" />
+                <input type="number" name="price" placeholder="Introduce price" />
+                <input type="number" name="priceMin" placeholder="priceMin" />
+                <input type="number" name="priceMax" placeholder="priceMax" />
                 <button>Search</button>
             </form>
 
-            {results && results.length && <FindProducts results={results} />}
+            {results && results.length && <FindProducts onSearch={handleFindProducts} results={results}/>}
         </>
     );
 }

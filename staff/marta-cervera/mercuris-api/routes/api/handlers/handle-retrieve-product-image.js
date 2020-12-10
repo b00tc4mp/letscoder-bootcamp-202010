@@ -1,7 +1,7 @@
 const { retrieveProductImage } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
-    debugger
+   
     const { params: { productId } } = req
 
     try {

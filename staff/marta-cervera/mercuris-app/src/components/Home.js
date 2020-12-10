@@ -65,6 +65,24 @@ export default function Home() {
 
         setView('home')
     }
+    
+    const handleSearchProducts = ( queryCompany, queryProduct, price, priceMin, priceMax) => {
+        try {
+           const { token } = sessionStorage
+
+           findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) =>{
+               if (error) return alert (error.message)
+               setProducts(products)
+        })
+                
+        } catch(error) {
+            alert(error.message)
+        }
+    }
+
+
+    
+
 
 
     return (
@@ -73,7 +91,7 @@ export default function Home() {
             {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
             {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={name} />}
             {view === 'profile' && <Profile name={name} />}
-            {view === 'profile' && <SearchProducts />}
+            {view === 'profile' && <SearchProducts onSearch={handleSearchProducts}/>}
 
         </section >
     );

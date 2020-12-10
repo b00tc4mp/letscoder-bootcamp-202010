@@ -12,7 +12,7 @@ function FindProducts({results}){
             <p className="results__p">{name}</p>            
             <p className="results__p">description: {description}</p>
             <p className="results__p">price: {price}</p>
-            <img src={`${API_URL}/products/${id}/images`} width="90px" />
+            <img src={`${API_URL}/products/${id}/images`} width="90px"/>
             
         </li>)}
 
