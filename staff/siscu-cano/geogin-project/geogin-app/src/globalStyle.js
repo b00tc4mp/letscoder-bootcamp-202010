@@ -117,17 +117,12 @@ textarea {
   background-color: ${({ theme }) => theme.colors.app_bg};
   margin: 0 auto;
   > div[tabindex='-1'] {
-    height: calc(100vh - 50px);
+    height: 100vh;
   }
 }
 
 // Pages
 .splashscreen {
-  #app {
-    > div[tabindex='-1'] {
-      height: calc(100vh);
-    }
-  }
   > div {
       background: url(${bgBottomSplash}) center bottom no-repeat;
       margin:  0 auto;
@@ -140,13 +135,4 @@ textarea {
   }
 }
 
-.onboarding {
-  #app {
-    padding: 0 40px 0 40px;
-    > div[tabindex='-1'] {
-    height: calc(100vh)
-  }
-  }
-  
-}
 `

@@ -56,7 +56,7 @@ export const Button = styled.button`
 `
 
 export const Title = styled.h1`
-  margin-top:80px;
+  margin-top: 40px;
   text-align: center;
   font-size: 18px;
   color: #fff;
