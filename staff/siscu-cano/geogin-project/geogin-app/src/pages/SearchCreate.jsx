@@ -16,16 +16,25 @@ import NoImage from '../assets/images/no-image.png'
 const ICON_SIZE = '22px'
 
 export const SearchCreate = () => {
-  const nameSearch = useInputValue('')
-  const descriptionSearch = useInputValue('')
-  const [privateSearch, setPrivateSearch] = useState(false)
-  const [suitableChilds, setSuitableChilds] = useState(false)
-  const [poiBeginGame, setPoiBeginGame] = useState()
-  const [poiEndGame, setPoiEndGame] = useState()
+  // Modals
   const [showModalBegin, setShowModalBegin] = useState(false)
   const [showModalEnd, setShowModalEnd] = useState(false)
+  const [showModalTest, setshowModalTest] = useState(false)
+
+  // Search
   const [picture, setPicture] = useState(NoImage)
+  const nameSearch = useInputValue('')
+  const descriptionSearch = useInputValue('')
+  const [poiBeginGame, setPoiBeginGame] = useState()
+  const [poiEndGame, setPoiEndGame] = useState()
+  const [privateSearch, setPrivateSearch] = useState(false)
+  const [suitableChilds, setSuitableChilds] = useState(false)
   const [time, setTime] = useState('00:00')
+
+  // Test
+  const titleTest = useInputValue('')
+  const descriptionTest = useInputValue('')
+  const [poiTest, setPoiTest] = useState()
 
   useBodyClass('searchcreate')
 
@@ -33,24 +42,35 @@ export const SearchCreate = () => {
     setShowModalBegin(true)
   }
 
-  const showModalEndGame = () => {
-    setShowModalEnd(true)
-  }
-
   const hideModalBeginGame = () => {
     setShowModalBegin(false)
+  }
+
+  const showModalEndGame = () => {
+    setShowModalEnd(true)
   }
 
   const hideModalEndGame = () => {
     setShowModalEnd(false)
   }
 
+  const showModalTestGame = () => {
+    setshowModalTest(true)
+  }
+
+  const hideModalTestGame = () => {
+    setshowModalTest(false)
+  }
   const handleClickMapBegin = (poi) => {
     setPoiBeginGame(poi)
   }
 
   const handleClickMapEnd = (poi) => {
     setPoiEndGame(poi)
+  }
+
+  const handleClickMapTest = (poi) => {
+    setPoiTest(poi)
   }
 
   const handleTime = (time) => {
@@ -69,6 +89,9 @@ export const SearchCreate = () => {
       </Modal>
       <Modal show={showModalEnd} handleClose={hideModalEndGame}>
         <MapGetPos onAddMarker={handleClickMapEnd} />
+      </Modal>
+      <Modal show={showModalTest} handleClose={hideModalTestGame}>
+        <MapGetPos onAddMarker={handleClickMapTest} />
       </Modal>
       <Wizard render={({ step, steps }) => (
         <div>
@@ -135,7 +158,7 @@ export const SearchCreate = () => {
                           <img src={picture} />
                           <div>
                             {nameSearch.value && <p className='game-feature__title'>{nameSearch.value}</p>}
-                            {descriptionSearch.value && <p className='game-feature__descrition'>{descriptionSearch.value}</p>}
+                            {descriptionSearch.value && <p className='game-feature__description'>{descriptionSearch.value}</p>}
                             {suitableChilds && <p className='game-feature__tag'>Apta para niños</p>}
                             {privateSearch && <p className='game-feature__tag'>Búsqueda privada</p>}
                           </div>
@@ -149,8 +172,13 @@ export const SearchCreate = () => {
                     id='quizStep'
                     render={({ previous }) => (
                       <div>
-                        <p className='description'>Rellena las pruebas a realizar:</p>
-
+                        <p className='description'>Rellena las PRUEBAS a realizar:</p>
+                        <Input {...titleTest} placeholder='Título' />
+                        <Input {...descriptionTest} placeholder='Descripción' />
+                        <Input onClick={showModalTestGame} placeholder='Ubicación de inicio' value={poiTest} />
+                        <UploadImage className='small-upload' onUploadImage={handleImage} preview={false} withLabel={false} />
+                        {/* <Input {...imageTest} placeholder='Título' /> */}
+                        {/* <Input {...trickTest} placeholder='Título' /> */}
                         <button className='btn btn-previous' onClick={previous}><BiChevronsLeft size={ICON_SIZE} />Anterior</button>
                       </div>
                     )}

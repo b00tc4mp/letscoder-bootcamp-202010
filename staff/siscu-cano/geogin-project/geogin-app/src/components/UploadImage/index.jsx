@@ -7,7 +7,7 @@ import NoImage from '../../assets/images/no-image.png'
 // Test
 import { uploadImage } from '../../logic'
 
-export const UploadImage = ({ onUploadImage }) => {
+export const UploadImage = ({ onUploadImage, className, preview = true, withIcon = true, withLabel = true }) => {
   const [pictures, setPictures] = useState([])
   const [previewUrl, setPreviewUrl] = useState([NoImage])
 
@@ -44,9 +44,10 @@ export const UploadImage = ({ onUploadImage }) => {
   return (
     <UploadImageWrapper>
       <ImageUploader
-        withIcon
+        withIcon={withIcon}
         singleImage
-        withLabel
+        withLabel={withLabel}
+        className={className}
         onChange={handleUploadImage}
         buttonText='Subir imagen'
         label='Imagen de portada en la búsqueda'
@@ -54,9 +55,9 @@ export const UploadImage = ({ onUploadImage }) => {
         maxFileSize={5242880}
         fileSizeError='La imagen no debe exceder los 5 megas'
       />
-      <div className='preview'>
+      {preview && <div className='preview'>
         <img src={previewUrl} />
-      </div>
+                  </div>}
     </UploadImageWrapper>
 
   )
