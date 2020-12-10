@@ -65,7 +65,6 @@ export default function () {
 
     const handleSearchNotes = (query, tags, visibility, fromYear, toYear) => {
         try {
-
             findNotes(query, tags, visibility, fromYear, toYear)
                 .then(console.log)
                 .catch(alert)

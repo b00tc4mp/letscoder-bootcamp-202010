@@ -12,8 +12,6 @@ export default function ({ onSearch }) {
             toYear: { value: toYear }
         } } = event
 
-        
-
         onSearch(query || undefined, tags && tags.split(' ') || undefined, visibility || undefined, fromYear? Number(fromYear) : undefined, toYear? Number(toYear) : undefined)
     }
 
