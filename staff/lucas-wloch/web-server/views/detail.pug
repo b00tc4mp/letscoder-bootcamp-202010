@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Detail
+    link(rel='stylesheet' href='/style.css')
+    link(rel='shortcut icon' href='/favicon.ico' type='image/x-icon')
+  body
+    a(href='/search' style='text-decoration:none')
+      h1 Search
+    form(action='/search' method='GET')
+      input(type='text' name='q')
+      button Send
+
+    if detail
+      section
+        h1= detail.name
+        a(href= detail.url)
+          img(src=detail.image)
+          form(action=`/api/likeVehicle/${detail.id}` method='POST')
+            button= detail.like ? "🤎" : "🤍"
+        h4= `${detail.maker}  ${detail.year}   ${detail.color} `
+        p= detail.description
+
