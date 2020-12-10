@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  font-family: Roboto Condensed;
+}
+
+button {
+  border-style: none;
+}
+button:focus {
+  outline: 0;
+}
+
+.off {
+  display: none;
+}
+
+.title {
+  font-family: Bebas Neue;
+}
+
+.home {
+  border: 1px solid skyblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.home__register {
+  background-color: skyblue;
+  color: white;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
+}
+.home__login {
+  border-style: solid;
+  border-color: skyblue;
+  background-color: transparent;
+  border-radius: 1rem 0 1rem 0;
+  padding: 0.4rem;
+}
+.home__login:hover {
+  background-color: #E9F6FD;
+}
+
+.register {
+  background-color: red;
+}
+
+.register-confirm {
+  background-color: greenyellow;
+}
+
+.login {
+  background-color: yellow;
+}
+
+.welcome {
+  background-color: plum;
+}
+
+/*# sourceMappingURL=style.css.map */

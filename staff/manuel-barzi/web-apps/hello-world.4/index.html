@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="title">Hello World App</h1>
+
+    <section class="home">
+        <button class="home__register">Register</button> or <button class="home__login">Login</button>
+    </section>
+
+    <section class="register off">
+        <h2>Register</h2>
+    
+        <form class="register__form">
+            <input type="text" name="fullname" placeholder="full name" _required>
+            <input type="email" name="email" placeholder="e-mail" required>
+            <input type="password" name="password" placeholder="password" required>
+            <input type="password" name="repassword" placeholder="repeat password" required>
+            <button>Register</button>
+        </form>
+    </section>
+
+    <section class="register-confirm off">
+        User registered successfully, proceed to <button class="register-confirm__login">Login</button>.
+    </section>
+
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores officia, ut sint excepturi unde soluta doloremque perferendis omnis, animi consectetur laborum iste, voluptatibus temporibus quibusdam tempore nulla ratione deleniti!</section>
+
+    <section class="login off">
+        <h2>Login</h2>
+    
+        <form class="login__form">
+            <input type="email" name="email" placeholder="e-mail" required>
+            <input type="password" name="password" placeholder="password" required>
+            <button>Login</button>
+        </form>
+    </section>
+
+    <section class="welcome off">
+        <h2>Welcome to Hello World App!</h2>
+    </section>
+
+    <script src="./data.js"></script>
+    <script src="./logic.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

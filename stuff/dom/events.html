@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Events</h1>
+    <script>
+        // window.onload = function(event) {
+        //     console.log('loaded')
+        // }
+
+        window.addEventListener('load', function (event) {
+            console.log('loaded')
+
+            saluteAndHide()
+        })
+
+        document.addEventListener('keydown', function (event) {
+            console.log(event.keyCode, event.key)
+        })
+
+        function saluteAndHide() {
+            var hello = document.createElement('h2')
+
+            hello.innerText = "Hello, World!"
+
+            document.body.appendChild(hello)
+
+            setTimeout(function () {
+                document.body.removeChild(hello)
+            }, 3000)
+        }
+
+        window.addEventListener('resize', function(event) {
+            console.log('resizing')
+
+            var doNot = document.createElement('h2')
+
+            doNot.innerText = 'Do not touch me! :['
+
+            document.body.appendChild(doNot)
+        })
+    </script>
+</body>
+
+</html>
