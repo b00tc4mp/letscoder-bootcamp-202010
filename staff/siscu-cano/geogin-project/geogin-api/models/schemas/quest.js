@@ -12,6 +12,9 @@ module.exports = new Schema(
     coverImg: {
       type: String
     },
+    description: {
+      type: String
+    },
     homeLocation: {
       type: Point
     },
