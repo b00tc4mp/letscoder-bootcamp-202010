@@ -63,10 +63,10 @@ export default function () {
         }
     }
 
-    const handleSearchNotes = (query, tags, visibility) => {
+    const handleSearchNotes = (query, tags, visibility, fromYear, toYear) => {
         try {
 
-            findNotes(query || undefined, tags && tags.split(' ') || undefined, visibility || undefined)
+            findNotes(query, tags, visibility, fromYear, toYear)
                 .then(console.log)
                 .catch(alert)
         } catch(error) {
