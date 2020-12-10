@@ -1,0 +1,71 @@
+.signUp
+    color: black
+    background-color: white
+    border-radius: 25px
+    width: 55vw
+    height: 42vh
+    justify-content: space-evenly
+
+    // just-items: space-around
+
+    &__form
+        padding: 2vw
+        display: flex
+        flex-direction: column
+        
+    &__input
+        margin: .5vw
+        height: 4vh
+        border-radius: 7px
+        outline: none
+        border: .5px solid black
+        margin-bottom: 2vw
+        &::placeholder
+            padding-left: 5px
+    
+    &__button
+        border-radius: 7px
+        background-color: #282c34
+        height: 8vw
+        margin-top: 3vw
+        font-size: 1rem
+        font-weight: bold
+        outline: none
+        color: white
+
+
+    &__p
+        margin-top: 0
+        padding-left: 4vw
+        padding-right: 4vw
+        font-size: .9rem
+    &__span
+        font-weight: bold
+        text-decoration: underline
+
+@media (min-width: 1000px)
+    .signUp
+        width: 30vw
+        height: 55vh
+        &__title
+            margin-bottom: 0
+        &__form
+            padding-bottom: 0
+        &__input
+            margin: .5vw
+            height: 6vh
+            border-radius: 7px
+            outline: none
+            border: .5px solid black
+            margin-bottom: 1vw
+        &__button
+            border-radius: 10px
+            background-color: #282c34
+            height: 7vh
+            margin-top: 3vh
+            font-size: 1rem
+            font-weight: bold
+        &__span
+            font-size: 1rem
+  
+ 
