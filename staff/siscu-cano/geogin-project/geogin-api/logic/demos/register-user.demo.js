@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
+const { models: { User } } = require('geogin-data')
 const registerUser = require('../register-user')
 const { User } = require('../../models')
 

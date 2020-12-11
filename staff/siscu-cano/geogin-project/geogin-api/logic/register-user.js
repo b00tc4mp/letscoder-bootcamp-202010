@@ -1,7 +1,7 @@
 const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('geogin-errors')
-const { User } = require('../models')
+const { models: { User } } = require('geogin-data')
 const bcrypt = require('bcryptjs')
 
 /**

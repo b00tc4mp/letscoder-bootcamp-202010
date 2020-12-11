@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('geogin-errors')
-const { User } = require('../models')
+const { models: { User } } = require('geogin-data')
 
 /**
  * Retrieve user

@@ -1,7 +1,7 @@
 const { validateQrCode, validateTeams, validatePlayers, validateId, validateProgress, validateOrganizerId } = require('./helpers/validations')
 const { NotFoundError } = require('geogin-errors')
 const { User, Game, Quest } = require('../models')
-const mongoose = require('mongoose')
+const { models: { User } } = require('geogin-data')
 
 module.exports = function (qrCode, teams, players, quest, progress, organizer) {
     validateQrCode(qrCode)

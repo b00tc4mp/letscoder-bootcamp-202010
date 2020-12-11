@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const express = require('express')
-const mongoose = require('mongoose')
+const { models: { User } } = require('geogin-data')
 const cloudinary = require("cloudinary").v2;
 const logger = require('./utils/logger')
 const { cors } = require('geogin-middlewares')

@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
+const { models: { User } } = require('geogin-data')
 const createQuest = require('../create-quest')
 const { random } = Math
 const { env: { MONGODB_URL } } = process

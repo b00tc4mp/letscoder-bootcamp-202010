@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
+const { models: { User } } = require('geogin-data')
 const updateUser = require('../update-user')
 
 const { env: { MONGODB_URL } } = process

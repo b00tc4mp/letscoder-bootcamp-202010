@@ -1,6 +1,6 @@
 const { validateEmail, validatePassword } = require('./helpers/validations')
 const { AuthError } = require('geogin-errors')
-const { User } = require('../models')
+const { models: { User } } = require('geogin-data')
 const bcrypt = require('bcryptjs')
 
  /**

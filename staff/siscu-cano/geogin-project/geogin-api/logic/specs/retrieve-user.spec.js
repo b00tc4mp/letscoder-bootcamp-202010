@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
+const { models: { User } } = require('geogin-data')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../../utils/randoms')
 require('../../utils/array-polyfills')
 const retrieveUser = require('../retrieve-user')

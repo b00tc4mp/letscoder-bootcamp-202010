@@ -1,6 +1,6 @@
 const { validateId, validateData, validateFullname, validateEmail, validatePassword, validateImage, validateScore, validateFavorites } = require('./helpers/validations')
 const { NotFoundError, ValueError } = require('geogin-errors')
-const { User } = require('../models')
+const { models: { User } } = require('geogin-data')
 
 /**
  * Updates user.

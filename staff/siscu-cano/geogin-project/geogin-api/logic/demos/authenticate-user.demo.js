@@ -1,12 +1,24 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
-const authenticateUser = require('../authenticate-user')
+const { models: { User } } = require('geogin-data')
+const authenticateUser = require('./authenticate-user')
 
-const { env: { MONGODB_URL } } = process
+const {
+  env: { MONGODB_URL }
+} = process
 
-mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
-    .then(() => authenticateUser('aa@aa.aa', 'aa'))
-    .then(console.log)
-    .catch(console.error)
-    .then(mongoose.disconnect)
+;(async () => {
+  try {
+    await mongoose.connect(MONGODB_URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useCreateIndex: true
+    })
+    const userId = await authenticateUser('aa@aa.aa', 'aa')
+    console.log(userId)
+  } catch (error) {
+        console.error(error)
+  } finally {
+        mongoose.disconnect()
+  }
+})()
