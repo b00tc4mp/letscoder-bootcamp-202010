@@ -12,13 +12,11 @@ export default (function (fullname, email, password, callback) {
 
     call('POST', `${API_URL}/users`, { 'Content-type': 'application/json' },
         JSON.stringify({ fullname, email, password }),
-        (error, response) => {
-            if (error) return callback(error)
-
-            const { status, body } = response
-
-            if (status !== 201) {
-                const { error } = JSON.parse(body)
+        (status, response) => {
+            if (status === 0)
+                return callback(new Error('server error'))
+            else if (status !== 201) {
+                const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
             }

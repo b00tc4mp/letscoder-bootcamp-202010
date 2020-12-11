@@ -7,19 +7,16 @@ export default function (token, callback) {
 
     call('GET', 'http://localhost:4000/api/users', { Authorization: `Bearer ${token}` },
         '',
-        (error, response) => {
-            if (error)
-                return callback(error)
-
-            const { status, body } = response
-
-            if (status !== 200) {
-                const { error } = JSON.parse(body)
+        (status, response) => {
+            if (status === 0)
+                return callback(new Error('server error'))
+            else if (status !== 200) {
+                const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
             }
 
-            const user = JSON.parse(body)
+            const user = JSON.parse(response)
 
             callback(null, user)
         })

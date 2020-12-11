@@ -14,14 +14,11 @@ export default (function (noteId, image, callback) {
 
     call('POST', `${API_URL}/notes/${noteId}/images`, {},
         formData,
-        (error, response) => {
-            if (error)
-                return callback(error)
-
-            const { status, body } = response
-
-            if (status !== 204) {
-                const { error } = JSON.parse(body)
+        (status, response) => {
+            if (status === 0)
+                return callback(new Error('server error'))
+            else if (status !== 204) {
+                const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
             }

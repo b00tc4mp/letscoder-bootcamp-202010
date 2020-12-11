@@ -11,18 +11,16 @@ export default (function (email, password, callback) {
 
     call('POST', `${API_URL}/users/auth`, { 'Content-type': 'application/json' },
         JSON.stringify({ email, password }),
-        (error, response) => {
-            if (error) return callback(error)
-            
-            const { status, body } = response
-
-            if (status !== 200) {
-                const { error } = JSON.parse(body)
+        (status, response) => {
+            if (status === 0)
+                return callback(new Error('server error'))
+            else if (status !== 200) {
+                const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
             }
 
-            const { token } = JSON.parse(body)
+            const { token } = JSON.parse(response)
 
             callback(null, token)
         })

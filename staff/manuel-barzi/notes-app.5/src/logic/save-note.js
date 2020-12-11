@@ -27,24 +27,21 @@ export default (function saveNote(token, noteId, text, tags, visibility, callbac
 
     const { API_URL } = this
 
-    call('POST', `${API_URL}/notes`, {
+    call('POST', `${API_URL}/notes`, { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
     },
         JSON.stringify({ noteId, text, tags, visibility }),
-        (error, response) => {
-            if (error)
+        (status, response) => {
+            if (status === 0)
                 return callback(new Error('server error'))
-
-            const { status, body } = response
-
-            if (status !== 200) {
-                const { error } = JSON.parse(body)
+            else if (status !== 200) {
+                const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
             }
 
-            const { noteId } = JSON.parse(body)
+            const { noteId } = JSON.parse(response)
 
             callback(null, noteId)
         })

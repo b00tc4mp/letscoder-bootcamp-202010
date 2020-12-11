@@ -15,23 +15,20 @@ export default (function retrieveNotes(token, callback) {
     validateToken(token)
     validateCallback(callback)
 
-    const { API_URL } = this
+    const { API_URL } =  this
 
     call('GET', `${API_URL}/notes`, { Authorization: `Bearer ${token}` },
         '',
-        (error, response) => {
-            if (error)
-                return callback(error)
-
-            const { status, body } = response
-
-            if (status !== 200) {
-                const { error } = JSON.parse(body)
+        (status, response) => {
+            if (status === 0)
+                return callback(new Error('server error'))
+            else if (status !== 200) {
+                const { error } = JSON.parse(response)
 
                 return callback(new Error(error))
             }
 
-            const notes = JSON.parse(body)
+            const notes = JSON.parse(response)
 
             callback(null, notes)
         })
