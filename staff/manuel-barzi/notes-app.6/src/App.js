@@ -7,9 +7,11 @@ import { Route, withRouter, Redirect } from 'react-router-dom'
 export default withRouter(props => {
   const handleSignUp = (fullname, email, password) => {
     try {
-      registerUser(fullname, email, password)
-        .then(() => props.history.push('/sign-in'))
-        .catch(alert)
+      registerUser(fullname, email, password, error => {
+        if (error) return alert(error.message)
+
+        props.history.push('/sign-in')
+      })
     } catch (error) {
       alert(error.message)
     }
@@ -17,13 +19,13 @@ export default withRouter(props => {
 
   const handleSignIn = (email, password) => {
     try {
-      authenticateUser(email, password)
-        .then(token => {
-          sessionStorage.token = token
+      authenticateUser(email, password, (error, token) => {
+        if (error) return alert(error.message)
 
-          props.history.push('/')
-        })
-        .catch(alert)
+        sessionStorage.token = token
+
+        props.history.push('/')
+      })
     } catch (error) {
       alert(error.message)
     }
