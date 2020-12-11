@@ -1,6 +1,7 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser, saveGame, findGames, saveGameImage } from '../logic'
+import { Route, withRouter, Redirect } from 'react-router-dom'
 import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
 //import FindGames from './FindGames'
@@ -71,6 +72,6 @@ export default function Home() {
         {/* {view === 'access' && <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch} />} */}
         {view === 'home' && <SaveGame onSaveGame={handleSaveGame} />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
-
+        
     </section>
 }

@@ -4,7 +4,7 @@ import authenticateUser from './authenticate-user'
 import retrieveUser from './retrieve-user'
 import saveGame from './save-game'
 import findGames from './find-games'
-import detailGame from './detail-game'
+import retrieveGame from './retrieve-game'
 import saveGameImage from './save-game-image'
 
 export {
@@ -13,7 +13,7 @@ export {
     retrieveUser,
     saveGame,
     findGames,
-    detailGame,
+    retrieveGame,
     saveGameImage,
     context
 }
