@@ -6,6 +6,6 @@ const { Offer } = require('../models')
 const { env: { MONGODB_URL } } = process
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
-    .then(() => deleteOffer('5fc918e8a5dc9b2c8cddcaf7','5fd0ae3a869feb03b07713c5', 'patasss', 'patas', 2))
+    .then(() => deleteOffer('5fc62dcbf130984d9089d04e','5fc68cb189f23b16f416e24e'))
     .catch(error => console.error('not deleted', error))
     .then(mongoose.disconnect)

@@ -9,7 +9,7 @@ import Detail from './Detail'
 import { retrieveOffer } from './../logic'
 import Useroffers from './Useroffers'
 import {Link} from 'react-router-dom'
-
+import {deleteOffer} from './../logic'
 
 
 function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, offers, useroffers }) {
@@ -40,7 +40,21 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, offers, u
 
     }
 
+    const handleGoDelete = (id) => {
+        const { token } = sessionStorage
+        try {
+debugger
 
+            deleteOffer(token, id, (error, offerId) => {
+            if (error) return alert (error.message)
+            setView("user-offers")
+
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+    
 
 return <sections>
         <div>
@@ -64,7 +78,7 @@ return <sections>
     {view === 'offersfound' && <FindOffer results={results} onGoDetail={handleGoDetail} />}
 
     {view === 'default' && <ListOffersRetrieve offers={offers} onGoDetail={handleGoDetail} />}
-    {view === 'user-offers' && <Useroffers useroffers={useroffers} onGoDetail={handleGoDetail} />}
+    {view === 'user-offers' && <Useroffers useroffers={useroffers} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete}/>}
     {view === 'detail' && <Detail offer={offer} />}
 </sections>
 

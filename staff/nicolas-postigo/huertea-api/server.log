@@ -518,3 +518,40 @@ info 2020-12-10T10:49:22.175Z - server running on port 4000
 info 2020-12-10T11:19:09.917Z - stopping server
 info 2020-12-10T11:19:17.262Z - starting server
 info 2020-12-10T11:19:17.566Z - server running on port 4000
+info 2020-12-10T11:54:36.298Z - stopping server
+info 2020-12-10T11:54:43.521Z - starting server
+info 2020-12-10T11:54:44.108Z - server running on port 4000
+info 2020-12-10T12:47:49.141Z - stopping server
+info 2020-12-10T12:48:03.994Z - starting server
+info 2020-12-10T12:48:04.360Z - server running on port 4000
+info 2020-12-10T14:33:55.242Z - starting server
+info 2020-12-10T14:33:55.673Z - server running on port 4000
+info 2020-12-10T14:54:45.615Z - stopping server
+info 2020-12-10T14:54:57.933Z - starting server
+info 2020-12-10T14:54:58.297Z - server running on port 4000
+info 2020-12-10T14:57:42.146Z - stopping server
+info 2020-12-10T14:57:53.569Z - starting server
+info 2020-12-10T14:57:53.862Z - server running on port 4000
+info 2020-12-10T15:11:20.594Z - stopping server
+info 2020-12-10T15:11:33.992Z - starting server
+info 2020-12-10T15:11:34.251Z - server running on port 4000
+info 2020-12-11T09:01:41.327Z - stopping server
+info 2020-12-11T09:01:52.052Z - starting server
+info 2020-12-11T09:01:52.848Z - server running on port 4000
+info 2020-12-11T09:13:39.248Z - stopping server
+info 2020-12-11T09:14:01.080Z - starting server
+info 2020-12-11T09:14:01.342Z - server running on port 4000
+info 2020-12-11T09:26:04.384Z - stopping server
+info 2020-12-11T09:26:28.207Z - starting server
+info 2020-12-11T09:26:29.505Z - server running on port 4000
+info 2020-12-11T09:27:08.468Z - stopping server
+info 2020-12-11T09:27:51.671Z - starting server
+info 2020-12-11T09:27:52.204Z - server running on port 4000
+info 2020-12-11T09:30:34.675Z - starting server
+info 2020-12-11T09:30:35.000Z - server running on port 4000
+info 2020-12-11T09:47:50.251Z - stopping server
+info 2020-12-11T09:57:54.970Z - starting server
+info 2020-12-11T09:57:55.470Z - server running on port 4000
+error 2020-12-11T09:58:14.760Z - NotFoundError: offer with id 5fc68d6789f23b16f416e24f not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

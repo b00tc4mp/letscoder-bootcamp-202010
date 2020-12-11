@@ -3,12 +3,13 @@ const { User } = require('../models')
 const { Offer } = require('../models')
 const { NotFoundError } = require('../errors')
 const semaphore = require('./helpers/semaphore')
+const { ObjectID } = require('mongodb')
 
-module.exports = function (ownerId, offerId, offername, titleoffer, price) {
+module.exports = function (ownerId, offerId) {
     validateId(ownerId)
-    validateOffer(offername)
-    if (typeof offerId !== 'undefined') validateId(offerId)
-    validateTitleoffer(titleoffer)
+debugger
+    validateId(offerId)
+
 
 
     return semaphore(() =>
@@ -16,12 +17,7 @@ module.exports = function (ownerId, offerId, offername, titleoffer, price) {
             .findById(ownerId).lean()
             .then(user => {
                 if (!user) throw new NotFoundError(`user with id  ${ownerId}  not found`)
-                
-                const { _id } = user
-
-                user.id = _id.toString()
-
-
+                debugger
                 if (offerId) {
 
 
@@ -29,10 +25,10 @@ module.exports = function (ownerId, offerId, offername, titleoffer, price) {
                         .findById(offerId)
                         .then(offer => {
                             if (!offer) throw new NotFoundError(`offer with id ${offerId} not found`)
-
+                            debugger
                             return Offer
-                                .deleteOne({ offername, titleoffer, price, owner: ownerId })
-                                .then(() => { })
+                                .deleteOne({ _id: ObjectID(offerId) })
+                                .then(() => {})
 
                         })
                 } 
