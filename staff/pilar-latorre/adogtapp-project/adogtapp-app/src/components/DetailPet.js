@@ -4,7 +4,6 @@ import './DetailPet.sass'
 const API_URL = process.env.REACT_APP_API_URL
 
 function DetailPet({result: {id, name, breed, species, color, description } , onDeletePet}){
-
     const { token } = sessionStorage
     const handleDeletePet = id => {
 
