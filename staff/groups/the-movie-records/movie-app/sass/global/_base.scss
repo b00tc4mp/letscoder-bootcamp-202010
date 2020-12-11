@@ -1,0 +1,55 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  background-image: url("../images/bg-movie-time.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: $text_font;
+  font-weight: 100;
+  color: #5b5b5b;
+  background-color: rgb(255 255 255 / 98%);
+  border-left: 4px solid #061b3a;
+  border-right: 4px solid #061b3a;
+  display: flex;
+  flex-direction: column;
+  & > main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: stretch;
+  & > main {
+    flex: 1;
+    &.section-login {
+      background: #000 url("../images/bg-login.png");
+      opacity: 0.8;
+    }
+    &.section-register {
+      background: #000 url("../images/bg-login.jpg");
+      opacity: 0.8;
+    }
+  }
+}
+@media (min-width: 600px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

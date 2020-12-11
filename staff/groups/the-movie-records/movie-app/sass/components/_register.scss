@@ -1,0 +1,53 @@
+.register {
+    @extend %box;
+    @extend %center;
+    min-width: 365px;
+    max-width: 80%;
+    box-shadow: 0 0 20px 20px black;
+    background-color: #48769b;
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    input {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #cacaca;
+      box-shadow: inset 3px 3px 3px #0000001a;
+      border-radius: 3px/6px;
+    }
+    .btn {
+      display: flex;
+      align-self: flex-end;
+      box-shadow: none;
+    }
+    h2{
+        color: white
+      }
+  }
+@media (min-width:600px){
+    .register{
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        width: 800px;
+    }
+    label{
+        display: block;
+        padding: 10px;
+        padding: 20px;
+        margin-left: 20px;
+        text-align: center;
+    } 
+    h2{
+    
+        text-align: center;
+        font-family: 'Special Elite';
+    }
+    
+
+}
+
+

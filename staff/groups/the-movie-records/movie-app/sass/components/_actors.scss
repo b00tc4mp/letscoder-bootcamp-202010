@@ -1,0 +1,67 @@
+.movie__actors {
+  .scrollable-carousel {
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #000;
+    }
+  }
+}
+
+.wave {
+  float: left;
+  margin: 20px;
+  animation: wave ease-in-out 0 infinite alternate;
+  transform-origin: center -20px;
+}
+
+.wave:hover {
+  animation-play-state: paused;
+}
+
+.wave img {
+  border: 5px solid #f8f8f8;
+  display: block;
+  width: 150px;
+  height: 200px;
+}
+
+.wave figcaption {
+  text-align: center;
+}
+
+.wave:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #ffffff;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+
+.wave:before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  display: block;
+  height: 44px;
+  width: 47px;
+  background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  z-index: 16;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
