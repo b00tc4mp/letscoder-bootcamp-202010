@@ -24,9 +24,9 @@ module.exports = new Schema(
     time: {
       type: Date
     },
-    visibility: {
-      type: String,
-      enum: ['public', 'private']
+    private: {
+      type: Boolean,
+      default: false
     },
     KidsOk: {
       type: Boolean,
@@ -40,9 +40,29 @@ module.exports = new Schema(
     ],
     tests: [
       {
-        title: { type: String },
-        image: { type: String },
-        tricks: [{ type: String }],
+        qr: { 
+          type: String
+        },
+        title: { 
+          type: String,
+          default: ''
+        },
+        image: { 
+          type: String,
+          default: ''
+        },
+        trickOne: { 
+          type: String ,
+          default: ''
+        },
+        trickTwo: { 
+          type: String ,
+          default: ''
+        },
+        trickThree: { 
+          type: String ,
+          default: ''
+        },
         description: { type: String },
         location: {
           type: Point

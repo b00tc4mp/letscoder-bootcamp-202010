@@ -14,7 +14,9 @@ import { MapGetPos } from '../../components/MapGetPos'
 import { TextArea } from '../../components/TextArea'
 import { RiAddCircleLine } from 'react-icons/ri'
 import { IoIosSave } from 'react-icons/io'
-import { v4 as uuidv4 } from 'uuid'
+import { toast } from 'react-toastify'
+import uuid from 'uuid'
+
 import TimeInput from 'react-time-input'
 import NoImage from '../../assets/images/no-image.png'
 
@@ -27,11 +29,11 @@ export const SearchCreate = () => {
   const [showModalTest, setshowModalTest] = useState(false)
 
   // Search
-  const [picture, setPicture] = useState(NoImage)
+  const [picture, setPicture] = useState('')
   const nameSearch = useInputValue('')
   const descriptionSearch = useInputValue('')
-  const [poiBeginGame, setPoiBeginGame] = useState()
-  const [poiEndGame, setPoiEndGame] = useState()
+  const [poiBeginGame, setPoiBeginGame] = useState('')
+  const [poiEndGame, setPoiEndGame] = useState('')
   const [privateSearch, setPrivateSearch] = useState(false)
   const [suitableChilds, setSuitableChilds] = useState(false)
   const [time, setTime] = useState('00:00')
@@ -50,7 +52,11 @@ export const SearchCreate = () => {
     }
   })
 
-  const testsGame = []
+  let userId
+
+  // All (search & test)
+  const [test, setTest] = useState([])
+  const [search, setSearch] = useState([])
 
   useBodyClass('searchcreate')
 
@@ -127,24 +133,100 @@ export const SearchCreate = () => {
     const { data } = trickTest
     data[e.target.name] = e.target.value
     setTrickTest({ data })
-    console.log(data)
   }
 
   const saveTest = () => {
-    const test = {
+    console.log(picture)
+    const { lat, lng } = poiTest
+
+    const _test = {
       title: titleTest,
       description: descriptionTest,
-      idSolutionTest: uuidv4(),
+      qr: uuid.v4(),
       image: pictureTest,
-      location: poiTest,
+      location: [lat, lng],
       trickOne: trickTest.data.trickOne,
       trickTwo: trickTest.data.trickTwo,
       trickThree: trickTest.data.trickThree
     }
-    testsGame.push(test)
+    console.log(_test)
+    setTest([...test, _test])
     resetTest()
-    console.log(testsGame)
     setStepTest(stepTest + 1)
+    console.log(test)
+  }
+
+  const saveAll = () => {
+    const token = window.sessionStorage.token
+    let userId
+
+    try {
+      const { sub } = JSON.parse(window.atob(token.split('.')[1]))
+      userId = sub
+    } catch (e) {
+      return null
+    }
+
+    if (
+      titleTest.trim() === '' ||
+      descriptionTest.trim() === '' ||
+      poiTest === '' ||
+      trickTest.data.trickOne === ''
+    ) {
+      if (stepTest === 0) {
+        toast.error('⛔️ Es necesario introducir como mínimo una prueba!', {
+          position: 'top-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false
+        })
+      } else {
+        toast.error(
+          '⛔️ Para finalizar termina de rellenar los campos obligatorios!',
+          {
+            position: 'top-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false
+          }
+        )
+      }
+    }
+
+    if (
+      !(
+        titleTest.trim() === '' ||
+        descriptionTest.trim() === '' ||
+        poiTest === '' ||
+        trickTest.data.trickOne === ''
+      )
+    ) {
+      saveTest()
+    }
+    console.log(poiBeginGame)
+    console.log(test)
+    const { lat: latBegin, lng: lngBegin } = poiBeginGame
+    const { lat: latEnd, lng: lngEnd } = poiEndGame
+
+    const _search = {
+      title: nameSearch.value,
+      coverImg: picture,
+      description: descriptionSearch.value,
+      homeLocation: [latBegin, lngBegin],
+      endLocation: [latEnd, lngEnd],
+      time: time,
+      private: privateSearch,
+      KidsOk: suitableChilds,
+      test: test,
+      owner: userId
+    }
+
+    setSearch(_search)
+    console.log(_search)
   }
 
   return (
@@ -217,7 +299,7 @@ export const SearchCreate = () => {
                             className='time-input'
                             onTimeChange={handleTime}
                           />
-                          <p className='switch-wrapper'>
+                          <div className='switch-wrapper'>
                             <Switch
                               isOn={privateSearch}
                               onColor='#3780e9'
@@ -226,8 +308,8 @@ export const SearchCreate = () => {
                               }}
                             />{' '}
                             Búsqueda privada
-                          </p>
-                          <p className='switch-wrapper'>
+                          </div>
+                          <div className='switch-wrapper'>
                             <Switch
                               isOn={suitableChilds}
                               onColor='#3780e9'
@@ -236,7 +318,7 @@ export const SearchCreate = () => {
                               }}
                             />{' '}
                             Apto para niños
-                          </p>
+                          </div>
                           <hr />
                           <p className='description'>
                             Previsualización de tú búsqueda:
@@ -247,7 +329,7 @@ export const SearchCreate = () => {
                                 <div>{time}</div>
                               </div>
                             )}
-                            <img src={picture} />
+                            <img src={picture || NoImage} />
                             <div>
                               {nameSearch.value && (
                                 <p className='game-feature__title'>
@@ -290,9 +372,14 @@ export const SearchCreate = () => {
                         <div>
                           <Stepper onStepChange={stepTest} steps={10} />
                           <p className='description'>
-                            Rellena las PRUEBAS a realizar (1 mínimo - 10 máximo):
+                            Rellena las PRUEBAS a realizar (1 mínimo - 10
+                            máximo):
                           </p>
-                          <Input value={titleTest} onChange={handleTitleTest} placeholder='Título' />
+                          <Input
+                            value={titleTest}
+                            onChange={handleTitleTest}
+                            placeholder='Título'
+                          />
                           <Input
                             value={descriptionTest}
                             placeholder='Descripción'
@@ -336,10 +423,7 @@ export const SearchCreate = () => {
                             poiTest === '' ||
                             trickTest.data.trickOne === ''
                           ) && (
-                            <button
-                              className='btn new'
-                              onClick={saveTest}
-                            >
+                            <button className='btn new' onClick={saveTest}>
                               <RiAddCircleLine size={ICON_SIZE} />
                               Añadir prueba
                             </button>
@@ -351,9 +435,10 @@ export const SearchCreate = () => {
                             <BiChevronsLeft size={ICON_SIZE} />
                             Anterior
                           </button>
-                          {stepTest >= 1 && <button className='btn btn-next' onClick={next}>
-                            <IoIosSave onSaveSearch={handleSaveSearch} size={ICON_SIZE} /> Guardar y salir
-                                            </button>}
+
+                          <button className='btn btn-next' onClick={saveAll}>
+                            <IoIosSave size={ICON_SIZE} /> Guardar y salir
+                          </button>
                         </div>
                       )}
                     />

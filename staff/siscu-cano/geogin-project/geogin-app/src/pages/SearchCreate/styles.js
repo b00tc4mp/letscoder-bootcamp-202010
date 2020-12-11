@@ -28,6 +28,9 @@ export const DefaultLayout = styled.div`
     margin: 10px 0 24px 0;
     line-height: 1.3;
   }
+  hr {
+    margin: 24px 0;
+  }
   .btn {
     width: 100%;
     padding: 8px 5px;
@@ -80,6 +83,7 @@ export const DefaultLayout = styled.div`
     align-items: center;
     font-size: 13px;
     color: #636363;
+    margin-bottom: 12px;
     > div {
       display: flex;
       margin-right: 10px;
