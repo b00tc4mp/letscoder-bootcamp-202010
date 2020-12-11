@@ -1,10 +1,9 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { models: { User } } = require('geogin-data')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('geogin-utils/randoms')
 const registerUser = require('../register-user')
-const { User } = require('../../models')
+const { mongoose, models: { User } } = require('geogin-data')
 const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
@@ -35,11 +34,7 @@ describe('registerUser()', () => {
                 .then(match => expect(match).to.be.true)
         )
 
-        afterEach(() =>
-            User
-                .deleteOne({ email })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteMany())
     })
 
     describe('when user already exists', () => {
@@ -64,14 +59,8 @@ describe('registerUser()', () => {
                 })
         )
 
-        afterEach(() =>
-            User
-                .deleteOne({ email, password })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteMany())
     })
-
-    // TODO more unit test cases
 
     after(mongoose.disconnect)
 })

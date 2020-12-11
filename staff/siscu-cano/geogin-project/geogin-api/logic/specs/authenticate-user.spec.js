@@ -1,10 +1,9 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { models: { User } } = require('geogin-data')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('geogin-utils/randoms')
 const authenticateUser = require('../authenticate-user')
-const { User } = require('../../models')
+const { mongoose, models: { User } } = require('geogin-data')
 const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
@@ -15,50 +14,49 @@ describe('authenticateUser()', () => {
     describe('when user already exists', () => {
         let userId, fullname, email, password
 
-        beforeEach(() => {
+        beforeEach(async () => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
-            return bcrypt.hash(password, 10)
-                .then(hash => {
-                    const user = { fullname, email, password: hash }
+            const hash = await bcrypt.hash(password, 10)
 
-                    return User.create(user)
-                        .then(user => userId = user.id)
-                })
+            const user = { fullname, email, password: hash }
+
+            const _user = await User.create(user)
+
+            userId = _user.id
         })
 
-        it('should succeed on correct credentials', () =>
-            authenticateUser(email, password)
-                .then(_userId => expect(_userId).to.equal(userId))
-        )
+        it('should succeed on correct credentials', async () => {
+            const _userId = await authenticateUser(email, password)
+
+            expect(_userId).to.equal(userId)
+        })
 
         describe('when wrong credentials', () => {
-            it('should fail on wrong e-mail', () =>
-                authenticateUser(`wrong${email}`, password)
-                    .catch(error => {
-                        expect(error).to.be.instanceOf(Error)
+            it('should fail on wrong e-mail', async () => {
+                try {
+                    await authenticateUser(`wrong${email}`, password)
+                } catch (error) {
+                    expect(error).to.be.instanceOf(Error)
 
-                        expect(error.message).to.equal('wrong credentials')
-                    })
-            )
+                    expect(error.message).to.equal('wrong credentials')
+                }
+            })
 
-            it('should fail on wrong password', () =>
-                authenticateUser(email, `wrong${password}`)
-                    .catch(error => {
-                        expect(error).to.be.instanceOf(Error)
+            it('should fail on wrong password', async () => {
+                try {
+                    await authenticateUser(email, `wrong${password}`)
+                } catch (error) {
+                    expect(error).to.be.instanceOf(Error)
 
-                        expect(error.message).to.equal('wrong credentials')
-                    })
-            )
+                    expect(error.message).to.equal('wrong credentials')
+                }
+            })
         })
 
-        afterEach(() =>
-            User
-                .deleteOne({ _id: userId })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteMany())
     })
 
     describe('when user does not exist', () => {
@@ -69,14 +67,15 @@ describe('authenticateUser()', () => {
             password = randomStringWithPrefix('password')
         })
 
-        it('should fail on valid credentials', () =>
-            authenticateUser(email, password)
-                .catch(error => {
-                    expect(error).to.be.instanceOf(Error)
+        it('should fail on valid credentials', async () => {
+            try {
+                await authenticateUser(email, password)
+            } catch (error) {
+                expect(error).to.be.instanceOf(Error)
 
-                    expect(error.message).to.equal('wrong credentials')
-                })
-        )
+                expect(error.message).to.equal('wrong credentials')
+            }
+        })
     })
 
     describe('when any parameter is wrong', () => {
