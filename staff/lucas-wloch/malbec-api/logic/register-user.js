@@ -15,7 +15,7 @@ module.exports = (fullname, email, password) => {
         return User
             .findOne({ email })
             .then(user => {
-                if (user) throw new ConflictError(`e-mail ${email} already registered`)
+                if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
 
                 return bcryptjs.hash(password, 10)
             })

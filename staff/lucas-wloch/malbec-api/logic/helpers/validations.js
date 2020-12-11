@@ -26,7 +26,7 @@ module.exports = {
     },
 
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new ContentError('id is empty or blank')
 
@@ -126,8 +126,8 @@ module.exports = {
         || category === 'otras-sugerencias' || category === 'acompañamientos-guarniciones' || category === 'postres' || category === 'aguas-refrescos'
         || category === 'vinos' || category === 'cervezas')) throw new ValueError('category is incorrect')
 
-        // entrantes parrilla, empanadas, ensaladas, parrilla, pescados, otras sugerencias, acompañamientos/guarniciones, postres, aguas/refrescos
-        // vinos, cervezas
+        // ["entrantes-parrilla", "empanadas", "ensaladas", "parrilla", "pescados", "otras-sugerencias", 
+        // "acompañamientos-guarniciones", "postres", "aguas-refrescos", "vinos", "cervezas"]
     },
 
     validateProductAvailable(available){

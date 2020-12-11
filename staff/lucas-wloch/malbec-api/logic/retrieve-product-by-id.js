@@ -1,10 +1,11 @@
-// const { validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateProductAlergenos, validateProductCategory, validateProductAvailable } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { Product } = require('../models')
-// import { Product } from '../models'
+const { validateId } = require('./helpers/validations')
 
 
 module.exports = (productId) => {
+    validateId(productId)
+
     return Promise.resolve()
         .then(() => {
             debugger
@@ -14,10 +15,10 @@ module.exports = (productId) => {
                     if (!product)
                         throw new NotFoundError(`product with id ${productId} not found`)
 
-                    const {_id } = product
+                    const { _id } = product
 
                     product.id = _id.toString()
-                    
+
                     delete product._id
                     debugger
                     return product

@@ -15,7 +15,6 @@ module.exports = (email, password) => {
             if (!user) throw new AuthError('wrong credentials')
 
             const { password: hash } = user
-            console.log(hash, password)
 
             return bcryptjs.compare(password, hash)
                 .then(match => {
