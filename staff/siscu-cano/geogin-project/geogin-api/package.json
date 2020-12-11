@@ -21,6 +21,7 @@
     "geogin-errors": "file:../geogin-errors",
     "geogin-middlewares": "file:../geogin-middlewares",
     "geogin-utils": "file:../geogin-utils",
+    "geogin-data": "file:../geogin-data",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
     "xmlhttprequest": "^1.8.0"
