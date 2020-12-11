@@ -35,11 +35,7 @@ describe('registerUser()', () => {
                 .then(match => expect(match).to.be.true)
         )
 
-        afterEach(() =>
-            User
-                .deleteOne({ email })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteMany())
     })
 
     describe('when user already exists', () => {
@@ -64,11 +60,7 @@ describe('registerUser()', () => {
                 })
         )
 
-        afterEach(() =>
-            User
-                .deleteOne({ email, password })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteMany())
     })
 
     // TODO more unit test cases

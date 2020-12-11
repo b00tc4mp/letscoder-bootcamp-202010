@@ -54,11 +54,7 @@ describe('authenticateUser()', () => {
             )
         })
 
-        afterEach(() =>
-            User
-                .deleteOne({ _id: userId })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteMany())
     })
 
     describe('when user does not exist', () => {
