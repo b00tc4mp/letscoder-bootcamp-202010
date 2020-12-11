@@ -14,6 +14,7 @@ import { MapGetPos } from '../../components/MapGetPos'
 import { TextArea } from '../../components/TextArea'
 import { RiAddCircleLine } from 'react-icons/ri'
 import { IoIosSave } from 'react-icons/io'
+import { v4 as uuidv4 } from 'uuid'
 import TimeInput from 'react-time-input'
 import NoImage from '../../assets/images/no-image.png'
 
@@ -133,6 +134,7 @@ export const SearchCreate = () => {
     const test = {
       title: titleTest,
       description: descriptionTest,
+      idSolutionTest: uuidv4(),
       image: pictureTest,
       location: poiTest,
       trickOne: trickTest.data.trickOne,
@@ -350,8 +352,8 @@ export const SearchCreate = () => {
                             Anterior
                           </button>
                           {stepTest >= 1 && <button className='btn btn-next' onClick={next}>
-                            <IoIosSave size={ICON_SIZE} /> Guardar y salir
-                          </button>}
+                            <IoIosSave onSaveSearch={handleSaveSearch} size={ICON_SIZE} /> Guardar y salir
+                                            </button>}
                         </div>
                       )}
                     />

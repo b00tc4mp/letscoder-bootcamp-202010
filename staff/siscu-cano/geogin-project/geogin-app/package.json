@@ -43,7 +43,8 @@
     "react-step-progress": "^1.0.3",
     "react-time-input": "0.0.19",
     "react-toastify": "^6.1.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "uuid": "^8.3.2"
   },
   "standard": {
     "ignore": [
