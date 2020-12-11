@@ -1,7 +1,7 @@
 const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('notes-errors')
-const { User } = require('../models')
+const { models: { User } } = require('notes-data')
 const bcrypt = require('bcryptjs')
 
 module.exports = function (fullname, email, password) {

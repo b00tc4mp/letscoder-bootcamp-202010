@@ -1,20 +1,11 @@
 require('dotenv').config()
 
-const { MongoClient } = require('mongodb')
-const context = require('./context')
+const { mongoose } = require('notes-data')
 const toggleFollowUser = require('./toggle-follow-user')
 
 const { env: { MONGODB_URL } } = process
 
-const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-client.connect()
-    .then(connection => {
-        context.connection = connection
-
-        return toggleFollowUser('5fbd3f11578ed8ad70a65432', '5fbe6e16b15915b8c987cda2')
-    })
+mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
+    .then(() => toggleFollowUser('5fd3a4243b9f59fc79f47803', '5fd3a42e3b9f59fc79f47805'))
     .then(console.log)
-    .catch(console.error)
-    .then(() => client.close())
-    .catch(console.error)
+    .then(mongoose.disconnect)

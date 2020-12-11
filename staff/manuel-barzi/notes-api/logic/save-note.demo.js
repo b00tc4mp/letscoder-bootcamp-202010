@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
+const { mongoose } = require('notes-dataF')
 const saveNote = require('./save-note')
 
 const { env: { MONGODB_URL } } = process

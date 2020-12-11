@@ -1,7 +1,6 @@
 const { validateId, validateText, validateTags, validateVisibility } = require('./helpers/validations')
-const { ObjectId } = require('mongodb')
 const { NotFoundError } = require('notes-errors')
-const { User, Note } = require('../models')
+const { mongoose: { Types: { ObjectId } }, models: { User, Note } } = require('notes-data')
 
 module.exports = (ownerId, noteId, text, tags, visibility) => {
     validateId(ownerId)

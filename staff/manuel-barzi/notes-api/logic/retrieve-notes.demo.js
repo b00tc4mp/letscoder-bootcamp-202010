@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
+const { mongoose } = require('notes-data')
 const retrieveNotes = require('./retrieve-notes')
 
 const { env: { MONGODB_URL } } = process

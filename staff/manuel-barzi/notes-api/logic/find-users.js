@@ -1,25 +1,15 @@
 const { validateQuery } = require('./helpers/validations')
-const context = require('./context')
+const { models: { User } } = require('notes-data')
 
-const { env: { DB_NAME } } = process
-
-module.exports = function (query) {
+module.exports = query => {
     validateQuery(query)
 
     // TODO search users by query matching any part of the fullname or the e-mail
 
-    const { connection } = this
 
-    const db = connection.db(DB_NAME)
-
-    const users = db.collection('users')
-
-    // IMPORTANT! create an index in db for this search, run "db.users.createIndex({"fullname":'text',"email":'text'})" in the mongo shell for this database and collection
-    const cursor = users.find({ $text: { $search: query, $caseSensitive: false, $diacriticSensitive: false } })
-
-    return cursor.toArray()
+    // IMPORTANT! create an index in db for this search SEE user schema that creates index from mongoose
+    return User.find({ $text: { $search: query, $caseSensitive: false, $diacriticSensitive: false } })
         .then(users => {
-            //users = users.map(({ _id, fullname, email }) => ({ id: _id.toString(), fullname, email }))
             users.forEach(user => {
                 const { _id } = user
 
@@ -32,4 +22,4 @@ module.exports = function (query) {
             return users
         })
 
-}.bind(context)
+}

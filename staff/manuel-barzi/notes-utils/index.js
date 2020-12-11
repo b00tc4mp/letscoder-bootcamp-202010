@@ -1,4 +1,3 @@
 module.exports = {
-    call: require('./call'),
-    ids: require('./ids')
+    call: require('./call')
 }

@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
+const { mongoose } = require('notes-data')
 const authenticateUser = require('./authenticate-user')
 
 const { env: { MONGODB_URL } } = process

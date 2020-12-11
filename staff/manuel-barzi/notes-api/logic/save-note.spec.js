@@ -1,12 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('../utils/randoms')
-require('../utils/array-polyfills')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('notes-utils/randoms')
+require('notes-utils/array-polyfills')
 const saveNote = require('./save-note')
-const mongoose = require('mongoose')
-const { Types: { ObjectId } } = mongoose
-const { User, Note } = require('../models')
+const { mongoose, mongoose: { Types: { ObjectId } }, models: { User, Note } } = require('notes-data')
 
 const { env: { MONGODB_URL } } = process
 

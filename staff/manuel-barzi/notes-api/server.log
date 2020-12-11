@@ -1469,3 +1469,179 @@ info 2020-12-11T12:13:40.536Z - starting server
 info 2020-12-11T12:13:40.646Z - server running on port 4000
 info 2020-12-11T15:56:29.889Z - stopping server
 info 2020-12-11T15:56:29.890Z - stopping server
+info 2020-12-11T16:57:18.684Z - starting server
+info 2020-12-11T16:57:18.789Z - server running on port 4000
+error 2020-12-11T16:57:34.067Z - NotFoundError: user with id 5fd371b9dc35ab50a51c430c not found
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+info 2020-12-11T17:01:06.989Z - stopping server
+info 2020-12-11T17:01:06.989Z - stopping server
+info 2020-12-11T17:07:41.889Z - starting server
+error 2020-12-11T17:07:41.980Z - Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/route.js:202:15)
+    at Function.proto.<computed> [as post] (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/node_modules/express/lib/router/index.js:510:19)
+    at Object.<anonymous> (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/api/index.js:21:8)
+    at Module._compile (node:internal/modules/cjs/loader:1083:30)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)
+    at Module.load (node:internal/modules/cjs/loader:948:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:789:14)
+    at Module.require (node:internal/modules/cjs/loader:972:19)
+    at require (node:internal/modules/cjs/helpers:88:18)
+    at Object.<anonymous> (/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/routes/index.js:2:10)
+    at Module._compile (node:internal/modules/cjs/loader:1083:30)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1112:10)
+    at Module.load (node:internal/modules/cjs/loader:948:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:789:14)
+    at Module.require (node:internal/modules/cjs/loader:972:19)
+    at require (node:internal/modules/cjs/helpers:88:18)
+info 2020-12-11T17:07:41.984Z - stopping server
+info 2020-12-11T17:09:06.256Z - starting server
+info 2020-12-11T17:09:06.335Z - server running on port 4000
+error 2020-12-11T17:24:58.607Z - ConflictError: user with e-mail email0.8000924196330301@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:26:28.985Z - ConflictError: user with e-mail email0.07548183251826823@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:26:45.305Z - ConflictError: user with e-mail email0.17633583794852425@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:27:15.864Z - ConflictError: user with e-mail email0.45539372512393905@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:27:31.982Z - ConflictError: user with e-mail email0.4974874894046595@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:28:12.210Z - ConflictError: user with e-mail email0.03866247337163298@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:28:47.951Z - ConflictError: user with e-mail email0.4561057026332562@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:29:18.702Z - ConflictError: user with e-mail email0.27387477807167415@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:29:29.518Z - ConflictError: user with e-mail email0.7791168881281136@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:29:37.906Z - ConflictError: user with e-mail email0.37746336737149133@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:29:44.951Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:29:45.145Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:29:45.158Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:29:46.642Z - ConflictError: user with e-mail email0.9500334271658557@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:30:12.319Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:30:12.517Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:30:12.529Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:30:14.030Z - ConflictError: user with e-mail email0.593749001233391@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:30:21.099Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:30:21.341Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:30:21.354Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:30:23.525Z - ConflictError: user with e-mail email0.5410420839457113@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:31:16.897Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:31:17.132Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:31:17.152Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:31:19.981Z - ConflictError: user with e-mail email0.1653728269885144@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:32:32.092Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:32:32.308Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:32:32.323Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:32:33.961Z - ConflictError: user with e-mail email0.10094991066318304@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:34:35.072Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:34:35.267Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:34:35.280Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:34:36.854Z - ConflictError: user with e-mail email0.9208317143897573@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:34:50.230Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:34:50.424Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:34:50.436Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:34:51.969Z - ConflictError: user with e-mail email0.13150094773602294@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:35:20.902Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:35:21.112Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:35:21.125Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:35:22.574Z - ConflictError: user with e-mail email0.6337586433042242@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:35:31.730Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:35:31.943Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:35:31.960Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:35:33.623Z - ConflictError: user with e-mail email0.6144553705265607@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+info 2020-12-11T17:36:03.531Z - stopping server
+info 2020-12-11T17:36:03.538Z - stopping server
+info 2020-12-11T17:36:05.022Z - starting server
+info 2020-12-11T17:36:05.124Z - server running on port 4000
+info 2020-12-11T17:36:05.769Z - stopping server
+info 2020-12-11T17:36:05.770Z - stopping server
+info 2020-12-11T17:36:25.133Z - starting server
+info 2020-12-11T17:36:25.208Z - server running on port 4000
+error 2020-12-11T17:36:32.217Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:36:32.413Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:18:39
+error 2020-12-11T17:36:32.426Z - AuthError: wrong credentials
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+error 2020-12-11T17:36:33.979Z - ConflictError: user with e-mail email0.7962939687618533@mail.com already registered
+    at /Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/notes-api/logic/register-user.js:16:33
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)

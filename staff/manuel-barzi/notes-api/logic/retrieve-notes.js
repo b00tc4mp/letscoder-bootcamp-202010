@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('notes-errors')
-const { User, Note } = require('../models')
+const { models: { User, Note } } = require('notes-data')
 
 module.exports = ownerId => {
     validateId(ownerId)
