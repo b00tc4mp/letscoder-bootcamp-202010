@@ -16,7 +16,7 @@ module.exports = (ownerId, noteId, text, tags, visibility) => {
             if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
             if (noteId) {
-                return Notes
+                return Note
                     .findById(noteId)
                     .then(note => {
                         if (!note) throw new NotFoundError(`note with id ${noteId} not found`)

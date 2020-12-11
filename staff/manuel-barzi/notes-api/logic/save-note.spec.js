@@ -1,32 +1,17 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { MongoClient, ObjectId } = require('mongodb')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('../utils/randoms')
 require('../utils/array-polyfills')
-const context = require('./context')
 const saveNote = require('./save-note')
+const mongoose = require('mongoose')
+const { Types: { ObjectId } } = mongoose
+const { User, Note } = require('../models')
 
-const { env: { MONGODB_URL, DB_NAME } } = process
+const { env: { MONGODB_URL } } = process
 
 describe('saveNote()', () => {
-    let client, db, users, notes
-
-    before(() => {
-        client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-        return client
-            .connect()
-            .then(connection => {
-                context.connection = connection
-
-                db = connection.db(DB_NAME)
-
-                users = db.collection('users')
-
-                notes = db.collection('notes')
-            })
-    })
+    before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {
         let fullname, email, password, ownerId
@@ -38,9 +23,8 @@ describe('saveNote()', () => {
 
             const user = { fullname, email, password }
 
-            return users
-                .insertOne(user)
-                .then(result => ownerId = result.insertedId.toString())
+            return User.create(user)
+                .then(user => ownerId = user.id)
         })
 
         describe('when user doesn\'t have notes', () => {
@@ -58,29 +42,25 @@ describe('saveNote()', () => {
 
             it('should succeed creating a new note', () =>
                 saveNote(ownerId, undefined, text, tags, visibility)
-                    .then(() => {
-                        const cursor = notes.find({ owner: ObjectId(ownerId) })
+                    .then(noteId => {
+                        expect(ObjectId.isValid(noteId)).be.true
 
-                        return cursor.toArray()
-                            .then(notes => {
-                                expect(notes).to.have.lengthOf(1)
+                        return Note.find({ owner: ownerId })
+                    })
+                    .then(notes => {
+                        expect(notes).to.have.lengthOf(1)
 
-                                const [note] = notes
+                        const [note] = notes
 
-                                expect(note.text).to.equal(text)
+                        expect(note.text).to.equal(text)
 
-                                expect(note.tags).to.deep.equal(tags)
-                                expect(note.visibility).to.equal(visibility)
-                                expect(note.date).to.be.instanceOf(Date)
-                            })
+                        expect(note.tags).to.deep.equal(tags)
+                        expect(note.visibility).to.equal(visibility)
+                        expect(note.date).to.be.instanceOf(Date)
                     })
             )
 
-            afterEach(() =>
-                notes
-                    .deleteMany({ owner: ObjectId(ownerId) })
-                    .then(result => expect(result.deletedCount).to.equal(1))
-            )
+            afterEach(() => Note.deleteMany())
         })
 
         describe('when user already has notes', () => {
@@ -95,8 +75,8 @@ describe('saveNote()', () => {
 
                 visibility = ['public', 'private'].random()
 
-                return notes.insertOne({ text, tags, visibility, owner: ObjectId(ownerId), date: new Date })
-                    .then(result => noteId = result.insertedId.toString())
+                return Note.create({ text, tags, visibility, owner: ownerId, date: new Date })
+                    .then(note => noteId = note.id)
             })
 
             it('should succeed updating the note', () => {
@@ -109,30 +89,25 @@ describe('saveNote()', () => {
                 visibility = ['public', 'private'].random()
 
                 return saveNote(ownerId, noteId, text, tags, visibility)
-                    .then(result => {
-                        expect(result).to.be.undefined
+                    .then(noteId => {
+                        expect(ObjectId.isValid(noteId)).be.true
 
-                        const cursor = notes.find({ owner: ObjectId(ownerId) })
+                        return Note.find({ owner: ownerId })
+                    })
+                    .then(notes => {
+                        expect(notes).to.have.lengthOf(1)
 
-                        return cursor.toArray()
-                            .then(notes => {
-                                expect(notes).to.have.lengthOf(1)
+                        const [note] = notes
 
-                                const [note] = notes
+                        expect(note.text).to.equal(text)
 
-                                expect(note.text).to.equal(text)
-
-                                expect(note.tags).to.deep.equal(tags)
-                                expect(note.visibility).to.equal(visibility)
-                                expect(note.date).to.be.instanceOf(Date)
-                            })
+                        expect(note.tags).to.deep.equal(tags)
+                        expect(note.visibility).to.equal(visibility)
+                        expect(note.date).to.be.instanceOf(Date)
                     })
             })
 
-            afterEach(() =>
-                notes.deleteMany({ owner: ObjectId(ownerId) })
-                    .then(result => expect(result.deletedCount).to.equal(1))
-            )
+            afterEach(() => Note.deleteMany())
         })
 
         describe('when user note does not exist (it was removed from db)', () => {
@@ -160,10 +135,7 @@ describe('saveNote()', () => {
             )
         })
 
-        afterEach(() =>
-            users.deleteOne({ email, password })
-                .then(result => expect(result.deletedCount).to.equal(1))
-        )
+        afterEach(() => User.deleteMany())
     })
 
     describe('when user does not exist', () => {
@@ -193,5 +165,5 @@ describe('saveNote()', () => {
 
     // TODO more unit test cases
 
-    after(() => client.close())
+    after(mongoose.disconnect)
 })
