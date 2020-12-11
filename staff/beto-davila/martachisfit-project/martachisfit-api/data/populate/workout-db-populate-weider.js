@@ -1,8 +1,7 @@
 require('dotenv').config()
 
 const mongoose = require('mongoose')
-// const { User } = require('../models')
-const { Workout } = require('../models') 
+const { Workout } = require('../../models') 
 
 const { env: { MONGODB_URL } } = process
 
@@ -10,8 +9,7 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
     .then(() => {
         Workout.create(
             { name: 'Clásica dividida (Weider)', level: 'advanced', daysWeek: '5', setsWeek: '90-100',
-            layout: ` 
-            #### Día 1 (Pecho)
+            layout: `#### Día 1 (Pecho)
             \n Press de banca - 3 series de 8 repeticiones
             \n Press inclinado con mancuernas - 3 series de 10 repeticiones
             \n Cruces en polea - 3 series de 10 repeticiones

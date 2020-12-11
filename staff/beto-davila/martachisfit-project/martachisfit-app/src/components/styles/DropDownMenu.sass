@@ -22,45 +22,57 @@
     padding: 0 .5rem
     position: relative
 
-.toggle
+.toggle__btn
     margin: 0 40px 0 0
-    font-size: 26px
+    font-size: 2rem
     line-height: 70px
     display: none
     width: 26px
     float: right
 
-.toggle__input
-    display: none
+// .toggle__input
+//     display: none
 
 
 @media only screen and (max-width: 600px)
 
-    .toggle
+    .toggle__btn
         cursor: pointer
         display: block
+        border: none
+        background-color: transparent
+        outline: none
 
         &__input:checked + .menu
             display: block
             z-index: 999
 
     .menu
+        position: absolute
         text-align: center
-        width: 80%
+        width: 100%
         margin: auto
         display: none
         background-color: #F8FAFA
         box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        z-index: 1
+        overflow: auto
 
     .menu .menu__link
         display: block
         border-bottom: 1px solid #eaeaeb
         margin: 0
         z-index: 1
+    
+    .dropdown
+        position: relative
 
 
     .menu__link:hover
         background-color: #eaeaeb
+    
+    .show 
+        display: block
 
     
 

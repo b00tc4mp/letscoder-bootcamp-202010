@@ -1,8 +1,7 @@
 require('dotenv').config()
 
 const mongoose = require('mongoose')
-// const { User } = require('../models')
-const { Workout } = require('../models') 
+const { Workout } = require('../../models') 
 
 const { env: { MONGODB_URL } } = process
 
@@ -10,8 +9,7 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
     .then(() => {
         Workout.create(
             { name: 'Full Body (cuerpo entero)', level: 'beginner', daysWeek: '3', setsWeek: '60-70',
-            layout: ` 
-            #### Día 1
+            layout: `#### Día 1
             \n **Pecho** - Press de banca - 4 series de 8 repeticiones
             \n **Espalda** - Jalón al pecho - 4 series de 10 repeticiones
             \n **Hombro** - Press de hombro con mancuernas - 4 series de 10 repeticiones

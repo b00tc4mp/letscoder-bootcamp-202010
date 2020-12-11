@@ -43,7 +43,7 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 router.get('/api/users/foods', withErrorHandling(handleRetrieveSavedFood))
 
 // find food
-router.post('/api/foods', jsonBodyParser, withErrorHandling(handleFindFood))
+router.get('/api/foods', withErrorHandling(handleFindFood))
 
 // toggle food
 router.patch('/api/users/foods/:foodId', jsonBodyParser, withErrorHandling(handleToggleFoodUserDiet))

@@ -5,8 +5,9 @@ export default function findFood(query, callback) {
     validateQuery(query)
     validateCallback(callback)
 
-    call('POST', `http://localhost:4000/api/foods?q=${query}`, { 'Content-type': 'application/json' },
-        JSON.stringify( {query} ),
+    call('GET', `http://localhost:4000/api/foods?q=${query}`, { },
+        //JSON.stringify( {query} ),
+        null,
         (status, response) => {
             if(status === 0)
                 return callback(new Error('server error'))

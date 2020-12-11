@@ -16,7 +16,7 @@ import logo from '../../src/logo.png'
 import facebook from './icons/social/facebook.png'
 import instagram from './icons/social/instagram.png'
 import linkedin from './icons/social/linkedin.png'
-import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe, Diets, Workouts } from './index'
+import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe, Diets, Workouts, Workout } from './index'
 
 export default function Home () {
     const [name, setName] = useState()
@@ -275,6 +275,7 @@ export default function Home () {
     {view === 'welcome' && <Welcome />}
     {view === 'diet-design' && <DietDesign />}
     {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout}/>}
+    {view === 'workout' && <Workout source={workout}/>}
     {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe}/>}
     {view === 'recipe' && recipe && <Recipe onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe}/>}
     {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToUserDiet={handleGoToUserDiet}/>}

@@ -1155,3 +1155,26 @@ info 2020-12-10T15:37:12.999Z - server running on port 4000
 error 2020-12-10T15:43:08.076Z - ReferenceError: id is not defined
     at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-workout.js:32:62
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-10T15:49:16.046Z - starting server
+info 2020-12-10T15:49:16.209Z - server running on port 4000
+info 2020-12-10T16:23:18.092Z - stopping server
+info 2020-12-10T16:23:21.028Z - starting server
+info 2020-12-10T16:23:21.185Z - server running on port 4000
+info 2020-12-10T16:31:16.302Z - stopping server
+info 2020-12-10T16:40:49.554Z - starting server
+info 2020-12-10T16:40:49.712Z - server running on port 4000
+info 2020-12-10T17:48:04.697Z - stopping server
+info 2020-12-10T17:48:07.534Z - starting server
+info 2020-12-10T17:48:07.666Z - server running on port 4000
+info 2020-12-10T17:49:46.140Z - stopping server
+info 2020-12-10T17:49:49.213Z - starting server
+info 2020-12-10T17:49:49.350Z - server running on port 4000
+info 2020-12-10T17:50:31.277Z - stopping server
+info 2020-12-10T17:50:42.124Z - starting server
+info 2020-12-10T17:50:42.493Z - server running on port 4000
+info 2020-12-10T18:02:51.541Z - starting server
+info 2020-12-10T18:02:51.676Z - server running on port 4000
+info 2020-12-10T18:12:45.415Z - stopping server
+info 2020-12-10T18:12:58.526Z - starting server
+info 2020-12-10T18:12:58.800Z - server running on port 4000
+info 2020-12-11T06:07:43.839Z - stopping server

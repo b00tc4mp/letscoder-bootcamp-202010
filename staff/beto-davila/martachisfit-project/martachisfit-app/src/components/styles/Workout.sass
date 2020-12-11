@@ -1,0 +1,52 @@
+.bold
+    font-weight: bold
+
+.workout-pseudo
+    display: block
+    position: relative
+    height: 140vh
+    
+.workout-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-workout.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+    
+.workout
+    &__name
+        text-align: center
+        margin: 0
+
+    &__header
+        display: flex
+        justify-content: space-evenly
+        margin: 1rem
+        overflow: auto
+
+    &__header > p
+        font-size: .9rem
+
+    &__description
+        width: 85%
+        margin: auto
+        text-align: left
+        
+    &__description > p
+        color: #282929
+
+    &__layout
+        width: 70%
+        text-align: left
+        margin: 1rem auto
+        background-color: #dde2e2
+        padding: .5rem
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+    
+    &__layout > p
+        font-size: .9rem
+        

@@ -22,49 +22,49 @@ module.exports = function (level) {
 
                 if (level === 'beginner') {
 
-                return Workout.findById('5fd216d2b8f2cf383b183c35').lean()
+                return Workout.findById('5fd24f56b252584713e17320').lean()
                     .then(workout => {
                     if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
 
-                    const {name, daysWeek, level, setsWeek, _id, layout} = workout
+                    const {name, daysWeek, level, setsWeek, _id, layout, description} = workout
 
                     workout.id = _id.toString()
 
                     const { id } = workout
 
-                    return {name, daysWeek, level, setsWeek, id, layout}
+                    return {name, daysWeek, level, setsWeek, id, layout, description}
                     })
                 }
 
                 else if (level === 'intermediate') {
 
-                    return Workout.findById('5fd21f40926e4439dfc65eba').lean()
+                    return Workout.findById('5fd24e8d28e0c746d361af52').lean()
                     .then(workout => {
                     if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
 
-                    const {name, daysWeek, level, setsWeek, _id, layout} = workout
+                    const {name, daysWeek, level, setsWeek, _id, layout, description} = workout
 
                     workout.id = _id.toString()
 
                     const { id } = workout
 
-                    return {name, daysWeek, level, setsWeek, id, layout}
+                    return {name, daysWeek, level, setsWeek, id, layout, description}
                     })
                 }
 
                 else if (level === 'advanced') {
 
-                    return Workout.findById('5fd22ee1ddd5e63cdbd2cdbd').lean()
+                    return Workout.findById('5fd24f11e717b546f7602b42').lean()
                     .then(workout => {
                     if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
 
-                    const {name, daysWeek, level, setsWeek, _id, layout} = workout
+                    const {name, daysWeek, level, setsWeek, _id, layout, description} = workout
 
                     workout.id = _id.toString()
 
                     const { id } = workout
 
-                    return {name, daysWeek, level, setsWeek, id, layout}
+                    return {name, daysWeek, level, setsWeek, id, layout, description}
                     })
                 }
 }

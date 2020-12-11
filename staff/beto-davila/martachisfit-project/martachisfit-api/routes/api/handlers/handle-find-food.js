@@ -2,7 +2,7 @@ const { findFood } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
 
-    const { body: { query } } = req
+    const { query: { q: query } } = req
 
     res.setHeader('Access-Control-Allow-Origin', '*')
 

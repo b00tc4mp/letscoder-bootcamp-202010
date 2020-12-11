@@ -1,12 +1,12 @@
 .bold
     font-weight: bold
 
-.workout-pseudo
+.workouts-pseudo
     display: block
     position: relative
-    height: 95vh
+    height: 100vh
     
-.workout-pseudo::after
+.workouts-pseudo::after
     content: ""
     background-image: url("../images/back-img-workouts.jpg")
     opacity: .3
@@ -17,9 +17,10 @@
     position: absolute
     z-index: -1
     
-.workout
+.workouts
     &__title
         margin: 0
+        text-align: center
         
     &__level
         cursor: pointer

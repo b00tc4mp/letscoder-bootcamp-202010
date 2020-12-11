@@ -53,7 +53,7 @@ export default function DietDesign () {
 
                             handleFindFood(query)
                         }}>
-                            <input className="diet-design__input" type="text" name="query" placeholder="p.e. Arroz"/>
+                            <input className="diet-design__input" type="text" name="query" placeholder="p.e. Arroz" required/>
                             <button className="diet-design__search"><img alt="lupa" className="diet-design__lupa" src={lupa} height="12" width="12"/></button>
                         </form>
                         {((view === 'food-result' && !error) || (view === 'food-result' && error)) && <FoodResult result={food}/>}
