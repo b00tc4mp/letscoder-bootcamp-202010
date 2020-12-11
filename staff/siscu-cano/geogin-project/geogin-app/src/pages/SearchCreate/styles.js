@@ -1,22 +1,19 @@
 import styled from 'styled-components'
 
 export const DefaultLayout = styled.div`
-  background: #f3f7ff;
-  width: 90%;
+  background: linear-gradient(to bottom, #f3f7ff 0%,#f3f7ff 44%,#d8e5ff 100%);
   margin: 0 auto;
-  border-radius: 8px;
-  border: 4px solid #b1d8ff85;
-  height: calc(100% - 35px);
+  height: 100%;
   max-height: 100%;
-  padding: 20px;
+  padding: 10px 30px 100px 30px;
   > div {
     max-height: 100%;
-    height: calc(100% - 50px);
+    height: 100%;
     position: relative;
   }
   h1 {
     color: #1689fe;
-    font-size: 28px;
+    font-size: 25px;
     margin: 0 auto;
     text-align: center;
     margin: 0 0 20px 0;
@@ -28,6 +25,8 @@ export const DefaultLayout = styled.div`
   }
   .description {
     font-size: 14px;
+    margin: 10px 0 24px 0;
+    line-height: 1.3;
   }
   .btn {
     width: 100%;
@@ -60,6 +59,20 @@ export const DefaultLayout = styled.div`
       bottom: 25px;
       right: 0px;
     }
+    &.new {
+      position: inherit;
+      display: block;
+      width: auto;
+      max-width: none;
+      background: linear-gradient(rgb(32 220 38), rgb(27 133 14 / 70%));
+      text-shadow: 1px 1px #099d1b;
+      border-color: #099d1b;
+      width: 100%;
+      svg {
+        margin-right: 4px;
+        width: 16px;
+      }
+    }
   }
 
   .switch-wrapper {
@@ -79,7 +92,7 @@ export const DefaultLayout = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    padding-top: 20px;
+    padding-top: 15px;
     > div {
       position: relative;
       height: 100%;
@@ -106,10 +119,6 @@ export const DefaultLayout = styled.div`
   .wizard-exit.wizard-exit-active {
     opacity: 0.01;
     transition: opacity 300ms ease-in;
-  }
-
-  .rc-progress-line {
-    margin-bottom: 20px;
   }
 
   .time-input {
@@ -162,7 +171,9 @@ export const DefaultLayout = styled.div`
       color: #3572b1;
       margin: 10px 44px 4px 0;
     }
-    &__title { margin-top: 0 }
+    &__title {
+      margin-top: 0;
+    }
     &__tag {
       background: linear-gradient(#92bca6, #a2ccb6);
       display: inline-block;

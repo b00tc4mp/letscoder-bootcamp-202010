@@ -14,7 +14,7 @@ export const UploadImageWrapper = styled.div`
     text-align: center;
     height: 200px;
     position: relative;
-    background: #eeebe7;
+    background: #fff;
     img {
     display: inline-block;
     opacity: 0.8;
