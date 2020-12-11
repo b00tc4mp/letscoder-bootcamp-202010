@@ -1,4 +1,4 @@
-import { SignUp, SignIn, Home, MainSearch } from './components'
+import { SignUp, SignIn, Home } from './components'
 import { registerUser, authenticateUser, findPets } from './logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import SearchPets from './components/SearchPets'
@@ -36,16 +36,7 @@ export default withRouter(props => {
     props.history.push('/mainSearch')
   }
 
-  const handleSearchPets = (queryShelter, city, queryPet, species, breed) => {
-    try {
-
-        findPets(queryShelter || undefined, city || undefined, queryPet || undefined, species || undefined, breed || undefined)
-            .then(console.log)
-            .catch(alert)
-    } catch(error) {
-        alert(error)
-    }
-}
+  
 
   const { token } = sessionStorage
 
@@ -56,7 +47,7 @@ export default withRouter(props => {
       <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} />} />
       <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} onGoToMainSearch = {handleGoToMainSearch}/>} />
       <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/sign-in" />} />
-      <Route path='/mainSearch' render = {()=> <SearchPets onSearch= {handleSearchPets}/> }/>
+      <Route path='/mainSearch' render = {()=> <SearchPets/> }/>
       
 
       </header>

@@ -4,7 +4,7 @@ import context from './context'
 
 export default (function (petId, image, callback) {
     validateId(petId)
-    validateFile(image)
+    if (typeof image !== 'undefined') validateFile(image)
     validateCallback(callback)
 
     var formData = new FormData();

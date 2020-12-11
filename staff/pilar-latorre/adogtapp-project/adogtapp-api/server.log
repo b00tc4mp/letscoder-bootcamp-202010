@@ -1125,3 +1125,50 @@ info 2020-12-10T17:53:48.971Z - server running on port 4000
 info 2020-12-10T17:59:03.081Z - stopping server
 info 2020-12-10T17:59:06.078Z - starting server
 info 2020-12-10T17:59:06.274Z - server running on port 4000
+info 2020-12-10T18:14:54.331Z - stopping server
+info 2020-12-10T18:15:02.205Z - starting server
+info 2020-12-10T18:15:02.411Z - server running on port 4000
+info 2020-12-10T18:39:24.563Z - stopping server
+info 2020-12-10T18:39:27.926Z - starting server
+info 2020-12-10T18:39:28.108Z - server running on port 4000
+info 2020-12-10T18:40:18.331Z - stopping server
+info 2020-12-10T18:40:21.525Z - starting server
+info 2020-12-10T18:40:21.676Z - server running on port 4000
+info 2020-12-10T19:13:52.880Z - stopping server
+info 2020-12-10T19:13:56.282Z - starting server
+info 2020-12-10T19:13:56.475Z - server running on port 4000
+info 2020-12-10T19:15:08.096Z - stopping server
+info 2020-12-10T19:15:17.041Z - starting server
+info 2020-12-10T19:15:17.239Z - server running on port 4000
+info 2020-12-10T19:26:40.713Z - stopping server
+info 2020-12-10T19:59:54.022Z - starting server
+info 2020-12-10T19:59:54.159Z - server running on port 4000
+info 2020-12-10T20:04:46.722Z - stopping server
+info 2020-12-10T20:04:49.560Z - starting server
+info 2020-12-10T20:04:49.766Z - server running on port 4000
+error 2020-12-10T20:05:17.223Z - NotFoundError: pet with id 5fd27e82b77ac9395012a4dd not found
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js:17:29
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-10T20:06:29.826Z - NotFoundError: pet with id 5fd27fb22af5f65bd4e81c38 not found
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js:17:29
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-10T20:10:57.901Z - stopping server
+info 2020-12-11T08:13:18.812Z - starting server
+info 2020-12-11T08:13:19.005Z - server running on port 4000
+error 2020-12-11T08:29:43.961Z - LengthError: id length 25 is not 24
+    at validateId (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\helpers\validations.js:51:37)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:13:5)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-detail-pet.js:9:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
