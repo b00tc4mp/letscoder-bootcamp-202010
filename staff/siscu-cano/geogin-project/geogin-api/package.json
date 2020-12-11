@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "inspect": "node inspect .",
-    "test": "npx mocha logic/*.spec.js",
+    "test": "npx mocha logic/specs/*.spec.js",
     "test-inspect": "npx mocha inspect logic/**/*.spec.js",
     "test-coverage": "npx nyc --reporter=html --exclude=**/*.spec.js mocha logic/**/*.spec.js",
     "style": "sass public/style.sass public/style.css"

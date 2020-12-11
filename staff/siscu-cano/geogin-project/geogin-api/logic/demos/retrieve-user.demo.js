@@ -1,9 +1,8 @@
-require('dotenv').config()
-
 const { models: { User } } = require('geogin-data')
 const retrieveUser = require('../retrieve-user')
+const { mongoose } = require('geogin-data')
 
-const { env: { MONGODB_URL } } = process
+MONGODB_URL = 'mongodb://localhost:27017/geogin-app'
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
     .then(() => retrieveUser('5fcbffce7f06433c78f3193e'))

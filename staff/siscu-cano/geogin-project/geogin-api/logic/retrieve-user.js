@@ -12,14 +12,20 @@ const { models: { User } } = require('geogin-data')
  * @return {object} user object
  */
 
-module.exports = function (id) {
-    validateId(id)
+module.exports = function (userId) {
+    validateId(userId)
 
-    return User.findById(id)
-    .then(user => {
-        if (!user) throw new NotFoundError(`user with id ${userId} not found`)
+    return User.findById(userId).lean()
+        .then(user => {
+            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-        return user.save()
-    })
-    .then(({ id, fullname, email, image, score, favorites }) => ({ id, fullname, email, image, score, favorites }))
+            const { _id } = user
+
+            user.id = _id.toString()
+
+            delete user._id
+            delete user.password
+
+            return user
+        })
 }

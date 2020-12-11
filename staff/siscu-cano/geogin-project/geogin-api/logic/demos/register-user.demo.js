@@ -1,10 +1,8 @@
-require('dotenv').config()
-
 const { models: { User } } = require('geogin-data')
 const registerUser = require('../register-user')
-const { User } = require('../../models')
+const { mongoose } = require('geogin-data')
 
-const { env: { MONGODB_URL } } = process
+MONGODB_URL = 'mongodb://localhost:27017/geogin-app'
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => User.deleteMany())

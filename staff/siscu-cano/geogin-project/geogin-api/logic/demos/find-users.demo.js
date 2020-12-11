@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb')
 const context = require('./context')
 const findUsers = require('./find-users')
 
-const { env: { MONGODB_URL } } = process
+MONGODB_URL = 'mongodb://localhost:27017/geogin-app'
 
 const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
 
