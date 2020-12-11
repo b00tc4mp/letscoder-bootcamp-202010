@@ -5,7 +5,7 @@ import { Link } from '@reach/router'
 export const Nav = styled.nav`
   align-items: center;
   background: #fcfcfc;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #c5c5c5;
   bottom:0;
   display: flex;
   margin: auto;
