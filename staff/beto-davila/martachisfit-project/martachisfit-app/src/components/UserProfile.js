@@ -1,12 +1,9 @@
-import sixpack from '../components/icons/sixpack.png'
-// import cancelar from '../components/icons/cancelar.png'
 import './styles/UserProfile.sass'
 import {SavedFood} from '.'
 import { retrieveSavedFood, toggleFoodUserDiet } from '../logic'
 import { useState, useEffect } from 'react'
 
-export default function UserProfile ({ name ,onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle }) {
-
+export default function UserProfile ({ name ,onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onRead }) {
     const [userChosenFoods, setUserChosenFoods] = useState()
     const [message, setMessage] = useState()
 
@@ -42,7 +39,6 @@ export default function UserProfile ({ name ,onLogout, savedArticles, savedRecip
         }
     }
 
-
     return <section className="user-profile">
         <div className="user-profile-pseudo">
         <div className="user-profile__name-pic">
@@ -75,6 +71,11 @@ export default function UserProfile ({ name ,onLogout, savedArticles, savedRecip
         {savedArticles.map(({ title, _id }) => <li key={_id} className="user-profile__articles-list">
         <div className="user-profile__articles--list">
         <a className="user-profile__articles--link" onClick={() => onGoToChosenArticle(_id)} href="#">{title}</a>
+        {/* {<a onClick={event => {
+                event.preventDefault()
+
+                onRead(_id)
+                }} className="user-profile__articles-delete" href="#">Leído</a>} */}
         </div>
         </li>)}
         </ul>}

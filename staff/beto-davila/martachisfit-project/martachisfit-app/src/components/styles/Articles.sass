@@ -1,21 +1,31 @@
 .article
     width: 75%
-    margin: 0 auto
+    margin: 0 auto 1rem auto
     padding: .2rem
-    background-color: #dde2e2
+    background-color: #eaf0f0
     box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
     min-height: 100vh
 
+    &__title-general
+        margin: 0
+        text-align: center
+        font-size: 2rem
+
+    &__title-article
+        font-size: 1rem
+
     &__btns
+        width: 95%
         display: flex
-        justify-content: space-between
+        justify-content: space-around
+        margin: auto
 
     
     &__btn
         border: none
         padding: .2rem
         cursor: pointer
-        margin: .2rem 1rem
+        margin: .3rem 1rem
         background-color: #e8ebeb
         border-radius: .3rem
 
@@ -72,3 +82,6 @@
     right: 0
     position: absolute
     z-index: -1
+
+p > strong
+    color: #0bb1ba

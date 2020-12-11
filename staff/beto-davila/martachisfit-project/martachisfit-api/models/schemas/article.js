@@ -8,6 +8,10 @@ module.exports = new Schema({
     title: {
         type: String,
         required: true
+    },
+
+    urlPathImg: {
+        type: String,
     }
 
 })

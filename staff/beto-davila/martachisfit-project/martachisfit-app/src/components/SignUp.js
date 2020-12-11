@@ -1,6 +1,7 @@
 import './styles/SignUp.sass'
+import {Feedback} from '.'
 
-function SignUp({ onRegister }) {
+function SignUp({ onRegister, error }) {
     return <section className="sign-up">
         <h2 className="sign-up__title" >Registro</h2>
         <form className="sign-up__form" onSubmit={event => {
@@ -15,6 +16,7 @@ function SignUp({ onRegister }) {
             <input className='sign-up__input' type="password" name="password" placeholder="Contraseña" required/>
             <input className='sign-up__input' type="number" name="calories" placeholder="Tus calorías objetivo. P.e.: 1800" required/>
             <button className='sign-up__btn'>Continuar</button>
+            {error && <Feedback error={error}/>}
         </form>
     </section>
 }

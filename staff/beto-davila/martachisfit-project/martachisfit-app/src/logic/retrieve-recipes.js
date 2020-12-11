@@ -16,8 +16,8 @@ export default function (token, callback) {
                 return callback(new Error(error))
             }
 
-            const article = JSON.parse(response)
+            const recipes = JSON.parse(response)
 
-            callback(null, article)
+            callback(null, recipes)
         })
 }

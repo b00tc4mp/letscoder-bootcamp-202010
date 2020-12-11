@@ -8,16 +8,25 @@ import { Route, withRouter, Redirect } from 'react-router-dom'
 export default withRouter(props => {
     
   const [goal, setGoal] = useState()
+  const [error, setError] = useState(null)
+
+  function feedbackError(error) {
+    setError(error)
+    setTimeout(() => {
+      setError(null)
+    }, 3000)
+  }
+
   
   const handleRegister = (fullname, email, password, calories) => {
     try {
       registerUser(fullname, email, password, calories, error => {
-        if (error) return alert(error.message)
+        if (error) return feedbackError('No se pudo registrar el usuario')
   
         props.history.push('/sign-in')
       })
     } catch (error) {
-        alert(error.message)
+        feedbackError("Error de validación")
     }
   }
 
@@ -40,20 +49,20 @@ export default withRouter(props => {
   const handleAuthenticateUser = (email, password) => {
     try {
       authenticateUser(email, password, (error, token) => {
-        if (error) return alert(error.message)
+        if (error) return feedbackError('Credenciales incorrectas')
   
         sessionStorage.token = token
         props.history.push('/')
       })    
     } catch (error) {
-      alert(error.message)
+      feedbackError("error de validación")
     }
   }
   const { token } = sessionStorage
   
   return <div className="App">
   <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onRegister={handleRegister} />} />
-  <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onLogin={handleAuthenticateUser} />} />
+  <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn error={error} onLogin={handleAuthenticateUser} />} />
   <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/sign-in" />} />
   <Route path='/landing' render={() => <Landing />} />
   <Route path='/user-info' render={() => <UserInfo onGoToGoalCaloriesAndMacros={handleGetCaloriesAndMacros}/>} />

@@ -1178,3 +1178,46 @@ info 2020-12-10T18:12:45.415Z - stopping server
 info 2020-12-10T18:12:58.526Z - starting server
 info 2020-12-10T18:12:58.800Z - server running on port 4000
 info 2020-12-11T06:07:43.839Z - stopping server
+info 2020-12-11T07:53:10.371Z - starting server
+info 2020-12-11T07:53:10.515Z - server running on port 4000
+info 2020-12-11T10:20:33.565Z - stopping server
+info 2020-12-11T10:43:58.647Z - starting server
+info 2020-12-11T10:43:58.784Z - server running on port 4000
+info 2020-12-11T11:47:57.070Z - stopping server
+info 2020-12-11T11:47:59.469Z - starting server
+info 2020-12-11T11:47:59.630Z - server running on port 4000
+info 2020-12-11T11:49:50.978Z - stopping server
+info 2020-12-11T11:49:53.685Z - starting server
+info 2020-12-11T11:49:53.837Z - server running on port 4000
+error 2020-12-11T13:46:14.499Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T13:46:27.830Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T13:49:59.309Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T13:50:41.833Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:02:34.006Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T14:04:52.767Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T14:36:23.236Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T14:36:48.884Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:37:49.910Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:42:08.630Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:44:38.858Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:47:32.501Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

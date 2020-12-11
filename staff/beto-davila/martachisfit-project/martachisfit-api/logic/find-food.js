@@ -8,7 +8,6 @@ module.exports = query => {
 
     const cursor = Food.find({ $or: [{ name: new RegExp(query, 'i') }] })
         return cursor.lean()
-            //.toArray()
             .then(food => {
 
             if(food) 

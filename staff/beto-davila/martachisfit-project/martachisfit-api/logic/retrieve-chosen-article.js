@@ -22,9 +22,13 @@ module.exports = function (userId, articleId) {
                     .then(article => {
                         if (!article) throw new NotFoundError(`article with id ${articleId} not found`)
 
-                        const {text, _id} = article
+                        const { _id } = article
 
-                         return({ text, _id })
+                        article.id = _id.toString()
+
+                        const {id, text, title, urlPathImg} = article
+
+                        return {id, text, title, urlPathImg}
                     })
         })
     }

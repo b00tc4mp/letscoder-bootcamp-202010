@@ -1,5 +1,7 @@
 import './styles/Home.sass'
+
 import { useState } from 'react'
+
 import { retrieveUser, 
         retrieveArticles, 
         addUserArticles, 
@@ -12,11 +14,26 @@ import { retrieveUser,
         retrieveChosenDiet, 
         retrieveWorkout 
     } from '../logic'
+
 import logo from '../../src/logo.png'
 import facebook from './icons/social/facebook.png'
 import instagram from './icons/social/instagram.png'
 import linkedin from './icons/social/linkedin.png'
-import { DropDownMenu, DietDesign, UserDiet, Articles, UserProfile, ChosenArticle, Logout, Welcome, Recipes, Recipe, Diets, Workouts, Workout } from './index'
+
+import { DropDownMenu, 
+        DietDesign, 
+        UserDiet, 
+        Articles, 
+        UserProfile,
+        Logout, 
+        Welcome,
+        ChosenArticle, 
+        Recipes, 
+        Recipe, 
+        Diets, 
+        Workouts, 
+        Workout 
+    } from './index'
 
 export default function Home () {
     const [name, setName] = useState()
@@ -32,8 +49,16 @@ export default function Home () {
     const [calories, setCalories] = useState()
     const [likedRecipe, setLikedRecipe] = useState()
     const [workout, setWorkout] = useState()
+    const [error, setError] = useState(null)
 
     const { token } = sessionStorage
+
+    function feedbackError(error) {
+        setError(error)
+        setTimeout(() => {
+          setError(null)
+        }, 3000)
+      }
 
     const handleGoToWelcome = () => {
         setView('welcome')
@@ -42,12 +67,12 @@ export default function Home () {
     const handleGoToRecipes = () => {
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
+                if (error) return alert('No se pudo recuperar el usuario')
 
                 const { fullname } = user
                 setName(fullname)
                 retrieveRecipes(token, (error, recipes) => {
-                    if (error) return alert(error.message)
+                    if (error) return alert('Hubo un error recuperando las recetas :(')
 
                     setRecipes(recipes)
                     setView("recipes")
@@ -85,7 +110,7 @@ export default function Home () {
     const handleGoToBlog = () => {
         try {
             retrieveArticles(token, (error, articles) => {
-                if (error) return alert(error.message)
+                if (error) return alert("Hubo un error recuperando los artículos del blog :(")
     
                 setArticle(articles)
                 setView("articles")
@@ -98,20 +123,20 @@ export default function Home () {
     const handleGoToRandomArticle = () => {
         try {
             retrieveArticles(token, (error, articles) => {
-                if (error) return alert(error.message)
+                if (error) return alert("Hubo un error recuperando los artículos del blog :(")
 
                 setArticle(articles)
                 setView("articles")
             })     
         } catch (error) {
-            return alert(error.message)
+            alert(error.message)
         }
     }
 
     const handleSaveArticle = articleId => {
         try {
             addUserArticles(token, articleId, error => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError("No se pudo guardar el artículo seleccionado")
 
                 setMessage(true)
                 setTimeout(() => {
@@ -126,14 +151,14 @@ export default function Home () {
     const handleSaveRecipe = recipeId => {
         try {
             addUserRecipes(token, recipeId, error => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError("Hubo un problema intentando guardar la receta :(")
 
                 retrieveUser(token, (error, user) => {
                     if (error) return alert(error.message)
     
                     const { savedRecipes } = user
                     retrieveRecipe(recipeId, (error, recipe) => {
-                        if (error) return alert(error.message)
+                        if (error) return alert("Hubo un problema intentando recuperar la receta :(")
     
                         const { id: recipeId } = recipe
                         savedRecipes.includes(recipeId) ? setLikedRecipe(true) : setLikedRecipe(false)
@@ -150,7 +175,7 @@ export default function Home () {
     const handleReadArticle = articleId => {
         try {
             addUserArticles(token, articleId, error => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError('Hubo un problema. Inténtalo de nuevo más tarde.')
 
                 setMessage(true)
                 setTimeout(() => {
@@ -277,25 +302,27 @@ export default function Home () {
     {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout}/>}
     {view === 'workout' && <Workout source={workout}/>}
     {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe}/>}
-    {view === 'recipe' && recipe && <Recipe onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe}/>}
+    {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe}/>}
     {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToUserDiet={handleGoToUserDiet}/>}
     {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} goal={calories}/>}
-    {view === 'articles' && article && 
-        <Articles source={article} 
+    {view === 'articles' && article &&
+        <Articles source={article}
+                error={error} 
                 message={message} 
                 onGoToRandomArticle={handleGoToRandomArticle} 
                 onGoToProfile={handleGoToProfile} 
                 onSaveArticle={handleSaveArticle}
+                onRead={handleReadArticle}
                 />}
     {view === 'profile' && 
         <UserProfile onGoToRecipe={handleGoToRecipe} 
                 onLogout={handleGoToLogOut} 
                 savedRecipes={savedRecipes} 
                 name={name} 
-                savedArticles={savedArticles} 
+                savedArticles={savedArticles}
                 onGoToChosenArticle={handleGoToChosenArticle}
                 />}
-    {view === 'chosen-article' && <ChosenArticle source={chosenArticle} onReadArticle={handleReadArticle}/>}
+    {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle}/>}
     {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name}/>}
     </div>
     </>

@@ -16,7 +16,7 @@ module.exports = function (userId) {
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            const articles = ['5fd1e9c33cb70e2db49c220a', '5fc927bdb87a0c980a11c6bf', '5fc9ec8147c1e4aa6bb54825', '5fcb210c700caee213c27ea8', '5fcb237f478137e2e3e9358d', '5fcb25f847e743e39d9c5831']
+            const articles = ['5fd34823f1e5d663f030ce51', '5fd349f009fad36464c97c74', '5fd34b613d6e346589e1beec', '5fd34d4c69cf1265fada3299']
 
             let random = Math.floor(Math.random() * articles.length)
 
@@ -27,9 +27,12 @@ module.exports = function (userId) {
                     if (!article) throw new NotFoundError(`article with id ${articleId} not found`)
 
                     const { _id } = article
+
                     article.id = _id.toString()
 
-                    return article
+                    const {id, text, title, urlPathImg} = article
+
+                    return {id, text, title, urlPathImg}
         })
     })
 }

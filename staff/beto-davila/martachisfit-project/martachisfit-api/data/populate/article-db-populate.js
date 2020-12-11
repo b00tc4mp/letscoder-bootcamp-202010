@@ -8,33 +8,48 @@ const { env: { MONGODB_URL } } = process
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
-        Article.create({text: `### ENTRENAR SIN DESAYUNAR, ¿BUENO O MALO?
-
-        \n\n #### El ayuno se considera tras 12 horas sin ingesta de alimentos
+        Article.create({text: `#### Si alguna vez te has dicho “Como súper poco y no adelgazo”
+        \n #### Este post es para ti
         
-        \n\n #### Entrenar sin desayunar puede ser beneficioso para algunas personas
+        \n\n Cuando una persona lleva a cabo un plan de alimentación específico ligado a un objetivo, resulta muy frustrante no conseguir las metas que uno se propone. En el caso de la pérdida de peso se suelen cometer diversos errores de forma inconsciente que provocan que las medidas corporales no disminuyan con el paso de las semanas. 
         
-        \n\n Hoy en día cada vez es más habitual encontrar a personas que, por trabajo o responsabilidades personales, van al gimnasio a entrenar a primera hora de la mañana, incluso, cuando no se ha puesto ni el sol. En este sentido, surgen diversas dudas con respecto a si se debe desayunar antes o es preferible ir en ayunas para no hacer ejercicio con el desayuno aún en la boca del estómago. 
+        \n\n Cuando se produce este estancamiento es necesario repasar algunos aspectos del día a día y de los hábitos de cada uno para identificar dónde está el fallo y ponerle solución. En la siguiente lista, encontrarás 7 razones por las que tu dieta podría no estar funcionando como esperabas:
         
-        \n\n **¿Qué es el entrenamiento en ayunas?**
+        \n\n **Tener una ingesta de calorías demasiado baja**
         
-        \n\n Para que exista un entrenamiento en ayunas se debe haber estado sin consumir alimentos durante, al menos, 12 horas. Tras ese periodo de tiempo, si la actividad que se realiza es intensa, puede ser perjudicial puesto que, pasadas estas horas, el entrenamiento no emplea más grasas como fuente de energía, se disminuye el rendimiento y se puede activar la gluconeogénesis (el proceso de descomposición de proteínas musculares).
+        \n\n Has leído bien, sí. Cuando se reduce mucho el consumo calórico esperando obtener resultados rápidos y milagrosos, el organismo también disminuye su gasto calórico. Es decir, si no se le proporciona alimentación suficiente al cuerpo, éste se ralentiza y deja de quemar grasa. El cuerpo es muy inteligente y, aunque quisiéramos, ¡no podemos engañarle!
         
-        \n\n Además, debemos tener cuidado con los entrenamientos en ayunas, ya que se pueden producir bajadas intensas de glucosa y mareos severos.
+        \n\n **Abusar de la “comida saludable”**
         
-        \n\n **Ahora bien, beneficios de entrenar tras 8-10 horas de ayuno:**
+        \n\n Nueces, aguacate, queso, jamón serrano o avena, entre otros muchos alimentos, son muy saludables, pero siempre en su justa medida.
         
-        \n\n Cuando desde la noche anterior no se han ingerido alimentos y se va a entrenar sin desayunar, es decir, se cena sobre las 21:00 h y se va a entrenar sobre las 7:00 h de la mañana, nuestro cuerpo se encuentra en el momento del día en el que sus niveles de glucógeno están más bajos, por lo que el cuerpo emplea una fuente de energía que proviene de las grasas acumuladas en los tejidos adiposos y no depende tanto de la glucosa.
+        \n\n Que un alimento sea saludable, no quiere decir que no tenga calorías en su composición, por lo que siempre se debe tener en cuenta que los alimentos saludables, como todo en la vida, se deben consumir con moderación, ya que por el contrario, se producirá un superávit calórico que provocará el incremento de peso.
         
-        \n\n Además, cuando entrenamos tras unas horas sin ingesta de alimentos, se provoca un aumento en la capacidad de los depósitos de glucógeno e induce la creación de nuevas mitocondrias (es la batería que utiliza nuestro organismo, nos genera energía).
+        \n\n **No ejercitarse físicamente**
         
-        \n\n **¿Para quién es recomendable entrenar sin desayunar?**
+        \n\n Llevar una alimentación saludable es un aspecto básico cuando se quiere conseguir un objetivo, pero si el estilo de vida es sedentario, la balanza jamás estará equilibrada.
         
-        \n\n Puede ser recomendable para personas que no tienen mucho tiempo durante el día o para aquellos deportistas de resistencia que tengan que prepararse pruebas de ultrafondo.
+        \n\n Es de vital importancia ejercitar el cuerpo, ya sea ir al gimnasio, hacer spinning, correr, ir a jugar al paddle o al fútbol o cualquier otra actividad, porque si no se mueve la musculatura del cuerpo, el metabolismo se vuelve cada vez más lento y deja de quemar grasa. 
         
-        \n\n **¿Quién no debería entrenar sin desayunar?**
         
-        \n\n No se recomienda a aquellas personas que acaban de empezar a hacer deporte o que están habituadas a hacerlo a una hora completamente diferente, como todo, necesitamos un proceso de adaptación. Por eso, es recomendable que, si vas a comenzar a entrenar sin desayunar, lo empieces a hacer poco a poco; puedes ingerir una pequeña cantidad de comida un par de horas antes de ir a entrenar e ir reduciendo esa cantidad con el tiempo o por el contrario, puedes comenzar haciendo 15 minutos de ejercicio e ir incrementando el tiempo poco a poco pero, sobre todo, ¡con paciencia!
+        \n\n **Eliminar algún macronutriente de la dieta**
+        
+        \n\n Proteínas, grasas y carbohidratos; los tres macronutrientes esenciales para llevar a cabo una alimentación saludable. Eliminar por completo de la dieta los carbohidratos o las grasas saludables porque “engordan más” es un error muy común y muy grave; ya que este déficit puede conllevar carencias nutricionales y alterar el metabolismo. 
+        
+        \n\n **Seguir la dieta de ‘Pepito Grillo’ y ‘Fulanito’**
+        
+        \n\n Cada persona tiene unos requerimientos nutricionales, seguir una dieta al azar que se ha encontrado por Internet o la dieta que han recomendado a un conocido no es productivo, ya que no estará adaptada a las necesidades calóricas de uno mismo y, por tanto, no dará resultados.
+        
+        \n\n **Cortisol** 
+        
+        \n\n Es la "hormona del estrés", se libera a primera hora de la mañana. Cuando se mantiene un estado de nervios, preocupaciones o se realiza una actividad física excesiva, esta hormona permanece elevada durante un periodo de tiempo superior al deseable. Al permanecer con el cortisol alto durante varios días, el metabolismo se vuelve catabólico y se paralizan diversas funciones, lo que puede ocasionar un exceso de grasa, ya que el cuerpo supone que es un mecanismo de supervivencia. Para evitar este efecto, se debe tener una buena higiene del sueño, hacer meditación y cuidarse, tanto por dentro como por fuera. 
+        
+        \n\n **Llevar demasiado tiempo “a dieta”**
+        
+        \n\n El organismo es inteligente y, cuando alimentamos nuestro cuerpo con una ingesta baja de calorías, se acostumbra y no lo considera algo no habitual. Eso se traduce en que aprende a vivir y mantenerse con lo que se le ofrece. Cuando esto ocurre es recomendable llevar a cabo un ciclado de calorías, se trata solo de ondular las calorías durante la semana, manteniendo un déficit calórico (algunos días se ingieren más calorías y otros menos), así el cuerpo nunca llega a acostumbrarse al mismo consumo de calorías.
+        
+        \n\n En resumen, para conseguir objetivos físicos, se deben tener en cuenta todos los parámetros que influyen a la hora de alcanzar las metas propuestas. Para llevar a cabo un plan de alimentación equilibrado, es importante contar siempre con el apoyo de un especialista en la materia que ofrezca las herramientas y conocimientos adecuados para establecer un hábito saludable.
+        
         
         \n\n **Sobre Martachis Fit**
         \n Martachis Fit nace con el objetivo de ofrecer información de calidad sobre vida saludable. Martachis Fit brinda una ventana hacia el mundo de la nutrición, entrenamiento deportivo y hábitos saludables a cualquier persona interesada en cambiar su rutina y mejorar su estilo de vida. 
@@ -44,7 +59,8 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
         \n\n MARTACHIS FIT
        
         \n\n martachis.fitness@gmail.com`, 
-        title: 'ENTRENAR SIN DESAYUNAR, ¿BUENO O MALO?'})
+        title: '7 RAZONES POR LAS QUE TU DIETA NO FUNCIONA',
+        urlPathImg: "https://res.cloudinary.com/beto-cloud-name/image/upload/v1607682993/dieta-funciona_nlilkq.jpg"})
             .then(() => console.log('Article inserted'))
             .catch(error => console.error('There was an error: ', error))
     })      
