@@ -555,3 +555,13 @@ info 2020-12-11T09:57:55.470Z - server running on port 4000
 error 2020-12-11T09:58:14.760Z - NotFoundError: offer with id 5fc68d6789f23b16f416e24f not found
     at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T10:47:16.977Z - NotFoundError: offer with id 5fd1ea12886cde1f04f61e20 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-11T11:06:34.989Z - stopping server
+info 2020-12-11T11:06:44.212Z - starting server
+info 2020-12-11T11:06:44.750Z - server running on port 4000
+error 2020-12-11T11:07:22.697Z - NotFoundError: offer with id 5fc7630bc8e0b520b46d68a8 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
