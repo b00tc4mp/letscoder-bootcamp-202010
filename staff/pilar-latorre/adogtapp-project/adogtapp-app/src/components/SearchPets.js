@@ -7,16 +7,14 @@ import DetailPet from './DetailPet'
 
 
 function SearchPets(){
-
-    
     const [results, setResults] = useState()
     const [result, setResult] = useState()
+    const [criteria, setCriteria] = useState()
 
     const { token } = sessionStorage
     const handleResults = event => {
         event.preventDefault()
 
- 
         const {target: {
             queryPet : { value: queryPet},
             species: {value: species},
@@ -26,18 +24,27 @@ function SearchPets(){
 
         if (event.target.queryShelter) {
             var queryShelter = event.target.queryShelter.value;
-            
           }
+
         if (event.target.city) {
             var city = event.target.city.value;
-        
         }
 
+        handleSearchPets(queryShelter, city, queryPet, species, breed)
+    } 
+    
+    const handleRefreshResults = () => {
+        const {queryShelter, city, queryPet, species, breed} = criteria
+
+        handleSearchPets(queryShelter, city, queryPet, species, breed)
+    }
+
+    const handleSearchPets = (queryShelter, city, queryPet, species, breed) => {
         try {
             findPets( token, queryShelter, city, queryPet, species, breed, (error, pets) => {
-
                 if (error) return alert(error.message)
 
+                setCriteria({queryShelter, city, queryPet, species, breed})
                 setResults(pets)
                 setResult(null)
 
@@ -45,12 +52,11 @@ function SearchPets(){
         } catch (error) {
             alert(error.message)
         }
-    } 
+    }
     
     const handleDetailPet = id => {
         try {
             detailPet( id, (error, pet) => {
-
                 if (error) return alert(error.message)
 
                 setResult(pet)
@@ -76,7 +82,7 @@ function SearchPets(){
    
         {!result && results && results.length>0 && <PetResults results={results} onDetailPet={handleDetailPet} />}
         {!results && <div><img className="search__img"src="patitas.jpg"/></div>}
-        {!results && result && <DetailPet result={result} onPetResults = {handleResults}/>}
+        {!results && result && <DetailPet result={result} onDeletePet = {handleRefreshResults}/>}
             </>
         );
     }

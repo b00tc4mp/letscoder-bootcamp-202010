@@ -3,7 +3,7 @@ import './DetailPet.sass'
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function DetailPet({result: {id, name, breed, species, color, description } , onPetResults}){
+function DetailPet({result: {id, name, breed, species, color, description } , onDeletePet}){
 
     const { token } = sessionStorage
     const handleDeletePet = id => {
@@ -13,20 +13,18 @@ function DetailPet({result: {id, name, breed, species, color, description } , on
 
                 if (error) return alert(error.message)
 
+                onDeletePet()
             }) 
-            onPetResults()
         } catch (error) {
             alert(error.message)
         }
     } 
 
     
-    return <div className="result">
-        <ul className="result__ul">
-       
-        <li key={id} className="result__li">
+    return <article className="result">
+    
             <img className="result__img" src={`${API_URL}/pets/${id}/images`}/>
-            <div>
+            
             <p className="result__p">{name}</p>
             <p className="result__p">breed: {breed}</p>
             <p className="result__p">species: {species}</p>
@@ -34,11 +32,7 @@ function DetailPet({result: {id, name, breed, species, color, description } , on
             <p className="result__p">description: {description}</p>
             {token && <button className="result__button" onClick={()=>handleDeletePet(id) }>DELETE PET</button>}
             
-            </div>
-        </li>
-
-        </ul>
-        </div>
+        </article>
 
 }
 
