@@ -12,9 +12,8 @@ const {
   validateId
 } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
-const { models: { User } } = require('geogin-data')
+const { models: { User, Quest } } = require('geogin-data')
 const { ConflictError } = require('geogin-errors')
-const { User, Quest } = require('../models')
 
 module.exports = function (
   title,

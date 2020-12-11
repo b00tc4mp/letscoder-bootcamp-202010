@@ -2,7 +2,6 @@ const { validateEmail, validatePassword } = require('./helpers/validations')
 const { AuthError } = require('geogin-errors')
 const { models: { User } } = require('geogin-data')
 const bcrypt = require('bcryptjs')
-
  /**
  * Authenticate a user.
  * 
@@ -19,23 +18,23 @@ const bcrypt = require('bcryptjs')
  * @returns {String} - id.  
  */
 
-module.exports = function (email, password) {
+module.exports = (email, password) => {
     validateEmail(email)
     validatePassword(password)
 
-    return User.findOne({ email }).lean()
-        .then(user => {
-            if (!user) throw new AuthError('wrong credentials')
+    return (async () => {
+        const user = await User.findOne({ email }).lean()
 
-            const { password: hash } = user
+        if (!user) throw new AuthError('wrong credentials')
 
-            return bcrypt.compare(password, hash)
-                .then(match => {
-                    if (!match) throw new AuthError('wrong credentials')
+        const { password: hash } = user
 
-                    const { _id } = user
+        const match = await bcrypt.compare(password, hash)
 
-                    return _id.toString()
-                })
-        })
+        if (!match) throw new AuthError('wrong credentials')
+
+        const { _id } = user
+
+        return _id.toString()
+    })()
 }
