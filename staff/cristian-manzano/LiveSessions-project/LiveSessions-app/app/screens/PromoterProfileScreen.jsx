@@ -1,8 +1,9 @@
-import React from 'react';
-import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Image, Dimensions, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onGoToSearch, onGoToCreateEvent, user }) {
+function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onSearch, onGoToCreateEvent, user }) {
+    const [ query, setQuery ] = useState('')
     if (user.role === 'PROMOTER')
         return (
 
@@ -12,15 +13,25 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                 >
                     <ScrollView>
 
-                      
-
                             <View style={styles.artistProfileHeader}>
                                 <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} />
 
+                                <TextInput
+                                    placeholder=' Search'
+                                    style={styles.search}
+                                    placeholderTextColor="#343a40" 
+                                    onChangeText={query => setQuery(query)}>
+                                </TextInput>
+                                
+                                <TouchableOpacity style={styles.searchButton}
+                                    onPress={ () => {onSearch ({ query })}}>
+                                        <Text style={styles.buttonText}>Search!</Text>
+                                </TouchableOpacity>
 
                                 <TouchableOpacity onPress={onLogOut}>
                                     <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
                                 </TouchableOpacity>
+
                             </View>
 
                             <View style={styles.artistProfileBody}>
@@ -43,15 +54,12 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                                 </View>
 
                             </View>
-                            <TouchableOpacity onPress={onGoToSearch}>
-                                <Text style={styles.petitionsButton}>Search!</Text>
-                            </TouchableOpacity>
 
                             <TouchableOpacity onPress={onGoToCreateEvent}>
                                 <Text style={styles.petitionsButton}>Create Event :)</Text>
                             </TouchableOpacity>
                             
-
+                            
                             <TouchableOpacity onPress={onGoToPetitions}>
                                 <Text style={styles.petitionsButton}>Petitions</Text>
                             </TouchableOpacity>
@@ -76,6 +84,29 @@ const styles = StyleSheet.create({
         height: 40
     },
 
+    search: {
+        marginTop: "15%",
+        width: "50%",
+        height: "20%",
+        borderWidth: 1,
+        borderColor: "#343a40",
+        color: "#343a40"
+    },
+
+    searchButton: {
+        marginTop: "15%",
+        marginLeft: "-5%",
+        width: "15%",
+        height: "20%",
+        borderWidth: 1,
+        borderColor: "#343a40",
+        color: "#343a40",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+
+    
+
     profileAvatar: {
         backgroundColor: "gray"
     },
@@ -89,10 +120,10 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         justifyContent: "flex-end",
         color: "#343a40",
-        tintColor: "#343a40",
         shadowRadius: 50,
         borderWidth: 1
     },
+
 
     artistProfileContainer: {
         justifyContent: "flex-start",

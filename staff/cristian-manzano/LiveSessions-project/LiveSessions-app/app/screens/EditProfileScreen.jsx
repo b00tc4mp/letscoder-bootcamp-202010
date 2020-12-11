@@ -34,7 +34,6 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                     
                     defaultValue={(user.fullname ? ' ' + user.fullname : '')}
                     >
-                    
                 </TextInput>
 
                 <TextInput

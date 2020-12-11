@@ -5,7 +5,7 @@ export default function (token, callback) {
     validateToken(token)
     validateCallback(callback)
 
-    call('GET', 'http://192.168.1.131:4000/api/users', { Authorization: `Bearer ${token}` }, 
+    call('GET', 'http://192.168.0.21:4000/api/users', { Authorization: `Bearer ${token}` }, 
     '',
     (status, response) => {
         if (status === 0)

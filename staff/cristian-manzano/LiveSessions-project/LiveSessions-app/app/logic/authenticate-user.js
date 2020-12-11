@@ -13,7 +13,7 @@ export default function (email, password, callback) {
 
   call(
     "POST",
-    "http://192.168.1.131:4000/api/users/auth",
+    "http://192.168.0.21:4000/api/users/auth",
     { "Content-type": "application/json" },
     JSON.stringify({ email, password }),
     (status, response) => {

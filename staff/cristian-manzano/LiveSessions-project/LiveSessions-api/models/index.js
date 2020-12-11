@@ -3,4 +3,5 @@ const { user } = require('./schemas')
 
 module.exports = {
     User: model('User', user),
+    LiveSessions: model('LiveSessions', liveSessions)
 }
