@@ -5,12 +5,12 @@ const { Game } = require('../models')
 const { ObjectId } = require('mongodb') 
 
 module.exports = function( gameId, name, description, gameconsole, budget, ownerId) {
+    if (typeof gameId !== 'undefined') validateId(gameId)
     validateText(name)
     validateText(description)
     validatePrice(budget)
     validateId(ownerId)
     validateText(gameconsole)
-    if (typeof gameId !== 'undefined') validateId(gameId)
 
     const _id = ObjectId(ownerId)
 

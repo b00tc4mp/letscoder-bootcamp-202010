@@ -7,8 +7,8 @@ import SearchGames from './SearchGames'
 import SignIn from './SignIn'
 //import FindGames from './FindGames'
 
-export default function Home() {
-    
+export default function Home({onLogout}) {
+
     const [name, setName] = useState()
     const [games, setGames] = useState()
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
@@ -18,15 +18,15 @@ export default function Home() {
         setError(error)
         setTimeout(() => {
             setError(null)
-        }, 3000)
+        }, 8000)
     }
 
     const { token } = sessionStorage
 
     useEffect(() => {
         //const { token } = sessionStorage
-    
-       
+
+
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
@@ -45,25 +45,19 @@ export default function Home() {
         //const { token } = sessionStorage
         try {
             saveGame(undefined, name, description, gameconsole, budget, token, (error, gameId) => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError(error.message)
 
                 saveGameImage(gameId, image, error => {
-                    if (error) return alert(error.message)
-
+                    if (error) return feedbackError(error.message)
                     try {
                         alert('game saved')
-                        /*  findGames(token, (error, games) => {
-                             if (error) return alert(error.message)
-         
-                             setGames(games)
-                         })  */
                     } catch (error) {
-                        alert(error.message)
+                        return feedbackError(error.message)
                     }
                 })
             })
         } catch (error) {
-            alert(error.message)
+            return feedbackError(error.message)
         }
     }
 
@@ -78,18 +72,15 @@ export default function Home() {
         }
     }
 
-    const handleLogut = () => {
-
-        delete sessionStorage.token
-
-        setView('/')
-    }
-
     return <section className="home">
         {token ? <h1>Hello, {name}!</h1> : <> </>}
-        {view === 'home' && <SaveGame onSaveGame={handleSaveGame} />}
+        {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
-        {view === '/' && window.location.replace('')} 
-        {<button className="home__logout" onClick={handleLogut}>LOGOUT</button> }
+        {<button className="home__logout" onClick={() => {
+            setName(null)
+            setGames(null)
+            setError(null)
+            onLogout()
+        } }>LOGOUT</button>}
     </section>
 }

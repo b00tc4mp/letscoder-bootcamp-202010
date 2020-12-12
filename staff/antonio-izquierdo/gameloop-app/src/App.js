@@ -13,7 +13,7 @@ export default withRouter(props => {
     setError(error)
     setTimeout(() => {
         setError(null)
-    }, 4000) 
+    }, 8000) 
 }
 
   const handleSignUp = (fullname, email, password) => {
@@ -46,12 +46,20 @@ export default withRouter(props => {
 
   context.API_URL = process.env.REACT_APP_API_URL
 
+
+  const handleLogout = () => {
+
+    sessionStorage.clear()
+
+    props.history.push('/')
+}
+
   return (
     <header className="App-header">
       <Switch>
         <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} error={error} />} />
         <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} error={error} />} />
-        <Route path='/' render={() => token ? <Home /> : <Access />} />
+        <Route exact path='/' render={() => token ? <Home onLogout ={handleLogout}/> : <Access />} />
       </Switch>
     </header>
   );

@@ -1,6 +1,7 @@
 import './SaveGame.sass'
+import { Feedback } from '.'
 
-export default function SaveGame ({onSaveGame}) {
+export default function SaveGame ({onSaveGame, error}) {
     const handleSubmitGame = event => {
         event.preventDefault()
 
@@ -17,6 +18,7 @@ export default function SaveGame ({onSaveGame}) {
  
     return <section className="save-game">
         <form onSubmit={handleSubmitGame}> 
+            {error && <Feedback error={error}/>}
             <input name="name" type="text" placeholder="Game Tittle"></input>
             <textarea name="description" type ="text" placeholder="Description"></textarea>
             <input name="budget" type ="text" placeholder="Price"></input>
