@@ -40,8 +40,6 @@ describe('SPEC retrieveArticles()', () => {
             retrieveArticles(userId)
                 .then(article => {
                     expect(article).to.exist
-                    // expect(article.text).to.equal(text)
-                    // expect(article.title).to.equal(title)
                 })
         )
 

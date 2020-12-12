@@ -39,7 +39,7 @@ describe('SPEC retrieveUser()', () => {
                 })
         )
 
-        describe('when user id is wrong', () => {
+        describe('when user id does not exist', () => {
             let userId
 
             beforeEach(() => userId = ['5fc0efb540493de1f5a8948a', '5fc0efb540493de1f5a8940c', '5fc0efb540493de1f5a8941b'].random())
@@ -85,7 +85,7 @@ describe('SPEC retrieveUser()', () => {
         describe('when user id length is not 24', () => {
             let userId
 
-            beforeEach(() => userId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5? 3 : -3)))
+            beforeEach(() => userId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5 ? 3 : -3)))
 
             it('should fail on user id length different from 24', () => {
                 expect(() => retrieveUser(userId, () => { })).to.throw(Error, `id length ${userId.length} is not 24`)

@@ -14,7 +14,7 @@ module.exports = function (recipeId) {
 
         return Recipe.findById(recipeId).lean()
             .then(recipe => {
-                if (!recipe) throw new NotFoundError(`recipeImg with id ${recipeId} not found`)
+                if (!recipe) throw new NotFoundError(`recipe with id ${recipeId} not found`)
 
                 const { _id, title, text, urlPathImg } = recipe
                 recipe.id = _id.toString()

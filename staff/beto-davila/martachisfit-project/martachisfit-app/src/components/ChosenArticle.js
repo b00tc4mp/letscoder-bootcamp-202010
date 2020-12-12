@@ -8,8 +8,8 @@ export default function ChosenArticle ({source, message, onReadArticle, error}) 
     return <>
     <div className="article-pseudo">
     <div>
-    <button onClick={() => onReadArticle(id)} className="article__read-later-btn article__btn">¿Leído?</button>
-    {message && <p className="article__read">¡Leído!</p>}
+    <button onClick={() => onReadArticle(id)} className="article__already-read-btn article__btn">¿Leído?</button>
+    {message && <p className="article__read-already-feedback">¡Leído!</p>}
     {error && <Feedback error={error}></Feedback>}
     </div>
     <article className="article">

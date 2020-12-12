@@ -22,24 +22,20 @@ module.exports = function (userId) {
 
             if (calories < 2000) {
 
-                // var item = items[Math.floor(Math.random() * items.length)]
-
                 const diets = ['5fcdf030c36fd45719909463', '5fcdf030c36fd45719909466', '5fcdf030c36fd45719909469']
 
                 let random = Math.floor(Math.random() * diets.length)
 
                 const dietId = diets[random]
 
-                // const dietId = '5fc8838518ca4960a2a83721'
-
                 return Diet.findById(dietId).lean()
                     .then(_diet => {
-                    if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+                        if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
 
-                    return _diet
-            })
+                        return _diet
+                    })
 
-            } else if ( calories >= 2000 && calories < 2500) {
+            } else if (calories >= 2000 && calories < 2500) {
 
                 let diets = ['5fcdf030c36fd45719909464', '5fcdf030c36fd45719909467', '5fcdf030c36fd4571990946a']
 
@@ -49,11 +45,11 @@ module.exports = function (userId) {
 
                 return Diet.findById(_dietId).lean()
                     .then(_diet => {
-                    if (!_diet) throw new NotFoundError(`diet with id ${_dietId} not found`)
+                        if (!_diet) throw new NotFoundError(`diet with id ${_dietId} not found`)
 
-                    return _diet
-                })
-            } else if ( calories >= 2500) {
+                        return _diet
+                    })
+            } else if (calories >= 2500) {
 
                 let diets = ['5fcdf030c36fd45719909465', '5fcdf030c36fd45719909468', '5fcdf030c36fd4571990946b']
 
@@ -63,11 +59,11 @@ module.exports = function (userId) {
 
                 return Diet.findById(_dietId).lean()
                     .then(_diet => {
-                    if (!_diet) throw new NotFoundError(`diet with id ${_dietId} not found`)
+                        if (!_diet) throw new NotFoundError(`diet with id ${_dietId} not found`)
 
-                    return _diet
-                })
-            } 
+                        return _diet
+                    })
+            }
 
-    })
+        })
 }

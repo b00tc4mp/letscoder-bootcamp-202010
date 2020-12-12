@@ -14,7 +14,7 @@ export default function Articles ({source, onGoToRandomArticle, onSaveArticle, o
         <button onClick={onGoToRandomArticle} className="article__read-other-btn article__btn">Muéstrame otro</button>
         {error && <Feedback error={error}></Feedback>}
     </div>
-    {message && <p className="article__added">¡Artículo añadido en su <a onClick={onGoToProfile} href="#profile">perfil</a>!</p>}
+    {message && <p className="article__added">¡Artículo añadido en su <a onClick={onGoToProfile} href="#">perfil</a>!</p>}
     <article className="article">
     <h3 className="article__title-article">{title}</h3>
     <img src={urlPathImg} alt="article-img" width="280px"/>

@@ -1221,3 +1221,4 @@ error 2020-12-11T14:47:32.501Z - AuthError: wrong credentials
     at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-11T16:19:39.452Z - stopping server

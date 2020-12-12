@@ -64,7 +64,5 @@ describe('SPEC registerUser()', () => {
         )
     })
 
-    // TODO more
-
     after(mongoose.disconnect)
 })

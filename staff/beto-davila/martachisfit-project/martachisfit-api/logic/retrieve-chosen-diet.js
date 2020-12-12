@@ -25,97 +25,97 @@ module.exports = function (userId, dietType) {
 
                 if (dietType === 'keto') {
 
-                return Diet.findById('5fcdf030c36fd45719909463').lean()
-                    .then(_diet => {
-                    if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+                    return Diet.findById('5fcdf030c36fd45719909463').lean()
+                        .then(_diet => {
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
 
-                    return _diet
-                    })
+                            return _diet
+                        })
                 }
 
                 else if (dietType === 'mediterranean') {
 
                     return Diet.findById('5fcdf030c36fd45719909466').lean()
-                    .then(_diet => {
-                    if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+                        .then(_diet => {
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
 
-                    return _diet
-                    })
+                            return _diet
+                        })
                 }
 
                 else if (dietType === 'vegan') {
 
                     return Diet.findById('5fcdf030c36fd45719909469').lean()
-                    .then(_diet => {
-                    if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+                        .then(_diet => {
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
 
-                    return _diet
-                    })
+                            return _diet
+                        })
                 }
 
-            } else if ( calories >= 2000 && calories < 2500) {
+            } else if (calories >= 2000 && calories < 2500) {
 
                 if (dietType === 'keto') {
 
                     return Diet.findById('5fcdf030c36fd45719909464').lean()
                         .then(_diet => {
-                        if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
-    
-                        return _diet
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+
+                            return _diet
                         })
-                    }
-    
-                    else if (dietType === 'mediterranean') {
-    
-                        return Diet.findById('5fcdf030c36fd45719909467').lean()
+                }
+
+                else if (dietType === 'mediterranean') {
+
+                    return Diet.findById('5fcdf030c36fd45719909467').lean()
                         .then(_diet => {
-                        if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
-    
-                        return _diet
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+
+                            return _diet
                         })
-                    }
-    
-                    else if (dietType === 'vegan') {
-    
-                        return Diet.findById('5fcdf030c36fd4571990946a').lean()
+                }
+
+                else if (dietType === 'vegan') {
+
+                    return Diet.findById('5fcdf030c36fd4571990946a').lean()
                         .then(_diet => {
-                        if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
-    
-                        return _diet
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+
+                            return _diet
                         })
-                    }
+                }
 
             } else if (calories >= 2500) {
 
-                    if (dietType === 'keto') {
+                if (dietType === 'keto') {
 
                     return Diet.findById('5fcdf030c36fd45719909465').lean()
-                            .then(_diet => {
+                        .then(_diet => {
                             if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
-        
+
                             return _diet
-                            })
-                        }
-    
-                    else if (dietType === 'mediterranean') {
-    
-                        return Diet.findById('5fcdf030c36fd45719909468').lean()
-                        .then(_diet => {
-                        if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
-    
-                        return _diet
                         })
-                    }
-    
-                    else if (dietType === 'vegan') {
-    
-                        return Diet.findById('5fcdf030c36fd4571990946b').lean()
+                }
+
+                else if (dietType === 'mediterranean') {
+
+                    return Diet.findById('5fcdf030c36fd45719909468').lean()
                         .then(_diet => {
-                        if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
-    
-                        return _diet
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+
+                            return _diet
                         })
-                    }
+                }
+
+                else if (dietType === 'vegan') {
+
+                    return Diet.findById('5fcdf030c36fd4571990946b').lean()
+                        .then(_diet => {
+                            if (!_diet) throw new NotFoundError(`diet with id ${dietId} not found`)
+
+                            return _diet
+                        })
+                }
             }
-    })
+        })
 }
