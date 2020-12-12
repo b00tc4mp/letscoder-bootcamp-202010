@@ -68,15 +68,12 @@ module.exports = {
       if (!tag.trim().length) throw new ContentError('tag is empty or blank')
     })
   },
-  validateVisibility (visibility) {
-    if (typeof visibility !== 'string')
-      throw new TypeError(visibility + ' is not a visibility')
+  validateModePrivate (modePrivate) {
+    if (typeof modePrivate !== 'Boolean')
+      throw new TypeError(modePrivate + ' is not a modePrivate')
 
-    if (!visibility.trim().length)
-      throw new ContentError('visibility is empty or blank')
-
-    if (visibility !== 'public' && visibility !== 'private')
-      throw new ValueError('visibility is not public or private')
+    if (!modePrivate.trim().length)
+      throw new ContentError('modePrivate is empty or blank')
   },
 
   validateQuery (query) {

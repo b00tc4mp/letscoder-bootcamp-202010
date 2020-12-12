@@ -8,13 +8,31 @@ const {
   validateHomeLocation,
   validateEndLocation,
   validateTime,
-  validateVisibility,
+  validateModePrivate,
   validateKidsOk,
   validateEvaluations,
   validateTest,
   validateDescription,
   validateId
 } = require('./helpers/validations')
+
+/**
+ * Saves quest game
+ *
+ * @param {string} ownerId
+ * @param {string} questId
+ * @param {string} title
+ * @param {string} coverImg
+ * @param {string} description
+ * @param {Array} homeLocation
+ * @param {Array} endLocation
+ * @param {Date} time
+ * @param {Boolean} modePrivate
+ * @param {Boolean} kidsOk
+ * @param {Array} evaluations
+ * @param {Array} tests
+
+ */
 
 module.exports = function (
   ownerId,
@@ -30,18 +48,18 @@ module.exports = function (
   evaluations,
   tests
 ) {
-   validateId(ownerId)
+    validateId(ownerId)
     if (typeof questId !== 'undefined') { validateId(questId) }
     if (typeof title !== 'undefined') { validateTitle(title) }
     if (typeof coverImg !== 'undefined') { validateCoverImg(coverImg) }
-    if (typeof homelocation !== 'undefined') { validateHomeLocation(homeLocation) }
+    if (typeof description !== 'undefined') { validateDescription(description) }
+    if (typeof homeLocation !== 'undefined') { validateHomeLocation(homeLocation) }
     if (typeof endLocation !== 'undefined') { validateEndLocation(endLocation) }
     if (typeof time !== 'undefined') { validateTime(time) }
-    if (typeof modePrivate !== 'undefined') { validateVisibility(modePrivate) }
+    if (typeof modePrivate !== 'undefined') { validateModePrivate(modePrivate) }
     if (typeof kidsOk !== 'undefined') { validateKidsOk(kidsOk) }
     if (typeof evaluations !== 'undefined') { validateEvaluations(evaluations) }
     if (typeof tests !== 'undefined') { validateTest(tests) }
-    if (typeof title !== 'undefined') { validateId(ownerId) }
 
   return (async () => {
   
