@@ -38,11 +38,11 @@ export default function ({onSearch}) {
                                                                
         try {
             
-            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) => {
+            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, results) => {
 
                 if (error) return alert(error.message)
 
-                setResults(products)
+                setResults(results)
 
 
                 setView('find-products')
@@ -52,13 +52,13 @@ export default function ({onSearch}) {
             alert(error.message)
         }
     }
-
+  
     const handleDetailProduct = (id) => {
         try {            
-            retrieveProductDetail(id, (error, product) => {
+            retrieveProductDetail(id, (error, result) => {
                 if(error) return alert(error.message)
                 
-                setResult(product)
+                setResult(result)
                 setResults(null)
             })
             
@@ -78,7 +78,7 @@ export default function ({onSearch}) {
                 <button>Search</button>
             </form>
 
-            {!result && results && results.length >0 && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
+            {results && results.length >0 && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
             {!results && result && <DetailProduct result={result}/>}
         </>
     );
@@ -88,41 +88,3 @@ export default function ({onSearch}) {
 
 
 
-/*
-
-
-
-
-
-
-
-
-
-    //const { token } = sessionStorage
-
-    //NO TOCAR ESTE MIERDÓN
-    const handleDetailGame = id => {
-        try {
-            detailGame(id, (error, game) => {
-
-                if (error) return alert(error.message)
-
-                setResult(game)
-                setResults(null)
-
-            })
-        } catch (error) {
-            alert(error.message)
-        }
-    }
-
-    return (
-        <>
-
-
-        {!result && results && results.length && <FindGames results={results} onDetailGame={handleDetailGame} />}
-        {!results && <div><img className="results__li__logo" src={logo} /></div>}
-        {!results && result && <DetailGame result={result} />}
-        </>
-    );
-} */

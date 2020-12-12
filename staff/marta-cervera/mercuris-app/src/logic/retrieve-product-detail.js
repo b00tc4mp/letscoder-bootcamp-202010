@@ -17,8 +17,8 @@ export default function (id, callback) {
                 return callback(new Error(error))
             }
 
-            const product = JSON.parse(response)
+            const result = JSON.parse(response)
 
-            callback(null, product)
+            callback(null,result)
         })
 }

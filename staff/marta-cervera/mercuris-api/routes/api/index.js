@@ -33,7 +33,7 @@ router.post('/api/products/:productId/images', withErrorHandling(handleSaveProdu
 //retrieveProductImage
 router.get('/api/products/:productId/images', withErrorHandling(handleRetrieveProductImage))
 //retrieveProductDetail
-router.get('/api/products/', withErrorHandling(handleRetrieveProductDetail))
+router.get('/api/products/:productId', withErrorHandling(handleRetrieveProductDetail))
 
 
 module.exports = router
