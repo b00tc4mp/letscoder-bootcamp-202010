@@ -23,14 +23,14 @@ function DetailPet({result: {id, name, breed, species, color, description } , on
     return <article className="result">
     
             <img className="result__img" src={`${API_URL}/pets/${id}/images`}/>
-            
+            <div>
             <p className="result__p">{name}</p>
             <p className="result__p">breed: {breed}</p>
             <p className="result__p">species: {species}</p>
             <p className="result__p">color: {color}</p>
             <p className="result__p">description: {description}</p>
             {token && <button className="result__button" onClick={()=>handleDeletePet(id) }>DELETE PET</button>}
-            
+            </div>
         </article>
 
 }

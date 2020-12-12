@@ -81,7 +81,7 @@ function SearchPets(){
         </form>
    
         {!result && results && results.length>0 && <PetResults results={results} onDetailPet={handleDetailPet} />}
-        {!results && <div><img className="search__img"src="patitas.jpg"/></div>}
+        {!results && !result && <div><img className="search__img"src="patitas.jpg"/></div>}
         {!results && result && <DetailPet result={result} onDeletePet = {handleRefreshResults}/>}
             </>
         );

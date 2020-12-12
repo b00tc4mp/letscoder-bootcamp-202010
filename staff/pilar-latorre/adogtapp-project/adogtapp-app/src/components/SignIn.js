@@ -1,8 +1,9 @@
 import './SignIn.sass'
 import { Link } from 'react-router-dom'
+import {Feedback} from '.'
 
 
-function SignIn({onSignIn, onGoToMainSearch}){
+function SignIn({onSignIn, onGoToMainSearch, error}){
     return <div className='signIn'>
         <header className='signIn__header'>
             <h1 className='signIn__h1'>Welcome to ADOGTApp</h1>
@@ -13,12 +14,13 @@ function SignIn({onSignIn, onGoToMainSearch}){
         </section>
         <form className='signIn__form' onSubmit={event => {
             event.preventDefault()
-
+            
             const { target: { email: { value: email }, password: { value: password } } } = event
-
+            
             onSignIn(email, password)
-
+            
         }}>
+            {error && <Feedback error={error}/>}
             <h4 className='signIn__h6'>Are you a ANIMAL SHELTER? Please SIGN IN here, if you have an account</h4>
 
             <input className='signIn__input' type="email" name="email" placeholder="e-mail" />
@@ -26,7 +28,6 @@ function SignIn({onSignIn, onGoToMainSearch}){
             <button className='signIn__button'>Send</button>
         </form>
         <p className='signIn__p'>Don´t have an account? <Link to ='sign-up'><span className='signIn__span'>Sign Up</span></Link></p>
-     
 
 </div>
 

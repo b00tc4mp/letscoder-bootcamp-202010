@@ -1,7 +1,8 @@
 import './SignUp.sass'
 import { Link } from 'react-router-dom'
+import { Feedback} from '.'
 
-function SignUp({ onSignUp}){
+function SignUp({ onSignUp, error}){
     return <div className="signUp">
         <h1 className="signUp__h1">Please give us some information about your shelter</h1>
         <img className='signUp__img' src="variosperretes2.jpg"/>  
@@ -13,6 +14,7 @@ function SignUp({ onSignUp}){
 
             onSignUp(userName, email, password, address, city, phone, description )
         }}>
+            {error && <Feedback error={error}/>}
             <input className="signUp__input" type="text" name="userName" placeholder="shelter name" />
             <input className="signUp__input" type="email" name="email" placeholder="e-mail" />
             <input className="signUp__input" type="password" name="password" placeholder="password" />
@@ -22,9 +24,8 @@ function SignUp({ onSignUp}){
             <input className="signUp__input" type="text" name="description" placeholder="description" />
             <button className="signUp__button">SAVE INFO and GO TO SIGN IN</button>
         </form>
-            
             <p className="signUp__p">Already have an account? <Link to = 'sign-in'><span className="signUp__span">Sign In</span></Link></p>
-
+            
 
     </div>
 
