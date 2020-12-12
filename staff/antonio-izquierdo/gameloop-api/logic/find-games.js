@@ -5,7 +5,6 @@ const { User, Game } = require('../models')
 
 module.exports = function (query, gameconsole, budget, priceMin, priceMax) {
     //poner validations
-debugger
     const criteria = {}
 
     /*if (userId)

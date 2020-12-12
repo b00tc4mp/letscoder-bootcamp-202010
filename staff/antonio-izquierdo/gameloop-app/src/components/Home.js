@@ -4,23 +4,36 @@ import { retrieveUser, saveGame, findGames, saveGameImage } from '../logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
+import SignIn from './SignIn'
 //import FindGames from './FindGames'
 
 export default function Home() {
+    
     const [name, setName] = useState()
     const [games, setGames] = useState()
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
+    const [error, setError] = useState(null)
+
+    function feedbackError(error) {
+        setError(error)
+        setTimeout(() => {
+            setError(null)
+        }, 3000)
+    }
+
+    const { token } = sessionStorage
 
     useEffect(() => {
-        const { token } = sessionStorage
-
+        //const { token } = sessionStorage
+    
+       
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
 
                 const { fullname } = user
-
                 setName(fullname)
+
             })
         } catch (error) {
             alert(error.message)
@@ -29,9 +42,8 @@ export default function Home() {
 
     const handleSaveGame = (name, description, gameconsole, budget, image) => {
 
-        const { token } = sessionStorage
+        //const { token } = sessionStorage
         try {
-            debugger
             saveGame(undefined, name, description, gameconsole, budget, token, (error, gameId) => {
                 if (error) return alert(error.message)
 
@@ -66,12 +78,18 @@ export default function Home() {
         }
     }
 
+    const handleLogut = () => {
+
+        delete sessionStorage.token
+
+        setView('/')
+    }
 
     return <section className="home">
-        <h1>Hello, {name}!</h1>
-        {/* {view === 'access' && <Access onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn} onGoToSearch={handleGoToSearch} />} */}
+        {token ? <h1>Hello, {name}!</h1> : <> </>}
         {view === 'home' && <SaveGame onSaveGame={handleSaveGame} />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
-        
+        {view === '/' && window.location.replace('')} 
+        {<button className="home__logout" onClick={handleLogut}>LOGOUT</button> }
     </section>
 }

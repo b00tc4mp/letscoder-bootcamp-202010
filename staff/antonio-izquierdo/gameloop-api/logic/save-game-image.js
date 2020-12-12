@@ -2,7 +2,7 @@ const { validateId } = require('./helpers/validations')
 const path = require('path')
 const fs = require('fs')
 
-debugger
+
 module.exports = (gameId, stream) => {
     validateId(gameId)
     //validateStream(stream)

@@ -2,7 +2,6 @@ import { call } from '../utils'
 import context from './context'
 //import { validateId, validateName, validateDescription, validatePrice, validateCallback } from './helpers/validations'
 
-debugger
 export default (function saveGame(gameId, name, description, gameconsole, budget, token, callback) {
     //if (typeof gameId !== 'undefined') validateId(gameId)
     /*    validateName(query)
@@ -18,7 +17,6 @@ export default (function saveGame(gameId, name, description, gameconsole, budget
     },
         JSON.stringify({ gameId, name, description, gameconsole, budget}),
         (status, response) => {
-            debugger
             if (status === 0)
                 return callback(new Error('server error'))
             else if (status !== 200) {

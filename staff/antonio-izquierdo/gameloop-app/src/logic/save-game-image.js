@@ -2,7 +2,7 @@ import { call } from '../utils'
 import { validateId, validateFile, validateCallback } from './helpers/validations'
 import context from './context'
 
-debugger
+ 
 export default (function (gameId, image, callback) {
     validateId(gameId)
     if (typeof image !== 'undefined') validateFile(image)

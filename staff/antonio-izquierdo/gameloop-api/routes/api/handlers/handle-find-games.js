@@ -8,7 +8,6 @@ const {
 
 module.exports = (req, res, handleError) => {
 
- debugger
   const {
     query: { query, gameconsole, budget, priceMin, priceMax }
   } = req;

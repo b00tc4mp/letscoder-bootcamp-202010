@@ -5,7 +5,7 @@ import {findGames, detailGame} from '../logic'
 import DetailGame from './DetailGame'
 import logo from "../assets/img/logo.png"
 
-debugger
+ 
 function SearchGames(){
     const [view, setView] = useState('find-games')
     

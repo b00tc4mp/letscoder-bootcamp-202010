@@ -5,7 +5,7 @@ import { Route, withRouter, Redirect } from 'react-router-dom'
 import { findGames, retrieveGame } from '../logic'
 import DetailGame from './DetailGame'
 
-debugger
+ 
 //{ onSearch }
 export default withRouter(function ({ onSearch, history }) {
     const [view, setView] = useState('find-games')

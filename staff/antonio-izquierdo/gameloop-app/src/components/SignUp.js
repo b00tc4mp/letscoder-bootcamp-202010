@@ -1,8 +1,9 @@
 import './SignUp.sass'
 import logo from "../assets/img/logo.png"
 import { Link } from 'react-router-dom'
+import { Feedback } from '.'
 
-function SignUp({ onSignUp, onGoToSignIn }) {
+function SignUp({ onSignUp, error }) {
     return <section className="sign-up">
         <img className="sign-up__logo" src={logo} />
         <div className="sign-up__container">
@@ -13,6 +14,7 @@ function SignUp({ onSignUp, onGoToSignIn }) {
 
                 onSignUp(fullname, email, password)
             }}>
+                {error && <Feedback error={error}/>}
                 <input className="sign-up__container__form__input" type="text" name="fullname" placeholder="FULLNAME" />
                 <input className="sign-up__container__form__input" type="email" name="email" placeholder="E-MAIL" />
                 <input className="sign-up__container__form__input" type="password" name="password" placeholder="PASSWORD" />
