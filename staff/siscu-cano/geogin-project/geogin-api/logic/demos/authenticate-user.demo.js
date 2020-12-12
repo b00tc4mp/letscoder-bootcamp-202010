@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const { mongoose } = require('geogin-data')
 const { models: { User } } = require('geogin-data')
 const authenticateUser = require('../authenticate-user')

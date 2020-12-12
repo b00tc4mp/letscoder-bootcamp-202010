@@ -4,5 +4,5 @@ module.exports = {
     retrieveUser: require('./retrieve-user'),
     updateUser: require('./update-user'),
     createGame: require('./create-game'),
-    createQuest: require('./create-quest')
+    saveQuest: require('./save-quest')
 }
