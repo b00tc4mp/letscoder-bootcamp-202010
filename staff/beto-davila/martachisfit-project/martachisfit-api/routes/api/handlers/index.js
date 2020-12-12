@@ -6,7 +6,6 @@ module.exports = {
     handleFindFood: require('./handle-find-food'),
     handleToggleFoodUserDiet: require('./handle-toggle-food-user-diet'),
     handleRetrieveSavedFood: require('./handle-retrieve-saved-food'),
-    // handleRetrieveFood: require('./handle-retrieve-food'),
     handleAddFoodUserDiet: require('./handle-add-food-user-diet'),
     handleRetrieveDiet: require('./handle-retrieve-diet'),
     handleRetrieveArticles: require('./handle-retrieve-articles'),
@@ -18,5 +17,6 @@ module.exports = {
     handleRetrieveRecipes: require('./handle-retrieve-recipes'),
     handleRetrieveSavedRecipes: require('./handle-retrieve-saved-recipes'),
     handleRetrieveChosenDiet: require('./handle-retrieve-chosen-diet'),
-    handleRetrieveWorkout: require('./handle-retrieve-workout')
+    handleRetrieveWorkout: require('./handle-retrieve-workout'),
+    handleRetrieveMuscularGroup: require('./handle-retrieve-muscular-group')
 }

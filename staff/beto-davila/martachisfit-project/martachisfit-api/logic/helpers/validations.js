@@ -63,6 +63,19 @@ module.exports = {
         if (dietType !== 'mediterranean' && dietType !== 'keto' && dietType !== 'vegan') throw new Error('diet type is not "vegan" or "mediterranean" or "keto"')
     },
 
+    validateMuscularGroup(group) {
+        if (typeof group !== 'string') throw new TypeError(group + ' is not a group')
+
+        if (group !== 'biceps' && 
+        group !== 'triceps' && 
+        group !== 'abdomen' && 
+        group !== 'hombro' && 
+        group !== 'espalda' && 
+        group !== 'pierna' && 
+        group !== 'pectoral' && 
+        group !== 'gemelo') throw new Error('Invalid muscular group')
+    },
+
     validateLevel(level) {
         if (typeof level !== 'string') throw new TypeError(level + ' is not a level')
 

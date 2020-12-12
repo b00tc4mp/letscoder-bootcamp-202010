@@ -1,9 +1,13 @@
 import './styles/Workouts.sass'
 
-export default function Workouts({onChosenLevel}) {
+export default function Workouts({onChosenLevel, onGoToMovements}) {
 
     return <section className="workouts">
         <div className="workouts-pseudo">
+        <div className="workouts__pre">
+            <h3 className="workouts__pre-title">Antes de nada....</h3>
+            <h4 className="workouts__pre-question">¿Conoces bien los ejercicios principales?, te los ilustramos por <a href='#' onClick={onGoToMovements} className="workouts__movements">aquí</a></h4>
+        </div>
         <h3 className="workouts__title"> ¿Cuál es tu nivel?</h3>
         <div onClick={() => onChosenLevel("beginner")} className="workouts__level">
             <h4 className="workouts__level-title"> Principiante </h4>

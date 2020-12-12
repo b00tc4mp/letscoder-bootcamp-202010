@@ -4,5 +4,6 @@ module.exports = {
     diet: require('./diet'),
     article: require('./article'),
     workout: require('./workout'),
-    recipe: require('./recipe')
+    recipe: require('./recipe'),
+    movement: require('./movement')
 }

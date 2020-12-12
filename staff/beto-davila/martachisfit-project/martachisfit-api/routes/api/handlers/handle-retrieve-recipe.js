@@ -1,8 +1,8 @@
 const { retrieveRecipe } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
-    
-    const { params: { recipeId }} = req
+
+    const { params: { recipeId } } = req
 
     try {
         retrieveRecipe(recipeId)

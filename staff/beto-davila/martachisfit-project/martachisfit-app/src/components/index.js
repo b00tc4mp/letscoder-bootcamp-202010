@@ -21,6 +21,7 @@ import Recipe from './Recipe'
 import Diets from './Diets'
 import Workouts from './Workouts'
 import Workout from './Workout'
+import Movements from './Movements'
 
 export {
     Landing,
@@ -45,5 +46,6 @@ export {
     Recipe,
     Diets,
     Workouts,
-    Workout
+    Workout,
+    Movements
 }

@@ -37,15 +37,18 @@ module.exports = {
         if (!name.trim().length) throw new Error('name is empty or blank')
     },
 
-    // validateTags(tags) {
-    //     if (!(tags instanceof Array)) throw new TypeError(`${tags} is not an array`)
+    validateMuscularGroup(group) {
+        if (typeof group !== 'string') throw new TypeError(group + ' is not a group')
 
-    //     tags.forEach(tag => {
-    //         if (typeof tag !== 'string') throw new TypeError(tag + ' is not a tag')
-
-    //         if (!tag.trim().length) throw new Error('tag is empty or blank')
-    //     })
-    // },
+        if (group !== 'biceps' &&
+            group !== 'triceps' &&
+            group !== 'abdomen' &&
+            group !== 'hombro' &&
+            group !== 'espalda' &&
+            group !== 'pierna' &&
+            group !== 'pectoral' &&
+            group !== 'gemelo') throw new Error('Invalid muscular group')
+    },
 
     validateGender(gender) {
         if (typeof gender !== 'string') throw new TypeError(gender + ' is not a gender')

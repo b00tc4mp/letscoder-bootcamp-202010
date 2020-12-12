@@ -1,6 +1,5 @@
 const { Router } = require('express')
 const jsonBodyParser = require('../../middlewares/json-body-parser')
-const handleAddUserRecipes = require('./handlers/handle-add-user-recipes')
 
 const {
     handleRegisterUser,
@@ -20,7 +19,9 @@ const {
     handleRetrieveRecipes,
     handleRetrieveSavedRecipes,
     handleRetrieveChosenDiet,
-    handleRetrieveWorkout
+    handleRetrieveWorkout,
+    handleRetrieveMuscularGroup,
+    handleAddUserRecipes
 } = require('./handlers/index')
 
 const router = new Router()
@@ -59,6 +60,9 @@ router.get('/api/users/diets', withErrorHandling(handleRetrieveDiet))
 
 // retrieve workout by level
 router.get('/api/users/:level/workouts', withErrorHandling(handleRetrieveWorkout))
+
+// retrieve muscular movement by group
+router.get('/api/movements/:group', withErrorHandling(handleRetrieveMuscularGroup))
 
 // retrieve chosen diet
 router.get('/api/users/diets/:dietType', withErrorHandling(handleRetrieveChosenDiet))

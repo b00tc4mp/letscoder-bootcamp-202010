@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap')
+
+.movements
+    &__select
+        width: 40%
+        margin: auto
+        font-family: "Josefin Sans", sans-serif
+        background-color: transparent
+
+    &__group-name
+        font-size: .8rem
+
+    &__group
+        width: 90%
+        overflow: auto
+        white-space: nowrap
+        margin: .5rem auto 2rem auto
+
+    &__group-movement
+        display: inline-block
+        margin: .5rem 1rem
+
+    &__group-movement > &__group-img
+        -webkit-filter: brightness(100%)
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+    &__group-movement > &__group-img:hover
+        -webkit-filter: brightness(70%)
+        -webkit-transition: all 1s ease
+        -moz-transition: all 1s ease
+        -o-transition: all 1s ease
+        -ms-transition: all 1s ease
+        transition: all 1s ease
+
+/* width */
+::-webkit-scrollbar
+    width: .3rem
+    height: .5rem
+
+/* Track */
+::-webkit-scrollbar-track
+    box-shadow: inset 0 0 5px grey
+    border-radius: 5px
+
+/* Handle */
+::-webkit-scrollbar-thumb
+    background: #489899
+    border-radius: 10px
