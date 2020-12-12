@@ -24,7 +24,7 @@ export default withRouter(props => {
         props.history.push('/sign-in')
       })
     } catch (error) {
-      return feedbackError(error.message)
+      return feedbackError('WARNING:' + ' ' + error.message)
     }
   }
 
@@ -38,7 +38,7 @@ export default withRouter(props => {
         props.history.push('/')
       })
     } catch (error) {
-      return feedbackError(error.message)
+      return feedbackError('WARNING: ' + ' ' + error.message)
     }
   }
 

@@ -10,7 +10,7 @@ const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFo
 
 const { env: { MONGODB_URL } } = process
 
-describe('retrieveUser()', () => {
+false && describe('retrieveUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {

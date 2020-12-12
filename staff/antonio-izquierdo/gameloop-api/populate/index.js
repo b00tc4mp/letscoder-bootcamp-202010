@@ -28,14 +28,14 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
             User.create({ fullname, email, password })
                 .then(({ _id }) =>
                     new Promise((resolve, reject) => {
-                        const rs = fs.createReadStream(path.join(__dirname, `./users/${image}.jpg`))
+                        // const rs = fs.createReadStream(path.join(__dirname, `./users/${image}.jpg`))
                         const ws = fs.createWriteStream(path.join(__dirname, `../data/users/${_id}.jpg`))
 
                         ws.on('error', reject)
 
                         rs.on('end', () =>
                             Promise.all(games.map(({ name, image, description, gameconsole, budget }) =>
-                                Game.create({ name, owner: _id })
+                                Game.create({ name, image, description, gameconsole, budget, owner: _id })
                                     .then(({ _id }) =>
                                         new Promise((resolve, reject) => {
                                             const rs = fs.createReadStream(path.join(__dirname, `./games/${image}.jpg`))

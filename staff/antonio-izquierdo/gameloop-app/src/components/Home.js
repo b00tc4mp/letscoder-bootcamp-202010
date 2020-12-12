@@ -74,13 +74,13 @@ export default function Home({onLogout}) {
 
     return <section className="home">
         {token ? <h1>Hello, {name}!</h1> : <> </>}
-        {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
-        {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
         {<button className="home__logout" onClick={() => {
             setName(null)
             setGames(null)
             setError(null)
             onLogout()
         } }>LOGOUT</button>}
+        {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
+        {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
     </section>
 }
