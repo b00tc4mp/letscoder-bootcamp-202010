@@ -30,8 +30,8 @@ export const SearchCreate = () => {
 
   // Search
   const [picture, setPicture] = useState('')
-  const nameSearch = useInputValue('')
-  const descriptionSearch = useInputValue('')
+  const [nameSearch, setNameSearch] = useState('')
+  const [descriptionSearch, setDescriptionSearch] = useState('')
   const [poiBeginGame, setPoiBeginGame] = useState('')
   const [poiEndGame, setPoiEndGame] = useState('')
   const [privateSearch, setPrivateSearch] = useState(false)
@@ -113,6 +113,14 @@ export const SearchCreate = () => {
 
   const handleTitleTest = e => {
     setTitleTest(e.currentTarget.value)
+  }
+
+  const handleNameSearch = e => {
+    setNameSearch(e.currentTarget.value)
+  }
+
+  const handleDescriptionSearch = e => {
+    setDescriptionSearch(e.currentTarget.value)
   }
 
   const resetTest = () => {
@@ -213,9 +221,9 @@ export const SearchCreate = () => {
     const { lat: latEnd, lng: lngEnd } = poiEndGame
 
     const _search = {
-      title: nameSearch.value,
+      title: nameSearch,
       coverImg: picture,
-      description: descriptionSearch.value,
+      description: descriptionSearch,
       homeLocation: [latBegin, lngBegin],
       endLocation: [latEnd, lngEnd],
       time: time,
@@ -255,7 +263,7 @@ export const SearchCreate = () => {
                 timeout={{ enter: 500, exit: 500 }}
               >
                 <div className='wizard-steps'>
-                  <Steps key={step.id} step={step}>
+                  <Steps key={step.id} step={step.id ? step : undefined}>
                     <Step
                       id='coverStep'
                       render={({ next }) => (
@@ -279,20 +287,26 @@ export const SearchCreate = () => {
                           <p className='description'>
                             Rellena los siguientes campos sobre la BÚSQUEDA:
                           </p>
-                          <Input {...nameSearch} placeholder='Título' />
                           <Input
-                            {...descriptionSearch}
+                            value={nameSearch}
+                            onChange={handleNameSearch} placeholder='Título'
+                          />
+                          <Input
+                            value={descriptionSearch}
+                            onChange={handleDescriptionSearch}
                             placeholder='Descripción'
                           />
                           <Input
                             onClick={showModalBeginGame}
                             placeholder='Ubicación de inicio'
                             value={poiBeginGame}
+                            onChange={() => {}}
                           />
                           <Input
                             onClick={showModalEndGame}
                             placeholder='Ubicación de fin'
                             value={poiEndGame}
+                            onChange={() => {}}
                           />
                           <TimeInput
                             initTime={time}
@@ -331,14 +345,14 @@ export const SearchCreate = () => {
                             )}
                             <img src={picture || NoImage} />
                             <div>
-                              {nameSearch.value && (
+                              {nameSearch && (
                                 <p className='game-feature__title'>
-                                  {nameSearch.value}
+                                  {nameSearch}
                                 </p>
                               )}
-                              {descriptionSearch.value && (
+                              {descriptionSearch && (
                                 <p className='game-feature__description'>
-                                  {descriptionSearch.value}
+                                  {descriptionSearch}
                                 </p>
                               )}
                               {suitableChilds && (
@@ -388,6 +402,7 @@ export const SearchCreate = () => {
                           <Input
                             onClick={showModalTestGame}
                             placeholder='Ubicación de la prueba'
+                            onChange={() => {}}
                             value={poiTest}
                           />
                           <UploadImage
