@@ -1,17 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap')
 
+.movements-pseudo
+    display: block
+    position: relative
+    height: 100vh
+    
+.movements-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-movements.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+
 .movements
     &__select
         width: 40%
         margin: auto
         font-family: "Josefin Sans", sans-serif
-        background-color: transparent
 
     &__back
         float: left
         text-decoration-line: none
         cursor: pointer
-        margin: .5rem
+        margin-left: .5rem
         background-color: #dee4e4
         padding: .2rem
         border-radius: .5rem

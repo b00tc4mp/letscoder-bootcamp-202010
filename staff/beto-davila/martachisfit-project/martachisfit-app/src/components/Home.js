@@ -324,7 +324,7 @@ export default function Home() {
         {view === 'diet-design' && <DietDesign />}
         {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
         {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error}/>}
-        {view === 'workout' && <Workout source={workout} />}
+        {view === 'workout' && <Workout onGoToMovements={handleGoToMovements} source={workout} />}
         {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
         {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
         {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToUserDiet={handleGoToUserDiet} />}

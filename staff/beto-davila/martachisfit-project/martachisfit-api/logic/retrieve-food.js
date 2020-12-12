@@ -19,8 +19,6 @@ module.exports = function (foodId) {
             const { _id } = food
 
             food.id = _id.toString()
-            
-            // delete food.id
 
             return food
         })

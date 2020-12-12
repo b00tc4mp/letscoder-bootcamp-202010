@@ -16,7 +16,7 @@ module.exports = function (level) {
 
         return Workout.findById('5fd24f56b252584713e17320').lean()
             .then(workout => {
-                if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
+                // if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
 
                 const { name, daysWeek, level, setsWeek, _id, layout, description } = workout
 
@@ -32,7 +32,7 @@ module.exports = function (level) {
 
         return Workout.findById('5fd24e8d28e0c746d361af52').lean()
             .then(workout => {
-                if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
+                // if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
 
                 const { name, daysWeek, level, setsWeek, _id, layout, description } = workout
 
@@ -48,7 +48,7 @@ module.exports = function (level) {
 
         return Workout.findById('5fd24f11e717b546f7602b42').lean()
             .then(workout => {
-                if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
+                // if (!workout) throw new NotFoundError(`workout with id ${workoutId} not found`)
 
                 const { name, daysWeek, level, setsWeek, _id, layout, description } = workout
 

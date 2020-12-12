@@ -19,8 +19,6 @@ module.exports = function (group) {
             return Promise.all(movements.map(movementId =>
                 Movement.findById(movementId).lean()
                     .then(movement => {
-                        if (!movement) throw new NotFoundError(`movement with id ${movementId} not found`)
-
                         const { name, group, urlPathImg, _id } = movement
 
                         movement.id = _id.toString()

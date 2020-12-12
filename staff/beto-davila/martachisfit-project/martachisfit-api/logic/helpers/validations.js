@@ -66,6 +66,8 @@ module.exports = {
     validateMuscularGroup(group) {
         if (typeof group !== 'string') throw new TypeError(group + ' is not a group')
 
+        if (!group.trim().length) throw new ContentError('group is empty or blank')
+
         if (group !== 'biceps' && 
         group !== 'triceps' && 
         group !== 'abdomen' && 
@@ -74,10 +76,13 @@ module.exports = {
         group !== 'pierna' && 
         group !== 'pectoral' && 
         group !== 'gemelo') throw new Error('Invalid muscular group')
+
     },
 
     validateLevel(level) {
         if (typeof level !== 'string') throw new TypeError(level + ' is not a level')
+
+        if (!level.trim().length) throw new ContentError('level is empty or blank')
 
         if (level !== 'beginner' && level !== 'intermediate' && level !== 'advanced') throw new Error('level is neither "beginner" nor "intermediate" nor "advanced"')
     },
