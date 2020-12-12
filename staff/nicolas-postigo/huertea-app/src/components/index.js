@@ -7,6 +7,8 @@ import Detailoffer from './Detailoffer'
 import FindOffer from './FindOffer'
 import ListOffersRetrieve from './ListOffersRetrieve'
 import Useroffers from './Useroffers'
+import MapView from './MapView'
+
 
 export {
     Register,
@@ -17,5 +19,7 @@ export {
     Detailoffer,
     FindOffer,
     ListOffersRetrieve,
-    Useroffers
+    Useroffers,
+    MapView,
+
 }

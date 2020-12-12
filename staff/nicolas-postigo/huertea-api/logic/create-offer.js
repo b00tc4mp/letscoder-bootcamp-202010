@@ -32,11 +32,11 @@ module.exports = function (ownerId, offerId, offername, titleoffer, price) {
 
                             return Offer
                                 .updateOne({ ownerId }, { $set: { offername, titleoffer, price } })
-                                .then(() => { })
+                                .then((result) => result.id)
                         })
                 } else
                     return Offer.create({ offername, titleoffer, price, owner: ownerId })
-                        .then(() => { })
+                        .then((result) => result.id)
             })
     )
 }

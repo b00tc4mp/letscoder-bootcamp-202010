@@ -10,8 +10,8 @@ module.exports = (req, res, handleError) => {
     try {
         const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
 
-        createOffer(  ownerId, offerId, offername, titleoffer, price)
-            .then(() => res.status(201).send())
+        createOffer(ownerId, offerId, offername, titleoffer, price)
+            .then((offerId) => res.status(201).json({offerId}))
             .catch(handleError)
     } catch (error) {
         handleError(error)

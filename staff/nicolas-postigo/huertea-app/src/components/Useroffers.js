@@ -15,7 +15,7 @@ function Useroffers ({ useroffers, onGoDetail, onGoDelete }) {
                 <h5>{titleoffer}</h5>
                 <p>{offername}</p>
                 <p>{price} €</p>
-                <a onClick={()=>{onGoDetail({id,titleoffer,offername,price})}} href="#" className="button_detail_offer">Detalle Oferta</a> 
+                <a onClick={(event)=>{onGoDetail(event, {id,titleoffer,offername,price})}} href="#" className="button_detail_offer">Detalle Oferta</a> 
                 <button className="delete-button" onClick={()=>{onGoDelete(id)}}> borrar oferta</button>
                 {/* <a href="#" className="button_detail_offer">Detalle Oferta</a> */}
             </li>)}  

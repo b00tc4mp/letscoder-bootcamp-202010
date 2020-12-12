@@ -13,7 +13,7 @@ export default function FindOffers({results, onGoDetail}){
                 <h5>{titleoffer}</h5>
                 <p>{offername}</p>
                 <p>{price} €</p>
-                <a onClick={onGoDetail} href="#" className="button_detail_offer">Detalle Oferta</a>
+                <a onClick={(event)=>onGoDetail(event,{id,titleoffer,offername,price})} href="#" className="button_detail_offer">Detalle Oferta</a>
             
         </li>)}
 

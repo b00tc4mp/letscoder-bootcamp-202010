@@ -27,8 +27,8 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, offers, u
         setResults(results)
         setView('user-offers')
     }
-    const handleGoDetail = (offer) => {
-
+    const handleGoDetail = (event, offer) => {
+        event.preventDefault()
         try {
             setOffer(offer)
             setView("detail")
@@ -39,6 +39,8 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, offers, u
         }
 
     }
+
+    
 
     const handleGoDelete = (id) => {
         const { token } = sessionStorage

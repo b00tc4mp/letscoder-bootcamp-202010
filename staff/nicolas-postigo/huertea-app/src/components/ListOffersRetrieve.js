@@ -4,7 +4,7 @@ const API_URL = process.env.REACT_APP_API_URL
 
 // export default function ({ offers, onGoDetail }) {
 function ListOffersRetrieve ({ offers, onGoDetail }) {
-    
+    debugger
     return <section className="list-offers">
 {/*offers ? <p>{offers.titleoffer}</p> : <p>no definido</p>*/}
            {offers && offers.map(({ id, titleoffer, offername, price }) => 
@@ -13,7 +13,7 @@ function ListOffersRetrieve ({ offers, onGoDetail }) {
                 <h5>{titleoffer}</h5>
                 <p>{offername}</p>
                 <p>{price} €</p>
-                <a onClick={()=>{onGoDetail({id,titleoffer,offername,price})}} href="#" className="button_detail_offer">Detalle Oferta</a> 
+                <a onClick={(event)=>{onGoDetail(event,{id,titleoffer,offername,price,event})}} href="#" className="button_detail_offer">Detalle Oferta</a> 
                 {/* <a href="#" className="button_detail_offer">Detalle Oferta</a> */}
             </li>)}  
         

@@ -565,3 +565,63 @@ info 2020-12-11T11:06:44.750Z - server running on port 4000
 error 2020-12-11T11:07:22.697Z - NotFoundError: offer with id 5fc7630bc8e0b520b46d68a8 not found
     at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-11T15:14:09.650Z - starting server
+info 2020-12-11T15:14:11.889Z - server running on port 4000
+info 2020-12-12T08:33:38.558Z - starting server
+info 2020-12-12T08:33:39.164Z - server running on port 4000
+info 2020-12-12T08:43:39.393Z - stopping server
+info 2020-12-12T08:43:51.483Z - starting server
+info 2020-12-12T08:43:51.812Z - server running on port 4000
+info 2020-12-12T08:46:32.761Z - stopping server
+info 2020-12-12T08:46:46.069Z - starting server
+info 2020-12-12T08:46:46.441Z - server running on port 4000
+info 2020-12-12T08:57:01.835Z - stopping server
+info 2020-12-12T08:57:17.337Z - starting server
+info 2020-12-12T08:57:17.813Z - server running on port 4000
+info 2020-12-12T09:19:38.475Z - stopping server
+info 2020-12-12T09:19:47.212Z - starting server
+info 2020-12-12T09:19:47.963Z - server running on port 4000
+info 2020-12-12T15:54:36.899Z - stopping server
+info 2020-12-12T15:54:57.128Z - starting server
+info 2020-12-12T15:54:57.826Z - server running on port 4000
+info 2020-12-12T16:13:42.631Z - stopping server
+info 2020-12-12T16:13:54.683Z - starting server
+info 2020-12-12T16:13:54.932Z - server running on port 4000
+error 2020-12-12T16:14:48.612Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-12T16:26:58.053Z - starting server
+info 2020-12-12T16:26:58.276Z - server running on port 4000
+error 2020-12-12T16:41:02.754Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T17:13:37.035Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "armando" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-12T17:21:06.153Z - stopping server
+info 2020-12-12T17:21:13.640Z - starting server
+info 2020-12-12T17:21:14.131Z - server running on port 4000
+info 2020-12-12T17:25:16.387Z - starting server
+info 2020-12-12T17:25:16.635Z - server running on port 4000
+info 2020-12-12T17:25:21.657Z - stopping server
+info 2020-12-12T17:25:49.900Z - starting server
+info 2020-12-12T17:25:50.181Z - server running on port 4000
+info 2020-12-12T17:29:53.489Z - stopping server
+info 2020-12-12T17:30:16.232Z - starting server
+info 2020-12-12T17:30:16.887Z - server running on port 4000
+info 2020-12-12T17:32:42.915Z - stopping server
