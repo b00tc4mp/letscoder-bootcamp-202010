@@ -1,6 +1,6 @@
 import './SaveProduct.sass'
-
-export default function SaveProduct({ onSaveProduct, name }) {
+import{ Feedback } from '.'
+export default function SaveProduct({ onSaveProduct, name, error }) {
     const handleSubmitProduct = event => {
         event.preventDefault()
 
@@ -21,6 +21,7 @@ export default function SaveProduct({ onSaveProduct, name }) {
         <h1 classname="save-product__maintitle">Welcome to the registration product page, {name}</h1>
         <h2 className="save-product__h2">Register your product</h2>
         <form className="save-product__form" onSubmit={handleSubmitProduct}>
+            {error&&<Feedback error={error}/>}
             <input name="name" type="text" placeholder="Product Name"></input>
             <textarea className="save-product__textarea"name="description" type="text" placeholder="Description"></textarea>
             <input name="price" type="text" placeholder="Price"></input>

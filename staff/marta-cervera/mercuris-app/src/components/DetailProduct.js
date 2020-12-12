@@ -2,7 +2,7 @@ import './DetailProduct.sass'
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function DetailProduct({ result: {id, name, description, price} }) {   
+function DetailProduct({ result: {id, name, description, price, fullname, contact} }) {   
     
 
 
@@ -11,6 +11,9 @@ return <article className="result">
         <p className="result__p">name: {name}</p>
         <p className="result__p">description: {description}</p>
         <p className="result__p">price: {price}</p>
+        <p className="result__p">fullname: {fullname}</p>
+        <p className="result__p">contact: {contact}</p>
+        {/* <p className="result__p">contact: {contact}</p> */}
     </article> 
 }
 

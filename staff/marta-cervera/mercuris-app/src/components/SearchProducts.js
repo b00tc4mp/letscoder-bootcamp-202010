@@ -3,9 +3,9 @@ import FindProducts from './FindProducts'
 import DetailProduct from './DetailProduct'
 import { useState, useEffect } from 'react'
 import { findProducts, retrieveProductDetail } from '../logic'
+import{ Feedback } from '.'
 
-
-export default function ({onSearch}) {
+export default function ({error}) {
     const [view, setView] = useState('find-products')
 
     const [results, setResults] = useState()
@@ -69,7 +69,7 @@ export default function ({onSearch}) {
 
     return (
         <>
-            <form onSubmit={handleFindProducts}>
+            <form onSubmit={handleFindProducts}>                
                 {!token && <input type="text" name="queryCompany" placeholder="Info Company" />}
                 <input type="text" name="queryProduct" placeholder="Info Product" />
                 <input type="number" name="price" placeholder="Introduce price" />

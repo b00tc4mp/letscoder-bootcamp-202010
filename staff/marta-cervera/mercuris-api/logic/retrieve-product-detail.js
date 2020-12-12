@@ -1,21 +1,39 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const {  Product } = require('../models')
+const { Product, User } = require('../models')
 
-module.exports = function(productId) {
+module.exports = function (productId) {
     validateId(productId)
 
     return Product.findById(productId).lean()
-    .then(product => {
-        if (!product) throw new NotFoundError(`product with id ${productId} not found`)
+        .then(product => {
 
-        const { _id } = product
+            if (!product) throw new NotFoundError(`product with id ${productId} not found`)
+            const { owner } = product
 
-        product.id = _id.toString()
-        
-        delete product._id
-     
+            return User
 
-        return product
-    })
+                .findById(owner.toString())
+                .then(user => {
+
+                    const { _id } = product
+
+                    const { name } = user
+
+                    user.fullname = name
+
+                    product.id = _id.toString()
+
+                    delete product._id
+
+                    delete user._id
+
+                    delete user.name
+
+
+                    return { ...product, ...user }
+
+                })
+
+        })
 }

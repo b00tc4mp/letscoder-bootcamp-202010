@@ -8,6 +8,7 @@ import SaveProduct from './SaveProduct'
 import SearchProducts from'./SearchProducts'
 import FindProducts from './FindProducts'
 import DetailProduct from './DetailProduct'
+import Feedback from './Feedback'
 
 
 export {
@@ -20,7 +21,8 @@ export {
     SaveProduct,
     SearchProducts,
     FindProducts,
-    DetailProduct
+    DetailProduct,
+    Feedback
     
 
     

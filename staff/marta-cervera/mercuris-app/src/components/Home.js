@@ -6,10 +6,19 @@ import SearchProducts from './SearchProducts'
 import Profile from './Profile'
 
 
-export default function Home() {
+export default function Home({onLogout}) {
 
+    const [error, setError] = useState(null)
+    
+    function feedbackError(error) {
+        setError(error)
+        setTimeout(() => {
+            setError(null)
+        }, 10000)
+    }
+    
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
-
+    const [success, setSuccess] = useState()
     const [name, setName] = useState()
     const [products, setProducts] = useState()
 
@@ -27,7 +36,7 @@ export default function Home() {
                 setName(name)
             })
         } catch (error) {
-            alert(error.message)
+            return alert(error.message)
         }
     }, [])
 
@@ -37,16 +46,17 @@ export default function Home() {
 
         try {
             saveProduct(undefined, token, name, description, price, (error, productId) => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError(error.message)
 
                 saveProductImage(productId, image, error => {
-                    if (error) return alert(error.message)
+                    if (error) return feedbackError(error.message)
+                    setSuccess(true)
                     
                   })
             }
             )
         } catch (error) {
-            alert(error.message)
+           return feedbackError(error.message)
         }
     }
 
@@ -63,7 +73,7 @@ export default function Home() {
            const { token } = sessionStorage 
 
            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) =>{
-               if (error) return alert (error.message)
+               if (error) return feedbackError('could not find any product')
                setProducts(products)
         })
                 
@@ -71,18 +81,20 @@ export default function Home() {
             alert(error.message)
         }
     }
-   
-
 
 
     return (
         <div className="home">
+            <button className="home__logout" onClick={()=> {
+        setName(null)
+        setError(null)
+        onLogout()}}>LOGOUT</button>
             {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
             {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
-            {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={name} />}
+            {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={name} error ={error}/>}
             {view === 'profile' && <Profile name={name} />}
             {view === 'profile' && <SearchProducts onSearch={handleSearchProducts}/>}
-
+            {success && <h2>PRODUCT SAVED 🤩 </h2>}
         </div >
     );
 }

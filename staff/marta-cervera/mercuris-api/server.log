@@ -1014,3 +1014,94 @@ info 2020-12-12T09:23:31.043Z - undefined
 info 2020-12-12T09:25:16.566Z - stopping server
 info 2020-12-12T09:25:19.046Z - starting server
 info 2020-12-12T09:25:19.196Z - undefined
+info 2020-12-12T11:01:40.716Z - starting server
+error 2020-12-12T11:13:50.203Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:14:30.515Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:15:08.791Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:22:35.841Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:22:41.095Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:35:10.001Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:45:19.564Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:45:30.456Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:08:08.365Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:08:11.165Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:09:41.307Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:10:34.548Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:10:42.864Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:11:35.912Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:12:27.325Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:13:16.912Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:13:41.121Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:14:05.776Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:27:26.520Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:27:56.759Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:28:09.178Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:28:41.047Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:30:16.650Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:45:25.779Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:56:25.601Z - ValidationError: Product validation failed: price: Path `price` is required.
+    at model.Document.invalidate (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-12T16:32:46.358Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+info 2020-12-12T19:05:36.980Z - stopping server
+info 2020-12-12T19:06:51.781Z - starting server
+info 2020-12-12T19:06:51.951Z - undefined
+info 2020-12-12T19:35:38.493Z - stopping server
+info 2020-12-12T19:35:42.260Z - starting server
+info 2020-12-12T19:35:42.501Z - undefined
+error 2020-12-12T19:36:20.683Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T19:36:32.715Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T19:36:43.158Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T19:37:15.652Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-12T19:42:01.102Z - stopping server
+info 2020-12-12T19:42:08.427Z - starting server
+info 2020-12-12T19:42:08.588Z - undefined

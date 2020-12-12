@@ -11,8 +11,7 @@ debugger
         onDetailProduct(id)
     }
    
-    return <div className="results">
-        <ul className="results__ul">
+    return <div className="results">        
         {results.map( ({id, name, description, price }) => 
         <li key={id} className="results__list">
             <p className="results__p">name:{name}</p>            
@@ -22,7 +21,7 @@ debugger
             
         </li>)}
 
-        </ul>
+        
         </div>   
 
       
