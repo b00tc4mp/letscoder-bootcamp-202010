@@ -23,14 +23,14 @@ export default function (picture, callback) {
         console.log(status)
         console.log(response)
 
-        if (response.status === 0) {
+        if (status === 0) {
           return callback(new Error('server error'))
-        } else if (response.status !== 201) {
+        } else if (status !== 201) {
           const { error } = JSON.parse(response)
           console.log(error)
           return callback(new Error(error))
         }
-        const res = JSON.parse(response.body)
+        const res = JSON.parse(response)
         // const {imgUrl} = res.uploadResponse
         console.log(res.uploadResponse.url)
         callback(null, res.uploadResponse.url)

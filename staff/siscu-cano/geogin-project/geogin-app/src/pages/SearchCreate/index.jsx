@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useBodyClass } from '../../hooks/useBodyClass'
 import { UploadImage } from '../../components/UploadImage'
-import { useInputValue } from '../../hooks/useInputValue'
 import { Switch } from '../../components/Switch'
 import { Wizard, Steps, Step } from 'react-albus'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
@@ -15,6 +14,7 @@ import { TextArea } from '../../components/TextArea'
 import { RiAddCircleLine } from 'react-icons/ri'
 import { IoIosSave } from 'react-icons/io'
 import { toast } from 'react-toastify'
+import { saveQuest } from '../../logic'
 import uuid from 'uuid'
 
 import TimeInput from 'react-time-input'
@@ -52,11 +52,12 @@ export const SearchCreate = () => {
     }
   })
 
-  let userId
-
   // All (search & test)
   const [test, setTest] = useState([])
   const [search, setSearch] = useState([])
+
+  // Quest ID
+  let questIdAdded
 
   useBodyClass('searchcreate')
 
@@ -237,6 +238,62 @@ export const SearchCreate = () => {
     console.log(_search)
   }
 
+  const handleSaveQuest = (
+    token,
+    questId,
+    title,
+    coverImg,
+    description,
+    homeLocation,
+    endLocation,
+    time,
+    modePrivate,
+    kidsOk,
+    evaluations,
+    tests) => {
+    window.alert('ahora')
+
+    saveQuest(
+      token,
+      questId,
+      title,
+      coverImg,
+      description,
+      homeLocation,
+      endLocation,
+      time,
+      modePrivate,
+      kidsOk,
+      evaluations,
+      tests,
+      (error, questId) => {
+        questIdAdded = questId
+        if (error) return window.alert(error.message)
+        console.log(questIdAdded)
+      })
+  }
+
+  const skip = ({ step, push }) => {
+    const { token } = window.sessionStorage
+    switch (step.id) {
+      case 'coverStep': {
+        picture && handleSaveQuest(token, questIdAdded, undefined, picture)
+        push()
+        break
+      }
+      case 'searchStep': {
+        handleSaveQuest()
+        push()
+        break
+      }
+      case 'quizstep': {
+        handleSaveQuest()
+        push()
+        break
+      }
+    }
+  }
+
   return (
     <DefaultLayout>
       <h1>Crear nueva búsqueda</h1>
@@ -250,6 +307,7 @@ export const SearchCreate = () => {
         <MapGetPos onAddMarker={handleClickMapTest} />
       </Modal>
       <Wizard
+        onNext={skip}
         render={({ step, steps }) => (
           <div>
             <Line
@@ -273,7 +331,7 @@ export const SearchCreate = () => {
                             portada de la búsqueda, tambien aparecerá en los
                             listados.
                           </p>
-                          <UploadImage onUploadImage={handleImage} />
+                          <UploadImage onUploadImage={handleImage} previewImage={picture} />
                           <button className='btn btn-next' onClick={next}>
                             Siguiente <BiChevronsRight size={ICON_SIZE} />
                           </button>
@@ -451,7 +509,7 @@ export const SearchCreate = () => {
                             Anterior
                           </button>
 
-                          <button className='btn btn-next' onClick={saveAll}>
+                          <button className='btn btn-next' onClick={next}>
                             <IoIosSave size={ICON_SIZE} /> Guardar y salir
                           </button>
                         </div>
