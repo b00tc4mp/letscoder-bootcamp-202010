@@ -9,10 +9,9 @@ const { env: { MONGODB_URL } } = process
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
         Movement.insertMany([
-            {name: 'Curl bíceps en polea alta', group: 'biceps', urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_480/v1607773955/movimientos-musc/biceps/Screen_Shot_2020-12-12_at_12.51.44_hzdjfr.png'},
-            {name: 'Curl bíceps alterno', group: 'biceps', urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_480/v1607773953/movimientos-musc/biceps/Screen_Shot_2020-12-12_at_12.48.24_xkv416.png'},
-            {name: 'Curl bíceps banco Scott', group: 'biceps', urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_480/v1607773952/movimientos-musc/biceps/Screen_Shot_2020-12-12_at_12.50.20_dnkss5.png'},
-            {name: 'Curl bíceps martillo', group: 'biceps', urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_480/v1607773952/movimientos-musc/biceps/Screen_Shot_2020-12-12_at_09.50.15_ewqbcr.png'}
+            {name: 'Elevación de talones de pie', group: 'gemelo', urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_550,q_auto:best/v1607766355/movimientos-musc/gemelo/Screen_Shot_2020-12-12_at_10.05.18_qm9ylc.png'},
+            {name: 'Elevación de talones, sentado', group: 'gemelo', urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_550,q_auto:best/v1607790457/movimientos-musc/gemelo/Screen_Shot_2020-12-12_at_17.27.01_zxokln.png'},
+            {name: 'Elevación de talones, sentado (con barra)', group: 'gemelo', urlPathImg: 'https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_550,q_auto:best/v1607790501/movimientos-musc/gemelo/Screen_Shot_2020-12-12_at_17.27.50_tiqm0v.png'}
     ])
             .then(() => console.log('Group succesfully inserted'))
             .catch(error => console.error('There was an error: ', error))

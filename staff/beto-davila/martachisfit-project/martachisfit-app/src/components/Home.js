@@ -323,7 +323,7 @@ export default function Home() {
         {view === 'welcome' && <Welcome />}
         {view === 'diet-design' && <DietDesign />}
         {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
-        {view === 'movements' && <Movements onMuscularGroup={handleRetrieveGroup} movements={movements} error={error}/>}
+        {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error}/>}
         {view === 'workout' && <Workout source={workout} />}
         {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
         {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
