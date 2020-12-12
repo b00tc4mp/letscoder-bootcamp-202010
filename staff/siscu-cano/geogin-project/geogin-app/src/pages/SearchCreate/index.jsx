@@ -36,7 +36,7 @@ export const SearchCreate = () => {
   const [poiEndGame, setPoiEndGame] = useState('')
   const [privateSearch, setPrivateSearch] = useState(false)
   const [suitableChilds, setSuitableChilds] = useState(false)
-  const [time, setTime] = useState('00:00')
+  const [time, setTime] = useState()
 
   // Test
   const [titleTest, setTitleTest] = useState('')
@@ -57,7 +57,7 @@ export const SearchCreate = () => {
   const [search, setSearch] = useState([])
 
   // Quest ID
-  let questIdAdded
+  const [questIdAdded, setQuestIdAdded] = useState()
 
   useBodyClass('searchcreate')
 
@@ -84,12 +84,19 @@ export const SearchCreate = () => {
   const hideModalTestGame = () => {
     setshowModalTest(false)
   }
+
   const handleClickMapBegin = poi => {
-    setPoiBeginGame(poi)
+    setPoiBeginGame({
+      type: 'Point',
+      coordinates: [poi.lat, poi.lng]
+    })
   }
 
   const handleClickMapEnd = poi => {
-    setPoiEndGame(poi)
+    setPoiEndGame({
+      type: 'Point',
+      coordinates: [poi.lat, poi.lng]
+    })
   }
 
   const handleClickMapTest = poi => {
@@ -145,7 +152,7 @@ export const SearchCreate = () => {
   }
 
   const saveTest = () => {
-    console.log(picture)
+    // console.log(picture)
     const { lat, lng } = poiTest
 
     const _test = {
@@ -158,11 +165,11 @@ export const SearchCreate = () => {
       trickTwo: trickTest.data.trickTwo,
       trickThree: trickTest.data.trickThree
     }
-    console.log(_test)
+    // console.log(_test)
     setTest([...test, _test])
     resetTest()
     setStepTest(stepTest + 1)
-    console.log(test)
+    // console.log(test)
   }
 
   const saveAll = () => {
@@ -267,9 +274,8 @@ export const SearchCreate = () => {
       evaluations,
       tests,
       (error, questId) => {
-        questIdAdded = questId
+        setQuestIdAdded(questId)
         if (error) return window.alert(error.message)
-        console.log(questIdAdded)
       })
   }
 
@@ -277,12 +283,21 @@ export const SearchCreate = () => {
     const { token } = window.sessionStorage
     switch (step.id) {
       case 'coverStep': {
+        console.log('skip questIdAdded 1:', questIdAdded)
         picture && handleSaveQuest(token, questIdAdded, undefined, picture)
         push()
         break
       }
       case 'searchStep': {
-        handleSaveQuest()
+        console.log(poiBeginGame)
+        console.log('skip questIdAdded 2:', questIdAdded)
+
+        nameSearch &&
+        descriptionSearch &&
+        poiBeginGame &&
+        poiEndGame &&
+        time &&
+        handleSaveQuest(token, questIdAdded, nameSearch, undefined, descriptionSearch, poiBeginGame, poiEndGame, time)
         push()
         break
       }
@@ -347,28 +362,29 @@ export const SearchCreate = () => {
                           </p>
                           <Input
                             value={nameSearch}
-                            onChange={handleNameSearch} placeholder='Título'
+                            onChange={handleNameSearch} placeholder='* Título'
                           />
                           <Input
                             value={descriptionSearch}
                             onChange={handleDescriptionSearch}
-                            placeholder='Descripción'
+                            placeholder='* Descripción'
                           />
                           <Input
                             onClick={showModalBeginGame}
-                            placeholder='Ubicación de inicio'
-                            value={poiBeginGame}
+                            placeholder='* Ubicación de inicio del juego'
+                            value={poiBeginGame && `${poiBeginGame.coordinates[0]} - ${poiBeginGame.coordinates[1]}`}
                             onChange={() => {}}
                           />
                           <Input
                             onClick={showModalEndGame}
-                            placeholder='Ubicación de fin'
-                            value={poiEndGame}
+                            placeholder='* Ubicación de final del juego'
+                            value={poiEndGame && `${poiEndGame.coordinates[0]} - ${poiEndGame.coordinates[1]}`}
                             onChange={() => {}}
                           />
                           <TimeInput
                             initTime={time}
                             className='time-input'
+                            placeholder='* Duración de la búsqueda (hh:mm)'
                             onTimeChange={handleTime}
                           />
                           <div className='switch-wrapper'>
