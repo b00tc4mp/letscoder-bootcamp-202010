@@ -25,8 +25,6 @@ export const UploadImage = ({ onUploadImage, className, preview = true, previewI
             draggable: false
           })
         } else {
-          console.log('Response ', response)
-          console.log('Image ', NoImage)
           setCloudinaryPicture(response)
           onUploadImage(response)
         }

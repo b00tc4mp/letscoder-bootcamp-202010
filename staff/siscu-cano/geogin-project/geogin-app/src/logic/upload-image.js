@@ -20,19 +20,13 @@ export default function (picture, callback) {
       { 'Content-type': 'application/json' },
       JSON.stringify({ data: imageBase64Wrapper }),
       (status, response) => {
-        console.log(status)
-        console.log(response)
-
         if (status === 0) {
           return callback(new Error('server error'))
         } else if (status !== 201) {
           const { error } = JSON.parse(response)
-          console.log(error)
           return callback(new Error(error))
         }
         const res = JSON.parse(response)
-        // const {imgUrl} = res.uploadResponse
-        console.log(res.uploadResponse.url)
         callback(null, res.uploadResponse.url)
       })
   }

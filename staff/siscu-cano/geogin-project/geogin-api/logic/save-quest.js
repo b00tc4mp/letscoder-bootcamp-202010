@@ -84,7 +84,7 @@ module.exports = function (
         if (typeof tests !== 'undefined') { quest.tests = tests }
 
         await quest.save()
-
+        console.log('questId save quest:', questId )
         return quest._id;
       } 
       else 
