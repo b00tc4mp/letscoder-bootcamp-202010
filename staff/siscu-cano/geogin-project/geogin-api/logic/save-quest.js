@@ -65,23 +65,25 @@ module.exports = function (
   
       const user = await User.findById(ownerId)
       if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
+
       if (questId) 
       {
         const quest = await Quest.findById(questId)
+
         if (!quest) throw new NotFoundError(`quest with id ${questId} not found`)
         
-        quest.title = title
-        quest.coverImg = coverImg
-        quest.description = description
-        quest.homeLocation = homeLocation
-        quest.endLocation = endLocation
-        quest.time = time
-        quest.modePrivate = modePrivate
-        quest.kidsOk = kidsOk
-        quest.evaluations = evaluations
-        quest.tests = tests
+        if (typeof title !== 'undefined') { quest.title = title }
+        if (typeof coverImg !== 'undefined') { quest.coverImg = coverImg }
+        if (typeof description !== 'undefined') { quest.description = description }
+        if (typeof homeLocation !== 'undefined') { quest.homeLocation = homeLocation }
+        if (typeof endLocation !== 'undefined') { quest.endLocation = endLocation }
+        if (typeof time !== 'undefined') { quest.time = time }
+        if (typeof modePrivate !== 'undefined') { quest.modePrivate = modePrivate }
+        if (typeof kidsOk !== 'undefined') { quest.kidsOk = kidsOk }
+        if (typeof evaluations !== 'undefined') { quest.evaluations = evaluations }
+        if (typeof tests !== 'undefined') { quest.tests = tests }
 
-        quest.save()
+        await quest.save()
 
         return quest._id;
       } 
