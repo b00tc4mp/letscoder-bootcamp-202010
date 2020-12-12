@@ -24,11 +24,11 @@ module.exports = new Schema(
     time: {
       type: Date
     },
-    private: {
+    modePrivate: {
       type: Boolean,
       default: false
     },
-    KidsOk: {
+    kidsOk: {
       type: Boolean,
       default: false
     },
@@ -69,9 +69,6 @@ module.exports = new Schema(
         }
       }
     ],
-    description: {
-      type: String
-    },
     owner: {
       type: ObjectId,
       ref: 'User'

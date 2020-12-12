@@ -7,9 +7,9 @@ import NoImage from '../../assets/images/no-image.png'
 // Test
 import { uploadImage } from '../../logic'
 
-export const UploadImage = ({ onUploadImage, className, preview = true, withIcon = true, withLabel = true }) => {
+export const UploadImage = ({ onUploadImage, className, preview = true, previewImage, withIcon = true, withLabel = true }) => {
   const [pictures, setPictures] = useState([])
-  const [previewUrl, setPreviewUrl] = useState([NoImage])
+  const [cloudinaryPicture, setCloudinaryPicture] = useState()
 
   const handleUploadImage = picture => {
     setPictures([...pictures, picture])
@@ -25,8 +25,10 @@ export const UploadImage = ({ onUploadImage, className, preview = true, withIcon
             draggable: false
           })
         } else {
-          setPreviewUrl(response.uploadResponse.url)
-          onUploadImage(response.uploadResponse.url)
+          console.log('Response ', response)
+          console.log('Image ', NoImage)
+          setCloudinaryPicture(response)
+          onUploadImage(response)
         }
       })
     } catch (error) {
@@ -55,9 +57,10 @@ export const UploadImage = ({ onUploadImage, className, preview = true, withIcon
         maxFileSize={5242880}
         fileSizeError='La imagen no debe exceder los 5 megas'
       />
-      {preview && <div className='preview'>
-        <img src={previewUrl} />
-                  </div>}
+      {preview &&
+        <div className='preview'>
+          {previewImage ? <img src={previewImage} /> : <img src={NoImage} />}
+        </div>}
     </UploadImageWrapper>
 
   )

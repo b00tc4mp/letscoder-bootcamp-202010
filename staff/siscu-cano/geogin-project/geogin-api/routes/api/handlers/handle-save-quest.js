@@ -12,12 +12,11 @@ module.exports = (req, res, handleError) => {
         homeLocation,
         endLocation,
         time,
-        private,
+        modePrivate,
         kidsOk,
         evaluations,
         tests } } = req
 
-    // Bearer <token>
     const token = authorization.replace('Bearer ', '')
 
     try {
@@ -32,7 +31,7 @@ module.exports = (req, res, handleError) => {
             homeLocation,
             endLocation,
             time,
-            private,
+            modePrivate,
             kidsOk,
             evaluations,
             tests)
