@@ -106,7 +106,7 @@ module.exports = {
   },
 
   validateTime (time) {
-    if (!(time instanceof Date)) throw new TypeError(`${time} is not a time`)
+    if (typeof time !== 'string') throw new TypeError(`${time} is not a time`)
   },
 
   validateKidsOk (kids_ok) {
