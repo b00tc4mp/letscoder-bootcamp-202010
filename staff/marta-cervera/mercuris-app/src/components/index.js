@@ -7,7 +7,8 @@ import Footer from './Footer'
 import SaveProduct from './SaveProduct'
 import SearchProducts from'./SearchProducts'
 import FindProducts from './FindProducts'
-import SearchProductClient from './SearchProductClient'
+import DetailProduct from './DetailProduct'
+
 
 export {
     SignUp,
@@ -19,7 +20,9 @@ export {
     SaveProduct,
     SearchProducts,
     FindProducts,
-    SearchProductClient
+    DetailProduct
+    
+
     
     
 }

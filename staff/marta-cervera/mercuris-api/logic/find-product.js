@@ -3,9 +3,6 @@ const { Types: { ObjectId } } = mongoose
 const { User, Product } = require('../models')
 
 module.exports = function (userId, queryCompany,queryProduct, price, priceMin,priceMax) {
-    debugger
-    
-    
     const criteria = {}
 
     if (userId)
@@ -13,7 +10,6 @@ module.exports = function (userId, queryCompany,queryProduct, price, priceMin,pr
 
     if (queryCompany)
         criteria.$or = [
-
             { name: { $regex: new RegExp(queryCompany, 'i') } },
             { email: { $regex: new RegExp(queryCompany, 'i') } },
             { contact: { $regex: new RegExp(queryCompany, 'i') } }

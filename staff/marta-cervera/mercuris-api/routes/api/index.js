@@ -8,16 +8,16 @@ const {
     handleSaveProduct,
     handleFindProduct,
     handleSaveProductImage,
-   
+    handleRetrieveProductImage,
+    handleRetrieveProductDetail   
     
 
 } = require('./handlers')
-const handleRetrieveProductImage = require('./handlers/handle-retrieve-product-image')
-
 
 const withErrorHandling = require('./helpers/with-error-handling')
 
 const router = new Router()
+
 //registerUser
 router.post('/api/users', jsonBodyParser,(handleRegisterUser))
 //authenticateUser
@@ -32,7 +32,8 @@ router.get('/api/products', withErrorHandling(handleFindProduct))
 router.post('/api/products/:productId/images', withErrorHandling(handleSaveProductImage))
 //retrieveProductImage
 router.get('/api/products/:productId/images', withErrorHandling(handleRetrieveProductImage))
-
+//retrieveProductDetail
+router.get('/api/products/', withErrorHandling(handleRetrieveProductDetail))
 
 
 module.exports = router

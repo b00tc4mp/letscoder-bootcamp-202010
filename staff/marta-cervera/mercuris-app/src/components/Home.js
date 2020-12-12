@@ -41,15 +41,7 @@ export default function Home() {
 
                 saveProductImage(productId, image, error => {
                     if (error) return alert(error.message)
-                    /* try {
-                        findProducts(token, (error, products) => {
-                            if (error) return alert(error.message)
-
-                            setProducts(products)
-                        })
-                    }  catch (error) {
-                        alert(error.message)
-                    } */
+                    
                   })
             }
             )
@@ -68,7 +60,7 @@ export default function Home() {
     
     const handleSearchProducts = ( queryCompany, queryProduct, price, priceMin, priceMax) => {
         try {
-           const { token } = sessionStorage
+           const { token } = sessionStorage 
 
            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) =>{
                if (error) return alert (error.message)
@@ -79,20 +71,18 @@ export default function Home() {
             alert(error.message)
         }
     }
-
-
-    
+   
 
 
 
     return (
-        <section className="home">
+        <div className="home">
             {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
             {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
             {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={name} />}
             {view === 'profile' && <Profile name={name} />}
             {view === 'profile' && <SearchProducts onSearch={handleSearchProducts}/>}
 
-        </section >
+        </div >
     );
 }

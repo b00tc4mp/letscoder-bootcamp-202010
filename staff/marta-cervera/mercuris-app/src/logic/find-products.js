@@ -3,7 +3,7 @@ import { validateCallback, validateToken } from './helpers/validations'
 import context from './context'
 
 export default (function (token, queryCompany, queryProduct, price, priceMin, priceMax, callback) {
-    validateToken(token)
+    if (token !== undefined) validateToken(token) 
     validateCallback(callback)
 
 

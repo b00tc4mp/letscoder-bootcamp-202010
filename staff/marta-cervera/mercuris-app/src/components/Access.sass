@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap')
 $font-main: 'Permanent Marker', cursive
 
+.access
+    background-color: url ('smoke1.jpg')
    
-.register
-    
+    &__register
+        display: grid
+        grid-template-columns: 
     
         &__maintitle
-            font-family: $font-main          
-            font-size: 10vw
-            margin-left: 15vw
+            font-family: $font-main      
+            content-align: center
+            justify-content: center
+            align-items: center
             opacity: 0.9
             color: #9F08ED 
 
@@ -27,6 +31,9 @@ $font-main: 'Permanent Marker', cursive
             margin-left: 15vw
             background-color: #E8D0F5 
             border-radius: 25px
+            width: 8vw
+            height: 10vh
+
 
         &__signin
             font-family: unset
@@ -35,6 +42,8 @@ $font-main: 'Permanent Marker', cursive
             margin-left: 25vw
             background-color:#E8D0F5 
             border-radius: 25px
+            width: 8vw
+            height: 10vh
             
 
 .search
@@ -52,6 +61,8 @@ $font-main: 'Permanent Marker', cursive
         margin-left: 30vw
         border-radius: 25px
         background-color:#E8D0F5 
+        width: 8vw
+        height: 10vh
 
 @media (min-width: 1000px)
     .register

@@ -1,34 +1,43 @@
 import './SearchProducts.sass'
 import FindProducts from './FindProducts'
+import DetailProduct from './DetailProduct'
 import { useState, useEffect } from 'react'
-import { findProducts } from '../logic'
+import { findProducts, retrieveProductDetail } from '../logic'
 
 
 export default function ({onSearch}) {
     const [view, setView] = useState('find-products')
 
     const [results, setResults] = useState()
+    const [result, setResult] = useState()
 
 
-    const handleFindProducts = event => {             
+    const { token } = sessionStorage
 
-        const { token } = sessionStorage
+    const handleFindProducts = event => {  
+        debugger           
+
 
         event.preventDefault()
 
         const { target: {
-            queryCompany: { value: queryCompany },
             queryProduct: { value: queryProduct },
             price: { value: price },
             priceMin: { value: priceMin },
             priceMax: { value: priceMax }
         } } = event
 
-        onSearch(queryCompany || undefined, queryProduct || undefined, price? Number(price) : undefined, priceMin? Number(priceMin) : undefined, priceMax? Number(priceMax) : undefined)
+        
+
+        //onSearch(queryCompany || undefined, queryProduct || undefined, price? Number(price) : undefined, priceMin? Number(priceMin) : undefined, priceMax? Number(priceMax) : undefined)
+                
+        if (event.target.queryCompany) {
+            
+            var queryCompany = event.target.queryCompany.value;}
         
                                                                
         try {
-            debugger
+            
             findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) => {
 
                 if (error) return alert(error.message)
@@ -43,10 +52,25 @@ export default function ({onSearch}) {
             alert(error.message)
         }
     }
+
+    const handleDetailProduct = (id) => {
+        try {            
+            retrieveProductDetail(id, (error, product) => {
+                if(error) return alert(error.message)
+                
+                setResult(product)
+                setResults(null)
+            })
+            
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
     return (
         <>
             <form onSubmit={handleFindProducts}>
-                <input type="text" name="queryCompany" placeholder="Info Company" />
+                {!token && <input type="text" name="queryCompany" placeholder="Info Company" />}
                 <input type="text" name="queryProduct" placeholder="Info Product" />
                 <input type="number" name="price" placeholder="Introduce price" />
                 <input type="number" name="priceMin" placeholder="priceMin" />
@@ -54,7 +78,8 @@ export default function ({onSearch}) {
                 <button>Search</button>
             </form>
 
-            {results && results.length && <FindProducts onSearch={handleFindProducts} results={results}/>}
+            {!result && results && results.length >0 && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
+            {!results && result && <DetailProduct result={result}/>}
         </>
     );
 }

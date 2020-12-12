@@ -7,6 +7,7 @@ module.exports = {
     findProducts: require('./find-product'),
     retrieveProduct: require('./retrieve-product'),
     saveProductImage: require('./save-product-image'),
-    retrieveProductImage: require('./retrieve-product-image')
+    retrieveProductImage: require('./retrieve-product-image'),
+    retrieveProductDetail: require('./retrieve-product-detail')
 
 }

@@ -2,8 +2,7 @@ const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { Product, User } = require('../models')
 
-module.exports = ownerId => {
-    debugger
+module.exports = ownerId => {    
     validateId(ownerId)
 
 
