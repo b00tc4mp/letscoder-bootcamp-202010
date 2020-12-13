@@ -1283,3 +1283,79 @@ error 2020-12-12T12:39:51.133Z - ConflictError: shelter with e-mail patitastaust
 info 2020-12-12T15:08:47.318Z - stopping server
 info 2020-12-12T15:09:05.410Z - starting server
 info 2020-12-12T15:09:05.622Z - server running on port 4000
+info 2020-12-12T17:06:17.089Z - stopping server
+info 2020-12-12T18:20:27.584Z - starting server
+info 2020-12-12T18:20:27.844Z - server running on port 4000
+info 2020-12-12T18:21:28.941Z - stopping server
+info 2020-12-12T18:21:32.278Z - starting server
+info 2020-12-12T18:21:32.544Z - server running on port 4000
+info 2020-12-12T18:23:21.511Z - stopping server
+info 2020-12-12T18:23:24.768Z - starting server
+info 2020-12-12T18:23:24.988Z - server running on port 4000
+info 2020-12-12T18:52:14.802Z - stopping server
+info 2020-12-12T19:34:51.155Z - starting server
+info 2020-12-12T19:34:51.428Z - server running on port 4000
+error 2020-12-12T19:36:35.124Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-12T19:41:59.289Z - stopping server
+info 2020-12-12T19:42:03.080Z - starting server
+info 2020-12-12T19:42:03.229Z - server running on port 4000
+error 2020-12-12T19:42:49.500Z - TypeError: User.findbyId is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:21:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-12T19:42:52.730Z - TypeError: User.findbyId is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:21:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-12T19:43:03.065Z - TypeError: User.findbyId is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:21:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-12T19:43:53.426Z - TypeError: User.findbyId is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:21:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-12T19:44:12.008Z - TypeError: User.findbyId is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:21:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-12T19:44:19.648Z - TypeError: User.findbyId is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:21:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-12T19:44:46.113Z - stopping server
+info 2020-12-12T19:44:49.837Z - starting server
+info 2020-12-12T19:44:50.038Z - server running on port 4000
+info 2020-12-12T19:53:38.275Z - stopping server
+info 2020-12-12T19:53:49.727Z - starting server
+info 2020-12-12T19:53:49.960Z - server running on port 4000
+info 2020-12-12T19:57:09.022Z - stopping server
+info 2020-12-12T19:57:21.577Z - starting server
+info 2020-12-12T19:57:21.747Z - server running on port 4000
+info 2020-12-12T19:58:11.829Z - stopping server
+info 2020-12-12T19:58:23.561Z - starting server
+info 2020-12-12T19:59:35.605Z - starting server
+info 2020-12-12T19:59:50.290Z - starting server
+info 2020-12-12T19:59:55.230Z - server running on port 4000
+info 2020-12-12T20:04:24.242Z - starting server
+info 2020-12-12T20:05:37.767Z - server running on port 4000
+info 2020-12-12T20:11:57.597Z - starting server
+info 2020-12-12T20:13:14.473Z - server running on port 4000
+info 2020-12-12T20:17:51.924Z - starting server
+info 2020-12-12T20:17:52.376Z - server running on port 4000
+info 2020-12-13T09:50:47.494Z - starting server
+info 2020-12-13T09:50:47.780Z - server running on port 4000
+info 2020-12-13T09:51:56.774Z - stopping server
+info 2020-12-13T09:52:16.596Z - starting server
+info 2020-12-13T09:52:34.086Z - server running on port 4000
+info 2020-12-13T09:55:44.855Z - starting server
+info 2020-12-13T09:55:46.773Z - server running on port 4000
+info 2020-12-13T09:57:29.752Z - starting server
+info 2020-12-13T09:57:40.763Z - server running on port 4000
+info 2020-12-13T10:06:08.282Z - starting server
+info 2020-12-13T10:06:31.379Z - server running on port 4000
+info 2020-12-13T10:17:51.992Z - starting server
+info 2020-12-13T10:17:52.293Z - server running on port 4000
+info 2020-12-13T10:17:59.768Z - starting server
+info 2020-12-13T10:18:14.928Z - server running on port 4000
+info 2020-12-13T10:18:30.203Z - starting server
+info 2020-12-13T10:18:42.861Z - server running on port 4000
+info 2020-12-13T10:21:01.673Z - starting server
+info 2020-12-13T10:21:01.858Z - server running on port 4000
+info 2020-12-13T10:24:51.153Z - stopping server

@@ -1,7 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Pet } = require('../models')
-
+const { Pet, User } = require('../models')
 /**
  * Retrieves a pet by its id
  * 
@@ -15,14 +14,28 @@ module.exports = function (petId) {
     return Pet.findById(petId).lean()
         .then(pet => {
             if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
+            const {shelter} = pet
+            const shelterId= shelter.toString()
+debugger    
+            return User.findById(shelterId).lean()
+                .then(user => {
+                    const { _id } = pet
+                    const { description } = user
 
-            const { _id } = pet
+                    user.descriptionShelter = description 
+                    pet.id = _id.toString()
 
-            pet.id = _id.toString()
-            
-            delete pet._id
-            delete pet.__v
+                    delete pet._id
+                    delete pet.__v
+                    
+                    delete user.description
 
-            return pet
+
+        
+                    return {...pet, ...user}
+
+                }) 
+
+
         })
 }

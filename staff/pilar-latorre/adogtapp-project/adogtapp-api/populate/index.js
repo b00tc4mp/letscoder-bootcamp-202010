@@ -5,6 +5,7 @@ const fs = require('fs')
 const path = require('path')
 const rimraf = require('rimraf')
 const fsp = fs.promises
+require('dotenv').config()
 
 const { env: { MONGODB_URL } } = process
 
@@ -24,16 +25,16 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
     .then(() => Promise.all(
         data.map(({ userName, email, password, address, city, phone, description, pets }) =>
             User.create({ userName, email, password, address, city, phone, description })
-                .then(({ _id }) =>
-                    new Promise((resolve, reject) => {
+                .then(({ _id }) =>{
+                     /*new Promise((resolve, reject) => {
                         const rs = fs.createReadStream(path.join(__dirname, `./users/${image}.jpg`))
                         const ws = fs.createWriteStream(path.join(__dirname, `../data/users/${_id}.jpg`))
 
-                        ws.on('error', reject)
+                        ws.on('error', reject) 
 
-                        rs.on('end', () =>
+                        rs.on('end', () =>*/
                             Promise.all(pets.map(({ name, breed, species, color, description, image }) =>
-                                Car.create({ name, breed, species, color, description, shelter: _id })
+                                Pet.create({ name, breed, species, color, description, shelter: _id })
                                     .then(({ _id }) =>
                                         new Promise((resolve, reject) => {
                                             const rs = fs.createReadStream(path.join(__dirname, `./pets/${image}.jpg`))
@@ -47,10 +48,11 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                                         }))
                             ))
                                 .then(resolve)
-                        )
+                        //)
 
                         rs.pipe(ws)
-                    }))
+                    })
+                    //)
         )
     ))
     .catch(console.error)
