@@ -30,7 +30,7 @@ export default function Welcome () {
         <div className="welcome__instagram">
             <a href="https://www.instagram.com/martachis.fit/">
             <h3 className="welcome__instagram-title">¡Y también en Instagram!</h3>
-            <img className="welcome__marta-img"src={martaIg} alt="marta-instagram"/></a>
+            <img className="welcome__marta-img"src={martaIg} alt="marta-instagram" width="375px"/></a>
         </div>
     </div>
     </div>

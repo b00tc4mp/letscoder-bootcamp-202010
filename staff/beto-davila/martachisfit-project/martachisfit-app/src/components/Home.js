@@ -1,6 +1,6 @@
 import './styles/Home.sass'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import {
     retrieveUser,
@@ -57,6 +57,20 @@ export default function Home() {
     const [movements, setMovements] = useState()
 
     const { token } = sessionStorage
+
+    useEffect(() => {
+        try {
+            retrieveUser(token, (error, user) => {
+                if (error) return alert('No se pudo recuperar el usuario')
+
+                const { fullname } = user
+                setName(fullname)
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+
+    }, [])
 
     function feedbackError(error) {
         setError(error)
@@ -284,7 +298,7 @@ export default function Home() {
 
                 setMovements(movements)
             })
-            
+
         } catch (error) {
             alert(error.message)
         }
@@ -323,11 +337,11 @@ export default function Home() {
         {view === 'welcome' && <Welcome />}
         {view === 'diet-design' && <DietDesign />}
         {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
-        {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error}/>}
+        {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error} />}
         {view === 'workout' && <Workout onGoToMovements={handleGoToMovements} source={workout} />}
         {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
         {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
-        {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToUserDiet={handleGoToUserDiet} />}
+        {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToDiets={handleGoToUserDiet} />}
         {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} onGoToDiets={handleGoToUserDiet} goal={calories} />}
         {view === 'articles' && article &&
             <Articles source={article}

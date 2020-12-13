@@ -1,5 +1,16 @@
 .user-diet
     min-height: 100vh
+
+    &__back
+        float: left
+        text-decoration-line: none
+        cursor: pointer
+        margin: .2rem
+        background-color: #dee4e4
+        padding: .1rem
+        border-radius: .5rem
+        font-size: .7rem
+        
     
     &__title
         text-align: center
@@ -16,7 +27,7 @@
         text-align: center
 
     &__cal-type
-        margin-top: 1rem
+        margin: 1rem auto
         display: flex
         justify-content: space-evenly
 
@@ -24,8 +35,8 @@
         text-align: center
 
     &__meals
-        width: 300px
-        margin: .5rem auto
+        width: 360px
+        margin: 1.5rem auto
         text-align: center
         background-color: #eaf0f0
         padding: .2rem
@@ -42,7 +53,7 @@
     &__line
         border-bottom: 1px solid #0bb1ba
         width: 300px
-        margin: auto
+        margin: 1.5rem auto
 
 .user-diet-pseudo
     display: block
@@ -52,6 +63,7 @@
 .user-diet-pseudo::after
     content: ""
     background-image: url("../images/back-img-userdiet.jpg")
+    background-repeat: no-repeat
     opacity: .3
     top: 0
     left: 0

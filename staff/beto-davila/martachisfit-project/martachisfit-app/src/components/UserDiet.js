@@ -17,9 +17,9 @@ export default function UserDiet ({diet, onGoToDiets}) {
                     <h4 className="user-diet__type"> Tipo "{diet.type}" </h4>
                     </div> }
         {diet && <div className="user-diet__macros">
-            <p className="user-diet__carbs"> Carbohidratos {diet.macros.carbs} </p>
-            <p className="user-diet__protein"> Proteína {diet.macros.protein} </p>
-            <p className="user-diet__fats"> Grasas {diet.macros.fats} </p> 
+            <p className="user-diet__carbs bold"> Carbohidratos {diet.macros.carbs} </p>
+            <p className="user-diet__protein bold"> Proteína {diet.macros.protein} </p>
+            <p className="user-diet__fats bold"> Grasas {diet.macros.fats} </p> 
             </div>}
         <hr className="user-diet__line"></hr>
         {diet && <div className="user-diet__meals">

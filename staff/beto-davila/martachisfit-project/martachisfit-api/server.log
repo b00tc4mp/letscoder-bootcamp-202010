@@ -1269,3 +1269,57 @@ info 2020-12-13T12:23:06.588Z - server running on port 4000
 info 2020-12-13T13:47:27.564Z - starting server
 info 2020-12-13T13:47:27.723Z - server running on port 4000
 info 2020-12-13T14:14:28.808Z - stopping server
+info 2020-12-13T14:21:05.333Z - starting server
+info 2020-12-13T14:21:05.479Z - server running on port 4000
+info 2020-12-13T14:55:46.083Z - stopping server
+info 2020-12-13T14:55:48.569Z - starting server
+info 2020-12-13T14:55:48.711Z - server running on port 4000
+error 2020-12-13T14:55:55.295Z - MongoError: unknown top level operator: $diacriticSensitive
+    at MessageStream.messageHandler (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-12-13T14:57:21.372Z - stopping server
+info 2020-12-13T14:57:23.903Z - starting server
+info 2020-12-13T14:57:24.037Z - server running on port 4000
+error 2020-12-13T14:57:28.150Z - MongoError: unknown top level operator: $diacriticSensitive
+    at MessageStream.messageHandler (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+error 2020-12-13T14:58:15.307Z - MongoError: unknown top level operator: $diacriticSensitive
+    at MessageStream.messageHandler (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-12-13T14:58:19.803Z - stopping server
+info 2020-12-13T14:58:22.557Z - starting server
+info 2020-12-13T14:58:22.699Z - server running on port 4000
+info 2020-12-13T17:12:40.135Z - stopping server
