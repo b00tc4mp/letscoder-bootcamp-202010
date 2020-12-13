@@ -693,3 +693,178 @@ info 2020-12-10T20:49:15.203Z - stopping server
 info 2020-12-10T20:49:18.573Z - starting server
 info 2020-12-10T20:49:18.725Z - server running on port 4000
 info 2020-12-10T21:39:46.677Z - stopping server
+info 2020-12-11T15:30:51.374Z - starting server
+error 2020-12-11T15:31:21.410Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js:13:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-11T15:31:21.418Z - stopping server
+info 2020-12-11T15:31:50.184Z - starting server
+error 2020-12-11T15:31:50.463Z - Error: Cannot find module 'xmlhttprequest'
+Require stack:
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\call.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\call.js:1:28)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-11T15:31:50.472Z - stopping server
+info 2020-12-11T15:31:55.607Z - starting server
+error 2020-12-11T15:31:55.723Z - Error: Cannot find module 'xmlhttprequest'
+Require stack:
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\call.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\call.js:1:28)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-11T15:31:55.730Z - stopping server
+info 2020-12-11T15:32:08.914Z - starting server
+error 2020-12-11T15:32:09.030Z - Error: Cannot find module 'xmlhttprequest'
+Require stack:
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\call.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\index.js
+- C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\call.js:1:28)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\utils\index.js:2:11)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-11T15:32:09.036Z - stopping server
+info 2020-12-11T15:33:27.606Z - starting server
+info 2020-12-11T15:33:27.882Z - server running on port 4000
+error 2020-12-11T15:35:09.535Z - AuthError: wrong credentials
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\authenticate-user.js:21:39
+error 2020-12-11T15:38:04.280Z - ConflictError: product with name aaaa already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T16:00:14.707Z - NotFoundError: user with id 5fd394ca9923692dd4cc4c7e is not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\retrieve-user.js:18:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T16:00:18.595Z - NotFoundError: user with id 5fd394ca9923692dd4cc4c7e is not found
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\retrieve-user.js:18:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T16:17:16.393Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T16:17:23.870Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:25:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-11T17:14:07.405Z - stopping server
+info 2020-12-11T17:52:04.758Z - starting server
+info 2020-12-11T17:52:04.925Z - server running on port 4000
+info 2020-12-11T18:47:13.161Z - stopping server
+info 2020-12-11T20:34:19.626Z - starting server
+info 2020-12-11T20:34:19.787Z - server running on port 4000
+info 2020-12-11T20:40:58.585Z - stopping server
+info 2020-12-13T16:07:20.385Z - starting server
+error 2020-12-13T16:07:20.448Z - C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\find-menu.js:15
+export default findMenu
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\index.js:10:15)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-13T16:07:20.455Z - stopping server
+info 2020-12-13T16:09:11.703Z - starting server
+info 2020-12-13T16:09:12.153Z - server running on port 4000
+error 2020-12-13T16:11:36.544Z - RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 20
+    at ServerResponse.writeHead (_http_server.js:248:11)
+    at ServerResponse._implicitHeader (_http_server.js:239:8)
+    at write_ (_http_outgoing.js:650:9)
+    at ServerResponse.end (_http_outgoing.js:762:5)
+    at ServerResponse.send (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\response.js:221:10)
+    at ServerResponse.json (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\response.js:267:15)
+    at ServerResponse.send (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\response.js:158:21)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-find-menu.js:8:44
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T16:12:38.736Z - RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 20
+    at ServerResponse.writeHead (_http_server.js:248:11)
+    at ServerResponse._implicitHeader (_http_server.js:239:8)
+    at write_ (_http_outgoing.js:650:9)
+    at ServerResponse.end (_http_outgoing.js:762:5)
+    at ServerResponse.send (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\response.js:221:10)
+    at ServerResponse.json (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\response.js:267:15)
+    at ServerResponse.send (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\response.js:158:21)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-find-menu.js:8:44
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-13T16:13:34.947Z - stopping server
+info 2020-12-13T16:13:37.811Z - starting server
+info 2020-12-13T16:13:37.925Z - server running on port 4000
+info 2020-12-13T16:15:30.611Z - stopping server
+info 2020-12-13T16:15:33.319Z - starting server
+info 2020-12-13T16:15:33.437Z - server running on port 4000
+info 2020-12-13T18:35:57.079Z - stopping server

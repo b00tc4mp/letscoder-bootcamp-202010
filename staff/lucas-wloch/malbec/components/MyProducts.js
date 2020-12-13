@@ -16,7 +16,7 @@ function MyProducts() {
     const [aguasRefrescos, setProductsAguasRefrescos] = useState()
     const [vinos, setProductsVinos] = useState()
     const [cervezas, setProductsCervezas] = useState()
-    
+
     const [add, setAdd] = useState()
     // useEffect(() => {
     // try {
@@ -32,7 +32,7 @@ function MyProducts() {
     const toggleView = (event) => {
         //// PREGUNTARLE A MANU SI SE PUEDE MEJORAR ESTO PARA QUE APAREZCAN LOS PRODUCTOS EN EL CODIGO FUENTE DE LA PAG ( CARGADOS DESDE EL SERVER)
         const { target } = event
-        
+
         if (!target.classList.contains("active"))
             switch (target.name) {
                 case "parrilla":
@@ -156,6 +156,7 @@ function MyProducts() {
     }
 
 
+
     return <>
         <section className="myProducts" >
             <h3 className="myProducts__h3">My Products</h3>
@@ -167,8 +168,8 @@ function MyProducts() {
                     {/* <AddOrRemove/> */}
                     {/* <div className="myProducts__addOrRemove"> */}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
-                    
+                    {add && <SaveProducts  category={add} onExit={() => setAdd()} />}
+
                 </ul>
             </div>
 
@@ -177,7 +178,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {pescados && pescados.length > 0 && pescados.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -186,7 +187,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {empanadas && empanadas.length > 0 && empanadas.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -195,7 +196,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {ensaladas && ensaladas.length > 0 && ensaladas.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -204,7 +205,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {entrantesParrilla && entrantesParrilla.length > 0 && entrantesParrilla.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -213,7 +214,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {acompañamientosGuarniciones && acompañamientosGuarniciones.length > 0 && acompañamientosGuarniciones.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -222,7 +223,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {otrasSugerencias && otrasSugerencias.length > 0 && otrasSugerencias.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -231,7 +232,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {postres && postres.length > 0 && postres.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -240,7 +241,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {aguasRefrescos && aguasRefrescos.length > 0 && aguasRefrescos.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -249,7 +250,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {vinos && vinos.length > 0 && vinos.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
 
@@ -270,7 +271,7 @@ function MyProducts() {
                 <ul className="myProducts__ul">
                     {cervezas && cervezas.length > 0 && cervezas.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts category={add} onExit={() => setAdd()}/>}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
         </section>

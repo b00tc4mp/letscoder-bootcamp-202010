@@ -2,7 +2,7 @@ import { Layout, Feedback } from '../components'
 import '../components/Register.sass'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import  registerUser  from '../logic/register-user'
+import registerUser from '../logic/register-user'
 
 import { useRouter } from 'next/router'
 
@@ -29,11 +29,9 @@ const Register = () => {
 
     const handleRegister = (fullname, email, password) => {
         try {
-            registerUser(fullname, email, password, error => {
-                if (error) return setError( error.message )
-
-                setRegisterSuccess(true)
-            })
+            registerUser(fullname, email, password)
+                .then(() => setRegisterSuccess(true))
+                .catch(error => setError(error.message))
         } catch (error) {
             setError(error.message)
         }
@@ -42,7 +40,7 @@ const Register = () => {
 
     return <Layout>
         {registerSuccess || <section className="register">
-             <Link href="/access"><button className="register__back" >◀ back</button></Link>
+            <Link href="/access"><button className="register__back" >◀ back</button></Link>
             <h2 className="register__h2">Sign Up</h2>
             <form className="register__form" onSubmit={handleSubmit}>
                 <p className="register__p">Fullname</p>
@@ -57,7 +55,7 @@ const Register = () => {
             <p className="register__p2">Have an account?<Link href="/login"><span className="register__span" >Log in here</span></Link></p>
         </section>}
         {registerSuccess && <section className="register">
-             <Link href="/access"><button className="register__back" >◀ back</button></Link>
+            <Link href="/access"><button className="register__back" >◀ back</button></Link>
             <h2 className="register__h2">User Registered</h2>
             <Link href="/login"><button className="register__button">Log In Here</button></Link>
         </section>}

@@ -1,13 +1,11 @@
 import call from '../utils/call'
-import { validateToken } from './helpers/validations'
 import context from './context'
 
-function retrieveUser(token) {
-    validateToken(token)
+function findMenu() {
 
     const { API_URL } = context
 
-    return call('GET', `${API_URL}/users`, { Authorization: `Bearer ${token}` }, '')
+    return call('GET', `${API_URL}/menu`, {}, '')
         .then(response => {
             const { status, body } = response
 
@@ -16,10 +14,10 @@ function retrieveUser(token) {
 
                 throw new Error(error);
             }
-            const { user } = JSON.parse(body);
+            const { menu } = JSON.parse(body);
 
-            return user
+            return menu
         })
 };
 
-export default retrieveUser 
+export default findMenu 

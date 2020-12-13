@@ -4,24 +4,24 @@ import context from './context'
 
 const retrieveProductById = (productId) => {
     validateId(productId)
+
     const { API_URL } = context
 
-    return new Promise((resolve, reject) => {
-        call('GET', `${API_URL}/products/${productId}`, {},'',
-            (status, response) => {
-                if (status === 0) {
-                    return reject(new Error('server down'))
-                } else if (status !== 200) {
-                    const { error } = JSON.parse(response)
+    return call('GET', `${API_URL}/products/${productId}`, {}, '')
+        .then(response => {
 
-                    return reject(new Error(error))
-                }
-                const product = JSON.parse(response)
+            const { status, body } = response
 
-                return resolve(product)
-                // callback(results)
-            })
-    })
+            if (status !== 200) {
+                const { error } = JSON.parse(body)
+
+                throw new Error(error)
+            }
+            const product = JSON.parse(body)
+
+            return product
+        })
 }
+
 
 export default retrieveProductById

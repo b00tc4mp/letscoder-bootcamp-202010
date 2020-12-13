@@ -3,32 +3,29 @@ import { validateFile, validateToken, validateCallback, validateId } from './hel
 
 import context from './context'
 
-const saveProductImage = (token, productId, image, callback) => {
+const saveProductImage = (token, productId, image) => {
     validateToken(token)
     validateId(productId)
     validateFile(image)
-    validateCallback(callback)
 
     var formData = new FormData();
+
     formData.append('image', image);
 
     const { API_URL } = context
 
-    call('POST', `${API_URL}/products/${productId}/images`, {},
-        formData,
-        (status, response) => {
-            if (status === 0)
-                return callback(new Error('server error'))
-            else if (status !== 204) {
-                const { error } = JSON.parse(response)
+    return call('POST', `${API_URL}/products/${productId}/images`, {}, formData)
+        .then(response => {
+            const { status, body } = response
 
-                return callback(new Error(error))
+            if (status !== 204) {
+                const { error } = JSON.parse(body)
+
+                throw new Error(error)
             }
 
-            callback(null)
         })
 
 }
-
 export default saveProductImage
 

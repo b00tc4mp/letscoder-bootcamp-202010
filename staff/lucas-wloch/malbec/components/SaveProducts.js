@@ -4,7 +4,7 @@ import './SaveProducts.sass'
 import { useState } from 'react'
 
 
-function SaveProducts({ onExit, category }) {
+function SaveProducts({ onExit, category, onSaved }) {
     const [success, setSuccess] = useState()
 
 
@@ -33,25 +33,34 @@ function SaveProducts({ onExit, category }) {
         const { token } = sessionStorage
 
         if (name && description && category)
-            saveProducts(token, undefined, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available,
-                (error, productId) => {
-                    if (error) return alert(error.message)
+            saveProducts(token, undefined, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available)
+                .then(productId => {
 
                     if (productId && image.files[0])
-                        saveProductImage(token, productId, image.files[0], error => {
-                            if (error) return alert(error.message)
+                        saveProductImage(token, productId, image.files[0])
+                            .then(() => {
+                                setSuccess(true)
 
+                                setTimeout(() => {
+                                    setSuccess(false)
+                                }, 4000);
 
-                            setSuccess(true)
+                                onSaved && onSaved()
+                            })
+                            .catch(alert)
+                    else {
+                        setSuccess(true)
 
-                            setTimeout(() => {
-                                setSuccess(false)
-                            }, 4000);
-                        })
+                        setTimeout(() => {
+                            setSuccess(false)
+                        }, 4000);
 
+                        onSaved && onSaved()
+                    }
                 })
-        else return alert('name, description or category is missing')
+                .catch(alert)
 
+        else return alert('name, description or category is missing')
     }
 
     return <>

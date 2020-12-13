@@ -6,6 +6,7 @@ import retrieveProductCategory from './retrieve-product-category'
 import retrieveProductById from './retrieve-product-by-id'
 import saveProductImage from './save-product-image'
 import context from './context'
+import findMenu from './find-menu'
 
 export {
     registerUser,
@@ -15,5 +16,6 @@ export {
     retrieveProductCategory,
     retrieveProductById,
     saveProductImage,
-    context
+    context,
+    findMenu
 } 

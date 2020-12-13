@@ -21,7 +21,8 @@
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",

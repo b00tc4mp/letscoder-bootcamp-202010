@@ -12,15 +12,14 @@ const Home = () => {
     const router = useRouter()
     const [view, setView] = useState()
     const [user, setUser] = useState()
+
     useEffect(() => {
         const { token } = sessionStorage
 
         if (token)
-            retrieveUser(token, (error, user) => {
-                if (error) return alert(error)
-
-                setUser(true)
-            })
+            retrieveUser(token)
+                .then(user => setUser(true))
+                .catch(alert)
 
     }, [])
 

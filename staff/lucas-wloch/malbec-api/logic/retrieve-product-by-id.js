@@ -20,7 +20,7 @@ module.exports = (productId) => {
                     product.id = _id.toString()
 
                     delete product._id
-                    debugger
+
                     return product
                 })
         })

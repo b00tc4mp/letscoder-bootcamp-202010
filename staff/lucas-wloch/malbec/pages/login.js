@@ -22,13 +22,13 @@ const Login = (req, res) => {
 
     const handleLogin = (email, password) => {
         try {
-            authenticateUser(email, password, (error, token) => {
-                if (error) return setError(error.message)
+            authenticateUser(email, password)
+                .then(token => {
+                    sessionStorage.token = token
 
-                sessionStorage.token = token
-
-                router.push('/')
-            })
+                    router.push('/')
+                })
+                .catch(error => setError(error.message))
         } catch (error) {
             setError(error.message)
         }

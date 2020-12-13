@@ -4,25 +4,23 @@ import context from './context'
 
 const retrieveProductCategory = (category) => {
     validateProductCategory(category)
-    
+
     const { API_URL } = context
 
-    return new Promise((resolve, reject) => {
-        call('GET', `${API_URL}/products/category/${category}`, {},'',
-            (status, response) => {
-                if (status === 0) {
-                    return reject(new Error('server down'))
-                } else if (status !== 200) {
-                    const { error } = JSON.parse(response)
+    return call('GET', `${API_URL}/products/category/${category}`, {}, '')
+        .then(response => {
+            const { status, body } = response
 
-                    return reject(new Error(error))
-                }
-                const results = JSON.parse(response)
+            if (status !== 200) {
+                const { error } = JSON.parse(body)
 
-                return resolve(results)
-                // callback(results)
-            })
-    })
+                throw new Error(error)
+            }
+            const results = JSON.parse(body)
+
+            return results
+        })
 }
+
 
 export default retrieveProductCategory

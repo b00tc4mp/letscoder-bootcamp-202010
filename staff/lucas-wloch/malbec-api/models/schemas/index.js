@@ -3,5 +3,6 @@
 
 module.exports = {
     userSchema: require('./user'),
-    productSchema: require('./product')
+    productSchema: require('./product'),
+    menuSchema: require('./menu')
 } 
