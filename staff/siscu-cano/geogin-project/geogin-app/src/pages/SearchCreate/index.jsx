@@ -34,8 +34,8 @@ export const SearchCreate = () => {
   const [descriptionSearch, setDescriptionSearch] = useState('')
   const [poiBeginGame, setPoiBeginGame] = useState('')
   const [poiEndGame, setPoiEndGame] = useState('')
-  const [privateSearch, setPrivateSearch] = useState(false)
-  const [suitableChilds, setSuitableChilds] = useState(false)
+  const [modePrivate, setModePrivate] = useState(false)
+  const [kidsOk, setKidsOk] = useState(false)
   const [time, setTime] = useState()
 
   // Test
@@ -100,7 +100,10 @@ export const SearchCreate = () => {
   }
 
   const handleClickMapTest = poi => {
-    setPoiTest(poi)
+    setPoiTest({
+      type: 'Point',
+      coordinates: [poi.lat, poi.lng]
+    })
   }
 
   const handleTime = time => {
@@ -152,97 +155,20 @@ export const SearchCreate = () => {
   }
 
   const saveTest = () => {
-    // console.log(picture)
-    const { lat, lng } = poiTest
-
+    window.alert('saveTest')
     const _test = {
       title: titleTest,
       description: descriptionTest,
       qr: uuid.v4(),
       image: pictureTest,
-      location: [lat, lng],
+      location: poiTest,
       trickOne: trickTest.data.trickOne,
       trickTwo: trickTest.data.trickTwo,
       trickThree: trickTest.data.trickThree
     }
-    // console.log(_test)
     setTest([...test, _test])
     resetTest()
     setStepTest(stepTest + 1)
-    // console.log(test)
-  }
-
-  const saveAll = () => {
-    const token = window.sessionStorage.token
-    let userId
-
-    try {
-      const { sub } = JSON.parse(window.atob(token.split('.')[1]))
-      userId = sub
-    } catch (e) {
-      return null
-    }
-
-    if (
-      titleTest.trim() === '' ||
-      descriptionTest.trim() === '' ||
-      poiTest === '' ||
-      trickTest.data.trickOne === ''
-    ) {
-      if (stepTest === 0) {
-        toast.error('⛔️ Es necesario introducir como mínimo una prueba!', {
-          position: 'top-center',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: false
-        })
-      } else {
-        toast.error(
-          '⛔️ Para finalizar termina de rellenar los campos obligatorios!',
-          {
-            position: 'top-center',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: false
-          }
-        )
-      }
-    }
-
-    if (
-      !(
-        titleTest.trim() === '' ||
-        descriptionTest.trim() === '' ||
-        poiTest === '' ||
-        trickTest.data.trickOne === ''
-      )
-    ) {
-      saveTest()
-    }
-    console.log(poiBeginGame)
-    console.log(test)
-    const { lat: latBegin, lng: lngBegin } = poiBeginGame
-    const { lat: latEnd, lng: lngEnd } = poiEndGame
-
-    const _search = {
-      title: nameSearch,
-      coverImg: picture,
-      description: descriptionSearch,
-      homeLocation: [latBegin, lngBegin],
-      endLocation: [latEnd, lngEnd],
-      time: time,
-      private: privateSearch,
-      KidsOk: suitableChilds,
-      test: test,
-      owner: userId
-    }
-
-    setSearch(_search)
-    console.log(_search)
   }
 
   const handleSaveQuest = (
@@ -258,7 +184,8 @@ export const SearchCreate = () => {
     kidsOk,
     evaluations,
     tests) => {
-    window.alert('ahora')
+    window.alert('handleSaveQuest')
+    saveTest()
 
     saveQuest(
       token,
@@ -283,26 +210,28 @@ export const SearchCreate = () => {
     const { token } = window.sessionStorage
     switch (step.id) {
       case 'coverStep': {
-        console.log('skip questIdAdded 1:', questIdAdded)
         picture && handleSaveQuest(token, questIdAdded, undefined, picture)
         push()
         break
       }
       case 'searchStep': {
-        console.log(poiBeginGame)
-        console.log('skip questIdAdded 2:', questIdAdded)
-
+        console.log(modePrivate)
+        console.log(typeof modePrivate)
         nameSearch &&
         descriptionSearch &&
         poiBeginGame &&
         poiEndGame &&
         time &&
-        handleSaveQuest(token, questIdAdded, nameSearch, undefined, descriptionSearch, poiBeginGame, poiEndGame, time)
+        handleSaveQuest(token, questIdAdded, nameSearch, undefined, descriptionSearch, poiBeginGame, poiEndGame, time, modePrivate, kidsOk)
         push()
         break
       }
       case 'quizstep': {
-        handleSaveQuest()
+        titleTest &&
+        descriptionTest &&
+        poiTest &&
+        trickTest.data.trickOne &&
+        handleSaveQuest(token, questIdAdded, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, test)
         push()
         break
       }
@@ -389,20 +318,24 @@ export const SearchCreate = () => {
                           />
                           <div className='switch-wrapper'>
                             <Switch
-                              isOn={privateSearch}
+                              isOn={modePrivate}
                               onColor='#3780e9'
                               handleToggle={() => {
-                                setPrivateSearch(!privateSearch)
+                                console.log('..................................')
+                                console.log(!modePrivate)
+                                console.log(typeof modePrivate)
+                                console.log(typeof !modePrivate)
+                                setModePrivate(!modePrivate)
                               }}
                             />{' '}
                             Búsqueda privada
                           </div>
                           <div className='switch-wrapper'>
                             <Switch
-                              isOn={suitableChilds}
+                              isOn={kidsOk}
                               onColor='#3780e9'
                               handleToggle={() => {
-                                setSuitableChilds(!suitableChilds)
+                                setKidsOk(!kidsOk)
                               }}
                             />{' '}
                             Apto para niños
@@ -429,12 +362,12 @@ export const SearchCreate = () => {
                                   {descriptionSearch}
                                 </p>
                               )}
-                              {suitableChilds && (
+                              {kidsOk && (
                                 <p className='game-feature__tag'>
                                   Apta para niños
                                 </p>
                               )}
-                              {privateSearch && (
+                              {modePrivate && (
                                 <p className='game-feature__tag'>
                                   Búsqueda privada
                                 </p>
@@ -466,18 +399,18 @@ export const SearchCreate = () => {
                           <Input
                             value={titleTest}
                             onChange={handleTitleTest}
-                            placeholder='Título'
+                            placeholder='* Título'
                           />
                           <Input
                             value={descriptionTest}
-                            placeholder='Descripción'
+                            placeholder='* Descripción'
                             onChange={handleDescriptionTest}
                           />
                           <Input
                             onClick={showModalTestGame}
-                            placeholder='Ubicación de la prueba'
+                            placeholder='* Ubicación de la prueba'
                             onChange={() => {}}
-                            value={poiTest}
+                            value={poiTest && `${poiTest.coordinates[0]} - ${poiTest.coordinates[1]}`}
                           />
                           <UploadImage
                             className='small-upload'
@@ -488,7 +421,7 @@ export const SearchCreate = () => {
                           <TextArea
                             labelText=''
                             value={trickTest.data.trickOne}
-                            placeholder='Pista número 1...'
+                            placeholder='* Pista número 1...'
                             name='trickOne'
                             onChange={handleTextareaChange}
                           />
@@ -525,7 +458,7 @@ export const SearchCreate = () => {
                             Anterior
                           </button>
 
-                          <button className='btn btn-next' onClick={next}>
+                          <button className='btn btn-next' onClick={saveTest}>
                             <IoIosSave size={ICON_SIZE} /> Guardar y salir
                           </button>
                         </div>
