@@ -8,9 +8,9 @@ module.exports = function( gameId, name, description, gameconsole, budget, owner
     if (typeof gameId !== 'undefined') validateId(gameId)
     validateText(name)
     validateText(description)
+    validateText(gameconsole)
     validatePrice(budget)
     validateId(ownerId)
-    validateText(gameconsole)
 
     const _id = ObjectId(ownerId)
 

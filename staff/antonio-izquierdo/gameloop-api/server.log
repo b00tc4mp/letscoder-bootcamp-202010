@@ -1951,3 +1951,21 @@ error 2020-12-13T11:23:03.924Z - Error: user with e-mail barbara@valiente.com is
 error 2020-12-13T11:23:53.622Z - Error: wrong credentials
     at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:18:39
 info 2020-12-13T12:04:05.614Z - stopping server
+info 2020-12-13T13:06:50.314Z - server running on port 4000
+info 2020-12-13T14:57:19.902Z - stopping server
+info 2020-12-13T15:01:34.941Z - server running on port 4000
+error 2020-12-13T15:02:09.185Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-13T15:05:57.317Z - stopping server
+info 2020-12-13T15:42:08.786Z - server running on port 4000
+info 2020-12-13T15:46:05.710Z - stopping server
+info 2020-12-13T15:46:08.778Z - server running on port 4000
+info 2020-12-13T15:47:29.823Z - stopping server
+info 2020-12-13T20:25:27.825Z - server running on port 4000
+info 2020-12-13T20:27:07.525Z - stopping server
+info 2020-12-13T20:28:05.622Z - server running on port 4000
+error 2020-12-13T20:28:24.542Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-13T20:30:29.811Z - stopping server

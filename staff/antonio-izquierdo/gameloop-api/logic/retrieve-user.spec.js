@@ -6,11 +6,11 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 require('../utils/array-polyfills')
 const retrieveUser = require('./retrieve-user')
 const { User } = require('../models')
-const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFoundError  } = require('../errors')
+const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFoundError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-    describe('retrieveUser()', () => {
+describe('retrieveUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {
@@ -83,7 +83,7 @@ const { env: { MONGODB_URL } } = process
         describe('when user id length is not 24', () => {
             let userId
 
-            beforeEach(() => userId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5? 3 : 3)))
+            beforeEach(() => userId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5 ? 3 : 3)))
 
             it('should fail on user id length different from 24', () => {
                 expect(() => retrieveUser(userId, () => { })).to.throw(LengthError, `id length ${userId.length} is not 24`)

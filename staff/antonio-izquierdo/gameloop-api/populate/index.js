@@ -6,7 +6,6 @@ const fs = require('fs')
 const path = require('path')
 const rimraf = require('rimraf')
 const fsp = fs.promises
-const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
 

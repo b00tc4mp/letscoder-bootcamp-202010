@@ -6,18 +6,18 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const registerUser = require('./register-user')
 const { User } = require('../models')
 const bcrypt = require('bcryptjs')
-const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFoundError  } = require('../errors')
+const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFoundError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-    describe('registerUser()', () => {
+describe('registerUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user does not exist', () => {
         let fullname, email, password
 
         beforeEach(() => {
-            fullname= `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
         })
@@ -47,7 +47,7 @@ const { env: { MONGODB_URL } } = process
         let fullname, email, password
 
         beforeEach(() => {
-            fullname= `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
@@ -57,7 +57,7 @@ const { env: { MONGODB_URL } } = process
         })
 
         it('should fail on existing user', () =>
-            registerUser( fullname, email, password )
+            registerUser(fullname, email, password)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 
@@ -78,7 +78,7 @@ const { env: { MONGODB_URL } } = process
                 let fullname, email, password
 
                 beforeEach(() => {
-                    fullname= randomEmptyOrBlankString()
+                    fullname = randomEmptyOrBlankString()
                     email = randomWithPrefixAndSuffix('email', '@mail.com')
                     password = randomStringWithPrefix('password')
                 })
@@ -92,7 +92,7 @@ const { env: { MONGODB_URL } } = process
                 let fullname, email, password
 
                 beforeEach(() => {
-                    fullname= randomNonString()
+                    fullname = randomNonString()
                     email = randomWithPrefixAndSuffix('email', '@mail.com')
                     password = randomStringWithPrefix('password')
                 })
@@ -108,7 +108,7 @@ const { env: { MONGODB_URL } } = process
                 let fullname, email, password
 
                 beforeEach(() => {
-                    fullname= `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+                    fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomNonString()
                     password = randomStringWithPrefix('password')
                 })
@@ -122,7 +122,7 @@ const { env: { MONGODB_URL } } = process
                 let fullname, email, password
 
                 beforeEach(() => {
-                    fullname= `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+                    fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomEmptyOrBlankString()
                     password = randomStringWithPrefix('password')
                 })
@@ -137,7 +137,7 @@ const { env: { MONGODB_URL } } = process
                 let fullname, email, password
 
                 beforeEach(() => {
-                    fullname= `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+                    fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomWithPrefixAndSuffix('email', '@mail.com')
                     password = randomEmptyOrBlankString()
                 })
@@ -151,7 +151,7 @@ const { env: { MONGODB_URL } } = process
                 let fullname, email, password
 
                 beforeEach(() => {
-                    fullname= `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+                    fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomWithPrefixAndSuffix('email', '@mail.com')
                     password = randomNonString()
                 })
@@ -161,6 +161,6 @@ const { env: { MONGODB_URL } } = process
                 })
             })
         })
-    }) 
+    })
     after(mongoose.disconnect)
 }) 

@@ -3,7 +3,7 @@ const { ContentError, LengthError, FormatError } = require('../../errors')
 module.exports = {
     
     validateFullname(fullname) {
-        if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
+        if (typeof fullname !== 'string') throw new TypeError(`${fullname} is not a fullname`)
 
         if (!fullname.trim().length) throw new ContentError('fullname is empty or blank')
     },
@@ -17,23 +17,23 @@ module.exports = {
     },
 
     validatePassword(password) {
-        if (typeof password !== 'string') throw new TypeError(password + ' is not a password')
+        if (typeof password !== 'string') throw new TypeError(`${password} is not a password`)
 
         if (!password.trim().length) throw new ContentError('password is empty or blank')
     },
 
     validateCallback(callback) {
-        if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
+        if (typeof callback !== 'function') throw new TypeError(`${callback} is not a text`)
     },
 
     validateText(text) {
-        if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
+        if (typeof text !== 'string') throw new TypeError(`${text} is not a text`)
 
         if (!text.trim().length) throw new ContentError('text is empty or blank')
     },
 
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
+        if (typeof id !== 'string') throw new TypeError(`${id} is not an id`)
 
         if (!id.trim().length) throw new ContentError('id is empty or blank')
 
@@ -46,6 +46,10 @@ module.exports = {
 
     validatePrice(budget) {
         if (typeof budget !== 'string') throw new TypeError(`${budget} is not a number`)
+
+        if (!budget.trim().length) throw new ContentError('price is empty or blank')
+        
+        if(budget < 0) throw new ContentError(`${budget} is a negative number`)
     },
 
     validateFile(file) {

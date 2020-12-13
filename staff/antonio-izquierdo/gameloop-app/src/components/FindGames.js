@@ -13,9 +13,9 @@ function FindGames({ games, onDetailGame }) {
         <ul className="results__ul">
             {games.map(({ id, name, description, gameconsole, budget }) =>
                 <li key={id} className="results__li">
+                    <p className="results__li__p">{name}</p>
                     <img className="results__li__img" src={`${API_URL}/games/${id}/images`} width="500px" onClick={() => handleDetailGame(id)} />
-                    <p className="results__p">{name}</p>
-                    <p className="results__p">description: {description}</p>
+                    <p className="results__li__p">description: {description}</p>
                     <p className="results__p">gameconsole: {gameconsole}</p>
                     <p className="results__p">budget: {budget}</p>
                 </li>)}

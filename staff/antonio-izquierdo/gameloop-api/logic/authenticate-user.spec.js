@@ -6,11 +6,11 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const authenticateUser = require('./authenticate-user')
 const { User } = require('../models')
 const bcrypt = require('bcryptjs')
-const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFoundError  } = require('../errors')
+const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFoundError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-    describe('authenticateUser()', () => {
+describe('authenticateUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {
