@@ -2,11 +2,12 @@ require('dotenv').config()
 
 const { expect } = require('chai')
 const mongoose = require('mongoose')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const savePet = require('./save-pet')
-const { User, Pet } = require('../models')
-const { ContentError } = require('../errors')
+const { User } = require('../models')
+const { Pet } = require('../models')
+const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -38,11 +39,14 @@ describe('savePet()', () => {
             
         })
 
-        it('shoud succed on new pet', () => {
+        it('shoud succeed on new pet', () => {
             savePet(undefined, name, breed, species, color, description, userId)
                
-            .then(() =>
-                    Pet.findOne({ name })
+            .then(() =>{
+
+                Pet.findOne({ name })
+               
+            }
                 )
                 .then(pet => {
                     expect(pet).to.exist
@@ -53,18 +57,9 @@ describe('savePet()', () => {
 
                 })
         })
-
-        afterEach(() =>
-            User
-                .deleteOne({ userName, email })
-                .then(result => expect(result.deletedCount).to.equal(1))
-                .then(Pet
-                    .deleteOne({name, breed, color})
-                        .then(result => expect(result.deletedCount).to.equal(1))
- 
-                
-            )
-        )
+        afterEach(() =>{
+                User.deleteMany().then(()=>{Pet.deleteMany().then(()=>{})})
+        })
     })
 
     describe('on a non existing user', () => {
@@ -83,16 +78,14 @@ describe('savePet()', () => {
         })
 
         it('shoud fail when user does not exists', () => {
-            savePet(undefined, name, breed, species, color, description, userId)
+            savePet(undefined, name, breed, species, color, description, shelter)
 
             .catch(error => {
                 expect(error).to.be.instanceOf(Error)
 
                 expect(error.message).to.equal(`user with id ${userId} not found`)
             })
-            
         })
-
     })
 
     describe('when any parameter is wrong', () => {
@@ -201,9 +194,64 @@ describe('savePet()', () => {
                 expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${description} is not a description`)
             })
         })
+
+         describe('when id is wrong', () => {
+            describe('when id is empty or blank', () => {
+                let id, name, breed, species, color, description
+
+                beforeEach(() => {
+
+                    id = randomEmptyOrBlankString()
+                    name = randomStringWithPrefix('name')
+                    breed = randomStringWithPrefix('breed')
+                    species = 'cat'
+                    color = randomStringWithPrefix('color')
+                    description = randomStringWithPrefix('description')
+                   
+                })
+
+                it('should fail on an empty or blank name', () => {
+                    expect(() => savePet(id, name, breed, species, color, description, () => { })).to.throw(ContentError, 'id is empty or blank')
+                })
+            })
+
+            describe('when id is not a string', () => {
+                let id, name, breed, species, color, description
+
+                beforeEach(() => {
+                    id = randomNonString()
+                    userName = randomStringWithPrefix('userName')
+                    breed = randomStringWithPrefix('breed')
+                    species = 'cat'
+                    color = randomStringWithPrefix('color')
+                    description = randomStringWithPrefix('description')
+                })
+
+                it('should fail when id is not an string', () => {
+                    expect(() => savePet(id, name, breed, species, color, description, () => { })).to.throw(TypeError, `${id} is not an id`)
+                })
+
+            })
+            describe('when id lenght is not 24', () => {
+                let id, name, breed, species, color, description
+
+                beforeEach(() => {
+                    id = '5fbcd46c1cc24f9c7ce22db000'
+                    userName = randomStringWithPrefix('userName')
+                    breed = randomStringWithPrefix('breed')
+                    species = 'cat'
+                    color = randomStringWithPrefix('color')
+                    description = randomStringWithPrefix('description')
+                })
+
+                it('should fail when id is not an string', () => {
+                    expect(() => savePet(id, name, breed, species, color, description, () => { })).to.throw(LengthError, `id length ${id.length} is not 24`)
+                })
+                
+            })
+        })  
+
     }) 
-
-
     
     after(mongoose.disconnect)
     

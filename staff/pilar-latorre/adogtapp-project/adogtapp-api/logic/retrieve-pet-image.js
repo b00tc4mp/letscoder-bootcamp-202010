@@ -10,5 +10,5 @@ module.exports = petId => {
 
     return fsp.access(file, fs.constants.F_OK)
         .then(() => fs.createReadStream(file))
-        .catch(() => fs.createReadStream(path.join(__dirname, '../data/pets/default.jpg')))
+        .catch(() => fs.createReadStream(path.join(__dirname, '../populate/pets/default.jpg')))
 }

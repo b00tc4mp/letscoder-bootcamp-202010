@@ -1362,3 +1362,65 @@ info 2020-12-13T10:24:51.153Z - stopping server
 info 2020-12-13T10:28:32.024Z - starting server
 info 2020-12-13T10:28:32.380Z - server running on port 4000
 info 2020-12-13T10:36:20.306Z - stopping server
+info 2020-12-13T11:35:51.776Z - starting server
+info 2020-12-13T11:35:51.979Z - server running on port 4000
+error 2020-12-13T11:36:22.370Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-13T11:36:46.394Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:18:39
+info 2020-12-13T11:37:57.980Z - stopping server
+info 2020-12-13T12:15:29.823Z - starting server
+info 2020-12-13T12:15:29.989Z - server running on port 4000
+error 2020-12-13T12:16:23.088Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:17:58.752Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:17:58.753Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:21:28.165Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:21:28.166Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:23:50.161Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:23:50.162Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:23:50.163Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:26:08.859Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:26:08.861Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:26:08.862Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+error 2020-12-13T12:26:08.863Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\populate\pets\default.jpg'
+info 2020-12-13T12:27:36.888Z - stopping server
+info 2020-12-13T12:27:39.786Z - starting server
+info 2020-12-13T12:27:39.929Z - server running on port 4000
+info 2020-12-13T12:28:58.377Z - stopping server
+info 2020-12-13T12:29:18.675Z - starting server
+info 2020-12-13T12:29:18.868Z - server running on port 4000
+info 2020-12-13T12:30:24.640Z - stopping server
+info 2020-12-13T12:30:27.939Z - starting server
+info 2020-12-13T12:30:28.141Z - server running on port 4000
+error 2020-12-13T12:42:15.977Z - Error: ENOENT: no such file or directory, open 'C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\populate\pets\default.jpg'
+info 2020-12-13T14:47:33.135Z - stopping server
+info 2020-12-13T15:24:43.813Z - starting server
+info 2020-12-13T15:24:44.098Z - server running on port 4000
+error 2020-12-13T15:25:33.427Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-13T15:25:38.581Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-13T15:25:46.605Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-13T15:25:47.242Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-13T15:28:36.177Z - stopping server
+info 2020-12-13T15:28:40.176Z - starting server
+info 2020-12-13T15:28:40.373Z - server running on port 4000
+info 2020-12-13T15:55:16.373Z - stopping server
+info 2020-12-13T17:42:09.094Z - starting server
+info 2020-12-13T17:42:09.304Z - server running on port 4000
+error 2020-12-13T17:42:41.278Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-13T17:53:04.437Z - stopping server
+info 2020-12-13T19:12:34.208Z - starting server
+info 2020-12-13T19:12:34.385Z - server running on port 4000
+error 2020-12-13T19:13:11.464Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)

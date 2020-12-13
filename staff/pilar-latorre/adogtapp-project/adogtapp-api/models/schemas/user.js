@@ -45,11 +45,11 @@ module.exports = new Schema({
         enum: ['person', 'shelter'],
         default: 'shelter',
         required: true
-      },
+      }
     
-    geo: {
+   /*  geo: {
         Number
-    }
+    } */
 
 
 })
