@@ -20,15 +20,19 @@ import EditProfile from "./EditProfile";
 import Card from "./Card";
 import ProfileList from "./ProfileList";
 import CreateActivity from "./CreateActivity";
-import saveActivity from "../logic/save-activity";
-import retrieveActivity from "../logic/retrieve-activity";
 import ListingDetailsScreen from "./ListingDetailsScreen";
 import Listing from "./Listing";
+import DatesDetails from "./DatesDetails";
+import ResultsList from "./ResultsList";
+import saveActivity from "../logic/save-activity";
+import retrieveActivity from "../logic/retrieve-activity";
+import searchByActivity from "../logic/search-by-activity";
 
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
   const [activities, setActivity] = useState([]);
+  const [results, setResults] = useState([]);
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -66,10 +70,6 @@ export default function Home({ token }) {
     setView("list-mode");
   };
 
-  const handleMapMode = () => {
-    setView("map-mode");
-  };
-
   const handleChangeToTrainerMode = () => {
     setView("trainer-mode");
   };
@@ -88,7 +88,6 @@ export default function Home({ token }) {
     debugger;
     try {
       AsyncStorage.getItem("token").then((token) => {
-        debugger;
         saveActivity(
           token,
           undefined,
@@ -103,10 +102,9 @@ export default function Home({ token }) {
           activityDate,
           (error) => {
             if (error) return alert(error.message);
-            debugger;
+
             try {
               retrieveActivity(token, (error, activities) => {
-                debugger;
                 if (error) return alert(error.message);
 
                 setActivity(activities);
@@ -122,6 +120,28 @@ export default function Home({ token }) {
       alert(error.message);
     }
   };
+  /* const handleListingDetailsScreen = () => {
+    setView("listing-detail");
+  }; */
+
+  const handleSearch = (query) => {
+    console.log(query);
+    debugger;
+    try {
+      AsyncStorage.getItem("token").then((token) => {
+        debugger;
+        searchByActivity(token, query, (error, results) => {
+          debugger;
+          console.log(results);
+          if (error) return alert(error.message);
+          setResults(results);
+          setView("results");
+        });
+      });
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   return (
     <View style={styles.backgroundDefault}>
@@ -130,6 +150,7 @@ export default function Home({ token }) {
           <Profile
             onAvatar={handleChangeToEditProfile}
             onListMode={handleListMode}
+            onSearch={handleSearch}
           />
         )}
         {view === "edit-profile" && (
@@ -141,33 +162,44 @@ export default function Home({ token }) {
         {view === "list-mode" && (
           <>
             <ProfileList
-              onMapMode={handleMapMode}
+              onMapMode={handleChangeToProfile}
               onAvatar={handleChangeToEditProfile}
+              onSearch={handleSearch}
             />
             <View
               style={{
                 backgroundColor: "#f8f4f4",
-                padding: 20,
-                paddingTop: 100,
+                paddingHorizontal: 20,
               }}
             >
               <Listing activities={activities} />
             </View>
           </>
         )}
-
-        {view === "listing-details" && (
+        {view === "results" && (
           <>
-            <ListingDetailsScreen />
+            <ProfileList
+              onMapMode={handleChangeToProfile}
+              onAvatar={handleChangeToEditProfile}
+              onSearch={handleSearch}
+            />
+            <View
+              style={{
+                backgroundColor: "#f8f4f4",
+                paddingHorizontal: 20,
+              }}
+            >
+              <ResultsList results={results} />
+            </View>
           </>
         )}
 
-        {view === "map-mode" && (
-          <Profile
-            onAvatar={handleChangeToEditProfile}
-            onListMode={handleListMode}
-          />
+        {view === "listing-detail" && (
+          <View>
+            <ListingDetailsScreen />
+          </View>
         )}
+
         {view === "trainer-mode" && (
           <CreateActivity onSubmitActivity={handleSubmitActivity} />
         )}

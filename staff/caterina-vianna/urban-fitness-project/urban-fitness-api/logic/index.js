@@ -4,4 +4,5 @@ module.exports = {
   retrieveUser: require("./retrieve-user"),
   saveActivity: require("./save-activity"),
   retrieveActivity: require("./retrieve-activity"),
+  searchActivity: require("./search-by-activity"),
 };

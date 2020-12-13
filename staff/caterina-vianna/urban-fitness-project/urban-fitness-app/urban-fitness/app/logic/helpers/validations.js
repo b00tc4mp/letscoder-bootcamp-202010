@@ -99,4 +99,8 @@ module.exports = {
 
     if (!query.trim().length) throw new ContentError("query is empty or blank");
   },
+
+  validateFile(file) {
+    if (!(file instanceof File)) throw new TypeError(`${file} is not file`);
+  },
 };

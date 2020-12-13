@@ -1,12 +1,54 @@
 import React from "react";
-import { View, Image, StyleSheet, Text, FlatList } from "react-native";
+import {
+  View,
+  Image,
+  StyleSheet,
+  Text,
+  FlatList,
+  Dimensions,
+} from "react-native";
+import { AppLoading } from "expo";
+import * as Font from "expo-font";
 
-export default function ListingDetailsScreen(props) {
+import {
+  useFonts,
+  Nunito_200ExtraLight,
+  Nunito_200ExtraLight_Italic,
+  Nunito_300Light,
+  Nunito_300Light_Italic,
+  Nunito_400Regular,
+  Nunito_400Regular_Italic,
+  Nunito_600SemiBold,
+  Nunito_600SemiBold_Italic,
+  Nunito_700Bold,
+  Nunito_700Bold_Italic,
+  Nunito_800ExtraBold,
+  Nunito_800ExtraBold_Italic,
+  Nunito_900Black,
+  Nunito_900Black_Italic,
+} from "@expo-google-fonts/nunito";
+
+export default function ListingDetailsScreen({ checked }) {
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
-    <View>
+    <View style={styles.backgroundColorListing}>
       <Image style={styles.image} source={require("../assets/yoga.jpg")} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.titleListing}>Yoga in the park</Text>
+        <Text style={styles.titleListing}>Yoga in the park🧘‍♀️</Text>
+        <Text style={styles.checkedEquipment}>
+          {checked ? "EQUIPMENT REQUIRED" : "NO EQUIPMENT REQUIRED"}
+        </Text>
+        <Text style={styles.descriptionListing}>
+          This work out is for everyone who wants to feel strong, healthy, fit
+          and happy! We are going to focus mostly on glutes,legs and core!
+        </Text>
         <Text style={styles.priceListing}>Price: 20 euros</Text>
       </View>
     </View>
@@ -18,12 +60,22 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
   },
+  checkedEquipment: {
+    color: "grey",
+    fontFamily: "Nunito_900Black",
+    fontSize: 12,
+    marginVertical: 10,
+  },
   detailsContainer: {
     padding: 20,
   },
   titleListing: {
-    fontSize: 24,
-    fontWeight: "500",
+    fontSize: 28,
+    color: "white",
+    fontFamily: "Nunito_700Bold",
+  },
+  descriptionListing: {
+    color: "grey",
   },
   priceListing: {
     color: "grey",
