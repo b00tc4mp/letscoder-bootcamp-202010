@@ -4,5 +4,6 @@ module.exports = {
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleUpdateUser: require('./handle-update-user'),
     handleImageUpload: require('./handle-image-upload'),
-    handleSaveQuest: require('./handle-save-quest')
+    handleSaveQuest: require('./handle-save-quest'),
+    handleSaveGame: require('./handle-save-game')
 }

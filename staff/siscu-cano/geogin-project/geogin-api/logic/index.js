@@ -3,6 +3,6 @@ module.exports = {
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
     updateUser: require('./update-user'),
-    createGame: require('./create-game'),
+    saveGame: require('./save-game'),
     saveQuest: require('./save-quest')
 }

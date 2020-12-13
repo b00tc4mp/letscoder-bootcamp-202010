@@ -30,18 +30,18 @@ mongoose
     useCreateIndex: true
   })
   // Create new game
-//   .then(() =>
-//     createGame(
-//       undefined,
-//       'http://localhost:4000/api/game/id_game',
-//       undefined,
-//       undefined,
-//       '5fd5ff757e18090924f1e54b',
-//       undefined,
-//       '5fd55e3930882ef33c018a24'
-//     )
-//   )
-  .then(() => createGame('5fd6321350d64660d5a4faef',undefined, [{name: "Los Chipirones",players: []}],undefined,undefined,undefined,undefined ))
+  .then(() =>
+    createGame(
+      undefined,
+      'http://localhost:4000/api/game/id_game',
+      undefined,
+      undefined,
+      '5fd5ff757e18090924f1e54b',
+      undefined,
+      '5fd55e3930882ef33c018a24'
+    )
+  )
+  // .then(() => createGame('5fd6321350d64660d5a4faef',undefined, [{name: "Los Chipirones",players: []}],undefined,undefined,undefined,undefined ))
   .then(console.log)
   .catch(console.error)
   .then(mongoose.disconnect)
