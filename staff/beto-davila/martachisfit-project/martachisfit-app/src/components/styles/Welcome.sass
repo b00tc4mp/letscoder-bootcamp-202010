@@ -1,56 +1,119 @@
-.welcome
-    // min-height: 100vh
-    padding: 1rem
+@media only screen and (max-width: 1050px)    
+    .welcome
+        // min-height: 100vh
+        padding: 1rem
 
-    &__title
-        text-align: center
-        margin: 0
+        &__title
+            text-align: center
+            margin: 0
 
-    &__container
-        width: 70%
-        margin: auto
+        &__container
+            width: 400px
+            margin: auto
 
-    &__subtitle
-        font-size: 1rem
+        &__subtitle
+            font-size: 1rem
 
-    &__recipes
-        background-color: #eaf0f0
-        padding: .3rem 1rem
-        margin: 2rem 0
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        &__recipes
+            background-color: #eaf0f0
+            padding: .3rem 1rem
+            margin: 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
 
-    &__diets
-        background-color: #eaf0f0
-        padding: .3rem 1rem
-        margin: 2rem 0
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        &__diets
+            background-color: #eaf0f0
+            padding: .3rem 1rem
+            margin: 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
 
-    &__tips
-        background-color: #eaf0f0
-        padding: .3rem 1rem
-        margin: 2rem 0
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        &__tips
+            background-color: #eaf0f0
+            padding: .3rem 1rem
+            margin: 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
 
-    &__marta-img:hover
-        -webkit-filter: brightness(50%)
-        -webkit-transition: all 1s ease
-        -moz-transition: all 1s ease
-        -o-transition: all 1s ease
-        -ms-transition: all 1s ease
-        transition: all 1s ease
+        &__marta-img:hover
+            -webkit-filter: brightness(50%)
+            -webkit-transition: all 1s ease
+            -moz-transition: all 1s ease
+            -o-transition: all 1s ease
+            -ms-transition: all 1s ease
+            transition: all 1s ease
 
-.welcome-pseudo
-    min-height: 100vh
-    display: block
-    position: relative
+    .welcome-pseudo
+        min-height: 100vh
+        display: block
+        position: relative
 
-.welcome-pseudo::after
-    content: ""
-    background-image: url("../images/background-img.png")
-    opacity: .4
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    position: absolute
-    z-index: -1
+    .welcome-pseudo::after
+        content: ""
+        background-image: url("../images/background-img.png")
+        opacity: .4
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+
+@media only screen and (min-width: 1050px)
+
+    .welcome
+        // min-height: 100vh
+        padding: 1rem
+
+        &__title
+            text-align: center
+            margin: 0
+
+        &__container
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+
+        &__subtitle
+            font-size: 1rem
+
+        &__recipes
+            background-color: #eaf0f0
+            padding: .3rem 1rem
+            width: 275px
+            margin: 2rem auto 2rem 2rem
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__diets
+            background-color: #eaf0f0
+            width: 275px
+            padding: .3rem 1rem
+            margin: 2rem auto 2rem 1rem
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__tips
+            background-color: #eaf0f0
+            width: 275px
+            padding: .3rem 1rem
+            margin: 2rem auto 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__marta-img:hover
+            -webkit-filter: brightness(50%)
+            -webkit-transition: all 1s ease
+            -moz-transition: all 1s ease
+            -o-transition: all 1s ease
+            -ms-transition: all 1s ease
+            transition: all 1s ease
+
+    .welcome-pseudo
+        min-height: 100vh
+        display: block
+        position: relative
+
+    .welcome-pseudo::after
+        content: ""
+        background-image: url("../images/background-img.png")
+        opacity: .4
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1

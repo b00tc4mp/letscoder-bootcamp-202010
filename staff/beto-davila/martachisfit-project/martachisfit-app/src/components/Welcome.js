@@ -17,9 +17,9 @@ export default function Welcome () {
 
         <div className="welcome__diets">
         <h3 className="welcome__subtitle">Dietas personalizadas</h3>
-        <p>Ponemos a tu disposición una serie de dietas de acuerdo a tu cómputo calórico establecido. 
-            Por otro lado, puedes incluso "volar sol@", crear una dieta con los alimentos que escojas y tener acceso a un registro diario que te indicará
-            en qué punto calórico te encuentras en el día.</p>
+        <p>Ponemos a tu disposición una serie de dietas de acuerdo a tu objetivo calórico. 
+            Además, podrías "volar sol@", crear una dieta con tus alimentos y tener acceso a un registro diario que te indicará
+            en qué punto te encuentras en el día.</p>
         </div>
 
         <div className="welcome__tips">

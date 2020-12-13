@@ -1,121 +1,249 @@
-.user-profile
-
-    &__recipes-container
-        background-color: #eaf0f0
-        width: 70%
-        margin: 2rem auto
-        border-radius: 1rem
-        padding: 0 0 .3rem 0
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
-
-    &__articles-container
-        background-color: #eaf0f0
-        width: 70%
-        margin: 2rem auto
-        border-radius: 1rem
-        padding: 0 0 .3rem 0
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
-
-    &__record-container
-        background-color: #eaf0f0
-        width: 70%
-        margin: 2rem auto
-        border-radius: 1rem
-        padding: 0 0 .3rem 0
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
-
-    &__question
-        margin-top: 1rem
+@media only screen and (max-width: 1000px)
+    .user-profile-pseudo
+        display: block
+        position: relative
+        min-height: 105vh
         
-    &__name-pic
-        display: flex
-        justify-content: space-evenly
+    .user-profile-pseudo::after
+        content: ""
+        background-image: url("../images/back-img-profile.jpg")
+        opacity: .3
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+
+    .user-profile
+
+        &__recipes-container
+            background-color: #eaf0f0
+            max-width: 330px
+            margin: 2rem auto
+            border-radius: 1rem
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__articles-container
+            background-color: #eaf0f0
+            max-width: 330px
+            margin: 2rem auto
+            border-radius: 1rem
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__record-container
+            background-color: #eaf0f0
+            max-width: 330px
+            margin: 2rem auto
+            border-radius: 1rem
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__question
+            margin-top: 1rem
+            
+        &__name-pic
+            display: flex
+            justify-content: space-evenly
+        
+        &__name
+            font-size: 1rem
+            font-weight: bold
+            margin: .2rem
+
+        &__logout
+            border: none
+            background-color: transparent
+            outline: none
+            cursor: pointer
+
+        &__name-logout
+            display: flex
+
+        &__no-articles
+            text-align: center
+
+        &__recipes
+            margin: 0
+
+        &__articles
+            padding: 0
     
-    &__name
-        font-size: 1rem
-        font-weight: bold
-        margin: .2rem
+            &--link
+                color: #303236
 
-    &__logout
-        border: none
-        background-color: transparent
-        outline: none
-        cursor: pointer
+        &__articles-list
+            list-style: none
+            font-size: .8rem
+            text-align: center
+            margin: 0
 
-    &__name-logout
-        display: flex
+        &__recipes-carousel
+            width: 90%
+            overflow: auto
+            white-space: nowrap
+            margin: .5rem auto
 
-    &__no-articles
-        text-align: center
+        &__recipes-carousel-recipe
+            display: inline-block
+            margin: 0 .2rem
+            cursor: pointer
 
-    &__recipes
-        margin: 0
+        &__recipes-carousel-recipe > &__recipes-carousel-img
+            height: 110px
+            width: 150px
+            -webkit-filter: brightness(100%)
 
-    &__articles
-        padding: 0
-  
-        &--link
-            color: #303236
-
-    &__articles-list
-        list-style: none
-        font-size: .8rem
-        text-align: center
-        margin: 0
-
-    &__recipes-carousel
-        width: 90%
-        overflow: auto
-        white-space: nowrap
-        margin: .5rem auto
-
-    &__recipes-carousel-recipe
-        display: inline-block
-        margin: 0 .2rem
-        cursor: pointer
-
-    &__recipes-carousel-recipe > &__recipes-carousel-img
-        height: 110px
-        width: 150px
-        -webkit-filter: brightness(100%)
-
-    &__recipes-carousel-recipe > &__recipes-carousel-img:hover
-        -webkit-filter: brightness(55%)
-        -webkit-transition: all 1s ease
-        -moz-transition: all 1s ease
-        -o-transition: all 1s ease
-        -ms-transition: all 1s ease
-        transition: all 1s ease
+        &__recipes-carousel-recipe > &__recipes-carousel-img:hover
+            -webkit-filter: brightness(55%)
+            -webkit-transition: all 1s ease
+            -moz-transition: all 1s ease
+            -o-transition: all 1s ease
+            -ms-transition: all 1s ease
+            transition: all 1s ease
 
 
-/* width */
-::-webkit-scrollbar
-  width: .3rem
-  height: .4rem
+    /* width */
+    ::-webkit-scrollbar
+    width: .3rem
+    height: .4rem
 
-/* Track */
-::-webkit-scrollbar-track 
-  box-shadow: inset 0 0 5px grey
-  border-radius: 5px
+    /* Track */
+    ::-webkit-scrollbar-track 
+    box-shadow: inset 0 0 5px grey
+    border-radius: 5px
 
-/* Handle */
-::-webkit-scrollbar-thumb
-  background: #489899
-  border-radius: 10px
+    /* Handle */
+    ::-webkit-scrollbar-thumb
+    background: #489899
+    border-radius: 10px
 
-.user-profile-pseudo
-    display: block
-    position: relative
-    height: 120vh
+@media only screen and (min-width: 1000px)
+    .user-profile-pseudo
+        display: block
+        position: relative
+        min-height: 100vh
+        
+    .user-profile-pseudo::after
+        content: ""
+        background-image: url("../images/back-img-profile.jpg")
+        opacity: .3
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+
+    .user-profile
+
+        &__container
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            margin-top: 2.5rem
+
+        &__recipes-container
+            background-color: #eaf0f0
+            max-width: 330px
+            margin: 2rem 0 auto 2rem
+            border-radius: 1rem
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__articles-container
+            background-color: #eaf0f0
+            max-width: 330px
+            margin: 2rem 1rem auto 1rem
+            border-radius: 1rem
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__record-container
+            background-color: #eaf0f0
+            min-width: 330px
+            margin: 2rem auto auto 0
+            border-radius: 1rem
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__question
+            margin-top: 1rem
+            
+        &__name-pic
+            display: flex
+            justify-content: space-evenly
+        
+        &__name
+            font-size: 1rem
+            font-weight: bold
+            margin: .2rem
+
+        &__logout
+            border: none
+            background-color: transparent
+            outline: none
+            cursor: pointer
+
+        &__name-logout
+            display: flex
+
+        &__no-articles
+            text-align: center
+
+        &__recipes
+            margin: 0
+
+        &__articles
+            padding: 0
     
-.user-profile-pseudo::after
-    content: ""
-    background-image: url("../images/back-img-profile.jpg")
-    opacity: .3
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    position: absolute
-    z-index: -1
+            &--link
+                color: #303236
+
+        &__articles-list
+            list-style: none
+            font-size: .8rem
+            text-align: center
+            margin: 0
+
+        &__recipes-carousel
+            width: 90%
+            overflow: auto
+            white-space: nowrap
+            margin: .5rem auto
+
+        &__recipes-carousel-recipe
+            display: inline-block
+            margin: 0 .2rem
+            cursor: pointer
+
+        &__recipes-carousel-recipe > &__recipes-carousel-img
+            height: 110px
+            width: 150px
+            -webkit-filter: brightness(100%)
+
+        &__recipes-carousel-recipe > &__recipes-carousel-img:hover
+            -webkit-filter: brightness(55%)
+            -webkit-transition: all 1s ease
+            -moz-transition: all 1s ease
+            -o-transition: all 1s ease
+            -ms-transition: all 1s ease
+            transition: all 1s ease
+
+
+    /* width */
+    ::-webkit-scrollbar
+    width: .3rem
+    height: .4rem
+
+    /* Track */
+    ::-webkit-scrollbar-track 
+    box-shadow: inset 0 0 5px grey
+    border-radius: 5px
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb
+    background: #489899
+    border-radius: 10px
             

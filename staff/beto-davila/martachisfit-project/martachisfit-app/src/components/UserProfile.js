@@ -51,7 +51,7 @@ export default function UserProfile({ name, onLogout, savedArticles, savedRecipe
                 </div>
             </div>
 
-
+            <div className="user-profile__container">
             <div className="user-profile__recipes-container">
                 <h3>¡Ponte el delantal!</h3>
                 {!savedRecipes.length && <p className="user-profile__no-recipess">No has añadido recetas a tu colección</p>}
@@ -79,6 +79,7 @@ export default function UserProfile({ name, onLogout, savedArticles, savedRecipe
             <div className="user-profile__record-container">
                 <h3>Registro de alimentos</h3>
                 <SavedFood onDelete={handleDeleteFood} message={message} food={userChosenFoods} />
+            </div>
             </div>
         </div>
     </section>

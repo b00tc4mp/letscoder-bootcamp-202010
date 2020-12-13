@@ -18,7 +18,7 @@
 
 .movements
     &__select
-        width: 40%
+        width: 250px
         margin: auto
         font-family: "Josefin Sans", sans-serif
 
@@ -26,13 +26,18 @@
         float: left
         text-decoration-line: none
         cursor: pointer
-        margin-left: .5rem
+        margin: .2rem
         background-color: #dee4e4
-        padding: .2rem
+        padding: .1rem
         border-radius: .5rem
+        font-size: .7rem
+
+    &__back:hover
+        background-color: #cdd1d1
 
     &__title
         margin: 0 auto 1rem auto
+        font-size: 1rem
 
     &__group-name
         font-size: .8rem
@@ -49,7 +54,7 @@
 
     &__group-movement > &__group-img
         -webkit-filter: brightness(100%)
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.4)
 
     &__group-movement > &__group-img:hover
         -webkit-filter: brightness(80%)

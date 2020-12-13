@@ -1,3 +1,18 @@
+.recipe-pseudo
+    display: block
+    position: relative
+    
+.recipe-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-recipe.jpg")
+    opacity: .2
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+
 .recipe
     width: 75%
     margin: auto
@@ -17,7 +32,7 @@
     &__img
         display: block
         margin: 0 auto
-        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.5)
 
     &__btns
         display: flex
