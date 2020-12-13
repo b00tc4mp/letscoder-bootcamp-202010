@@ -9,6 +9,7 @@ handleSaveProducts,
 handleRetrieveProductCategory,
 handleRetrieveProductById,
 handleSaveProductImage,
+handleRetrieveProductImage,
 handleSaveMenu,
 handleFindMenu
 } = require('./handlers')
@@ -27,6 +28,8 @@ router.post('/api/users/auth',jsonBodyParser, withErrorHandling(handleAuthentica
 router.post('/api/products',jsonBodyParser, withErrorHandling(handleSaveProducts))
 
 router.post('/api/products/:productId/images', withErrorHandling(handleSaveProductImage))
+
+router.get('/api/products/:productId/images', withErrorHandling(handleRetrieveProductImage))
 
 router.get('/api/products/category/:category', withErrorHandling(handleRetrieveProductCategory))
 

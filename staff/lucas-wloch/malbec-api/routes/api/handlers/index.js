@@ -6,6 +6,7 @@ module.exports = {
     handleRetrieveProductCategory: require('./handle-retrieve-product-category'),
     handleRetrieveProductById: require('./handle-retrieve-product-by-id'),
     handleSaveProductImage: require('./handle-save-product-image'),
+    handleRetrieveProductImage: require('./handle-retrieve-product-image'),
     handleSaveMenu: require('./handle-save-menu'),
     handleFindMenu: require('./handle-find-menu')
 } 

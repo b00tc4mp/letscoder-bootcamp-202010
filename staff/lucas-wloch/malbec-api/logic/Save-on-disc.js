@@ -8,7 +8,7 @@ module.exports = () => {
     return Product.find().lean()
         .then(products => {
 
-            const productsPath = path.join(__dirname, '../data/products')
+            const productsPath = path.join(__dirname, '../data/products/copies')
 
             return products.map(({ _id, name, description, price, glutenFree, vegan, alergenos, category, available }) => {
 
