@@ -1,5 +1,4 @@
 require('dotenv').config()
-
 const mongoose = require('mongoose')
 const { User, Game } = require('../models')
 const data = require('./data')
@@ -7,6 +6,7 @@ const fs = require('fs')
 const path = require('path')
 const rimraf = require('rimraf')
 const fsp = fs.promises
+const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
 
@@ -27,34 +27,24 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
         data.map(({ fullname, email, password, games }) =>
             User.create({ fullname, email, password })
                 .then(({ _id }) =>
-                    new Promise((resolve, reject) => {
-                        // const rs = fs.createReadStream(path.join(__dirname, `./users/${image}.jpg`))
-                        const ws = fs.createWriteStream(path.join(__dirname, `../data/users/${_id}.jpg`))
+                    Promise.all(games.map(({ name, image, description, gameconsole, budget }) =>
+                        Game.create({ name, image, description, gameconsole, budget, owner: _id })
+                            .then(({ _id }) =>
+                                new Promise((resolve, reject) => {
+                                    const rs = fs.createReadStream(path.join(__dirname, `./games/${image}.jpg`))
+                                    const ws = fs.createWriteStream(path.join(__dirname, `../data/games/${_id}.jpg`))
 
-                        ws.on('error', reject)
+                                    ws.on('error', reject)
 
-                        rs.on('end', () =>
-                            Promise.all(games.map(({ name, image, description, gameconsole, budget }) =>
-                                Game.create({ name, image, description, gameconsole, budget, owner: _id })
-                                    .then(({ _id }) =>
-                                        new Promise((resolve, reject) => {
-                                            const rs = fs.createReadStream(path.join(__dirname, `./games/${image}.jpg`))
-                                            const ws = fs.createWriteStream(path.join(__dirname, `../data/games/${_id}.jpg`))
+                                    rs.on('end', resolve)
 
-                                            ws.on('error', reject)
-
-                                            rs.on('end', resolve)
-
-                                            rs.pipe(ws)
-                                        }))
-                            ))
-                                .then(resolve)
-                        )
-
-                        rs.pipe(ws)
-                    }))
+                                    rs.pipe(ws)
+                                }))
+                    ))
+                )
         )
-    ))
+    )
+    )
     .catch(console.error)
     .then(() => mongoose.disconnect())
     .then(() => console.log('ended')) 

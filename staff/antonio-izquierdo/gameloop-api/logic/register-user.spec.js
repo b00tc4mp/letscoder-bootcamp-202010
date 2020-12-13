@@ -10,7 +10,7 @@ const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFo
 
 const { env: { MONGODB_URL } } = process
 
-false && describe('registerUser()', () => {
+    describe('registerUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user does not exist', () => {

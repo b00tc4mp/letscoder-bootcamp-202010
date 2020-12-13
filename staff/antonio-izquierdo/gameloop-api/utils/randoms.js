@@ -34,17 +34,11 @@ module.exports = {
     }
 }
 
-/* Example of RANDOM INTEGER
-describe('when user doesn\'t have notes', () => {
-            let text, tags, visibility
+/* randomInteger(from, to) {  // 1, 10
+    return Math.round(Math.random() * (to - from) + from)
+} */
 
-            beforeEach(() => {
-                text = randomStringWithPrefix('text')
-                tags = new Array(randomInteger(10, 100))
-
-                for (let i = 0; i < tags.length; i++)
-                    tags[i] = randomStringWithPrefix('tag')
-
+/* 
                 visibility = ['public', 'private'].random()
             })
 */

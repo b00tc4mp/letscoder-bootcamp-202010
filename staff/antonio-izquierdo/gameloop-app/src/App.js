@@ -19,7 +19,7 @@ export default withRouter(props => {
   const handleSignUp = (fullname, email, password) => {
     try {
       registerUser(fullname, email, password, error => {
-        if (error) return feedbackError(error.message)
+        if (error) return feedbackError('WARNING:' + ' ' + error.message)
 
         props.history.push('/sign-in')
       })
@@ -31,7 +31,7 @@ export default withRouter(props => {
   const handleSignIn = (email, password) => {
     try {
       authenticateUser(email, password, (error, token) => {
-        if (error) return feedbackError(error.message)
+        if (error) return feedbackError('WARNING:' + ' ' + error.message)
 
         sessionStorage.token = token
 
