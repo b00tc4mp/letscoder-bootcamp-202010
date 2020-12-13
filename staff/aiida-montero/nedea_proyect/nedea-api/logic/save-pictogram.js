@@ -20,7 +20,7 @@ module.exports = function (pictogramId, ownerId, title, description) {
         if (pictogramId) {
 
             return Pictogram
-                .findOne(ownerId)
+                .findOne(pictogramId)
                 .then (pictogram => {
                     if (!pictogram) throw new NotFoundError(`note with id ${pictogramId} not found`)
                      pictogram.title = title

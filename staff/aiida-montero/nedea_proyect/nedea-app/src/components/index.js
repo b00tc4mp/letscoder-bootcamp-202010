@@ -11,6 +11,8 @@ import ResultList from './ResultList'
 import Profile from './Profile'
 import Pictogram from './Pictogram'
 import MyPictograms from './MyPictograms'
+import Spinner from './Spinner'
+import Feedback from './Feedback'
 
 
 export{
@@ -26,5 +28,7 @@ export{
     ResultList,
     Profile,
     Pictogram,
-    MyPictograms
+    MyPictograms,
+    Spinner,
+    Feedback
 }

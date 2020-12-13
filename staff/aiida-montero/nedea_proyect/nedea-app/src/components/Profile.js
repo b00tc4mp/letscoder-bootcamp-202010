@@ -1,43 +1,46 @@
 import { useEffect, useState } from 'react'
 import retrieveFavouritePictogram from '../logic/retrieve-favourite-pictogram'
 import './Profile.scss'
+import Spinner from './Spinner'
 
+const API_URL = process.env.REACT_APP_API_URL
 export default function Profile () {
-    const [myFavourite , setMyFavourite] = useState()
-    const { token } = sessionStorage;
+    const [favourites , setFavourite] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const { token } = sessionStorage
    useEffect(() => {
-     console.log("he pasado")
     retrieveFavouritePictogram(token,(error, response)=>{
       if(error) return alert(error)
-      setMyFavourite(response)
-      
+      setFavourite(response)
+      setIsLoading(!isLoading)
     })
-     
    },[]) 
     return   <section className = "profile">
     <h3>MIS PICTOGRAMAS FAVORITOS</h3>
-    {myFavourite?
-    myFavourite.map(favourite=>{
+    {isLoading ? <Spinner/> : favourites.length !== 0 ?
+  
+
+ favourites.map( ({_id, title, description}) => {
       return <article className="card">
       <div className="card-header">
         <img
           className="card-header__image"
-          src="https://previews.123rf.com/images/rondale/rondale1507/rondale150700270/42792510-carta-de-vector-may%C3%BAscula-x-dibujado-a-mano-con-pincel-seco.jpg"
+           src= {`${API_URL}/pictograms/${_id}/images`} width = "600px" 
           height="120"
           alt="Api"
         />
       </div>
       <div className="card-body">
         <h4 className="card-body__title">
-          {favourite.title}
+          {title}
         </h4>
         <p className="card-body__description">
-        {favourite.description}
+        {description}
         </p>
       </div>
     </article>
     }):
-    <h2>You dont have any favourite pictromas yet :/</h2>}
+  <h2>You dont have any favourite pictromas yet :/</h2> }
     
   </section>
 

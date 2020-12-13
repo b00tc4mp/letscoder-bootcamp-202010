@@ -1,6 +1,7 @@
+import {Feedback} from './'
 import './SignUp.scss'
 
-function SignUp({ onSignUp }) {
+function SignUp({ onSignUp, error }) {
     return <section className="sign-up">
        
        <div className = "register">
@@ -17,6 +18,7 @@ function SignUp({ onSignUp }) {
     </span>
     <h2 >Registrate</h2>
   </p>
+    {error && <Feedback  error = {error}/>}
   <input type="text" name= "fullname" class="register-fullname"  placeholder="Fullname" />
   <input type="email" name= "email" class="register-username"  placeholder="Email" />
   <input type="password" name= "password" class="register-password" placeholder="Password" />

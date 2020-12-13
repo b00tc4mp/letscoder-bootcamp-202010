@@ -9,6 +9,14 @@ import {searchPictogramsByUser} from './logic'
 
 
 function App(props) {
+  const [error, setError] = useState(null)
+
+  function feedbackError(error) {
+      setError(error)
+      setTimeout(() => {
+          setError(null)
+      }, 6000) 
+  }
    const [pictograms, setPictograms] = useState([])
   useEffect(()=>{
     const { token } = sessionStorage;
@@ -27,18 +35,18 @@ function App(props) {
   const handleSignUp = (fullname, email, password) => {
     try{
       registerUser(fullname, email, password, error =>{
-        if(error) return alert (error.message)
+        if(error) return feedbackError (error.message)
          props.history.push('/sign-in')
       })
     }catch(error){
-      alert(error.message)
+      feedbackError(error.message)
     }
   }
 
   const handleSignIn = (email, password) => {
     try {
       authenticateUser(email, password, (error, token) => {
-        if (error) return alert(error.message)
+        if (error) return feedbackError(error.message)
 
         sessionStorage.token = token
 
@@ -49,7 +57,7 @@ function App(props) {
         props.history.push('/home')
       })
     } catch (error) {
-      alert(error.message)
+      feedbackError(error.message)
     }
   }
   
@@ -57,19 +65,19 @@ function App(props) {
     const {token}  = sessionStorage
     try{
       savePictogram(undefined, token, title, description, (error,pictogramId) =>{
-          if(error) return alert(error.message)
+          if(error) return feedbackError(error.message)
          
          savePictogramImage(pictogramId, image, error => {
-          if (error) return alert(error.message)
+          if (error) return feedbackError(error.message)
           
           try {
             searchPictogramsByUser(token, pictograms => {
-              if (error) return alert(error.message)
+              if (error) return feedbackError(error.message)
               /*  props.history.push('/home') */
              setPictograms(pictograms)
           });
           } catch (error) {
-              alert(error.message)
+              feedbackError(error.message)
           }
       })
 
@@ -77,7 +85,7 @@ function App(props) {
       })
 
     }catch (error){
-      alert(error.message)
+      feedbackError(error.message)
     }
   }
 
@@ -102,8 +110,8 @@ function App(props) {
       <Route exact path ='/update' render={()=> token ?<Update onSavePictogram= {handleSavePictogram} pictograms = {pictograms} /> :
        <Redirect to = "/"/> }/>
       <Route exact path ='/' render ={() => <Initial onGoToHome = {handleGoToHome} />}/>
-      <Route exact path = '/sign-up' render ={()=><SignUp onSignUp = {handleSignUp}/>}/>
-      <Route exact path = '/sign-in' render = {()=> <SignIn onSignIn = {handleSignIn}/>}/>
+      <Route exact path = '/sign-up' render ={()=><SignUp onSignUp = {handleSignUp} error = {error}/>}/>
+      <Route exact path = '/sign-in' render = {()=> <SignIn onSignIn = {handleSignIn} error = {error}/>}/>
       <Route exact path = '/home' render = {()=> <Home />}/>
       <Route exact path = '/profile' render = {()=> <Profile/>}/>
 
