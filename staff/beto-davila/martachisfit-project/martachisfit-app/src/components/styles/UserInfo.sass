@@ -2,7 +2,7 @@
 
     &__title
         text-align: center
-        margin: 2rem
+        margin: 0 auto 3rem auto
 
     &__gender
         width: 60%
@@ -13,14 +13,14 @@
         margin: auto
 
     &__numbers
-        width: 50%
+        width: 300px
         margin: 1.5rem auto
         display: grid
         grid-template-columns: .5fr .5fr
         grid-row-gap: 1rem
 
     &__activity
-        width: 80%
+        width: 275px
         display: flex
         margin: 2rem auto
         justify-content: space-between
@@ -40,11 +40,31 @@
 
     
     &__back
-        margin-left: 1rem
+        margin: 1rem
         border: none
         background-color: transparent
         float: left
+        cursor: pointer
+
+.user-info > h3
+    margin: 0
 
 .user-info > input, label, select
     background-color: transparent
+
+.user-info-pseudo
+    display: block
+    position: relative
+    height: 100vh
+    
+.user-info-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-userinfo.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
         

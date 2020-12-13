@@ -328,7 +328,7 @@ export default function Home() {
         {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
         {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
         {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToUserDiet={handleGoToUserDiet} />}
-        {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} goal={calories} />}
+        {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} onGoToDiets={handleGoToUserDiet} goal={calories} />}
         {view === 'articles' && article &&
             <Articles source={article}
                 error={error}

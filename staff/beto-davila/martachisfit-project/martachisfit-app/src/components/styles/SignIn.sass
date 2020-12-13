@@ -16,7 +16,7 @@
         border-radius: 1rem
         margin: .5rem auto
         cursor: pointer
-        width: 30%
+        width: 150px
 
     &__form
         display: flex
@@ -28,5 +28,21 @@
         border-bottom: 1px solid #0bb1ba
         line-height: 1.5rem
         background-color: transparent
-        width: 40%
+        width: 200px
         margin: .8rem auto
+
+.sign-in-pseudo
+    display: block
+    position: relative
+    min-height: 100vh
+    
+.sign-in-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-signin.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1

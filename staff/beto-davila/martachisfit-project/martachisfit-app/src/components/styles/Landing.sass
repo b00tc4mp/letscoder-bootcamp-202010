@@ -17,6 +17,23 @@
         flex-direction: column
         text-align: center
 
+
+.landing-pseudo
+    display: block
+    position: relative
+    min-height: 100vh
+    
+.landing-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-landing.jpg")
+    opacity: .3
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+
 .btn
     background-color: #b1ebee
     padding: .5rem

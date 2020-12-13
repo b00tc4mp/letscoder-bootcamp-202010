@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Landing() {
   return <>
+      <div className="landing-pseudo">
       <section className="landing">
         <h1 className="landing__title">
           MartachisFIT
@@ -15,5 +16,6 @@ export default function Landing() {
           <Link to="/sign-in" className="landing__log-btn btn">Iniciar sesión</Link>
         </div>
       </section>
+      </div>
       </>
 }

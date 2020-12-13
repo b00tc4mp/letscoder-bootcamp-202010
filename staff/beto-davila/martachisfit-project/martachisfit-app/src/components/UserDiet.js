@@ -1,12 +1,13 @@
 import './styles/UserDiet.sass'
 
-export default function UserDiet ({diet}) {
+export default function UserDiet ({diet, onGoToDiets}) {
 
     const timeElapsed = Date.now();
     const today = new Date(timeElapsed);
 
     return <section className="user-diet">
         <div className="user-diet-pseudo">
+        <a href="#" className="user-diet__back" onClick={onGoToDiets}>Atrás</a>
         <h2 className="user-diet__title">Para hoy <span className="user-diet__time">{today.toDateString()}</span></h2>
 
         <p className="user-diet__description" >....una selección diaria de acuerdo a las calorías objetivo en tu caso.</p>

@@ -2,7 +2,8 @@ import './styles/SignIn.sass'
 import { Feedback } from '.'
 
 function SignIn({ onLogin, error }) {
-    return <section className="sign-in">
+    return <div className="sign-in-pseudo">
+        <section className="sign-in">
         <h2 className="sign-in__title" >Acceso</h2>
         <form className="sign-in__form" onSubmit={event => {
             event.preventDefault()
@@ -18,6 +19,7 @@ function SignIn({ onLogin, error }) {
 
         </form>
     </section>
+    </div>
 }
 
 export default SignIn

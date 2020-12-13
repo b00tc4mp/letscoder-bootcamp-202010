@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom'
 
 export default function UserInfo({onGoToGoalCaloriesAndMacros}) {
   return <>
-      <section className="user-info">
+        <div className="user-info-pseudo">
+        <section className="user-info">
         <Link to="/landing" className="user-info__back"><img alt="back" src={atras} height="20" width="20"/></Link>
 
         <h2 className="user-info__title">
@@ -36,7 +37,7 @@ export default function UserInfo({onGoToGoalCaloriesAndMacros}) {
               <input type="radio" id="woman" name="gender" value="woman"></input>
               <label htmlFor="woman">Mujer</label>
             </div>
-              <h2 className="user-info__title">Quiero</h2>
+              <h3 className="user-info__quiero">Quiero</h3>
             <div className="user-info__goal">
                 {/* <input type="radio" id="gain" name="goal" value="gain"></input>
                 <label htmlFor="gain">Ganar masa muscular </label>
@@ -71,6 +72,7 @@ export default function UserInfo({onGoToGoalCaloriesAndMacros}) {
                 <button className="user-info__next">Siguiente</button>
             </form>
           <p className="user-info__p">* Asumimos que una persona sedentaria apenas tiene actividad física diaria. Por otro lado, la persona deportista realiza ejercicio intenso al menos, 5 veces por semana.</p>
-      </section>
+        </section>
+        </div>
       </>
 }
