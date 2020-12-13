@@ -154,8 +154,13 @@ export const SearchCreate = () => {
     setTrickTest({ data })
   }
 
+  const addNewTest = () => {
+    saveTest()
+    resetTest()
+    setStepTest(stepTest + 1)
+  }
+
   const saveTest = () => {
-    window.alert('saveTest')
     const _test = {
       title: titleTest,
       description: descriptionTest,
@@ -166,9 +171,9 @@ export const SearchCreate = () => {
       trickTwo: trickTest.data.trickTwo,
       trickThree: trickTest.data.trickThree
     }
-    setTest([...test, _test])
-    resetTest()
-    setStepTest(stepTest + 1)
+    const updatedTest = [...test, _test]
+    setTest(updatedTest)
+    return updatedTest
   }
 
   const handleSaveQuest = (
@@ -185,7 +190,6 @@ export const SearchCreate = () => {
     evaluations,
     tests) => {
     window.alert('handleSaveQuest')
-    saveTest()
 
     saveQuest(
       token,
@@ -226,12 +230,11 @@ export const SearchCreate = () => {
         push()
         break
       }
-      case 'quizstep': {
-        titleTest &&
-        descriptionTest &&
-        poiTest &&
-        trickTest.data.trickOne &&
-        handleSaveQuest(token, questIdAdded, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, test)
+      case 'quizStep': {
+        if (titleTest && descriptionTest && poiTest && trickTest.data.trickOne) {
+          const updatedTest = saveTest()
+          handleSaveQuest(token, questIdAdded, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, updatedTest)
+        }
         push()
         break
       }
@@ -445,7 +448,7 @@ export const SearchCreate = () => {
                             poiTest === '' ||
                             trickTest.data.trickOne === ''
                           ) && (
-                            <button className='btn new' onClick={saveTest}>
+                            <button className='btn new' onClick={addNewTest}>
                               <RiAddCircleLine size={ICON_SIZE} />
                               Añadir prueba
                             </button>
@@ -458,7 +461,7 @@ export const SearchCreate = () => {
                             Anterior
                           </button>
 
-                          <button className='btn btn-next' onClick={saveTest}>
+                          <button className='btn btn-next' onClick={next}>
                             <IoIosSave size={ICON_SIZE} /> Guardar y salir
                           </button>
                         </div>
