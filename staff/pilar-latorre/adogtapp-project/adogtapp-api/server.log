@@ -1359,3 +1359,6 @@ info 2020-12-13T10:18:42.861Z - server running on port 4000
 info 2020-12-13T10:21:01.673Z - starting server
 info 2020-12-13T10:21:01.858Z - server running on port 4000
 info 2020-12-13T10:24:51.153Z - stopping server
+info 2020-12-13T10:28:32.024Z - starting server
+info 2020-12-13T10:28:32.380Z - server running on port 4000
+info 2020-12-13T10:36:20.306Z - stopping server
