@@ -5,7 +5,7 @@ module.exports = async (req, res, handleError) => {
 
     try {
         const dataImage = req.body.data;
-        const uploadResponse = await cloudinary.uploader.upload(dataImage);
+        const uploadResponse = await cloudinary.uploader.upload(dataImage, {folder: 'img' });
         res
             .status(201)
             .json({

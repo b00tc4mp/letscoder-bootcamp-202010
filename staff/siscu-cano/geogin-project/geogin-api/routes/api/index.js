@@ -13,6 +13,8 @@ const {
 
 const withErrorHandling = require('./helpers/with-error-handling')
 
+const pdfController = require('../../controllers/pdf')
+
 const router = new Router()
 
 // Users
@@ -25,8 +27,10 @@ router.patch('/api/users', jsonBodyParser, withErrorHandling(handleUpdateUser))
 router.post('/api/quest', jsonBodyParser, withErrorHandling(handleSaveQuest))
 router.post('/api/game', jsonBodyParser, withErrorHandling(handleSaveGame))
 
-// image upload API
+// Image upload
 router.post("/api/image-upload", jsonBodyParser, withErrorHandling(handleImageUpload))
    
+// Pdf create
+router.post('/api/pdf-upload', jsonBodyParser, pdfController.pdf)
 
 module.exports = router
