@@ -16,7 +16,7 @@ module.exports = function (petId) {
             if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
             const {shelter} = pet
             const shelterId= shelter.toString()
-debugger    
+    
             return User.findById(shelterId).lean()
                 .then(user => {
                     const { _id } = pet

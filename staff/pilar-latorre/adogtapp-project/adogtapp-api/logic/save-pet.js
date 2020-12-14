@@ -10,7 +10,7 @@ module.exports = function (petId, name, breed, species, color, description, shel
     validateColor(color)
     validateDescription(description)
     validateId(shelter)
-debugger
+
     const _id = ObjectId(shelter)
 
     return User

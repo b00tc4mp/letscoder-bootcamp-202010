@@ -3,17 +3,17 @@ require('dotenv').config()
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
-const savePetImage = require('./save-pet-image')
+const detailPet = require('./detail-pet')
 const { models: { User, Pet }, mongoose } = require('adogtapp-data')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-describe('savePetImage()', () => {
+describe('detailPet()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let userName, email, password, address, city, phone, name, breed, species, color, description, petId, shelter, stream
+        let userName, email, password, address, city, phone, name, breed, species, color, description, petId, shelter
 
         beforeEach(async() => {
             userName = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -29,8 +29,6 @@ describe('savePetImage()', () => {
             species = 'dog'
             color = randomStringWithPrefix('color')
 
-            stream = '../populate/pets/default.jpg'
-
             const user = { userName, email, password, address, city, phone, description }
 
             const newUser = await User.create(user)
@@ -43,17 +41,17 @@ describe('savePetImage()', () => {
 
         })
 
-        it('shoud succeed on new pet', () => {
-
-            savePetImage(petId, stream)
+        it('shoud succed on a existing pet', () => {
+            detailPet(petId)
                
-            .then(() =>
-                    Pet.findOne({ petId })
-                )
-                .then(pet => {
+            .then((pet) => {
+                 
                     expect(pet.petId).to.equal(petId)
-                    expect(pet.stream).to.equal(stream)
+                    expect(pet.name).to.equal(name)
+                    expect(pet.breed).to.equal(breed)
+                    expect(pet.species).to.equal(species)
                 })
+         
         })
 
         afterEach(() =>
@@ -62,23 +60,20 @@ describe('savePetImage()', () => {
         )
     })
 
-    describe('on a non existing user', () => {
-        let stream, petId
+    describe('on a non existing pet', () => {
+        let petId
 
         beforeEach(() => {
             
-            stream = '../populate/pets/default.jpg'
             petId = randomId()
 
         })
 
-        it('shoud fail when user and pet does not exists', () => {
-            savePetImage(petId, stream)
-
-            .catch(error => {
-                expect(error).to.be.instanceOf(Error)
-
-                expect(error.message).to.equal(`user with id ${userId} not found`)
+        it('shoud fail when pet does not exists', () => {
+            detailPet(petId)
+                .catch(error => {
+                    expect(error).to.be.instanceOf(Error)
+                    expect(error.message).to.equal(`pet with id ${petId} not found`)
             })
             
         })
@@ -89,42 +84,41 @@ describe('savePetImage()', () => {
         describe('when id is wrong', () => {
             
                 describe('when id is empty or blank', () => {
-                    let petId, stream
+                    let petId
             
                     beforeEach(() => {
             
                         petId = randomEmptyOrBlankString()
-                        stream = '../populate/pets/default.jpg'
                         
                     })
             
                     it('should fail on an empty or blank name', () => {
-                        expect(() => savePetImage(petId, stream, () => { })).to.throw(ContentError, 'id is empty or blank')
+                        expect(() => detailPet(petId, () => { })).to.throw(ContentError, 'id is empty or blank')
                     })
                 })
                 describe('when id is not a string', () => {
-                    let petId, stream
+                    let petId
             
                     beforeEach(() => {
                         petId = randomNonString()
-                        stream = '../populate/pets/default.jpg'
+                        
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => savePetImage(petId, stream, () => { })).to.throw(TypeError, `${petId} is not an id`)
+                        expect(() => detailPet(petId, () => { })).to.throw(TypeError, `${petId} is not an id`)
                     })
             
                 })
                 describe('when id lenght is not 24', () => {
-                    let petId, stream
+                    let petId
             
                     beforeEach(() => {
                         petId = '5fbcd46c1cc24f9c7ce22db000'
-                        stream = '../populate/pets/default.jpg'
+                        
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => savePetImage(petId, stream, () => { })).to.throw(LengthError, `id length ${petId.length} is not 24`)
+                        expect(() => detailPet(petId, () => { })).to.throw(LengthError, `id length ${petId.length} is not 24`)
                     })
                     
                 })
@@ -134,10 +128,3 @@ describe('savePetImage()', () => {
     after(mongoose.disconnect)
     })
 })
-
-
-
-
-
-
-    

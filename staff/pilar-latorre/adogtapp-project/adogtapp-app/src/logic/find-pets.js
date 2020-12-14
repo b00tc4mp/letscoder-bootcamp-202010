@@ -5,7 +5,6 @@ import context from './context'
 export default (function (token, queryShelter, city, queryPet, species, breed, callback) {
     
     validateCallback(callback)
-debugger
     //poner  validations
 
     const { API_URL } =  this

@@ -13,7 +13,7 @@ export default (function savePet( petId, name, breed, species, color, descriptio
     validateCallback(callback)
 
     const { API_URL } = this
-debugger
+
     call('POST', `${API_URL}/pets`, { 
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,

@@ -11,8 +11,8 @@
             { name: 'India', breed: 'mixed', species: 'dog', color: 'black', description: '4 years old, female, 25kg, very sociable' , image: 'india'},
             { name: 'Paquita', breed: 'beagle', species: 'dog', color: 'white, brown, black', description: '3 years old, female, 8kg, very sociable and loyable', image: 'beagle'},
             { name: 'Pancho', breed: 'chihuahua', species: 'dog', color: 'brown', description: '2 years old, male, 2kg, a little bit moody ', image: 'chihuahua'},
-            { name: 'Bruno', breed: 'galgo', species: 'dog', color: 'brown', description: '3 years old, female, 20kg, quiet and sensitive', image: 'galgo'}
-           /*  { name: 'Niebla', breed: 'mixed', species: 'cat', color: 'tabby', description: '7 years old, male, 5kg, very affectionate', image: 'gatete'} */
+            { name: 'Bruno', breed: 'galgo', species: 'dog', color: 'brown', description: '3 years old, female, 20kg, quiet and sensitive', image: 'galgo'},
+            { name: 'Niebla', breed: 'mixed', species: 'cat', color: 'tabby', description: '7 years old, male, 5kg, very affectionate', image: 'gatete'}
         ]
     },
     {

@@ -11,7 +11,7 @@ export default (function (petId, image, callback) {
     formData.append("image", image);
 
     const { API_URL } = this
-debugger
+
     call('POST', `${API_URL}/pets/${petId}/images`, {},
         formData,
         (status, response) => {

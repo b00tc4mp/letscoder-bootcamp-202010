@@ -2,7 +2,7 @@ const { findPets } = require("../../../logic");
 
 const jwt = require("jsonwebtoken");
 
-debugger
+
 const {
   env: { JWT_SECRET }
 } = process;

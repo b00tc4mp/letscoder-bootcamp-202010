@@ -1,7 +1,12 @@
 const { models: { User, Pet }, mongoose: { Types: { ObjectId } } , mongoose} = require('adogtapp-data')
+const { validateId, validateCity, validateBreed, validateQuery } = require('./helpers/validations')
 
 module.exports = function (shelterId, queryShelter, city, queryPet, species, breed ) {
-    //poner validations
+    if (typeof city !== 'undefined') validateCity(city)
+    if (typeof breed !== 'undefined') validateBreed(breed)
+    if (typeof queryShelter !== 'undefined') validateQuery(queryShelter)
+    if (typeof queryPet !== 'undefined') validateQuery(queryPet)
+    
     
     const criteria = {}
     if (shelterId)
