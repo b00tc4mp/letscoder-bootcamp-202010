@@ -46,9 +46,14 @@ export default function App() {
   };
 
   useEffect(() => {
-    AsyncStorage.getItem("token").then((token) => {
-      token && setView("home");
-    });
+    try {
+      AsyncStorage.getItem("token").then((token) => {
+        token && setView("home");
+      });
+    } catch (error) {
+      AsyncStorage.removeItem("token");
+      setView("sign-in");
+    }
   }, []);
 
   return (

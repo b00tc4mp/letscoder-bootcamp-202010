@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Checkbox } from "react-native-paper";
 import {
   Image,
@@ -12,6 +12,7 @@ import {
   ScrollView,
   Dimensions,
   KeyboardAvoidingView,
+  Screen,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import DateTimePicker from "@react-native-community/datetimepicker";
@@ -29,6 +30,20 @@ export default function CreateActivity({ onSubmitActivity }) {
   const [address, setAddress] = useState("");
   const [spots, setSpots] = useState("");
   const [price, setPrice] = useState("");
+  const [imageUri, setImageUri] = useState();
+  const requestPermission = async () => {
+    const { granted } = await ImagePicker.requestCameraPermissionsAsync();
+    if (!granted) alert("You need to enable permission to access the library");
+  };
+  useEffect(() => {
+    requestPermission();
+  }, []);
+
+  const selectImage = async () => {
+    const result = await ImagePicker.launchImageLibraryAsync();
+    if (!result.cancelled) setImageUri({ localUri: result.uri });
+    else console.log("Error reading an image");
+  };
 
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate || activityDate;
@@ -55,9 +70,20 @@ export default function CreateActivity({ onSubmitActivity }) {
         <View style={styles.backgroundNewActivity}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.textNewActivity}>New Activity</Text>
-            <TouchableOpacity style={styles.imageUpload} onPress={() => {}}>
-              <Image source={require("../assets/upload-photo.png")}></Image>
-            </TouchableOpacity>
+            <View>
+              <Button
+                /* style={styles.imageUpload} */ title="select image"
+                onPress={selectImage}
+              />
+              <Image
+                source={
+                  imageUri
+                    ? { uri: imageUri.localUri }
+                    : require("../assets/yoga.jpg")
+                }
+                style={{ width: 200, height: 200 }}
+              />
+            </View>
             <TextInput
               style={styles.textInputForm}
               placeholder="Title"
@@ -77,15 +103,19 @@ export default function CreateActivity({ onSubmitActivity }) {
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setPrice(text)}
             ></TextInput>
-            <Text>Material required</Text>
-            <Checkbox
-              uncheckedColor="white"
-              color="pink"
-              status={checked ? "checked" : "unchecked"}
-              onPress={() => {
-                setChecked(!checked);
-              }}
-            />
+            <View style={styles.containerChecked}>
+              <Text style={styles.textMaterialRequired}>Material required</Text>
+              <View style={styles.checkBox}>
+                <Checkbox
+                  uncheckedColor="white"
+                  color="pink"
+                  status={checked ? "checked" : "unchecked"}
+                  onPress={() => {
+                    setChecked(!checked);
+                  }}
+                />
+              </View>
+            </View>
             <View paddingVertical={5} style={styles.pickerList} />
             <RNPickerSelect
               onValueChange={(value) => setSport(value)}
@@ -151,6 +181,7 @@ export default function CreateActivity({ onSubmitActivity }) {
               style={styles.customBtnBG}
               onPress={() => {
                 onSubmitActivity({
+                  imageUri,
                   title,
                   description,
                   price,
@@ -175,18 +206,27 @@ export default function CreateActivity({ onSubmitActivity }) {
 const styles = StyleSheet.create({
   backgroundNewActivity: {
     backgroundColor: "black",
-    height: Dimensions.get("window").height,
-    width: Dimensions.get("window").width,
   },
   imageUpload: {
     alignItems: "center",
     alignContent: "center",
   },
+  containerChecked: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  checkBox: { marginTop: 10 },
   textNewActivity: {
     color: "white",
     textAlign: "center",
     fontSize: 15,
     margin: 20,
+  },
+  textMaterialRequired: {
+    color: "white",
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 20,
   },
   textInputForm: {
     borderBottomColor: "#ccc",

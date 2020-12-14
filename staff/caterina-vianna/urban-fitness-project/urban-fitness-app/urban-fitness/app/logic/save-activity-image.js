@@ -1,18 +1,18 @@
 import { call } from "../utils/call.js";
 import {
   validateId,
-  validateFile,
+  /* validateFile, */
   validateCallback,
 } from "./helpers/validations";
 import context from "./context";
 
-export default (function (activityId, image, callback) {
+export default (function (activityId, imageUri, callback) {
   validateId(activityId);
-  validateFile(image);
+  /* validateFile(imageUri); */
   validateCallback(callback);
 
   var formData = new FormData();
-  formData.append("image", image);
+  formData.append("image", imageUri);
 
   call(
     "POST",

@@ -1,15 +1,15 @@
 const Busboy = require("busboy");
-const { saveNoteImage } = require("../../../logic");
+const { saveActivityImage } = require("../../../logic");
 
 module.exports = (req, res, handleError) => {
   const {
-    params: { noteId },
+    params: { activityId },
   } = req;
 
   const busboy = new Busboy({ headers: req.headers });
 
   busboy.on("file", (fieldname, file, filename, encoding, mimetype) =>
-    saveNoteImage(noteId, file)
+    saveActivityImage(activityId, file)
       .then(() => res.status(204).send())
       .catch(handleError)
   );

@@ -5,6 +5,7 @@ import React, {
   useState,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+
 import {
   Alert,
   StyleSheet,
@@ -27,12 +28,14 @@ import ResultsList from "./ResultsList";
 import saveActivity from "../logic/save-activity";
 import retrieveActivity from "../logic/retrieve-activity";
 import searchByActivity from "../logic/search-by-activity";
+import saveActivityImage from "../logic/save-activity-image";
 
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
   const [activities, setActivity] = useState([]);
   const [results, setResults] = useState([]);
+  const [item, setItem] = useState();
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -75,6 +78,7 @@ export default function Home({ token }) {
   };
 
   const handleSubmitActivity = ({
+    imageUri,
     title,
     description,
     price,
@@ -100,19 +104,23 @@ export default function Home({ token }) {
           repeat,
           spots,
           activityDate,
-          (error) => {
+          (error, activityId) => {
             if (error) return alert(error.message);
+            debugger;
+            saveActivityImage(activityId, imageUri, (error) => {
+              if (error) return alert(error.message);
 
-            try {
-              retrieveActivity(token, (error, activities) => {
-                if (error) return alert(error.message);
+              try {
+                retrieveActivity(token, (error, activities) => {
+                  if (error) return alert(error.message);
 
-                setActivity(activities);
-                setView("list-mode");
-              });
-            } catch (error) {
-              alert(error.message);
-            }
+                  setActivity(activities);
+                  setView("list-mode");
+                });
+              } catch (error) {
+                alert(error.message);
+              }
+            });
           }
         );
       });
@@ -141,6 +149,11 @@ export default function Home({ token }) {
     } catch (error) {
       alert(error.message);
     }
+  };
+
+  const handleChangeToListingDetails = ({ item }) => {
+    setItem(item);
+    setView("listing-details");
   };
 
   return (
@@ -172,7 +185,10 @@ export default function Home({ token }) {
                 paddingHorizontal: 20,
               }}
             >
-              <Listing activities={activities} />
+              <Listing
+                activities={activities}
+                onListingDetails={handleChangeToListingDetails}
+              />
             </View>
           </>
         )}
@@ -194,9 +210,9 @@ export default function Home({ token }) {
           </>
         )}
 
-        {view === "listing-detail" && (
+        {view === "listing-details" && (
           <View>
-            <ListingDetailsScreen />
+            <ListingDetailsScreen item={item} />
           </View>
         )}
 

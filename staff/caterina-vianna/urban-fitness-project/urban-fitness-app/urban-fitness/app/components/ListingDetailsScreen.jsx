@@ -28,7 +28,7 @@ import {
   Nunito_900Black_Italic,
 } from "@expo-google-fonts/nunito";
 
-export default function ListingDetailsScreen({ checked }) {
+export default function ListingDetailsScreen({ checked, item }) {
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
     Nunito_700Bold,
@@ -41,15 +41,12 @@ export default function ListingDetailsScreen({ checked }) {
     <View style={styles.backgroundColorListing}>
       <Image style={styles.image} source={require("../assets/yoga.jpg")} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.titleListing}>Yoga in the park🧘‍♀️</Text>
+        <Text style={styles.titleListing}>{item.title}🧘‍♀️</Text>
         <Text style={styles.checkedEquipment}>
           {checked ? "EQUIPMENT REQUIRED" : "NO EQUIPMENT REQUIRED"}
         </Text>
-        <Text style={styles.descriptionListing}>
-          This work out is for everyone who wants to feel strong, healthy, fit
-          and happy! We are going to focus mostly on glutes,legs and core!
-        </Text>
-        <Text style={styles.priceListing}>Price: 20 euros</Text>
+        <Text style={styles.descriptionListing}>{item.description}</Text>
+        <Text style={styles.priceListing}>{item.price}</Text>
       </View>
     </View>
   );
