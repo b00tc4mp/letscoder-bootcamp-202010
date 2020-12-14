@@ -28,7 +28,6 @@ module.exports = function (userId) {
                         const {name, calories, carbs, protein, fats, _id} = food
 
                          return({ name, calories, carbs, protein, fats, _id })
-                        //  return addedFood
                     })
             ))
         })

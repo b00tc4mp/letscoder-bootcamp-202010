@@ -37,15 +37,15 @@ module.exports = new Schema({
     },
 
     chosenFoods: {
-        type: [ ObjectId ]
+        type: [ObjectId]
     },
 
     savedArticles: {
-        type: [ ObjectId ]
+        type: [ObjectId]
     },
 
     savedRecipes: {
-        type: [ ObjectId ]
+        type: [ObjectId]
     },
 
     role: {
@@ -55,5 +55,9 @@ module.exports = new Schema({
 
     dietId: {
         type: ObjectId
+    },
+
+    myWorkouts: {
+        type: [ObjectId]
     }
 })

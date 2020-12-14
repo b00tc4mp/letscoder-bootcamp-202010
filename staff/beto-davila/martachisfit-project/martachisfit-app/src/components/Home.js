@@ -14,7 +14,8 @@ import {
     retrieveSavedRecipes,
     retrieveChosenDiet,
     retrieveWorkout,
-    retrieveMuscularGroup
+    retrieveMuscularGroup,
+    toggleWorkoutsUser
 } from '../logic'
 
 import logo from '../../src/logo.png'
@@ -52,6 +53,7 @@ export default function Home() {
     const [savedRecipes, setSavedRecipes] = useState()
     const [calories, setCalories] = useState()
     const [likedRecipe, setLikedRecipe] = useState()
+    const [savedWorkout, setSavedWorkout] = useState()
     const [workout, setWorkout] = useState()
     const [error, setError] = useState(null)
     const [movements, setMovements] = useState()
@@ -183,6 +185,30 @@ export default function Home() {
                         savedRecipes.includes(recipeId) ? setLikedRecipe(true) : setLikedRecipe(false)
                         setRecipe(recipe)
                         setView('recipe')
+                    })
+                })
+            })
+        } catch (error) {
+            return alert(error.message)
+        }
+    }
+
+    const handleSaveWorkout = workoutId => {
+        try {
+            toggleWorkoutsUser(token, workoutId, error => {
+                if (error) return feedbackError("Hubo un problema intentando guardar el entrenamiento :(")
+
+                retrieveUser(token, (error, user) => {
+                    if (error) return alert(error.message)
+
+                    const { myWorkouts } = user
+                    retrieveWorkout(workoutId, (error, workout) => {
+                        if (error) return alert("Hubo un problema intentando recuperar la rutina de entrenamiento :(")
+
+                        const { id: workoutId } = workout
+                        myWorkouts.includes(workoutId) ? setSavedWorkout(true) : setSavedWorkout(false)
+                        setWorkout(workout)
+                        setView('workout')
                     })
                 })
             })
@@ -338,7 +364,7 @@ export default function Home() {
         {view === 'diet-design' && <DietDesign />}
         {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
         {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error} />}
-        {view === 'workout' && <Workout onGoToMovements={handleGoToMovements} source={workout} />}
+        {view === 'workout' && <Workout error={error} onSaveWorkout={handleSaveWorkout} onGoToMovements={handleGoToMovements} source={workout} saved={savedWorkout}/>}
         {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
         {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
         {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToDiets={handleGoToUserDiet} />}

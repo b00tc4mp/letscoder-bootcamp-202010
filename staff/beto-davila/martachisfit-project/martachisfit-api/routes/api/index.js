@@ -21,7 +21,8 @@ const {
     handleRetrieveChosenDiet,
     handleRetrieveWorkout,
     handleRetrieveMuscularGroup,
-    handleAddUserRecipes
+    handleAddUserRecipes,
+    handleToggleWorkoutsUser
 } = require('./handlers/index')
 
 const router = new Router()
@@ -48,6 +49,9 @@ router.get('/api/foods', withErrorHandling(handleFindFood))
 
 // toggle food
 router.patch('/api/users/foods/:foodId', jsonBodyParser, withErrorHandling(handleToggleFoodUserDiet))
+
+// toggle workouts
+router.patch('/api/users/workouts/:workoutId', jsonBodyParser, withErrorHandling(handleToggleWorkoutsUser))
 
 // add food to user diet
 router.patch('/api/users/foods', jsonBodyParser, withErrorHandling(handleAddFoodUserDiet))

@@ -23,6 +23,7 @@ import retrieveLikedRecipes from './retrieve-liked-recipes'
 import context from './context'
 import retrieveWorkout from './retrieve-workout'
 import retrieveMuscularGroup from './retrieve-muscular-group'
+import toggleWorkoutsUser from './toggle-workouts-user'
 
 export {
     caloriesCalc,
@@ -49,5 +50,6 @@ export {
     retrieveLikedRecipes,
     retrieveWorkout,
     context,
-    retrieveMuscularGroup
+    retrieveMuscularGroup,
+    toggleWorkoutsUser
 }
