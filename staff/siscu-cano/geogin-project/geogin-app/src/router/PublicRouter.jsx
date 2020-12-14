@@ -26,6 +26,7 @@ import { SearchStart } from '../pages/SearchStart'
 import { TestPassed } from '../pages/TestPassed'
 import { Profile } from '../pages/Profile'
 import { Ranking } from '../pages/Ranking'
+import { SearchCreateMenu } from '../pages/SearchCreateMenu'
 
 export const PublicRoute = () => (
   <Context.Consumer>
@@ -51,6 +52,7 @@ export const PublicRoute = () => (
             <TestPassed path='/test-passed' />
             <Profile path='/profile' />
             <Ranking path='/ranking' />
+            <SearchCreateMenu path='/search-create-menu/:questId' />
             <NotFound default />
           </Router>
           : <Router>
@@ -64,6 +66,7 @@ export const PublicRoute = () => (
             <Login path='/search-access' />
             <Login path='/search-access-not-logged' />
             <Login path='/search-create' />
+            <Login path='/search-create-menu/:questId' />
             <Login path='/search-create-finish' />
             <Login path='/search-create-test' />
             <Login path='/search-description' />
