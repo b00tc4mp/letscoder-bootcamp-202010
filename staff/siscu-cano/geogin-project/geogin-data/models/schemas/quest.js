@@ -22,7 +22,7 @@ module.exports = new Schema(
       type: Point
     },
     time: {
-      type: Date
+      type: String
     },
     modePrivate: {
       type: Boolean,
