@@ -1105,3 +1105,67 @@ error 2020-12-12T19:37:15.652Z - ReferenceError: ownerId is not defined
 info 2020-12-12T19:42:01.102Z - stopping server
 info 2020-12-12T19:42:08.427Z - starting server
 info 2020-12-12T19:42:08.588Z - undefined
+info 2020-12-13T10:10:57.922Z - starting server
+info 2020-12-13T10:10:58.092Z - undefined
+info 2020-12-13T10:50:48.671Z - stopping server
+info 2020-12-13T12:16:06.864Z - starting server
+info 2020-12-13T12:16:06.994Z - undefined
+info 2020-12-13T13:02:21.841Z - stopping server
+info 2020-12-13T13:05:47.245Z - starting server
+info 2020-12-13T13:05:47.368Z - undefined
+error 2020-12-13T15:27:31.234Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at Function.Model.$wrapCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4858:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4369:10)
+    at model.Query.Query.then (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:9:10)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-retrieve-product-detail.js:10:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:354:14)
+error 2020-12-13T15:42:51.890Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at Function.Model.$wrapCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4858:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4369:10)
+    at model.Query.Query.then (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\find-product.js:20:10)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+info 2020-12-13T19:24:51.265Z - stopping server
+info 2020-12-13T19:24:54.750Z - starting server
+info 2020-12-13T19:24:54.891Z - undefined
+error 2020-12-13T20:34:39.594Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:45.194Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:47.067Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:48.245Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:48.547Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:48.804Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T08:54:16.185Z - stopping server

@@ -68,7 +68,7 @@ export default function Home({onLogout}) {
         setView('home')
     }
     
-    const handleSearchProducts = ( queryCompany, queryProduct, price, priceMin, priceMax) => {
+    const handleSearchProducts = (queryCompany, queryProduct, price, priceMin, priceMax) => {
         try {
            const { token } = sessionStorage 
 

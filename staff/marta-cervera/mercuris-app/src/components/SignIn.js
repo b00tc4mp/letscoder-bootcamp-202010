@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { Feedback } from '.'
 
 function SignIn({ onSignIn, error }) {
-    return <section className= "sign-in">
+    return <main className= "sign-in">
         <h2 className="sign-in__title">Sign In</h2>
 
         <form className="sign-in__form"onSubmit= { event => {
@@ -25,7 +25,7 @@ function SignIn({ onSignIn, error }) {
         <Link to = '/sign-up'>Redirect to Sign Up</Link>
 
        
-    </section>
+    </main>
 }
 
 export default SignIn

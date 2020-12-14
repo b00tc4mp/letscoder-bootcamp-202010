@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import{ Feedback } from '.'
 
 function SignUp({ onSignUp, error }) {
-    return <section className= "sign-up">
+    return <div className= "sign-up">
         <h2 className="sign-up__title">Sign Up</h2>
         
         { error && <Feedback error= {error}/>}       
@@ -27,7 +27,7 @@ function SignUp({ onSignUp, error }) {
 
         <Link to = '/sign-in'>Redirect to Sign In</Link>
         
-    </section>
+    </div>
 }
 
 export default SignUp

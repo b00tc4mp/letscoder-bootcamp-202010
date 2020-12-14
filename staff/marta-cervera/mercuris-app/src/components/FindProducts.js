@@ -14,10 +14,10 @@ debugger
     return <div className="results">        
         {results.map( ({id, name, description, price }) => 
         <li key={id} className="results__list">
-            <p className="results__p">name:{name}</p>            
-            <p className="results__p">description: {description}</p>
-            <p className="results__p">price: {price}</p>
-            <img src={`${API_URL}/products/${id}/images`} width="90px" onClick={() => handleDetailProduct(id)}/>
+            <p className="results__p">Product Name:{name}</p>            
+            <p className="results__p">Description: {description}</p>
+            <p className="results__p">Price: {price} €</p>
+            <img src={`${API_URL}/products/${id}/images`} width="180px" onClick={() => handleDetailProduct(id)}/>
             
         </li>)}
 

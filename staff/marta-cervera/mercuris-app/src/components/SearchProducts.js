@@ -69,7 +69,7 @@ export default function ({error}) {
 
     return (
         <>
-            <form onSubmit={handleFindProducts}>                
+            <form onSubmit={handleFindProducts} className="searchform">                
                 {!token && <input type="text" name="queryCompany" placeholder="Info Company" />}
                 <input type="text" name="queryProduct" placeholder="Info Product" />
                 <input type="number" name="price" placeholder="Introduce price" />
