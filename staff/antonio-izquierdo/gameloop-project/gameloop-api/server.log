@@ -1971,3 +1971,5 @@ error 2020-12-13T20:28:24.542Z - Error: wrong credentials
 info 2020-12-13T20:30:29.811Z - stopping server
 info 2020-12-14T10:45:28.384Z - server running on port 4000
 info 2020-12-14T10:48:40.105Z - stopping server
+info 2020-12-14T10:58:28.319Z - server running on port 4000
+info 2020-12-14T10:58:28.446Z - stopping server

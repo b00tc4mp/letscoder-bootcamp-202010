@@ -1,12 +1,11 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrieveUser = require('./retrieve-user')
-const { models: { User } }  = require('gameloop-data')
-const { ContentError, LengthError, ValueError, FormatError, ConflictError, NotFoundError } = require('../errors')
+const { models: { User }, mongoose } = require('gameloop-data')
+const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 

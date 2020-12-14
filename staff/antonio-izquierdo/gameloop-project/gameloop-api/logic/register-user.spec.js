@@ -3,7 +3,7 @@ require('dotenv').config()
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const registerUser = require('./register-user')
-const { models: { User } }  = require('gameloop-data')
+const { models: { User }, mongoose }  = require('gameloop-data')
 const bcrypt = require('bcryptjs')
 const { ContentError } = require('../errors')
 

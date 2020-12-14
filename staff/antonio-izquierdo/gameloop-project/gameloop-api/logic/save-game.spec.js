@@ -1,12 +1,9 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomGameConsole, randomNotNumber, randomId, randomNotId, randomWrongLengthId, randomInteger, } = require('../utils/randoms')
-const { Types: { ObjectId } } = mongoose
+const { models: { User, Game }, mongoose: { Types: { ObjectId } }, mongoose } = require('gameloop-data')
 const saveGame = require('./save-game')
-const { User, Game } = require('../models')
 const { ContentError, LengthError } = require('../errors')
-const game = require('../models/schemas/game')
 
 const { env: { MONGODB_URL } } = process
 
