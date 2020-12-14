@@ -12,7 +12,7 @@ cloudinary.config({
 
 exports.uploads = file => {
 return new Promise((resolve, reject) => {
-    cloudinary.uploader.upload(file, {folder: 'pdf' }, (err, url) => {
+    cloudinary.uploader.upload(file, {resource_type: 'image', folder: 'pdf' }, (err, url) => {
       if (err) return reject(err);
       return resolve(url);
     })
