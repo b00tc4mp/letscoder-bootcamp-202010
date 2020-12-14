@@ -36,6 +36,7 @@ export default function Home({ token }) {
   const [activities, setActivity] = useState([]);
   const [results, setResults] = useState([]);
   const [item, setItem] = useState();
+  const [activityId, setActivityId] = useState();
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -106,21 +107,24 @@ export default function Home({ token }) {
           activityDate,
           (error, activityId) => {
             if (error) return alert(error.message);
-            debugger;
-            saveActivityImage(activityId, imageUri, (error) => {
-              if (error) return alert(error.message);
+            try {
+              saveActivityImage(activityId, imageUri, (error) => {
+                if (error) return alert(error.message);
 
-              try {
-                retrieveActivity(token, (error, activities) => {
-                  if (error) return alert(error.message);
+                try {
+                  retrieveActivity(token, (error, activities) => {
+                    if (error) return alert(error.message);
 
-                  setActivity(activities);
-                  setView("list-mode");
-                });
-              } catch (error) {
-                alert(error.message);
-              }
-            });
+                    setActivity(activities);
+                    setView("list-mode");
+                  });
+                } catch (error) {
+                  alert(error.message);
+                }
+              });
+            } catch (error) {
+              alert(error.message);
+            }
           }
         );
       });

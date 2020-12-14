@@ -5,4 +5,5 @@ module.exports = {
   handleSaveActivity: require("./handle-save-activity"),
   handleRetrieveActivity: require("./handle-retrieve-activity"),
   handleSearchActivity: require("./handle-search-activity"),
+  handleSaveImage: require("./handle-save-image"),
 };

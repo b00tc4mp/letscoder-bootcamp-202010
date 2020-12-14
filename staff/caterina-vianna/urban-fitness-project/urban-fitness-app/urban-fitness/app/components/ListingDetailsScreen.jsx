@@ -37,13 +37,18 @@ export default function ListingDetailsScreen({ checked, item }) {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
+
+  const image = item.id;
   return (
     <View style={styles.backgroundColorListing}>
-      <Image style={styles.image} source={require("../assets/yoga.jpg")} />
+      <Image
+        style={styles.image}
+        source={`http://192.168.0.11:4000/api/activity/${image}/images`}
+      />
       <View style={styles.detailsContainer}>
         <Text style={styles.titleListing}>{item.title}🧘‍♀️</Text>
         <Text style={styles.checkedEquipment}>
-          {checked ? "EQUIPMENT REQUIRED" : "NO EQUIPMENT REQUIRED"}
+          {item.checked ? "EQUIPMENT REQUIRED" : "NO EQUIPMENT REQUIRED"}
         </Text>
         <Text style={styles.descriptionListing}>{item.description}</Text>
         <Text style={styles.priceListing}>{item.price}</Text>

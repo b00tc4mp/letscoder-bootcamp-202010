@@ -43,8 +43,8 @@ export default function saveActivity(
 
         return callback(new Error(error));
       }
-
-      callback(null);
+      const { activityId } = JSON.parse(response);
+      callback(null, activityId);
     }
   );
 }

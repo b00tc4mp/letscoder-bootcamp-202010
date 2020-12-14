@@ -25,7 +25,7 @@ export default function Listing({ activities, onListingDetails }) {
             <Card
               title={item.title}
               subTitle={"$" + item.price}
-              image={require("../assets/yoga.jpg")}
+              image={item.id}
             />
           </TouchableOpacity>
         )}

@@ -1245,3 +1245,29 @@ error 2020-12-14T11:52:37.401Z - TokenExpiredError: jwt expired
     at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
     at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
     at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-14T14:16:52.504Z - ValidationError: Activity validation failed: price: Path `price` is required.
+    at model.Document.invalidate (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-14T14:39:13.428Z - stopping server
+info 2020-12-14T14:39:18.270Z - starting server
+info 2020-12-14T14:39:18.351Z - server running on port 4000
+info 2020-12-14T15:16:05.546Z - stopping server
+info 2020-12-14T15:16:32.665Z - starting server
+info 2020-12-14T15:16:32.750Z - server running on port 4000
+info 2020-12-14T15:37:38.866Z - stopping server
+info 2020-12-14T15:37:44.184Z - starting server
+info 2020-12-14T15:37:44.290Z - server running on port 4000
+info 2020-12-14T16:04:16.833Z - stopping server
+info 2020-12-14T16:04:34.022Z - starting server
+info 2020-12-14T16:04:34.124Z - server running on port 4000
+info 2020-12-14T16:35:29.141Z - starting server
+info 2020-12-14T16:35:29.244Z - server running on port 4000
+info 2020-12-14T16:37:27.969Z - stopping server
+info 2020-12-14T16:37:33.621Z - starting server
+info 2020-12-14T16:37:33.722Z - server running on port 4000
+info 2020-12-14T16:40:54.216Z - stopping server
+info 2020-12-14T16:57:41.652Z - starting server
+info 2020-12-14T16:57:41.754Z - server running on port 4000
+info 2020-12-14T18:31:40.477Z - stopping server

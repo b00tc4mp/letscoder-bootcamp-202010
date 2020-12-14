@@ -4,7 +4,10 @@ import { View, StyleSheet, Text, Image } from "react-native";
 export default function Card({ title, subTitle, image }) {
   return (
     <View style={styles.card}>
-      <Image style={styles.image} source={image} />
+      <Image
+        style={styles.image}
+        source={`http://192.168.0.11:4000/api/activity/${image}/images`}
+      />
       <View style={styles.detailsContainer}>
         <Text style={styles.titleActivity}>{title}</Text>
         <Text style={styles.subTitleActivity}>{subTitle}</Text>

@@ -1,4 +1,4 @@
-import { call } from "../utils/call.js";
+import { call } from "../utils";
 import {
   validateId,
   /* validateFile, */
@@ -12,8 +12,13 @@ export default (function (activityId, imageUri, callback) {
   validateCallback(callback);
 
   var formData = new FormData();
-  formData.append("image", imageUri);
-
+  /* formData.append("image", new File(imageUri.localUri)); */
+  formData.append("image", {
+    uri: imageUri.localUri,
+    name: "image",
+    type: "image/jpeg",
+  });
+  debugger;
   call(
     "POST",
     `http://192.168.0.11:4000/api/activity/${activityId}/images`,

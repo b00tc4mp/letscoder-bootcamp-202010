@@ -64,26 +64,31 @@ export default function CreateActivity({ onSubmitActivity }) {
     showMode("time");
   };
 
+  const pickerStyle = {
+    inputIOS: {
+      color: "black",
+    },
+    inputAndroid: {
+      color: "black",
+      fontSize: 11,
+      marginRight: 40,
+      marginLeft: 40,
+      marginTop: 20,
+      backgroundColor: "#9c9c9c",
+      borderRadius: 20,
+      placeholderColor: "black",
+    },
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.backgroundNewActivity}>
           <ScrollView style={styles.scrollView}>
-            <Text style={styles.textNewActivity}>New Activity</Text>
-            <View>
-              <Button
-                /* style={styles.imageUpload} */ title="select image"
-                onPress={selectImage}
-              />
-              <Image
-                source={
-                  imageUri
-                    ? { uri: imageUri.localUri }
-                    : require("../assets/yoga.jpg")
-                }
-                style={{ width: 200, height: 200 }}
-              />
+            <View style={styles.underlineNewActivity}>
+              <Text style={styles.textNewActivity}>NEW ACTIVITY</Text>
             </View>
+
             <TextInput
               style={styles.textInputForm}
               placeholder="Title"
@@ -93,6 +98,8 @@ export default function CreateActivity({ onSubmitActivity }) {
             <TextInput
               style={styles.textInputForm}
               placeholder="Description"
+              multiline={true}
+              numberOfLines={10}
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setDescription(text)}
             ></TextInput>
@@ -117,24 +124,36 @@ export default function CreateActivity({ onSubmitActivity }) {
               </View>
             </View>
             <View paddingVertical={5} style={styles.pickerList} />
-            <RNPickerSelect
-              onValueChange={(value) => setSport(value)}
-              items={[
-                { label: "Baseball", value: "baseball" },
-                { label: "Boxing", value: "boxing" },
-                { label: "Crossfit", value: "crossfit" },
-                { label: "Football", value: "football" },
-                { label: "Hockey", value: "hockey" },
-                { label: "Kayak", value: "kayak" },
-                { label: "Pilates", value: "pilates" },
-                { label: "Running", value: "running" },
-                { label: "Skating", value: "skating" },
-                { label: "Yoga", value: "yoga" },
-              ]}
-            />
+            <View>
+              <RNPickerSelect
+                style={pickerStyle}
+                placeholder={{
+                  label: "Select sport category...",
+                  value: null,
+                }}
+                onValueChange={(value) => setSport(value)}
+                items={[
+                  { label: "Baseball", value: "baseball" },
+                  { label: "Boxing", value: "boxing" },
+                  { label: "Crossfit", value: "crossfit" },
+                  { label: "Football", value: "football" },
+                  { label: "Hockey", value: "hockey" },
+                  { label: "Kayak", value: "kayak" },
+                  { label: "Pilates", value: "pilates" },
+                  { label: "Running", value: "running" },
+                  { label: "Skating", value: "skating" },
+                  { label: "Yoga", value: "yoga" },
+                ]}
+              />
+            </View>
             <View paddingVertical={5} />
             <View paddingVertical={5} style={styles.pickerList} />
             <RNPickerSelect
+              style={pickerStyle}
+              placeholder={{
+                label: "Select repetivity...",
+                value: null,
+              }}
               onValueChange={(value) => setRepetitivity(value)}
               items={[
                 { label: "Daily", value: "daily" },
@@ -158,6 +177,20 @@ export default function CreateActivity({ onSubmitActivity }) {
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setSpots(text)}
             ></TextInput>
+            <View>
+              <Button
+                /* style={styles.imageUpload} */ title="select image"
+                onPress={selectImage}
+              />
+              <Image
+                source={
+                  imageUri
+                    ? { uri: imageUri.localUri }
+                    : require("../assets/yoga.jpg")
+                }
+                style={{ width: "100%", height: 300 }}
+              />
+            </View>
             <Text style={styles.textNewActivity}>Sessions</Text>
             <View>
               <View>
@@ -211,6 +244,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignContent: "center",
   },
+  underlineNewActivity: {
+    borderBottomWidth: 3,
+    borderBottomColor: "white",
+    marginHorizontal: 128,
+    marginBottom: 30,
+  },
   containerChecked: {
     display: "flex",
     flexDirection: "row",
@@ -220,10 +259,11 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontSize: 15,
-    margin: 20,
+    marginTop: 30,
+    marginBottom: 10,
   },
   textMaterialRequired: {
-    color: "white",
+    color: "#9c9c9c",
     marginRight: 40,
     marginLeft: 40,
     marginTop: 20,

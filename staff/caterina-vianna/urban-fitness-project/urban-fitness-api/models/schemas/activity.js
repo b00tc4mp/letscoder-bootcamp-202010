@@ -41,7 +41,7 @@ module.exports = new Schema({
     type: String,
     required: false,
   },
-  coverImage: {
+  image: {
     type: String,
     required: false,
   },

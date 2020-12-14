@@ -15,7 +15,7 @@ export default (function (token, querySports, callback) {
 
   call(
     "GET",
-    `http:///192.168.0.11:4000/api/activity/search/?${queryString}`,
+    `http://192.168.0.11:4000/api/activity/search/?${queryString}`,
     { Authorization: `Bearer ${token}` },
     "",
     (status, response) => {
