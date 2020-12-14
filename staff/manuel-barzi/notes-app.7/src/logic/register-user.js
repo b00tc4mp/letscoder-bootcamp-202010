@@ -1,7 +1,6 @@
 import { call } from 'notes-utils'
 import { validateFullname, validateEmail, validatePassword } from './helpers/validations'
 import context from './context'
-import { ConflictError } from 'notes-errors'
 
 export default (function (fullname, email, password) {
     validateFullname(fullname)
@@ -17,12 +16,7 @@ export default (function (fullname, email, password) {
             if (status !== 201) {
                 const { error } = JSON.parse(body)
 
-                switch (status) {
-                    case 409:
-                        throw new ConflictError(error)
-                    default:
-                        throw new Error(error)
-                }
+                throw new Error(error)
             }
         })
 }).bind(context)

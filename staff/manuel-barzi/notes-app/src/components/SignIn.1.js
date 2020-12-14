@@ -3,20 +3,24 @@ import { Link } from 'react-router-dom'
 import { authenticateUser } from '../logic'
 import { useState } from 'react'
 import Feedback from './Feedback'
-import { AuthError, FormatError, ContentError } from 'notes-errors'
+import { AuthError } from 'notes-errors'
 
-export default function ({ onSignedIn }) {
+export default function({ onSignedIn }) {
     const [error, setError] = useState({})
 
-    const handleSignIn = async (email, password) => {
+    const handleSignIn = (email, password) => {
         try {
-            const token = await authenticateUser(email, password)
+            authenticateUser(email, password)
+                .then(token => sessionStorage.token = token)
+                .then(onSignedIn)
+                .catch(error => {
+                    if (error instanceof AuthError)
+                        return setError({ message: error.message, level: 'warning' })
 
-            sessionStorage.token = token
-
-            onSignedIn()
-        } catch (error) { // NOTE this catch now allows you to handle sync and async errors in one place (one of the many advantages of async-await)
-            if (error instanceof AuthError || error instanceof TypeError || error instanceof FormatError || error instanceof ContentError)
+                    setError({ message: error.message, level: 'error' })
+                })
+        } catch (error) {
+            if (error instanceof AuthError)
                 return setError({ message: error.message, level: 'warning' })
 
             setError({ message: error.message, level: 'error' })

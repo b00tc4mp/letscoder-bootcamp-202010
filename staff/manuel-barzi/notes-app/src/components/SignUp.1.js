@@ -8,12 +8,17 @@ import Feedback from './Feedback'
 function SignUp({ onSignedUp }) {
   const [error, setError] = useState()
 
-  const handleSignUp = async (fullname, email, password) => {
+  const handleSignUp = (fullname, email, password) => {
     try {
-      await registerUser(fullname, email, password)
+      registerUser(fullname, email, password)
+        .then(onSignedUp)
+        .catch(error => {
+          if (error instanceof ConflictError)
+            return setError({ message: error.message, level: 'warning' })
 
-      onSignedUp()
-    } catch (error) { // NOTE this catch now allows you to handle sync and async errors in one place (one of the many advantages of async-await)
+          setError({ message: error.message, level: 'error' })
+        })
+    } catch (error) {
       if (error instanceof ConflictError || error instanceof TypeError || error instanceof FormatError || error instanceof ContentError)
         return setError({ message: error.message, level: 'warning' })
 

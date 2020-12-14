@@ -1,7 +1,6 @@
 import { call } from 'notes-utils'
 import { validateEmail, validatePassword } from './helpers/validations'
 import context from './context'
-import { AuthError } from 'notes-errors'
 
 export default (function (email, password) {
     validateEmail(email)
@@ -16,12 +15,7 @@ export default (function (email, password) {
             if (status !== 200) {
                 const { error } = JSON.parse(body)
 
-                switch (status) {
-                    case 401:
-                        throw new AuthError(error)
-                    default:
-                        throw new Error(error)
-                }
+                throw new Error(error)
             }
 
             const { token } = JSON.parse(body)

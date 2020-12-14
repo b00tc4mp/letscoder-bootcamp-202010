@@ -6,7 +6,6 @@ require('dotenv').config()
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('notes-utils/randoms')
 const { mongoose, models: { User } } = require('notes-data')
 const bcrypt = require('bcryptjs')
-const { AuthError } = require('notes-errors')
 
 const { env: { MONGODB_URL, REACT_APP_API_URL: API_URL } } = process
 
@@ -41,7 +40,7 @@ describe('authenticateUser()', () => {
             it('should fail on wrong e-mail', () =>
                 authenticateUser(`wrong${email}`, password)
                     .catch(error => {
-                        expect(error).toBeInstanceOf(AuthError)
+                        expect(error).toBeInstanceOf(Error)
 
                         expect(error.message).toBe('wrong credentials')
                     })
@@ -50,7 +49,7 @@ describe('authenticateUser()', () => {
             it('should fail on wrong password', () =>
                 authenticateUser(email, `wrong${password}`)
                     .catch(error => {
-                        expect(error).toBeInstanceOf(AuthError)
+                        expect(error).toBeInstanceOf(Error)
 
                         expect(error.message).toBe('wrong credentials')
                     })
@@ -71,7 +70,7 @@ describe('authenticateUser()', () => {
         it('should fail on valid credentials', () =>
             authenticateUser(email, password)
                 .catch(error => {
-                    expect(error).toBeInstanceOf(AuthError)
+                    expect(error).toBeInstanceOf(Error)
 
                     expect(error.message).toBe('wrong credentials')
                 })
