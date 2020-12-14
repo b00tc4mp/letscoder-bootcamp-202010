@@ -1,11 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrievePetImage = require('./save-pet-image')
-const { User, Pet } = require('../models')
+const { models: { User, Pet }, mongoose } = require('adogtapp-data')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process

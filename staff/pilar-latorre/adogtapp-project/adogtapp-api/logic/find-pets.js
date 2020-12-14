@@ -1,6 +1,4 @@
-const mongoose = require('mongoose')
-const { Types: { ObjectId } } = mongoose
-const { User, Pet } = require('../models')
+const { models: { User, Pet }, mongoose: { Types: { ObjectId } } , mongoose} = require('adogtapp-data')
 
 module.exports = function (shelterId, queryShelter, city, queryPet, species, breed ) {
     //poner validations

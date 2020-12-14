@@ -1,10 +1,9 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const registerUser = require('./register-user')
-const { User } = require('../models')
+const { models: { User }, mongoose } = require('adogtapp-data')
 const bcrypt = require('bcryptjs')
 const {ContentError} = require('../errors')
 

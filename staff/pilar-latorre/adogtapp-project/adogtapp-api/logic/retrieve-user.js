@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { User } = require('../models')
+const { models: { User } } =require('adogtapp-data')
 
 /**
  * Retrieves a user by its id

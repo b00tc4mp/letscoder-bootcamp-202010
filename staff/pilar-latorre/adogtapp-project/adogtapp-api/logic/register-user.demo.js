@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const mongoose = require('mongoose')
 const registerUser = require('./register-user')
-const { User } = require('../models')
+const { models: { User } } =require('adogtapp-data')
 
 const { env: { MONGODB_URL } } = process
 

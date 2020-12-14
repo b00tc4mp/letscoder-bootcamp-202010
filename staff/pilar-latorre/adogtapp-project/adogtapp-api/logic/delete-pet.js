@@ -1,6 +1,7 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Pet } = require('../models')
+const { models: { Pet } } =require('adogtapp-data')
+
 
 /**
  * Retrieves a pet by its id

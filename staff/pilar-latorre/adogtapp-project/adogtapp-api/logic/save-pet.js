@@ -1,8 +1,6 @@
 const { validateId, validateName, validateBreed, validateColor, validateDescription} = require('./helpers/validations')
-const { ObjectId } = require('mongodb')
 const { NotFoundError } = require('../errors')
-const { Pet } = require('../models')
-const { User } = require('../models')
+const { models: { User, Pet }, mongoose: { Types: { ObjectId } } } = require('adogtapp-data')
 
 
 module.exports = function (petId, name, breed, species, color, description, shelter) {

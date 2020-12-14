@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const express = require('express')
-const mongoose = require('mongoose')
+const {mongoose} = require('adogtapp-data')
 const logger = require('./utils/logger')
 const { cors } = require('./middlewares')
 
