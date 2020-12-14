@@ -5,17 +5,16 @@ export default (function (token, queryTags, callback) {
     validateToken(token) 
     validateCallback(callback)
 
-
     const queryParams = {}
 
     if (queryTags) queryParams.queryTags = queryTags
 
 
     const queryString = Object.keys(queryParams).map(key => `${key}=${queryParams[key]}`).join('&')
+    console.log(queryString)
 
 
-
-    call('GET', `http://192.168.0.21:4000/api/users/?${queryString}`,
+    call('GET', `http://192.168.1.131:4000/api/artists/?${queryString}`,
         { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {
@@ -28,8 +27,8 @@ export default (function (token, queryTags, callback) {
                 return callback(new Error(error))
             }
 
-            const products = JSON.parse(response)
+            const users = JSON.parse(response)
 
-            callback(null, products)
+            callback(null, users)
         })
 })

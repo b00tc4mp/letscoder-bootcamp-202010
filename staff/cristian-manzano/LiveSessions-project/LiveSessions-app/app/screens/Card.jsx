@@ -20,19 +20,20 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     overflow: "hidden",
+    flexDirection: "row"
   },
 
   titleActivity: {
     color: "black",
     fontSize: 18,
-    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+    // fontFamily: Platform.OS === "ios" ? "Roboto" : "Avenir",
   },
 
   detailsContainer: {
     padding: 20,
   },
   image: {
-    width: "100%",
+    width: "50%",
     height: 200,
   },
   title: {

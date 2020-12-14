@@ -1,13 +1,18 @@
 const { Schema } = require('mongoose')
 
 module.exports = new Schema({ 
+    
+    title: {
+        type: String,
+        required: true,
+    },
+    
     date: {
         type: Date,
     },
 
-    title: {
-        type: String,
-        required: true,
+    duration: {
+        type: String
     },
 
     description: {

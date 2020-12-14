@@ -7,15 +7,15 @@ const { env: { JWT_SECRET }
 module.exports = (req, res, handleError) => {
     debugger
 
-    const { headers: { authorization }, query: { tags } } = req;
-
-    const token = authorization.replace('Bearer ', '')
+    const { query: {queryTags} } = req;
+    //const token = authorization.replace('Bearer ', '')
+    // console.log(query)
 
     try {
 
-        const { sub: userId } = jwt.verify(token, JWT_SECRET)
+        //const { sub: userId } = jwt.verify(token, JWT_SECRET)
         debugger
-        searchArtists(userId, tags)
+        searchArtists(queryTags)
             .then(users => res.status(200).json(users))
             .catch(handleError)
 

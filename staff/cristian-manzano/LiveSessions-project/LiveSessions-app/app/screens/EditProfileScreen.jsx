@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { Alert, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
@@ -45,7 +45,6 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                     >
                 </TextInput>
 
-
                 <TextInput
                     placeholder=' City'
                     style={styles.inputsSignUp}
@@ -59,7 +58,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                     placeholder=' Music Tags (Rock, Jazz, punk, etc)'
                     style={styles.inputsSignUp}
                     placeholderTextColor="#343a40"
-                    onChangeText={tags => setTags(tags ? tags.split(',') : [])}
+                    onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
                     defaultValue={user.tags ? ' ' + user.tags : ''}
                     >
                 </TextInput>

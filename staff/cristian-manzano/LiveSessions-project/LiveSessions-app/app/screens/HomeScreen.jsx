@@ -11,6 +11,7 @@ import ArtistProfileScreen from './ArtistProfileScreen'
 import PromoterProfileScreen from './PromoterProfileScreen'
 import EditProfileScreen from './EditProfileScreen'
 import ArtistsMap from './ArtistsMap'
+import DetailArtistProfileScreen from './DetailArtistProfileScreen'
 
 
 export default function Home({ onHandleLogout }) {
@@ -86,22 +87,30 @@ export default function Home({ onHandleLogout }) {
             if(error) return Alert.alert(error.message)
             console.log(users)
             setUsers(users)
-            setView('artist-map')
+            setView('results')
           })
         } catch(error) {
           Alert.alert(error.message)
         }
       })
-      }
+    }
 
+    const handleonGoToArtistProfile = () => {
+      setView('detail-artist-profile')
+    }
 
   return (
 
     <View>
       { view ===  'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch}/>}
-      { view ===  'artist-profile' && <View><ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} /> 
-      <ArtistsMap users={users} /></View>} 
+      { view ===  'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />} 
       { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile}/>}
+      { view === 'results' && <View style={{
+                backgroundColor: "#f8f4f4",
+                paddingHorizontal: 20,
+              }}><ArtistsMap users={users} onGoToArtistProfile={handleonGoToArtistProfile}/>
+              </View>}
+      { view === 'detail-artist-profile' && <DetailArtistProfileScreen users={users}/>}
     </View> 
   );
 

@@ -24,7 +24,7 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
-router.get(`/api/users/?${queryString}`, withErrorHandling(handleSearchArtists))
+router.get(`/api/artists`, withErrorHandling(handleSearchArtists))
 
 
 

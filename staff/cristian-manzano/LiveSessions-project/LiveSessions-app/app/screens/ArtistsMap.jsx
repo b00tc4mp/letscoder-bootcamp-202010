@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "./Card";
-import { FlatList, ScrollView, TouchableWithoutFeedback } from "react-native";
+import { FlatList, ScrollView, TouchableOpacity } from "react-native";
 
-function Listing({ users }) {
+export default function ArtistMap({ users, onGoToArtistProfile }) {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -12,17 +12,15 @@ function Listing({ users }) {
         data={users}
         keyExtractor={users.id}
         renderItem={({ item }) => (
-          <TouchableWithoutFeedback
-            onPress={() => {
-              console.log("hello");
-            }}
-          >
+          
+          <TouchableOpacity onPress={onGoToArtistProfile}>
             <Card
-              title={item.artistName}
-              subTitle={item.tags}
+              artistName={item.artistName}
+              tags={item.tags}
               image={require('../assets/default-profile-image.png')}
             />
-          </TouchableWithoutFeedback>
+            </TouchableOpacity>
+          
         )}
       />
     </ScrollView>
