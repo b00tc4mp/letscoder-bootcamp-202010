@@ -1226,3 +1226,27 @@ info 2020-12-14T10:47:48.949Z - stopping server
 info 2020-12-14T10:57:05.850Z - starting server
 info 2020-12-14T10:57:05.989Z - undefined
 info 2020-12-14T10:59:19.530Z - stopping server
+info 2020-12-14T15:54:19.026Z - starting server
+info 2020-12-14T15:54:19.192Z - undefined
+info 2020-12-14T15:57:04.901Z - stopping server
+info 2020-12-14T15:57:08.186Z - starting server
+info 2020-12-14T15:57:08.305Z - undefined
+error 2020-12-14T16:01:02.134Z - NotFoundError: product with id 5fd61189cd071a1f2061153f not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:11:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T16:01:04.130Z - NotFoundError: product with id 5fd61189cd071a1f2061153f not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:11:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T16:01:31.594Z - stopping server
+info 2020-12-14T16:01:54.539Z - starting server
+info 2020-12-14T16:01:54.657Z - undefined
+error 2020-12-14T16:12:46.303Z - NotFoundError: product with id 5fd61189cd071a1f2061153f not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:11:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T16:12:47.398Z - NotFoundError: product with id 5fd61189cd071a1f2061153f not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:11:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T16:12:48.222Z - NotFoundError: product with id 5fd61189cd071a1f2061153f not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:11:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T18:16:12.424Z - stopping server

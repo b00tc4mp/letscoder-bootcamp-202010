@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { models: {Product, User } } = require('mercuris-data')
+const { models: { Product, User } } = require('mercuris-data')
 
 module.exports = function (productId) {
     validateId(productId)
@@ -25,8 +25,6 @@ module.exports = function (productId) {
                     product.id = _id.toString()
 
                     delete product._id
-
-                    delete user._id
 
                     delete user.name
 
