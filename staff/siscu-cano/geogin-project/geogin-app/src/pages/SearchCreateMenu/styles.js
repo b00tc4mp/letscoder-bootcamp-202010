@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 
 export const MenuListWrapper = styled.div`
-  padding: 44px 24px 24px 24px;
+  padding: 24px;
   .Menu {
     display: flex;
     flex-direction: column;
@@ -15,27 +15,32 @@ export const MenuListWrapper = styled.div`
     }
   }
   h2 {
-      margin: 40px 0 10px 0;
-      display: block;
-      color: #fff;
-      text-align: center;
+    margin: 40px 0 10px 0;
+    display: block;
+    color: #fff;
+    text-align: center;
   }
   h3 {
-      margin: 0 0 30px 0;
-      display: block;
-      color: #fff;
-      text-align: center;
+    margin: 0 0 30px 0;
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 21px;
+    letter-spacing: 1px;
+    text-shadow: 0px -2px #0854ff5c;
   }
   p {
     color: #63e9ff;
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    font-size: 11px; 
-  } 
+    font-size: 11px;
+  }
   .qr-game {
-      display: block;
-      margin: 0 auto 20px auto;
+    display: block;
+    margin: 0 auto 20px auto;
   }
 `
 
