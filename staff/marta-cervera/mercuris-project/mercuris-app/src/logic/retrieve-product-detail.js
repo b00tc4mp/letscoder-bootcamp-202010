@@ -16,7 +16,6 @@ export default function (id, callback) {
 
                 return callback(new Error(error))
             }
-
             const result = JSON.parse(response)
 
             callback(null,result)

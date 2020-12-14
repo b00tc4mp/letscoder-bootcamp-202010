@@ -20,6 +20,7 @@
     "jsonwebtoken": "^8.5.1",
     "mercuris-data": "file:../mercuris-data",
     "nodemon": "^2.0.6",
+    "nyc": "^15.1.0",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {

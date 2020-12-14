@@ -57,7 +57,7 @@ describe('saveProductImage()', () => {
     })
 
     describe('on a non existing user', () => {
-        let stream, productId
+        
 
         beforeEach(() => {
 

@@ -64,20 +64,18 @@ function App(props) {
 
     props.history.push('/sign-in')
 }
-
-  
-
+ 
   return (
     <>
-    <Header></Header>      
-      <main className="App-header">
+    <Header/>      
+      <div className="App-header">
         <Route exact path='/' render={() => <Access  onGoToSearch={handleGoToSearch} />} />
         <Route path='/sign-up' render={() => <SignUp onSignUp={handleSignUp} error={error} />} /> 
         <Route path='/sign-in' render={() => <SignIn onSignIn={handleSignIn} error ={error}/>} /> 
         <Route path='/search-products' render={() => <SearchProducts error ={error}/>} />
         <Route path='/home' render={() => token ? <Home onLogout={handleLogout} /> : <Redirect to ='/'/>} />      
-      </main>
-    <Footer></Footer>
+      </div>
+    <Footer/>
       
     </>
   );

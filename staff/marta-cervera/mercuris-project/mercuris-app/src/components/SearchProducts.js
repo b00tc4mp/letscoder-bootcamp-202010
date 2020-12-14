@@ -3,7 +3,7 @@ import FindProducts from './FindProducts'
 import DetailProduct from './DetailProduct'
 import { useState, useEffect } from 'react'
 import { findProducts, retrieveProductDetail } from '../logic'
-import{ Feedback } from '.'
+
 
 export default function ({error}) {
     const [view, setView] = useState('find-products')
