@@ -19,19 +19,17 @@ exports.pdf = async (req, res) => {
     const pdfDoc = new PDFDocument()
 
     // Pipe its output somewhere, like to a file or HTTP response
-    pdfDoc.pipe(fs.createWriteStream(pdfPath))
-    .on('finish', () => {
-        cloud.uploads(pdfPath).then((result) => {
-            res
-            .status(200)
-            .json({
-                message: "success",
-                uploadResponse: result.url.replace('.pdf', '.jpg')
-            })
-            .send()
+    pdfDoc.pipe(fs.createWriteStream(pdfPath)).on('finish', () => {
+      cloud.uploads(pdfPath).then(result => {
+        res
+          .status(200)
+          .json({
+            message: 'success',
+            uploadResponse: result.url.replace('.pdf', '.jpg')
           })
-
-      });
+          .send()
+      })
+    })
 
     pdfDoc.fontSize(13)
     pdfDoc
