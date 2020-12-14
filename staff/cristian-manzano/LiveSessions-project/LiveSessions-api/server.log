@@ -2511,3 +2511,84 @@ info 2020-12-14T08:18:46.437Z - stopping server
 info 2020-12-14T08:19:10.875Z - starting server
 info 2020-12-14T08:19:13.124Z - server running on port 4000
 info 2020-12-14T08:19:55.662Z - stopping server
+info 2020-12-14T08:30:23.262Z - starting server
+info 2020-12-14T08:30:24.102Z - server running on port 4000
+info 2020-12-14T08:44:11.888Z - stopping server
+info 2020-12-14T08:44:35.980Z - starting server
+info 2020-12-14T08:44:38.076Z - server running on port 4000
+info 2020-12-14T16:29:45.887Z - stopping server
+info 2020-12-14T16:30:05.367Z - starting server
+error 2020-12-14T16:30:06.590Z - Error: Cannot find module 'busboy'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-save-image.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-save-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/index.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T16:30:06.770Z - stopping server
+info 2020-12-14T16:30:43.247Z - starting server
+error 2020-12-14T16:30:44.375Z - Error: Cannot find module 'busboy'
+Require stack:
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-save-image.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/index.js
+- /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-save-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/index.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T16:30:44.396Z - stopping server
+info 2020-12-14T16:31:52.318Z - starting server
+info 2020-12-14T16:31:55.439Z - server running on port 4000
+info 2020-12-14T16:36:25.166Z - stopping server
+info 2020-12-14T17:03:36.527Z - starting server
+info 2020-12-14T17:03:40.633Z - server running on port 4000
+info 2020-12-14T17:15:24.039Z - stopping server
+info 2020-12-14T17:15:32.525Z - starting server
+info 2020-12-14T17:15:33.285Z - server running on port 4000
+info 2020-12-14T17:19:56.253Z - stopping server
+info 2020-12-14T17:20:16.917Z - starting server
+info 2020-12-14T17:20:18.633Z - server running on port 4000
+info 2020-12-14T17:20:50.358Z - stopping server
+info 2020-12-14T17:21:18.661Z - starting server
+info 2020-12-14T17:21:20.191Z - server running on port 4000
+info 2020-12-14T17:24:25.302Z - stopping server
+info 2020-12-14T17:24:33.220Z - starting server
+info 2020-12-14T17:24:34.463Z - server running on port 4000
+info 2020-12-14T17:27:21.352Z - stopping server
+info 2020-12-14T17:29:14.125Z - starting server
+info 2020-12-14T17:29:16.101Z - server running on port 4000
+info 2020-12-14T17:33:15.952Z - starting server
+info 2020-12-14T17:33:17.346Z - server running on port 4000
+info 2020-12-14T17:46:26.263Z - starting server
+info 2020-12-14T17:46:27.944Z - server running on port 4000
+info 2020-12-14T19:19:57.647Z - stopping server

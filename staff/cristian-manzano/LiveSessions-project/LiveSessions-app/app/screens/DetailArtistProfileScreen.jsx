@@ -2,69 +2,80 @@ import React from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, users }) {
+function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, item }) {
 
-        return (
+    return (
 
-            <SafeAreaView style={styles.artistProfileContainer}>
-                <KeyboardAvoidingView
-                    behavior={Platform.OS == "ios" ? "padding" : "height"}
-                >
-                    <ScrollView>
-                            <View style={styles.artistProfileHeader}>
-                                <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
+        <SafeAreaView style={styles.artistProfileContainer}>
+            <KeyboardAvoidingView
+                behavior={Platform.OS == "ios" ? "padding" : "height"}
+            >
+                <ScrollView>
+                    <View style={styles.artistProfileHeader}>
+                        <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
 
+                        <TouchableOpacity onPress={onGoToPetitions}>
+                            <Image style={styles.PetitionsIcon} source={require('../assets/petitions-image.png')} />
+                        </TouchableOpacity>
 
-                                <TouchableOpacity onPress={onLogOut}>
-                                    <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
-                                </TouchableOpacity>
+                        <TouchableOpacity onPress={onLogOut}>
+                            <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.artistProfileBody}>
+
+                        <TouchableOpacity onPress={onGoToEditProfile}>
+                            <Avatar.Image style={styles.profileAvatar} size={120} source={require('../assets/default-profile-image.png')} />
+                            <Text style={styles.artistName}>@{item.artistName}</Text>
+                        </TouchableOpacity>
+
+                        <View style={styles.linkContainer}>
+
+                            <View style={styles.findMeContainer}>
+                                <Text style={styles.findMeText}>Find me on: </Text>
+                                <Image style={styles.instagramLogo} source={require('../assets/instagram-logo.png')} />
                             </View>
 
-                            <View style={styles.artistProfileBody}>
-
-                                <TouchableOpacity onPress={onGoToEditProfile}>
-                                    <Avatar.Image style={styles.profileAvatar} size={120} source={require('../assets/default-profile-image.png')} />
-                                    <Text style={styles.artistName}>@{users[0].artistName}</Text>
-                                </TouchableOpacity>
-
-                                <View style={styles.linkContainer}>
-
-                                    <View style={styles.findMeContainer}>
-                                        <Text style={styles.findMeText}>Find me on: </Text>
-                                        <Image style={styles.instagramLogo} source={require('../assets/instagram-logo.png')} />
-                                    </View>
-
-                                    <TouchableOpacity onPress={() => Linking.openURL(users[0].youtubeLink)}>
-                                        <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
-                                    </TouchableOpacity>
-
-                                    <TouchableOpacity onPress={() => Linking.openURL(users[0].bandcampLink)}>
-                                        <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
-                                    </TouchableOpacity>
-
-                                    <TouchableOpacity onPress={() => Linking.openURL(users[0].spotifyLink)}>
-                                        <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
-                                    </TouchableOpacity>
-
-                                </View>
-
-                            </View>
-
-                            <TouchableOpacity onPress={onGoToPetitions}>
-                                <Text style={styles.petitionsButton}>Petitions</Text>
+                            <TouchableOpacity onPress={() => Linking.openURL(item.youtubeLink)}>
+                                <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
                             </TouchableOpacity>
 
-                      
-                    </ScrollView>
-                </KeyboardAvoidingView>
-            </SafeAreaView>
-        );
+                            <TouchableOpacity onPress={() => Linking.openURL(item.bandcampLink)}>
+                                <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => Linking.openURL(item.spotifyLink)}>
+                                <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+                    <TouchableOpacity onPress={onGoToPetitions}>
+                        <Text style={styles.petitionsButton}>Petitions</Text>
+                    </TouchableOpacity>
+
+
+                </ScrollView>
+            </KeyboardAvoidingView>
+        </SafeAreaView>
+    );
 }
 
 const styles = StyleSheet.create({
     logo: {
         width: 60,
         height: 60
+    },
+
+    PetitionsIcon: {
+        backgroundColor: "gray",
+        marginTop: "30%",
+        width: 40,
+        height: 40
+
     },
 
     logoutIcon: {
@@ -86,7 +97,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         justifyContent: "flex-end",
         color: "#343a40",
-        tintColor: "#343a40",
         shadowRadius: 50,
         borderWidth: 1
     },

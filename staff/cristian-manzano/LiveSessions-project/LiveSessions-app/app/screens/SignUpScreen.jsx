@@ -12,7 +12,7 @@ function SignUpScreen({ onSignUp }) {
     return (
         <SafeAreaView>
         <KeyboardAvoidingView
-    //   behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
+      behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
     >
         <ScrollView>
             <View style={styles.formSignUp}>
@@ -115,7 +115,8 @@ const styles = StyleSheet.create({
     roleImage: {
         width: 50,
         height: 50,
-        //opacity: "50%",
+        opacity:0.5,
+        // opacity: 50,
         color: "red"
         
     },
@@ -123,7 +124,7 @@ const styles = StyleSheet.create({
     roleImageClicked: {
         width: 50,
         height: 50,
-        //opacity: "100%",
+        opacity:0.9,
         color: "green"
     },
 

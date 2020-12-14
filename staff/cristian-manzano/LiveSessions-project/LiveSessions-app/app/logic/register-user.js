@@ -9,7 +9,7 @@ debugger
     validateCallback(callback)
 
 
-    call('POST', 'http://192.168.0.21:4000/api/users', { 'Content-type': 'application/json' }, 
+    call('POST', 'http://192.168.1.131:4000/api/users', { 'Content-type': 'application/json' }, 
     JSON.stringify({ fullname, email, password, role }),
     (status, response) => {
         if (status === 0)

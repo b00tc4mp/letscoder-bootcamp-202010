@@ -11,6 +11,13 @@ module.exports = new Schema({
         type: Date,
     },
 
+    status: {
+        type: String,
+        required: true,
+        enum: ['ACCEPTED', 'DENIED', 'PENDING'],
+        default: 'PENDING'
+    },
+
     duration: {
         type: String
     },

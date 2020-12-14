@@ -17,7 +17,7 @@ import authenticateUser from './app/logic/authenticate-user';
 
 
 export default function App() {
-  const [view, setView] = useState('sign-up')
+  const [view, setView] = useState('sign-in')
 
   const handleGoToSignUp = () => {
     setView("sign-up")

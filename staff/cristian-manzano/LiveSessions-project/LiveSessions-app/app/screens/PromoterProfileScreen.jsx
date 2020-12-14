@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
@@ -20,7 +20,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                                     placeholder=' Search'
                                     style={styles.search}
                                     placeholderTextColor="#343a40" 
-                                    onChangeText={query => setQuery(query.trim())}>
+                                    onChangeText={query => setQuery(query)}>
                                 </TextInput>
                                 
                                 <TouchableOpacity style={styles.searchButton}
@@ -37,7 +37,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                             <View style={styles.artistProfileBody}>
 
                                 <TouchableOpacity onPress={onGoToEditProfile}>
-                                    <Avatar.Image style={styles.profileAvatar} size={120} source={require('../assets/default-profile-image.png')} />
+                                    <Image style={styles.profileAvatar} style={{ width: 75, height: 75, borderRadius: 37.5 }} source={`../../../LiveSessions-api/data/users/${user.id}.jpg`} />
                                     <Text style={styles.artistName}>@{user.artistName}</Text>
                                 </TouchableOpacity>
 

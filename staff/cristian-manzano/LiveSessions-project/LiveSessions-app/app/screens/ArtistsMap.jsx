@@ -13,7 +13,7 @@ export default function ArtistMap({ users, onGoToArtistProfile }) {
         keyExtractor={users.id}
         renderItem={({ item }) => (
           
-          <TouchableOpacity onPress={onGoToArtistProfile}>
+          <TouchableOpacity onPress={ () => {onGoToArtistProfile ({ item })}}>
             <Card
               artistName={item.artistName}
               tags={item.tags}

@@ -3,5 +3,6 @@ module.exports = {
     authenticateUser: require('./authenticate-user'),
     retrieveUser: require('./retrieve-user'),
     editUser: require('./edit-user'),
-    searchArtists: require('./search-artists')
+    searchArtists: require('./search-artists'),
+    saveUserImage: require('./save-user-image')
 }

@@ -3,7 +3,6 @@ import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, Touchab
 import { Avatar } from 'react-native-paper';
 
 function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, user }) {
-    if (user.role === 'ARTIST')
         return (
 
             <SafeAreaView style={styles.artistProfileContainer}>
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         justifyContent: "flex-end",
         color: "#343a40",
-        tintColor: "#343a40",
         shadowRadius: 50,
         borderWidth: 1
     },

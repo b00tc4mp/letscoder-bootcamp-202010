@@ -1,117 +1,149 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as ImagePicker from "expo-image-picker";
 
-import { Alert, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
 function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
-    const [ fullname, setFullname ] = useState(user.fullname)
-    const [ artistName, setArtistName ] = useState(user.artistName)
-    const [ city, setCity ] = useState(user.city)
-    const [ tags, setTags ] = useState(user.tags)
-    const [ youtubeLink, setYoutubeLink ] = useState(user.youtubeLink)
-    const [ bandcampLink, setBandcampLink ] = useState(user.bandcampLink)
-    const [ spotifyLink, setSpotifyLink ] = useState(user.spotifyLink)
-    const [ description, setDescription ] = useState(user.description)
-    
+    const [fullname, setFullname] = useState(user.fullname)
+    const [artistName, setArtistName] = useState(user.artistName)
+    const [city, setCity] = useState(user.city)
+    const [tags, setTags] = useState(user.tags)
+    const [youtubeLink, setYoutubeLink] = useState(user.youtubeLink)
+    const [bandcampLink, setBandcampLink] = useState(user.bandcampLink)
+    const [spotifyLink, setSpotifyLink] = useState(user.spotifyLink)
+    const [description, setDescription] = useState(user.description)
+
+    const [imageUri, setImageUri] = useState();
+    const requestPermission = async () => {
+        const { granted } = await ImagePicker.requestCameraPermissionsAsync();
+        if (!granted) alert("You need to enable permission to access the library");
+    };
+    useEffect(() => {
+        requestPermission();
+    }, []);
+
+    const selectImage = async () => {
+        const result = await ImagePicker.launchImageLibraryAsync();
+        if (!result.cancelled) setImageUri({ localUri: result.uri });
+        else console.log("Error reading image");
+    };
+
     return (
         <SafeAreaView>
-        <KeyboardAvoidingView
-    //   behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
-    >
-        <ScrollView>
-            <View style={styles.formEditProfile}>
-                <View style={styles.signUpHeader}>
-                <Image style={styles.logo} source={require('../assets/logo.png')} />
-       
-                </View>
+            <KeyboardAvoidingView
+                behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
+            >
+                <ScrollView>
+                    <View style={styles.formEditProfile}>
+                        <View style={styles.signUpHeader}>
+                            <Image style={styles.logo} source={require('../assets/logo.png')} />
 
-                <TextInput
-                    placeholder=' Fullname'
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40" 
-                    onChangeText={fullname => setFullname(fullname)}
-                    
-                    defaultValue={(user.fullname ? ' ' + user.fullname : '')}
-                    >
-                </TextInput>
+                        </View>
 
-                <TextInput
-                    placeholder=' Artist Name'
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={artistName => setArtistName(artistName)}
-                    defaultValue={user.artistName ? ' ' + user.artistName : ''}
-                    >
-                </TextInput>
+                        <View>
+                            
+                            <Image
+                                source={
+                                imageUri
+                                    ? { uri: imageUri.localUri }
+                                    : require("../assets/default-profile-image.png")
+                                }
+                                style={{ width: 200, height: 200 }}
+                            />
+                            <Button
+                                /* style={styles.imageUpload} */ title="select image"
+                                onPress={selectImage}
+                            />
+                        </View> 
 
-                <TextInput
-                    placeholder=' City'
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={city => setCity(city)}
-                    defaultValue={user.city ? ' ' + user.city : ''}
-                    >
-                </TextInput>
+                        <TextInput
+                            placeholder=' Fullname'
+                            style={styles.inputsSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={fullname => setFullname(fullname)}
 
-                <TextInput
-                    placeholder=' Music Tags (Rock, Jazz, punk, etc)'
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
-                    defaultValue={user.tags ? ' ' + user.tags : ''}
-                    >
-                </TextInput>
+                            defaultValue={(user.fullname ? ' ' + user.fullname : '')}
+                        >
+                        </TextInput>
 
-                <TextInput
-                    placeholder=" Youtube Link"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
-                    defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
-                    >
-                </TextInput>
+                        <TextInput
+                            placeholder=' Artist Name'
+                            style={styles.inputsSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={artistName => setArtistName(artistName)}
+                            defaultValue={user.artistName ? ' ' + user.artistName : ''}
+                        >
+                        </TextInput>
 
-                <TextInput
-                    placeholder=" Bandcamp Link"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
-                    defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
-                    >
-                </TextInput>
+                        <TextInput
+                            placeholder=' City'
+                            style={styles.inputsSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={city => setCity(city)}
+                            defaultValue={user.city ? ' ' + user.city : ''}
+                        >
+                        </TextInput>
 
-                <TextInput
-                    placeholder=" Spotify Link"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
-                    defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
-                    >
-                </TextInput>
+                        <TextInput
+                            placeholder=' Music Tags (Rock, Jazz, punk, etc)'
+                            style={styles.inputsSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
+                            defaultValue={user.tags ? ' ' + user.tags : ''}
+                        >
+                        </TextInput>
 
-                <TextInput
-                    placeholder=' Description'
-                    style={styles.descriptionSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={description => setDescription(description)}
-                    defaultValue={user.description ? ' ' + user.description : ""}
-                    >
-                </TextInput>
+                        <TextInput
+                            placeholder=" Youtube Link"
+                            style={styles.inputsSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
+                            defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
+                        >
+                        </TextInput>
 
-                <TouchableOpacity style={styles.editProfileButton}
-                onPress={ () => {onEditProfile ({ fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description })}}>
-                    <Text style={styles.buttonText}>Save!</Text>
-                </TouchableOpacity>
+                        <TextInput
+                            placeholder=" Bandcamp Link"
+                            style={styles.inputsSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
+                            defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
+                        >
+                        </TextInput>
 
-                <TouchableOpacity style={styles.editProfileButton}
-                onPress={ () => {onCancelEditProfile()}}>
-                    <Text style={styles.buttonText}>Cancel!</Text>
-                </TouchableOpacity>
+                        <TextInput
+                            placeholder=" Spotify Link"
+                            style={styles.inputsSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
+                            defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
+                        >
+                        </TextInput>
 
-            </View>
-        </ScrollView>
-        </KeyboardAvoidingView>
+                        <TextInput
+                            placeholder=' Description'
+                            style={styles.descriptionSignUp}
+                            placeholderTextColor="#343a40"
+                            onChangeText={description => setDescription(description)}
+                            defaultValue={user.description ? ' ' + user.description : ""}
+                        >
+                        </TextInput>
+
+                        <TouchableOpacity style={styles.editProfileButton}
+                            onPress={() => { onEditProfile({ imageUri, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description }) }}>
+                            <Text style={styles.buttonText}>Save!</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.editProfileButton}
+                            onPress={() => { onCancelEditProfile() }}>
+                            <Text style={styles.buttonText}>Cancel!</Text>
+                        </TouchableOpacity>
+
+                    </View>
+                </ScrollView>
+            </KeyboardAvoidingView>
         </SafeAreaView>
     );
 }
@@ -161,7 +193,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         backgroundColor: "gray",
         width: "30%",
-        height: "5%" 
+        height: "5%"
     }
 })
 
