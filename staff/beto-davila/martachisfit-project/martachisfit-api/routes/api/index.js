@@ -1,5 +1,6 @@
 const { Router } = require('express')
 const jsonBodyParser = require('../../middlewares/json-body-parser')
+const handleRetrieveSavedWorkouts = require('./handlers/handle-retrieve-saved-workouts')
 
 const {
     handleRegisterUser,
@@ -61,6 +62,9 @@ router.patch('/api/users/articles/:articleId', jsonBodyParser, withErrorHandling
 
 // retrieve user diet
 router.get('/api/users/diets', withErrorHandling(handleRetrieveDiet))
+
+// retrieve user workouts
+router.get('/api/users/workouts', withErrorHandling(handleRetrieveSavedWorkouts))
 
 // retrieve workout by level
 router.get('/api/users/:level/workouts', withErrorHandling(handleRetrieveWorkout))

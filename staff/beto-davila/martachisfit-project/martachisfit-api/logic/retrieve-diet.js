@@ -22,7 +22,7 @@ module.exports = function (userId) {
 
             if (calories < 2000) {
 
-                const diets = ['5fcdf030c36fd45719909463', '5fcdf030c36fd45719909466', '5fcdf030c36fd45719909469']
+                let diets = ['5fcdf030c36fd45719909463', '5fcdf030c36fd45719909466', '5fcdf030c36fd45719909469']
 
                 let random = Math.floor(Math.random() * diets.length)
 

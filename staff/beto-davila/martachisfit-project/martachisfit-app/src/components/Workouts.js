@@ -6,7 +6,7 @@ export default function Workouts({ onChosenLevel, onGoToMovements }) {
         <div className="workouts-pseudo">
             <div className="workouts__pre">
                 <h3 className="workouts__pre-title">Antes de nada....</h3>
-                <h4 className="workouts__pre-question">¿Conoces bien los principales movimientos de musculación?, te los ilustramos por <a href='#' onClick={onGoToMovements} className="workouts__movements">aquí</a></h4>
+                <h3 className="workouts__pre-question">¿Conoces bien los principales movimientos de musculación?, te los ilustramos <a href='#' onClick={onGoToMovements} className="workouts__movements">aquí</a></h3>
             </div>
             <h3 className="workouts__title"> ¿Cuál es tu nivel?</h3>
             <div className="workouts__container">

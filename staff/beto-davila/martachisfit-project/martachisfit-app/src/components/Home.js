@@ -15,7 +15,8 @@ import {
     retrieveChosenDiet,
     retrieveWorkout,
     retrieveMuscularGroup,
-    toggleWorkoutsUser
+    toggleWorkoutsUser,
+    retrieveSavedWorkouts
 } from '../logic'
 
 import logo from '../../src/logo.png'
@@ -53,10 +54,11 @@ export default function Home() {
     const [savedRecipes, setSavedRecipes] = useState()
     const [calories, setCalories] = useState()
     const [likedRecipe, setLikedRecipe] = useState()
-    const [savedWorkout, setSavedWorkout] = useState()
     const [workout, setWorkout] = useState()
     const [error, setError] = useState(null)
     const [movements, setMovements] = useState()
+    const [myWorkouts, setSavedWorkouts] = useState()
+    const [likedWorkout, setLikedWorkout] = useState()
 
     const { token } = sessionStorage
 
@@ -88,7 +90,7 @@ export default function Home() {
     const handleGoToRecipes = () => {
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert('No se pudo recuperar el usuario')
+                if (error) return alert('No se pudo recuperar el usuario. Error de servidor.')
 
                 const { fullname } = user
                 setName(fullname)
@@ -206,7 +208,7 @@ export default function Home() {
                         if (error) return alert("Hubo un problema intentando recuperar la rutina de entrenamiento :(")
 
                         const { id: workoutId } = workout
-                        myWorkouts.includes(workoutId) ? setSavedWorkout(true) : setSavedWorkout(false)
+                        myWorkouts.includes(workoutId) ? setLikedWorkout(true) : setLikedWorkout(false)
                         setWorkout(workout)
                         setView('workout')
                     })
@@ -242,7 +244,12 @@ export default function Home() {
                     if (error) return alert(error.message)
 
                     setSavedRecipes(savedRecipes)
-                    setView("profile")
+                    retrieveSavedWorkouts(token, (error, savedWorkouts) => {
+                        if (error) return alert(error.message)
+
+                        setSavedWorkouts(savedWorkouts)
+                        setView("profile")
+                    })
                 })
             })
         } catch (error) {
@@ -284,6 +291,26 @@ export default function Home() {
         }
     }
 
+    const handleRetrieveWorkout = level => {
+        try {
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
+
+                const { myWorkouts } = user
+                retrieveWorkout(level, (error, workout) => {
+                    if (error) return alert('Hubo un problema tratando de recuperar la rutina')
+
+                    const { id: workoutId } = workout
+                    myWorkouts.includes(workoutId) ? setLikedWorkout(true) : setLikedWorkout(false)
+                    setWorkout(workout)
+                    setView('workout')
+                })
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
     const handleRetrieveChosenDiet = dietType => {
         try {
             retrieveChosenDiet(token, dietType, (error, chosenDiet) => {
@@ -298,19 +325,6 @@ export default function Home() {
         }
     }
 
-    const handleRetrieveWorkout = level => {
-        try {
-            retrieveWorkout(level, (error, workout) => {
-                if (error) alert(error.message)
-
-                setWorkout(workout)
-                setView('workout')
-            })
-
-        } catch (error) {
-            alert(error.message)
-        }
-    }
 
     const handleGoToMovements = () => {
         setView('movements')
@@ -340,7 +354,9 @@ export default function Home() {
     }
 
 
-    return <><div className="home">
+    return <>
+        <div className="home__logo-title-dropdown">
+        <div className="home">
         <div className="home__header">
             <img className="home__logo" alt="logo" src={logo} height="100" width="100"></img>
             <div className="home__title-user">
@@ -360,11 +376,12 @@ export default function Home() {
             onGoToProfile={handleGoToProfile}
             onGoToWorkouts={handleGoToWorkouts}
         />
+        </div>
         {view === 'welcome' && <Welcome />}
         {view === 'diet-design' && <DietDesign />}
         {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
         {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error} />}
-        {view === 'workout' && <Workout error={error} onSaveWorkout={handleSaveWorkout} onGoToMovements={handleGoToMovements} source={workout} saved={savedWorkout}/>}
+        {view === 'workout' && <Workout like={likedWorkout} error={error} onSaveWorkout={handleSaveWorkout} onGoToMovements={handleGoToMovements} source={workout} />}
         {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
         {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
         {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToDiets={handleGoToUserDiet} />}
@@ -385,6 +402,8 @@ export default function Home() {
                 name={name}
                 savedArticles={savedArticles}
                 onGoToChosenArticle={handleGoToChosenArticle}
+                onGoToMyWorkout={handleRetrieveWorkout}
+                myWorkouts={myWorkouts}
             />}
         {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle} />}
         {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name} />}

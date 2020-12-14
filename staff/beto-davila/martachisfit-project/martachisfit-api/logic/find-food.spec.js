@@ -24,7 +24,7 @@ describe('SPEC findFood()', () => {
             query = name
 
             const food = { name, calories, serving, carbs, protein, fats }
-            debugger
+            
             return Food.create(food)
                 .then(food => foodId = food._id)
         })

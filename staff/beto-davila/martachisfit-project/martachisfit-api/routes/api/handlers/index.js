@@ -19,5 +19,6 @@ module.exports = {
     handleRetrieveChosenDiet: require('./handle-retrieve-chosen-diet'),
     handleRetrieveWorkout: require('./handle-retrieve-workout'),
     handleRetrieveMuscularGroup: require('./handle-retrieve-muscular-group'),
-    handleToggleWorkoutsUser: require('./handle-toggle-workouts-user')
+    handleToggleWorkoutsUser: require('./handle-toggle-workouts-user'),
+    handleRetrieveSavedWorkouts: require('./handle-retrieve-saved-workouts')
 }

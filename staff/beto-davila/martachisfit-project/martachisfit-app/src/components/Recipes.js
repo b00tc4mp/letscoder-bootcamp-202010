@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown'
+import Feedback from './Feedback'
 import './styles/Recipes.sass'
 
 export default function Recipes ({ onGoToRecipe, source }) {

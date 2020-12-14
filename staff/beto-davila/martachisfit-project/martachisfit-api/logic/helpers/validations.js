@@ -39,13 +39,13 @@ module.exports = {
         if (!name.trim().length) throw new ContentError('name is empty or blank')
     },
 
-    validateGender(gender) {
-        if (typeof gender !== 'string') throw new TypeError(gender + ' is not a gender')
+    // validateGender(gender) {
+    //     if (typeof gender !== 'string') throw new TypeError(gender + ' is not a gender')
 
-        if (!gender.trim().length) throw new ContentError('gender is empty or blank')
+    //     if (!gender.trim().length) throw new ContentError('gender is empty or blank')
 
-        if (gender !== 'hombre' && gender !== 'mujer') throw new ValueError('gender is not "hombre" or "mujer"')
-    },
+    //     if (gender !== 'hombre' && gender !== 'mujer') throw new ValueError('gender is not "hombre" or "mujer"')
+    // },
 
     validateNumber(number) {
         if (typeof number !== 'number') throw new TypeError(number + ' is not a number')

@@ -17,6 +17,14 @@
 
     .user-profile
 
+        &__workout-container
+            background-color: #eaf0f0
+            max-width: 320px
+            margin: 2rem auto
+            border-radius: 1rem
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
         &__recipes-container
             background-color: #eaf0f0
             max-width: 320px
@@ -79,6 +87,18 @@
             font-size: .8rem
             text-align: center
             margin: 0
+
+        &__workout-list
+            list-style: none
+            font-size: .8rem
+            text-align: center
+            margin: 0
+
+        &__workout
+            padding: 0
+    
+            &--link
+                color: #303236
 
         &__recipes-carousel
             width: 90%
@@ -139,31 +159,41 @@
 
     .user-profile
 
+        &__workout
+            padding: 0
+
         &__container
             display: grid
-            grid-template-columns: 1fr 1fr 1fr
+            grid-template-columns: 1fr 1fr
             margin-top: 2.5rem
+            justify-items: center
+
+        &__workout-container
+            background-color: #eaf0f0
+            min-width: 350px
+            border-radius: 1rem
+            margin: 1rem 0
+            padding: 0 0 .3rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
 
         &__recipes-container
             background-color: #eaf0f0
-            max-width: 400px
-            margin: 2rem 0 auto 2rem
+            min-width: 350px
             border-radius: 1rem
+            margin: 1rem 0
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
 
         &__articles-container
             background-color: #eaf0f0
-            max-width: 400px
-            margin: 2rem 1rem auto 1rem
+            min-width: 350px
             border-radius: 1rem
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
 
         &__record-container
             background-color: #eaf0f0
-            max-width: 400px
-            margin: 2rem auto auto 0
+            min-width: 350px
             border-radius: 1rem
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
@@ -206,6 +236,15 @@
             font-size: .8rem
             text-align: center
             margin: 0
+        
+        &__workout-list
+            list-style: none
+            font-size: .8rem
+            text-align: center
+            margin: 0
+
+        &__workout--link
+            color: #303236
 
         &__recipes-carousel
             width: 90%

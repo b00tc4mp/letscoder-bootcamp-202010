@@ -24,6 +24,7 @@ import context from './context'
 import retrieveWorkout from './retrieve-workout'
 import retrieveMuscularGroup from './retrieve-muscular-group'
 import toggleWorkoutsUser from './toggle-workouts-user'
+import retrieveSavedWorkouts from './retrieve-saved-workouts'
 
 export {
     caloriesCalc,
@@ -51,5 +52,6 @@ export {
     retrieveWorkout,
     context,
     retrieveMuscularGroup,
-    toggleWorkoutsUser
+    toggleWorkoutsUser,
+    retrieveSavedWorkouts
 }
