@@ -25,6 +25,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
     "pdfkit": "^0.11.0",
+    "svg-to-pdfkit": "^0.1.8",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
