@@ -1,0 +1,1228 @@
+info 2020-11-30T18:49:26.073Z - starting server
+error 2020-11-30T18:49:26.109Z - Error: Cannot find module './api'
+Require stack:
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-30T18:49:26.110Z - stopping server
+info 2020-11-30T18:57:52.233Z - starting server
+info 2020-11-30T18:57:52.269Z - undefined
+info 2020-11-30T21:33:11.867Z - stopping server
+info 2020-11-30T21:33:25.374Z - starting server
+info 2020-11-30T21:33:25.478Z - undefined
+info 2020-11-30T21:40:39.121Z - stopping server
+info 2020-11-30T21:41:11.880Z - starting server
+info 2020-11-30T21:41:11.964Z - undefined
+info 2020-12-01T10:38:47.652Z - stopping server
+info 2020-12-01T12:02:16.770Z - starting server
+error 2020-12-01T12:02:16.906Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:2:13)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:12:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+info 2020-12-01T12:02:16.912Z - stopping server
+info 2020-12-01T12:02:42.580Z - starting server
+error 2020-12-01T12:02:42.687Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:2:13)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:12:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+info 2020-12-01T12:02:42.696Z - stopping server
+info 2020-12-01T12:06:42.781Z - starting server
+error 2020-12-01T12:06:42.896Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:2:13)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:12:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+info 2020-12-01T12:06:42.902Z - stopping server
+info 2020-12-01T12:12:32.323Z - starting server
+error 2020-12-01T12:12:32.435Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:2:13)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:12:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+info 2020-12-01T12:12:32.443Z - stopping server
+info 2020-12-01T12:15:01.360Z - starting server
+error 2020-12-01T12:15:01.468Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:2:13)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:12:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+info 2020-12-01T12:15:01.474Z - stopping server
+info 2020-12-01T12:24:08.582Z - starting server
+error 2020-12-01T12:24:08.703Z - TypeError: req.setEncoding is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:2:13)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:12:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+info 2020-12-01T12:24:08.710Z - stopping server
+info 2020-12-01T12:35:08.050Z - starting server
+error 2020-12-01T12:35:08.160Z - Error: Cannot find module '../../../errors'
+Require stack:
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:2:105)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:9:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-01T12:35:08.166Z - stopping server
+info 2020-12-01T12:38:43.767Z - starting server
+info 2020-12-01T12:38:43.890Z - undefined
+info 2020-12-01T12:44:10.389Z - stopping server
+info 2020-12-01T12:44:14.730Z - starting server
+info 2020-12-01T12:44:14.846Z - undefined
+info 2020-12-01T13:17:18.975Z - stopping server
+info 2020-12-01T15:15:12.530Z - starting server
+info 2020-12-01T15:15:12.692Z - undefined
+info 2020-12-01T15:25:01.288Z - stopping server
+info 2020-12-01T15:25:12.988Z - starting server
+info 2020-12-01T15:25:13.110Z - undefined
+info 2020-12-01T15:45:50.366Z - stopping server
+info 2020-12-01T15:45:54.144Z - starting server
+info 2020-12-01T15:45:54.298Z - undefined
+info 2020-12-01T16:13:15.791Z - stopping server
+info 2020-12-01T17:53:42.628Z - starting server
+info 2020-12-01T17:53:42.757Z - undefined
+info 2020-12-02T13:51:57.525Z - stopping server
+info 2020-12-02T17:21:49.391Z - starting server
+error 2020-12-02T17:21:49.535Z - ReferenceError: withErrorHandiling is not defined
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:22:29)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-02T17:21:49.541Z - stopping server
+info 2020-12-02T17:22:05.548Z - starting server
+error 2020-12-02T17:22:05.656Z - ReferenceError: withErrorHandiling is not defined
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:22:29)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-02T17:22:05.663Z - stopping server
+info 2020-12-02T17:23:47.457Z - starting server
+info 2020-12-02T17:23:47.577Z - undefined
+info 2020-12-02T17:34:43.199Z - stopping server
+info 2020-12-02T17:34:47.424Z - starting server
+info 2020-12-02T17:34:47.540Z - undefined
+error 2020-12-02T18:17:51.494Z - ReferenceError: saveNote is not defined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:14:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-02T18:19:20.923Z - stopping server
+info 2020-12-02T18:19:25.713Z - starting server
+info 2020-12-02T18:19:25.839Z - undefined
+error 2020-12-02T18:20:00.560Z - ValidationError: Product validation failed: price: Cast to Number failed for value "15 euros" at path "price"
+    at model.Document.invalidate (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\save-product.js:36:22
+info 2020-12-02T18:51:50.226Z - starting server
+error 2020-12-02T20:47:00.828Z - ValidationError: Product validation failed: price: Cast to Number failed for value "15 euros" at path "price"
+    at model.Document.invalidate (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\save-product.js:36:22
+info 2020-12-03T12:54:43.844Z - stopping server
+info 2020-12-03T18:55:41.385Z - starting server
+error 2020-12-03T18:55:41.459Z - ReferenceError: tue is not defined
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\models\schemas\user.js:41:20)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\index.js:2:14)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-03T18:55:41.461Z - stopping server
+info 2020-12-03T18:57:05.910Z - starting server
+info 2020-12-03T18:57:06.065Z - undefined
+info 2020-12-03T19:16:27.251Z - stopping server
+info 2020-12-03T19:16:31.200Z - starting server
+info 2020-12-03T19:16:31.347Z - undefined
+info 2020-12-03T19:19:26.184Z - stopping server
+info 2020-12-03T19:19:30.148Z - starting server
+info 2020-12-03T19:19:30.251Z - undefined
+info 2020-12-03T21:10:38.485Z - stopping server
+info 2020-12-04T09:06:11.239Z - starting server
+error 2020-12-04T09:06:11.299Z - Error: Cannot find module './retrieve-product'
+Require stack:
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-register-user.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\index.js:3:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-04T09:06:11.301Z - stopping server
+info 2020-12-04T09:46:44.126Z - starting server
+error 2020-12-04T09:46:44.186Z - Error: Cannot find module './retrieve-product'
+Require stack:
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-register-user.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\index.js:3:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-04T09:46:44.187Z - stopping server
+info 2020-12-04T11:30:26.026Z - starting server
+info 2020-12-04T11:30:26.165Z - undefined
+error 2020-12-05T09:14:11.751Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T09:14:19.232Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T09:16:08.603Z - stopping server
+info 2020-12-05T09:16:12.411Z - starting server
+info 2020-12-05T09:16:12.545Z - undefined
+info 2020-12-05T12:15:52.565Z - starting server
+info 2020-12-05T12:16:07.346Z - starting server
+info 2020-12-05T12:17:02.741Z - stopping server
+info 2020-12-05T12:17:07.758Z - starting server
+info 2020-12-05T12:17:07.862Z - undefined
+error 2020-12-05T17:08:24.439Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T17:08:35.116Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T17:09:01.997Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T12:26:56.806Z - starting server
+info 2020-12-06T12:26:56.920Z - undefined
+error 2020-12-06T12:29:26.728Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T12:29:33.189Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T13:06:12.938Z - Error: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:12:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T18:05:08.721Z - stopping server
+info 2020-12-07T10:43:59.597Z - starting server
+error 2020-12-07T10:44:29.643Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\connection.js:830:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:342:10
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Mongoose.connect (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:341:20)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-07T10:44:29.644Z - stopping server
+info 2020-12-07T10:48:11.493Z - starting server
+error 2020-12-07T10:48:41.510Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\connection.js:830:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:342:10
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Mongoose.connect (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:341:20)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-07T10:48:41.511Z - stopping server
+info 2020-12-07T10:53:38.492Z - starting server
+info 2020-12-07T10:53:38.616Z - undefined
+info 2020-12-07T13:13:44.235Z - stopping server
+info 2020-12-07T20:35:40.720Z - starting server
+error 2020-12-07T20:36:10.737Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\connection.js:830:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:342:10
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Mongoose.connect (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\index.js:341:20)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-07T20:36:10.738Z - stopping server
+info 2020-12-07T20:38:09.049Z - starting server
+error 2020-12-07T20:38:09.083Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product-image.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\index.js:1:32)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-07T20:38:09.084Z - stopping server
+info 2020-12-07T20:40:50.337Z - starting server
+info 2020-12-07T20:40:50.489Z - undefined
+info 2020-12-07T21:21:56.408Z - stopping server
+info 2020-12-07T23:09:04.352Z - starting server
+info 2020-12-07T23:09:04.458Z - undefined
+info 2020-12-07T23:20:53.628Z - stopping server
+info 2020-12-07T23:39:19.569Z - starting server
+info 2020-12-07T23:39:19.673Z - undefined
+info 2020-12-07T23:44:02.018Z - stopping server
+info 2020-12-07T23:44:31.620Z - starting server
+info 2020-12-07T23:44:31.758Z - undefined
+info 2020-12-07T23:44:39.697Z - starting server
+info 2020-12-07T23:44:39.826Z - undefined
+info 2020-12-07T23:45:03.002Z - starting server
+info 2020-12-07T23:45:03.132Z - undefined
+info 2020-12-08T00:15:10.650Z - starting server
+info 2020-12-08T00:15:10.779Z - undefined
+info 2020-12-08T09:29:03.000Z - stopping server
+info 2020-12-08T09:29:07.894Z - starting server
+info 2020-12-08T09:29:08.053Z - undefined
+info 2020-12-08T09:39:09.764Z - stopping server
+info 2020-12-08T09:39:15.903Z - starting server
+info 2020-12-08T09:39:16.070Z - undefined
+info 2020-12-08T09:44:00.822Z - stopping server
+info 2020-12-08T09:44:04.282Z - starting server
+info 2020-12-08T09:44:04.411Z - undefined
+info 2020-12-08T09:57:12.501Z - stopping server
+info 2020-12-08T09:57:15.661Z - starting server
+info 2020-12-08T09:57:15.794Z - undefined
+info 2020-12-08T10:05:53.659Z - stopping server
+info 2020-12-08T10:06:20.576Z - starting server
+info 2020-12-08T10:06:20.719Z - undefined
+info 2020-12-08T11:00:31.418Z - stopping server
+info 2020-12-08T11:00:35.142Z - starting server
+error 2020-12-08T11:00:35.171Z - C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:14
+const handleRetrieveProduct = require('./handlers/handle-retrieve-product')
+      ^
+
+SyntaxError: Identifier 'handleRetrieveProduct' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T11:00:35.173Z - stopping server
+info 2020-12-08T11:03:29.688Z - starting server
+error 2020-12-08T11:03:29.718Z - C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:14
+const handleRetrieveProduct = require('./handlers/handle-retrieve-product')
+      ^
+
+SyntaxError: Identifier 'handleRetrieveProduct' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T11:03:29.719Z - stopping server
+info 2020-12-08T11:04:40.298Z - starting server
+error 2020-12-08T11:04:40.338Z - C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:14
+const handleRetrieveProduct = require('./handlers/handle-retrieve-product')
+      ^
+
+SyntaxError: Identifier 'handleRetrieveProduct' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T11:04:40.340Z - stopping server
+info 2020-12-08T11:05:33.804Z - starting server
+error 2020-12-08T11:05:33.838Z - C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:14
+const handleRetrieveProduct = require('./handlers/handle-retrieve-product')
+      ^
+
+SyntaxError: Identifier 'handleRetrieveProduct' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T11:05:33.839Z - stopping server
+info 2020-12-08T11:07:33.246Z - starting server
+error 2020-12-08T11:07:33.280Z - C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:14
+const handleRetrieveProduct = require('./handlers/handle-retrieve-product')
+      ^
+
+SyntaxError: Identifier 'handleRetrieveProduct' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-08T11:07:33.282Z - stopping server
+info 2020-12-08T11:12:22.466Z - starting server
+info 2020-12-08T11:12:22.596Z - undefined
+error 2020-12-08T11:13:59.238Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:16:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-08T11:24:06.575Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:16:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-08T11:24:57.622Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:16:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T11:48:15.139Z - stopping server
+info 2020-12-08T11:48:23.318Z - starting server
+info 2020-12-08T11:48:23.479Z - undefined
+info 2020-12-08T12:00:22.571Z - starting server
+info 2020-12-08T12:00:22.720Z - undefined
+error 2020-12-08T12:00:35.101Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:16:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-08T12:02:07.780Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:16:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T15:32:58.086Z - starting server
+error 2020-12-08T15:32:58.223Z - Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:510:19)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:30:8)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+info 2020-12-08T15:32:58.229Z - stopping server
+info 2020-12-08T15:48:32.179Z - starting server
+info 2020-12-08T15:48:32.309Z - undefined
+info 2020-12-08T17:12:55.008Z - stopping server
+info 2020-12-08T17:12:58.241Z - starting server
+info 2020-12-08T17:12:58.367Z - undefined
+info 2020-12-08T17:49:36.559Z - stopping server
+info 2020-12-08T17:49:47.815Z - starting server
+info 2020-12-08T17:49:47.972Z - undefined
+info 2020-12-08T17:55:05.388Z - stopping server
+info 2020-12-08T17:55:19.484Z - starting server
+info 2020-12-08T17:55:19.605Z - undefined
+error 2020-12-08T18:12:04.390Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:17:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T18:15:53.573Z - stopping server
+info 2020-12-08T18:16:13.920Z - starting server
+info 2020-12-08T18:16:14.074Z - undefined
+error 2020-12-08T18:20:08.994Z - TypeError: Cannot read property 'then' of undefined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-save-product.js:17:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\middlewares\json-body-parser.js:20:17)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-08T18:22:51.899Z - stopping server
+info 2020-12-08T18:23:33.918Z - starting server
+info 2020-12-08T18:23:34.038Z - undefined
+info 2020-12-08T18:36:18.478Z - stopping server
+info 2020-12-08T18:37:58.793Z - starting server
+info 2020-12-08T18:37:58.921Z - undefined
+info 2020-12-08T18:41:07.882Z - starting server
+info 2020-12-08T18:41:08.023Z - undefined
+info 2020-12-08T18:42:22.722Z - starting server
+info 2020-12-08T18:42:22.846Z - undefined
+info 2020-12-08T18:42:53.055Z - starting server
+info 2020-12-08T18:42:53.194Z - undefined
+info 2020-12-08T18:43:13.987Z - starting server
+info 2020-12-08T18:43:14.142Z - undefined
+info 2020-12-08T18:49:48.078Z - starting server
+info 2020-12-08T18:49:48.220Z - undefined
+info 2020-12-08T18:51:58.795Z - starting server
+info 2020-12-08T18:51:58.924Z - undefined
+info 2020-12-08T19:03:04.020Z - starting server
+info 2020-12-08T19:03:04.171Z - undefined
+info 2020-12-08T19:05:59.978Z - starting server
+info 2020-12-08T19:06:00.139Z - undefined
+info 2020-12-08T19:06:01.542Z - starting server
+info 2020-12-08T19:06:01.691Z - undefined
+info 2020-12-08T19:07:56.363Z - starting server
+info 2020-12-08T19:07:56.496Z - undefined
+info 2020-12-08T19:13:13.265Z - starting server
+info 2020-12-08T19:13:13.410Z - undefined
+info 2020-12-09T08:06:52.097Z - stopping server
+info 2020-12-09T08:29:50.141Z - starting server
+info 2020-12-09T08:29:50.254Z - undefined
+info 2020-12-09T18:53:58.594Z - stopping server
+info 2020-12-09T18:54:13.842Z - starting server
+info 2020-12-09T18:54:13.990Z - undefined
+info 2020-12-09T19:20:36.865Z - stopping server
+info 2020-12-09T19:20:40.446Z - starting server
+info 2020-12-09T19:20:40.591Z - undefined
+error 2020-12-09T19:35:46.815Z - NotFoundError: user with id 5fd12568656b1c4f045319b3 not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-user.js:10:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-09T19:36:59.969Z - NotFoundError: user with id 5fd12568656b1c4f045319b3 not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-user.js:10:26
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-09T20:25:22.876Z - stopping server
+info 2020-12-09T20:25:29.253Z - starting server
+error 2020-12-09T20:25:29.416Z - TypeError: "/api/api/products/:productId/images".withErrorHandling is not a function
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:36:51)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-09T20:25:29.423Z - stopping server
+info 2020-12-09T20:26:44.498Z - starting server
+error 2020-12-09T20:26:44.673Z - TypeError: "/api/api/products/:productId/images".withErrorHandling is not a function
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:36:51)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-09T20:26:44.679Z - stopping server
+info 2020-12-09T20:28:41.054Z - starting server
+error 2020-12-09T20:28:41.176Z - TypeError: "/api/api/products/:productId/images".withErrorHandling is not a function
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:36:51)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-09T20:28:41.182Z - stopping server
+info 2020-12-09T20:30:39.416Z - starting server
+error 2020-12-09T20:30:39.525Z - TypeError: "/api/api/products/:productId/images".withErrorHandling is not a function
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:36:51)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-09T20:30:39.531Z - stopping server
+info 2020-12-09T20:32:09.925Z - starting server
+error 2020-12-09T20:32:10.053Z - TypeError: "/api/api/products/:productId/images".withErrorHandling is not a function
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:36:51)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-09T20:32:10.061Z - stopping server
+info 2020-12-09T20:32:54.589Z - starting server
+error 2020-12-09T20:32:54.712Z - TypeError: "/api/products/:productId/images".withErrorHandling is not a function
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\index.js:36:47)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-09T20:32:54.718Z - stopping server
+info 2020-12-09T20:33:48.978Z - starting server
+info 2020-12-09T20:33:49.106Z - undefined
+info 2020-12-09T20:57:15.676Z - starting server
+info 2020-12-09T21:03:37.287Z - stopping server
+info 2020-12-09T21:03:57.431Z - starting server
+info 2020-12-09T21:03:57.594Z - undefined
+info 2020-12-09T21:04:09.135Z - starting server
+info 2020-12-09T21:04:09.292Z - undefined
+info 2020-12-09T21:06:47.738Z - starting server
+info 2020-12-09T21:06:47.877Z - undefined
+info 2020-12-09T22:15:01.882Z - starting server
+info 2020-12-09T22:15:02.019Z - undefined
+info 2020-12-10T08:43:04.814Z - starting server
+info 2020-12-10T08:43:04.967Z - undefined
+info 2020-12-10T10:26:53.731Z - stopping server
+info 2020-12-10T10:26:57.463Z - starting server
+info 2020-12-10T10:26:57.638Z - undefined
+info 2020-12-10T10:31:45.036Z - stopping server
+info 2020-12-10T10:31:57.985Z - starting server
+info 2020-12-10T10:31:58.191Z - undefined
+info 2020-12-10T11:12:16.973Z - starting server
+info 2020-12-10T11:12:17.129Z - undefined
+info 2020-12-10T11:14:37.410Z - stopping server
+info 2020-12-10T11:14:41.218Z - starting server
+info 2020-12-10T11:14:41.415Z - undefined
+info 2020-12-10T11:20:46.964Z - stopping server
+info 2020-12-10T11:20:56.998Z - starting server
+info 2020-12-10T11:22:02.043Z - undefined
+info 2020-12-10T11:40:11.724Z - starting server
+info 2020-12-10T11:40:11.878Z - undefined
+info 2020-12-10T11:45:52.539Z - stopping server
+info 2020-12-10T11:45:56.547Z - starting server
+info 2020-12-10T11:45:56.702Z - undefined
+info 2020-12-10T12:15:41.273Z - stopping server
+info 2020-12-10T12:54:48.990Z - starting server
+info 2020-12-10T12:54:49.118Z - undefined
+info 2020-12-10T13:00:58.047Z - stopping server
+info 2020-12-10T13:01:00.954Z - starting server
+info 2020-12-10T13:01:01.109Z - undefined
+info 2020-12-10T13:04:04.032Z - stopping server
+info 2020-12-10T13:04:15.783Z - starting server
+info 2020-12-10T13:05:50.992Z - starting server
+info 2020-12-10T13:07:41.983Z - starting server
+info 2020-12-10T13:08:59.613Z - starting server
+info 2020-12-10T13:09:33.584Z - undefined
+info 2020-12-10T13:31:34.567Z - starting server
+info 2020-12-10T13:31:34.794Z - undefined
+info 2020-12-10T13:34:47.026Z - starting server
+info 2020-12-10T13:35:12.380Z - undefined
+info 2020-12-10T14:05:30.715Z - starting server
+info 2020-12-10T14:05:30.837Z - undefined
+info 2020-12-10T14:07:35.340Z - stopping server
+info 2020-12-10T14:07:38.204Z - starting server
+info 2020-12-10T14:07:38.330Z - undefined
+info 2020-12-10T15:03:17.757Z - stopping server
+info 2020-12-10T15:04:06.639Z - starting server
+info 2020-12-10T15:04:23.763Z - undefined
+error 2020-12-10T15:09:32.498Z - MongooseServerSelectionError: connection timed out
+    at Function.Model.$wrapCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4858:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4369:10)
+    at model.Query.Query.then (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4450:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-10T17:14:10.174Z - starting server
+info 2020-12-10T17:14:10.316Z - undefined
+info 2020-12-10T17:21:10.746Z - stopping server
+info 2020-12-10T17:22:02.530Z - starting server
+info 2020-12-10T17:22:02.677Z - undefined
+info 2020-12-10T17:26:05.070Z - stopping server
+info 2020-12-10T17:26:08.475Z - starting server
+info 2020-12-10T17:26:08.609Z - undefined
+info 2020-12-10T17:33:17.298Z - stopping server
+info 2020-12-10T17:33:20.105Z - starting server
+info 2020-12-10T17:33:20.237Z - undefined
+info 2020-12-10T17:34:00.283Z - stopping server
+info 2020-12-10T17:34:07.138Z - starting server
+info 2020-12-10T17:34:07.257Z - undefined
+info 2020-12-10T18:22:45.668Z - starting server
+info 2020-12-10T18:23:00.388Z - stopping server
+info 2020-12-10T18:23:04.411Z - starting server
+info 2020-12-10T18:23:04.556Z - undefined
+info 2020-12-10T18:43:49.482Z - stopping server
+info 2020-12-10T18:43:52.580Z - starting server
+info 2020-12-10T18:43:52.696Z - undefined
+info 2020-12-10T19:26:52.633Z - stopping server
+info 2020-12-10T19:39:30.699Z - starting server
+info 2020-12-10T19:39:30.825Z - undefined
+info 2020-12-10T20:28:34.946Z - starting server
+info 2020-12-10T20:28:40.206Z - stopping server
+info 2020-12-10T23:44:51.724Z - starting server
+info 2020-12-10T23:44:51.910Z - undefined
+info 2020-12-11T14:57:24.342Z - stopping server
+info 2020-12-11T16:43:45.863Z - starting server
+info 2020-12-11T16:43:46.023Z - undefined
+info 2020-12-11T18:42:09.816Z - stopping server
+info 2020-12-11T18:42:13.165Z - starting server
+info 2020-12-11T18:42:13.342Z - undefined
+info 2020-12-12T08:14:39.132Z - stopping server
+info 2020-12-12T08:14:42.292Z - starting server
+info 2020-12-12T08:14:42.423Z - undefined
+info 2020-12-12T08:19:16.969Z - stopping server
+info 2020-12-12T08:19:19.270Z - starting server
+info 2020-12-12T08:19:19.396Z - undefined
+info 2020-12-12T08:20:27.453Z - stopping server
+info 2020-12-12T08:20:29.631Z - starting server
+info 2020-12-12T08:20:29.736Z - undefined
+info 2020-12-12T08:22:24.988Z - stopping server
+info 2020-12-12T08:22:27.200Z - starting server
+info 2020-12-12T08:22:27.314Z - undefined
+info 2020-12-12T08:24:22.938Z - stopping server
+info 2020-12-12T08:24:25.065Z - starting server
+info 2020-12-12T08:24:25.176Z - undefined
+info 2020-12-12T08:47:35.013Z - stopping server
+info 2020-12-12T08:47:39.412Z - starting server
+info 2020-12-12T08:47:39.536Z - undefined
+info 2020-12-12T09:19:15.206Z - stopping server
+info 2020-12-12T09:19:18.445Z - starting server
+info 2020-12-12T09:19:18.574Z - undefined
+info 2020-12-12T09:22:14.754Z - stopping server
+info 2020-12-12T09:22:18.050Z - starting server
+info 2020-12-12T09:22:18.195Z - undefined
+info 2020-12-12T09:23:28.145Z - stopping server
+info 2020-12-12T09:23:30.908Z - starting server
+info 2020-12-12T09:23:31.043Z - undefined
+info 2020-12-12T09:25:16.566Z - stopping server
+info 2020-12-12T09:25:19.046Z - starting server
+info 2020-12-12T09:25:19.196Z - undefined
+info 2020-12-12T11:01:40.716Z - starting server
+error 2020-12-12T11:13:50.203Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:14:30.515Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:15:08.791Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:22:35.841Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:22:41.095Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:35:10.001Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:45:19.564Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T11:45:30.456Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:08:08.365Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:08:11.165Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:09:41.307Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:10:34.548Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:10:42.864Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:11:35.912Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:12:27.325Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:13:16.912Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:13:41.121Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:14:05.776Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:27:26.520Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:27:56.759Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:28:09.178Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:28:41.047Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:30:16.650Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+error 2020-12-12T12:45:25.779Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T12:56:25.601Z - ValidationError: Product validation failed: price: Path `price` is required.
+    at model.Document.invalidate (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:2622:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\document.js:2442:17
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\schematype.js:1225:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-12T16:32:46.358Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:19:34
+info 2020-12-12T19:05:36.980Z - stopping server
+info 2020-12-12T19:06:51.781Z - starting server
+info 2020-12-12T19:06:51.951Z - undefined
+info 2020-12-12T19:35:38.493Z - stopping server
+info 2020-12-12T19:35:42.260Z - starting server
+info 2020-12-12T19:35:42.501Z - undefined
+error 2020-12-12T19:36:20.683Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T19:36:32.715Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T19:36:43.158Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T19:37:15.652Z - ReferenceError: ownerId is not defined
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:15:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-12T19:42:01.102Z - stopping server
+info 2020-12-12T19:42:08.427Z - starting server
+info 2020-12-12T19:42:08.588Z - undefined
+info 2020-12-13T10:10:57.922Z - starting server
+info 2020-12-13T10:10:58.092Z - undefined
+info 2020-12-13T10:50:48.671Z - stopping server
+info 2020-12-13T12:16:06.864Z - starting server
+info 2020-12-13T12:16:06.994Z - undefined
+info 2020-12-13T13:02:21.841Z - stopping server
+info 2020-12-13T13:05:47.245Z - starting server
+info 2020-12-13T13:05:47.368Z - undefined
+error 2020-12-13T15:27:31.234Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at Function.Model.$wrapCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4858:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4369:10)
+    at model.Query.Query.then (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\retrieve-product-detail.js:9:10)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-retrieve-product-detail.js:10:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:354:14)
+error 2020-12-13T15:42:51.890Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at Function.Model.$wrapCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\model.js:4858:32)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4369:10)
+    at model.Query.Query.then (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\find-product.js:20:10)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+info 2020-12-13T19:24:51.265Z - stopping server
+info 2020-12-13T19:24:54.750Z - starting server
+info 2020-12-13T19:24:54.891Z - undefined
+error 2020-12-13T20:34:39.594Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:45.194Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:47.067Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:48.245Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:48.547Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T20:34:48.804Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T08:54:16.185Z - stopping server
+info 2020-12-14T10:45:48.996Z - starting server
+error 2020-12-14T10:45:49.054Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-register-user.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:3:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\index.js:11:28)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:45:49.059Z - stopping server
+info 2020-12-14T10:47:48.889Z - starting server
+error 2020-12-14T10:47:48.943Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-register-user.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\index.js
+- C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:3:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\index.js:11:28)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:47:48.949Z - stopping server
+info 2020-12-14T10:57:05.850Z - starting server
+info 2020-12-14T10:57:05.989Z - undefined
+info 2020-12-14T10:59:19.530Z - stopping server
