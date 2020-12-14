@@ -217,5 +217,13 @@ module.exports = {
     if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
     if (!token.trim().length) throw new Error('token is empty or blank')
+  },
+  validateModePrivate (modePrivate) {
+    console.log(typeof modePrivate)
+    !(
+      modePrivate === true ||
+      modePrivate === false ||
+      toString.call(modePrivate) === '[object Boolean]'
+    )
   }
 }

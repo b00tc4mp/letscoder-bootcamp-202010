@@ -69,11 +69,11 @@ module.exports = {
     })
   },
   validateModePrivate (modePrivate) {
-    if (typeof modePrivate !== 'Boolean')
-      throw new TypeError(modePrivate + ' is not a modePrivate')
-
-    if (!modePrivate.trim().length)
-      throw new ContentError('modePrivate is empty or blank')
+    !(
+    modePrivate === true ||
+    modePrivate === false ||
+    toString.call(modePrivate) === '[object Boolean]'
+  )
   },
 
   validateQuery (query) {
