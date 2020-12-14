@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Food } = require('../models')
+const { models: { Food } } = require('martachisfit-data')
 
 /**
  * Retrieves a food by its id

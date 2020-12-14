@@ -1,6 +1,6 @@
 const { validateLevel } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Workout } = require('../models')
+const { models: { Workout } } = require('martachisfit-data')
 
 /**
  * Retrieves a workout by level

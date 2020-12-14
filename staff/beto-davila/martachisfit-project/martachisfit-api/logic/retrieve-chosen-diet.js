@@ -1,6 +1,6 @@
 const { validateId, validateDietType } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { User, Diet } = require('../models')
+const { models: { User, Diet } } = require('martachisfit-data')
 
 /**
  * Retrieves a chosen diet by the user

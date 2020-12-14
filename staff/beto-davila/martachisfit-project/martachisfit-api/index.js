@@ -1,9 +1,9 @@
 require('dotenv').config()
-const mongoose = require('mongoose')
+const { mongoose } = require('martachisfit-data')
 const express = require('express')
-const logger = require('./utils/logger') 
+const logger = require('./utils/logger')
 
-const cors = require('./middlewares/cors') 
+const cors = require('./middlewares/cors')
 
 const { env: { PORT, MONGODB_URL }, argv: [, , port = PORT || 8080] } = process
 
@@ -22,8 +22,8 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true,
         app.get('/*', (req, res) => res.status(404).send('Not found :('))
 
         app.listen(port, () => {
-        console.log(`server running on port ${port}`)
-        logger.log(`server running on port ${port}`)
+            console.log(`server running on port ${port}`)
+            logger.log(`server running on port ${port}`)
         })
     })
     .catch(error =>

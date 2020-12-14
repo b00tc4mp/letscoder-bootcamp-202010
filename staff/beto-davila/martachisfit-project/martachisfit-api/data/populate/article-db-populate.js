@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const mongoose = require('mongoose')
-const { Article } = require('../../models') 
+const { Article } = require('../martachisfit-data') 
 
 
 const { env: { MONGODB_URL } } = process

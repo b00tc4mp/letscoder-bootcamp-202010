@@ -1,6 +1,6 @@
 const { validateEmail, validatePassword } = require('./helpers/validations')
 const { AuthError } = require('../errors')
-const { User } = require('../models')
+const { models: { User } } = require('martachisfit-data')
 const bcryptjs = require('bcryptjs')
 
 module.exports = function (email, password) {

@@ -193,16 +193,16 @@ export default function Home() {
         }
     }
 
-    const handleSaveWorkout = workoutId => {
+    const handleSaveWorkout = level => {
         try {
-            toggleWorkoutsUser(token, workoutId, error => {
+            toggleWorkoutsUser(token, level, error => {
                 if (error) return feedbackError("Hubo un problema intentando guardar el entrenamiento :(")
 
                 retrieveUser(token, (error, user) => {
                     if (error) return alert(error.message)
 
                     const { myWorkouts } = user
-                    retrieveWorkout(workoutId, (error, workout) => {
+                    retrieveWorkout(level, (error, workout) => {
                         if (error) return alert("Hubo un problema intentando recuperar la rutina de entrenamiento :(")
 
                         const { id: workoutId } = workout

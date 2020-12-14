@@ -2,7 +2,7 @@ require('dotenv').config()
 const fs = require('fs')
 
 const mongoose = require('mongoose')
-const { RecipeImg } = require('../models') 
+const { RecipeImg } = require('martachisfit-data') 
 var imageData = fs.readFileSync(__dirname + '/static/assets/images/tronco-navidad.jpg');
 const { env: { MONGODB_URL } } = process
 

@@ -1,5 +1,5 @@
 const { validateQuery } = require('./helpers/validations')
-const { Food } = require('../models')
+const { models: { Food } } = require('martachisfit-data')
 const { NotFoundError } = require('../errors')
 
 module.exports = query => {
@@ -7,13 +7,13 @@ module.exports = query => {
     validateQuery(query)
 
     const cursor = Food.find({ $or: [{ name: new RegExp(query, 'i') }] })
-        return cursor.lean()
-            .then(food => {
+    return cursor.lean()
+        .then(food => {
 
-            if(food) 
+            if (food)
                 return food
             else
                 throw new NotFoundError('No results')
-    })
+        })
 
 }

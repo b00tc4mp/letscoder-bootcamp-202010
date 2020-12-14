@@ -1,6 +1,5 @@
 const { validateId, validateName, validateNumber } = require('./helpers/validations')
-const { ObjectId } = require('mongodb')
-const { User, Food } = require('../models')
+const { models: { User, Food }, mongoose: { Types: { ObjectId } } } = require('martachisfit-data')
 const { NotFoundError } = require('../errors')
 
 /**
@@ -34,7 +33,7 @@ module.exports = function (userId, foodId, name, serving, calories, carbs, prote
         .findOne({ _id })
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
-            
+
             // TODO validates user is admin
             if (foodId) {
                 const _id = ObjectId(foodId)
@@ -52,5 +51,5 @@ module.exports = function (userId, foodId, name, serving, calories, carbs, prote
                 return Food.create({ name, serving, calories, carbs, protein, fats, user: ObjectId(userId) })
                     .then(result => undefined)
         })
-    
+
 }

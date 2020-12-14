@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "file-system": "^2.2.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.18",
+    "martachisfit-data": "file:../martachisfit-data",
     "path": "^0.12.7",
     "xmlhttprequest": "^1.8.0"
   },

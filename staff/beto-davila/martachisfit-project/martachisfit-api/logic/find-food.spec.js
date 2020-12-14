@@ -1,12 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const findFood = require('./find-food')
-const { Food } = require('../models')
-// const { LengthError, ContentError } = require('../errors')
+const { models: { Food }, mongoose } = require('martachisfit-data')
 
 const { env: { MONGODB_URL } } = process
 
@@ -47,7 +45,7 @@ describe('SPEC findFood()', () => {
             let query
 
             beforeEach(() => query = ['unacomidainventada', '123123123', 'otroalimentoquenocomeria', 'siexisteestacomidaquevengadiosylovea'].random())
-            
+
             it('should succeed on showing no results', () =>
                 findFood(query)
                     .then(result => {
@@ -58,7 +56,7 @@ describe('SPEC findFood()', () => {
         })
         afterEach(() =>
             Food
-                .deleteOne({_id: foodId})
+                .deleteOne({ _id: foodId })
                 .then(result => expect(result.deletedCount).to.equal(1))
         )
     })

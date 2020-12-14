@@ -1,11 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString } = require('../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrieveRecipe = require('./retrieve-recipe')
-const { Recipe } = require('../models')
+const { models: { Recipe }, mongoose } = require('martachisfit-data')
 
 const { env: { MONGODB_URL } } = process
 
@@ -16,15 +15,15 @@ describe('SPEC retrieveRecipe()', () => {
         let recipeId, urlPathImg, title, text
 
         beforeEach(() => {
-           urlPathImg = 'EstoEsUnaUrlAunqueNoLoParezca.es'
-           title = randomStringWithPrefix('Pezado de recetón!!')
-           text = randomWithPrefixAndSuffix('Esto es el inicio de una receta', 'y esto el final de la receta')
+            urlPathImg = 'EstoEsUnaUrlAunqueNoLoParezca.es'
+            title = randomStringWithPrefix('Pezado de recetón!!')
+            text = randomWithPrefixAndSuffix('Esto es el inicio de una receta', 'y esto el final de la receta')
 
             const recipe = { urlPathImg, title, text }
 
             return Recipe.create(recipe)
                 .then(recipe => recipeId = recipe.id)
-            
+
         })
 
         it('should retrieve the recipe by id', () =>
@@ -37,27 +36,27 @@ describe('SPEC retrieveRecipe()', () => {
                     expect(recipe.urlPathImg).to.equal(urlPathImg)
                 })
         )
-        
+
         describe('when recipe does not exist', () => {
             let recipeId
 
-                beforeEach(() => recipeId = ['5fc0efb540493de1f5a8948a', '5fc0efb540493de1f5a8940c', '5fc0efb540493de1f5a8941b'].random())
+            beforeEach(() => recipeId = ['5fc0efb540493de1f5a8948a', '5fc0efb540493de1f5a8940c', '5fc0efb540493de1f5a8941b'].random())
 
-                it('should fail on wrong user id', () =>
-                    retrieveRecipe(recipeId)
-                        .catch(error => {
-                            expect(error).to.be.instanceOf(Error)
+            it('should fail on wrong user id', () =>
+                retrieveRecipe(recipeId)
+                    .catch(error => {
+                        expect(error).to.be.instanceOf(Error)
 
-                            expect(error.message).to.equal(`recipe with id ${recipeId} not found`)
-                        })
-                )
+                        expect(error.message).to.equal(`recipe with id ${recipeId} not found`)
+                    })
+            )
         })
 
         afterEach(() => {
             Recipe
                 .deleteOne({ _id: recipeId })
                 .then(result => expect(result.deletedCount).to.equal(1))
-            }
+        }
         )
     })
 
@@ -85,7 +84,7 @@ describe('SPEC retrieveRecipe()', () => {
         describe('when recipe id length is not 24', () => {
             let recipeId
 
-            beforeEach(() => recipeId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5? 3 : -3)))
+            beforeEach(() => recipeId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5 ? 3 : -3)))
 
             it('should fail on recipe id length different from 24', () => {
                 expect(() => retrieveRecipe(recipeId, () => { })).to.throw(Error, `id length ${recipeId.length} is not 24`)

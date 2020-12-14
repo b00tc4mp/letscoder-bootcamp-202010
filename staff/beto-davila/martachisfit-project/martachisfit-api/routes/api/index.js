@@ -51,7 +51,7 @@ router.get('/api/foods', withErrorHandling(handleFindFood))
 router.patch('/api/users/foods/:foodId', jsonBodyParser, withErrorHandling(handleToggleFoodUserDiet))
 
 // toggle workouts
-router.patch('/api/users/workouts/:workoutId', jsonBodyParser, withErrorHandling(handleToggleWorkoutsUser))
+router.patch('/api/users/workouts/:level', jsonBodyParser, withErrorHandling(handleToggleWorkoutsUser))
 
 // add food to user diet
 router.patch('/api/users/foods', jsonBodyParser, withErrorHandling(handleAddFoodUserDiet))

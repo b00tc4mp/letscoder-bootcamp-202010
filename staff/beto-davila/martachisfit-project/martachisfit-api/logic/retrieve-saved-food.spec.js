@@ -1,11 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrieveSavedFood = require('./retrieve-saved-food')
-const { Food, User } = require('../models')
+const { models: { Food, User }, mongoose } = require('martachisfit-data')
 
 const { env: { MONGODB_URL } } = process
 
@@ -30,7 +29,7 @@ describe('SPEC retrieveSavedFood()', () => {
             const user = { fullname, email, password, calories }
 
             const food = { name, calories, serving, carbs, protein, fats }
-debugger
+            debugger
             return Food.create(food)
                 .then(food => foodId = food.id)
                 .then(() => {

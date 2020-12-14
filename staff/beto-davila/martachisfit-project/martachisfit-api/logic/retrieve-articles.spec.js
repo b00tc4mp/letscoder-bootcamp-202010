@@ -1,12 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrieveArticles = require('./retrieve-articles')
-const { User, Article } = require('../models')
-// const { LengthError, ContentError } = require('../errors')
+const { models: { User, Article }, mongoose } = require('martachisfit-data')
 
 const { env: { MONGODB_URL } } = process
 
@@ -30,10 +28,10 @@ describe('SPEC retrieveArticles()', () => {
 
             return User.create(user)
                 .then(user => userId = user.id)
-                .then(() =>  
+                .then(() =>
                     Article.create(article)
                         .then(article => articleId = article.id))
-            
+
         })
 
         it('should succeed on correct article id', () =>
@@ -62,12 +60,12 @@ describe('SPEC retrieveArticles()', () => {
             User
                 .deleteOne({ _id: articleId })
                 .then(result => expect(result.deletedCount).to.equal(1))
-                .then(() => 
+                .then(() =>
 
-                 Article
-                    .deleteOne({ _id: articleId })
-                    .then(result => expect(result.deletedCount).to.equal(1)))
-            }
+                    Article
+                        .deleteOne({ _id: articleId })
+                        .then(result => expect(result.deletedCount).to.equal(1)))
+        }
         )
     })
 
@@ -95,7 +93,7 @@ describe('SPEC retrieveArticles()', () => {
         describe('when article id length is not 24', () => {
             let articleId
 
-            beforeEach(() => articleId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5? 3 : -3)))
+            beforeEach(() => articleId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5 ? 3 : -3)))
 
             it('should fail on article id length different from 24', () => {
                 expect(() => retrieveArticles(articleId, () => { })).to.throw(Error, `id length ${articleId.length} is not 24`)

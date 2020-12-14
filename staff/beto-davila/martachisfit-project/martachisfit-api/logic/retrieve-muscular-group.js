@@ -1,6 +1,6 @@
 const { validateMuscularGroup } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Movement } = require('../models')
+const { models: { Movement } } = require('martachisfit-data')
 
 /**
  * Retrieves a muscular movement by its group

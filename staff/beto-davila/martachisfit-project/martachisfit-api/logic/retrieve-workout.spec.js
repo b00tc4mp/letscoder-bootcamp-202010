@@ -1,11 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrieveWorkout = require('./retrieve-workout')
-const { Workout } = require('../models')
+const { models: { Workout }, mongoose } = require('martachisfit-data')
 
 const { env: { MONGODB_URL } } = process
 

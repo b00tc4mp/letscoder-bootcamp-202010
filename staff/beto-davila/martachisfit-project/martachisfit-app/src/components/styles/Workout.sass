@@ -19,23 +19,32 @@
     z-index: -1
     
 .workout
+    &__mov-title-heart
+        display: flex
+        justify-content: space-between
+
     &__name
         text-align: center
         margin: 0
         font-size: 1rem
 
+    &__heart-btn
+        background-color: transparent
+        border: none
+        cursor: pointer
+    
+    &__heart-btn:focus
+        outline: none
+
     &__movements
-        float: left
         text-decoration-line: none
         cursor: pointer
-        margin: .2rem
-        background-color: #dee4e4
-        padding: .2rem
+        margin: .3rem
         border-radius: .5rem
         font-size: .7rem
 
     &__movements:hover
-        backgroun-color: #cdd1d1
+        color: #bbc0c0
 
     &__header
         display: flex

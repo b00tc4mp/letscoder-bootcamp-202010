@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Article, User } = require('../models')
+const { models: {Article, User} } = require('martachisfit-data')
 
 /**
  * Retrieves an article

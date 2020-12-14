@@ -1,11 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrieveChosenArticle = require('./retrieve-chosen-article')
-const { User, Article } = require('../models')
+const { models: { User, Article }, mongoose } = require('martachisfit-data')
 
 const { env: { MONGODB_URL } } = process
 
@@ -29,10 +28,10 @@ describe('SPEC retrieveChosenArticle()', () => {
 
             return User.create(user)
                 .then(user => userId = user.id)
-                .then(() =>  
+                .then(() =>
                     Article.create(article)
                         .then(article => articleId = article.id))
-            
+
         })
         debugger
         it('should succeed on retrieving the article by id', () =>
@@ -47,11 +46,11 @@ describe('SPEC retrieveChosenArticle()', () => {
         describe('when article id is wrong', () => {
             let articleId
 
-            beforeEach(() => articleId = ['5fc0efb540493de1f5a8948a', 
-                                            '5fc0efb540493de1f5a8940c', 
-                                            '5fc0efb540493de1f5a8941b', 
-                                            '5fc0efb540493de3f5a8941b',
-                                            '5fc0e3b540493de1f5a8941b'].random())
+            beforeEach(() => articleId = ['5fc0efb540493de1f5a8948a',
+                '5fc0efb540493de1f5a8940c',
+                '5fc0efb540493de1f5a8941b',
+                '5fc0efb540493de3f5a8941b',
+                '5fc0e3b540493de1f5a8941b'].random())
 
             it('should fail on wrong id', () =>
                 retrieveChosenArticle(userId, articleId)
@@ -67,12 +66,12 @@ describe('SPEC retrieveChosenArticle()', () => {
             User
                 .deleteOne({ _id: articleId })
                 .then(result => expect(result.deletedCount).to.equal(1))
-                .then(() => 
+                .then(() =>
 
-                 Article
-                    .deleteOne({ _id: articleId })
-                    .then(result => expect(result.deletedCount).to.equal(1)))
-            }
+                    Article
+                        .deleteOne({ _id: articleId })
+                        .then(result => expect(result.deletedCount).to.equal(1)))
+        }
         )
     })
 
@@ -91,7 +90,7 @@ describe('SPEC retrieveChosenArticle()', () => {
 
             return User.create(user)
                 .then(user => userId = user.id)
-            
+
         })
         describe('when article id is not a string', () => {
             let articleId
@@ -116,7 +115,7 @@ describe('SPEC retrieveChosenArticle()', () => {
         describe('when article id length is not 24', () => {
             let articleId
 
-            beforeEach(() => articleId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5? 3 : -3)))
+            beforeEach(() => articleId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5 ? 3 : -3)))
 
             it('should fail on article id length different from 24', () => {
                 expect(() => retrieveChosenArticle(userId, articleId, () => { })).to.throw(Error, `id length ${articleId.length} is not 24`)
@@ -126,7 +125,7 @@ describe('SPEC retrieveChosenArticle()', () => {
             User
                 .deleteOne({ _id: userId })
                 .then(result => expect(result.deletedCount).to.equal(1))
-            }
+        }
         )
     })
 

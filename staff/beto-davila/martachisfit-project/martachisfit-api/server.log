@@ -1330,3 +1330,15 @@ info 2020-12-13T18:44:31.619Z - starting server
 info 2020-12-14T08:42:56.372Z - starting server
 info 2020-12-14T08:42:56.528Z - server running on port 4000
 info 2020-12-14T08:45:13.645Z - stopping server
+info 2020-12-14T09:46:51.409Z - starting server
+info 2020-12-14T09:46:51.534Z - server running on port 4000
+error 2020-12-14T09:47:03.388Z - NotFoundError: user with id 5fcb8e8b5ba966fcbe148dc1 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T10:01:00.643Z - stopping server
+info 2020-12-14T11:09:56.213Z - starting server
+info 2020-12-14T11:09:56.337Z - server running on port 4000
+info 2020-12-14T11:22:25.355Z - stopping server
+info 2020-12-14T11:22:29.151Z - starting server
+info 2020-12-14T11:22:29.421Z - server running on port 4000
+info 2020-12-14T11:41:59.399Z - stopping server

@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { Recipe, User } = require('../models')
+const { models: { Recipe, User } } = require('martachisfit-data')
 
 /**
  * Retrieves recipes
@@ -20,8 +20,8 @@ module.exports = function (userId) {
                 .then(recipes => {
                     if (!recipes) throw new NotFoundError('no found recipes')
 
-                    return(recipes)
+                    return (recipes)
 
+                })
         })
-    })
 }
