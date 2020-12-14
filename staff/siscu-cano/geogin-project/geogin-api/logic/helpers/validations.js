@@ -47,7 +47,7 @@ module.exports = {
     if (!id.trim().length) throw new ContentError('id is empty or blank')
 
     if (id.length !== 24)
-      throw new LengthError(`id length ${id.length} is not 24`)
+      throw new LengthError(`${id} length ${id.length} is not 24`)
 
     if (!id.match(/^[0-9a-fA-F]{24}$/))
       throw new TypeError(id + ' is not a valid id')
@@ -69,11 +69,8 @@ module.exports = {
     })
   },
   validateModePrivate (modePrivate) {
-    !(
-    modePrivate === true ||
-    modePrivate === false ||
-    toString.call(modePrivate) === '[object Boolean]'
-  )
+    if (typeof modePrivate !== 'boolean')	 
+      throw new TypeError(modePrivate + ' is not a modePrivate')
   },
 
   validateQuery (query) {

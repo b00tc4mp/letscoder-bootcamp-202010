@@ -33,12 +33,12 @@ mongoose
   .then(() =>
     createGame(
       undefined,
+      '5fd6a2ff76d7ba5e82285a53',
+      '5fd77f445437da7de3eb08e6',
       'http://localhost:4000/api/game/id_game',
       undefined,
       undefined,
-      '5fd5ff757e18090924f1e54b',
-      undefined,
-      '5fd55e3930882ef33c018a24'
+      undefined
     )
   )
   // .then(() => createGame('5fd6321350d64660d5a4faef',undefined, [{name: "Los Chipirones",players: []}],undefined,undefined,undefined,undefined ))
@@ -46,4 +46,6 @@ mongoose
   .catch(console.error)
   .then(mongoose.disconnect)
 
-//Parameters: gameId, qrCode, teams, players, questId, progress, organizerId
+//Parameters: gameId, organizerId, questId, qrCode, teams, players, progress
+
+

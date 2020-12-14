@@ -13,8 +13,10 @@ import { MapGetPos } from '../../components/MapGetPos'
 import { TextArea } from '../../components/TextArea'
 import { RiAddCircleLine } from 'react-icons/ri'
 import { IoIosSave } from 'react-icons/io'
-import { toast } from 'react-toastify'
-import { saveQuest } from '../../logic'
+import { saveQuest, saveGame } from '../../logic'
+
+import { navigate } from '@reach/router'
+
 import uuid from 'uuid'
 
 import TimeInput from 'react-time-input'
@@ -52,9 +54,8 @@ export const SearchCreate = () => {
     }
   })
 
-  // All (search & test)
+  // All (game & test)
   const [test, setTest] = useState([])
-  const [search, setSearch] = useState([])
 
   // Quest ID
   const [questIdAdded, setQuestIdAdded] = useState()
@@ -161,6 +162,7 @@ export const SearchCreate = () => {
   }
 
   const saveTest = () => {
+    console.log(pictureTest)
     const _test = {
       title: titleTest,
       description: descriptionTest,
@@ -208,6 +210,14 @@ export const SearchCreate = () => {
         setQuestIdAdded(questId)
         if (error) return window.alert(error.message)
       })
+  }
+
+  const handleSaveGame = () => {
+    const { token } = window.sessionStorage
+    saveGame(token, undefined, questIdAdded, 'http://localhost:4000/api/game/id_game', undefined, undefined, undefined, (error, gameId) => {
+      if (error) return window.alert(error.message)
+      navigate(`/search-create-menu/${gameId}`)
+    })
   }
 
   const skip = ({ step, push }) => {
@@ -461,7 +471,7 @@ export const SearchCreate = () => {
                             Anterior
                           </button>
 
-                          <button className='btn btn-next' onClick={next}>
+                          <button className='btn btn-next' onClick={handleSaveGame}>
                             <IoIosSave size={ICON_SIZE} /> Guardar y salir
                           </button>
                         </div>

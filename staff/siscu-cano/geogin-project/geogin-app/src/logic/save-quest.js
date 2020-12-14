@@ -26,7 +26,7 @@ const {
  * @param {string} description
  * @param {Array} homeLocation
  * @param {Array} endLocation
- * @param {Date} time
+ * @param {String} time
  * @param {Boolean} modePrivate
  * @param {Boolean} kidsOk
  * @param {Array} evaluations
