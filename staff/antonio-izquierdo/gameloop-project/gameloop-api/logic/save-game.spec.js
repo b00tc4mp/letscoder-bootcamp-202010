@@ -1,6 +1,6 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomGameConsole, randomNotNumber, randomId, randomNotId, randomWrongLengthId, randomInteger, } = require('../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomGameConsole, randomNotNumber, randomId, randomNotId, randomWrongLengthId, randomInteger } = require('../utils/randoms')
 const { models: { User, Game }, mongoose: { Types: { ObjectId } }, mongoose } = require('gameloop-data')
 const saveGame = require('./save-game')
 const { ContentError, LengthError } = require('../errors')
@@ -35,7 +35,6 @@ describe('saveGame()', () => {
             })
 
             it('should succeed creating a new game', () =>
-                //gameId, name, description, gameconsole, budget, ownerId
                 saveGame(undefined, name, description, gameconsole, budget, ownerId)
                     .then(gameId => {
 
@@ -44,7 +43,6 @@ describe('saveGame()', () => {
                         return Game.find({ owner: ownerId })
                     })
                     .then(games => {
-                        console.log('games with gameconsole', games)
                         expect(games).to.have.lengthOf(1)
 
                         const [game] = games

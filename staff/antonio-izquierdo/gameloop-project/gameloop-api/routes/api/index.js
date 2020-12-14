@@ -7,7 +7,7 @@ const {
     handleRetrieveUser,
     handleSaveGame,
     handleFindGames,
-    handleDetailGame,
+    handleRetrieveGame,
     handleSaveGameImage,
     handleRetrieveGameImage
 } = require('./handlers')
@@ -26,9 +26,9 @@ router.post('/api/games', jsonBodyParser, withErrorHandling(handleSaveGame))
 
 router.get('/api/games', withErrorHandling(handleFindGames))
 
-router.get('/api/games/:gameId', withErrorHandling(handleDetailGame))
+router.get('/api/games/:gameId', withErrorHandling(handleRetrieveGame))
 
-router.post('/api/games/:gameId/images', withErrorHandling(handleSaveGameImage))
+router.post('/api/games/:gameId/images', jsonBodyParser, withErrorHandling(handleSaveGameImage))
 
 router.get('/api/games/:gameId/images', withErrorHandling(handleRetrieveGameImage))
 

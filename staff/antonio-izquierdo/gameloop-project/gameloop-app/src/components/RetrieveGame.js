@@ -1,14 +1,16 @@
-//import './DetailGame.sass'
+
 import { useEffect, useState } from 'react'
 import { retrieveGame } from '../logic'
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function DetailGame({ gameId }) {
+function RetrieveGame({ gameId }) {
     const [game, setGame] = useState()
     useEffect(() => {
         try {
+            debugger
             retrieveGame(gameId, (error, game) => {
+                console.log(gameId)
 
                 if (error) return alert(error.message)
 
@@ -27,8 +29,8 @@ function DetailGame({ gameId }) {
         <p className="result__p">description: {game.description}</p>
         <p className="result__p">gameconsole: {game.gameconsole}</p>
         <p className="result__p">budget: {game.budget}</p>
-    </article> : <> </>
+    </article> : <> <h1>Menudo mierdon</h1> </>
 
 }
 
-export default DetailGame
+export default RetrieveGame

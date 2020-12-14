@@ -1,4 +1,4 @@
-import { SignUp, SignIn, Home, Access } from './components'
+import { SignUp, SignIn, Home, Access, RetrieveGame } from './components'
 import { registerUser, authenticateUser } from './logic'
 import { Route, withRouter, Redirect, Switch } from 'react-router-dom'
 import context from './logic/context'
@@ -56,11 +56,10 @@ export default withRouter(props => {
 
   return (
     <header className="App-header">
-      <Switch>
         <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} error={error} />} />
         <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} error={error} />} />
-        <Route exact path='/' render={() => token ? <Home onLogout ={handleLogout}/> : <Access />} />
-      </Switch>
+        <Route exact path='/' render={(props) => token ? <Home onLogout ={handleLogout} /> : <Access />} />
+        <Route path='/game/:gameId' render={props => <RetrieveGame gameId={props.match.params.gameId}/>} /> 
     </header>
   );
 })

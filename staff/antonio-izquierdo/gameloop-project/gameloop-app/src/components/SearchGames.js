@@ -1,14 +1,13 @@
 import './SearchGames.sass'
 import FindGames from './FindGames'
-import { useState, useEffect } from 'react'
-import { Route, withRouter, Redirect } from 'react-router-dom'
-import { findGames, retrieveGame } from '../logic'
-import DetailGame from './DetailGame'
+import { useState } from 'react'
+import { Route, withRouter } from 'react-router-dom'
+import { findGames } from '../logic'
+import RetrieveGame from './RetrieveGame'
 
  
 //{ onSearch }
-export default withRouter(function ({ onSearch, history }) {
-    const [view, setView] = useState('find-games')
+export default withRouter(({ onSearch, history, location, match }) => {
     const [games, setGames] = useState()
 
     const handleFindGames = event => {
@@ -32,7 +31,7 @@ export default withRouter(function ({ onSearch, history }) {
                 setGames(games)
                 history.push('/')
 
-                setView('find-games')
+                //setView('find-games')
 
             })
         } catch (error) {
@@ -40,9 +39,10 @@ export default withRouter(function ({ onSearch, history }) {
         }
     }
     //const { token } = sessionStorage
-
-    const handleDetailGame = gameId => {
-        history.push(`/games/${gameId}`)
+debugger
+    const handleRetrieveGame = gameId => {
+        history.push(`/game/${gameId}`)
+        console.log(gameId)
         setGames(undefined)
     }
 
@@ -58,8 +58,7 @@ export default withRouter(function ({ onSearch, history }) {
                 <button>Search</button>
             </form>
 
-            { games && games.length > 0 && <FindGames onSearch={handleFindGames} games={games} onDetailGame={handleDetailGame} />}
-            <Route path='/games/:gameId' render={props => <DetailGame gameId={props.match.params.gameId} />} />
+            { games && games.length > 0 && <FindGames onSearch={handleFindGames} games={games} onRetrieveGame={handleRetrieveGame} />}
         </>
     );
 })

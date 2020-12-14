@@ -8,7 +8,7 @@ module.exports = [
             { name: 'Super Mario Golf Tour', image: 'super-mario-golf-tour', description: 'si quieres saber precio avísame y negociamos. No vendo online ni me desplazo a ningún sitio', gameconsole: 'nintendo 3ds', budget: '23' },
             { name: 'Dr Mario Miracle Cure', image: 'doctor-mario', description: 'este juego es maravilloso :D, me duele despedirme de él pero necesito el dinero... creeme es un juegazo no te vas a arrepentir', gameconsole: 'nintendo 3ds', budget: '40' },
             { name: 'Mario Party The Top 100', image: 'mario-party-the-top-100', description: 'un clásico, para jugar solo o con amigos. Contesto al correo y al whatsapp', gameconsole: 'nintendo 3ds', budget: '36' },
-            { name: 'Mario Kart 7', image: 'mario-kart-7', description: 'este juego, es infancia. no rebajo el prec io NO negocio. OK?. ', gameconsole: 'nintendo 3ds', budget: '27' }
+            { name: 'Mario Kart 7', image: 'mario-kart-7', description: 'este juego, es infancia. no rebajo el prec io NO negocio. OK?. ', gameconsole: 'nintendo 3ds', budget: '27' },
         ]
     },
     {

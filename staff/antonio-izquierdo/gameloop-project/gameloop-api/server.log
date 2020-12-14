@@ -1973,3 +1973,78 @@ info 2020-12-14T10:45:28.384Z - server running on port 4000
 info 2020-12-14T10:48:40.105Z - stopping server
 info 2020-12-14T10:58:28.319Z - server running on port 4000
 info 2020-12-14T10:58:28.446Z - stopping server
+info 2020-12-14T11:14:47.491Z - server running on port 4000
+error 2020-12-14T11:15:20.782Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T11:19:20.347Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-14T11:19:44.916Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-14T12:04:09.077Z - stopping server
+info 2020-12-14T12:51:36.873Z - server running on port 4000
+error 2020-12-14T13:22:51.135Z - NotFoundError: user with id 5fd74940ed6e651d14c3ff87 not found
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\retrieve-user.js:10:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T13:22:55.634Z - NotFoundError: user with id 5fd74940ed6e651d14c3ff87 not found
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\retrieve-user.js:10:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T13:23:13.857Z - stopping server
+info 2020-12-14T13:23:17.438Z - server running on port 4000
+info 2020-12-14T13:40:40.243Z - stopping server
+info 2020-12-14T15:24:19.926Z - server running on port 4000
+error 2020-12-14T15:24:35.879Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T15:24:39.435Z - stopping server
+info 2020-12-14T15:25:12.873Z - server running on port 4000
+error 2020-12-14T15:25:37.224Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T15:26:16.072Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T15:26:59.911Z - stopping server
+info 2020-12-14T15:27:38.284Z - server running on port 4000
+info 2020-12-14T15:35:34.542Z - stopping server
+info 2020-12-14T15:35:38.058Z - server running on port 4000
+info 2020-12-14T15:41:57.968Z - stopping server
+info 2020-12-14T15:42:10.858Z - server running on port 4000
+info 2020-12-14T15:44:17.854Z - stopping server
+info 2020-12-14T15:44:21.369Z - server running on port 4000
+info 2020-12-14T16:02:30.436Z - stopping server
+info 2020-12-14T16:02:34.386Z - server running on port 4000
+info 2020-12-14T16:02:49.710Z - stopping server
+info 2020-12-14T16:02:57.610Z - server running on port 4000
+info 2020-12-14T16:06:15.029Z - server running on port 4000
+info 2020-12-14T16:08:44.329Z - stopping server
+info 2020-12-14T16:08:48.651Z - server running on port 4000
+info 2020-12-14T16:17:32.864Z - server running on port 4000
+info 2020-12-14T17:19:54.896Z - server running on port 4000
+info 2020-12-14T17:21:28.522Z - stopping server
+info 2020-12-14T17:21:36.993Z - server running on port 4000
+info 2020-12-14T17:42:37.726Z - stopping server
+info 2020-12-14T17:53:38.946Z - server running on port 4000
+info 2020-12-14T17:54:24.587Z - stopping server
+info 2020-12-14T17:54:32.921Z - server running on port 4000
+info 2020-12-14T17:57:17.658Z - server running on port 4000
+info 2020-12-14T17:59:43.674Z - server running on port 4000
+info 2020-12-14T18:13:18.692Z - server running on port 4000
+info 2020-12-14T18:13:37.164Z - server running on port 4000
+info 2020-12-14T18:15:14.991Z - stopping server
+info 2020-12-14T18:15:17.387Z - server running on port 4000
+info 2020-12-14T18:21:38.772Z - stopping server
+info 2020-12-14T18:21:46.285Z - server running on port 4000
+info 2020-12-14T18:25:07.982Z - stopping server
+info 2020-12-14T18:25:21.891Z - server running on port 4000
+info 2020-12-14T18:26:35.859Z - stopping server
+info 2020-12-14T18:26:44.958Z - server running on port 4000
+info 2020-12-14T18:28:03.668Z - stopping server
+info 2020-12-14T18:28:19.655Z - server running on port 4000
+info 2020-12-14T18:29:30.974Z - stopping server
+info 2020-12-14T18:29:39.259Z - server running on port 4000
+info 2020-12-14T18:46:33.249Z - stopping server
+info 2020-12-14T19:20:37.615Z - server running on port 4000
+info 2020-12-14T19:28:08.677Z - stopping server
+info 2020-12-14T19:28:11.920Z - server running on port 4000
+info 2020-12-14T19:30:01.503Z - stopping server
+info 2020-12-14T19:30:04.550Z - server running on port 4000
+info 2020-12-14T20:13:06.528Z - stopping server

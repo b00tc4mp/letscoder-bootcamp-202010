@@ -4,7 +4,7 @@ import {  validateCallback, validateId } from './helpers/validations'
 export default function (id, callback) {
     validateId(id)
     validateCallback(callback)
- 
+ debugger
     call('GET', `http://localhost:4000/api/games/${id}`, {'Content-type': 'application/json'},
         null,
         (status, response) => {

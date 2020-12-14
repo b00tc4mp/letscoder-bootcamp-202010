@@ -1,7 +1,7 @@
 //change to retrieve game
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { models: { Game } } = require('gameloop-data')
+const { models: { Game }  } = require('gameloop-data')
 
 /**
  * Retrieves a pet by its id
@@ -10,7 +10,8 @@ const { models: { Game } } = require('gameloop-data')
  * 
  * @returns {Promise}
  */
-module.exports = function (gameId) {
+module.exports = function(gameId) {
+debugger
     validateId(gameId)
 
     return Game.findById(gameId).lean()

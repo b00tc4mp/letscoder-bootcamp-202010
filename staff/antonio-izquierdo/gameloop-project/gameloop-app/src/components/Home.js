@@ -1,6 +1,7 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser, saveGame, findGames, saveGameImage } from '../logic'
+import Profile from './Profile'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
@@ -72,6 +73,14 @@ export default function Home({onLogout}) {
         }
     }
 
+    const handleGoToProfile = () => {
+        setView('profile')
+    }
+    
+    const handleGoToHome = () => {
+        setView('home')
+    }
+
     return <section className="home">
         {token ? <h1>Hello, {name}!</h1> : <> </>}
         {<button className="home__logout" onClick={() => {
@@ -80,7 +89,10 @@ export default function Home({onLogout}) {
             setError(null)
             onLogout()
         } }>LOGOUT</button>}
+        {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
+        {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
         {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
-        {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
+        {view === 'home' && <SearchGames onSearch={handleSearchGames}/>}
+        {view === 'profile' && <Profile name={name} />}
     </section>
 }

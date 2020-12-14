@@ -5,7 +5,7 @@ import Access from './Access'
 import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
 import FindGames from './FindGames'
-import DetailGame from './DetailGame'
+import RetrieveGame from './RetrieveGame'
 import Feedback from './Feedback'
 
 export {
@@ -16,6 +16,6 @@ export {
     SearchGames,
     SaveGame,
     FindGames,
-    DetailGame,
+    RetrieveGame,
     Feedback
 }

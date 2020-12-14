@@ -3,7 +3,7 @@ module.exports = {
     handleAuthenticateUser: require('./handle-authenticate-user'),
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleFindGames: require('./handle-find-games'),
-    handleDetailGame: require('./handle-detail-game'),
+    handleRetrieveGame: require('./handle-retrieve-game'),
     handleSaveGame: require('./handle-save-game'),
     handleSaveGameImage: require('./handle-save-game-image'),
     handleRetrieveGameImage: require('./handle-retrieve-game-image')
