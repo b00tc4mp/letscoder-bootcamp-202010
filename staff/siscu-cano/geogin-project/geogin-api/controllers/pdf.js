@@ -41,83 +41,99 @@ try {
    .text('Lo primero que deberás hacer como organizador de la partida, será esconder los QRs.')
    .moveDown(2);
 
+    if (content[0]) {
+        pdfDoc
+        .text(`1.) Prueba: ${content[0].title}`)
+        .moveDown(9);
+        SVGtoPDF(pdfDoc, content[0].qrCode, 73, 240);
+        pdfDoc
+        .text('.............................................................................')
+        .moveDown(2);
+    }
+
+    if (content[1]) {
+        pdfDoc
+        .text(`2.) Prueba: ${content[1].title}`)
+        .moveDown(9);
+        SVGtoPDF(pdfDoc, content[1].qrCode, 73, 420);
+        pdfDoc
+        .text('.............................................................................')
+        .moveDown(2);
+    }
+
+    if (content[2]) {
     pdfDoc
-    .text('1.) Prueba:')
+    .text(`3.) Prueba: ${content[2].title}`)
     .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 240);
+    SVGtoPDF(pdfDoc, content[2].qrCode, 73, 610);
+    }
+
+    if (content[3]) {
+    pdfDoc
+    .text(`4.) Prueba: ${content[3].title}`)
+    .moveDown(9);
+    SVGtoPDF(pdfDoc, content[3].qrCode, 73, 100);
     pdfDoc
     .text('.............................................................................')
     .moveDown(2);
+    }
 
+    if (content[4]) {
     pdfDoc
-    .text('2.) Prueba:')
+    .text(`5.) Prueba: ${content[4].title}`)
     .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 420);
+    SVGtoPDF(pdfDoc, content[4].qrCode, 73, 290);
     pdfDoc
     .text('.............................................................................')
     .moveDown(2);
+    }
 
+    if (content[5]) {
     pdfDoc
-    .text('3.) Prueba:')
+    .text(`6.) Prueba: ${content[5].title}`)
     .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 610);
-   
-    pdfDoc
-    .text('4.) Prueba:')
-    .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 100);
+    SVGtoPDF(pdfDoc, content[5].qrCode, 73, 470);
     pdfDoc
     .text('.............................................................................')
     .moveDown(2);
+    }
 
+    if (content[6]) {
     pdfDoc
-    .text('5.) Prueba:')
+    .text(`7.) Prueba: ${content[6].title}`)
     .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 290);
+    SVGtoPDF(pdfDoc, content[6].qrCode, 73, 670);
+    }
+
+    if (content[7]) {
+    pdfDoc
+    .text(`8.) Prueba: ${content[7].title}`)
+    .moveDown(9);
+    SVGtoPDF(pdfDoc, content[7].qrCode, 73, 100);
     pdfDoc
     .text('.............................................................................')
     .moveDown(2);
+    }
 
+    if (content[8]) {
     pdfDoc
-    .text('6.) Prueba:')
+    .text(`9.) Prueba: ${content[8].title}`)
     .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 470);
+    SVGtoPDF(pdfDoc, content[8].qrCode, 73, 300);
     pdfDoc
     .text('.............................................................................')
     .moveDown(2);
+    }
 
+    if (content[9]) {
     pdfDoc
-    .text('7.) Prueba:')
+    .text(`10.) Prueba: ${content[9].title}`)
     .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 670);
-    
-
-    pdfDoc
-    .text('8.) Prueba:')
-    .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 100);
+    SVGtoPDF(pdfDoc, content[9].qrCode, 73, 480);
     pdfDoc
     .text('.............................................................................')
     .moveDown(2);
-
-
-    pdfDoc
-    .text('9.) Prueba:')
-    .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 300);
-    pdfDoc
-    .text('.............................................................................')
-    .moveDown(2);
-
-
-    pdfDoc
-    .text('10.) Prueba:')
-    .moveDown(9);
-    SVGtoPDF(pdfDoc, svg, 73, 480);
-    pdfDoc
-    .text('.............................................................................')
-    .moveDown(2);
-
+    }
       
     cloud.uploads(pdfPath).then((result) => {
       const pdfFile = {
