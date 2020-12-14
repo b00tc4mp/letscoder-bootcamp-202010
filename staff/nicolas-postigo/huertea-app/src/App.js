@@ -1,5 +1,5 @@
 import './App.css';
-import { Register, Login, Hub, Home, Createoffer, Useroffers, MapView } from './components'
+import { Register, Login, Hub, Home, Createoffer, Useroffers } from './components'
 import { useState } from 'react'
 // import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer, saveOfferImage } from './logic'
 import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer, retrieveUserOffer, saveOfferImage } from './logic'
@@ -12,7 +12,7 @@ import { BrowserRouter as Switch } from "react-router-dom";
 function App(props) {
   console.log(props)
   const [fullname, setFullname] = useState('text')
-  const [view, setView] = useState('mapview')
+  const [view, setView] = useState('')
   const [offers, setOffers] = useState([])
   const [useroffers, setUseroffers] = useState([])
 
@@ -195,7 +195,7 @@ function App(props) {
         <Route exact path='/hub' render={() => token ? <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} useroffers={useroffers} onRetrieveUserOffers={handleRetrieveUserOffers} /> : <Redirect to='/' />} />
         <Route exact path='/createoffer' render={() => <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />} />
 
-        {view === 'mapview' && <MapView></MapView>}
+
         {/**          {view === 'home' && <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />}
         {view === 'register' && <Register onRegister={handleRegister} />}
         {view === 'login' && <Login onLogin={handleLogin} />}

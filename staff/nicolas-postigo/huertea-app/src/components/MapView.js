@@ -11,7 +11,7 @@ import "leaflet/dist/leaflet.css";
 function MapView({  }) {
     const [state, setState] = useState({
         currentLocation: {lat: '41.65606', lng: '-0.87734'},
-        zoom: 13
+        zoom: 11
     });
 
     return <MapContainer center={state.currentLocation} zoom={state.zoom}>

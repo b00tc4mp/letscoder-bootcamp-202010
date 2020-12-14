@@ -13,7 +13,7 @@ const Markers = ({ places }) => {
 
 
     ));
-
+ 
     return markers
 
 };

@@ -625,3 +625,45 @@ info 2020-12-12T17:29:53.489Z - stopping server
 info 2020-12-12T17:30:16.232Z - starting server
 info 2020-12-12T17:30:16.887Z - server running on port 4000
 info 2020-12-12T17:32:42.915Z - stopping server
+info 2020-12-12T17:36:24.186Z - starting server
+info 2020-12-12T17:36:24.389Z - server running on port 4000
+error 2020-12-12T18:20:36.035Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-12T18:21:01.633Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "5,25" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\create-offer.js:38:34
+info 2020-12-13T08:41:16.686Z - stopping server
+info 2020-12-13T08:41:37.943Z - starting server
+info 2020-12-13T08:41:38.794Z - server running on port 4000
+error 2020-12-13T09:02:59.991Z - ConflictError: user with e-mail nicolas@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\register-user.js:17:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T09:03:08.260Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-13T09:03:27.255Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-13T10:18:20.098Z - stopping server
+info 2020-12-13T10:18:33.664Z - starting server
+info 2020-12-13T10:18:34.147Z - server running on port 4000
+error 2020-12-13T10:26:15.210Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-13T11:01:34.444Z - NotFoundError: offer with id 5fd509a2f044ad0fccacea84 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-13T15:22:45.028Z - stopping server

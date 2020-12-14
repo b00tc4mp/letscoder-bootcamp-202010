@@ -1,5 +1,5 @@
 const { validateId } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('offers-errors')
 const { User } = require('../models')
 
 module.exports = function (userId) {
