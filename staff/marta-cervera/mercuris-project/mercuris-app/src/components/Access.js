@@ -15,7 +15,7 @@ function Access({  onGoToSearch }){
         </div>
         <div className="access__search">
         <h1 className="access__search__title">Search your favourite product</h1>
-        <button onClick = {onGoToSearch} className="search__btn" >Search</button>
+        <button onClick = {onGoToSearch} className="access__search__btn" >Search</button>
         </div>
                      
 

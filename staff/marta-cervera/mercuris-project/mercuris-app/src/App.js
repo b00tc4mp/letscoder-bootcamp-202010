@@ -11,7 +11,7 @@ context.API_URL=process.env.REACT_APP_API_URL
 
 function App(props) {
   
-  
+  ////name, email,password, contact, address, city, phone, callback
   const [error, setError] = useState(null)
 
   function feedbackError(error) {
@@ -25,9 +25,9 @@ function App(props) {
 
   const {token} = sessionStorage
 
-  const handleSignUp = (name, email, password) => {
+  const handleSignUp = (name, email, password, contact, address, city, phone) => {
     try {
-      registerUser(name, email, password, error => {
+      registerUser(name, email, password, contact, address, city, phone, error => {
         if (error) return feedbackError(error.message)
 
         
