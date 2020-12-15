@@ -26,10 +26,9 @@ export const MenuListWrapper = styled.div`
     color: #fff;
     text-align: center;
     font-weight: bold;
-    color: #000;
+    color: #333;
     font-size: 21px;
     letter-spacing: 1px;
-    text-shadow: 0px -2px #0854ff5c;
   }
   p {
     color: #63e9ff;

@@ -190,7 +190,8 @@ export const SearchCreate = () => {
     modePrivate,
     kidsOk,
     evaluations,
-    tests) => {
+    tests
+  ) => {
     window.alert('handleSaveQuest')
 
     saveQuest(
@@ -209,41 +210,83 @@ export const SearchCreate = () => {
       (error, questId) => {
         setQuestIdAdded(questId)
         if (error) return window.alert(error.message)
-      })
+      }
+    )
   }
 
   const handleSaveGame = () => {
     const { token } = window.sessionStorage
-    saveGame(token, undefined, questIdAdded, 'http://localhost:4000/api/game/id_game', undefined, undefined, undefined, (error, gameId) => {
-      if (error) return window.alert(error.message)
-      navigate(`/search-create-menu/${gameId}`)
-    })
+
+    saveGame(
+      token,
+      undefined,
+      questIdAdded,
+      'http://localhost:4000/api/game/id_game',
+      undefined,
+      undefined,
+      undefined,
+      (error, gameId) => {
+        if (error) return window.alert(error.message)
+        navigate(`/search-create-menu/${gameId}`)
+      }
+    )
   }
 
   const skip = ({ step, push }) => {
     const { token } = window.sessionStorage
     switch (step.id) {
       case 'coverStep': {
+        console.log('coverStep')
         picture && handleSaveQuest(token, questIdAdded, undefined, picture)
         push()
         break
       }
       case 'searchStep': {
-        console.log(modePrivate)
-        console.log(typeof modePrivate)
+        console.log('searchStep')
         nameSearch &&
-        descriptionSearch &&
-        poiBeginGame &&
-        poiEndGame &&
-        time &&
-        handleSaveQuest(token, questIdAdded, nameSearch, undefined, descriptionSearch, poiBeginGame, poiEndGame, time, modePrivate, kidsOk)
+          descriptionSearch &&
+          poiBeginGame &&
+          poiEndGame &&
+          time &&
+          handleSaveQuest(
+            token,
+            questIdAdded,
+            nameSearch,
+            undefined,
+            descriptionSearch,
+            poiBeginGame,
+            poiEndGame,
+            time,
+            modePrivate,
+            kidsOk
+          )
         push()
         break
       }
       case 'quizStep': {
-        if (titleTest && descriptionTest && poiTest && trickTest.data.trickOne) {
+        console.log('Estamos en sección  QUIZSTEP')
+        if (
+          titleTest &&
+          descriptionTest &&
+          poiTest &&
+          trickTest.data.trickOne
+        ) {
           const updatedTest = saveTest()
-          handleSaveQuest(token, questIdAdded, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, updatedTest)
+          console.log(updatedTest)
+          handleSaveQuest(
+            token,
+            questIdAdded,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            updatedTest
+          )
         }
         push()
         break
@@ -288,7 +331,10 @@ export const SearchCreate = () => {
                             portada de la búsqueda, tambien aparecerá en los
                             listados.
                           </p>
-                          <UploadImage onUploadImage={handleImage} previewImage={picture} />
+                          <UploadImage
+                            onUploadImage={handleImage}
+                            previewImage={picture}
+                          />
                           <button className='btn btn-next' onClick={next}>
                             Siguiente <BiChevronsRight size={ICON_SIZE} />
                           </button>
@@ -304,7 +350,8 @@ export const SearchCreate = () => {
                           </p>
                           <Input
                             value={nameSearch}
-                            onChange={handleNameSearch} placeholder='* Título'
+                            onChange={handleNameSearch}
+                            placeholder='* Título'
                           />
                           <Input
                             value={descriptionSearch}
@@ -314,13 +361,19 @@ export const SearchCreate = () => {
                           <Input
                             onClick={showModalBeginGame}
                             placeholder='* Ubicación de inicio del juego'
-                            value={poiBeginGame && `${poiBeginGame.coordinates[0]} - ${poiBeginGame.coordinates[1]}`}
+                            value={
+                              poiBeginGame &&
+                              `${poiBeginGame.coordinates[0]} - ${poiBeginGame.coordinates[1]}`
+                            }
                             onChange={() => {}}
                           />
                           <Input
                             onClick={showModalEndGame}
                             placeholder='* Ubicación de final del juego'
-                            value={poiEndGame && `${poiEndGame.coordinates[0]} - ${poiEndGame.coordinates[1]}`}
+                            value={
+                              poiEndGame &&
+                              `${poiEndGame.coordinates[0]} - ${poiEndGame.coordinates[1]}`
+                            }
                             onChange={() => {}}
                           />
                           <TimeInput
@@ -334,7 +387,9 @@ export const SearchCreate = () => {
                               isOn={modePrivate}
                               onColor='#3780e9'
                               handleToggle={() => {
-                                console.log('..................................')
+                                console.log(
+                                  '..................................'
+                                )
                                 console.log(!modePrivate)
                                 console.log(typeof modePrivate)
                                 console.log(typeof !modePrivate)
@@ -387,9 +442,22 @@ export const SearchCreate = () => {
                               )}
                             </div>
                           </div>
-                          <button className='btn btn-next' onClick={next}>
+
+                          <button
+                            className={
+                              nameSearch &&
+                              descriptionSearch &&
+                              poiBeginGame &&
+                              poiEndGame &&
+                              time
+                                ? 'btn btn-next'
+                                : 'btn btn-next disabled'
+                            }
+                            onClick={next}
+                          >
                             Siguiente <BiChevronsRight size={ICON_SIZE} />
                           </button>
+
                           <button
                             className='btn btn-previous'
                             onClick={previous}
@@ -423,7 +491,10 @@ export const SearchCreate = () => {
                             onClick={showModalTestGame}
                             placeholder='* Ubicación de la prueba'
                             onChange={() => {}}
-                            value={poiTest && `${poiTest.coordinates[0]} - ${poiTest.coordinates[1]}`}
+                            value={
+                              poiTest &&
+                              `${poiTest.coordinates[0]} - ${poiTest.coordinates[1]}`
+                            }
                           />
                           <UploadImage
                             className='small-upload'
@@ -471,7 +542,10 @@ export const SearchCreate = () => {
                             Anterior
                           </button>
 
-                          <button className='btn btn-next' onClick={handleSaveGame}>
+                          <button
+                            className='btn btn-next'
+                            onClick={handleSaveGame}
+                          >
                             <IoIosSave size={ICON_SIZE} /> Guardar y salir
                           </button>
                         </div>

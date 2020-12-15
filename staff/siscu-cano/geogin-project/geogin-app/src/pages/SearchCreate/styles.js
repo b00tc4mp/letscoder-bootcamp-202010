@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const DefaultLayout = styled.div`
-  background: linear-gradient(to bottom, #f3f7ff 0%,#f3f7ff 44%,#d8e5ff 100%);
+  background: linear-gradient(to bottom, #f3f7ff 0%, #f3f7ff 44%, #d8e5ff 100%);
   margin: 0 auto;
   height: 100%;
   max-height: 100%;
@@ -48,6 +48,10 @@ export const DefaultLayout = styled.div`
     font-weight: bold;
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
     max-width: 40%;
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
     > svg {
       vertical-align: middle;
     }
