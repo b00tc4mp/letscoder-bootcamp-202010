@@ -4,7 +4,7 @@ const { ConflictError} = require('../errors')
 const { models: { User } } = require('mercuris-data')
 const bcryptjs = require('bcryptjs')
 
-module.exports = function(name, email, password){
+module.exports = function(name, email,password, contact, address, city, phone){
     validateName(name)
     validateEmail(email)
     validatePassword(password)
@@ -16,7 +16,7 @@ module.exports = function(name, email, password){
 
                 return bcryptjs.hash(password, 10)
             })
-            .then(hash => User.create({ name, email, password: hash }))
+            .then(hash => User.create({ name, email, password: hash, contact, address, city, phone }))
             .then(()=> { })
     )
 }

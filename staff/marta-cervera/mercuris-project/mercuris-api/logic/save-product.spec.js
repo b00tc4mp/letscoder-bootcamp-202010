@@ -1,9 +1,9 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger, randomId } = require('../utils/random')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger, randomId, randomNonString, randomEmptyOrBlankString , randomNotNumber} = require('../utils/random')
 const { models: { User, Product }, mongoose: { Types: { ObjectId } }, mongoose } = require('mercuris-data')
 const saveProduct = require('./save-product')
-
+const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -115,6 +115,76 @@ describe('saveProduct()', () => {
 
         afterEach(() => User.deleteMany())
     })
+    describe('when description is not a string', () => {
+        let productId, ownerId, name, description, price
+
+        beforeEach(() => {
+            productId = randomId()
+            ownerId = randomId()
+            name = randomStringWithPrefix('password')
+            description = randomNonString()            
+            price = '' + randomInteger(-1, -100)
+        })
+
+        it('should fail on a non string description', () => {
+            expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(TypeError , `${description} is not a description`)
+        })
+    })
+
+    describe('when description is empty or blank', () => {
+        let productId, ownerId, name, description, price
+
+        beforeEach(() => {
+            productId = randomId()
+            ownerId = randomId()
+            name = randomStringWithPrefix('password')
+            description = randomEmptyOrBlankString()            
+            price = '' + randomInteger(-1, -100)
+        })
+
+        it('should fail on non-string description', () => {
+            expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(ContentError, 'description is empty or blank')
+        })
+    })
+})
+
+
+
+describe('when price is wrong', () => {
+    describe('when price is negative number', () => {
+        let productId, ownerId, name, description, price
+
+        beforeEach(() => {
+            productId = randomId()
+            ownerId = randomId()
+            name = randomStringWithPrefix('password')
+            description = randomStringWithPrefix('description')            
+            price = '' + randomInteger(-1, -100)
+        })
+
+        it('should fail on a negative number for price', () => {
+            expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(ContentError, `${price} is a negative number`)
+        })
+    })
+
+    describe('when price is not a number', () => {
+        let productId, ownerId, name, description, price
+
+        beforeEach(() => {
+            productId = randomId()
+            ownerId = randomId()
+            name = randomStringWithPrefix('password')
+            description = randomStringWithPrefix('description')            
+            price = randomNotNumber()
+        })
+
+        it('should fail on a non number price', () => {
+            expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(TypeError, `${price} is not a number`)
+        })
+    })
+
+
+
 
     
     // TODO more unit test cases

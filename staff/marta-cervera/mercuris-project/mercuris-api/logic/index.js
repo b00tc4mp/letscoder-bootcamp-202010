@@ -8,6 +8,7 @@ module.exports = {
     retrieveProduct: require('./retrieve-product'),
     saveProductImage: require('./save-product-image'),
     retrieveProductImage: require('./retrieve-product-image'),
-    retrieveProductDetail: require('./retrieve-product-detail')
+    retrieveProductDetail: require('./retrieve-product-detail'),
+    modifyUser: require('./modify-user')
 
 }

@@ -18,13 +18,17 @@ describe('findProducts()', () => {
             name = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
+            
+            ownerId= randomId()
+            queryCompany = randomStringWithPrefix('queryCompany')
+            queryProduct = randomStringWithPrefix('queryProduct')
+            price = '' + randomInteger(10, 100)
+            priceMin = '' + randomInteger(10, 100)
+            priceMax = '' + randomInteger(10, 100)
 
 
             name = randomStringWithPrefix('name')
             description = randomStringWithPrefix('description')
-            queryCompany = randomStringWithPrefix('queryCompany')
-            queryProduct = randomStringWithPrefix('queryProduct')
-            price = '' + randomInteger(10, 100)
 
             const user = { name, email, password }
 
@@ -34,6 +38,7 @@ describe('findProducts()', () => {
             const product = { name, description, price, owner }
 
             const newProduct = await Product.create(product)
+
             productId = '' + newProduct._id
 
         })
@@ -41,18 +46,18 @@ describe('findProducts()', () => {
         it('shoud succed on new product', () => {
 
 
-            findProducts(owner, queryCompany, queryProduct, price)
+            findProducts(owner, queryCompany, queryProduct, price, priceMin, priceMax)
 
                 .then(() =>
                     Product.findOne({ productId })
                 )
                 .then(product => {
-                    expect(product.productId).to.equal(productId)
-                    expect(product.descrption).to.equal(description)
+                    expect(product.owner).to.equal(owner)
+                    expect(product.queryCompany).to.equal(queryCompany)
+                    expect(product.queryProduct).to.equal(queryProduct)
                     expect(product.price).to.be.a('number')
-
-
-
+                    expect(product.priceMin).to.be.a('number')
+                    expect(product.priceMax).to.be.a('number')
                 })
         })
 
@@ -67,20 +72,19 @@ describe('findProducts()', () => {
         describe('when queryCompany is wrong', () => {
 
             describe('when queryCompany is not a string', () => {
-                let owner, queryCompany, queryProduct, description, price
+                let owner, queryCompany, queryProduct, price, priceMin, priceMax
 
                 beforeEach(() => {
                     owner = randomId()
-                    queryCompany = randomNonString('queryCompany')
-                    queryProduct =  randomStringWithPrefix('queryProduct')
-                    description =  randomStringWithPrefix('description')
+                    queryCompany = randomNonString()
+                    queryProduct = randomStringWithPrefix('queryProduct')
                     price = '' + randomInteger(10, 100)
-
-
+                    priceMin = '' + randomInteger(10, 100)
+                    priceMax = '' + randomInteger(10, 100)
                 })
 
                 it('should fail when queryCompany is not an string', () => {
-                    expect(() => findProducts(owner, queryCompany, queryProduct, price, () => { })).to.throw(TypeError, `${queryCompany} is not a query`)
+                    expect(() => findProducts(owner, queryCompany, queryProduct, price, priceMin, priceMax, () => { })).to.throw(TypeError, `${queryCompany} is not a query`)
                 })
 
             })
@@ -88,59 +92,48 @@ describe('findProducts()', () => {
 
 
         describe('when queryProduct is not a string', () => {
-            let owner, queryCompany, queryProduct, price
+            let owner, queryCompany, queryProduct, price, priceMin, priceMax
 
             beforeEach(() => {
                 owner = randomId()
                 queryCompany = randomStringWithPrefix('queryCompany')
-                queryProduct = randomNonString('queryProduct')
+                queryProduct = randomNonString()
                 price = '' + randomInteger(10, 100)
+                priceMin = '' + randomInteger(10, 100)
+                priceMax = '' + randomInteger(10, 100)
 
             })
 
             it('should fail when queryProduct is not an string', () => {
-                expect(() => findProducts(owner, queryCompany, queryProduct, price, () => { })).to.throw(TypeError, `${queryProduct} is not a query`)
+                expect(() => findProducts(owner, queryCompany, queryProduct, price, priceMin, priceMax, () => { })).to.throw(TypeError, `${queryProduct} is not a query`)
             })
 
         })
     })
 
-    describe('when queryCompany is wrong', () => {
-        let ownerId, queryProduct, queryCompany, price
-
-        beforeEach(() => {
-            owner = randomId()
-            queryCompany = randomNonString('queryCompany')
-            queryProduct = randomStringWithPrefix('queryProduct')
-            price = '' + randomInteger(10, 100)
-    })
-
-    it('should fail when queryProduct is not an string', () => {
-        expect(() => findProducts(ownerId, queryCompany, queryProduct, price, () => { })).to.throw(TypeError, `${queryCompany} is not a query`)
-    })
- })
-
+    
     describe('when price is wrong', () => {
         describe('when price is not a number', () => {
 
-            let ownerId, name, description,productId
-            beforeEach(() =>{
-                productId = randomId()
-                name = randomStringWithPrefix('password')
-                description = randomStringWithPrefix('description')                
+            let owner, queryCompany, queryProduct, price, priceMin, priceMax
+            beforeEach(() => {
+                owner = randomId()
+                queryCompany = randomStringWithPrefix('queryCompany')
+                queryProduct = randomStringWithPrefix('queryProduct')
                 price = randomNotNumber()
-                ownerId = randomId()
+                priceMin = '' + randomInteger(10, 100)
+                priceMax = '' + randomInteger(10, 100)
             })
 
             it('should fail on a non number price', () => {
-                
-                expect(() => findProducts(productId, name, description, price, ownerId, () => {})).to.throw(TypeError, `${price} is not a number`)
+
+                expect(() => findProducts(owner, queryCompany, queryProduct, price, priceMin, priceMax, () => { })).to.throw(TypeError, `${price} is not a number`)
+            })
         })
+
+
+
+
     })
-
-
-
-
-})
-after(mongoose.disconnect)
+    after(mongoose.disconnect)
 })

@@ -9,5 +9,6 @@ module.exports = {
     handleSaveProductImage: require('./handle-save-product-image'),
     handleRetrieveProduct: require('./handle-save-product'),
     handleRetrieveProductImage: require('./handle-retrieve-product-image'),
-    handleRetrieveProductDetail: require('./handle-retrieve-product-detail')
+    handleRetrieveProductDetail: require('./handle-retrieve-product-detail'),
+    handleModifyUser: require('./handle-modify-user')
 }

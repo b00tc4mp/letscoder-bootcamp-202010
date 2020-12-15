@@ -1,7 +1,7 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { User } } = require('mercuris-data')
-const { User } = require('mercuris-data/models')
+
 
 module.exports = function( userId) {
 

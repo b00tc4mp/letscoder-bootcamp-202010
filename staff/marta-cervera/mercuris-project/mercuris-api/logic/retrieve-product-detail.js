@@ -10,18 +10,20 @@ module.exports = function (productId) {
 
             if (!product) throw new NotFoundError(`product with id ${productId} not found`)
             const { owner } = product
+            const ownerId = owner.toString()
 
             return User
 
-                .findById(owner.toString())
+                .findById(ownerId)
                 .then(user => {
+                    debugger
 
                     const { _id } = product
 
                     const { name } = user
 
                     user.fullname = name
-
+                    
                     product.id = _id.toString()
 
                     delete product._id

@@ -1,6 +1,15 @@
 const { models: { User, Product }, mongoose: { Types: { ObjectId } } } = require('mercuris-data')
 
+const { validateQuery, validatePrice} = require('./helpers/validations')
+
 module.exports = function (userId, queryCompany, queryProduct, price, priceMin, priceMax) {
+    validateQuery(queryCompany)    
+    validateQuery(queryProduct)    
+    validatePrice(price)
+    validatePrice(priceMin)
+    validatePrice(priceMax)
+    
+    
     const criteria = {}
 
     if (userId)
