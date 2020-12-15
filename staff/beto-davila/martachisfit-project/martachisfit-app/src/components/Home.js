@@ -38,7 +38,8 @@ import {
     Diets,
     Workouts,
     Workout,
-    Movements
+    Movements,
+    Feedback
 } from './index'
 
 export default function Home() {
@@ -65,7 +66,7 @@ export default function Home() {
     useEffect(() => {
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert('No se pudo recuperar el usuario')
+                if (error) return feedbackError('No se pudo recuperar el usuario. Error en el servidor :(')
 
                 const { fullname } = user
                 setName(fullname)
@@ -80,7 +81,7 @@ export default function Home() {
         setError(error)
         setTimeout(() => {
             setError(null)
-        }, 3000)
+        }, 5000)
     }
 
     const handleGoToWelcome = () => {
@@ -90,12 +91,12 @@ export default function Home() {
     const handleGoToRecipes = () => {
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert('No se pudo recuperar el usuario. Error de servidor.')
+                if (error) return feedbackError('No se pudo recuperar el usuario. Error de servidor.')
 
                 const { fullname } = user
                 setName(fullname)
                 retrieveRecipes(token, (error, recipes) => {
-                    if (error) return alert('Hubo un error recuperando las recetas :(')
+                    if (error) return feedbackError('Hubo un error recuperando las recetas :(')
 
                     setRecipes(recipes)
                     setView("recipes")
@@ -117,7 +118,7 @@ export default function Home() {
     const handleGoToUserDiet = () => {
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError('No se pudo recuperar el usuario. Error de servidor :(')
 
                 const { calories } = user
                 setCalories(calories)
@@ -133,7 +134,7 @@ export default function Home() {
     const handleGoToBlog = () => {
         try {
             retrieveArticles(token, (error, articles) => {
-                if (error) return alert("Hubo un error recuperando los artículos del blog :(")
+                if (error) return feedbackError("Hubo un error recuperando los artículos del blog :(")
 
                 setArticle(articles)
                 setView("articles")
@@ -146,7 +147,7 @@ export default function Home() {
     const handleGoToRandomArticle = () => {
         try {
             retrieveArticles(token, (error, articles) => {
-                if (error) return alert("Hubo un error recuperando los artículos del blog :(")
+                if (error) return feedbackError("Hubo un error recuperando los artículos del blog :(")
 
                 setArticle(articles)
                 setView("articles")
@@ -177,11 +178,11 @@ export default function Home() {
                 if (error) return feedbackError("Hubo un problema intentando guardar la receta :(")
 
                 retrieveUser(token, (error, user) => {
-                    if (error) return alert(error.message)
+                    if (error) return feedbackError('No se pudo recuperar el usuario. Error de servidor.')
 
                     const { savedRecipes } = user
                     retrieveRecipe(recipeId, (error, recipe) => {
-                        if (error) return alert("Hubo un problema intentando recuperar la receta :(")
+                        if (error) return feedbackError("Hubo un problema intentando recuperar la receta :(")
 
                         const { id: recipeId } = recipe
                         savedRecipes.includes(recipeId) ? setLikedRecipe(true) : setLikedRecipe(false)
@@ -201,11 +202,11 @@ export default function Home() {
                 if (error) return feedbackError("Hubo un problema intentando guardar el entrenamiento :(")
 
                 retrieveUser(token, (error, user) => {
-                    if (error) return alert(error.message)
+                    if (error) return feedbackError('No se pudo recuperar el usuario. Error de servidor.')
 
                     const { myWorkouts } = user
                     retrieveWorkout(level, (error, workout) => {
-                        if (error) return alert("Hubo un problema intentando recuperar la rutina de entrenamiento :(")
+                        if (error) return feedbackError("Hubo un problema intentando recuperar la rutina de entrenamiento :(")
 
                         const { id: workoutId } = workout
                         myWorkouts.includes(workoutId) ? setLikedWorkout(true) : setLikedWorkout(false)
@@ -237,15 +238,15 @@ export default function Home() {
     const handleGoToProfile = () => {
         try {
             retrieveSavedArticles(token, (error, articles) => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError('No se pudo acceder. Error de servidor.')
 
                 setSavedArticles(articles)
                 retrieveSavedRecipes(token, (error, savedRecipes) => {
-                    if (error) return alert(error.message)
+                    if (error) return feedbackError('No se pudo acceder. Error de servidor.')
 
                     setSavedRecipes(savedRecipes)
                     retrieveSavedWorkouts(token, (error, savedWorkouts) => {
-                        if (error) return alert(error.message)
+                        if (error) return feedbackError('No se pudo acceder. Error de servidor.')
 
                         setSavedWorkouts(savedWorkouts)
                         setView("profile")
@@ -260,7 +261,7 @@ export default function Home() {
     const handleGoToChosenArticle = articleId => {
         try {
             retrieveChosenArticle(token, articleId, (error, chosenArticle) => {
-                if (error) return alert('Hubo un problema tratando de recuperar el artículo :(')
+                if (error) return feedbackError('Hubo un problema tratando de recuperar el artículo :(')
 
                 setChosenArticle(chosenArticle)
                 setView('chosen-article')
@@ -274,11 +275,11 @@ export default function Home() {
     const handleGoToRecipe = recipeId => {
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError('No se pudo acceder. Error de servidor.')
 
                 const { savedRecipes } = user
                 retrieveRecipe(recipeId, (error, recipe) => {
-                    if (error) return alert('Hubo un problema tratando de recuperar la receta')
+                    if (error) return feedbackError('Hubo un problema tratando de recuperar la receta')
 
                     const { id: recipeId } = recipe
                     savedRecipes.includes(recipeId) ? setLikedRecipe(true) : setLikedRecipe(false)
@@ -294,11 +295,11 @@ export default function Home() {
     const handleRetrieveWorkout = level => {
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
+                if (error) return feedbackError('Error de servidor :(')
 
                 const { myWorkouts } = user
                 retrieveWorkout(level, (error, workout) => {
-                    if (error) return alert('Hubo un problema tratando de recuperar la rutina')
+                    if (error) return feedbackError('Hubo un problema tratando de recuperar la rutina')
 
                     const { id: workoutId } = workout
                     myWorkouts.includes(workoutId) ? setLikedWorkout(true) : setLikedWorkout(false)
@@ -314,7 +315,7 @@ export default function Home() {
     const handleRetrieveChosenDiet = dietType => {
         try {
             retrieveChosenDiet(token, dietType, (error, chosenDiet) => {
-                if (error) alert('Hubo un error tratando de recuperar la dieta seleccionada')
+                if (error) feedbackError('Hubo un error tratando de recuperar la dieta seleccionada')
 
                 setChosenDiet(chosenDiet)
                 setView('chosen-diet')
@@ -367,6 +368,7 @@ export default function Home() {
                         <a href="https://es-es.facebook.com/m.albimuro?fref=nf"><img className="home__social-logo" alt="facebook" src={facebook} width="13"></img></a><a href="https://www.instagram.com/martachis.fit/"><img alt="instagram" width="13" className="home__social-logo" src={instagram}></img></a><a href="https://www.linkedin.com/in/alberto-davila-gomez-250460b0"><img className="home__social-logo" alt="linkedin" width="13" src={linkedin}></img></a>
                     </nav>
                 </div>
+                {error && <Feedback error={error}/>}
                 <DropDownMenu
                     onGoToDietDesign={handleGoToDietDesign}
                     onGoToWelcome={handleGoToWelcome}
@@ -384,7 +386,7 @@ export default function Home() {
                     onGoToDietDesign={handleGoToDietDesign}
                 />}
             {view === 'diet-design' && <DietDesign />}
-            {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
+            {view === 'workouts' && <Workouts error={error} onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
             {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error} />}
             {view === 'workout' && <Workout like={likedWorkout} error={error} onSaveWorkout={handleSaveWorkout} onGoToMovements={handleGoToMovements} source={workout} />}
             {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
