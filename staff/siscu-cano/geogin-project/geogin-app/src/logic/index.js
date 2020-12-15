@@ -3,11 +3,13 @@ import registerUser from './register-user'
 import uploadImage from './upload-image'
 import saveQuest from './save-quest'
 import saveGame from './save-game'
+import retrieveGame from './retrieve-game'
 
 export {
   authenticateUser,
   registerUser,
   uploadImage,
   saveQuest,
-  saveGame
+  saveGame,
+  retrieveGame
 }
