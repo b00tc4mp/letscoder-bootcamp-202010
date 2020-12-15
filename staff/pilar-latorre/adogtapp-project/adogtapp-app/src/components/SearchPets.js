@@ -70,7 +70,7 @@ function SearchPets(){
     }
         return (
             <>
-        {!token && <h1>Welcome to ADOGTAPP, here you can search</h1>}
+        {!token && <h1 className= "search__title">Find your pet</h1>}
         <form className="search" onSubmit={handleResults}>
             {!token && <input className="search__input" type="text" name="queryShelter" placeholder="shelter info" />}
             {!token && <input className="search__input" type="text" name="city" placeholder="city"/>}

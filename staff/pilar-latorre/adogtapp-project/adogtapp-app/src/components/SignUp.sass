@@ -8,8 +8,8 @@ $fontmain: Nerko One, cursive
     font-family: $fontmain
   
     &__img
-        width: 100vw
-        height: 20vh
+        max-width: 100%
+        height: 15vh
         
     &__form
         background-color: white
@@ -18,8 +18,8 @@ $fontmain: Nerko One, cursive
         display: flex
         flex-direction: column
         width: 50vw
-        height: 50vh
-        margin: 5vw auto 5vw auto
+        height: auto
+        margin: 3vw auto 3vw auto
         border: 2px solid purple
         font-family: $fontmain
 
@@ -31,26 +31,22 @@ $fontmain: Nerko One, cursive
         border: .5px solid purple
         margin-bottom: 2vw
         font-family: $fontmain
+        font-size: 1.2rem
         &::placeholder
             padding-left: 5px
 
-    &__button, &__update
+    &__button
         border-radius: 20px
         background-color: purple
         height: 8vw
         margin-top: 1.5vw
-        font-size: 1rem
+        font-size: 1.2rem
         font-weight: bold
         outline: none
         color: white
         font-family: $fontmain
-    &__update
-        height: 5vw
-        font-family: $fontmain
     
-
     &__p
-        margin-top: 0
         padding-left: 4vw
         padding-right: 4vw
         font-size: .9rem
@@ -64,7 +60,7 @@ $fontmain: Nerko One, cursive
 @media (min-width: 1000px)
     .signUp
         &__img
-            width: 65vw
+            max-width: 100%
         &__form
             width: 30vw
             height: 45vh

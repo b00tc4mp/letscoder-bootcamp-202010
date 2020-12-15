@@ -4,7 +4,7 @@ import { Feedback} from '.'
 
 function SignUp({ onSignUp, error}){
     return <div className="signUp">
-        <h1 className="signUp__h1">Please give us some information about your shelter</h1>
+        <h2 className="signUp__h1">Please give us some information about your shelter</h2>
         <img className='signUp__img' src="variosperretes2.jpg"/>  
         
         <form className="signUp__form" onSubmit={event => {
