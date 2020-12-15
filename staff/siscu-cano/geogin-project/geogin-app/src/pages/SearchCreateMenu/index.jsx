@@ -1,9 +1,9 @@
 
 import React from 'react'
 import ReactToPrint from 'react-to-print'
-
 import { MenuListWrapper, Link } from './styles'
 import { RiTeamLine, RiStackshareLine, RiPrinterFill, RiGamepadLine } from 'react-icons/ri'
+import { SocialShare } from '../../components/SocialShare'
 import PrintItem from '../../components/PrintItem'
 import { retrieveGame } from '../../logic'
 
@@ -50,13 +50,14 @@ export class SearchCreateMenu extends React.Component {
 
         <MenuListWrapper>
           <div className='Menu'>
-            <Link to='/search-access'><RiTeamLine className='Menu-Icon' size={ICON_SIZE} />Crear equipos</Link>
-            <Link to='/search-create'><RiStackshareLine className='Menu-Icon' size={ICON_SIZE} />Enviar invitaciones</Link>
+            {/* <Link to='/search-access'><RiTeamLine className='Menu-Icon' size={ICON_SIZE} />Crear equipos</Link>
+            <Link to='/search-create'><RiStackshareLine className='Menu-Icon' size={ICON_SIZE} />Enviar invitaciones</Link> */}
             <ReactToPrint
               trigger={() => <Link to='#'><RiPrinterFill className='Menu-Icon' size={ICON_SIZE} />Imprimir Qr Codes <span>(pruebas)</span></Link>}
               content={() => this.componentRef}
             />
             <Link to='/ranking'><RiGamepadLine className='Menu-Icon' size={ICON_SIZE} />Iniciar el juego</Link>
+            <SocialShare gameId={this.props.questId} />
           </div>
 
           <h2>Código de la búsqueda:</h2>
