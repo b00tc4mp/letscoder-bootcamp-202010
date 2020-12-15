@@ -2,14 +2,13 @@
 
 $Ruso: 'Russo One', sans-serif
     
-.results
+.result
     display: flex
     background-color: white
-    text-align: left
+    text-align: center
     &__li
-        display: inline-block
-        width: 25vw
-        height: 25vh
+        display: grid
+        grid-template-rows: 1fr
         border: 1px solid white
         list-style: none
         justify-content: center
@@ -19,4 +18,7 @@ $Ruso: 'Russo One', sans-serif
         &__title
             font-family: $Ruso
             font-size: 25px 
+        &__img
+            width: 50vw
+            height: 70vh
 

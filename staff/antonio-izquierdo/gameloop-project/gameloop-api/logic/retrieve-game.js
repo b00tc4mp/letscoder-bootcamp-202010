@@ -4,7 +4,7 @@ const { NotFoundError } = require('../errors')
 const { models: { Game }  } = require('gameloop-data')
 
 /**
- * Retrieves a pet by its id
+ * Retrieves a game by its id
  * 
  * @param {string} gameId 
  * 

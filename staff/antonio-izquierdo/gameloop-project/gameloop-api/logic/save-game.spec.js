@@ -1,6 +1,6 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomGameConsole, randomNotNumber, randomId, randomNotId, randomWrongLengthId, randomInteger } = require('../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomGameConsole, randomNotStringNumber, randomId, randomNotId, randomWrongLengthId, randomInteger } = require('../utils/randoms')
 const { models: { User, Game }, mongoose: { Types: { ObjectId } }, mongoose } = require('gameloop-data')
 const saveGame = require('./save-game')
 const { ContentError, LengthError } = require('../errors')
@@ -143,75 +143,79 @@ describe('saveGame()', () => {
     describe('when any parameter is wrong', () => {
         describe('when name is wrong', () => {
             describe('when name is not a string', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
                     name = randomNonString()
                     description = randomStringWithPrefix('password')
-                    gameconsole = randomGameConsole()
+                    gameconsole = randomGameConsole(gameconsole)
                     budget = '' + randomInteger(1, 100)
+                    ownerId = randomId()
                 })
 
                 it('should fail on a non string name', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, undefined, () => { })).to.throw(TypeError, `${name} is not a text`)
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(TypeError, `${name} is not a text`)
                 })
             })
 
             describe('when name is empty or blank', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
                     name = randomEmptyOrBlankString()
                     description = randomStringWithPrefix('password')
-                    gameconsole = randomGameConsole()
+                    gameconsole = randomGameConsole(gameconsole)
                     budget = '' + randomInteger(1, 100)
+                    ownerId = randomId()
                 })
 
                 it('should fail on an empty or blank name', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, undefined, () => { })).to.throw(ContentError, 'text is empty or blank')
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(ContentError, 'text is empty or blank')
                 })
             })
         })
 
         describe('when description is wrong', () => {
             describe('when description is not a string', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
                     name = randomStringWithPrefix('password')
                     description = randomNonString()
-                    gameconsole = randomGameConsole()
+                    gameconsole = randomGameConsole(gameconsole)
                     budget = '' + randomInteger(1, 100)
+                    ownerId = randomId()
                 })
 
                 it('should fail on a non string description', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, undefined, () => { })).to.throw(TypeError, `${description} is not a text`)
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(TypeError, `${description} is not a text`)
                 })
             })
 
             describe('when description is empty or blank', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
                     name = randomStringWithPrefix('password')
                     description = randomEmptyOrBlankString()
-                    gameconsole = randomGameConsole()
+                    gameconsole = randomGameConsole(gameconsole)
                     budget = '' + randomInteger(1, 100)
+                    ownerId = randomId()
                 })
 
                 it('should fail on non-string description', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, undefined, () => { })).to.throw(ContentError, 'text is empty or blank')
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(ContentError, 'text is empty or blank')
                 })
             })
         })
 
         describe('when gameconsole is wrong', () => {
             describe('when gameconsole is not a string', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
@@ -219,15 +223,16 @@ describe('saveGame()', () => {
                     description = randomStringWithPrefix('description')
                     gameconsole = randomNonString()
                     budget = '' + randomInteger(1, 100)
+                    ownerId = randomId()
                 })
 
                 it('should fail on a non string gameconsole', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, undefined, () => { })).to.throw(TypeError, `${gameconsole} is not a text`)
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(TypeError, `${gameconsole} is not an string`)
                 })
             })
 
             describe('when gameconsole is empty or blank', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
@@ -235,17 +240,35 @@ describe('saveGame()', () => {
                     description = randomStringWithPrefix('description')
                     gameconsole = randomEmptyOrBlankString()
                     budget = '' + randomInteger(1, 100)
+                    ownerId = randomId()
                 })
 
                 it('should fail on an empty or blank gameconsole', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, undefined, () => { })).to.throw(ContentError, 'text is empty or blank')
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(ContentError, 'gameconsole is empty or blank')
+                })
+            })
+
+            describe('when gameconsole is not a valid gameconsole', () => {
+                let gameId, name, description, gameconsole, budget, ownerId
+
+                beforeEach(() => {
+                    gameId = randomId()
+                    name = randomStringWithPrefix('password')
+                    description = randomStringWithPrefix('description')
+                    gameconsole = randomStringWithPrefix('gameconsole')
+                    budget = '' + randomInteger(1, 100)
+                    ownerId = randomId()
+                })
+
+                it('should fail on a non valid gameconsole', () => {
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId,() => { })).to.throw(TypeError, `${gameconsole} is not a valid gameconsole`)
                 })
             })
         })
 
         describe('when budget is wrong', () => {
             describe('when budget is negative number', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
@@ -253,10 +276,11 @@ describe('saveGame()', () => {
                     description = randomStringWithPrefix('description')
                     gameconsole = randomGameConsole()
                     budget = '' + randomInteger(-1, -100)
+                    ownerId = randomId()
                 })
 
                 it('should fail on a negative number for budget', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, undefined, () => { })).to.throw(ContentError, `${budget} is a negative number`)
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(ContentError, `${budget} is a negative number`)
                 })
             })
 
@@ -268,7 +292,7 @@ describe('saveGame()', () => {
                     name = randomStringWithPrefix('password')
                     description = randomStringWithPrefix('description')
                     gameconsole = randomGameConsole()
-                    budget = randomNotNumber()
+                    budget = randomNotStringNumber()
                     ownerId = randomId()
                 })
 
@@ -278,7 +302,7 @@ describe('saveGame()', () => {
             })
 
             describe('when budget is empty or blank', () => {
-                let gameId, name, description, gameconsole, budget
+                let gameId, name, description, gameconsole, budget, ownerId
 
                 beforeEach(() => {
                     gameId = randomId()
@@ -286,10 +310,11 @@ describe('saveGame()', () => {
                     description = randomStringWithPrefix('description')
                     gameconsole = randomGameConsole()
                     budget = randomEmptyOrBlankString()
+                    ownerId = randomId()
                 })
 
                 it('should fail on an empty or blank budget', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, '5fbcd46c1cc24f9c7ce22db1', () => { })).to.throw(ContentError, 'price is empty or blank')
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, ownerId, () => { })).to.throw(ContentError, 'price is empty or blank')
                 })
             })
         })

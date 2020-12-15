@@ -42,10 +42,23 @@ module.exports = {
 
     validateQuery(query) {
         if (typeof query !== 'string') throw new TypeError(`${query} is not a query`)
+
+        if (!query.trim().length) throw new ContentError('query is empty or blank')
+    },
+
+    validateGameconsole(gameconsole) {
+        if (typeof gameconsole !== 'string') throw new TypeError(`${gameconsole} is not an string`)
+
+        if (!gameconsole.trim().length) throw new ContentError('gameconsole is empty or blank')
+
+        if (!gameconsole.includes('game boy') && !gameconsole.includes('nintendo') && !gameconsole.includes('wii') && !gameconsole.includes('play station') && !gameconsole.includes('xbox')) throw new TypeError(`${gameconsole} is not a valid gameconsole`)
+//                                 'game boy',   'game boy advance',   'game boy color',   'nintendo ds',   'nintendo 3ds',   'nintendo switch',   'wii',   'wii u',   'play station 1',   'play station 2',   'play station 3',   'play station 4',   'play station 5',   'xbox',   'xbox 360',   'xbox one'
+        if (!gameconsole.trim().length) throw new ContentError('gameconsole is empty or blank')
     },
 
     validatePrice(budget) {
-        if (typeof budget !== 'string') throw new TypeError(`${budget} is not a number`)
+        
+        if (typeof budget !== 'string' && (!(budget instanceof Number))) throw new TypeError(`${budget} is not a number`)
 
         if (!budget.trim().length) throw new ContentError('price is empty or blank')
         

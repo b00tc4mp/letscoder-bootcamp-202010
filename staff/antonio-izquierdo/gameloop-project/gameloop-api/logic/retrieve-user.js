@@ -3,7 +3,7 @@ const { NotFoundError } = require('../errors')
 const { models: { User } }  = require('gameloop-data')
 
 module.exports = function (userId) {
-    validateId(userId)
+    if (typeof userId !== 'undefined')validateId(userId)
 
     return User.findById(userId).lean()
         .then(user => {

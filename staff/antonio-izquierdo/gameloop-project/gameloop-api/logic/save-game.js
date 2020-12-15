@@ -1,14 +1,14 @@
-const { validateId, validateText, validatePrice} = require('./helpers/validations')
+const { validateId, validateText, validatePrice, validateGameconsole} = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { User, Game }, mongoose: { Types: { ObjectId } } } = require('gameloop-data')
 
 module.exports = function( gameId, name, description, gameconsole, budget, ownerId) {
     if (typeof gameId !== 'undefined') validateId(gameId)
-    validateText(name)
-    validateText(description)
-    validateText(gameconsole)
-    validatePrice(budget)
-    validateId(ownerId)
+    if (typeof name !== 'undefined')validateText(name)
+    if (typeof description !== 'undefined')validateText(description)
+    if (typeof gameconsole !== 'undefined')validateGameconsole(gameconsole)
+    if (typeof budget !== 'undefined')validatePrice(budget)
+    if (typeof ownerId !== 'undefined') validateId(ownerId)
 
     const _id = ObjectId(ownerId)
 

@@ -13,6 +13,13 @@ module.exports = new Schema({
         required: true
     },
 
+    gameconsole: {
+        type: String,
+        enum: ['game boy', 'game boy advance', 'game boy color', 'nintendo ds', 'nintendo 3ds', 'nintendo switch', 'wii', 'wii u', 'play station 1', 'play station 2', 'play station 3', 'play station 4', 'play station 5', 'xbox', 'xbox 360', 'xbox one'],
+        default: 'nintendo',
+        required: true
+    },
+
     budget: {
         type: Number,
         required: true,
@@ -25,12 +32,7 @@ module.exports = new Schema({
     owner: {
         type: ObjectId,
         required: true
-    },
-
-    gameconsole: {
-        type: String,
-        enum: ['game boy', 'game boy advance', 'game boy color', 'nintendo ds', 'nintendo 3ds', 'nintendo switch', 'wii', 'wii u', 'play station 1', 'play station 2', 'play station 3', 'play station 4', 'play station 5', 'xbox', 'xbox 360', 'xbox one'],
-        default: 'nintendo',
-        required: true
     }
+
+  
 })

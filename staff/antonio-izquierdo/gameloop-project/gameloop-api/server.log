@@ -2048,3 +2048,20 @@ info 2020-12-14T19:28:11.920Z - server running on port 4000
 info 2020-12-14T19:30:01.503Z - stopping server
 info 2020-12-14T19:30:04.550Z - server running on port 4000
 info 2020-12-14T20:13:06.528Z - stopping server
+info 2020-12-14T20:14:05.616Z - server running on port 4000
+info 2020-12-14T20:32:00.740Z - stopping server
+info 2020-12-14T20:34:35.386Z - server running on port 4000
+info 2020-12-15T10:24:04.558Z - server running on port 4000
+info 2020-12-15T10:24:09.453Z - stopping server
+info 2020-12-15T10:30:30.377Z - server running on port 4000
+error 2020-12-15T10:30:58.674Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T10:31:04.159Z - stopping server
+info 2020-12-15T10:31:37.776Z - server running on port 4000
+info 2020-12-15T10:53:55.541Z - stopping server
+info 2020-12-15T19:38:09.318Z - server running on port 4000
+error 2020-12-15T19:40:04.687Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T20:57:27.255Z - stopping server

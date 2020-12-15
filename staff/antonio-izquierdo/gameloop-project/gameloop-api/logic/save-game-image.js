@@ -4,7 +4,7 @@ const fs = require('fs')
 
 
 module.exports = (gameId, stream) => {
-    validateId(gameId)
+    if (typeof gameId !== 'undefined')validateId(gameId)
     //validateStream(stream)
     // validateCallback(callback)
 

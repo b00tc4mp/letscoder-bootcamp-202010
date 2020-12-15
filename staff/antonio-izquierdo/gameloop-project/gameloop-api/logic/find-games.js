@@ -1,9 +1,14 @@
-//const { Types: { ObjectId } } = mongoose
+const { validateQuery, validatePrice, validateGameconsole} = require('./helpers/validations')
 const { models: { Game } } = require('gameloop-data')
 
 
 module.exports = function (query, gameconsole, budget, priceMin, priceMax) {
-    //poner validations
+    if (typeof query !== 'undefined') validateQuery(query)
+    if (typeof gameconsole !== 'undefined')validateGameconsole(gameconsole)
+    if (typeof budget !== 'undefined')validatePrice(budget)
+    if (typeof priceMin !== 'undefined')validatePrice(priceMin)
+    if (typeof priceMax !== 'undefined')validatePrice(priceMax)
+    
     const criteria = {}
 
     /*if (userId)

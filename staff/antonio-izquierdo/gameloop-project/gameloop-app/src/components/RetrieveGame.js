@@ -1,4 +1,4 @@
-
+import './RetrieveGame.sass'
 import { useEffect, useState } from 'react'
 import { retrieveGame } from '../logic'
 
@@ -24,12 +24,12 @@ function RetrieveGame({ gameId }) {
     }, [])
 
     return game ? <article className="result">
-        <img className="results__li__img" src={`${API_URL}/games/${game.id}/images`} width="500px" />
-        <p className="result__p">game: {game.name}</p>
+        <p className="result__li__title">game: {game.name}</p>
+        <img className="result__li__img" src={`${API_URL}/games/${game.id}/images`} width="500px" />
         <p className="result__p">description: {game.description}</p>
         <p className="result__p">gameconsole: {game.gameconsole}</p>
         <p className="result__p">budget: {game.budget}</p>
-    </article> : <> <h1>Menudo mierdon</h1> </>
+    </article> : <> </>
 
 }
 

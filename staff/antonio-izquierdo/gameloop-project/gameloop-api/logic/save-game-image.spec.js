@@ -14,7 +14,7 @@ describe('saveGameImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let fullname, email, password, gameId, name, description, gameconsole, budget, ownerId
+        let fullname, email, password, gameId, name, description, gameconsole, budget, owner
 
         beforeEach(async() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
