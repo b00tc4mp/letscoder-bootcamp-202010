@@ -1,11 +1,14 @@
 import call from '../utils/call'
+import context from './context'
 import { validateCallback, validateId } from './helpers/validations'
 
-export default function (recipeId, callback) {
+export default (function (recipeId, callback) {
     validateId(recipeId)
     validateCallback(callback)
 
-    call('GET', `http://localhost:4000/api/recipes/${recipeId}`, {},
+    const { API_URL } = this
+
+    call('GET', `${API_URL}/recipes/${recipeId}`, {},
         null,
         (status, response) => {
             if (status === 0)
@@ -20,4 +23,4 @@ export default function (recipeId, callback) {
 
             callback(null, recipe)
         })
-}
+}).bind(context)

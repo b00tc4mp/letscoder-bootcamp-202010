@@ -2,6 +2,18 @@ const { validateId, validateLevel } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { Workout, User }, mongoose: { Types: { ObjectId } } } = require('martachisfit-data')
 
+
+/**
+ * Toggles according to the selected workout
+ * 
+ * @param {string} userId the user's id
+ * @param {string} level the user level
+ * 
+ * @returns {undefined} returns undefined if successful
+ * 
+ * @throws {NotFoundError} if the user or the workout do not exist
+ */
+
 module.exports = (userId, level) => {
     validateId(userId)
     validateLevel(level)

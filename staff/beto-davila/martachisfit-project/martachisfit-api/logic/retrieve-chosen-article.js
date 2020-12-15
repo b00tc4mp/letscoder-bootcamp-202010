@@ -3,11 +3,14 @@ const { NotFoundError } = require('../errors')
 const { models: { User, Article } } = require('martachisfit-data')
 
 /**
- * Retrieves an array with the articles added by the user
+ * Retrieves the articles saved by the user
  * 
  * @param {string} userId 
+ * @param {string} articleId 
  * 
- * @returns {Promise}
+ * @returns {Array} Array of objects representing the saved articles
+ * 
+ * @throws {NotFoundError} if the article does not exist
  */
 
 module.exports = function (userId, articleId) {

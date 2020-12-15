@@ -1,11 +1,14 @@
 import call from '../utils/call'
+import context from './context'
 import { validateCallback, validateLevel } from './helpers/validations'
 
-export default function (level, callback) {
+export default (function (level, callback) {
     validateLevel(level)
     validateCallback(callback)
 
-    call('GET', `http://localhost:4000/api/users/${level}/workouts/`, {},
+    const { API_URL } = this
+
+    call('GET', `${API_URL}/users/${level}/workouts/`, {},
         null,
         (status, response) => {
             if (status === 0)
@@ -20,4 +23,4 @@ export default function (level, callback) {
 
             callback(null, workout)
         })
-}
+}).bind(context)

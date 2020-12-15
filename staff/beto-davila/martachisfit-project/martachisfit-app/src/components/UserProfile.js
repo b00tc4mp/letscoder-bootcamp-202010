@@ -2,6 +2,7 @@ import './styles/UserProfile.sass'
 import { SavedFood } from '.'
 import { retrieveSavedFood, toggleFoodUserDiet } from '../logic'
 import { useState, useEffect } from 'react'
+import mancuerna from './icons/mancuerna.png'
 
 export default function UserProfile({ name, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts }) {
     const [userChosenFoods, setUserChosenFoods] = useState()
@@ -59,7 +60,7 @@ export default function UserProfile({ name, onLogout, savedArticles, savedRecipe
                     {myWorkouts && myWorkouts.length && <ul className="user-profile__workout">
                         {myWorkouts.map(({ name, id, level }) => <li key={id} className="user-profile__workout-list">
                             <div className="user-profile__workout--list">
-                                <a className="user-profile__workout--link" onClick={() => onGoToMyWorkout(level)} href="#">{name}</a>
+                                <img src={mancuerna} alt="mancuerna"></img><a className="user-profile__workout--link" onClick={() => onGoToMyWorkout(level)} href="#">{name}</a>
                             </div>
                         </li>)}
                     </ul>}

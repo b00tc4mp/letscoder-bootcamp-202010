@@ -1,17 +1,20 @@
 import call from '../utils/call'
 import { validateQuery, validateCallback } from './helpers/validations'
+import context from './context'
 
-export default function findFood(query, callback) {
+export default (function findFood(query, callback) {
     validateQuery(query)
     validateCallback(callback)
 
-    call('GET', `http://localhost:4000/api/foods?q=${query}`, { },
+    const { API_URL } = this
+
+    call('GET', `${API_URL}/foods?q=${query}`, {},
         //JSON.stringify( {query} ),
         null,
         (status, response) => {
-            if(status === 0)
+            if (status === 0)
                 return callback(new Error('server error'))
-                
+
             else if (status !== 200) {
                 const { error } = JSON.parse(response)
 
@@ -21,8 +24,8 @@ export default function findFood(query, callback) {
                 const result = JSON.parse(response)
 
                 const food = result[0]
-    
+
                 callback(null, food)
             }
         })
-}
+}).bind(context)

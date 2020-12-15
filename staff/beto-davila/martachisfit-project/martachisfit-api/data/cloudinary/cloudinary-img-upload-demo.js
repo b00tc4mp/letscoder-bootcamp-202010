@@ -8,19 +8,19 @@ const cloudinary = require('cloudinary').v2
 const { env: { CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET } } = process
 
 cloudinary.config({
-    cloud_name: CLOUDINARY_CLOUD_NAME,
-    api_key: CLOUDINARY_API_KEY,
-    api_secret: CLOUDINARY_API_SECRET
+  cloud_name: CLOUDINARY_CLOUD_NAME,
+  api_key: CLOUDINARY_API_KEY,
+  api_secret: CLOUDINARY_API_SECRET
 })
 
 
 const upload = cloudinary.uploader.upload_stream({
   public_id: 'my-images/donuts' // OPTION
 }, (error, result) => {
-      if (error) throw error
+  if (error) throw error
 
-      console.log(result)
-  })
+  console.log(result)
+})
 
 fs.createReadStream('/donuts-blue-test.png')
   .pipe(upload)
@@ -78,19 +78,19 @@ cloudinary.uploader.upload('pizza.jpg', { tags: 'basic_sample' })
   });
   */
 
-  /*
+/*
 
 // Public Id
 cloudinary.uploader.upload('donuts_blue.png', { tags: 'donuts_blue', public_id: 'donuts_blue_1' }, function (err, image) {
-  if(err) return console.log(err)
+if(err) return console.log(err)
 
-  console.log();
-  console.log("** Public Id");
-  if (err) { console.warn(err); }
-  console.log("* Same image, uploaded with a custom public_id");
-  console.log("* " + image.public_id);
-  console.log("* " + image.url);
-  waitForAllUploads("donuts_blue2", err, image);
+console.log();
+console.log("** Public Id");
+if (err) { console.warn(err); }
+console.log("* Same image, uploaded with a custom public_id");
+console.log("* " + image.public_id);
+console.log("* " + image.url);
+waitForAllUploads("donuts_blue2", err, image);
 });
 
 */

@@ -96,9 +96,18 @@
 
         &__workout
             padding: 0
-    
+
+            &--list
+                display: flex
+                justify-content: space-evenly
+                width: 250px
+                margin: auto
+
             &--link
+                text-align: center
+                align-self: center
                 color: #303236
+                font-size: 1.1rem
 
         &__recipes-carousel
             width: 90%
@@ -162,6 +171,17 @@
         &__workout
             padding: 0
 
+            &--list
+                display: flex
+                justify-content: space-evenly
+                width: 200px
+                margin: auto
+
+            &--link
+                text-align: center
+                align-self: center
+                font-size: 1.1rem
+
         &__container
             display: grid
             grid-template-columns: 1fr 1fr
@@ -170,7 +190,7 @@
 
         &__workout-container
             background-color: #eaf0f0
-            min-width: 350px
+            width: 350px
             border-radius: 1rem
             margin: 1rem 0
             padding: 0 0 .3rem 0
@@ -178,7 +198,7 @@
 
         &__recipes-container
             background-color: #eaf0f0
-            min-width: 350px
+            width: 350px
             border-radius: 1rem
             margin: 1rem 0
             padding: 0 0 .3rem 0
@@ -186,14 +206,14 @@
 
         &__articles-container
             background-color: #eaf0f0
-            min-width: 350px
+            width: 350px
             border-radius: 1rem
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
 
         &__record-container
             background-color: #eaf0f0
-            min-width: 350px
+            width: 350px
             border-radius: 1rem
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)

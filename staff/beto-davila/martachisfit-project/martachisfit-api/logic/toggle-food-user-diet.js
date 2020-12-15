@@ -2,6 +2,17 @@ const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { Food, User }, mongoose: { Types: { ObjectId } } } = require('martachisfit-data')
 
+/**
+ * Toggles according to the selected food item
+ * 
+ * @param {string} userId the user's id
+ * @param {string} foodId the food's id
+ * 
+ * @returns {undefined} returns undefined if successful
+ * 
+ * @throws {NotFoundError} if the user or the food do not exist
+ */
+
 module.exports = (userId, foodId) => {
     validateId(userId)
     validateId(foodId)

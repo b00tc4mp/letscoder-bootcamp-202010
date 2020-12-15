@@ -1,13 +1,13 @@
 const { validateLevel } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+// const { NotFoundError } = require('../errors')
 const { models: { Workout } } = require('martachisfit-data')
 
 /**
- * Retrieves a workout by level
+ * Retrieves a workout by the user level
  * 
- * @param {string} level 
+ * @param {string} level the initial user level
  * 
- * @returns {Promise}
+ * @returns {Object} the object with all the workout information
  */
 module.exports = function (level) {
     validateLevel(level)

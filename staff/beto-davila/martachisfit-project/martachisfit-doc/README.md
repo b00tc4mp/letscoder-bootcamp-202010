@@ -66,11 +66,13 @@ We will use this number to offer you some diet plans that you could even change,
 
 #### Code-related:
 - App Testing
-- Watch out order, "cleanliness" and semantic
+- Watch out order, "cleanness" and semantic
+- Implement react-router-dom on Home compo
 
 #### App-related:
 - Experience level (in the gym) input for the user
-- Articles index creation
+- Improve the visual aspect on the meals layout (diet component)
+- Articles index creation (visual)
 - Populate the food db with more items
 - Watch out the images quality
 - Improve the overall style

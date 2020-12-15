@@ -3,12 +3,15 @@ const { NotFoundError } = require('../errors')
 const { models: { User, Diet } } = require('martachisfit-data')
 
 /**
- * Retrieves a chosen diet by the user
+ * Retrieves a chosen diet by the user according to his/her calories goal
  * 
- * @param {string} dietId 
+ * @param {string} dietType keto, mediterranean or vegan
+ * @param {string} userId user's id
  * 
- * @returns {Promise}
+ * @returns {Object} returns an object with all the diet information
+ * @throws {NotFoundError} if the diet does not exist
  */
+
 module.exports = function (userId, dietType) {
     validateId(userId)
     validateDietType(dietType)

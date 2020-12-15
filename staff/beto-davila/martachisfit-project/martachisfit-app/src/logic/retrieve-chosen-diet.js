@@ -1,12 +1,15 @@
 import call from '../utils/call'
+import context from './context'
 import { validateToken, validateCallback, validateDietType } from './helpers/validations'
 
-export default function (token, dietType, callback) {
+export default (function (token, dietType, callback) {
     validateToken(token)
     validateDietType(dietType)
     validateCallback(callback)
 
-    call('GET', `http://localhost:4000/api/users/diets/${dietType}`, { Authorization: `Bearer ${token}` },
+    const { API_URL } = this
+
+    call('GET', `${API_URL}/users/diets/${dietType}`, { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {
             if (status === 0)
@@ -21,4 +24,4 @@ export default function (token, dietType, callback) {
 
             callback(null, result)
         })
-}
+}).bind(context)

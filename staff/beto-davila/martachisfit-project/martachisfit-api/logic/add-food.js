@@ -3,9 +3,8 @@ const { models: { User, Food }, mongoose: { Types: { ObjectId } } } = require('m
 const { NotFoundError } = require('../errors')
 
 /**
- * Adds a food item to the db
+ * Adds a food item to the db (admin only version)
  * 
- * @example
  *      
  * @param {string} userId 
  * @param {string} foodId 
@@ -34,7 +33,7 @@ module.exports = function (userId, foodId, name, serving, calories, carbs, prote
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            // TODO validates user is admin
+            // TODO validates user is admin (app with admin version)
             if (foodId) {
                 const _id = ObjectId(foodId)
 

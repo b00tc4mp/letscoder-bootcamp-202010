@@ -2,6 +2,18 @@ const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { Recipe, User }, mongoose: { Types: { ObjectId } } } = require('martachisfit-data')
 
+/**
+ * Adds a recipe to the user's profile (favorite-like)
+ * 
+ * @param {string} userId user's id
+ * @param {string} recipeId recipe's id
+ * 
+ * @returns {undefined}
+ * 
+ * @throws {NotFoundError} on not found userId
+ * @throws {NotFoundError} on non-existent recipeId
+ */
+
 module.exports = (userId, recipeId) => {
     validateId(userId)
     validateId(recipeId)

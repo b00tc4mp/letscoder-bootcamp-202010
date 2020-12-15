@@ -1,11 +1,14 @@
 import call from '../utils/call'
 import { validateCallback, validateMuscularGroup } from './helpers/validations'
+import context from './context'
 
-export default function (group, callback) {
+export default (function (group, callback) {
     validateMuscularGroup(group)
     validateCallback(callback)
 
-    call('GET', `http://localhost:4000/api/movements/${group}`, {},
+    const { API_URL } = this
+
+    call('GET', `${API_URL}/movements/${group}`, {},
         null,
         (status, response) => {
             if (status === 0)
@@ -20,4 +23,4 @@ export default function (group, callback) {
 
             callback(null, movements)
         })
-}
+}).bind(context)

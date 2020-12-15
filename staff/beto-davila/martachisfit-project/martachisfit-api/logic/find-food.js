@@ -2,6 +2,15 @@ const { validateQuery } = require('./helpers/validations')
 const { models: { Food } } = require('martachisfit-data')
 const { NotFoundError } = require('../errors')
 
+/**
+ * Retrieves food that match a query criteria
+ * 
+ * @param {string} query query to find the food
+ * 
+ * @returns {Array} Array representing the food element meeting the query criteria. Otherwise, empty array.
+ * 
+ */
+
 module.exports = query => {
 
     validateQuery(query)

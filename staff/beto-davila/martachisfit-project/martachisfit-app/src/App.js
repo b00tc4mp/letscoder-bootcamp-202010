@@ -63,7 +63,7 @@ export default withRouter(props => {
   return <div className="App">
   <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onRegister={handleRegister} />} />
   <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn error={error} onLogin={handleAuthenticateUser} />} />
-  <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/sign-in" />} />
+  <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/landing" />} />
   <Route path='/landing' render={() => <Landing />} />
   <Route path='/user-info' render={() => <UserInfo onGoToGoalCaloriesAndMacros={handleGetCaloriesAndMacros}/>} />
   <Route path= '/calories-goal' render={() => <CaloriesGoal macros={goal}/>} />

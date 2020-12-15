@@ -1,14 +1,15 @@
 import call from '../utils/call'
 import { validateId, validateToken, validateCallback } from './helpers/validations'
+import context from './context'
 
-export default function (token, foodId, callback) {
+export default (function (token, foodId, callback) {
     validateToken(token)
     validateId(foodId)
     validateCallback(callback)
 
-    // const API_URL = process.env.REACT_APP_API_URL
+    const {API_URL} = this
 
-    call('PATCH', `http://localhost:4000/api/users/foods`, { Authorization: `Bearer ${token}`, 'Content-type': 'application/json' },
+    call('PATCH', `${API_URL}/users/foods`, { Authorization: `Bearer ${token}`, 'Content-type': 'application/json' },
         JSON.stringify({ savedFood: [foodId] }),
         (status, response) => {
             if (status === 0)
@@ -20,4 +21,4 @@ export default function (token, foodId, callback) {
             }
             callback(null)
         })
-}
+}).bind(context)

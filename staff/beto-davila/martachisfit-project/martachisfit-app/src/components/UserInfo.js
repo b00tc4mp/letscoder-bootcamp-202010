@@ -5,14 +5,14 @@ import calendario from './icons/calendario.png'
 import escala from './icons/escala.png'
 import correr from './icons/correr.png'
 import sedentario from './icons/sedentario.png'
-import atras from './icons/atras.png'
-import { Link } from 'react-router-dom'
+// import atras from './icons/atras.png'
+// import { Link } from 'react-router-dom'
 
 export default function UserInfo({onGoToGoalCaloriesAndMacros}) {
   return <>
         <div className="user-info-pseudo">
         <section className="user-info">
-        <Link to="/landing" className="user-info__back"><img alt="back" src={atras} height="20" width="20"/></Link>
+        {/* <Link to="/landing" className="user-info__back"><img alt="back" src={atras} height="20" width="20"/></Link> */}
 
         <h2 className="user-info__title">
           Cuéntanos sobre ti y tus objetivos

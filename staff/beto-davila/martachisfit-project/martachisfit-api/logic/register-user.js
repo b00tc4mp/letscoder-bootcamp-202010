@@ -3,6 +3,18 @@ const { ConflictError } = require('../errors')
 const { models: { User } } = require('martachisfit-data')
 const bcryptjs = require('bcryptjs')
 
+/**
+ * Registers a new user to the user's API
+ * 
+ * @param {string} fullname user's fullname
+ * @param {string} email user's unique e-mail
+ * @param {string} password user's password
+ * 
+ * @returns {undefined} onsuccessful registration
+ * 
+ * @throws {ConflictError} on server error or user registered already
+ */
+
 module.exports = function (fullname, email, password, calories) {
     validateFullname(fullname)
     validateEmail(email)

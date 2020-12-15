@@ -1,15 +1,15 @@
 import call from '../utils/call'
 import { validateEmail, validatePassword, validateCallback } from './helpers/validations'
-// import { context } from '.'
+import context from './context'
 
-export default function (email, password, callback) {
+export default (function (email, password, callback) {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
 
-    // const API_URL = process.env.REACT_APP_API_URL
+    const { API_URL } = this
 
-    call('POST', `https://localhost:4000/api/users/auth`, { 'Content-type': 'application/json' },
+    call('POST', `${API_URL}/users/auth`, { 'Content-type': 'application/json' },
         JSON.stringify({ email, password }),
         (status, response) => {
             if (status === 0)
@@ -24,4 +24,4 @@ export default function (email, password, callback) {
 
             callback(null, token)
         })
-}//).bind(context)
+}).bind(context)

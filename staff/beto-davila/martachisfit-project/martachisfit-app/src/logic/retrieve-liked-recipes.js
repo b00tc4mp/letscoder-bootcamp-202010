@@ -1,4 +1,5 @@
 import call from '../utils/call'
+import context from './context'
 import { validateCallback, validateToken } from './helpers/validations'
 
 /**
@@ -23,47 +24,49 @@ import { validateCallback, validateToken } from './helpers/validations'
  * @throws {Error} On emty or blank token
  * @throws {TypeError} On a non function callback
  */
-export default function (token, callback) {
-    validateCallback(callback)
-    validateToken(token)
-  
-    call(
-      "GET",
-      'http://localhost:4000/api/users',
-      { Authorization: `Bearer ${token}` },
-      "",
-      (status, response) => {
-        if (status === 200) {
-          const { savedRecipes = [] } = JSON.parse(response);
-  
-          const likedRecipes = [];
-  
-          let counter = 0;
-  
-          if (savedRecipes.length)
-            savedRecipes.forEach((recipeId, index) =>
-              call(
-                "GET",
-                `http://localhost:4000/api/recipes/${recipeId}`,
-                {},
-                null,
-                (status, response) => {
-                  if (status === 200) {
-                    const recipe = JSON.parse(response);
-  
-                    recipe.like = true;
-  
-                    likedRecipes[index] = recipe;
-  
-                    counter++;
-  
-                    if (counter === savedRecipes.length) callback(null, likedRecipes);
-                  } else callback(new Error("cannot retrieve liked recipes :("));
-                }
-              )
-            );
-          else callback (null, likedRecipes)
-        } else callback(new Error("sorry, cannot retrieve liked recipes :("));
-      }
-    );
-  };
+export default (function (token, callback) {
+  validateCallback(callback)
+  validateToken(token)
+
+  const { API_URL } = this
+
+  call(
+    "GET",
+    `${API_URL}/users`,
+    { Authorization: `Bearer ${token}` },
+    "",
+    (status, response) => {
+      if (status === 200) {
+        const { savedRecipes = [] } = JSON.parse(response);
+
+        const likedRecipes = [];
+
+        let counter = 0;
+
+        if (savedRecipes.length)
+          savedRecipes.forEach((recipeId, index) =>
+            call(
+              "GET",
+              `${API_URL}/recipes/${recipeId}`,
+              {},
+              null,
+              (status, response) => {
+                if (status === 200) {
+                  const recipe = JSON.parse(response);
+
+                  recipe.like = true;
+
+                  likedRecipes[index] = recipe;
+
+                  counter++;
+
+                  if (counter === savedRecipes.length) callback(null, likedRecipes);
+                } else callback(new Error("cannot retrieve liked recipes :("));
+              }
+            )
+          );
+        else callback(null, likedRecipes)
+      } else callback(new Error("sorry, cannot retrieve liked recipes :("));
+    }
+  );
+}).bind(context)
