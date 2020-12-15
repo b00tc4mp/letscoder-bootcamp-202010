@@ -38,7 +38,7 @@ const NavBar = (req) => {
             <h2 className="navBar__logo__h2" >MALBEC</h2>
             <p className="navBar__logo__p" >Asador Argentino</p>
         </div></Link>
-        <span style={{"cursor":"pointer","fontSize":"30px"}} onClick={openNav} >&#9776;</span>
+        <span className="navBar__span"  onClick={openNav} >&#9776;</span>
 
         <div id="myNav" className="navBar__bar overlay">
             <a className="closebtn" onClick={closeNav}>&times;</a>

@@ -1,0 +1,35 @@
+.slides
+    &__container
+        position: relative
+
+    &__MySlides
+        display: none
+        width: 95vw
+        &__img
+            height: 660px
+            vertical-align: middle
+
+    &__prev,&__next
+        cursor: pointer
+        position: absolute
+        top: 40%
+        width: auto
+        padding: 16px
+        margin-top: -50px
+        color: white
+        font-weight: bold
+        font-size: 20px
+        border-radius: 0 3px 3px 0
+        user-select: none
+        -webkit-user-select: none
+        &__:hover
+            background-color: rgba(0, 0, 0, 0.8)
+    &__next
+        right: 0
+        border-radius: 3px 0 0 3px
+    &--off
+        display: none
+    &--block
+        display: block
+
+

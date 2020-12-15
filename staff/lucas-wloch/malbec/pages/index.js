@@ -1,4 +1,4 @@
-import { Feedback, Layout, SaveProducts } from '../components'
+import { Slides, Feedback, Layout, SaveProducts } from '../components'
 import '../components/Home.sass'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -31,7 +31,9 @@ const Home = () => {
 
     return <Layout>
         <div className="home">
+            {/* <div className="home__logo"><img className="home__logo__img" src="/Malbec.png"/></div> */}
             {/* <Feedback error="hola"/> */}
+            <Slides/>
             {user && view === undefined && <button onClick={() => setView('save-product')}>Create a product</button>}
             {user && view === 'save-product' && <SaveProducts onExit={() => setView()} />}
             {user && view === undefined && <Link href="/my-products"><button >My Products</button></Link>}
