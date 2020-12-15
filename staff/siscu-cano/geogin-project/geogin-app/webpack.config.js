@@ -31,7 +31,8 @@ module.exports = {
               '@babel/preset-react'
             ],
             plugins: [
-              'babel-plugin-styled-components'
+              'babel-plugin-styled-components',
+              '@babel/plugin-proposal-class-properties'
             ]
           }
         }
