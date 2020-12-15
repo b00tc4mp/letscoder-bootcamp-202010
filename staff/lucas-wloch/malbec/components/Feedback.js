@@ -1,21 +1,8 @@
+import './Feedback.sass'
 const Feedback = ({ error, color = "red" }) =>
-    <>
-        <p className={`feedback feedback--${color}`}>{error}</p>
-        <style jsx>{`
-    .feedback{
-        font-size: 12px
-    }
-    .feedback--white{
-        color: white
-    }
-    .feedback--black{
-        color: black
-    }
-    .feedback--red{
-        color: red
-    }
-`}</style>
-    </>
+    <div className={`feedback feedback--${color}`}>
+        <p className={`feedback__p feedback__p--${color}`}>{error}</p>
+    </div>
 
 
 export default Feedback

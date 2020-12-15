@@ -13,14 +13,17 @@
         text-decoration: underline
         text-align: center
         margin: 20px 0 10px 0
+        padding: 10px
     &__h3
-        text-align: right
+        text-align: left
+        padding: 10px
         margin: 10px 20px 5px 0
         border-bottom: 1px solid black
     &__li
         border: .5px solid black
         
         margin: 5px
+        padding: 5px
     &__glutenFree
         display: flex
         margin-top: 5px
@@ -47,4 +50,10 @@
         margin: 2px
         &--1, &--3, &--5, &--7,
         &--2,&--4,&--6
-            
+@media (max-width: 999px) and (min-width: 550px)
+    .carta
+@media (min-width: 1000px)
+    .carta
+        &__image
+            width: 200px
+            height: 140px

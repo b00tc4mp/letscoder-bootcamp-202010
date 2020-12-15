@@ -12,6 +12,18 @@ module.exports = {
     randomNonString() {
         return [1, true, null, undefined, {}, [], function () { }, new Date].random()
     },
+    
+    randomNonNumber() {
+        return ['hola', true, null, undefined, {}, [], function () { }].random()
+    },
+    
+    randomNonBoolean() {
+        return ['hola', 12, null, undefined, {}, [], function () { }, new Date].random()
+    },
+    
+    randomNonArray() {
+        return ['hola', 12, null, undefined, {}, true, function () { }, new Date].random()
+    },
 
     randomEmptyOrBlankString() { 
         return ['', ' ', '\t', '\r', '\n'].random() 

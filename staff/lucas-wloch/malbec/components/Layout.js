@@ -1,13 +1,12 @@
-import { NavBar} from '../components'
+import { NavBar } from '../components'
+import { NavBar1 } from '../components'
 import Link from 'next/link'
 import './Layout.sass'
 
-
 const Layout = (props) => {
-
-    return <div>
-        <NavBar/>
-        <Link href="/"><h1 className="layout__h1">MALBEC</h1></Link>
+    
+    return <div className="layout">
+        <NavBar1/>
         {props.children}
     </div>
 }

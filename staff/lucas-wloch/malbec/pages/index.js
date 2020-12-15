@@ -1,4 +1,4 @@
-import { Layout, SaveProducts } from '../components'
+import { Feedback, Layout, SaveProducts } from '../components'
 import '../components/Home.sass'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -23,12 +23,19 @@ const Home = () => {
 
     }, [])
 
+    const handleLogOut = () => {
+        delete sessionStorage.token
+
+        // router.push('/')
+    }
+
     return <Layout>
         <div className="home">
+            {/* <Feedback error="hola"/> */}
             {user && view === undefined && <button onClick={() => setView('save-product')}>Create a product</button>}
             {user && view === 'save-product' && <SaveProducts onExit={() => setView()} />}
             {user && view === undefined && <Link href="/my-products"><button >My Products</button></Link>}
-            {view === undefined && <Link href="/carta"><button >Ver La Carta</button></Link>}
+            {/* {view === undefined && <Link href="/carta"><button >Ver La Carta</button></Link>} */}
         </div>
     </Layout>
 }

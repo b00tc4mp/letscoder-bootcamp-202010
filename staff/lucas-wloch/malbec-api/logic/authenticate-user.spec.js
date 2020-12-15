@@ -1,11 +1,10 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
+const { models: { User }, mongoose } = require('malbec-data')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const { FormatError } = require('../errors')
 const authenticateUser = require('./authenticate-user')
-const { User } = require('../models')
 const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process

@@ -1,7 +1,8 @@
 const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
-const { User }  = require('../models')
+const { models: { User } } = require('malbec-data')
+
 const bcryptjs = require('bcryptjs')
 
 

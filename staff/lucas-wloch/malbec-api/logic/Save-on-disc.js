@@ -1,5 +1,4 @@
-const { ConflictError, NotFoundError } = require('../errors')
-const { Product } = require('../models')
+const { models: { Product }, mongoose } = require('malbec-data')
 
 const fsp = require('fs').promises
 const path = require('path')

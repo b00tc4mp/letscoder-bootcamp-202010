@@ -49,7 +49,7 @@ const Register = () => {
                 <input className="register__input" name="email" type="text" placeholder="email@example.com" />
                 <p className="register__p">Password</p>
                 <input className="register__input" name="password" type="password" placeholder="********" />
-                {error && <Feedback error={error} />}
+                {error && <FeedbackAccess error={error} />}
                 <br /> <button className="register__button">Sign Up</button>
             </form>
             <p className="register__p2">Have an account?<Link href="/login"><span className="register__span" >Log in here</span></Link></p>

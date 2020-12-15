@@ -1,7 +1,6 @@
 const { validateId } = require('./helpers/validations')
-
+const { models: { User } } = require('malbec-data')
 const { NotFoundError } = require('../errors')
-const  { User }  = require('../models')
 
 module.exports = (id) => {
     validateId(id)

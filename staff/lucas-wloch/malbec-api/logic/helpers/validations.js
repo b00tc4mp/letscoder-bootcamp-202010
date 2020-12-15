@@ -93,9 +93,7 @@ module.exports = {
     },
 
     validateProductPrice(price){
-        if (typeof price !== 'string') throw new TypeError(price + ' is not a price')
-
-        if (!price.trim().length) throw new ContentError('price is empty or blank')
+        if (typeof price !== 'number') throw new TypeError(price + ' is not a price')
     },
 
     validateProductGlutenFree(glutenFree){
@@ -110,9 +108,9 @@ module.exports = {
         if (!(alergenos instanceof Array)) throw new TypeError(`${alergenos} is not an array`)
 
         alergenos.forEach(algIngredient => {
-            if (typeof algIngredient !== 'string') throw new TypeError(algIngredient + ' is not a algIngredient')
+            if (typeof algIngredient !== 'string') throw new TypeError('this is not a alergen Ingredient')
 
-            if (!algIngredient.trim().length) throw new ContentError('algIngredient is empty or blank')
+            if (!algIngredient.trim().length) throw new ContentError('alergen Ingredient is empty or blank')
         })
 
     },

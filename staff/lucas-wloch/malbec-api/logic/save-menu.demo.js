@@ -1,6 +1,5 @@
 require('dotenv').config()
-const mongoose = require('mongoose')
-const { Menu } = require('../models')
+const { models: { Menu }, mongoose } = require('malbec-data')
 const { Types: { ObjectId } } = mongoose
 const saveMenu = require('./save-menu')
 

@@ -2,9 +2,11 @@
 
 .navBar
     color: white
+    display: flex
+    justify-content: space-between
 
     &__ul
-        background-color: $navbar-background-color
+        // background-color: $navbar-background-color
         margin: 0
         height: 4vh
         list-style: none
@@ -13,8 +15,29 @@
         justify-content: flex-end
 
     &__li
-        background-color: $navbar-background-color
-        font-size: $navbar-li-font-size
+        // background-color: $navbar-background-color
+        font-size: 1rem
         text-align: center
         outline: none
         padding: 5px
+    &__logo
+        text-align: center
+        &__h2
+        &__p
+            font-size: .7rem
+
+            
+@media (min-width: 1000px)
+    .navBar
+
+        &__ul
+            height: 8vh
+        &__li
+            padding: 5px
+@media (max-width: 999px) and (min-width: 550px)
+    .navBar
+
+        &__ul
+            height: 8vh
+        &__li
+            padding: 5px

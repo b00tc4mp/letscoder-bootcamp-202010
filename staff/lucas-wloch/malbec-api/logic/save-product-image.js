@@ -1,5 +1,5 @@
 const { validateId, validateStream } = require('./helpers/validations')
-const { User } = require('../models')
+const { models: { User }, mongoose } = require('malbec-data')
 const path = require('path')
 const fs = require('fs')
 

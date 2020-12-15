@@ -1,6 +1,5 @@
-// const { validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateProductAlergenos, validateProductCategory, validateProductAvailable } = require('./helpers/validations')
-const  { Product }  = require('../models')
-// import { Product } from '../models'
+
+const { models: { Product } } = require('malbec-data')
 
 
 module.exports = () =>{

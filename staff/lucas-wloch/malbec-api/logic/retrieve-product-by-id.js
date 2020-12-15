@@ -1,5 +1,6 @@
 const { NotFoundError } = require('../errors')
-const { Product } = require('../models')
+const { models: { Product } } = require('malbec-data')
+
 const { validateId } = require('./helpers/validations')
 
 

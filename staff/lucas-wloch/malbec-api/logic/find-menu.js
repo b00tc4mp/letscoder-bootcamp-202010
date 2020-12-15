@@ -1,4 +1,5 @@
-const { Menu } = require('../models')
+const { models: { Menu } } = require('malbec-data')
+
 
 
 module.exports = () => {

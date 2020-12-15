@@ -1,6 +1,7 @@
 const { validateId, validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateProductAlergenos, validateProductCategory, validateProductAvailable } = require('./helpers/validations')
 const { ConflictError, NotFoundError } = require('../errors')
-const { Product, User } = require('../models')
+const { models: { Product, User } } = require('malbec-data')
+
 
 
 module.exports = (userId, productId, name, description, price, glutenFree, vegan, alergenos, category, available) => {
@@ -20,7 +21,7 @@ module.exports = (userId, productId, name, description, price, glutenFree, vegan
             if (user) {
                 if (!productId) {
                     // return Product.findOne({ $or: [{ name }, { description }] })
-                    return Product.findOne({ name, category, description })
+                    return Product.findOne({ name, category, description, price, vegan, glutenFree })
                         .then(product => {
                             if (product) throw new ConflictError(`product with name ${name} already exists`)
 
@@ -47,7 +48,7 @@ module.exports = (userId, productId, name, description, price, glutenFree, vegan
                         })
                         .then(product => product.id)
                 }
-            }
+            } throw new NotFoundError(`user with id ${userId} not found`)
 
         })
 

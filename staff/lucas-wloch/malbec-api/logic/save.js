@@ -1,6 +1,6 @@
 require('dotenv').config()
 const SaveOnDisc = require('./Save-on-disc')
-const mongoose = require('mongoose')
+const { mongoose } = require('malbec-data')
 
 const { env: { MONGODB_URL } } = process
 

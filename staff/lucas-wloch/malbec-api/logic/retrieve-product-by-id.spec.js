@@ -2,11 +2,10 @@ require('dotenv').config()
 require('../utils/array-polyfills')
 
 const { expect } = require('chai')
-const mongoose = require('mongoose')
+const { models: { Product }, mongoose } = require('malbec-data')
 const { randomStringWithPrefix, randomNonString, randomEmptyOrBlankString, randomInteger, randomBoolean } = require('../utils/randoms')
 const { FormatError, NotFoundError } = require('../errors')
 const retrieveProductById = require('./retrieve-product-by-id')
-const { Product } = require('../models')
 const bcrypt = require('bcryptjs')
 
 const { env: { MONGODB_URL } } = process
