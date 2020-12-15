@@ -8,7 +8,8 @@ const {
     handleUpdateUser,
     handleImageUpload,
     handleSaveQuest,
-    handleSaveGame
+    handleSaveGame,
+    handleRetrieveGame
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -26,6 +27,7 @@ router.patch('/api/users', jsonBodyParser, withErrorHandling(handleUpdateUser))
 // Game
 router.post('/api/quest', jsonBodyParser, withErrorHandling(handleSaveQuest))
 router.post('/api/game', jsonBodyParser, withErrorHandling(handleSaveGame))
+router.get('/api/game/:id', withErrorHandling(handleRetrieveGame))
 
 // Image upload
 router.post("/api/image-upload", jsonBodyParser, withErrorHandling(handleImageUpload))
