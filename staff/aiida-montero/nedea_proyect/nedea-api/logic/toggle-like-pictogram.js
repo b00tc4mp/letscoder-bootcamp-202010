@@ -1,7 +1,6 @@
 const { validateId } = require('./helpers/validations')
-const { ObjectId } = require('mongodb')
 const { NotFoundError } = require('../errors')
-const {User} = require('../models')
+const { models: { User }, mongoose : {Types: {ObjectId}} } = require('nedea-data')
 
 module.exports = (userId, likeId) =>   {
     validateId(userId)

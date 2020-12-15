@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const mongoose = require('mongoose')
 const savePictogram = require('./save-pictogram')
-const { User } = require('../models')
+const { models: { User } } = require('nedea-data')
 const {Pictogram} = require('../models')
 
 const { env: { MONGODB_URL } } = process

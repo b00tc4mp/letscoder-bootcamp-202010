@@ -1,6 +1,5 @@
 const { validateQuery } = require('./helpers/validations')
-const { Pictogram } = require('../models')
-
+const { models: { Pictogram } } = require('nedea-data')
 
 
 module.exports = function (query) {

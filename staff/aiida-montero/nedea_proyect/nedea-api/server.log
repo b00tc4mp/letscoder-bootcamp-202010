@@ -3416,3 +3416,58 @@ info 2020-12-15T01:21:09.410Z - stopping server
 info 2020-12-15T10:18:02.692Z - starting server
 info 2020-12-15T10:18:02.957Z - server running on port 4000
 info 2020-12-15T12:36:51.304Z - stopping server
+info 2020-12-15T13:40:28.817Z - starting server
+error 2020-12-15T13:40:28.888Z - Error: Cannot find module 'mongodb'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\save-pictogram.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\save-pictogram.js:2:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-15T13:40:28.896Z - stopping server
+info 2020-12-15T13:50:35.400Z - starting server
+error 2020-12-15T13:50:35.565Z - Error: Cannot find module '../../../models/schemas/pictogram'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-retrieve-favourite-pictogram.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-retrieve-favourite-pictogram.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js:12:39)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-15T13:50:35.572Z - stopping server
+info 2020-12-15T13:51:48.973Z - starting server
+info 2020-12-15T13:51:49.152Z - server running on port 4000
+info 2020-12-15T13:53:59.477Z - stopping server

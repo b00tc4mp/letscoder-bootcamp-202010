@@ -2,10 +2,9 @@ require('dotenv').config()
 const { ContentError, LengthError } = require('../errors')
 const bcrypt = require('bcryptjs')
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const registerUser = require('./register-user')
-const { User } = require('../models')
+const { models: { User }, mongoose } = require('nedea-data')
 
 const { env: { MONGODB_URL } } = process
 

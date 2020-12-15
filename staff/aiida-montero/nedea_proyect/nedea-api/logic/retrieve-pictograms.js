@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { User, Pictogram } = require('../models')
+const { models: { User, Pictogram } } = require('nedea-data')
 
 module.exports = ownerId => {
     validateId(ownerId)

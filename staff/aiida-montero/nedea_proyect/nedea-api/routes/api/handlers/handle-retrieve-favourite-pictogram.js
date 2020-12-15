@@ -1,6 +1,5 @@
 const { retrieveFavouritePictogram } = require('../../../logic')
 const jwt = require('jsonwebtoken')
-const pictogram = require('../../../models/schemas/pictogram')
 
 const { env: { JWT_SECRET } } = process
 

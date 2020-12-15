@@ -1,11 +1,9 @@
 require('dotenv').config()
-
 const { expect } = require('chai')
-const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const retrieveUser = require('./retrieve-user')
-const { User } = require('../models')
+const { models: { User }, mongoose } = require('nedea-data')
 const { LengthError, ContentError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process

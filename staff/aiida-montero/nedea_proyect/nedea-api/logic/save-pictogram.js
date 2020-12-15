@@ -1,8 +1,6 @@
 const {validateId, validateTitle} = require('./helpers/validations')
-const{ObjectId} = require('mongodb')
 const{NotFoundError} = require('../errors')
-const {User} = require('../models')
-const {Pictogram} = require('../models')
+const { models: { User, Pictogram }, mongoose: {Types : {ObjectId} }} = require('nedea-data')
 
 module.exports = function (pictogramId, ownerId, title, description) {
     validateId(ownerId)
