@@ -12,14 +12,14 @@ export default function ({likedPictograms = [], data:{id, title, description}}) 
     toggleLikePictogram (token, id , error => console.log(error))
   };
     return <article className="card">
-          <header className="card-header">
+          <div className="card-div">
             <img
-              className="card-header__image"
+              className="card-div__image"
               src={`${API_URL}/pictograms/${id}/images`} width = "600px"
               height="120"
               alt="Api"
             />
-          </header>
+          </div>
           <div className="card-body">
             <button onClick = {handleLike} className = {isActive ? 'heart active': 'heart'} ></button>
             <h4 className="card-body__title">

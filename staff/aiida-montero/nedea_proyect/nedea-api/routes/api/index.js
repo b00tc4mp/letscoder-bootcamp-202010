@@ -11,7 +11,8 @@ const{
     handleSavePictogramImage,
     handleRetrievePictogramImage,
     handleToggleLikePictogram,
-    handleRetrieveFavouritePictogram
+    handleRetrieveFavouritePictogram,
+    handleDeletePictogram
 } =require('./handlers')
 
 
@@ -27,4 +28,5 @@ router.post('/api/pictograms/:pictogramId/images', withErrorHandling(handleSaveP
 router.get('/api/pictograms/:pictogramId/images', withErrorHandling(handleRetrievePictogramImage))
 router.patch('/api/users', jsonBodyParser, withErrorHandling(handleToggleLikePictogram))
 router.get('/api/users/favourites', withErrorHandling(handleRetrieveFavouritePictogram))
+router.delete('/api/pictograms', jsonBodyParser, withErrorHandling(handleDeletePictogram))
 module.exports = router

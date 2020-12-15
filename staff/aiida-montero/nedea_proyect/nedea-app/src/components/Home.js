@@ -7,6 +7,7 @@ import Slider from './Slider'
 import ResultList from './ResultList'
 import SearchPictogram from '../logic/search-pictogram'
 
+
 export default function() {
     const [name, setName] = useState()
     const [likedPictograms, setLikedPictograms] = useState([])

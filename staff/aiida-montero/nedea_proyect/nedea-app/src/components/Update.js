@@ -38,17 +38,12 @@ export default function ({onSavePictogram,pictograms}) {
     <h3>MIS PICTOGRAMAS</h3>
     <form onSubmit = {handleSubmit}className =  "update" > 
     <p class="login-text">
-    <span class="fas fa-camera fa-3x">
-      <h4>SUBE TU PICTOGRAMA</h4>
-
-     
-    </span>
+   
   </p>
   <input type="text" name= "title" class="login-title" placeholder=  "Title"/>
   <input type="text" name ="description" class="login-description" required="true" placeholder="Description" />
   <input type="file" id="image" name="image" />
-  <label htmlFor="image">Photo</label>
-  <button class="send-submit" >Update Pictogram</button>
+  <button class="send-submit" >Sube tu pictograma</button>
   {/* <img className = "imagen_camara" src = "imagenes/love.png" />
      */}
     </form>

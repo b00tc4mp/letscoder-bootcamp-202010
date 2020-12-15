@@ -39,6 +39,7 @@
       }
       
       .update{
+        display: grid;
         background: #222;
         box-shadow: 0 0 1rem rgba(0,0,0,0.3);
         min-height: 10rem;
@@ -49,6 +50,15 @@
         border-radius: 50px;
         margin-top: 15px;
         margin-bottom:25px;
+        #image{
+          margin: 0 auto;
+          border: 1px solid white;
+          border-radius: 15px;
+          color: white;
+          cursor: pointer;
+          
+        }
+      
         
       }
       .login-text {
@@ -85,7 +95,9 @@
         }
       }
       .send-submit {
-        border: 1px solid white;
+        border: 3px solid white;
+        border-radius: 15px;
+        cursor: pointer;
         background: transparent;
         color: white;
         display: block;
@@ -107,23 +119,6 @@
         margin-top: 15px;
         text-align: center;
       }
-}
-body {
-    font-family: 'Open Sans';
-    font-weight: 100;
-    display: flex;
-    background-color: rgba(251, 251, 255, 0.637);
-  }
-.login{
-    margin-bottom: 150px;
-}
-
-.input{
-    border-radius: 5px;
-}
-h2{
-    text-align: center;
-    margin-top:20p ;
 }
 
 .link_profile{

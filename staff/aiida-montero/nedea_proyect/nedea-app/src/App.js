@@ -99,6 +99,7 @@ function App(props) {
   }
 
   const handleGoToInitial =() =>{
+    sessionStorage.removeItem('token');
     props.history.push('/')
   }
   const { token } = sessionStorage
