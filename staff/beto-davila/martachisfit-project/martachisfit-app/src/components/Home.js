@@ -356,57 +356,62 @@ export default function Home() {
 
     return <>
         <div className="home__logo-title-dropdown">
-        <div className="home">
-        <div className="home__header">
-            <img className="home__logo" alt="logo" src={logo} height="100" width="100"></img>
-            <div className="home__title-user">
-                <h1 className="home__title">MartachisFIT</h1>
-                {name && <p className="home__user">¡Hola, <span className="home__user--name">{name}</span>!</p>}
+            <div className="home">
+                <div className="home__header">
+                    <img className="home__logo" alt="logo" src={logo} height="100" width="100"></img>
+                    <div className="home__title-user">
+                        <h1 className="home__title">MartachisFIT</h1>
+                        {name && <p className="home__user">¡Hola, <span className="home__user--name">{name}</span>!</p>}
+                    </div>
+                    <nav className="home__social">
+                        <a href="https://es-es.facebook.com/m.albimuro?fref=nf"><img className="home__social-logo" alt="facebook" src={facebook} width="13"></img></a><a href="https://www.instagram.com/martachis.fit/"><img alt="instagram" width="13" className="home__social-logo" src={instagram}></img></a><a href="https://www.linkedin.com/in/alberto-davila-gomez-250460b0"><img className="home__social-logo" alt="linkedin" width="13" src={linkedin}></img></a>
+                    </nav>
+                </div>
+                <DropDownMenu
+                    onGoToDietDesign={handleGoToDietDesign}
+                    onGoToWelcome={handleGoToWelcome}
+                    onGoToRecipes={handleGoToRecipes}
+                    onGoToUserDiet={handleGoToUserDiet}
+                    onGoToBlog={handleGoToBlog}
+                    onGoToProfile={handleGoToProfile}
+                    onGoToWorkouts={handleGoToWorkouts}
+                />
             </div>
-            <nav className="home__social">
-                <a href="https://es-es.facebook.com/m.albimuro?fref=nf"><img className="home__social-logo" alt="facebook" src={facebook} width="13"></img></a><a href="https://www.instagram.com/martachis.fit/"><img alt="instagram" width="13" className="home__social-logo" src={instagram}></img></a><a href="https://www.linkedin.com/in/alberto-davila-gomez-250460b0"><img className="home__social-logo" alt="linkedin" width="13" src={linkedin}></img></a>
-            </nav>
+            {view === 'welcome' &&
+                <Welcome onGoToRecipes={handleGoToRecipes}
+                    onGoToArticles={handleGoToBlog}
+                    onGoToDiets={handleGoToUserDiet}
+                    onGoToDietDesign={handleGoToDietDesign}
+                />}
+            {view === 'diet-design' && <DietDesign />}
+            {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
+            {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error} />}
+            {view === 'workout' && <Workout like={likedWorkout} error={error} onSaveWorkout={handleSaveWorkout} onGoToMovements={handleGoToMovements} source={workout} />}
+            {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
+            {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
+            {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToDiets={handleGoToUserDiet} />}
+            {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} onGoToDiets={handleGoToUserDiet} goal={calories} />}
+            {view === 'articles' && article &&
+                <Articles source={article}
+                    error={error}
+                    message={message}
+                    onGoToRandomArticle={handleGoToRandomArticle}
+                    onGoToProfile={handleGoToProfile}
+                    onSaveArticle={handleSaveArticle}
+                    onRead={handleReadArticle}
+                />}
+            {view === 'profile' &&
+                <UserProfile onGoToRecipe={handleGoToRecipe}
+                    onLogout={handleGoToLogOut}
+                    savedRecipes={savedRecipes}
+                    name={name}
+                    savedArticles={savedArticles}
+                    onGoToChosenArticle={handleGoToChosenArticle}
+                    onGoToMyWorkout={handleRetrieveWorkout}
+                    myWorkouts={myWorkouts}
+                />}
+            {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle} />}
+            {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name} />}
         </div>
-        <DropDownMenu
-            onGoToDietDesign={handleGoToDietDesign}
-            onGoToWelcome={handleGoToWelcome}
-            onGoToRecipes={handleGoToRecipes}
-            onGoToUserDiet={handleGoToUserDiet}
-            onGoToBlog={handleGoToBlog}
-            onGoToProfile={handleGoToProfile}
-            onGoToWorkouts={handleGoToWorkouts}
-        />
-        </div>
-        {view === 'welcome' && <Welcome />}
-        {view === 'diet-design' && <DietDesign />}
-        {view === 'workouts' && <Workouts onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
-        {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error} />}
-        {view === 'workout' && <Workout like={likedWorkout} error={error} onSaveWorkout={handleSaveWorkout} onGoToMovements={handleGoToMovements} source={workout} />}
-        {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
-        {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
-        {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToDiets={handleGoToUserDiet} />}
-        {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} onGoToDiets={handleGoToUserDiet} goal={calories} />}
-        {view === 'articles' && article &&
-            <Articles source={article}
-                error={error}
-                message={message}
-                onGoToRandomArticle={handleGoToRandomArticle}
-                onGoToProfile={handleGoToProfile}
-                onSaveArticle={handleSaveArticle}
-                onRead={handleReadArticle}
-            />}
-        {view === 'profile' &&
-            <UserProfile onGoToRecipe={handleGoToRecipe}
-                onLogout={handleGoToLogOut}
-                savedRecipes={savedRecipes}
-                name={name}
-                savedArticles={savedArticles}
-                onGoToChosenArticle={handleGoToChosenArticle}
-                onGoToMyWorkout={handleRetrieveWorkout}
-                myWorkouts={myWorkouts}
-            />}
-        {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle} />}
-        {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name} />}
-    </div>
     </>
 }

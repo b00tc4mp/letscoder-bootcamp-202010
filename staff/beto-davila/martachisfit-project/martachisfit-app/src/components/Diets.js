@@ -4,7 +4,7 @@ export default function Diets({goal ,onChosenDiet}) {
 
     return <section className="diets">
         <div className="diets-pseudo">
-        <h3 className="diets__title"> Según tu objetivo de <span className="diets__calories">{goal} kcal</span>, elige un tipo de dieta</h3>
+        <h3 className="diets__title"> Según tu objetivo de <span className="diets__calories">{goal} kcal</span>, las opciones que te proponemos son:</h3>
         <div className="diets__container">
         <div onClick={() => onChosenDiet("keto")} className="diets__type">
             <h4 className="diets__type-title"> Dieta "Keto" </h4>

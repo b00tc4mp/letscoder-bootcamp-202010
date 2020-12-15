@@ -13,7 +13,7 @@ import { validateCallback, validateToken } from './helpers/validations'
  * Retrieve the recipes that were liked by the user previously
  * 
  * Two calls are made on this function. First one to the user's API to retrieve their properties through token and the second one to the diet's endpoint
- * to get the results of finding a movie id within the 'likes' property array.
+ * to get the results of finding a recipe id within the 'likes' property array.
  * 
  * 
  * @param {string} token The passed token as first argument to retrieve user's properties

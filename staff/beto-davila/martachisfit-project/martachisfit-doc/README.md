@@ -1,4 +1,6 @@
-## Intro
+# MartachisFIT App v.0.0
+
+![Alt MartachisFIT](https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_300/v1608012803/Martachis_fit_fondo_blanco_areyij.png "MartachisFIT Logo")
 
 The MARTACHISFIT web app is the tool to make the new health-concious user ease into a lifestyle change. We are happy of providing the source of knowledge in the shape of personalized diets, healthy recipes, a devoted blog full of interesting articles about the topic and even a food database for the user to look into his food (macronutrients and calories) to create a daily food record. This record will serve the purpose to make the user more concious about his/her food decisions on a daily basis.
 
@@ -14,6 +16,8 @@ These are the main features that we are proud of and you will be enjoying:
 - Upon registration and after getting some basic information from your end, we will calculate your daily caloric intake according your main goal.
 We will use this number to offer you some diet plans that you could even change, but of course, in all cases within your caloric allotment, mind you.
 - For those more interested in giving a step further and design a diet with their favourite food, we are providing a food database to search the food you enjoy more and make your own decision to add them to their daily food record and confirm on a personal profile the numbers of your choices.
+- The user will be able to start a fitness journey to a better physique, adding a workout routine to the profile. He/she will have several choices depending on previous experience related to resistence training.
+- The user profile will be the handy personal space for all the saved or faved recipes, articles, the food record, etc.
 
 
 ### Use Cases
@@ -27,35 +31,48 @@ We will use this number to offer you some diet plans that you could even change,
 
 ## Technical Description
 
+### Models
+
+![Alt Models](./images/models.jpg)
 
 ### Blocks
 
-![Alt Blocks](./diagrams/ "Blocks")
+![Alt Blocks](./images/ "Blocks")
 
 ### Packages
 
 #### React components
 
-![Alt React comonents](./diagrams/ "React components")
+![Alt React comonents](./images/ "React components")
 
 #### Logic functions
 
-![Alt Logic functions](./diagrams/ "Logic functions")
+![Alt Logic functions](./images/ "Logic functions")
 
 ### Testing (QA)
 
-![Alt Testing](./diagrams/ "Testing")
+![Alt Testing](./images/testing-coverage.png "Testing server side")
 
 ### Technologies
 
-![Alt React](https://d585tldpucybw.cloudfront.net/sfimages/default-source/default-album/react_870x220_choose-the-right-javascript.jpg?sfvrsn=4c83e81f_1 "React")
+#### MERN Stack
 
-![Alt Sass](https://images-na.ssl-images-amazon.com/images/I/41Z0TRq7k9L._AC_SY400_.jpg "Sass")
+![Alt MERN](https://i.morioh.com/200630/7055e259.jpg "MERN")
 
-![Alt Vanilla JS](https://snipcart.com/media/203721/vanilla-js.png "Vanilla JS")
+#### Style
+![Alt Sass](https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg "Sass")
 
 ### TODO
 
--
--
--
+#### Code-related:
+- App Testing
+- Watch out order, "cleanliness" and semantic
+
+#### App-related:
+- Experience level (in the gym) input for the user
+- Articles index creation
+- Populate the food db with more items
+- Watch out the images quality
+- Improve the overall style
+
+
