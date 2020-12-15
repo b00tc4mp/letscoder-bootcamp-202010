@@ -217,6 +217,24 @@ export const SearchCreate = () => {
   const handleSaveGame = () => {
     const { token } = window.sessionStorage
 
+    const updatedTest = saveTest()
+
+    console.log(updatedTest)
+    handleSaveQuest(
+      token,
+      questIdAdded,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      updatedTest
+    )
+
     saveGame(
       token,
       undefined,
@@ -260,34 +278,6 @@ export const SearchCreate = () => {
             modePrivate,
             kidsOk
           )
-        push()
-        break
-      }
-      case 'quizStep': {
-        console.log('Estamos en sección  QUIZSTEP')
-        if (
-          titleTest &&
-          descriptionTest &&
-          poiTest &&
-          trickTest.data.trickOne
-        ) {
-          const updatedTest = saveTest()
-          console.log(updatedTest)
-          handleSaveQuest(
-            token,
-            questIdAdded,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            updatedTest
-          )
-        }
         push()
         break
       }
@@ -543,10 +533,17 @@ export const SearchCreate = () => {
                           </button>
 
                           <button
-                            className='btn btn-next'
+                            className={
+                              titleTest &&
+                              descriptionTest &&
+                              poiTest &&
+                              trickTest.data.trickOne
+                                ? 'btn btn-next'
+                                : 'btn btn-next disabled'
+                            }
                             onClick={handleSaveGame}
                           >
-                            <IoIosSave size={ICON_SIZE} /> Guardar y salir
+                            <IoIosSave size={ICON_SIZE} /> Finalizar
                           </button>
                         </div>
                       )}
