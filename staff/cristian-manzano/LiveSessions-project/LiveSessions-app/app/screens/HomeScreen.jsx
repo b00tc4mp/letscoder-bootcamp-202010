@@ -7,21 +7,26 @@ import { retrieveUser } from '../logic';
 import { editUser } from '../logic';
 import { searchArtists } from '../logic';
 import { saveUserImage } from '../logic';
+import { saveLive } from '../logic';
+import { retrieveLives } from '../logic'
 //Screens
 import ArtistProfileScreen from './ArtistProfileScreen'
 import PromoterProfileScreen from './PromoterProfileScreen'
 import EditProfileScreen from './EditProfileScreen'
 import ArtistsMap from './ArtistsMap'
 import DetailArtistProfileScreen from './DetailArtistProfileScreen'
+import PetitionScreen from './PetitionScreen'
 
 
 export default function Home({ onHandleLogout }) {
   const [user, setUser] = useState()
   const [item, setItem] = useState()
-
   const [users, setUsers] = useState()
+  const [lives, setLives] = useState()
+  const [view, setView] = useState('petitions')
 
-  const [view, setView] = useState('promoter.screen')
+
+
 
   useEffect(() => {
     AsyncStorage.getItem('token')
@@ -40,8 +45,10 @@ export default function Home({ onHandleLogout }) {
             }
           })
         } catch (error) {
-          Alert.alert(error.message)
+          AsyncStorage.removeItem('token')
+          setView('sign-in')
         }
+
       })
   }, [])
 
@@ -124,11 +131,44 @@ export default function Home({ onHandleLogout }) {
     setView('petitions')
   }
 
+  const handleSubmitPetition = ({ title, date, status, duration, payment, description }) => {
+    debugger
+    const artistId = item._id
+    const promoterId = user.id
+    try {
+      saveLive(promoterId, artistId, undefined, title, date, status, duration, payment, description, (error) => {
+        if (error) return Alert.alert(error.message)
+
+        setView('promoter-profile')
+
+      })
+    } catch (error) {
+      Alert.alert(error.message)
+    }
+  }
+
+  const handleRetrieveLives = () => {
+    
+    AsyncStorage.getItem('token')
+      .then(token => {
+        try {
+          retrieveLives(token, (error, lives) => {
+            if (error) return alert(error.message);
+
+            setLives(lives);
+            setView("list-mode");
+          });
+        } catch (error) {
+          alert(error.message);
+        }
+      })
+  }
+
   return (
 
     <View>
-      { view === 'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} />}
-      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} />}
+      { view === 'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} />}
+      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} />}
       { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} />}
       { view === 'results' && <View style={{
         backgroundColor: "#f8f4f4",
@@ -136,10 +176,9 @@ export default function Home({ onHandleLogout }) {
       }}><ArtistsMap users={users} onGoToArtistProfile={handleonGoToArtistProfile} />
       </View>}
       { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} />}
-      { view === 'petitions'}
+      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} />}
     </View>
   );
-
 }
 const styles = StyleSheet.create({
   backgroundHome: {

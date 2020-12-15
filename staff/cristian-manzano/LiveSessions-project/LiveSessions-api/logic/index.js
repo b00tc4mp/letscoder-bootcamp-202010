@@ -4,5 +4,7 @@ module.exports = {
     retrieveUser: require('./retrieve-user'),
     editUser: require('./edit-user'),
     searchArtists: require('./search-artists'),
-    saveUserImage: require('./save-user-image')
+    saveUserImage: require('./save-user-image'),
+    saveLive: require('./save-live'),
+    retrieveLives: require('./retrieve-lives')
 }

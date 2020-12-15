@@ -1,4 +1,7 @@
 const { Schema } = require('mongoose')
+const {
+    Types: { ObjectId },
+  } = Schema;
 
 module.exports = new Schema({ 
     
@@ -16,6 +19,16 @@ module.exports = new Schema({
         required: true,
         enum: ['ACCEPTED', 'DENIED', 'PENDING'],
         default: 'PENDING'
+    },
+
+    promoterId: {
+        type: ObjectId,
+        require: true
+    },
+
+    artistId: {
+        type: ObjectId,
+        require: true
     },
 
     duration: {

@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
         color: "#343a40"
     },
 
-    signUpButton: {
+    editProfileButton: {
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "center",

@@ -7,7 +7,9 @@ const {
     handleRetrieveUser,
     handleEditUser,
     handleSearchArtists,
-    handleSaveImage
+    handleSaveImage,
+    handleSaveLive,
+    handleRetrieveLives
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -27,9 +29,12 @@ router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
 router.get(`/api/artists`, withErrorHandling(handleSearchArtists))
 
+router.post(`/api/lives`, jsonBodyParser, withErrorHandling(handleSaveLive))
+
+router.get(`/api/lives`, withErrorHandling(handleRetrieveLives))
+
 router.post(
     "/api/users/:userId/images",
-    jsonBodyParser,
     withErrorHandling(handleSaveImage)
   ); 
 

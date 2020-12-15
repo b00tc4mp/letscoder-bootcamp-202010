@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onSearch, onGoToCreateEvent, user }) {
+function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSearch, onGoToCreateEvent, user }) {
     const [ query, setQuery ] = useState('')
+    const imageURL = `../../../LiveSessions-api/data/users/${user.id}.jpg`
+    // const imageURL = `../assets/testImage.jpg`
     if (user.role === 'PROMOTER')
         return (
 
@@ -37,7 +39,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                             <View style={styles.artistProfileBody}>
 
                                 <TouchableOpacity onPress={onGoToEditProfile}>
-                                    <Image style={styles.profileAvatar} style={{ width: 75, height: 75, borderRadius: 37.5 }} source={`../../../LiveSessions-api/data/users/${user.id}.jpg`} />
+                                    <Image style={styles.profileAvatar} style={{ width: 75, height: 75 }} source={{uri:imageURL}} />
                                     <Text style={styles.artistName}>@{user.artistName}</Text>
                                 </TouchableOpacity>
 
@@ -53,16 +55,17 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                                     </TouchableOpacity>
                                 </View>
 
+                            <TouchableOpacity onPress={onGoToLives}>
+                                <Text style={styles.petitionsButton}>Lives</Text>
+                            </TouchableOpacity>
+
                             </View>
 
-                            <TouchableOpacity onPress={onGoToCreateEvent}>
+                            {/* <TouchableOpacity onPress={onGoToCreateEvent}>
                                 <Text style={styles.petitionsButton}>Create Event :)</Text>
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
                             
                             
-                            <TouchableOpacity onPress={onGoToPetitions}>
-                                <Text style={styles.petitionsButton}>Petitions</Text>
-                            </TouchableOpacity>
 
 
                       
@@ -140,6 +143,8 @@ const styles = StyleSheet.create({
     artistProfileBody: {
         marginTop: "8%",
         alignItems: "center",
+        height: Dimensions.get("window").height,
+        width: Dimensions.get("window").width,
     },
 
     linkContainer: {

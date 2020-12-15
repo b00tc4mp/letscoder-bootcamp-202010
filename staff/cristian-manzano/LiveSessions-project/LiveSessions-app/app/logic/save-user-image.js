@@ -18,7 +18,8 @@ export default (function (userId, imageUri, callback) {
   call(
     "POST",
     `http://192.168.1.131:4000/api/users/${userId}/images`,
-    {},
+    {'Content-Type': 'image/jpeg',
+    'Content-Type': 'multipart/form-data'},
     formData,
     (status, response) => {
       if (status === 0) return callback(new Error("server error"));

@@ -4,5 +4,7 @@ module.exports = {
     handleRetrieveUser: require('./handle-retrieve-user'),
     handleEditUser: require('./handle-edit-user'),
     handleSearchArtists: require('./handle-search-artists'),
-    handleSaveImage: require('./handle-save-image')
+    handleSaveImage: require('./handle-save-image'),
+    handleSaveLive: require('./handle-save-live'),
+    handleRetrieveLives: require('./handle-retrieve-lives')
 }

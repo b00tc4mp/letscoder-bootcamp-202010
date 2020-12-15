@@ -53,11 +53,6 @@ function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, ite
 
                     </View>
 
-                    <TouchableOpacity onPress={onGoToPetitions}>
-                        <Text style={styles.petitionsButton}>Petitions</Text>
-                    </TouchableOpacity>
-
-
                 </ScrollView>
             </KeyboardAvoidingView>
         </SafeAreaView>

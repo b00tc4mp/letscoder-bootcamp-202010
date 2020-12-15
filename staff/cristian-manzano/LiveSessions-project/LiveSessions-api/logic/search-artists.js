@@ -17,7 +17,7 @@ module.exports = myTags => {
                 // const {_id} = user
                 // user.id =_id.toString()
                 
-                delete user._id
+                // delete user._id
                 delete user.password
             })
             return users
