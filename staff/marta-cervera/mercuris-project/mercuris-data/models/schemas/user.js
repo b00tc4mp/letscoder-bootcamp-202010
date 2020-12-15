@@ -31,16 +31,27 @@ module.exports = new Schema({
 
     contact: {
         type: String,
-        default: 'No contact',
+        default: 'Insert your contact',
         required: true
+    },
+
+    address: {
+        type: String
     },
 
     city: {
         type: String,
-        default: 'No city',
+        default: 'Madrid',
         required: true
         
     },
+    phone: {
+        type: String,
+        default: '625478954',
+        required: true
+    },
+
+    
 
     geo: [Number]
 })

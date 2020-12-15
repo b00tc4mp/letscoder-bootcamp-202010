@@ -13,7 +13,8 @@ export default (function saveProduct(productId, token, name, description, price,
 
     const { API_URL } = this
 
-    call('POST', `${API_URL}/products`, {
+    call('POST', `${API_URL}/products`, 
+    {
         'Content-type': ' application/json',
         Authorization: `Bearer ${token}`,
     },

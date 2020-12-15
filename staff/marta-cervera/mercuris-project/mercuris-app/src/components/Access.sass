@@ -2,65 +2,74 @@
 $font-main: 'Permanent Marker', cursive
 
 
-
+.root 
+    background-position: center center
+    background-size: cover
+    min-height: 100vh
+    background-repeat: no-repeat
+body
+    min-height: 100vh
+    height: 100vh    
+    background-color: purple
+    margin: 5px solid black
 .access
-    background-color: url ('smoke1.jpg')
-   
+    background-image: url('../assets/images/smoke.jpg')
+    background-position: center center
+    background-size: cover
+    max-width: 100%
+    height: 100vh
+
     &__register
         display: grid
-        grid-template-columns: 
-    
+
         &__maintitle
-            font-family: $font-main      
+            font-family: $font-main
             content-align: center
             justify-content: center
             align-items: center
             opacity: 0.9
-            color: #9F08ED 
+            color: #9F08ED
 
         &__title
             font-family: $font-main
-            font-size: 5vw            
+            font-size: 5vw
             justify-content: center
             text-align: center
-            color: #9F08ED 
+            color: #9F08ED
 
-            
         &__signup
             font-family: unset
             text-align: center
-            justify-content: center        
+            justify-content: center
             margin-left: 15vw
-            background-color: #E8D0F5 
-            border-radius: 25px            
+            background-color: #E8D0F5
+            border-radius: 25px
             height: 10vh
-
 
         &__signin
             font-family: unset
             text-align: center
-            justify-content: center        
+            justify-content: center
             margin-left: 25vw
-            background-color:#E8D0F5 
-            border-radius: 25px           
+            background-color: #E8D0F5
+            border-radius: 25px
             height: 10vh
-            
 
     &__search
 
         &__title
             font-family: $font-main
-            font-size: 5vw            
+            font-size: 5vw
             justify-content: center
             text-align: center
-            color: #9F08ED 
+            color: #9F08ED
         &__btn
             font-family: unset
             text-align: center
-            justify-content: center        
+            justify-content: center
             margin-left: 30vw
             border-radius: 25px
-            background-color:#E8D0F5             
+            background-color: #E8D0F5
             height: 10vh
 
 @media (min-width: 1000px)
@@ -68,15 +77,13 @@ $font-main: 'Permanent Marker', cursive
         &__title
             width: 45vw
             height: 45vh
-             color: #9F08ED 
+            color: #9F08ED
         &__signup
             height: 2vw
             border-radius: 25px
-            background-color:#E8D0F5  
+            background-color: #E8D0F5
         &__signin
             height: 20vw
             width: 10vw
-             background-color:#E8D0F5 
+            background-color: #E8D0F5
             border-radius: 25px
-          
-    

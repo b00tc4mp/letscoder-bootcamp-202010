@@ -58,7 +58,7 @@ describe('retrieveProductDetail()', () => {
         )
     })
 
-    describe('on a non existing pet', () => {
+    describe('on a non existing product', () => {
         let productId
 
         beforeEach(() => {

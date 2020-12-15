@@ -4,19 +4,19 @@ const jwt = require('jsonwebtoken')
 const { env: { JWT_SECRET, JWT_EXP }} = process
 
 module.exports =( req, res, handleError) => {
-    const { body: { changes }} = req
+    const { body: { name, contact, address, city, phone }, headers: { authorization}} = req
 
-    try{
+    const token = authorization.replace('Bearer ', '')
 
-        modifyUser(changes)
-            .then(userId => {
-                const changes= 
+    try {
+        const { sub: userId }= jwt.verify(token, JWT_SECRET)
+               
+        modifyUser(userId, name, contact, address, city, phone)
+        .then(user => res.status(200).json(user))
+        .catch(handleError)
 
-                res.status(204).json({ token })
-            })
-
-            .catch(handleError)
-    } catch(error) {
-
+    }catch(error) {
+        handleError(error)
     }
 }
+

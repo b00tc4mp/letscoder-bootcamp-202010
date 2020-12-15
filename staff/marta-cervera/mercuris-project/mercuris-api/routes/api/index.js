@@ -36,7 +36,7 @@ router.get('/api/products/:productId/images', withErrorHandling(handleRetrievePr
 //retrieveProductDetail
 router.get('/api/products/:productId', withErrorHandling(handleRetrieveProductDetail))
 //modifyUser
-router.patch('/api/users', withErrorHandling(handleModifyUser))
+router.post('/api/users/edit', jsonBodyParser, withErrorHandling(handleModifyUser))
 
 module.exports = router
 

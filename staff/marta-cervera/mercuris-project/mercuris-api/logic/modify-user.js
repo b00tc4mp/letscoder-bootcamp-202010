@@ -1,15 +1,13 @@
 const { validateId } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
-const { models: { User } } = require('mercuris-data')
+
+const { models: { User }, mongoose: { Types: { ObjectId } } } = require('mercuris-data')
 
 
-module.exports = function( userId) {
-
-
-return User.findByIdAndUpdate(userId).lean()
-    .then(user => {
-        if (!user) throw new NotFoundError(`user with ${userId} not found`)
-
-        return user
-    })
+module.exports = function (userId, name, contact, address, city, phone) {
+    const _id = ObjectId(userId)
+   
+    console.log(userId, name, address, city,phone)
+    return User
+        .updateOne({ _id }, { $set: { name, contact, address, city, phone } })
+        .then(result => result)
 }

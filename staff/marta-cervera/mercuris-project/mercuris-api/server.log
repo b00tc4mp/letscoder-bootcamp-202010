@@ -1379,3 +1379,43 @@ info 2020-12-15T11:08:21.379Z - undefined
 info 2020-12-15T11:33:52.505Z - starting server
 info 2020-12-15T11:33:52.623Z - undefined
 info 2020-12-15T12:39:07.197Z - stopping server
+info 2020-12-15T17:27:38.522Z - starting server
+info 2020-12-15T17:27:38.676Z - undefined
+info 2020-12-15T17:30:55.963Z - stopping server
+info 2020-12-15T18:49:58.759Z - starting server
+info 2020-12-15T18:49:58.872Z - undefined
+info 2020-12-15T18:57:07.924Z - stopping server
+info 2020-12-15T18:57:23.866Z - starting server
+info 2020-12-15T18:57:24.001Z - undefined
+info 2020-12-15T18:57:25.681Z - stopping server
+info 2020-12-15T19:58:12.227Z - starting server
+info 2020-12-15T19:58:12.403Z - undefined
+info 2020-12-15T20:13:25.633Z - stopping server
+info 2020-12-15T20:13:28.722Z - starting server
+info 2020-12-15T20:13:28.882Z - undefined
+info 2020-12-15T20:15:20.573Z - stopping server
+info 2020-12-15T20:15:23.401Z - starting server
+info 2020-12-15T20:15:23.568Z - undefined
+info 2020-12-15T20:18:38.075Z - stopping server
+info 2020-12-15T20:18:41.377Z - starting server
+info 2020-12-15T20:18:41.533Z - undefined
+error 2020-12-15T20:30:45.556Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-15T20:43:15.990Z - stopping server
+info 2020-12-15T20:43:21.175Z - starting server
+info 2020-12-15T20:43:21.310Z - undefined

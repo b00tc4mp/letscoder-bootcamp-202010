@@ -7,6 +7,7 @@
     "start": "node .",
     "test": "npx mocha logic/*.spec.js",
     "test-inspect": "npx mocha inspect logic/*.spec.js",
+    "test-coverage": "npx nyc --reporter=html --exclude=**/*.spec.js mocha logic/*.spec.js",
     "inspect": "node inspect .",
     "nodemon": "nodemon ."
   },
