@@ -3471,3 +3471,126 @@ info 2020-12-15T13:50:35.572Z - stopping server
 info 2020-12-15T13:51:48.973Z - starting server
 info 2020-12-15T13:51:49.152Z - server running on port 4000
 info 2020-12-15T13:53:59.477Z - stopping server
+info 2020-12-15T15:27:26.326Z - starting server
+info 2020-12-15T15:27:26.550Z - server running on port 4000
+info 2020-12-15T16:03:40.237Z - stopping server
+info 2020-12-15T16:03:43.428Z - starting server
+error 2020-12-15T16:03:43.501Z - Error: Cannot find module 'mongodb'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\delete-pictogram.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\delete-pictogram.js:2:22)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:16:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-15T16:03:43.507Z - stopping server
+info 2020-12-15T16:05:12.435Z - starting server
+error 2020-12-15T16:05:12.506Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\delete-pictogram.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\index.js
+- C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\delete-pictogram.js:4:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\index.js:16:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-15T16:05:12.511Z - stopping server
+info 2020-12-15T16:06:17.214Z - starting server
+info 2020-12-15T16:06:17.396Z - server running on port 4000
+error 2020-12-15T16:06:28.325Z - ReferenceError: JWT_SECRET is not defined
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-delete-pictogram.js:11:52)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-15T16:07:45.621Z - ReferenceError: JWT_SECRET is not defined
+    at module.exports (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\handlers\handle-delete-pictogram.js:11:52)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-15T16:07:56.265Z - stopping server
+info 2020-12-15T16:08:00.131Z - starting server
+info 2020-12-15T16:08:00.329Z - server running on port 4000
+error 2020-12-15T16:08:27.935Z - ReferenceError: Pictogram is not defined
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\delete-pictogram.js:17:13
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T16:09:15.961Z - stopping server
+info 2020-12-15T16:09:22.118Z - starting server
+info 2020-12-15T16:09:22.302Z - server running on port 4000
+info 2020-12-15T16:18:36.263Z - stopping server
+info 2020-12-15T16:22:25.260Z - starting server
+info 2020-12-15T16:22:25.447Z - server running on port 4000
+error 2020-12-15T16:22:43.898Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd8d6a9c6b84801a41edb0d.jpg'
+error 2020-12-15T16:22:44.978Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd8d6a9c6b84801a41edb0d.jpg'
+error 2020-12-15T16:22:45.194Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd8d6a9c6b84801a41edb0d.jpg'
+info 2020-12-15T16:35:55.539Z - stopping server
+info 2020-12-15T19:31:31.221Z - starting server
+info 2020-12-15T19:31:31.454Z - server running on port 4000
+error 2020-12-15T19:31:33.942Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T19:31:34.947Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T19:31:35.452Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T19:31:38.204Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T19:31:45.104Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T19:32:17.588Z - stopping server
+info 2020-12-15T19:34:11.282Z - starting server
+info 2020-12-15T19:34:11.487Z - server running on port 4000
+info 2020-12-15T22:30:33.087Z - stopping server
+info 2020-12-15T22:59:29.116Z - starting server
+info 2020-12-15T22:59:29.350Z - server running on port 4000
+error 2020-12-15T23:06:11.264Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:06:16.127Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd94163c957d93804d85b55.jpg'
+error 2020-12-15T23:06:27.182Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:06:31.125Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd94173c957d93804d85b56.jpg'
+error 2020-12-15T23:06:49.750Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:06:51.890Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd94189c957d93804d85b57.jpg'
+info 2020-12-15T23:07:50.180Z - stopping server

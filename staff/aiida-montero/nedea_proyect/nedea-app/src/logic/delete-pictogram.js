@@ -1,9 +1,9 @@
-import { validateId } from '../../../nedea-api/logic/helpers/validations'
-import { call } from '../utils'
-import { validateToken,  validatePassword, validateCallback } from './helpers/validations'
 
-export default function (pictogramId, ownerId,callback)  {
-    validateId(ownerId)
+import { call } from '../utils'
+import { validateId, validateCallback } from './helpers/validations'
+
+export default function (pictogramId, token,callback)  {
+/*     validateId(ownerId) */
     validateCallback(callback)
     validateId(pictogramId)
 

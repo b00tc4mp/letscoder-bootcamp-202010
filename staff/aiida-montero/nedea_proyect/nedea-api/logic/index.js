@@ -12,6 +12,8 @@ module.exports = {
     savePictogramImage: require ('./save-pictogram-image'),
     retrievePictogramImage: require('./retrieve-pictogram-image'),
     toggleLikePictogram : require('./toggle-like-pictogram'),
-    retrieveFavouritePictogram : require('./retrieve-favourite-pictogram')
+    retrieveFavouritePictogram : require('./retrieve-favourite-pictogram'),
+    deletePictogram : require ('./delete-pictogram'),
+    modifyPictogram : require ('./modify-pictogram')
 
 }

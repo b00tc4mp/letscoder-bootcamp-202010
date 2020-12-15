@@ -1,7 +1,7 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
-const { Pictogram } = require('../models')
+
+const { models: { Pictogram }, mongoose } = require('nedea-data')
 const data = require('./data')
 const fs = require('fs')
 const path = require('path')

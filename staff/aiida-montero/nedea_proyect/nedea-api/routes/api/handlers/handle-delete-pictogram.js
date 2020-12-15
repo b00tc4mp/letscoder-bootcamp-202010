@@ -1,6 +1,8 @@
 const { deletePictogram } = require('../../../logic')
 const jwt = require('jsonwebtoken')
 
+const { env: { JWT_SECRET } } = process
+
 module.exports = (req, res, handleError) => {
     const { headers: { authorization }, body: { pictogramId}} = req
 

@@ -5,7 +5,7 @@ function MyPictograms({ myPictograms }) {
     return (<>
         <section className="my_pictograms">
             {myPictograms && myPictograms.map((pictogram) => (<>
-                <Pictogram data={pictogram} />
+                <Pictogram data={pictogram} deleteOption = {true}/>
             </>))}
         </section>
     </>)

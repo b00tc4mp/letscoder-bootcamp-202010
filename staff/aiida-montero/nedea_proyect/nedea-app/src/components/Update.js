@@ -48,7 +48,7 @@ export default function ({onSavePictogram,pictograms}) {
      */}
     </form>
      <Link className = "link_profile" to = '/profile'>Mis pictogramas favoritos</Link>
-     <MyPictograms myPictograms = {pictograms}/>
+     <MyPictograms myPictograms = {pictograms} />
   
 </section>
 

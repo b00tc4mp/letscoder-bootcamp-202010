@@ -24,7 +24,8 @@ module.exports = function (pictogramId, ownerId, title, description) {
                      pictogram.title = title
                      pictogram.description = description
 
-                     return pictogram.save()
+                    pictogram.save()
+                    return  pictogram
                      
                     })
                     .then (result => result.id) 
