@@ -17,29 +17,36 @@ export class SearchCreateMenu extends React.Component {
 
     this.state = {
       game: {},
-      isLoading: false
+      qrPrint: {}
     }
   }
 
   componentDidMount () {
-    this.setState({ isLoading: true })
+    const qrPrint = {}
+    qrPrint.quest = []
 
     try {
       retrieveGame(this.props.questId, (error, game) => {
-        if (error) return window.alert('Return' + error.message)
-
-        // this.setState({ isLoading: false })
+        if (error) return window.alert(error.message)
+        // Data to print
+        qrPrint.title = game.quest.title
+        game.quest.tests.map(({ title, description, qr }) => qrPrint.quest.push({
+          titleTest: title,
+          descTest: description,
+          qrTest: qr
+        }))
         this.setState({ game })
+        this.setState({ qrPrint })
       })
     } catch (error) {
-      window.alert('Catch' + error.message)
+      window.alert(error.message)
     }
   }
 
   render () {
     return (
       <div>
-        <PrintItem ref={(el) => (this.componentRef = el)} />
+        {this.state.qrPrint && <PrintItem game={this.state.qrPrint} ref={(el) => (this.componentRef = el)} />}
 
         <MenuListWrapper>
           <div className='Menu'>

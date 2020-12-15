@@ -1,6 +1,7 @@
 import authenticateUser from './authenticate-user'
 import registerUser from './register-user'
 import uploadImage from './upload-image'
+import uploadPdf from './upload-pdf'
 import saveQuest from './save-quest'
 import saveGame from './save-game'
 import retrieveGame from './retrieve-game'
@@ -11,5 +12,6 @@ export {
   uploadImage,
   saveQuest,
   saveGame,
-  retrieveGame
+  retrieveGame,
+  uploadPdf
 }
