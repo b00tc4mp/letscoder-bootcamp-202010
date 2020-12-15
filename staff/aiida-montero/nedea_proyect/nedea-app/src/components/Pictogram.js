@@ -15,13 +15,14 @@ export default function ({likedPictograms = [], data:{id, title, description}}) 
           <div className="card-div">
             <img
               className="card-div__image"
-              src={`${API_URL}/pictograms/${id}/images`} width = "600px"
-              height="120"
+              src={`${API_URL}/pictograms/${id}/images`} 
+              
               alt="Api"
             />
           </div>
           <div className="card-body">
-            <button onClick = {handleLike} className = {isActive ? 'heart active': 'heart'} ></button>
+
+            {token && <button onClick = {handleLike} className = {isActive ? 'heart active': 'heart'} ></button>}
             <h4 className="card-body__title">
               {title} 
             </h4>

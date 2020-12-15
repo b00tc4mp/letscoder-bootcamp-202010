@@ -22,9 +22,9 @@ export default function Profile () {
 
  favourites.map( ({_id, title, description}) => {
       return <article className="card">
-      <div className="card-header">
+      <div className="card-div">
         <img
-          className="card-header__image"
+          className="card-div__image"
            src= {`${API_URL}/pictograms/${_id}/images`} width = "600px" 
           height="120"
           alt="Api"

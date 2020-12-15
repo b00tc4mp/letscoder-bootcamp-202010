@@ -1,6 +1,6 @@
 import {Initial, Header, Footer, SignUp, SignIn, Home, Update, Profile, MyPictograms} from './components'
 
-import {registerUser, authenticateUser, savePictogram, savePictogramImage, retrievePictograms} from './logic';
+import {registerUser, authenticateUser, savePictogram, savePictogramImage, retrievePictograms, retrieveUser} from './logic';
 import {withRouter, Route, Redirect } from 'react-router-dom';
 import {useEffect, useState} from 'react'
 import {searchPictogramsByUser} from './logic'
@@ -8,8 +8,11 @@ import {searchPictogramsByUser} from './logic'
 
 
 
+
 function App(props) {
   const [error, setError] = useState(null)
+  let [fullname, setFullname] = useState(null)
+  
 
   function feedbackError(error) {
       setError(error)
@@ -20,13 +23,12 @@ function App(props) {
    const [pictograms, setPictograms] = useState([])
   useEffect(()=>{
     const { token } = sessionStorage;
-
     if (token) {
+      searchPictogramsByUser(token, pictograms => {
+          setPictograms(pictograms);   
+      });
       
 
-      searchPictogramsByUser(token, pictograms => {
-          setPictograms(pictograms);
-      });
   }
 
 }, []); 
@@ -99,21 +101,27 @@ function App(props) {
   }
 
   const handleGoToInitial =() =>{
+    setFullname(null)
     sessionStorage.removeItem('token');
     props.history.push('/')
   }
   const { token } = sessionStorage
 
+  const handleUser = (fullname) => {
+    setFullname(fullname)
+
+  }
+
   return (
     < >
-       <Header onGoToUpdate = {handleGoToUpdate} onGoToHome={handleGoToHome}  onGoInitial={handleGoToInitial}/>
-      
+
+      {fullname && <Header onGoToUpdate = {handleGoToUpdate} onGoToHome={handleGoToHome}  onGoInitial={handleGoToInitial}/> }
       <Route exact path ='/update' render={()=> token ?<Update onSavePictogram= {handleSavePictogram} pictograms = {pictograms} /> :
-       <Redirect to = "/"/> }/>
+      <Redirect to = "/"/> }/>
       <Route exact path ='/' render ={() => <Initial onGoToHome = {handleGoToHome} />}/>
       <Route exact path = '/sign-up' render ={()=><SignUp onSignUp = {handleSignUp} error = {error}/>}/>
       <Route exact path = '/sign-in' render = {()=> <SignIn onSignIn = {handleSignIn} error = {error}/>}/>
-      <Route exact path = '/home' render = {()=> <Home />}/>
+      <Route exact path = '/home' render = {()=> <Home onSetUser = {handleUser} fullname = {fullname}/>}/>
       <Route exact path = '/profile' render = {()=> <Profile/>}/>
 
       <Footer/> 

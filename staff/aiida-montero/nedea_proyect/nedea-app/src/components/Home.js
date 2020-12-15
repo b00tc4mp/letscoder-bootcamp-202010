@@ -8,7 +8,7 @@ import ResultList from './ResultList'
 import SearchPictogram from '../logic/search-pictogram'
 
 
-export default function() {
+export default function({onSetUser,token}) {
     const [name, setName] = useState()
     const [likedPictograms, setLikedPictograms] = useState([])
     const [queryResults, setQueryResults] = useState()
@@ -22,6 +22,7 @@ useEffect(() => {
             const {fullname, likes} = user
 
             setName(fullname)
+            onSetUser(token)
             setLikedPictograms(likes)
         })
     }catch(error) {
@@ -41,10 +42,10 @@ useEffect(() => {
 
 
  return <section className = 'home'>
-      <h1>Hello, {name}</h1>
+      <h1>Hello {name}</h1>
       <Discover/>
       <Search onSearchPictograms = {handleSearchPictogram}/>
-      {queryResults && <ResultList pictograms = {queryResults} likedPictograms = {likedPictograms}/>}
+      {queryResults && <ResultList pictograms = {queryResults} likedPictograms = {likedPictograms} token = {token}/>}
       <Slider/>
 
  </section>

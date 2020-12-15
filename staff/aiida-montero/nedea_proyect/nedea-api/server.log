@@ -3413,3 +3413,6 @@ error 2020-12-14T18:23:02.819Z - LengthError: id length 9 is not 24
     at router (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\index.js:47:12)
     at Layer.handle [as handle_request] (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\node_modules\express\lib\router\layer.js:95:5)
 info 2020-12-15T01:21:09.410Z - stopping server
+info 2020-12-15T10:18:02.692Z - starting server
+info 2020-12-15T10:18:02.957Z - server running on port 4000
+info 2020-12-15T12:36:51.304Z - stopping server

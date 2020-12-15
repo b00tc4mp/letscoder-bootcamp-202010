@@ -1,11 +1,11 @@
 require('dotenv').config()
-
+const { ContentError, LengthError } = require('../errors')
 const { expect } = require('chai')
 const mongoose = require('mongoose')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
 const authenticateUser = require('./authenticate-user')
 const { User } = require('../models')
-
+const bcrypt = require('bcryptjs')
 const { env: { MONGODB_URL } } = process
 
 describe('authenticateUser()', () => {
@@ -19,10 +19,14 @@ describe('authenticateUser()', () => {
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
-            const user = { fullname, email, password }
+            return bcrypt.hash(password, 10)
+            .then(hash => {
+                const user = { fullname, email, password : hash}
 
             return User.create(user)
                 .then(user => userId = user.id)
+
+            })
         })
 
         it('should succeed on correct credentials', () =>
@@ -103,10 +107,37 @@ describe('authenticateUser()', () => {
                 })
             })
         })
-
+   
         // TODO when password is wrong and its subcases
         // TODO when callback is wrong
     })
+   
+    describe('when password is wrong', () => {
+        describe('when password is not a string', () => {
+            let email, password
 
-    after(mongoose.disconnect)
+            beforeEach(() => {
+                email = randomWithPrefixAndSuffix('email', '@mail.com')
+                password = randomNonString()
+            })
+
+            it('should fail on empty or blank password', () => {
+                expect(() => authenticateUser(email, password, () => { })).to.throw(TypeError, `${password} is not a password`)
+            })
+        })
+
+        describe('when password is empty or blank', () => {
+            let email, password
+
+            beforeEach(() => {
+                email = randomWithPrefixAndSuffix('email', '@mail.com')
+                password = randomEmptyOrBlankString()
+            })
+
+            it('should fail on non-string password', () => {
+                expect(() => authenticateUser(email, password, () => { })).to.throw(ContentError, 'password is empty or blank')
+            })
+        })
+    })
 })
+after(mongoose.disconnect)

@@ -4,7 +4,6 @@ const { expect } = require('chai')
 const { MongoClient, ObjectId } = require('mongodb')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('../utils/randoms')
 require('../utils/array-polyfills')
-const context = require('./context')
 const savePictogram = require('./save-pictogram')
 
 const { env: { MONGODB_URL, DB_NAME } } = process
