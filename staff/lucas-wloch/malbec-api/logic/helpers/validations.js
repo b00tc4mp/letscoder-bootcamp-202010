@@ -26,9 +26,15 @@ module.exports = {
     },
 
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new ContentError('id is empty or blank')
+
+    },
+    validateToken(token) {
+        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
+
+        if (!token.trim().length) throw new ContentError('token is empty or blank')
 
     },
 
@@ -87,9 +93,7 @@ module.exports = {
     },
 
     validateProductPrice(price){
-        if (typeof price !== 'string') throw new TypeError(price + ' is not a price')
-
-        if (!price.trim().length) throw new ContentError('price is empty or blank')
+        if (typeof price !== 'number') throw new TypeError(price + ' is not a price')
     },
 
     validateProductGlutenFree(glutenFree){
@@ -104,9 +108,9 @@ module.exports = {
         if (!(alergenos instanceof Array)) throw new TypeError(`${alergenos} is not an array`)
 
         alergenos.forEach(algIngredient => {
-            if (typeof algIngredient !== 'string') throw new TypeError(algIngredient + ' is not a algIngredient')
+            if (typeof algIngredient !== 'string') throw new TypeError('this is not a alergen Ingredient')
 
-            if (!algIngredient.trim().length) throw new ContentError('algIngredient is empty or blank')
+            if (!algIngredient.trim().length) throw new ContentError('alergen Ingredient is empty or blank')
         })
 
     },
@@ -120,11 +124,16 @@ module.exports = {
         || category === 'otras-sugerencias' || category === 'acompañamientos-guarniciones' || category === 'postres' || category === 'aguas-refrescos'
         || category === 'vinos' || category === 'cervezas')) throw new ValueError('category is incorrect')
 
-        // entrantes parrilla, empanadas, ensaladas, parrilla, pescados, otras sugerencias, acompañamientos/guarniciones, postres, aguas/refrescos
-        // vinos, cervezas
+        // ["entrantes-parrilla", "empanadas", "ensaladas", "parrilla", "pescados", "otras-sugerencias", 
+        // "acompañamientos-guarniciones", "postres", "aguas-refrescos", "vinos", "cervezas"]
     },
 
     validateProductAvailable(available){
         if (!(available === true || available === false)) throw new TypeError('available has to be true or false')
+    },
+    
+    validateStream(stream) {
+        // TODO where the f*ck is the the class to validate this instance!!?
     }
+
 }

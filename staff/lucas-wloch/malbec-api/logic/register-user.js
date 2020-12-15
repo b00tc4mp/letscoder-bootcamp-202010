@@ -1,7 +1,8 @@
 const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
-const { User }  = require('../models')
+const { models: { User } } = require('malbec-data')
+
 const bcryptjs = require('bcryptjs')
 
 
@@ -15,7 +16,7 @@ module.exports = (fullname, email, password) => {
         return User
             .findOne({ email })
             .then(user => {
-                if (user) throw new ConflictError(`e-mail ${email} already registered`)
+                if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
 
                 return bcryptjs.hash(password, 10)
             })

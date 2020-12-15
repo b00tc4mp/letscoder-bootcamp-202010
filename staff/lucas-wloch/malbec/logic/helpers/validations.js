@@ -115,5 +115,8 @@ module.exports = {
 
     validateProductAvailable(available){
         if (!(available === true || available === false)) throw new TypeError('available has to be true or false')
+    },
+    validateFile(file) {
+        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
     }
 }

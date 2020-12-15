@@ -6,7 +6,12 @@ handleRegisterUser,
 handleRetrieveUser,
 handleAuthenticateUser,
 handleSaveProducts,
-handleRetrieveProducts
+handleRetrieveProductCategory,
+handleRetrieveProductById,
+handleSaveProductImage,
+handleRetrieveProductImage,
+handleSaveMenu,
+handleFindMenu
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -22,7 +27,17 @@ router.post('/api/users/auth',jsonBodyParser, withErrorHandling(handleAuthentica
 
 router.post('/api/products',jsonBodyParser, withErrorHandling(handleSaveProducts))
 
-router.get('/api/products/:category', withErrorHandling(handleRetrieveProducts))
+router.post('/api/products/:productId/images', withErrorHandling(handleSaveProductImage))
+
+router.get('/api/products/:productId/images', withErrorHandling(handleRetrieveProductImage))
+
+router.get('/api/products/category/:category', withErrorHandling(handleRetrieveProductCategory))
+
+router.get('/api/products/:productId', withErrorHandling(handleRetrieveProductById))
+
+router.post('/api/menu',jsonBodyParser, withErrorHandling(handleSaveMenu))
+
+router.get('/api/menu', withErrorHandling(handleFindMenu))
 
 // router.get('/api/products', withErrorHandling(handleRetrieveProducts))
 

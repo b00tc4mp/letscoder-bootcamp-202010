@@ -1,8 +1,10 @@
 import call from '../utils/call'
-import { validateProductAlergenos, validateProductCategory, validateProductAvailable, validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateId } from './helpers/validations'
+import { validateProductAlergenos, validateProductCategory, validateProductAvailable, validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateId, validateToken } from './helpers/validations'
+import context from './context'
 
-const saveProducts = (productId, name, description, price, glutenFree, vegan, alergenos, category, available, callback) => {
+const saveProducts = (token, productId, name, description, price, glutenFree, vegan, alergenos, category, available) => {
     if (typeof productId !== "undefined") validateId(productId)
+    if (typeof token !== "undefined") validateToken(token)
     validateProductName(name)
     validateProductDescription(description)
     validateProductPrice(price)
@@ -12,18 +14,22 @@ const saveProducts = (productId, name, description, price, glutenFree, vegan, al
     validateProductCategory(category)
     validateProductAvailable(available)
 
-        call('POST', 'http://localhost:4000/api/products', { 'Content-type': 'application/json' },
-            JSON.stringify({ productId, name, description, price, glutenFree, vegan, alergenos, category, available }),
-            (status, response) => {
-                if (status === 0) {
-                    return callback(new Error('server down'))
-                } else if (status !== 201) {
-                    const { error } = JSON.parse(response)
+    const { API_URL } = context
 
-                    return callback(new Error(error))
-                }
-                callback(null)
-            })
-    
+    return call('POST', `${API_URL}/products`, { 'Content-type': 'application/json', Authorization: `Bearer ${token}` },
+        JSON.stringify({ productId, name, description, price, glutenFree, vegan, alergenos, category, available }))
+        .then(response => {
+            const { status, body } = response
+
+            if (status !== 201) {
+                const { error } = JSON.parse(body)
+
+                throw new Error(error)
+            }
+            const { productId } = JSON.parse(body)
+
+            return productId
+        })
+
 }
 export default saveProducts

@@ -1,7 +1,7 @@
-const { User } = require('../models')
 const { validateEmail, validatePassword } = require('./helpers/validations')
 const { AuthError } = require('../errors')
-// const { User } = require('../models')
+const { models: { User } } = require('malbec-data')
+
 
 const bcryptjs = require('bcryptjs')
 
@@ -15,7 +15,6 @@ module.exports = (email, password) => {
             if (!user) throw new AuthError('wrong credentials')
 
             const { password: hash } = user
-            console.log(hash, password)
 
             return bcryptjs.compare(password, hash)
                 .then(match => {

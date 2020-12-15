@@ -1,0 +1,44 @@
+.feedback
+    border-radius: 5px
+    margin: 10px
+    border: 1px solid grey
+    width: 80vw
+
+    // justify-items:  center
+    // text-align: center
+    // align-items: center
+    // align-content: center
+    // text-justify: center
+    // justify-self: center
+    
+
+    &--white
+        background-color: white
+        color: black    
+    &--red
+        background-color: red
+        color: black
+
+    &__p
+        font-size: 1.5rem
+        font-weight: 600
+        // padding: 5px
+        margin: 5px
+        // justify-content: center
+        // align-self: center
+        &--red
+            background-color: red
+            color: black
+        &--white
+            background-color: white
+            color: black  
+@media (max-width: 999px) and (min-width: 550px)
+    .feedback
+        width: 80vw
+        padding: 7px
+@media (min-width: 1000px)
+    .feedback
+        width: 80vw
+        // height: 7vh
+        padding: 7px
+

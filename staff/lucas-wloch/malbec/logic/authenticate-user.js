@@ -1,25 +1,28 @@
-import call  from '../utils/call'
-import { validateEmail, validatePassword, validateCallback } from './helpers/validations'
+import call from '../utils/call'
+import { validateEmail, validatePassword } from './helpers/validations'
+import context from './context'
 
-const authenticateUser = (email, password, callback) => {
+const authenticateUser = (email, password) => {
     validateEmail(email)
     validatePassword(password)
-    validateCallback(callback)
 
-    call('POST', 'http://localhost:4000/api/users/auth', { 'Content-type': 'application/json' },
-        JSON.stringify({ email, password }),
-        (status, response) => {
-            if (status === 0) {
-                callback(new Error('server down'))
-            }else if (status !== 200) {
-                const { error } = JSON.parse(response)
+    const { API_URL } = context
 
-                return callback(new Error(error))
+
+    return call('POST', `${API_URL}/users/auth`, { 'Content-type': 'application/json' }, JSON.stringify({ email, password }))
+        .then(response => {
+
+            const { status, body } = response
+
+            if (status !== 200) {
+                const { error } = JSON.parse(body)
+
+                throw new Error(error)
             }
 
-            const { token } = JSON.parse(response)
+            const { token } = JSON.parse(body)
 
-            callback(null, token)
+            return token
         })
-} 
+}
 export default authenticateUser

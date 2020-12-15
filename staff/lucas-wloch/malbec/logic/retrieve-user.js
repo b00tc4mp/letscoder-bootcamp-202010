@@ -1,24 +1,25 @@
-import  call  from '../utils/call'
-import { validateToken, validateCallback } from './helpers/validations'
+import call from '../utils/call'
+import { validateToken } from './helpers/validations'
+import context from './context'
 
-
-function retrieveUser(token,callback){
+function retrieveUser(token) {
     validateToken(token)
-    validateCallback(callback)
 
-    call('GET','http://localhost:4000/api/users',
-    {Authorization:`Bearer ${token}`},'',function(status,response){
-        if(status === 0){
-            callback(new Error('server down'))
-        }else if(status === 200){
-            const {user} = JSON.parse(response);
-            callback(null,user);
-        } else {
-            var res = JSON.parse(response);
-            callback(new Error(res.error));
-        };
+    const { API_URL } = context
 
-    })
+    return call('GET', `${API_URL}/users`, { Authorization: `Bearer ${token}` }, '')
+        .then(response => {
+            const { status, body } = response
+
+            if (status !== 200) {
+                const { error } = JSON.parse(body);
+
+                throw new Error(error);
+            }
+            const { user } = JSON.parse(body);
+
+            return user
+        })
 };
 
 export default retrieveUser 

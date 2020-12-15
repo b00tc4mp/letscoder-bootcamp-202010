@@ -22,13 +22,13 @@ const Login = (req, res) => {
 
     const handleLogin = (email, password) => {
         try {
-            authenticateUser(email, password, (error, token) => {
-                if (error) return setError(error.message)
+            authenticateUser(email, password)
+                .then(token => {
+                    sessionStorage.token = token
 
-                sessionStorage.token = token
-
-                router.push('/')
-            })
+                    router.push('/')
+                })
+                .catch(error => setError(error.message))
         } catch (error) {
             setError(error.message)
         }
@@ -44,7 +44,7 @@ const Login = (req, res) => {
                 <input className="login__input" name="email" type="text" placeholder="email@example.com" />
                 <p className="login__p">Password</p>
                 <input className="login__input" name="password" type="password" placeholder="********" />
-                {error && <Feedback error={error} />}
+                {error && <FeedbackAccess error={error} />}
                 <br /> <button className="login__button">Sign In</button>
             </form>
             <p className="login__p2">Have an account?<Link href="/register"><span className="login__span" >Register here</span></Link></p>

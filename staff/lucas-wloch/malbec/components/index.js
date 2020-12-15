@@ -1,17 +1,23 @@
 import NavBar from './NavBar'
 import Layout from './Layout'
-import Feedback from './Feedback'
+import FeedbackAccess from './FeedbackAccess'
 import Profile from './Profile'
 import SaveProducts from './SaveProducts'
 import MyProducts from './MyProducts'
 import EditProduct from './EditProduct'
+import CartaProduct from './CartaProduct'
+import Feedback from './Feedback'
+import NavBar1 from './NavBar1'
 
 export  {
     NavBar,
+    NavBar1,
     Layout,
-    Feedback,
+    FeedbackAccess,
     SaveProducts,
     Profile,
     MyProducts,
-    EditProduct
+    EditProduct,
+    CartaProduct,
+    Feedback
 }

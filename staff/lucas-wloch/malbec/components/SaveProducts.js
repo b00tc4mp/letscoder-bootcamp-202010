@@ -1,9 +1,10 @@
 import saveProducts from '../logic/save-products'
+import saveProductImage from '../logic/save-product-image'
 import './SaveProducts.sass'
 import { useState } from 'react'
 
 
-function SaveProducts({onExit}) {
+function SaveProducts({ onExit, category, onSaved }) {
     const [success, setSuccess] = useState()
 
 
@@ -17,10 +18,10 @@ function SaveProducts({onExit}) {
 
     const handleSubmit = event => {
         event.preventDefault()
-
+        debugger
         let { target: { name: { value: name }, description: { value: description }, price: { value: price },
             glutenFree: { value: glutenFree }, vegan: { value: vegan }, alergenos: { value: alergenos }, category: { value: category },
-            available: { value: available }
+            available: { value: available }, image
         } } = event
 
         glutenFree = normalizeBoolean(glutenFree)
@@ -29,19 +30,37 @@ function SaveProducts({onExit}) {
 
         alergenos = alergenos.trim()
 
+        const { token } = sessionStorage
 
         if (name && description && category)
-            saveProducts(undefined, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available, error => {
-                if (error) return alert(error)
+            saveProducts(token, undefined, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available)
+                .then(productId => {
 
-                setSuccess(true)
+                    if (productId && image.files[0])
+                        saveProductImage(token, productId, image.files[0])
+                            .then(() => {
+                                setSuccess(true)
 
-                setTimeout(() => {
-                    setSuccess(false)
-                }, 4000);
-            })
+                                setTimeout(() => {
+                                    setSuccess(false)
+                                }, 4000);
+
+                                onSaved && onSaved()
+                            })
+                            .catch(alert)
+                    else {
+                        setSuccess(true)
+
+                        setTimeout(() => {
+                            setSuccess(false)
+                        }, 4000);
+
+                        onSaved && onSaved()
+                    }
+                })
+                .catch(alert)
+
         else return alert('name, description or category is missing')
-
     }
 
     return <>
@@ -82,7 +101,8 @@ function SaveProducts({onExit}) {
                 </div>
                 <div className="saveProducts__div">
                     <p>Category:</p>
-                    <select className="saveProducts__category" name="category" id="category">
+
+                    <select className="saveProducts__category" defaultValue={category} name="category" id="category">
                         <option className="saveProducts__optionC" value="entrantes-parrilla" >entrantes-parrilla</option>
                         <option className="saveProducts__optionC" value="empanadas">empanadas</option>
                         <option className="saveProducts__optionC" value="ensaladas" >ensaladas</option>
@@ -103,6 +123,8 @@ function SaveProducts({onExit}) {
                     </select>
                     {/* </div> */}
                 </div>
+                <p>Image:</p>
+                <input type="file" id="image" name="image" />
 
                 <button className="saveProducts__button">Send</button>
 
