@@ -1,6 +1,6 @@
 import './SearchPets.sass'
 import PetResults from './PetResults'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {findPets, detailPet} from '../logic'
 import DetailPet from './DetailPet'
 
@@ -10,7 +10,8 @@ function SearchPets(){
     const [results, setResults] = useState()
     const [result, setResult] = useState()
     const [criteria, setCriteria] = useState()
-
+    const [noResult, setNoResult] = useState()
+    
     const { token } = sessionStorage
     const handleResults = event => {
         event.preventDefault()
@@ -44,10 +45,17 @@ function SearchPets(){
             findPets( token, queryShelter, city, queryPet, species, breed, (error, pets) => {
                 if (error) return alert(error.message)
 
+                if(!pets.length) 
+                    {setNoResult(true)
+                        setTimeout(() => {
+                            setNoResult(false)
+                        }, 5000)}
+
                 setCriteria({queryShelter, city, queryPet, species, breed})
                 setResults(pets)
                 setResult(null)
 
+                
             })
         } catch (error) {
             alert(error.message)
@@ -72,17 +80,22 @@ function SearchPets(){
             <>
         {!token && <h1 className= "search__title">Find your pet</h1>}
         <form className="search" onSubmit={handleResults}>
-            {!token && <input className="search__input" type="text" name="queryShelter" placeholder="shelter info" />}
+            {!token && <input className="search__input" type="text" name="queryShelter" placeholder="shelter: name, email,..." />}
             {!token && <input className="search__input" type="text" name="city" placeholder="city"/>}
-            <input className="search__input" type="text" name="queryPet" placeholder="queryPet"/>
-            <input className="search__input" type="text" name="species" placeholder="species"/>
+            <input className="search__input" type="text" name="queryPet" placeholder="Pet: name, weight, gender,..."/>
             <input className="search__input" type="text" name="breed" placeholder="breed"/>
+            <select className="search__select" name="species" id="species">
+                <option className="search__option" value="dog">Dog</option>
+                <option className="search__option" value="cat">Cat</option>
+            </select>
             <button className="search__button">Search</button>
         </form>
    
+        {noResult && <p className="search__sorry">Sorry, there are no results for this query</p>}
         {!result && results && results.length>0 && <PetResults results={results} onDetailPet={handleDetailPet} />}
         {!results && !result && <div><img className="search__img"src="patitas.jpg"/></div>}
         {!results && result && <DetailPet result={result} onDeletePet = {handleRefreshResults}/>}
+        
             </>
         );
     }

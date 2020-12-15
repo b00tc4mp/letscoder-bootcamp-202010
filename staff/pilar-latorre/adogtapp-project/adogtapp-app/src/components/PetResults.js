@@ -20,8 +20,8 @@ function PetResults({results, onDetailPet}){
             <img className="results__img" src={`${API_URL}/pets/${id}/images`} onClick={()=>handleDetailPet(id)}/>
             <div>
             <p className="results__p">{name}</p>
-            <p className="results__p">breed: {breed}</p>
-            <p className="results__p">color: {color}</p>
+            <p className="results__p">Breed: {breed}</p>
+            <p className="results__p">Color: {color}</p>
   
             </div>
         </li>)}

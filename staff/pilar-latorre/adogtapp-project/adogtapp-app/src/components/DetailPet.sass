@@ -7,15 +7,14 @@ $fontmain: Nerko One, cursive
     border: 2px solid purple
     list-style: none
     margin: 3vw 3vw 3vw 3vw
-    display: block
     padding: 1vw 1vw 1vw 1vw
     font-size: 1.5rem
     border-radius: 25px
     display: flex
+    flex-direction: column
     align-items: center
     text-align: center
-   
-        
+    
     &__button
         border-radius: 20px
         background-color: purple
@@ -29,11 +28,24 @@ $fontmain: Nerko One, cursive
       
         
     &__img
-        width: 30vw
+        width: auto
         height: 25vh
+        
     
-    &__p
-        margin-left: 4vw
+    &__p, &__info
+        font-family: $fontmain
+        margin: 0px 0px 0px 0px
+        color: purple
+        max-width: 100%
+        word-break: break-all
+      
+        
+    &__info
+        background-color: purple
+        color: white
+        margin-top: 5vw
+        width: 50%
+
 
 @media (min-width: 1000px)
     .result

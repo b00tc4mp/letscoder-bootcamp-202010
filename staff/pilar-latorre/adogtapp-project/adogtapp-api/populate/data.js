@@ -17,7 +17,7 @@
     },
     {
         userName: 'Espolones Zaragoza',
-        email: 'espolonessinfronteras@hotmail.com',
+        email: 'espolones@hotmail.com',
         password: '123123123',
         address: 'Avda. La Industria nº 124 C1',
         city: 'Zaragoza',
@@ -25,15 +25,15 @@
         description: 'Protectora de animales. En Espolones puedes adoptar una mascota, un perro, un gato...También puedes ser Voluntario, donar tus manualidades o dinero.',
         pets: [
             { name: 'Eros', breed: 'galgo', species: 'dog', color: 'black', description: '3 years old, male, 20kg, quiet and sensitive' , image: 'galgoNegro'},
-            { name: 'Magüi', breed: 'Sphynx', species: 'dog', color: 'white', description: '5 years old, female, 5kg, very sociable and loyable', image: 'gatocalvo'},
-            { name: 'Brenda', breed: 'gato común', species: 'dog', color: 'black', description: '2 years old, female, 4kg, a little bit moody ', image: 'gatoNegro'},
+            { name: 'Simon', breed: 'Sphynx', species: 'cat', color: 'white', description: '5 years old, male, 5kg, very sociable and loyable', image: 'gatocalvo'},
+            { name: 'Magüi', breed: 'gato común', species: 'cat', color: 'black', description: '2 years old, female, 4kg, a little bit moody ', image: 'gatoNegro'},
             { name: 'Anubis', breed: 'labrador', species: 'dog', color: 'ligth brown', description: '3 years old, male, 30kg, quiet and sensitive', image: 'labrador'},
             { name: 'Erik', breed: 'labrador', species: 'dog', color: 'brown', description: '2 months old, male, 6kg, very active, affectionate', image: 'labradorMarron'}
         ]
     },
     {
         userName: 'APATA',
-        email: 'INFO@APATA.ORG',
+        email: 'info@apata.ORG',
         password: '123123123',
         address: 'C/ Quiñones 23',
         city: 'Tarazona',
@@ -44,7 +44,7 @@
             { name: 'Aura', breed: 'pastor aleman', species: 'dog', color: 'black', description: '5 years old, female, 35kg, very sociable and loyable', image: 'pastoralemanNegro'},
             { name: 'Nirvana', breed: 'pitbull', species: 'dog', color: 'brown', description: '2 years old, female, 20kg, a little bit moody ', image: 'pitbull'},
             { name: 'Hermes', breed: 'carlino', species: 'dog', color: 'ligth brown', description: '3 years old, male, 8kg, quiet and sensitive', image: 'pug'},
-            { name: 'Casper', breed: 'siames', species: 'dog', color: 'ligth brown', description: '2 years old, male, 6kg, very active, affectionate', image: 'siames'}
+            { name: 'Casper', breed: 'siames', species: 'cat', color: 'ligth brown', description: '2 years old, male, 6kg, very active, affectionate', image: 'siames'}
         ]
     }
 ]  

@@ -85,16 +85,16 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
     <>
     <header className="home">
     
-    <button className="home__logout" onClick={()=> {
+    <div><button className="home__logout" onClick={()=> {
         setName(null)
         setError(null)
         onLogout()
     }}>LOGOUT</button>
-    <h1 className="home__welcome">Welcome {name}!</h1>
+    <h1 className="home__welcome">Welcome {name} !</h1></div>
 
-    <div><button className="home__search" onClick={handleGoToSearch}>SEARCH PET</button>
+    <button className="home__search" onClick={handleGoToSearch}>SEARCH PET</button>
 
-    <button className="home__create" onClick={handleGoToCreate}>CREATE NEW PET</button></div></header>
+    <button className="home__create" onClick={handleGoToCreate}>CREATE NEW PET</button></header>
 
     {error && <h2 className="home__feedback"><Feedback error={error}/></h2>}
 

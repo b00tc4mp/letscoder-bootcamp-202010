@@ -14,16 +14,20 @@ $fontmain: Nerko One, cursive
      border: 1px solid red
      margin: 0px auto
     
-  
 .home
     &__welcome
     text-align: center
-    color: purple
+    color: white
+    background-color: purple
     font-family: $fontmain
-    font-size: xx-large
+    font-size: 0.8rem
+    &__success
+        font-family: $fontmain
+        color: purple
+    
     &__img
-        width: 45vw
-        height: 45vh
+        max-width: 100%
+        height: 35vh
     &__input
         margin: .2vw
         height: 4vh
@@ -38,18 +42,20 @@ $fontmain: Nerko One, cursive
 
     &__search, &__create, &__logout
         border-radius: 20px
-        background-color: purple
-        height: 5vw
+        background-color: white
+        height: auto
         font-size: 1rem
         font-weight: bold
         outline: none
-        color: white
+        color: purple
         font-family: $fontmain
         margin-left: 3vw
-   
+        margin-bottom: 3vw
+    &__logout
+        display: flex
+        //flex-direction: column
+        align-item: right
  
-
-        
 
 @media (min-width: 1000px)
     .home

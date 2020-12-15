@@ -1756,3 +1756,80 @@ info 2020-12-15T10:44:19.060Z - stopping server
 info 2020-12-15T10:44:22.415Z - starting server
 info 2020-12-15T10:44:22.628Z - server running on port 4000
 info 2020-12-15T13:12:16.032Z - stopping server
+info 2020-12-15T14:28:36.134Z - starting server
+info 2020-12-15T14:28:36.392Z - server running on port 4000
+info 2020-12-15T14:33:25.232Z - stopping server
+info 2020-12-15T14:33:48.089Z - starting server
+info 2020-12-15T14:33:48.222Z - server running on port 4000
+info 2020-12-15T14:34:53.223Z - stopping server
+info 2020-12-15T14:35:00.876Z - starting server
+info 2020-12-15T14:35:01.054Z - server running on port 4000
+info 2020-12-15T14:35:12.808Z - stopping server
+info 2020-12-15T14:36:22.441Z - starting server
+info 2020-12-15T14:36:22.563Z - server running on port 4000
+error 2020-12-15T15:45:32.306Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T15:45:33.057Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-15T15:46:44.453Z - stopping server
+info 2020-12-15T15:50:26.601Z - starting server
+info 2020-12-15T15:50:26.832Z - server running on port 4000
+error 2020-12-15T15:58:44.552Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:18:39
+info 2020-12-15T16:45:30.357Z - stopping server
+info 2020-12-15T16:45:38.687Z - starting server
+info 2020-12-15T16:45:38.835Z - server running on port 4000
+error 2020-12-15T17:04:43.754Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T17:04:44.312Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T17:04:48.122Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T17:04:49.444Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T17:04:54.370Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-15T17:23:49.915Z - stopping server
+info 2020-12-15T17:23:53.183Z - starting server
+info 2020-12-15T17:23:53.350Z - server running on port 4000
+info 2020-12-15T17:24:10.746Z - stopping server
+info 2020-12-15T17:24:18.640Z - starting server
+info 2020-12-15T17:24:18.862Z - server running on port 4000
+info 2020-12-15T17:25:09.656Z - stopping server
+info 2020-12-15T17:25:19.196Z - starting server
+info 2020-12-15T17:25:19.307Z - server running on port 4000
+error 2020-12-15T17:57:36.230Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T17:58:23.216Z - ContentError: phone is empty or blank
+    at validatePhone (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\helpers\validations.js:37:41)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:14:5)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-register-user.js:7:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+error 2020-12-15T17:58:25.703Z - ConflictError: shelter with e-mail info@zarpa.org already registered
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:21:37
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T17:58:28.256Z - ConflictError: shelter with e-mail info@zarpa.org already registered
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:21:37
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-15T17:58:30.472Z - ConflictError: shelter with e-mail info@zarpa.org already registered
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:21:37
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-15T18:20:12.898Z - stopping server

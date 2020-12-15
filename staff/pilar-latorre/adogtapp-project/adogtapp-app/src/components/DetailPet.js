@@ -23,14 +23,14 @@ function DetailPet({result: {id, name, breed, species, color, description, userN
     return <article className="result">
     
             <img className="result__img" src={`${API_URL}/pets/${id}/images`}/>
-            <div>
-            <p>PET INFO</p>
+            
+            {!token && <p className="result__info">PET INFO</p>}
             <p className="result__p">{name}</p>
             <p className="result__p">breed: {breed}</p>
             <p className="result__p">species: {species}</p>
             <p className="result__p">color: {color}</p>
-            <p className="result__p">description: {description}</p></div>
-            <div>{!token && <p>SHELTER INFO</p>}
+            <p className="result__p">description: {description}</p>
+            {!token && <p className="result__info">SHELTER INFO</p>}
             {!token && <p className="result__p">{userName}</p>}
             {!token && <p className="result__p">{email}</p>}
             {!token && <p className="result__p">{phone}</p>}
@@ -39,7 +39,7 @@ function DetailPet({result: {id, name, breed, species, color, description, userN
             {!token && <p className="result__p">{descriptionShelter}</p>}
 
             {token && <button className="result__button" onClick={()=>handleDeletePet(id) }>DELETE PET</button>}
-            </div>
+            
         </article>
 
 }

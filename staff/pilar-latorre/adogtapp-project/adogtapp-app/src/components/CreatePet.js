@@ -3,7 +3,7 @@ import './CreatePet.sass'
 function CreatePet({onCreatePet}){
 
     return <div className="CreatePet">
-        <h1 className="CreatePet__h1">Please fill all the information about the pet</h1> 
+        <h3 className="CreatePet__h1">Please fill all the information about the pet</h3> 
     
         <form className="CreatePet__form" onSubmit={event => {
             event.preventDefault()
@@ -13,7 +13,7 @@ function CreatePet({onCreatePet}){
             onCreatePet(name, breed, species, color, description, image.files[0] )
         }}>
             <input type="file" id="image" name="image" />
-            <label className="CreatePet__button" htmlFor="image">UPDATE PHOTO</label>
+            <label className="CreatePet__label" htmlFor="image"></label>
             <input className="CreatePet__input" type="text" name="name" placeholder="Pet name" />
             <input className="CreatePet__input" type="text" name="breed" placeholder="breed" />
             <select className="CreatePet__select" name="species" id="species">
