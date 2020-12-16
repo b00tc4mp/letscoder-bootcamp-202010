@@ -43,14 +43,7 @@ function SearchPets({ onError }) {
   
   const handleSearchPets = (queryShelter, city, queryPet, species, breed) => {
     try {
-      findPets(
-        token,
-        queryShelter,
-        city,
-        queryPet,
-        species,
-        breed,
-        (error, pets) => {
+      findPets(token, queryShelter, city, queryPet, species, breed, (error, pets) => {
           if (error) return alert(error.message);
           
           if (!pets.length) {
@@ -74,14 +67,7 @@ function SearchPets({ onError }) {
       const { queryShelter, city, queryPet, species, breed } = criteria;
       
   try {
-        findPets(
-          token,
-          queryShelter,
-          city,
-          queryPet,
-          species,
-          breed,
-          (error, pets) => {
+        findPets(token,queryShelter,city,queryPet, species,breed,(error, pets) => {
             if (error) return alert(error.message);
             setView(null)
 
@@ -156,7 +142,7 @@ function SearchPets({ onError }) {
           <img className="search__img" src="patitas.jpg" />
         </div>
       )}
-      {view === 'detail' && (<DetailPet petId={petId} onDeleted={handleRefreshResults} onError={onError} />)}
+      {view === 'detail' && petId &&(<DetailPet petId={petId} onDeleted={handleRefreshResults} onError={onError} />)}
     </>
   );
 }

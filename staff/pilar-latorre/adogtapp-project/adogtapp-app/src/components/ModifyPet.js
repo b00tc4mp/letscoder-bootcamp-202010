@@ -1,4 +1,4 @@
-//import './ModifyPet.sass'
+import './ModifyPet.sass'
 import { useState, useEffect } from 'react'
 import { savePet } from '../logic'
 import {retrievePet} from '../logic'
@@ -47,31 +47,30 @@ function ModifyPet({petId, onModified, onError}){
 
     
     return pet? 
-    <div className="ModifyPet">
-        <h3 className="ModifyPet__h1">Please update all the information about the pet</h3> 
+    <div className="modifyPet">
+        <h3 className="modifyPet__h1">Please update all the information about the pet</h3> 
     
-        <form className="ModifyPet__form" onSubmit={event => {
+        <form className="modifyPet__form" onSubmit={event => {
             event.preventDefault()
 
-            const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} , image }} = event
+            const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} }} = event
 
             
-                handleModify(name, breed, species, color, description, image.files[0] )
+                handleModify(name, breed, species, color, description)
            
         }}>
             
-            <input type="file" id="image" name="image" />
-            <label className="ModifyPet__label" htmlFor="image"></label>
-            <input className="ModifyPet__input" type="text" name="name" placeholder="Pet name" defaultValue={pet.name} />
-            <input className="ModifyPet__input" type="text" name="breed" placeholder="breed" defaultValue={pet.breed} />
-            <select className="ModifyPet__select" name="species" id="species">
-                <option className="ModifyPet__option" value="dog">Dog</option>
-                <option className="ModifyPet__option" value="cat">Cat</option>
+            
+            <input className="modifyPet__input" type="text" name="name" placeholder="Pet name" defaultValue={pet.name} />
+            <input className="modifyPet__input" type="text" name="breed" placeholder="breed" defaultValue={pet.breed} />
+            <select className="modifyPet__select" name="species" id="species">
+                <option className="modifyPet__option" value="dog">Dog</option>
+                <option className="modifyPet__option" value="cat">Cat</option>
             </select>
-            <input className="ModifyPet__input" type="text" name="color" placeholder="color" defaultValue={pet.color}/>
-            <textarea className="ModifyPet__descripcion" type="text" name="description" placeholder="please write a little description about the pet" defaultValue={pet.description}></textarea>
+            <input className="modifyPet__input" type="text" name="color" placeholder="color" defaultValue={pet.color}/>
+            <textarea className="modifyPet__descripcion" type="text" name="description" placeholder="please write a little description about the pet" defaultValue={pet.description}></textarea>
            
-            <button className="ModifyPet__button">SAVE INFO</button>
+            <button className="modifyPet__button">SAVE INFO</button>
         </form>   
     </div>: <></>
 }
