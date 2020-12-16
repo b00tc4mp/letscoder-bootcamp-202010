@@ -1,5 +1,3 @@
-const { default: modifyLive } = require('../../LiveSessions-app/app/logic/modify-live');
-
 module.exports = {
     registerUser: require('./register-user'),
     authenticateUser: require('./authenticate-user'),

@@ -2,16 +2,16 @@
 const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
 const { Live } = require('../models')
-
-module.exports = function (liveId, title, date, duration, payment, description) {
-
+debugger
+module.exports = function (liveId, title, liveDate, duration, payment, description) {
+debugger
     return semaphore(() => 
         Live
-            .findOne({ liveId })
+            .findOne({ _id: liveId }).lean()
             .then(live => {
-                if (!live) throw new ConflictError(`user with email ${liveId} does not exists`)
-                Live.updateOne({ liveId }, {$set: { title, date, duration, payment, description } })
-                .then(result => undefined)
+                if (!live) throw new ConflictError(`live with id ${liveId} does not exists`)
+                Live.updateOne({ _id: liveId }, {$set: { title, liveDate, duration, payment, description } })
+                .then(result => '')
             })
     )
 }

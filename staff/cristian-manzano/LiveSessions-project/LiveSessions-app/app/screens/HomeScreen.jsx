@@ -202,6 +202,7 @@ export default function Home({ onHandleLogout }) {
         if (error) return Alert.alert(error.message)
         AsyncStorage.getItem('token')
           .then(token => {
+            debugger
             try {
               debugger
               retrieveLives(token, (error, lives) => {
@@ -214,8 +215,6 @@ export default function Home({ onHandleLogout }) {
               alert(error.message);
             }
           })
-        setView('lives')
-
       })
     } catch (error) {
       Alert.alert(error.message)
@@ -250,9 +249,10 @@ export default function Home({ onHandleLogout }) {
     setView('edit-live')
   }
 
-  const handleModifyLive = ({ title, date, duration, payment, description }) => {
+  const handleModifyLive = ({ liveId, title, liveDate, duration, payment, description }) => {
+    debugger
     try {
-      modifyLive(liveId, title, date, duration, payment, description, (error) => {
+      modifyLive(liveId, title, liveDate, duration, payment, description, (error) => {
         if (error) return Alert.alert(error.message)
         AsyncStorage.getItem('token')
           .then(token => {

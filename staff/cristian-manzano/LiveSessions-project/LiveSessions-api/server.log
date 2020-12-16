@@ -3370,3 +3370,34 @@ SyntaxError: Cannot use import statement outside a module
     at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
     at Module._compile (internal/modules/cjs/loader.js:1015:30)
 info 2020-12-16T14:36:48.298Z - stopping server
+info 2020-12-16T14:39:53.618Z - starting server
+info 2020-12-16T14:39:54.085Z - server running on port 4000
+info 2020-12-16T14:41:54.597Z - stopping server
+info 2020-12-16T14:42:27.101Z - starting server
+info 2020-12-16T14:42:32.896Z - server running on port 4000
+error 2020-12-16T14:45:29.630Z - ConflictError: user with email 5fd9f4acd334cf300b420f05 does not exists
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/modify-live.js:12:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T14:47:08.575Z - starting server
+info 2020-12-16T14:47:54.089Z - server running on port 4000
+error 2020-12-16T14:49:05.514Z - ConflictError: user with email 5fd9f4acd334cf300b420f05 does not exists
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/modify-live.js:12:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T14:52:22.723Z - starting server
+info 2020-12-16T14:52:35.973Z - server running on port 4000
+error 2020-12-16T14:55:45.982Z - ConflictError: live with email 5fd9574b1cd7120431df8738 does not exists
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/modify-live.js:12:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T14:57:19.485Z - starting server
+info 2020-12-16T14:57:29.431Z - server running on port 4000
+info 2020-12-16T15:11:36.547Z - starting server
+info 2020-12-16T15:11:46.871Z - server running on port 4000
+info 2020-12-16T15:18:48.150Z - starting server
+info 2020-12-16T15:19:11.670Z - server running on port 4000
+info 2020-12-16T15:23:20.716Z - starting server
+info 2020-12-16T15:23:40.926Z - server running on port 4000
+error 2020-12-16T15:31:11.257Z - ConflictError: live with id undefined does not exists
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/modify-live.js:12:34
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T15:32:34.120Z - starting server
+info 2020-12-16T15:32:46.667Z - server running on port 4000

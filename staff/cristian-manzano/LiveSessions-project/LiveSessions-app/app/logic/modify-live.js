@@ -1,6 +1,6 @@
 import { call } from '../../utils'
 
-export default function (liveId, title, date, duration, payment, description) {
+export default function (liveId, title, date, duration, payment, description, callback) {
 
 
     call('POST', 'http://192.168.1.131:4000/api/lives/edit', { 'Content-type': 'application/json' }, 
