@@ -1,5 +1,5 @@
 const { validateId} = require('./helpers/validations')
-const { models: { Game }, mongoose : {Types : {ObjectId} } } = require('gameloop-data')
+const { models: { Game }, mongoose : {Types : { ObjectId } } } = require('gameloop-data')
 
 module.exports = function (ownerId) {
     validateId(ownerId)
@@ -15,7 +15,6 @@ module.exports = function (ownerId) {
 
                 delete game._id
                
-              
             })
             return game
 

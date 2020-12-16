@@ -15,15 +15,9 @@ module.exports = (gameId, stream) => {
         
             stream.pipe(toStream)
 
-            // TODO check why these fail
-            // fromStream.on('end', resolve)
-            // toStream.on('end', resolve)
-
-            resolve()
-        
-        } catch(error) {
+            stream.once('end', resolve)
+        } catch (error) {
             reject(error)
         }
     })
-
 }

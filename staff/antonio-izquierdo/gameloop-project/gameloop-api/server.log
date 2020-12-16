@@ -2069,3 +2069,132 @@ info 2020-12-16T09:02:01.311Z - server running on port 4000
 info 2020-12-16T10:23:31.454Z - stopping server
 info 2020-12-16T10:23:34.526Z - server running on port 4000
 info 2020-12-16T15:16:33.875Z - stopping server
+info 2020-12-16T15:36:05.080Z - server running on port 4000
+info 2020-12-16T16:17:14.365Z - stopping server
+info 2020-12-16T16:17:18.318Z - server running on port 4000
+info 2020-12-16T16:24:19.757Z - stopping server
+info 2020-12-16T16:24:22.346Z - server running on port 4000
+info 2020-12-16T16:25:05.871Z - stopping server
+info 2020-12-16T16:30:30.408Z - server running on port 4000
+info 2020-12-16T16:44:41.087Z - stopping server
+info 2020-12-16T16:44:44.415Z - server running on port 4000
+info 2020-12-16T16:49:08.927Z - stopping server
+info 2020-12-16T16:49:35.952Z - server running on port 4000
+info 2020-12-16T16:51:48.714Z - stopping server
+info 2020-12-16T16:51:57.515Z - server running on port 4000
+info 2020-12-16T16:52:45.359Z - stopping server
+info 2020-12-16T16:52:52.444Z - server running on port 4000
+info 2020-12-16T16:53:39.696Z - stopping server
+info 2020-12-16T16:54:44.385Z - server running on port 4000
+info 2020-12-16T16:57:16.542Z - stopping server
+info 2020-12-16T16:57:20.375Z - server running on port 4000
+info 2020-12-16T17:09:09.549Z - stopping server
+info 2020-12-16T17:09:42.699Z - server running on port 4000
+error 2020-12-16T17:15:57.481Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-16T17:35:06.719Z - stopping server
+info 2020-12-16T17:35:09.710Z - server running on port 4000
+error 2020-12-16T17:36:46.020Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:37:01.581Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:37:01.643Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:37:12.503Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-16T17:37:19.991Z - stopping server
+info 2020-12-16T17:40:51.334Z - server running on port 4000
+error 2020-12-16T17:46:01.059Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:46:01.090Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:46:01.101Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:46:01.111Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:46:01.119Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T17:46:01.130Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-16T17:50:56.063Z - stopping server
+info 2020-12-16T17:51:53.883Z - server running on port 4000
+info 2020-12-16T18:04:04.839Z - stopping server
+info 2020-12-16T18:04:07.990Z - server running on port 4000
+error 2020-12-16T18:07:08.805Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:07:08.805Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:07:08.808Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:07:08.809Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:07:08.810Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:07:08.816Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:07:08.819Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-16T18:08:55.670Z - stopping server
+info 2020-12-16T18:09:03.054Z - server running on port 4000
+error 2020-12-16T18:09:51.259Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:09:51.265Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:09:51.275Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:09:51.286Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:09:51.287Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:09:51.297Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:09:51.302Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:09:51.312Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:10:05.579Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:10:05.584Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:10:05.585Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:10:05.586Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:10:05.587Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:10:05.588Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:10:05.589Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:17:12.771Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-16T18:23:20.382Z - stopping server
+info 2020-12-16T18:23:45.547Z - server running on port 4000
+info 2020-12-16T18:31:29.396Z - stopping server
+info 2020-12-16T18:31:32.664Z - server running on port 4000
+error 2020-12-16T18:34:16.880Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:02.437Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:02.439Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:02.441Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:02.442Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:02.440Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:02.443Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:10.505Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:10.507Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:10.509Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:10.508Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:10.510Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:36:10.512Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:38:37.963Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:38:39.202Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:39:17.927Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:40:05.384Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:40:07.355Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:40:16.606Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:40:31.624Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:40:43.809Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:27.959Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:27.969Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:27.974Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:27.993Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:27.993Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:28.004Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:28.009Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:28.020Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.154Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.156Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.158Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.159Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.160Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.161Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.163Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:41:37.164Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:55:03.355Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T18:55:46.440Z - ContentError: text is empty or blank
+    at validateText (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\helpers\validations.js:32:40)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\save-game.js:8:44)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-save-game.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-16T18:56:00.275Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-16T19:04:37.611Z - stopping server
+info 2020-12-16T19:04:40.822Z - server running on port 4000
+error 2020-12-16T19:07:44.425Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T19:07:44.431Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T19:07:44.437Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T19:07:44.447Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T19:07:44.448Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T19:07:44.454Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-16T19:07:44.455Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-16T19:08:32.834Z - stopping server

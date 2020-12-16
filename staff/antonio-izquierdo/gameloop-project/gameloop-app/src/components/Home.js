@@ -1,6 +1,6 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
-import { retrieveUser, saveGame, findGames, saveGameImage } from '../logic'
+import { retrieveUser, saveGame, findGames, saveGameImage, retrieveUserGames } from '../logic'
 import Profile from './Profile'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import SaveGame from './SaveGame'
@@ -12,6 +12,7 @@ export default function Home({onLogout}) {
 
     const [name, setName] = useState()
     const [games, setGames] = useState()
+    const [userGames, setUserGames] = useState()
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
     const [error, setError] = useState(null)
 
@@ -26,8 +27,6 @@ export default function Home({onLogout}) {
 
     useEffect(() => {
         //const { token } = sessionStorage
-
-
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
@@ -81,6 +80,19 @@ export default function Home({onLogout}) {
         setView('home')
     }
 
+   
+    const handleRetrieveUserGames = () => {
+        try {
+            debugger
+            retrieveUserGames(token, (error, games)=> {
+                if (error) return alert(error.message)
+                setGames(games)
+            }) 
+        } catch (error) {
+         alert(error.message)   
+        }
+    }
+
     return <section className="home">
         {token ? <h1>Hello, {name}!</h1> : <> </>}
         {<button className="home__logout" onClick={() => {
@@ -93,6 +105,6 @@ export default function Home({onLogout}) {
         {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
         {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames}/>}
-        {view === 'profile' && <Profile name={name} />}
+        {view === 'profile' && <Profile name={name} onRetrieveUserGames={handleRetrieveUserGames} games={games}/>}
     </section>
 }

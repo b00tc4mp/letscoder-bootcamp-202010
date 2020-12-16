@@ -6,5 +6,6 @@ module.exports = {
     handleRetrieveGame: require('./handle-retrieve-game'),
     handleSaveGame: require('./handle-save-game'),
     handleSaveGameImage: require('./handle-save-game-image'),
-    handleRetrieveGameImage: require('./handle-retrieve-game-image')
+    handleRetrieveGameImage: require('./handle-retrieve-game-image'),
+    handleRetrieveUserGames: require('./handle-retrieve-user-games')
 }

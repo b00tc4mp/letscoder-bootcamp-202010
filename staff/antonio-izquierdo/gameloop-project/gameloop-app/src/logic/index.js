@@ -6,6 +6,7 @@ import saveGame from './save-game'
 import findGames from './find-games'
 import retrieveGame from './retrieve-game'
 import saveGameImage from './save-game-image'
+import retrieveUserGames from './retrieve-user-games'
 
 export {
     registerUser,
@@ -15,5 +16,6 @@ export {
     findGames,
     retrieveGame,
     saveGameImage,
+    retrieveUserGames,
     context
 }
