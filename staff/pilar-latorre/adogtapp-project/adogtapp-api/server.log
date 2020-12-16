@@ -1833,3 +1833,175 @@ error 2020-12-15T17:58:30.472Z - ConflictError: shelter with e-mail info@zarpa.o
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
 info 2020-12-15T18:20:12.898Z - stopping server
+info 2020-12-15T18:23:42.399Z - starting server
+info 2020-12-15T18:23:42.510Z - server running on port 4000
+info 2020-12-15T19:30:49.061Z - stopping server
+info 2020-12-15T19:47:26.119Z - starting server
+info 2020-12-15T19:47:26.342Z - server running on port 4000
+info 2020-12-15T20:03:46.647Z - stopping server
+info 2020-12-15T20:03:49.916Z - starting server
+info 2020-12-15T20:03:50.183Z - server running on port 4000
+error 2020-12-15T20:04:16.256Z - ConflictError: shelter with e-mail patitastauste@hotmail.com already registered
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:21:37
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-15T20:21:59.062Z - stopping server
+info 2020-12-15T20:22:02.267Z - starting server
+info 2020-12-15T20:22:02.498Z - server running on port 4000
+info 2020-12-15T21:04:57.069Z - starting server
+info 2020-12-15T21:04:57.437Z - server running on port 4000
+info 2020-12-15T21:28:36.057Z - stopping server
+info 2020-12-15T21:28:41.110Z - starting server
+info 2020-12-15T21:28:41.304Z - server running on port 4000
+info 2020-12-16T09:28:26.553Z - starting server
+info 2020-12-16T09:28:27.298Z - server running on port 4000
+info 2020-12-16T11:54:19.899Z - stopping server
+info 2020-12-16T11:54:23.435Z - starting server
+info 2020-12-16T11:54:23.640Z - server running on port 4000
+error 2020-12-16T12:12:21.459Z - ConflictError: shelter with e-mail patitastauste@hotmail.com already registered
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\register-user.js:21:37
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T12:29:29.274Z - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:32:26
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T12:32:08.011Z - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:32:26
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T12:33:41.055Z - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:32:26
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T12:34:03.466Z - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:32:26
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T12:35:47.959Z - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:32:26
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T12:35:49.622Z - TypeError: {(intermediate value)}.then is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:32:26
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-16T12:43:51.311Z - stopping server
+info 2020-12-16T12:43:54.282Z - starting server
+info 2020-12-16T12:43:54.439Z - server running on port 4000
+error 2020-12-16T12:45:00.628Z - LengthError: id length 5 is not 24
+    at validateId (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\helpers\validations.js:51:37)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:8:39)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet.js:14:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+error 2020-12-16T12:46:01.628Z - LengthError: id length 5 is not 24
+    at validateId (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\helpers\validations.js:51:37)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:8:39)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet.js:14:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+info 2020-12-16T12:47:45.483Z - stopping server
+info 2020-12-16T12:47:48.824Z - starting server
+info 2020-12-16T12:47:48.953Z - server running on port 4000
+error 2020-12-16T12:48:05.739Z - CastError: Cast to ObjectId failed for value "{ shelterId: '5fd912ede1c5a31d2875fe73' }" at path "_id" for model "User"
+    at model.Query.exec (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4358:21)
+    at model.Query.Query.then (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:17:10)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet.js:14:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+info 2020-12-16T12:51:32.982Z - stopping server
+info 2020-12-16T12:51:36.505Z - starting server
+info 2020-12-16T12:51:36.649Z - server running on port 4000
+error 2020-12-16T12:51:54.622Z - CastError: Cast to ObjectId failed for value "{ shelterId: '5fd912ede1c5a31d2875fe73' }" at path "_id" for model "User"
+    at model.Query.exec (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4358:21)
+    at model.Query.Query.then (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:17:10)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet.js:14:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+info 2020-12-16T12:52:48.384Z - stopping server
+info 2020-12-16T12:52:50.976Z - starting server
+info 2020-12-16T12:52:51.115Z - server running on port 4000
+error 2020-12-16T12:53:48.529Z - CastError: Cast to ObjectId failed for value "{ shelterId: '5fd912ede1c5a31d2875fe73' }" at path "_id" for model "User"
+    at model.Query.exec (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4358:21)
+    at model.Query.Query.then (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:17:10)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet.js:14:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+info 2020-12-16T12:55:22.592Z - stopping server
+info 2020-12-16T12:55:25.488Z - starting server
+info 2020-12-16T12:55:25.672Z - server running on port 4000
+error 2020-12-16T12:55:40.805Z - CastError: Cast to ObjectId failed for value "{ shelterId: '5fd912ede1c5a31d2875fe73' }" at path "_id" for model "User"
+    at model.Query.exec (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4358:21)
+    at model.Query.Query.then (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\query.js:4450:15)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:17:10)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet.js:14:9)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+info 2020-12-16T12:56:41.736Z - stopping server
+info 2020-12-16T12:56:44.248Z - starting server
+info 2020-12-16T12:56:44.389Z - server running on port 4000
+error 2020-12-16T12:57:07.233Z - TypeError: Pet.findbyId is not a function
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet.js:24:22
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-16T12:57:26.762Z - stopping server
+info 2020-12-16T12:57:29.655Z - starting server
+info 2020-12-16T12:57:30.000Z - server running on port 4000
+info 2020-12-16T14:29:09.569Z - stopping server
+info 2020-12-16T14:29:22.477Z - starting server
+info 2020-12-16T14:29:22.695Z - server running on port 4000
+error 2020-12-16T14:30:42.129Z - NotFoundError: pet with id 5fd9dae4c37bb706cc6ebd10 not found
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:16:29
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T14:43:34.415Z - NotFoundError: pet with id 5fd8f17a7dc0ee3cac2d1a08 not found
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:16:29
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-16T14:43:42.956Z - stopping server
+info 2020-12-16T14:43:46.230Z - starting server
+info 2020-12-16T14:43:46.393Z - server running on port 4000
+error 2020-12-16T14:44:21.975Z - NotFoundError: pet with id 5fd8f17a7dc0ee3cac2d1a0b not found
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:16:29
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-16T14:54:19.310Z - NotFoundError: pet with id 5fda1e64694bc72eb460d95c not found
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\detail-pet.js:16:29
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-16T16:59:24.851Z - stopping server
+info 2020-12-16T16:59:34.189Z - starting server
+info 2020-12-16T16:59:35.092Z - server running on port 4000
+info 2020-12-16T17:35:45.852Z - stopping server
+info 2020-12-16T17:35:50.669Z - starting server
+info 2020-12-16T17:35:50.846Z - server running on port 4000
+info 2020-12-16T17:35:51.901Z - stopping server
+info 2020-12-16T17:35:55.856Z - starting server
+info 2020-12-16T17:35:56.044Z - server running on port 4000
+info 2020-12-16T17:36:40.429Z - stopping server
+info 2020-12-16T17:36:43.971Z - starting server
+info 2020-12-16T17:36:44.133Z - server running on port 4000

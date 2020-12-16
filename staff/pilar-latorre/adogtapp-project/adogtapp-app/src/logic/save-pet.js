@@ -3,7 +3,7 @@ import { validateToken, validateId, validateName, validateBreed,  validateColor,
 import context from './context'
 
 
-export default (function savePet( petId, name, breed, species, color, description, token, callback) {
+export default (function savePet( token, petId, name, breed, species, color, description, callback) {
     validateToken(token)
     if (typeof petId !== 'undefined') validateId(petId)
     validateName(name)

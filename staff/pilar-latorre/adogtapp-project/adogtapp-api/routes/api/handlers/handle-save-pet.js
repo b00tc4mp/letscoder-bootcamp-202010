@@ -11,7 +11,7 @@ module.exports = (req, res, handleError) => {
     try {
         const { sub: shelter } = jwt.verify(token, JWT_SECRET)
         
-        savePet( petId, name, breed, species, color, description, shelter)
+        savePet( shelter, petId, name, breed, species, color, description)
             .then((petId) => res.status(200).send(petId))
             .catch(handleError)
     } catch (error) {

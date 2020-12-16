@@ -1,6 +1,6 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
-import {  retrieveUser, savePet, savePetImage } from '../logic'
+import {  retrieveUser, savePet, savePetImage, modifyPet } from '../logic'
 import SearchPets from './SearchPets'
 import CreatePet from './CreatePet'
 import SignIn from './SignIn'
@@ -12,11 +12,10 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
     const [error, setError] = useState(null)
 
     const [view, setView] = useState('home')
-
     const [name, setName] = useState()
-    const [success, setSuccess] = useState()
+    
  
-    function feedbackError(error) {
+    function handleError(error) {
         setError(error)
         setTimeout(() => {
             setError(null)
@@ -30,7 +29,7 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
 
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
+                if (error) return handleError(error.message)
 
                 const { userName } = user
 
@@ -44,31 +43,13 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
     }, [])
 
 
-    const handleCreatePet = (name, breed, species, color, description, image) => {
-        try {
-            savePet( undefined, name, breed, species, color, description, token, (error, petId) => {
-                if (error) return feedbackError(error.message)
-                
-                savePetImage(petId, image, error => {
-                    if (error) return feedbackError(error.message)
-                    try {
-                        
-                        setSuccess(true)
-                        setTimeout(() => {
-                            setSuccess(false)
-                        }, 3000)
-                        
-                    } catch (error) {
-                        feedbackError(error.message)
-                    }
-                }) 
-               
-            })
-        } catch (error) {
-            feedbackError(error.message)
-        }
-    } 
+    
+    const handleCreated = () => {
 
+        setView()
+
+    }
+    
     const handleGoToSearch = () => {
 
         setView('search-pet')
@@ -98,12 +79,12 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
 
     {error && <h2 className="home__feedback"><Feedback error={error}/></h2>}
 
-    {success && <h2 className="home__success">PET SAVED 🐶🐱 </h2>}
+    
 
     {token && view === 'home' && <div><img className="home__img"src="variosperretes4.jpg"/></div>}
 
-    {token && view === 'search-pet' && <SearchPets />}
-    {token && view === 'create-pet' && <CreatePet onCreatePet={handleCreatePet}/>}
+    {token && view === 'search-pet' && <SearchPets onError ={handleError}/>}
+    {token && view === 'create-pet' && <CreatePet onCreated={handleCreated} onError ={handleError} />}
     {!token && view === 'sign-in' && <SignIn onGoToMainSearch={onGoToMainSearch} onSignIn= {onSignIn}/>}
 
  

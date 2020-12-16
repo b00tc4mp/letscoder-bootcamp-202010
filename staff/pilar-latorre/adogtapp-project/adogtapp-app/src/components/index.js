@@ -6,6 +6,7 @@ import PetResults from './PetResults'
 import DetailPet from './DetailPet'
 import Feedback from './Feedback'
 import SearchPets from './SearchPets'
+import ModifyPets from './ModifyPet'
 
 
 
@@ -17,7 +18,8 @@ export {
     PetResults,
     DetailPet,
     Feedback,
-    SearchPets
+    SearchPets,
+    ModifyPets
 
 
 }

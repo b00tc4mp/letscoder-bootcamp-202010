@@ -1,6 +1,40 @@
 import './CreatePet.sass'
+import {savePet, savePetImage} from '../logic'
+import { useState } from 'react'
 
-function CreatePet({onCreatePet}){
+function CreatePet({onCreated, onError}){
+
+    const [success, setSuccess] = useState()
+    const { token } = sessionStorage
+
+    const handleCreate = (name, breed, species, color, description, image) => {
+        try {
+            savePet( token, undefined, name, breed, species, color, description, (error, petId) => {
+                if (error) return onError(error.message)
+                
+                savePetImage(petId, image, error => {
+                    if (error) return onError(error.message)
+                    try {
+                        
+                        setSuccess(true)
+                        setTimeout(() => {
+                            setSuccess(false)
+                            onCreated()
+                        }, 3000)
+                        
+                        
+                    } catch (error) {
+                        onError(error.message)
+                    }
+                }) 
+               
+            })
+        } catch (error) {
+            onError(error.message)
+        }
+    }  
+
+
 
     return <div className="CreatePet">
         <h3 className="CreatePet__h1">Please fill all the information about the pet</h3> 
@@ -10,7 +44,7 @@ function CreatePet({onCreatePet}){
 
             const { target: { name: { value: name }, breed: { value: breed }, species: {value: species}, color: { value: color }, description: {value: description} , image }} = event
 
-            onCreatePet(name, breed, species, color, description, image.files[0] )
+            handleCreate(name, breed, species, color, description, image.files[0] )
         }}>
             <input type="file" id="image" name="image" />
             <label className="CreatePet__label" htmlFor="image"></label>
@@ -24,13 +58,14 @@ function CreatePet({onCreatePet}){
             <textarea className="CreatePet__descripcion" type="text" name="description" placeholder="please write a little description about the pet" ></textarea>
            
             <button className="CreatePet__button">SAVE INFO</button>
+            
+            {success && <h2 className="home__success">PET SAVED 🐶🐱 </h2>}
         </form>
             
       
 
 
     </div>
-
 
 }
 

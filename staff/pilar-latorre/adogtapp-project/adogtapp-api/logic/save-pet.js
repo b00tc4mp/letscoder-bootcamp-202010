@@ -1,41 +1,45 @@
-const { validateId, validateName, validateBreed, validateColor, validateDescription} = require('./helpers/validations')
+const { validateId, validateName, validateBreed, validateColor, validateDescription } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { User, Pet }, mongoose: { Types: { ObjectId } } } = require('adogtapp-data')
 
 
-module.exports = function (petId, name, breed, species, color, description, shelter) {
+module.exports = function (shelterId, petId, name, breed, species, color, description) {
+    validateId(shelterId)
     if (typeof petId !== 'undefined') validateId(petId)
     validateName(name)
     validateBreed(breed)
     validateColor(color)
     validateDescription(description)
-    validateId(shelter)
 
-    const _id = ObjectId(shelter)
 
     return User
-        .findOne({ _id })
+        .findById(shelterId)
         .then(user => {
-            if (!user) throw new NotFoundError(`user with id ${shelter} not found`)
+            if (!user) throw new NotFoundError(`user with id ${shelterId} not found`)
 
 
             if (petId) {
-                const _id = ObjectId(petId)
 
                 return Pet
-                    .findOne({ _id })
-                    .then (pet => {
+                    .findById(petId)
+                    .then(pet => {
                         if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
 
-                    return Pet
-                        .updateOne({ _id }), { $set: { name, breed, species, color, description }}
-                        .then (pet => pet.id) 
+                        pet.name = name
+                        pet.breed = breed
+                        pet.species = species
+                        pet.color = color
+                        pet.description = description
 
-                })
+                        return pet
+                            .save()
+                            .then(pet => pet.id)
+
+                    })
             } else
                 return Pet
-                .create({ name, breed, species, color, description, shelter: ObjectId(shelter) })
-                .then(pet => pet.id)
+                    .create({ name, breed, species, color, description, shelter: shelterId })
+                    .then(pet => pet.id)
 
-    })
+        })
 }

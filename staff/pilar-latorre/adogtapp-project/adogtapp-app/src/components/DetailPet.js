@@ -1,47 +1,98 @@
-import { deletePet } from '../logic'
+import { deletePet, retrievePet } from '../logic'
 import './DetailPet.sass'
+import { useState, useEffect } from 'react'
+import ModifyPet from './ModifyPet'
+
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function DetailPet({result: {id, name, breed, species, color, description, userName, email, address, city, phone, descriptionShelter } , onDeletePet}){
+
+function DetailPet({petId, onDeleted, onError}){
+    
     const { token } = sessionStorage
-    const handleDeletePet = id => {
+    const [view, setView] = useState()
+    const [pet, setPet] = useState()
+
+    useEffect(() => {
+
+        handleRetrievePet()
+        
+
+    },[])
+
+    const handleDeletePet = petId => {
 
         try {
-            deletePet(  id, (error) => {
+            deletePet(  petId, (error) => {
 
-                if (error) return alert(error.message)
+                if (error) return onError(error.message)
 
-                onDeletePet()
+               // window.location.reload()
+                onDeleted()
             }) 
         } catch (error) {
-            alert(error.message)
+            onError(error.message)
         }
     } 
 
     
-    return <article className="result">
+    const handleGoToModify = () => {
+
+        setView('modify-pet')
+      }
+
+    const handleModified = () => {
+
+        setView()
+        handleRetrievePet()
+
+    }
+
+    const handleRetrievePet = () => {
+
+        try {
+            retrievePet( petId, (error, pet) => {
+                if (error) return onError(error.message)
+
+                setPet(pet)
+             
+            })
+        } catch (error) {
+            onError(error.message)
+        }
+
+    }
+   
     
-            <img className="result__img" src={`${API_URL}/pets/${id}/images`}/>
-            
+    return pet ? 
+    
+    
+    <article className="result">
+    
+            <img className="result__img" src={`${API_URL}/pets/${pet.id}/images`}/>
             {!token && <p className="result__info">PET INFO</p>}
-            <p className="result__p">{name}</p>
-            <p className="result__p">breed: {breed}</p>
-            <p className="result__p">species: {species}</p>
-            <p className="result__p">color: {color}</p>
-            <p className="result__p">description: {description}</p>
+            <p className="result__p">{pet.name}</p>
+            <p className="result__p">breed: {pet.breed}</p>
+            <p className="result__p">species: {pet.species}</p>
+            <p className="result__p">color: {pet.color}</p>
+            <p className="result__p">description: {pet.description}</p>
             {!token && <p className="result__info">SHELTER INFO</p>}
-            {!token && <p className="result__p">{userName}</p>}
-            {!token && <p className="result__p">{email}</p>}
-            {!token && <p className="result__p">{phone}</p>}
-            {!token && <p className="result__p">{address}</p>}
-            {!token && <p className="result__p">{city}</p>}
-            {!token && <p className="result__p">{descriptionShelter}</p>}
+            {!token && <p className="result__p">{pet.userName}</p>}
+            {!token && <p className="result__p">{pet.email}</p>}
+            {!token && <p className="result__p">{pet.phone}</p>}
+            {!token && <p className="result__p">{pet.address}</p>}
+            {!token && <p className="result__p">{pet.city}</p>}
+            {!token && <p className="result__p">{pet.descriptionShelter}</p>}
+            <div>
+            {token && <button className="result__button" onClick={()=>handleDeletePet(petId) }>DELETE PET</button>}
+            {token && <button className="result__button" onClick={handleGoToModify}>MODIFY PET</button>}
+            {token && view === 'modify-pet' && <ModifyPet onModified={handleModified} petId={pet.id} onError={onError}/>}
+           
 
-            {token && <button className="result__button" onClick={()=>handleDeletePet(id) }>DELETE PET</button>}
+            </div>
             
-        </article>
-
+        </article>: <></>
+      
 }
 
 export default DetailPet

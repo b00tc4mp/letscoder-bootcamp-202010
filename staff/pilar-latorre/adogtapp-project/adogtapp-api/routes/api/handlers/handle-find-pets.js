@@ -9,20 +9,18 @@ const {
 
 module.exports = (req, res, handleError) => {
 
-  let { headers: {authorization},
-    query: { queryShelter, city, queryPet, species, breed }
-  } = req;
+  let { headers: { authorization }, query: { queryShelter, city, queryPet, species, breed } } = req;
 
-  
+
   let shelterId = null
-  
+
   if (authorization) {
     const token = authorization.replace('Bearer ', '')
-    if (token !== 'undefined'){
-    const { sub } = jwt.verify(token, JWT_SECRET);
-    shelterId = sub
+    if (token !== 'undefined') {
+      const { sub } = jwt.verify(token, JWT_SECRET);
+      shelterId = sub
+    }
   }
-  } 
 
   try {
     findPets(shelterId, queryShelter, city, queryPet, species, breed)
