@@ -5,18 +5,18 @@ $Kanit: 'Kanit', sans-serif
 $Righteous: 'Righteous', cursive
 
 .access
-    margin: 0px
-    padding: 0px
     display: flex
     flex-direction: column
     flex-wrap: wrap
     justify-content: center
     align-items: center
     align-content: stretch
-    background-image: url("../assets/img/background.jpg")
     background-position: center center 
     background-size: cover
-    max-width: 100%
+    margin: 0px
+    padding: 0px
+    background-image: url("../assets/img/background.jpg")
+    max-width: 100vw
     height: 100vh
 
     &__logo
@@ -60,6 +60,61 @@ $Righteous: 'Righteous', cursive
             &:hover
                 color: #63416e
                 background-color:#fffc00 
+    
+@media only screen and (max-width: 480px)
+
+   .access
+    margin: 0px
+    padding: 0px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: center
+    align-content: stretch
+    background-position: center center 
+    background-size: cover
+    height: 100vh
+
+    &__logo
+        margin-top: 7vh
+        width: 85vw
+
+    p
+        font-family: $Righteous
+        text-align: center
+        font-size: 35px 
+        color: #63416e
+        letter-spacing: 8pt
+        margin-bottom: 20vh
+    
+    &__div
+        display: grid
+        grid-template-columns: 1fr
+        margin-bottom: 8vh
+
+        &__sign-up-button
+            font-family: $Kanit
+            font-size: 27px 
+            color: #fffc00 
+            width: 280px
+            height: 40px
+            background-color:#63416e
+            border: 0px solid
+            border-radius: 10px
+            line-height: 10px
+
+        &__sign-in-button
+            font-family: $Kanit
+            font-size: 27px 
+            color: #63416e 
+            width: 280px
+            height: 40px
+            background-color: #fffc00
+            border: 0px solid
+            border-radius: 10px
+            line-height: 30px
+
 
 /** 
         &__searchbutton
