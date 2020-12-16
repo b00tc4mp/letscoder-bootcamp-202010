@@ -10,7 +10,8 @@ export default function Workouts({ onChosenLevel, onGoToMovements, error }) {
                 <h3 className="workouts__pre-question">¿Conoces bien los principales movimientos de musculación?, te los ilustramos <a href='#' onClick={onGoToMovements} className="workouts__movements">aquí</a></h3>
             </div>
             {error && <Feedback error={error}></Feedback>}
-            <h3 className="workouts__title"> ¿Cuál es tu nivel?</h3>
+            <h3 className="workouts__title"> Elige rutina según tu nivel</h3>
+            <p className="workouts__warn">* Importante a tener en consideración que se debería dejar un tiempo mínimo de 3 meses a la rutina que se escoja para empezar a ver resultados objetivos.</p>
             <div className="workouts__container">
                 <div onClick={() => onChosenLevel("beginner")} className="workouts__level">
                     <h4 className="workouts__level-title"> Principiante </h4>
@@ -39,5 +40,6 @@ export default function Workouts({ onChosenLevel, onGoToMovements, error }) {
                 </div>
             </div>
         </div>
+        
     </section>
 }

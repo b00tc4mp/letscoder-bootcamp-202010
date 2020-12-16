@@ -21,5 +21,7 @@ module.exports = {
     retrieveWorkout: require('./retrieve-workout'),
     retrieveMuscularGroup: require('./retrieve-muscular-group'),
     toggleWorkoutsUser: require('./toggle-workouts-user'),
-    retrieveSavedWorkouts: require('./retrieve-saved-workouts')
+    retrieveSavedWorkouts: require('./retrieve-saved-workouts'),
+    savePictureUser: require('./save-picture-user'),
+    retrievePictureUser: require('./retrieve-picture-user')
 }

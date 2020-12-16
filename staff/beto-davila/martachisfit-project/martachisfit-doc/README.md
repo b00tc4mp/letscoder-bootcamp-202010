@@ -22,12 +22,11 @@ We will use this number to offer you some diet plans that you could even change,
 
 ### Use Cases
 
-![Alt Use Cases](./diagrams/ "Use Cases")
+![Alt Use Cases](./images/use-cases.jpg "Use Cases")
 
 ### Activities
 
-
-![Alt Operate activity](./diagrams/ "Operate activity")
+![Alt Operate activity](./images/activity-diagram.jpg "Operate activity")
 
 ## Technical Description
 
@@ -68,13 +67,15 @@ We will use this number to offer you some diet plans that you could even change,
 - App Testing
 - Watch out order, "cleanness" and semantic
 - Implement react-router-dom on Home compo
+- Implement async-await
 
 #### App-related:
 - Experience level (in the gym) input for the user
-- Improve the visual aspect on the meals layout (diet component)
+- Improve the visual aspect of the meals layout (diet component)
 - Articles index creation (visual)
 - Populate the food db with more items
 - Watch out the images quality
 - Improve the overall style
+- Comments component for recipes and articles
 
 

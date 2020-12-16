@@ -4,9 +4,11 @@ import { retrieveSavedFood, toggleFoodUserDiet } from '../logic'
 import { useState, useEffect } from 'react'
 import mancuerna from './icons/mancuerna.png'
 
-export default function UserProfile({ name, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts }) {
+export default function UserProfile({ userId, avatar, feedback, name, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture }) {
     const [userChosenFoods, setUserChosenFoods] = useState()
     const [message, setMessage] = useState()
+
+    const API_URL = process.env.REACT_APP_API_URL
 
     const { token } = sessionStorage
 
@@ -40,15 +42,31 @@ export default function UserProfile({ name, onLogout, savedArticles, savedRecipe
         }
     }
 
+    const handleSubmitPicture = event => {
+        event.preventDefault()
+
+        let { target: { image } } = event
+
+        onSavePicture(image.files[0])
+    }
+
     return <section className="user-profile">
         <div className="user-profile-pseudo">
+            <div className="user-profile__logout-container">
+                <button className="user-profile__logout" onClick={onLogout}>Logout</button>
+            </div>
             <div className="user-profile__name-pic">
                 <div className="user-profile__question-btn">
-                    <p className="user-profile__question">¿Ya te marchas,</p>
-                    <div className="user-profile__name-logout">
-                        <p className="user-profile__name"> {name} ?</p>
-                        <button className="user-profile__logout" onClick={onLogout}>Cierra sesión</button>
-                    </div>
+                    {name && <p className="user-profile__user">¡Hola, <span className="user-profile__user--name">{name}</span>!</p>}
+                    {avatar ? <img className="user-profile__pic" src={`${API_URL}/users/${userId}/uploads`} /> : <img className="user-profile__pic" src='https://st3.depositphotos.com/4111759/13425/v/380/depositphotos_134255626-stock-illustration-avatar-male-profile-gray-person.jpg' width='90'/>}
+                </div>
+                <div className="user-profile__progression">
+                    {/* <h3 className="user-profile__progression-title"></h3> */}
+                    <form className="user-profile__avatar-form" onSubmit={handleSubmitPicture}>
+                        <input className="user-profile__progression-input" type="file" id="image" name="image" />
+                        <button className="user-profile__progression-btn">Guardar</button>
+                        {feedback && <p className="user-profile__feedback-pic">Imagen guardada correctamente</p>}
+                    </form>
                 </div>
             </div>
 
@@ -96,5 +114,5 @@ export default function UserProfile({ name, onLogout, savedArticles, savedRecipe
                 </div>
             </div>
         </div>
-    </section>
+    </section >
 }

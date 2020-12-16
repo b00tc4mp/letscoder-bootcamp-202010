@@ -85,5 +85,9 @@ module.exports = {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
         if (!token.trim().length) throw new Error('token is empty or blank')
+    },
+
+    validateFile(file) {
+        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
     }
 }

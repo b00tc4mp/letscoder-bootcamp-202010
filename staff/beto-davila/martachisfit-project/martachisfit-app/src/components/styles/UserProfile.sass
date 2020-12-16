@@ -17,6 +17,51 @@
 
     .user-profile
 
+        &__pic
+            max-width: 150px
+            margin: .3rem
+
+        &__progression-title
+            margin-top: 0
+
+        &__progression-btn
+            text-decoration-line: none
+            padding: .2rem 0
+            cursor: pointer
+            border-radius: .3rem
+            border: none
+            background-color: #eaf0f0
+            font-size: .7rem
+            margin-left: .5rem
+
+        &__progression-btn:hover
+            background-color: #c2caca
+
+        &__progression-input
+            margin: 0
+            line-height: .9rem
+
+        &__progression-input::-webkit-file-upload-button
+            visibility: hidden
+
+        &__progression-input::before
+            content: 'Elige avatar'
+            display: inline-block
+            border: 1px solid #0b7f94
+            border-radius: 4px
+            padding: 5px 3px
+            outline: none
+            white-space: nowrap
+            cursor: pointer
+            font-weight: 600
+            font-size: 9pt
+    
+        &__progression-input:hover::before 
+            border-color: #686b6b
+
+        &__feedback-pic
+            font-size: .8rem
+            
         &__workout-container
             background-color: #eaf0f0
             max-width: 320px
@@ -50,22 +95,28 @@
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
 
         &__question
-            margin-top: 1rem
-            
-        &__name-pic
-            display: flex
-            justify-content: space-evenly
+            margin: 0
+
+        &__question-btn
+            width: 80%
+            text-align: left
+            margin: auto
+            padding-top: .5rem
         
-        &__name
-            font-size: 1rem
-            font-weight: bold
-            margin: .2rem
+        &__user
+            font-size: .8rem
+            margin: 0 .5rem
+            width: 200px
+
+            &--name
+                font-weight: bold
 
         &__logout
             border: none
             background-color: transparent
-            outline: none
             cursor: pointer
+            margin: .5rem 0
+            float: right
 
         &__name-logout
             display: flex

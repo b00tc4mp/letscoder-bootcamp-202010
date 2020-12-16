@@ -1387,3 +1387,24 @@ info 2020-12-15T10:37:37.176Z - stopping server
 info 2020-12-15T10:38:28.049Z - starting server
 info 2020-12-15T10:38:28.172Z - server running on port 4000
 info 2020-12-15T14:41:50.935Z - stopping server
+info 2020-12-15T14:42:40.670Z - starting server
+info 2020-12-15T14:42:40.821Z - server running on port 4000
+info 2020-12-16T10:21:51.269Z - stopping server
+info 2020-12-16T11:40:12.076Z - starting server
+info 2020-12-16T11:40:12.237Z - server running on port 4000
+info 2020-12-16T11:43:12.068Z - stopping server
+info 2020-12-16T11:43:15.360Z - starting server
+info 2020-12-16T11:43:15.521Z - server running on port 4000
+info 2020-12-16T12:03:44.331Z - stopping server
+info 2020-12-16T12:03:59.781Z - starting server
+info 2020-12-16T12:04:00.516Z - server running on port 4000
+info 2020-12-16T12:09:46.748Z - starting server
+info 2020-12-16T12:09:46.923Z - server running on port 4000
+info 2020-12-16T14:06:31.943Z - stopping server
+info 2020-12-16T14:06:34.771Z - starting server
+info 2020-12-16T14:06:34.940Z - server running on port 4000
+info 2020-12-16T14:29:37.506Z - stopping server
+info 2020-12-16T14:29:40.068Z - starting server
+info 2020-12-16T14:29:40.213Z - server running on port 4000
+error 2020-12-16T15:49:31.760Z - Error: ENOENT: no such file or directory, open '/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/data/uploads/default.png'
+info 2020-12-16T15:56:34.767Z - stopping server

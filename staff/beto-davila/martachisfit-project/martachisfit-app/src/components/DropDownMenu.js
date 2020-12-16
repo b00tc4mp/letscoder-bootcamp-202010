@@ -29,7 +29,7 @@ export default function DropDownMenu ({onGoToRecipes, onGoToUserDiet, onGoToDiet
                     <a className="menu__link" href="#" onClick={onGoToWorkouts}>Entrenamiento</a>
                     <a className="menu__link" href="#" onClick={onGoToUserDiet}>A tu elección</a>
                     <a className="menu__link" href="#" onClick={onGoToDietDesign}>Diseña tu dieta</a>
-                    <a className="menu__link" href="#" onClick={onGoToBlog}>Blog</a> 
+                    <a className="menu__link" href="#" onClick={onGoToBlog}>Info y consejos</a> 
                     <span className="menu__link--profile"><a className="menu__link" href="#" onClick={onGoToProfile}><span className="menu__profile">Mi perfil</span></a></span> 
                 </div>
                 </div>

@@ -1,6 +1,5 @@
 const { Router } = require('express')
 const jsonBodyParser = require('../../middlewares/json-body-parser')
-const handleRetrieveSavedWorkouts = require('./handlers/handle-retrieve-saved-workouts')
 
 const {
     handleRegisterUser,
@@ -23,7 +22,10 @@ const {
     handleRetrieveWorkout,
     handleRetrieveMuscularGroup,
     handleAddUserRecipes,
-    handleToggleWorkoutsUser
+    handleToggleWorkoutsUser,
+    handleSavePictureUser,
+    handleRetrievePictureUser,
+    handleRetrieveSavedWorkouts
 } = require('./handlers/index')
 
 const router = new Router()
@@ -95,5 +97,11 @@ router.get('/api/users/articles/:articleId', withErrorHandling(handleRetrieveCho
 
 // retrieve articles
 router.get('/api/articles', withErrorHandling(handleRetrieveArticles))
+
+// user uploads
+router.post('/api/users/uploads', withErrorHandling(handleSavePictureUser))
+
+// retrieve user picture upload
+router.get('/api/users/:userId/uploads', withErrorHandling(handleRetrievePictureUser))
 
 module.exports = router

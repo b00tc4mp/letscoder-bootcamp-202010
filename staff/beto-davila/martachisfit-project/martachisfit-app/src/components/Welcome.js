@@ -1,6 +1,6 @@
 import './styles/Welcome.sass'
 
-export default function Welcome({ onGoToRecipes, onGoToDiets, onGoToArticles, onGoToDietDesign }) {
+export default function Welcome({ onGoToRecipes, onGoToDiets, onGoToArticles, onGoToDietDesign, onGoToWorkouts }) {
 
     const martaIg = "https://res.cloudinary.com/beto-cloud-name/image/upload/c_scale,h_520/v1607586947/marta-ig_xgxisr.jpg"
 
@@ -20,6 +20,13 @@ export default function Welcome({ onGoToRecipes, onGoToDiets, onGoToArticles, on
                         <p>Ponemos a tu disposición una serie de dietas de acuerdo a tu objetivo calórico.
                         Además, podrías "volar sol@", <span className="welcome__dietsdesign-link" onClick={onGoToDietDesign}>crear una dieta</span> con tus alimentos y tener acceso a un registro diario que te indicará
             en qué punto te encuentras en el día.</p>
+                    </div>
+
+                    <div className="welcome__workouts" onClick={onGoToWorkouts}>
+                        <h3 className="welcome__subtitle">Rutinas de entrenamiento</h3>
+                        <p>Sea cual sea el nivel del cual partes, tendrás una rutina que se adecuará en gran medida hacia el objetivo estético que deseas obtener.
+                            Además, ponemos a tu disposición una pequeña base de datos con los ejercicios principales dentro del entrenamiento de fuerza.
+                        </p>
                     </div>
 
                     <div className="welcome__tips" onClick={onGoToArticles}>

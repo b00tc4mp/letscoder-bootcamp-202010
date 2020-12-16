@@ -14,16 +14,20 @@
     z-index: -1
 
 .recipe
-    width: 75%
+    max-width: 350px
     margin: auto
     padding-bottom: 1rem
+
+    &__btns-heart-feedback
+        
+    &__feedback-btn
+        margin: 0
+        font-size: .7rem
+        padding: .2rem
 
     &__heart-btn
         background-color: transparent
         border: none
-        margin-left: 1rem
-        margin-top: .5rem
-        float: right
         cursor: pointer
     
     &__heart-btn:focus
@@ -34,10 +38,18 @@
         margin: 0 auto
         box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.5)
 
+    &__back
+        font-size: .7rem
+        margin-left: 2rem
+        margin-top: .5rem
+        cursor: pointer
+
+    &__back:hover
+        color: #757979
+
     &__btns
         display: flex
         justify-content: space-between
-
     
     &__btn
         border: none

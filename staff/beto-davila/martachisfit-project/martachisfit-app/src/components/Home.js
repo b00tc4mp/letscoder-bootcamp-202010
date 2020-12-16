@@ -16,13 +16,14 @@ import {
     retrieveWorkout,
     retrieveMuscularGroup,
     toggleWorkoutsUser,
-    retrieveSavedWorkouts
+    retrieveSavedWorkouts,
+    savePictureUser
 } from '../logic'
 
 import logo from '../../src/logo.png'
 import facebook from './icons/social/facebook.png'
 import instagram from './icons/social/instagram.png'
-import linkedin from './icons/social/linkedin.png'
+// import linkedin from './icons/social/linkedin.png'
 
 import {
     DropDownMenu,
@@ -60,6 +61,8 @@ export default function Home() {
     const [movements, setMovements] = useState()
     const [myWorkouts, setSavedWorkouts] = useState()
     const [likedWorkout, setLikedWorkout] = useState()
+    const [userId, setUserId] = useState()
+    const [avatar, setAvatar] = useState()
 
     const { token } = sessionStorage
 
@@ -68,8 +71,9 @@ export default function Home() {
             retrieveUser(token, (error, user) => {
                 if (error) return feedbackError('No se pudo recuperar el usuario. Error en el servidor :(')
 
-                const { fullname } = user
+                const { fullname, id } = user
                 setName(fullname)
+                setUserId(id)
             })
         } catch (error) {
             alert(error.message)
@@ -345,6 +349,22 @@ export default function Home() {
         }
     }
 
+    const handleSavePicture = image => {
+        savePictureUser(token, image, error => {
+            if (error) return feedbackError('No fue posible subir la imagen')
+
+            setMessage(true)
+            setTimeout(() => {
+                setMessage(false)
+            }, 3000);
+            retrieveUser(token, (error, user) => {
+                if (error) return alert(error.message)
+    
+                setAvatar(true)
+            })
+        })
+    }
+
     const handleGoToLogOut = () => {
         setView('logout')
     }
@@ -359,16 +379,16 @@ export default function Home() {
         <div className="home__logo-title-dropdown">
             <div className="home">
                 <div className="home__header">
-                    <img className="home__logo" alt="logo" src={logo} height="100" width="100"></img>
+                    <img className="home__logo" alt="logo" src={logo} height="100" width="100" onClick={handleGoToWelcome}></img>
                     <div className="home__title-user">
                         <h1 className="home__title">MartachisFIT</h1>
-                        {name && <p className="home__user">¡Hola, <span className="home__user--name">{name}</span>!</p>}
                     </div>
                     <nav className="home__social">
-                        <a href="https://es-es.facebook.com/m.albimuro?fref=nf"><img className="home__social-logo" alt="facebook" src={facebook} width="13"></img></a><a href="https://www.instagram.com/martachis.fit/"><img alt="instagram" width="13" className="home__social-logo" src={instagram}></img></a><a href="https://www.linkedin.com/in/alberto-davila-gomez-250460b0"><img className="home__social-logo" alt="linkedin" width="13" src={linkedin}></img></a>
+                        <a href="https://es-es.facebook.com/m.albimuro?fref=nf"><img className="home__social-logo" alt="facebook" src={facebook} width="13"></img></a><a href="https://www.instagram.com/martachis.fit/"><img alt="instagram" width="13" className="home__social-logo" src={instagram}></img></a>
+                        {/* <a href="https://www.linkedin.com/in/alberto-davila-gomez-250460b0"><img className="home__social-logo" alt="linkedin" width="13" src={linkedin}></img></a> */}
                     </nav>
                 </div>
-                {error && <Feedback error={error}/>}
+                {error && <Feedback error={error} />}
                 <DropDownMenu
                     onGoToDietDesign={handleGoToDietDesign}
                     onGoToWelcome={handleGoToWelcome}
@@ -384,13 +404,14 @@ export default function Home() {
                     onGoToArticles={handleGoToBlog}
                     onGoToDiets={handleGoToUserDiet}
                     onGoToDietDesign={handleGoToDietDesign}
+                    onGoToWorkouts={handleGoToWorkouts}
                 />}
             {view === 'diet-design' && <DietDesign />}
             {view === 'workouts' && <Workouts error={error} onChosenLevel={handleRetrieveWorkout} onGoToMovements={handleGoToMovements} />}
             {view === 'movements' && <Movements onGoToWorkouts={handleGoToWorkouts} onMuscularGroup={handleRetrieveGroup} movements={movements} error={error} />}
-            {view === 'workout' && <Workout like={likedWorkout} error={error} onSaveWorkout={handleSaveWorkout} onGoToMovements={handleGoToMovements} source={workout} />}
+            {view === 'workout' && <Workout like={likedWorkout} error={error} onSaveWorkout={handleSaveWorkout} onGoToWorkouts={handleGoToWorkouts} source={workout} />}
             {view === 'recipes' && recipes && <Recipes source={recipes} onGoToRecipe={handleGoToRecipe} />}
-            {view === 'recipe' && recipe && <Recipe error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
+            {view === 'recipe' && recipe && <Recipe onGoToRecipes={handleGoToRecipes} error={error} onSaveRecipe={handleSaveRecipe} source={recipe} message={message} like={likedRecipe} />}
             {view === 'chosen-diet' && <UserDiet diet={chosenDiet} onGoToDiets={handleGoToUserDiet} />}
             {view === 'diets' && <Diets onChosenDiet={handleRetrieveChosenDiet} onGoToDiets={handleGoToUserDiet} goal={calories} />}
             {view === 'articles' && article &&
@@ -411,6 +432,11 @@ export default function Home() {
                     onGoToChosenArticle={handleGoToChosenArticle}
                     onGoToMyWorkout={handleRetrieveWorkout}
                     myWorkouts={myWorkouts}
+                    onSavePicture={handleSavePicture}
+                    error={error}
+                    feedback={message}
+                    userId={userId}
+                    avatar={avatar}
                 />}
             {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle} />}
             {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name} />}
