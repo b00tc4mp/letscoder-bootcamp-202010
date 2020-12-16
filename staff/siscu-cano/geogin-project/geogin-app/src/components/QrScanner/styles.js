@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const QrReaderWrapper = styled.div`
-  padding: 20px;
-
   .qr-scanner {
     max-width: 100%;
     section > div {

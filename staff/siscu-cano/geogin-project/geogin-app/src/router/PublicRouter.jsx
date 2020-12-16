@@ -27,6 +27,7 @@ import { TestPassed } from '../pages/TestPassed'
 import { Profile } from '../pages/Profile'
 import { Ranking } from '../pages/Ranking'
 import { SearchCreateMenu } from '../pages/SearchCreateMenu'
+import { SearchInitGame } from '../pages/SearchInitGame'
 
 export const PublicRoute = () => (
   <Context.Consumer>
@@ -53,6 +54,7 @@ export const PublicRoute = () => (
             <Profile path='/profile' />
             <Ranking path='/ranking' />
             <SearchCreateMenu path='/search-create-menu/:questId' />
+            <SearchInitGame path='/search-game/:gameId' />
             <NotFound default />
           </Router>
           : <Router>
@@ -80,6 +82,7 @@ export const PublicRoute = () => (
             <Login path='/test-passed' />
             <Login path='/profile' />
             <Login path='/ranking' />
+            <Login path='/search-game/:gameId' />
             <NotFound default />
           </Router>
    }
