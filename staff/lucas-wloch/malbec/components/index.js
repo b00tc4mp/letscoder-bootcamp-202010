@@ -9,6 +9,8 @@ import CartaProduct from './CartaProduct'
 import Feedback from './Feedback'
 import NavBar1 from './NavBar1'
 import Slides from './Slides'
+import Slides1 from './Slides1'
+import Map from './Map'
 
 export  {
     NavBar,
@@ -21,5 +23,7 @@ export  {
     EditProduct,
     CartaProduct,
     Feedback,
-    Slides
+    Slides,
+    Slides1,
+    Map
 }

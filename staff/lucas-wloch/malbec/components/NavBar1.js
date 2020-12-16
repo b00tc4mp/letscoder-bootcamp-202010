@@ -33,7 +33,7 @@ const NavBar = (req) => {
 
         router.reload()
     }
-    return <div className="navBar">
+    return <div className="navBar navBar__sticky">
         <Link href="/"><div className="navBar__logo">
             <h2 className="navBar__logo__h2" >MALBEC</h2>
             <p className="navBar__logo__p" >Asador Argentino</p>
@@ -47,6 +47,8 @@ const NavBar = (req) => {
             <Link href="/carta"><a className="navBar__a">Nuestra Carta</a></Link>
             {user || <Link href="/access"><a className="navBar__a">Acceder</a></Link>}
             {user && <a className="navBar__a" onClick={handleLogOut} >Log Out</a>}
+            {user && <Link href="/my-products"><a className="navBar__a" >My Products</a></Link>}
+
             </div>
         </div>
     </div>
