@@ -2,10 +2,9 @@ import './Home.sass'
 import { useState, useEffect } from 'react'
 import { retrieveUser, saveGame, findGames, saveGameImage, retrieveUserGames } from '../logic'
 import Profile from './Profile'
-import { Route, withRouter, Redirect } from 'react-router-dom'
+import logo from "../assets/img/logo.png"
 import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
-import SignIn from './SignIn'
 //import FindGames from './FindGames'
 
 export default function Home({onLogout}) {
@@ -109,7 +108,8 @@ export default function Home({onLogout}) {
 
 
     return <section className="home">
-        {token ? <h1>Hello, {name}!</h1> : <> </>}
+        {token && <img className="sign-in__logo" src={logo} />} 
+        {<h1>Welcome to Gameloop!</h1>}
         {<button className="home__logout" onClick={() => {
             setName(null)
             setGames(null)
