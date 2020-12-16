@@ -1,6 +1,6 @@
 //modules
 import { StatusBar } from 'expo-status-bar';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Alert } from 'react';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -17,7 +17,7 @@ import authenticateUser from './app/logic/authenticate-user';
 
 
 export default function App() {
-  const [view, setView] = useState('sign-in')
+  const [view, setView] = useState('')
 
   const handleGoToSignUp = () => {
     setView("sign-up")
@@ -64,7 +64,7 @@ export default function App() {
           .then(token => {
             token && setView('home')
       })
-        } catch(error) {
+        } catch {
           AsyncStorage.removeItem('token')
           setView('sign-in')
         }

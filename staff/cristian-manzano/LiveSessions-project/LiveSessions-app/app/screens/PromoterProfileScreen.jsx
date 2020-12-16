@@ -1,8 +1,12 @@
-import React from 'react';
-import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, Image, Dimensions, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onGoToSearch, onGoToCreateEvent, user }) {
+function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSearch, user }) {
+    const [ query, setQuery ] = useState('')
+    const userId = user.id
+    // const imageURL = `../../../LiveSessions-api/data/users/5fce23f2e64b2e62d37a6e95.jpg`
+    // const imageURL = `../assets/testImage.jpg`
     if (user.role === 'PROMOTER')
         return (
 
@@ -12,21 +16,31 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                 >
                     <ScrollView>
 
-                      
-
                             <View style={styles.artistProfileHeader}>
                                 <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} />
-
+                                
+                                <TextInput
+                                    placeholder=' Search'
+                                    style={styles.search}
+                                    placeholderTextColor="#343a40" 
+                                    onChangeText={query => setQuery(query)}>
+                                </TextInput>
+                                
+                                <TouchableOpacity style={styles.searchButton}
+                                    onPress={ () => {onSearch ({ query })}}>
+                                        <Text style={styles.buttonText}>Search!</Text>
+                                </TouchableOpacity>
 
                                 <TouchableOpacity onPress={onLogOut}>
                                     <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
                                 </TouchableOpacity>
+
                             </View>
 
                             <View style={styles.artistProfileBody}>
 
                                 <TouchableOpacity onPress={onGoToEditProfile}>
-                                    <Avatar.Image style={styles.profileAvatar} size={120} source={require('../assets/default-profile-image.png')} />
+                                <Image style={styles.profileAvatar} size={120} source={`http://192.168.1.131:4000/api/users/${userId}/images`}  />
                                     <Text style={styles.artistName}>@{user.artistName}</Text>
                                 </TouchableOpacity>
 
@@ -42,19 +56,17 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, o
                                     </TouchableOpacity>
                                 </View>
 
+                            <TouchableOpacity onPress={onGoToLives}>
+                                <Text style={styles.petitionsButton}>Lives</Text>
+                            </TouchableOpacity>
+
                             </View>
-                            <TouchableOpacity onPress={onGoToSearch}>
-                                <Text style={styles.petitionsButton}>Search!</Text>
-                            </TouchableOpacity>
 
-                            <TouchableOpacity onPress={onGoToCreateEvent}>
+                            {/* <TouchableOpacity onPress={onGoToCreateEvent}>
                                 <Text style={styles.petitionsButton}>Create Event :)</Text>
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
                             
-
-                            <TouchableOpacity onPress={onGoToPetitions}>
-                                <Text style={styles.petitionsButton}>Petitions</Text>
-                            </TouchableOpacity>
+                            
 
 
                       
@@ -76,9 +88,28 @@ const styles = StyleSheet.create({
         height: 40
     },
 
-    profileAvatar: {
-        backgroundColor: "gray"
+    search: {
+        marginTop: "15%",
+        width: "50%",
+        height: "20%",
+        borderWidth: 1,
+        borderColor: "#343a40",
+        color: "#343a40"
     },
+
+    searchButton: {
+        marginTop: "15%",
+        marginLeft: "-5%",
+        width: "15%",
+        height: "20%",
+        borderWidth: 1,
+        borderColor: "#343a40",
+        color: "#343a40",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+
+
 
     petitionsButton: {
         fontSize: 25,
@@ -89,10 +120,10 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         justifyContent: "flex-end",
         color: "#343a40",
-        tintColor: "#343a40",
         shadowRadius: 50,
         borderWidth: 1
     },
+
 
     artistProfileContainer: {
         justifyContent: "flex-start",
@@ -109,6 +140,8 @@ const styles = StyleSheet.create({
     artistProfileBody: {
         marginTop: "8%",
         alignItems: "center",
+        height: Dimensions.get("window").height,
+        width: Dimensions.get("window").width,
     },
 
     linkContainer: {

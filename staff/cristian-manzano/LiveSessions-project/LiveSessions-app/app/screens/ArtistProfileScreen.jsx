@@ -2,8 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, user }) {
-    if (user.role === 'ARTIST')
+function ArtistProfileScreen({ onGoToEditProfile, onGoToLivePetitions, onLogOut, user }) {
         return (
 
             <SafeAreaView style={styles.artistProfileContainer}>
@@ -50,7 +49,7 @@ function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, use
 
                             </View>
 
-                            <TouchableOpacity onPress={onGoToPetitions}>
+                            <TouchableOpacity onPress={onGoToLivePetitions}>
                                 <Text style={styles.petitionsButton}>Petitions</Text>
                             </TouchableOpacity>
 
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         justifyContent: "flex-end",
         color: "#343a40",
-        tintColor: "#343a40",
         shadowRadius: 50,
         borderWidth: 1
     },
