@@ -5,12 +5,13 @@ import * as ImagePicker from "expo-image-picker";
 import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
-export default function PetitionScreen({ onSubmitPetition }) {
-    const [title, setTitle] = useState(title)
-    const [date, setDate] = useState(date)
-    const [duration, setDuration] = useState(duration)
-    const [description, setDescription] = useState(description)
-    const [payment, setPayment] = useState(payment)
+export default function PetitionScreen({ onModifyLive, live }) {
+    const [title, setTitle] = useState(live.title)
+    const [liveDate, setLiveDate] = useState(live.liveDate)
+    const [duration, setDuration] = useState(live.duration)
+    const [description, setDescription] = useState(live.description)
+    const [payment, setPayment] = useState(live.payment)
+    const liveId = live._id
 
     return (
         <SafeAreaView>
@@ -25,8 +26,7 @@ export default function PetitionScreen({ onSubmitPetition }) {
                             style={styles.livesInputs}
                             placeholderTextColor="#343a40"
                             onChangeText={title => setTitle(title)}
-
-                            // defaultValue={(title ? ' ' + title : '')}
+                            defaultValue={(live.title ? ' ' + live.title : '')}
                         >
                     </TextInput>
 
@@ -34,9 +34,8 @@ export default function PetitionScreen({ onSubmitPetition }) {
                             placeholder=' Date'
                             style={styles.livesInputs}
                             placeholderTextColor="#343a40"
-                            onChangeText={date => setDate(date)}
-
-                            // defaultValue={(date ? ' ' + date : '')}
+                            onChangeText={liveDate => setLiveDate(liveDate)}
+                            defaultValue={(live.liveDate ? ' ' + live.liveDate : '')}
                         >
                     </TextInput>
 
@@ -46,7 +45,7 @@ export default function PetitionScreen({ onSubmitPetition }) {
                             placeholderTextColor="#343a40"
                             onChangeText={duration => setDuration(duration)}
 
-                            // defaultValue={(duration ? ' ' + duration : '')}
+                            defaultValue={(live.duration ? ' ' + live.duration : '')}
                         >
                     </TextInput>
 
@@ -56,7 +55,7 @@ export default function PetitionScreen({ onSubmitPetition }) {
                             placeholderTextColor="#343a40"
                             onChangeText={description => setDescription(description)}
 
-                            // defaultValue={(description ? ' ' + description : '')}
+                            defaultValue={(live.description ? ' ' + live.description : '')}
                         >
                     </TextInput>
 
@@ -66,12 +65,12 @@ export default function PetitionScreen({ onSubmitPetition }) {
                             placeholderTextColor="#343a40"
                             onChangeText={payment => setPayment(payment)}
 
-                            // defaultValue={(payment ? ' ' + payment : '')}
+                            defaultValue={(live.payment ? ' ' + live.payment : '')}
                         >
                     </TextInput>
 
                     <TouchableOpacity style={styles.submitPetitionButton}
-                            onPress={() => { onSubmitPetition({ title, date, status, duration, payment, description }) }}>
+                            onPress={() => { onModifyLive({ liveId, title, liveDate, duration, payment, description }) }}>
                             <Text style={styles.buttonText}>Save!</Text>
                     </TouchableOpacity>
 

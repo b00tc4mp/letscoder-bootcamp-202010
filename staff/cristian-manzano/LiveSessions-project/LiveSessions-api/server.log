@@ -2978,3 +2978,395 @@ info 2020-12-16T00:38:51.936Z - stopping server
 info 2020-12-16T00:39:01.730Z - starting server
 info 2020-12-16T00:39:02.599Z - server running on port 4000
 info 2020-12-16T00:45:26.195Z - stopping server
+info 2020-12-16T01:11:47.307Z - starting server
+info 2020-12-16T01:11:48.864Z - server running on port 4000
+info 2020-12-16T02:51:30.943Z - stopping server
+info 2020-12-16T02:51:54.702Z - starting server
+info 2020-12-16T02:51:57.781Z - server running on port 4000
+error 2020-12-16T02:58:52.739Z - ReferenceError: activityId is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:32:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T03:01:12.291Z - starting server
+info 2020-12-16T03:01:13.060Z - server running on port 4000
+error 2020-12-16T03:02:37.771Z - ReferenceError: liveId is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:30:7
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T03:04:50.504Z - ReferenceError: liveId is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:30:7
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T03:05:38.628Z - starting server
+info 2020-12-16T03:05:40.157Z - server running on port 4000
+error 2020-12-16T03:06:24.484Z - ReferenceError: liveId is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:37:13
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T03:09:44.486Z - ReferenceError: liveId is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:37:13
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T03:11:19.142Z - ReferenceError: liveId is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:37:13
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T03:15:44.620Z - starting server
+info 2020-12-16T03:15:47.016Z - server running on port 4000
+error 2020-12-16T03:17:48.244Z - ReferenceError: liveId is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:38:13
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T03:20:34.311Z - starting server
+info 2020-12-16T03:20:35.411Z - server running on port 4000
+error 2020-12-16T03:22:03.643Z - ReferenceError: price is not defined
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/save-live.js:40:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T03:23:19.424Z - starting server
+info 2020-12-16T03:23:21.170Z - server running on port 4000
+info 2020-12-16T11:03:18.228Z - starting server
+error 2020-12-16T11:03:18.438Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/index.js:15
+const handleRetrieveUserImage = require('./handlers/handle-retrieve-user-image')
+      ^
+
+SyntaxError: Identifier 'handleRetrieveUserImage' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T11:03:18.442Z - stopping server
+info 2020-12-16T11:04:07.754Z - starting server
+info 2020-12-16T11:04:10.634Z - server running on port 4000
+info 2020-12-16T11:06:34.141Z - stopping server
+info 2020-12-16T11:07:05.236Z - starting server
+info 2020-12-16T11:07:08.546Z - server running on port 4000
+info 2020-12-16T11:08:08.888Z - starting server
+info 2020-12-16T11:08:15.934Z - server running on port 4000
+info 2020-12-16T11:18:58.872Z - starting server
+info 2020-12-16T11:19:00.685Z - server running on port 4000
+info 2020-12-16T11:20:10.388Z - stopping server
+info 2020-12-16T11:20:24.896Z - starting server
+info 2020-12-16T11:25:42.126Z - server running on port 4000
+info 2020-12-16T11:27:02.641Z - starting server
+info 2020-12-16T11:29:55.784Z - server running on port 4000
+info 2020-12-16T11:48:10.211Z - starting server
+info 2020-12-16T11:48:20.287Z - server running on port 4000
+info 2020-12-16T11:59:44.845Z - stopping server
+info 2020-12-16T11:59:45.062Z - stopping server
+info 2020-12-16T12:00:45.902Z - starting server
+info 2020-12-16T12:00:56.544Z - server running on port 4000
+info 2020-12-16T12:10:10.876Z - starting server
+info 2020-12-16T12:10:12.728Z - server running on port 4000
+error 2020-12-16T12:10:23.031Z - MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at Function.create (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/error.js:57:12)
+    at toError (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/utils.js:123:22)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/operations/common_functions.js:379:39
+    at handler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/topology.js:942:24)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection_pool.js:350:13
+    at handleOperationResult (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/server.js:558:5)
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-16T12:10:34.436Z - MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at Function.create (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/error.js:57:12)
+    at toError (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/utils.js:123:22)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/operations/common_functions.js:379:39
+    at handler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/topology.js:942:24)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection_pool.js:350:13
+    at handleOperationResult (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/server.js:558:5)
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-16T12:11:34.567Z - stopping server
+info 2020-12-16T12:12:12.405Z - starting server
+info 2020-12-16T12:12:15.746Z - server running on port 4000
+error 2020-12-16T12:12:27.316Z - MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at Function.create (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/error.js:57:12)
+    at toError (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/utils.js:123:22)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/operations/common_functions.js:379:39
+    at handler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/topology.js:942:24)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection_pool.js:350:13
+    at handleOperationResult (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/server.js:558:5)
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-16T12:12:44.187Z - stopping server
+info 2020-12-16T12:12:48.560Z - starting server
+info 2020-12-16T12:12:48.766Z - server running on port 4000
+error 2020-12-16T12:12:56.814Z - MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at Function.create (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/error.js:57:12)
+    at toError (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/utils.js:123:22)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/operations/common_functions.js:379:39
+    at handler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/topology.js:942:24)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection_pool.js:350:13
+    at handleOperationResult (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/server.js:558:5)
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-16T12:13:33.129Z - stopping server
+info 2020-12-16T12:13:42.133Z - starting server
+info 2020-12-16T12:13:46.975Z - server running on port 4000
+error 2020-12-16T12:14:03.564Z - MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at Function.create (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/error.js:57:12)
+    at toError (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/utils.js:123:22)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/operations/common_functions.js:379:39
+    at handler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/topology.js:942:24)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection_pool.js:350:13
+    at handleOperationResult (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/server.js:558:5)
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-16T12:14:54.842Z - stopping server
+info 2020-12-16T12:15:05.293Z - starting server
+info 2020-12-16T12:15:07.081Z - server running on port 4000
+error 2020-12-16T12:15:25.551Z - MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at Function.create (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/error.js:57:12)
+    at toError (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/utils.js:123:22)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/operations/common_functions.js:379:39
+    at handler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/topology.js:942:24)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection_pool.js:350:13
+    at handleOperationResult (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/core/sdam/server.js:558:5)
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-16T12:17:26.926Z - stopping server
+info 2020-12-16T12:17:41.214Z - starting server
+info 2020-12-16T12:17:46.496Z - server running on port 4000
+info 2020-12-16T12:24:35.374Z - stopping server
+info 2020-12-16T12:25:23.852Z - starting server
+info 2020-12-16T12:25:25.282Z - server running on port 4000
+info 2020-12-16T12:26:24.762Z - stopping server
+info 2020-12-16T12:26:30.712Z - starting server
+info 2020-12-16T12:26:31.618Z - server running on port 4000
+info 2020-12-16T14:04:08.170Z - stopping server
+info 2020-12-16T14:04:21.215Z - starting server
+error 2020-12-16T14:04:21.727Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modifyLive.js:1
+import { call } from '../../utils'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:04:21.729Z - stopping server
+info 2020-12-16T14:05:32.197Z - starting server
+error 2020-12-16T14:05:32.628Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modifyLive.js:1
+import { call } from '../../utils'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:05:32.644Z - stopping server
+info 2020-12-16T14:07:31.893Z - starting server
+error 2020-12-16T14:07:32.671Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modify-live.js:1
+import { call } from '../../utils'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:07:32.921Z - stopping server
+info 2020-12-16T14:09:18.010Z - starting server
+error 2020-12-16T14:09:18.249Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modify-live.js:3
+export default function (liveId, title, date, duration, payment, description) {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:09:18.251Z - stopping server
+info 2020-12-16T14:10:59.671Z - starting server
+error 2020-12-16T14:10:59.965Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modify-live.js:1
+import { call } from '../../utils'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:10:59.967Z - stopping server
+info 2020-12-16T14:12:00.608Z - starting server
+error 2020-12-16T14:12:01.469Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modify-live.js:1
+import { call } from '../../utils'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:12:01.471Z - stopping server
+info 2020-12-16T14:22:27.266Z - starting server
+error 2020-12-16T14:22:27.838Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modify-live.js:1
+import { call } from '../../utils'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:22:27.840Z - stopping server
+info 2020-12-16T14:36:48.112Z - starting server
+error 2020-12-16T14:36:48.296Z - /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-app/app/logic/modify-live.js:1
+import { call } from '../utils'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/index.js:1:33)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-16T14:36:48.298Z - stopping server

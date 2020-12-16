@@ -10,7 +10,7 @@ module.exports = (userId) => {
     .then((user) => {
       if (!user) new NotFoundError(`user with id ${promoterId} not found`);
 debugger
-         if (user.role === 'ARTIST') {
+        if (user.role === 'ARTIST') {
             const artistId = userId
             return Live.find({ artistId: artistId }, null, {
                 sort: { date: -1 },
@@ -30,7 +30,7 @@ debugger
 
         live.id = _id.toString();
 
-        delete live._id;
+        // delete live._id;
         delete live.owner;
       });
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 
 export default function LivesCard({ title, liveDate, duration, status, payment, description }) {
   return (
@@ -11,6 +11,7 @@ export default function LivesCard({ title, liveDate, duration, status, payment, 
         <Text style={styles.subTitleActivity}>Payment: {payment}</Text>
         <Text style={styles.subTitleActivity}>{description}</Text>
         <Text style={styles.subTitleActivity}>Status: {status}</Text>
+
       </View>
     </View>
   );
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     overflow: "hidden",
     // flexDirection: "row"
-    
+
   },
 
   titleActivity: {
@@ -48,4 +49,20 @@ const styles = StyleSheet.create({
     color: "green",
     fontWeight: "bold",
   },
+
+  buttonsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignSelf: "stretch"
+  },
+
+  livesButtons: {
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    backgroundColor: "gray",
+    width: "25%",
+    height: "45%"
+  }
 });

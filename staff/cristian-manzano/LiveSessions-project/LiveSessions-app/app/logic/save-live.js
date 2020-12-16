@@ -39,8 +39,8 @@ export default function saveLive(
 
         return callback(new Error(error));
       }
-      const { liveId } = JSON.parse(response);
-      callback(null, liveId);
+      const { _id } = JSON.parse(response);
+      callback(null, _id);
     }
   );
 }

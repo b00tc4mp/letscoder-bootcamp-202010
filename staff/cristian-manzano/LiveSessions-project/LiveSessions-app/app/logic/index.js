@@ -5,6 +5,7 @@ import editUser from "./edit-user";
 import searchArtists from "./search-artists";
 import saveUserImage from "./save-user-image";
 import saveLive from "./save-live";
-import retrieveLives from './retrieve-lives'
+import retrieveLives from './retrieve-lives';
+import modifyLive from './modify-live'
 
-export { registerUser, authenticateUser, retrieveUser, editUser, searchArtists, saveUserImage, saveLive, retrieveLives };
+export { registerUser, authenticateUser, retrieveUser, editUser, searchArtists, saveUserImage, saveLive, retrieveLives, modifyLive };

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Alert, StyleSheet, View } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 // Logic
 import { retrieveUser } from '../logic';
 import { editUser } from '../logic';
@@ -9,6 +10,8 @@ import { searchArtists } from '../logic';
 import { saveUserImage } from '../logic';
 import { saveLive } from '../logic';
 import { retrieveLives } from '../logic'
+import { modifyLive } from '../logic'
+
 //Screens
 import ArtistProfileScreen from './ArtistProfileScreen'
 import PromoterProfileScreen from './PromoterProfileScreen'
@@ -17,6 +20,8 @@ import ArtistsMap from './ArtistsMap'
 import DetailArtistProfileScreen from './DetailArtistProfileScreen'
 import PetitionScreen from './PetitionScreen'
 import LivesMap from './LivesMap'
+import DetailLiveScreen from './DetailLiveScreen'
+import EditLiveScreen from './EditLiveScreen'
 
 
 export default function Home({ onHandleLogout }) {
@@ -24,6 +29,7 @@ export default function Home({ onHandleLogout }) {
   const [item, setItem] = useState()
   const [users, setUsers] = useState()
   const [lives, setLives] = useState()
+  const [live, setLive] = useState()
   const [view, setView] = useState('')
 
 
@@ -76,18 +82,18 @@ export default function Home({ onHandleLogout }) {
           .then(token => {
             try {
               if (imageUri)
-              saveUserImage(user.id, imageUri, (error) => {
-                if (error) return alert(error.message);
-                try {
-                  retrieveUser(token, (error, user) => {
-                    if (error) return Alert.alert(error.message)
+                saveUserImage(user.id, imageUri, (error) => {
+                  if (error) return alert(error.message);
+                  try {
+                    retrieveUser(token, (error, user) => {
+                      if (error) return Alert.alert(error.message)
 
-                    setUser(user)
-                  })
-                } catch (error) {
-                  Alert.alert(error.message)
-                }
-              })
+                      setUser(user)
+                    })
+                  } catch (error) {
+                    Alert.alert(error.message)
+                  }
+                })
               try {
                 retrieveUser(token, (error, user) => {
                   if (error) return Alert.alert(error.message)
@@ -132,7 +138,7 @@ export default function Home({ onHandleLogout }) {
       })
   }
 
-  const handleonGoToArtistProfile = ({ item }) => {
+  const handleGoToArtistProfile = ({ item }) => {
     console.log(item)
     setItem(item)
     setView('detail-artist-profile')
@@ -158,6 +164,70 @@ export default function Home({ onHandleLogout }) {
     }
   }
 
+  const handleAcceptPetition = ({ promoterId, artistId, liveId, title, liveDate, duration, payment, description }) => {
+    const statusAccepted = 'ACCEPTED'
+    console.log(liveId)
+    try {
+      saveLive(promoterId, artistId, liveId, title, liveDate, statusAccepted, duration, payment, description, (error) => {
+        debugger
+        if (error) return Alert.alert(error.message)
+        AsyncStorage.getItem('token')
+          .then(token => {
+            try {
+              debugger
+              retrieveLives(token, (error, lives) => {
+                if (error) return alert(error.message);
+                setLives(lives);
+
+                setView("lives");
+              });
+            } catch (error) {
+              alert(error.message);
+            }
+          })
+        setView('lives')
+
+      })
+    } catch (error) {
+      Alert.alert(error.message)
+    }
+  }
+
+  const handleDeniePetition = ({ promoterId, artistId, liveId, title, liveDate, duration, payment, description }) => {
+    const statusAccepted = 'DENIED'
+    console.log(liveId)
+    try {
+      saveLive(promoterId, artistId, liveId, title, liveDate, statusAccepted, duration, payment, description, (error) => {
+        debugger
+        if (error) return Alert.alert(error.message)
+        AsyncStorage.getItem('token')
+          .then(token => {
+            try {
+              debugger
+              retrieveLives(token, (error, lives) => {
+                if (error) return alert(error.message);
+                setLives(lives);
+
+                setView("lives");
+              });
+            } catch (error) {
+              alert(error.message);
+            }
+          })
+        setView('lives')
+
+      })
+    } catch (error) {
+      Alert.alert(error.message)
+    }
+  }
+
+  const handleGoToLiveDetail = ({ live }) => {
+    console.log(live)
+    setLive(live)
+    setView('live-detail')
+  }
+
   const handleRetrieveLives = () => {
 
     AsyncStorage.getItem('token')
@@ -176,6 +246,34 @@ export default function Home({ onHandleLogout }) {
       })
   }
 
+  const handleGoToModifyLive = () => {
+    setView('edit-live')
+  }
+
+  const handleModifyLive = ({ title, date, duration, payment, description }) => {
+    try {
+      modifyLive(liveId, title, date, duration, payment, description, (error) => {
+        if (error) return Alert.alert(error.message)
+        AsyncStorage.getItem('token')
+          .then(token => {
+            try {
+              debugger
+              retrieveLives(token, (error, lives) => {
+                if (error) return alert(error.message);
+                setLives(lives);
+
+                setView("lives");
+              });
+            } catch (error) {
+              alert(error.message);
+            }
+          })
+      })
+    } catch (error) {
+      Alert.alert(error.message)
+    }
+  }
+
   return (
 
     <View>
@@ -185,7 +283,7 @@ export default function Home({ onHandleLogout }) {
       { view === 'results' && <View style={{
         backgroundColor: "#f8f4f4",
         paddingHorizontal: 20,
-      }}><ArtistsMap users={users} onGoToArtistProfile={handleonGoToArtistProfile} />
+      }}><ArtistsMap users={users} onGoToArtistProfile={handleGoToArtistProfile} />
       </View>}
 
       { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} />}
@@ -193,8 +291,10 @@ export default function Home({ onHandleLogout }) {
       { view === 'lives' && <View style={{
         backgroundColor: "#f8f4f4",
         paddingHorizontal: 20,
-      }}><LivesMap lives={lives} user={user} />
+      }}><LivesMap lives={lives} user={user} onGoToLiveDetail={handleGoToLiveDetail} />
       </View>}
+      { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} />}
+      { view === 'edit-live' && <EditLiveScreen live={live} onModifyLive={handleModifyLive} />}
     </View>
   );
 }

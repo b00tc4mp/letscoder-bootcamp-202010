@@ -1,3 +1,5 @@
+const { default: modifyLive } = require('../../LiveSessions-app/app/logic/modify-live');
+
 module.exports = {
     registerUser: require('./register-user'),
     authenticateUser: require('./authenticate-user'),
@@ -5,6 +7,8 @@ module.exports = {
     editUser: require('./edit-user'),
     searchArtists: require('./search-artists'),
     saveUserImage: require('./save-user-image'),
+    retrieveUserImage: require('./retrieve-user-image'),
     saveLive: require('./save-live'),
-    retrieveLives: require('./retrieve-lives')
+    retrieveLives: require('./retrieve-lives'),
+    modifyLive: require('./modify-live')
 }

@@ -2,7 +2,7 @@ import React from "react";
 import LivesCard from "./LivesCard";
 import { FlatList, Dimensions, TouchableOpacity, StyleSheet, View, TextInput, Image } from "react-native";
 
-export default function LivesMap({ lives, user }) {
+export default function LivesMap({ lives, user, onGoToLiveDetail }) {
   return (
 
     <View style={styles.livesListContainer}>
@@ -16,15 +16,16 @@ export default function LivesMap({ lives, user }) {
         data={lives}
         keyExtractor={lives._id}
         renderItem={({ item }) => (
-
-          <LivesCard
-            title={item.title}
-            liveDate={item.liveDate}
-            status={item.status}
-            duration={item.duration}
-            payment={item.payment}
-            description={item.description}
-          />
+          <TouchableOpacity onPress={ () => {onGoToLiveDetail ({ live: item })}}>
+            <LivesCard
+              title={item.title}
+              liveDate={item.liveDate}
+              status={item.status}
+              duration={item.duration}
+              payment={item.payment}
+              description={item.description}
+            />
+          </TouchableOpacity>
 
 
         )}
