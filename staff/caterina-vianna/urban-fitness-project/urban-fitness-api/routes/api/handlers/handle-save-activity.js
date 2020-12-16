@@ -19,6 +19,8 @@ module.exports = (req, res, handleError) => {
       repeat,
       spots,
       activityDate,
+      selectedItems,
+      duration,
     },
   } = req;
 
@@ -39,7 +41,9 @@ module.exports = (req, res, handleError) => {
       sport,
       repeat,
       spots,
-      activityDate
+      activityDate,
+      selectedItems,
+      duration
     )
       .then((activityId) => res.status(200).send({ activityId }))
       .catch(handleError);

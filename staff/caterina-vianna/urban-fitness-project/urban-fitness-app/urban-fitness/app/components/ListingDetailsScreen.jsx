@@ -6,9 +6,13 @@ import {
   Text,
   FlatList,
   Dimensions,
+  ImageBackground,
+  TouchableOpacity,
 } from "react-native";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
+import DatesDetails from "./DatesDetails";
+import DaysDetails from "./DaysDetails";
 
 import {
   useFonts,
@@ -27,8 +31,13 @@ import {
   Nunito_900Black,
   Nunito_900Black_Italic,
 } from "@expo-google-fonts/nunito";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-export default function ListingDetailsScreen({ checked, item }) {
+export default function ListingDetailsScreen({
+  checked,
+  item,
+  onCloseProfile,
+}) {
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
     Nunito_700Bold,
@@ -41,10 +50,22 @@ export default function ListingDetailsScreen({ checked, item }) {
   const image = item.id;
   return (
     <View style={styles.backgroundColorListing}>
-      <Image
+      <ImageBackground
         style={styles.image}
-        source={`http://192.168.0.11:4000/api/activity/${image}/images`}
-      />
+        source={require("../assets/yoga.jpg")}
+      >
+        <View>
+          <TouchableOpacity
+            onPress={() => {
+              {
+                onCloseProfile();
+              }
+            }}
+          >
+            <Icon style={styles.closeIcon} name="close" size={25} />
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
       <View style={styles.detailsContainer}>
         <Text style={styles.titleListing}>{item.title}🧘‍♀️</Text>
         <Text style={styles.checkedEquipment}>
@@ -52,6 +73,8 @@ export default function ListingDetailsScreen({ checked, item }) {
         </Text>
         <Text style={styles.descriptionListing}>{item.description}</Text>
         <Text style={styles.priceListing}>{item.price}</Text>
+        <DaysDetails />
+        <DatesDetails />
       </View>
     </View>
   );
@@ -68,8 +91,16 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginVertical: 10,
   },
+  closeIcon: {
+    marginTop: 30,
+    marginLeft: 310,
+    color: "white",
+  },
   detailsContainer: {
     padding: 20,
+    height: Dimensions.get("window").height,
+    width: Dimensions.get("window").width,
+    backgroundColor: "#000000",
   },
   titleListing: {
     fontSize: 28,

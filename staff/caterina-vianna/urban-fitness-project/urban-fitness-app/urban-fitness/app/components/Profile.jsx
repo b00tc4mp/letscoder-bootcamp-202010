@@ -11,7 +11,7 @@ const {
 } = require("react-native");
 import Icon from "react-native-vector-icons";
 const { Avatar } = require("react-native-paper");
-import MapView, { AnimatedRegion } from "react-native-maps";
+import MapView, { AnimatedRegion, Marker } from "react-native-maps";
 
 import React, { useState } from "react";
 
@@ -24,6 +24,14 @@ export default function Profile({ onAvatar, onListMode, onSearch }) {
     latitudeDelta: 0.04,
     longitudeDelta: 0.05,
   };
+  var markers = [
+    {
+      latitude: 41.4,
+      longitude: 2.15,
+      title: "Foo Place",
+      subtitle: "1234 Foo Drive",
+    },
+  ];
 
   return (
     <View>
@@ -73,7 +81,12 @@ export default function Profile({ onAvatar, onListMode, onSearch }) {
           provider={MapView.PROVIDER_GOOGLE}
           customMapStyle={generatedMapStyle}
           initialRegion={initialRegion}
-        />
+        >
+          <Marker
+            coordinate={{ latitude: 41.4, longitude: 2.15 }}
+            image={require("../assets/pin4.png")}
+          />
+        </MapView>
       </View>
     </View>
   );

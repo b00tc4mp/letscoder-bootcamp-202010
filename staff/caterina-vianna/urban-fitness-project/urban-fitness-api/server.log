@@ -1271,3 +1271,306 @@ info 2020-12-14T16:40:54.216Z - stopping server
 info 2020-12-14T16:57:41.652Z - starting server
 info 2020-12-14T16:57:41.754Z - server running on port 4000
 info 2020-12-14T18:31:40.477Z - stopping server
+info 2020-12-15T09:50:02.743Z - starting server
+info 2020-12-15T09:50:02.845Z - server running on port 4000
+error 2020-12-15T12:01:46.032Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-user.js:16:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:01:46.034Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity.js:17:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:09:54.322Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-user.js:16:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:09:54.323Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity.js:17:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:11:50.193Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-user.js:16:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:11:50.195Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity.js:17:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:11:51.334Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity.js:17:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:11:51.335Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-user.js:16:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-15T12:13:27.991Z - ConflictError: user with e-mail pepito@gmail.com already registered
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\register-user.js:22:17
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T15:38:08.046Z - stopping server
+info 2020-12-15T15:38:12.618Z - starting server
+info 2020-12-15T15:38:12.722Z - server running on port 4000
+info 2020-12-15T17:09:23.210Z - stopping server
+info 2020-12-15T17:09:27.192Z - starting server
+info 2020-12-15T17:09:27.299Z - server running on port 4000
+info 2020-12-15T17:29:56.650Z - stopping server
+info 2020-12-15T17:30:38.854Z - starting server
+info 2020-12-15T17:30:38.957Z - server running on port 4000
+info 2020-12-15T18:43:13.608Z - stopping server
+info 2020-12-15T18:43:17.826Z - starting server
+error 2020-12-15T18:43:17.880Z - ReferenceError: activityId is not defined
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\save-activity-image.js:4:75)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\index.js:8:22)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+info 2020-12-15T18:43:17.885Z - stopping server
+info 2020-12-15T18:43:22.631Z - starting server
+error 2020-12-15T18:43:22.684Z - ReferenceError: activityId is not defined
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\save-activity-image.js:4:75)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\index.js:8:22)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+info 2020-12-15T18:43:22.688Z - stopping server
+info 2020-12-15T18:43:35.749Z - starting server
+error 2020-12-15T18:43:35.803Z - ReferenceError: activityId is not defined
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\save-activity-image.js:4:75)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\index.js:8:22)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+info 2020-12-15T18:43:35.808Z - stopping server
+info 2020-12-15T18:46:51.447Z - starting server
+info 2020-12-15T18:46:51.553Z - server running on port 4000
+info 2020-12-16T11:15:49.070Z - stopping server
+info 2020-12-16T11:15:57.013Z - starting server
+info 2020-12-16T11:15:57.116Z - server running on port 4000
+info 2020-12-16T11:21:39.429Z - stopping server
+info 2020-12-16T11:21:53.989Z - starting server
+info 2020-12-16T11:21:54.092Z - server running on port 4000
+error 2020-12-16T14:19:45.250Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-user.js:16:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-16T14:19:45.251Z - TokenExpiredError: jwt expired
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity.js:17:33)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:317:13)
+info 2020-12-16T15:00:08.368Z - stopping server
+info 2020-12-16T15:00:12.656Z - starting server
+info 2020-12-16T15:00:12.758Z - server running on port 4000
+error 2020-12-16T15:01:34.724Z - ValidationError: Activity validation failed: selectedItems: Path `selectedItems` is required., duration: Path `duration` is required.
+    at model.Document.invalidate (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-16T15:01:39.297Z - ValidationError: Activity validation failed: selectedItems: Path `selectedItems` is required., duration: Path `duration` is required.
+    at model.Document.invalidate (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-16T15:05:50.552Z - ValidationError: Activity validation failed: selectedItems: Cast to string failed for value "[ 3, 5 ]" at path "selectedItems"
+    at model.Document.invalidate (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2688:32)
+    at model.$set (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:1301:12)
+    at model.$set (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:105:12)
+    at new model (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Function.create (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\save-activity.js:58:23
+error 2020-12-16T15:07:39.108Z - ValidationError: Activity validation failed: selectedItems: Cast to string failed for value "[ 3, 5 ]" at path "selectedItems"
+    at model.Document.invalidate (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:2688:32)
+    at model.$set (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:1301:12)
+    at model.$set (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:105:12)
+    at new model (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\index.js:1135:10)
+    at Function.create (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\save-activity.js:58:23
+info 2020-12-16T15:07:49.927Z - stopping server
+info 2020-12-16T15:07:54.909Z - starting server
+info 2020-12-16T15:07:55.012Z - server running on port 4000
+info 2020-12-16T15:16:50.231Z - stopping server
+info 2020-12-16T15:16:55.953Z - starting server
+info 2020-12-16T15:16:56.063Z - server running on port 4000

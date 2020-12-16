@@ -20,7 +20,9 @@ module.exports = (
   sport,
   repeat,
   spots,
-  activityDate
+  activityDate,
+  selectedItems,
+  duration
 ) => {
   debugger;
   validateId(ownerId);
@@ -46,6 +48,8 @@ module.exports = (
           activityId.repeat = repeat;
           activityId.spots = spots;
           activityId.activityDate = activityDate;
+          activityId.selectedItems = selectedItems;
+          activityId.duration = duration;
           debugger;
           return activity.save();
         })
@@ -61,6 +65,8 @@ module.exports = (
         repeat,
         spots,
         activityDate,
+        selectedItems,
+        duration,
         owner: ObjectId(ownerId),
         date: new Date(),
       }).then((activity) => activity.id);

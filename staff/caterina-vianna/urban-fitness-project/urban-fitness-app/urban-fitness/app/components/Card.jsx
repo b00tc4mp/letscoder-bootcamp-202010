@@ -1,7 +1,41 @@
 import React from "react";
 import { View, StyleSheet, Text, Image } from "react-native";
+import { AppLoading } from "expo";
+import {
+  useFonts,
+  Nunito_200ExtraLight,
+  Nunito_200ExtraLight_Italic,
+  Nunito_300Light,
+  Nunito_300Light_Italic,
+  Nunito_400Regular,
+  Nunito_400Regular_Italic,
+  Nunito_600SemiBold,
+  Nunito_600SemiBold_Italic,
+  Nunito_700Bold,
+  Nunito_700Bold_Italic,
+  Nunito_800ExtraBold,
+  Nunito_800ExtraBold_Italic,
+  Nunito_900Black,
+  Nunito_900Black_Italic,
+} from "@expo-google-fonts/nunito";
 
-export default function Card({ title, subTitle, image }) {
+export default function Card({
+  title,
+  subTitle,
+  image,
+  location,
+  dates,
+  hour,
+}) {
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
     <View style={styles.card}>
       <Image
@@ -10,6 +44,11 @@ export default function Card({ title, subTitle, image }) {
       />
       <View style={styles.detailsContainer}>
         <Text style={styles.titleActivity}>{title}</Text>
+        <Text style={styles.addressActivity}>Location:{location}</Text>
+        <Text style={styles.addressActivity}>
+          {dates}
+          {hour}
+        </Text>
         <Text style={styles.subTitleActivity}>{subTitle}</Text>
       </View>
     </View>
@@ -28,9 +67,13 @@ const styles = StyleSheet.create({
   titleActivity: {
     color: "black",
     fontSize: 18,
-    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+    fontFamily: "Nunito_600SemiBold",
   },
-
+  subTitleActivity: { fontFamily: "Nunito_600SemiBold" },
+  addressActivity: {
+    color: "grey",
+    fontFamily: "Nunito_600SemiBold",
+  },
   detailsContainer: {
     padding: 20,
   },

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { AppLoading } from "expo";
 import {
   useFonts,
@@ -19,7 +19,7 @@ import {
   Nunito_900Black_Italic,
 } from "@expo-google-fonts/nunito";
 
-export default function Dates({}) {
+export default function DatesDetails({}) {
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
     Nunito_700Bold,
@@ -32,7 +32,7 @@ export default function Dates({}) {
     <View style={styles.dates}>
       <View style={styles.datesContainer}>
         <View style={styles.dayMonthContainer}>
-          <Text style={styles.dayActivity}>23</Text>
+          <Text style={styles.dayActivity}>01</Text>
           <Text style={styles.monthActivity}>OCT</Text>
         </View>
         <View style={styles.hourActivityContainer}>
@@ -87,15 +87,16 @@ const styles = StyleSheet.create({
   },
   hourActivity: {
     fontSize: 20,
+    color: "grey",
     fontFamily: "Nunito_600SemiBold",
-    paddingVertical: 30,
+    paddingVertical: 37,
     paddingHorizontal: 15,
     backgroundColor: "white",
   },
   attendActivity: {
     fontSize: 20,
     fontFamily: "Nunito_600SemiBold",
-    paddingVertical: 30,
+    paddingVertical: 37,
     paddingHorizontal: 15,
     backgroundColor: "white",
     borderTopRightRadius: 20,

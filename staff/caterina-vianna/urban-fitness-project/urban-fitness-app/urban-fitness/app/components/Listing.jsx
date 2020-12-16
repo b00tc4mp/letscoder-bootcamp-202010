@@ -6,30 +6,33 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from "react-native";
+import ActivityCard from "./ActivityCard";
 
 export default function Listing({ activities, onListingDetails }) {
+  console.log(activities);
+
   return (
-    <ScrollView
+    <FlatList
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
-    >
-      <FlatList
-        data={activities}
-        keyExtractor={activities.id}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() => {
-              onListingDetails({ item });
-            }}
-          >
-            <Card
-              title={item.title}
-              subTitle={"$" + item.price}
-              image={item.id}
-            />
-          </TouchableOpacity>
-        )}
-      />
-    </ScrollView>
+      data={activities}
+      keyExtractor={activities.id}
+      renderItem={({ item }) => (
+        <TouchableOpacity
+          onPress={() => {
+            onListingDetails({ item });
+          }}
+        >
+          <Card
+            title={item.title}
+            subTitle={"$" + item.price}
+            image={item._id}
+            location={item.address}
+            dates={item.selectedItems}
+            hour={item.duration}
+          />
+        </TouchableOpacity>
+      )}
+    />
   );
 }

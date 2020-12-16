@@ -17,8 +17,10 @@ import {
 import * as ImagePicker from "expo-image-picker";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import RNPickerSelect from "react-native-picker-select";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import MultiSelect from "react-native-multiple-select";
 
-export default function CreateActivity({ onSubmitActivity }) {
+export default function CreateActivity({ onSubmitActivity, onCloseProfile }) {
   const [checked, setChecked] = React.useState(false);
   const [activityDate, setDate] = useState(new Date(1598051730000));
   const [mode, setMode] = useState("date");
@@ -31,6 +33,9 @@ export default function CreateActivity({ onSubmitActivity }) {
   const [spots, setSpots] = useState("");
   const [price, setPrice] = useState("");
   const [imageUri, setImageUri] = useState();
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [duration, setDuration] = useState("");
+
   const requestPermission = async () => {
     const { granted } = await ImagePicker.requestCameraPermissionsAsync();
     if (!granted) alert("You need to enable permission to access the library");
@@ -55,14 +60,32 @@ export default function CreateActivity({ onSubmitActivity }) {
     setShow(true);
     setMode(currentMode);
   };
-
+  /* 
   const showDatepicker = () => {
     showMode("date");
   };
 
   const showTimepicker = () => {
     showMode("time");
+  }; */
+
+  // Data Source for the SearchableDropdown
+
+  const onSelectedItemsChange = (selectedItems) => {
+    // Set Selected Items
+    setSelectedItems(selectedItems);
   };
+
+  const items = [
+    // name key is must. It is to show the text in front
+    { id: "SUN ", name: "Sunday" },
+    { id: "MON ", name: "Monday" },
+    { id: "TUE ", name: "Tuesday" },
+    { id: "WED ", name: "Wednesday" },
+    { id: "THR ", name: "Thrusday" },
+    { id: "FRI ", name: "Friday" },
+    { id: "SAT ", name: "Saturday" },
+  ];
 
   const pickerStyle = {
     inputIOS: {
@@ -73,10 +96,11 @@ export default function CreateActivity({ onSubmitActivity }) {
       fontSize: 11,
       marginRight: 40,
       marginLeft: 40,
-      marginTop: 20,
-      backgroundColor: "#9c9c9c",
+
+      backgroundColor: "white",
       borderRadius: 20,
       placeholderColor: "black",
+      borderRadius: 10,
     },
   };
 
@@ -85,23 +109,41 @@ export default function CreateActivity({ onSubmitActivity }) {
       <ScrollView style={styles.scrollView}>
         <View style={styles.backgroundNewActivity}>
           <ScrollView style={styles.scrollView}>
+            <View>
+              <TouchableOpacity
+                onPress={() => {
+                  {
+                    onCloseProfile();
+                  }
+                }}
+              >
+                <Icon style={styles.closeIcon} name="close" size={25} />
+              </TouchableOpacity>
+            </View>
             <View style={styles.underlineNewActivity}>
               <Text style={styles.textNewActivity}>NEW ACTIVITY</Text>
             </View>
-
             <TextInput
               style={styles.textInputForm}
               placeholder="Title"
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setTitle(text)}
             ></TextInput>
+            <View style={styles.textInputFormDescriptionContainer}>
+              <TextInput
+                style={styles.textInputFormDescription}
+                placeholder="Description"
+                multiline={true}
+                numberOfLines={10}
+                placeholderTextColor="#9c9c9c"
+                onChangeText={(text) => setDescription(text)}
+              ></TextInput>
+            </View>
             <TextInput
               style={styles.textInputForm}
-              placeholder="Description"
-              multiline={true}
-              numberOfLines={10}
+              placeholder="from 00h to 00h"
               placeholderTextColor="#9c9c9c"
-              onChangeText={(text) => setDescription(text)}
+              onChangeText={(text) => setDuration(text)}
             ></TextInput>
             <TextInput
               style={styles.textInputForm}
@@ -110,12 +152,25 @@ export default function CreateActivity({ onSubmitActivity }) {
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setPrice(text)}
             ></TextInput>
+            <TextInput
+              style={styles.textInputForm}
+              placeholder="Address"
+              placeholderTextColor="#9c9c9c"
+              onChangeText={(text) => setAddress(text)}
+            ></TextInput>
+            <TextInput
+              style={styles.textInputForm}
+              keyboardType="numeric"
+              placeholder="Spots Available"
+              placeholderTextColor="#9c9c9c"
+              onChangeText={(text) => setSpots(text)}
+            ></TextInput>
             <View style={styles.containerChecked}>
               <Text style={styles.textMaterialRequired}>Material required</Text>
               <View style={styles.checkBox}>
                 <Checkbox
                   uncheckedColor="white"
-                  color="pink"
+                  color="#FF61DC"
                   status={checked ? "checked" : "unchecked"}
                   onPress={() => {
                     setChecked(!checked);
@@ -124,7 +179,7 @@ export default function CreateActivity({ onSubmitActivity }) {
               </View>
             </View>
             <View paddingVertical={5} style={styles.pickerList} />
-            <View>
+            <View style={styles.pickerRadius}>
               <RNPickerSelect
                 style={pickerStyle}
                 placeholder={{
@@ -148,50 +203,76 @@ export default function CreateActivity({ onSubmitActivity }) {
             </View>
             <View paddingVertical={5} />
             <View paddingVertical={5} style={styles.pickerList} />
-            <RNPickerSelect
-              style={pickerStyle}
-              placeholder={{
-                label: "Select repetivity...",
-                value: null,
-              }}
-              onValueChange={(value) => setRepetitivity(value)}
-              items={[
-                { label: "Daily", value: "daily" },
-                { label: "Weekly", value: "weekly" },
-                { label: "Biweekly", value: "biweekly" },
-                { label: "Monthly", value: "monthly" },
-              ]}
-            />
-            <View paddingVertical={5} />
-            <TextInput
-              style={styles.textInputForm}
-              placeholder="Address"
-              placeholderTextColor="#9c9c9c"
-              onChangeText={(text) => setAddress(text)}
-            ></TextInput>
-
-            <TextInput
-              style={styles.textInputForm}
-              keyboardType="numeric"
-              placeholder="Spots Available"
-              placeholderTextColor="#9c9c9c"
-              onChangeText={(text) => setSpots(text)}
-            ></TextInput>
-            <View>
-              <Button
-                /* style={styles.imageUpload} */ title="select image"
-                onPress={selectImage}
-              />
-              <Image
-                source={
-                  imageUri
-                    ? { uri: imageUri.localUri }
-                    : require("../assets/yoga.jpg")
-                }
-                style={{ width: "100%", height: 300 }}
+            <View style={styles.pickerRadius}>
+              <RNPickerSelect
+                style={pickerStyle}
+                placeholder={{
+                  label: "Select repetivity...",
+                  value: null,
+                }}
+                onValueChange={(value) => setRepetitivity(value)}
+                items={[
+                  { label: "Daily", value: "daily" },
+                  { label: "Weekly", value: "weekly" },
+                  { label: "Biweekly", value: "biweekly" },
+                  { label: "Monthly", value: "monthly" },
+                ]}
               />
             </View>
-            <Text style={styles.textNewActivity}>Sessions</Text>
+            <View paddingVertical={5} />
+            <View paddingVertical={5} style={styles.pickerList} />
+            <View style={styles.pickerRadius}>
+              <View style={styles.containerMultiselect}>
+                <MultiSelect
+                  hideTags
+                  items={items}
+                  uniqueKey="id"
+                  onSelectedItemsChange={onSelectedItemsChange}
+                  selectedItems={selectedItems}
+                  selectText="Trainning days"
+                  searchInputPlaceholderText="Trainning days"
+                  onChangeInput={(text) => console.log(text)}
+                  tagRemoveIconColor="#CCC"
+                  tagBorderColor="#CCC"
+                  tagTextColor="#CCC"
+                  selectedItemTextColor="#CCC"
+                  selectedItemIconColor="#CCC"
+                  itemTextColor="#000"
+                  displayKey="name"
+                  searchInputStyle={{ color: "grey" }}
+                  submitButtonColor="grey"
+                  submitButtonText="Submit"
+                  backgroundColor="white"
+                  margin={5}
+                />
+              </View>
+            </View>
+            <View>
+              <TouchableOpacity
+                onPress={selectImage}
+                style={{ alignContent: "center", alignItems: "center" }}
+              >
+                <Image
+                  style={{
+                    width: 55,
+                    height: 55,
+                    marginVertical: 30,
+                  }}
+                  source={require("../assets/upload-image-icon.png")}
+                ></Image>
+              </TouchableOpacity>
+              <View style={styles.imageContainer}>
+                <Image
+                  source={
+                    imageUri
+                      ? { uri: imageUri.localUri }
+                      : require("../assets/image-upload-mountain.png")
+                  }
+                  style={{ width: null, resizeMode: "contain", height: 210 }}
+                />
+              </View>
+            </View>
+            {/* <Text style={styles.textNewActivity}>SESSIONS</Text>
             <View>
               <View>
                 <Button onPress={showDatepicker} title="Select start date" />
@@ -209,7 +290,8 @@ export default function CreateActivity({ onSubmitActivity }) {
                   onChange={onChange}
                 />
               )}
-            </View>
+            </View> */}
+
             <TouchableOpacity
               style={styles.customBtnBG}
               onPress={() => {
@@ -224,6 +306,8 @@ export default function CreateActivity({ onSubmitActivity }) {
                   repeat,
                   spots,
                   activityDate,
+                  selectedItems,
+                  duration,
                 });
               }}
             >
@@ -240,9 +324,30 @@ const styles = StyleSheet.create({
   backgroundNewActivity: {
     backgroundColor: "black",
   },
+  closeIcon: {
+    marginTop: 30,
+    marginLeft: 310,
+
+    color: "white",
+  },
+  containerMultiselect: {
+    marginRight: 30,
+    marginLeft: 40,
+    marginTop: 10,
+    marginBottom: 5,
+    backgroundColor: "white",
+    borderRadius: 20,
+    borderRadius: 10,
+  },
   imageUpload: {
     alignItems: "center",
     alignContent: "center",
+  },
+  imageContainer: {
+    borderRadius: 15,
+    marginTop: 10,
+    marginBottom: 10,
+    overflow: "hidden",
   },
   underlineNewActivity: {
     borderBottomWidth: 3,
@@ -253,13 +358,14 @@ const styles = StyleSheet.create({
   containerChecked: {
     display: "flex",
     flexDirection: "row",
+    marginTop: 10,
   },
   checkBox: { marginTop: 10 },
   textNewActivity: {
     color: "white",
     textAlign: "center",
     fontSize: 15,
-    marginTop: 30,
+    marginTop: 20,
     marginBottom: 10,
   },
   textMaterialRequired: {
@@ -267,6 +373,7 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
     marginTop: 20,
+    fontSize: 11,
   },
   textInputForm: {
     borderBottomColor: "#ccc",
@@ -276,6 +383,28 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
     marginTop: 20,
+  },
+  textInputFormDescription: {
+    marginHorizontal: 20,
+    color: "white",
+    textDecorationLine: "none",
+  },
+  textInputFormDescriptionContainer: {
+    borderWidth: 1,
+    borderColor: "white",
+    borderRadius: 20,
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 35,
+  },
+  pickerRadius: {
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 5,
+    marginBottom: 5,
+    backgroundColor: "white",
+    borderRadius: 20,
+    borderRadius: 10,
   },
   customBtnText: {
     fontSize: 15,
@@ -295,5 +424,8 @@ const styles = StyleSheet.create({
     marginRight: 60,
     marginLeft: 60,
     marginTop: 10,
+    marginBottom: 30,
   },
+
+  //multiple select
 });

@@ -12,7 +12,7 @@ module.exports = (activityId, stream) => {
       const toStream = fs.createWriteStream(
         path.join(__dirname, `../data/activity/${activityId}.jpg`)
       );
-
+      //path.join(__dirname, `../data/activity/${activityId}.jpg`)
       stream.pipe(toStream);
 
       stream.once("end", resolve);

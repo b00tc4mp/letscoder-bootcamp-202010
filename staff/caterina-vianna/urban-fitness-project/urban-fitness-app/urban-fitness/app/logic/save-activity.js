@@ -12,6 +12,8 @@ export default function saveActivity(
   repeat,
   spots,
   activityDate,
+  selectedItems,
+  duration,
   callback
 ) {
   //TODO VALIDATIONS
@@ -34,6 +36,8 @@ export default function saveActivity(
       repeat,
       spots,
       activityDate,
+      selectedItems,
+      duration,
     }),
     (status, response) => {
       debugger;

@@ -58,6 +58,14 @@ module.exports = new Schema({
     type: Date,
     required: true,
   },
+  selectedItems: {
+    type: Array,
+    required: true,
+  },
+  duration: {
+    type: String,
+    required: true,
+  },
 
   // firstName: {
   //   type: String,

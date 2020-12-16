@@ -89,6 +89,8 @@ export default function Home({ token }) {
     repeat,
     spots,
     activityDate,
+    selectedItems,
+    duration,
   }) => {
     debugger;
     try {
@@ -105,16 +107,17 @@ export default function Home({ token }) {
           repeat,
           spots,
           activityDate,
+          selectedItems,
+          duration,
           (error, activityId) => {
             if (error) return alert(error.message);
             try {
               saveActivityImage(activityId, imageUri, (error) => {
                 if (error) return alert(error.message);
-
                 try {
                   retrieveActivity(token, (error, activities) => {
                     if (error) return alert(error.message);
-
+                    debugger;
                     setActivity(activities);
                     setView("list-mode");
                   });
@@ -136,6 +139,11 @@ export default function Home({ token }) {
     setView("listing-detail");
   }; */
 
+  const handleChangeToListingDetails = ({ item }) => {
+    setItem(item);
+    setView("listing-details");
+  };
+
   const handleSearch = (query) => {
     console.log(query);
     debugger;
@@ -155,7 +163,7 @@ export default function Home({ token }) {
     }
   };
 
-  const handleChangeToListingDetails = ({ item }) => {
+  const handleChangeToListingDetailsResult = ({ item }) => {
     setItem(item);
     setView("listing-details");
   };
@@ -209,19 +217,25 @@ export default function Home({ token }) {
                 paddingHorizontal: 20,
               }}
             >
-              <ResultsList results={results} />
+              <ResultsList
+                results={results}
+                onListingDetails={handleChangeToListingDetailsResult}
+              />
             </View>
           </>
         )}
 
         {view === "listing-details" && (
           <View>
-            <ListingDetailsScreen item={item} />
+            <ListingDetailsScreen item={item} onCloseProfile={handleListMode} />
           </View>
         )}
 
         {view === "trainer-mode" && (
-          <CreateActivity onSubmitActivity={handleSubmitActivity} />
+          <CreateActivity
+            onSubmitActivity={handleSubmitActivity}
+            onCloseProfile={handleChangeToEditProfile}
+          />
         )}
       </View>
     </View>

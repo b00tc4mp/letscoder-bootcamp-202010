@@ -10,7 +10,7 @@ module.exports = (ownerId) => {
     .then((user) => {
       if (!user) new NotFoundError(`user with id ${ownerId} not found`);
 
-      return Activity.find({ owner: ownerId }, null, {
+      return Activity.find({}, null, {
         sort: { date: -1 },
       }).lean();
     })

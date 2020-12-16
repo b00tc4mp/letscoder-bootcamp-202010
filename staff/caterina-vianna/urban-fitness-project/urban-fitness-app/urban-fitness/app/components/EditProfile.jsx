@@ -62,9 +62,8 @@ export default function EditProfile({ onCloseProfile, onTrainerMode }) {
 
 const styles = StyleSheet.create({
   closeIcon: {
-    marginTop: 10,
+    marginTop: 30,
     marginLeft: 310,
-
     color: "white",
   },
   containerProfile: {
