@@ -11,7 +11,7 @@ return <section>
     <button className="botonsinmas" onClick={onRetrieveUserGames}>MY GAMES</button>
    
     <ul className="results__ul">
-            {games&&games.map(({ id, name, description, gameconsole, budget }) =>
+            {games&&games.length&&games.map(({ id, name, description, gameconsole, budget }) =>
                 <li key={id} className="results__li">
                     <p className="results__li__title">{name}</p>
                     <img className="results__li__img" src={`${API_URL}/games/${id}/images`} width="500px" />

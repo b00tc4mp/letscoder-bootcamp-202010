@@ -86,7 +86,7 @@ export default function Home({onLogout}) {
             debugger
             retrieveUserGames(token, (error, games)=> {
                 if (error) return alert(error.message)
-                setGames(games)
+                setUserGames(games)
             }) 
         } catch (error) {
          alert(error.message)   
@@ -105,6 +105,6 @@ export default function Home({onLogout}) {
         {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
         {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames}/>}
-        {view === 'profile' && <Profile name={name} onRetrieveUserGames={handleRetrieveUserGames} games={games}/>}
+        {view === 'profile' && <Profile name={name} onRetrieveUserGames={handleRetrieveUserGames} games={userGames}/>}
     </section>
 }
