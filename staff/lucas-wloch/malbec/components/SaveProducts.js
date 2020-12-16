@@ -1,11 +1,14 @@
 import saveProducts from '../logic/save-products'
 import saveProductImage from '../logic/save-product-image'
+import {Feedback} from '../components'
 import './SaveProducts.sass'
 import { useState } from 'react'
 
 
 function SaveProducts({ onExit, category, onSaved }) {
     const [success, setSuccess] = useState()
+    const [error, setError] = useState()
+
 
 
     const normalizeBoolean = value => {
@@ -18,7 +21,6 @@ function SaveProducts({ onExit, category, onSaved }) {
 
     const handleSubmit = event => {
         event.preventDefault()
-        debugger
         let { target: { name: { value: name }, description: { value: description }, price: { value: price },
             glutenFree: { value: glutenFree }, vegan: { value: vegan }, alergenos: { value: alergenos }, category: { value: category },
             available: { value: available }, image
@@ -47,7 +49,7 @@ function SaveProducts({ onExit, category, onSaved }) {
 
                                 onSaved && onSaved()
                             })
-                            .catch(alert)
+                            .catch(error => setError(error))
                     else {
                         setSuccess(true)
 
@@ -58,9 +60,9 @@ function SaveProducts({ onExit, category, onSaved }) {
                         onSaved && onSaved()
                     }
                 })
-                .catch(alert)
+                .catch(error => setError(error))
 
-        else return alert('name, description or category is missing')
+        else return setError('name, description or category is missing')
     }
 
     return <>
@@ -68,6 +70,8 @@ function SaveProducts({ onExit, category, onSaved }) {
             <button onClick={onExit}>❌</button>
             {success || <h1 className="saveProducts__title" >Create your Product</h1>}
             {success && <h1 className="saveProducts__title" >OK, Product saved!</h1>}
+            {error && <Feedback error={error} onExit={setError()} />}
+            {/* <Feedback error={'hola'} onExit={() => setError()}/> */}
             <form className="saveProducts__form" onSubmit={handleSubmit}>
                 <div className="saveProducts__div">
                     <p>Name:</p>
@@ -79,7 +83,7 @@ function SaveProducts({ onExit, category, onSaved }) {
                 </div>
                 <div className="saveProducts__div">
                     <p>Price:</p>
-                    <input className="saveProducts__inputPrice" type="number" id="price" name="price" placeholder="product Price" />
+                    <input className="saveProducts__inputPrice" type="text" id="price" name="price" placeholder="product Price" />
                 </div>
                 <div className="saveProducts__div">
                     <p>Gluten Free:</p>

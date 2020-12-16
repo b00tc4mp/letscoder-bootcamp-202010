@@ -107,7 +107,7 @@ module.exports = {
 
         if (!(category === 'entrantes-parrilla' || category === 'empanadas' || category === 'ensaladas' || category === 'parrilla' || category === 'pescados'
         || category === 'otras-sugerencias' || category === 'acompañamientos-guarniciones' || category === 'postres' || category === 'aguas-refrescos'
-        || category === 'vinos' || category === 'cervezas')) throw new Error(`category ${category} does not exist`)
+        || category === 'vinos' || category === 'cervezas' || category === 'tragos')) throw new Error(`category ${category} does not exist`)
 
         // entrantes parrilla, empanadas, ensaladas, parrilla, pescados, otras sugerencias, acompañamientos/guarniciones, postres, aguas/refrescos
         // vinos, cervezas

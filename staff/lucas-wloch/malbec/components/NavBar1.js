@@ -15,7 +15,7 @@ const NavBar = (req) => {
         if (token)
             Promise.all([retrieveUser(token)])
                 .then(user => setUser(user))
-                .catch(alert)
+                .catch(error => alert(error))
 
     }, [])
 

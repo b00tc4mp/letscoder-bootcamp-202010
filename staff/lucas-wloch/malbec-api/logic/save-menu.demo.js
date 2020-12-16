@@ -1,50 +1,52 @@
 require('dotenv').config()
-const { models: { Menu }, mongoose } = require('malbec-data')
+const { models: { Menu, Product }, mongoose } = require('malbec-data')
 const { Types: { ObjectId } } = mongoose
 const saveMenu = require('./save-menu')
 
 const { env: { MONGODB_URL } } = process
-
-const findMenu = () => {
-    // const options = [
-    //     { path: 'entrantes', populate: 'parrilla', model: 'Product'}
-    // ]
-    const options = [
-        {path: 'entrantes.parrilla entrantes.empanadas entrantes.ensaladas', model: 'Product'},
-        {path: 'principales.parrilla principales.pescados principales.otrasSugerencias', model: 'Product'},
-        {path: 'bebidas.aguasRefrescos bebidas.vinos bebidas.cervezas bebidas.tragos', model: 'Product'},
-        {path: 'postres', model: 'Product'}
-    ]
-
-    return Menu.find().sort({ date: -1 }).lean().populate(options)
-}
 
 mongoose.connect(MONGODB_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true
 }).then(() => {
-    const menu = {
-        date: Date.now(),
-        entrantes: {
-            parrilla: [ObjectId("5fd39eac9923692dd4cc4c86"), ObjectId("5fd39ed39923692dd4cc4c87")],
-            empanadas: [ObjectId("5fd273fe6e06c444d854d6c6")],
-            ensaladas: [ObjectId("5fd273fe6e06c444d854d6c6")]
-        },
-        principales: {
-            parrilla: [ObjectId("5fd273fe6e06c444d854d6c6")],
-            pescados: [ObjectId("5fd273fe6e06c444d854d6c6")],
-            otrasSugerencias: [ObjectId("5fd273fe6e06c444d854d6c6")]
-        },
-        bebidas: {
-            aguasRefrescos: [ObjectId("5fd273fe6e06c444d854d6c6")],
-            vinos: [ObjectId("5fd273fe6e06c444d854d6c6")],
-            cervezas: [ObjectId("5fd273fe6e06c444d854d6c6")],
-            tragos: [ObjectId("5fd273fe6e06c444d854d6c6")]
-        },
-        postres: [ObjectId("5fd273fe6e06c444d854d6c6")]
-    }
-    return menu
+    return Product.find().lean()
+        .then(products => {
+            let parrilla = products.filter(product => product.category === 'parrilla')
+            let pescados = products.filter(product => product.category === 'pescados')
+            let empanadas = products.filter(product => product.category === 'empanadas')
+            let ensaladas = products.filter(product => product.category === 'ensaladas')
+            let entrantesParrilla = products.filter(product => product.category === 'entrantes-parrilla')
+            let acompañamientosGuarniciones = products.filter(product => product.category === 'acompañamientos-guarniciones')
+            let otrasSugerencias = products.filter(product => product.category === 'otras-sugerencias')
+            let postres = products.filter(product => product.category === 'postres')
+            let aguasRefrescos = products.filter(product => product.category === 'aguas-refrescos')
+            let vinos = products.filter(product => product.category === 'vinos')
+            let cervezas = products.filter(product => product.category === 'cervezas')
+            let tragos = products.filter(product => product.category === 'tragos')
+
+            const menu = {
+                entrantes: {
+                    parrilla : entrantesParrilla,
+                    empanadas,
+                    ensaladas,
+                    acompañamientosGuarniciones
+                },
+                principales: {
+                    parrilla,
+                    pescados,
+                    otrasSugerencias
+                },
+                bebidas: {
+                    aguasRefrescos,
+                    vinos,
+                    cervezas,
+                    tragos
+                },
+                postres
+            }
+            return menu
+        })
 })
     .then((menu) => saveMenu("5fc61cc871c3ab8240aecd97", menu))
     // .then(() => findMenu())

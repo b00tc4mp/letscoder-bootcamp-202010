@@ -6,10 +6,10 @@ module.exports = (userId, _menu) => {
     return User.findById(userId).lean()
         .then(user => {
             if (user) {
-
+                debugger
                 const { entrantes, principales, bebidas, postres } = _menu
 
-                return Menu.findOne().lean()
+                return Menu.findOne()
                     .then(menu => {
                         if (menu) {
                             menu.date = Date.now()
