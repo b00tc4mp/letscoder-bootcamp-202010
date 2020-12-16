@@ -9,6 +9,10 @@ module.exports = new Schema({
         type: String,
         required: true,
     },
+
+    liveDate: {
+        type: String
+    },
     
     date: {
         type: Date,

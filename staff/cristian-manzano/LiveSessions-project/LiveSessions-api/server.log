@@ -2936,3 +2936,45 @@ info 2020-12-15T17:01:08.313Z - stopping server
 info 2020-12-15T17:01:16.892Z - starting server
 info 2020-12-15T17:01:18.137Z - server running on port 4000
 info 2020-12-15T17:07:54.160Z - stopping server
+info 2020-12-15T17:09:31.563Z - starting server
+info 2020-12-15T17:09:32.110Z - server running on port 4000
+info 2020-12-15T18:48:28.031Z - stopping server
+info 2020-12-15T18:48:52.291Z - starting server
+info 2020-12-15T18:48:55.260Z - server running on port 4000
+info 2020-12-15T18:49:34.609Z - stopping server
+info 2020-12-15T18:50:22.666Z - starting server
+info 2020-12-15T18:50:28.424Z - server running on port 4000
+info 2020-12-15T18:55:56.193Z - starting server
+info 2020-12-15T18:55:59.473Z - server running on port 4000
+info 2020-12-15T19:09:43.508Z - starting server
+info 2020-12-15T19:09:47.089Z - server running on port 4000
+info 2020-12-15T20:33:20.646Z - starting server
+info 2020-12-15T20:33:21.874Z - server running on port 4000
+info 2020-12-15T20:36:15.633Z - starting server
+info 2020-12-15T20:36:16.876Z - server running on port 4000
+info 2020-12-15T20:39:35.600Z - starting server
+info 2020-12-15T20:39:36.497Z - server running on port 4000
+info 2020-12-15T20:53:36.050Z - starting server
+info 2020-12-15T20:53:37.152Z - server running on port 4000
+info 2020-12-15T20:57:46.483Z - stopping server
+info 2020-12-15T20:58:09.667Z - starting server
+info 2020-12-15T20:58:11.012Z - server running on port 4000
+info 2020-12-15T21:01:46.131Z - starting server
+info 2020-12-15T21:01:47.666Z - server running on port 4000
+info 2020-12-15T21:38:18.544Z - starting server
+info 2020-12-15T21:38:20.893Z - server running on port 4000
+info 2020-12-15T21:59:05.813Z - stopping server
+info 2020-12-15T21:59:16.739Z - starting server
+info 2020-12-15T21:59:17.843Z - server running on port 4000
+error 2020-12-15T22:57:29.656Z - NotFoundError: user with id 5fce33c7dc36a06835e32dd1 not found
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/retrieve-user.js:17:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T22:57:38.015Z - NotFoundError: user with id 5fce33c7dc36a06835e32dd1 not found
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/logic/retrieve-user.js:17:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T00:38:51.936Z - stopping server
+info 2020-12-16T00:39:01.730Z - starting server
+info 2020-12-16T00:39:02.599Z - server running on port 4000
+info 2020-12-16T00:45:26.195Z - stopping server

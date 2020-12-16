@@ -46,15 +46,15 @@ const {
           })
           .then((live) => live.id);
       } else
-        return Live.create({
+      return Live.create({
+          promoterId: ObjectId(promoterId),
+          artistId: ObjectId(artistId),
           title, 
           liveDate, 
           status, 
           duration, 
           payment, 
           description,
-          promoterId: ObjectId(promoterId),
-          artistId: ObjectId(artistId),
           date: new Date(),
         }).then((live) => live.id);
     });

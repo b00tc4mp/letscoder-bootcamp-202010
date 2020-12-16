@@ -41,7 +41,7 @@ export default function PetitionScreen({ onSubmitPetition }) {
                         >
                     </TextInput>
 
-                    <TextInput
+                    {/* <TextInput
                             placeholder=' Status'
                             style={styles.livesInputs}
                             placeholderTextColor="#343a40"
@@ -49,7 +49,7 @@ export default function PetitionScreen({ onSubmitPetition }) {
 
                             // defaultValue={(status ? ' ' + status : '')}
                         >
-                    </TextInput>
+                    </TextInput> */}
 
                     <TextInput
                             placeholder=' Duration'

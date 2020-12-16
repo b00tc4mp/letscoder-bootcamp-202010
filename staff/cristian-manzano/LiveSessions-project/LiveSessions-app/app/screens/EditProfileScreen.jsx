@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from "expo-image-picker";
 
-import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
 function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
@@ -41,7 +41,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                             <Image style={styles.logo} source={require('../assets/logo.png')} />
 
                         </View>
-
+        
                         <View>
                             
                             <Image
@@ -67,7 +67,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                             defaultValue={(user.fullname ? ' ' + user.fullname : '')}
                         >
                         </TextInput>
-
+                                
                         <TextInput
                             placeholder=' Artist Name'
                             style={styles.inputsSignUp}
@@ -85,15 +85,24 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                             defaultValue={user.city ? ' ' + user.city : ''}
                         >
                         </TextInput>
+                        
 
+                        {user.role === "ARTIST" ? 
                         <TextInput
                             placeholder=' Music Tags (Rock, Jazz, punk, etc)'
                             style={styles.inputsSignUp}
                             placeholderTextColor="#343a40"
                             onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
-                            defaultValue={user.tags ? ' ' + user.tags : ''}
+                            defaultValue={user.tags ? user.tags : ''}
                         >
-                        </TextInput>
+                        </TextInput> 
+                        : <TextInput
+                        onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
+                        defaultValue={user.tags ? ' ' + user.tags : ''}
+                    >
+                    </TextInput> }
+                        
+                        
 
                         <TextInput
                             placeholder=" Youtube Link"

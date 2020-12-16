@@ -1,13 +1,16 @@
 import React from "react";
 import { View, StyleSheet, Text, Image } from "react-native";
 
-export default function Card({ artistName, tags, image }) {
+export default function LivesCard({ title, liveDate, duration, status, payment, description }) {
   return (
     <View style={styles.card}>
-      <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.titleActivity}>{artistName}</Text>
-        <Text style={styles.subTitleActivity}>{tags}</Text>
+        <Text style={styles.titleActivity}>{title}</Text>
+        <Text style={styles.subTitleActivity}>Date: {liveDate}</Text>
+        <Text style={styles.subTitleActivity}>Duration: {duration}</Text>
+        <Text style={styles.subTitleActivity}>Payment: {payment}</Text>
+        <Text style={styles.subTitleActivity}>{description}</Text>
+        <Text style={styles.subTitleActivity}>Status: {status}</Text>
       </View>
     </View>
   );
@@ -20,12 +23,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     overflow: "hidden",
-    flexDirection: "row"
+    // flexDirection: "row"
+    
   },
 
   titleActivity: {
     color: "black",
     fontSize: 18,
+    alignSelf: "center"
     // fontFamily: Platform.OS === "ios" ? "Roboto" : "Avenir",
   },
 

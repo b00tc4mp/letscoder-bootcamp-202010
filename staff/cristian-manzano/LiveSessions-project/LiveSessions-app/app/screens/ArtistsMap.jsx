@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import ArtistsCard from "./ArtistsCard";
 import { FlatList, ScrollView, TouchableOpacity } from "react-native";
 
 export default function ArtistMap({ users, onGoToArtistProfile }) {
@@ -11,7 +11,7 @@ export default function ArtistMap({ users, onGoToArtistProfile }) {
         renderItem={({ item }) => (
           
           <TouchableOpacity onPress={ () => {onGoToArtistProfile ({ item })}}>
-            <Card
+            <ArtistsCard
               artistName={item.artistName}
               tags={item.tags}
               image={require('../assets/default-profile-image.png')}

@@ -16,6 +16,7 @@ import EditProfileScreen from './EditProfileScreen'
 import ArtistsMap from './ArtistsMap'
 import DetailArtistProfileScreen from './DetailArtistProfileScreen'
 import PetitionScreen from './PetitionScreen'
+import LivesMap from './LivesMap'
 
 
 export default function Home({ onHandleLogout }) {
@@ -23,7 +24,7 @@ export default function Home({ onHandleLogout }) {
   const [item, setItem] = useState()
   const [users, setUsers] = useState()
   const [lives, setLives] = useState()
-  const [view, setView] = useState('petitions')
+  const [view, setView] = useState('')
 
 
 
@@ -74,6 +75,7 @@ export default function Home({ onHandleLogout }) {
         AsyncStorage.getItem('token')
           .then(token => {
             try {
+              if (imageUri)
               saveUserImage(user.id, imageUri, (error) => {
                 if (error) return alert(error.message);
                 try {
@@ -86,6 +88,15 @@ export default function Home({ onHandleLogout }) {
                   Alert.alert(error.message)
                 }
               })
+              try {
+                retrieveUser(token, (error, user) => {
+                  if (error) return Alert.alert(error.message)
+
+                  setUser(user)
+                })
+              } catch (error) {
+                Alert.alert(error.message)
+              }
             } catch (error) {
               Alert.alert(error.message)
 
@@ -133,8 +144,8 @@ export default function Home({ onHandleLogout }) {
 
   const handleSubmitPetition = ({ title, date, status, duration, payment, description }) => {
     debugger
-    const artistId = item._id
     const promoterId = user.id
+    const artistId = item._id
     try {
       saveLive(promoterId, artistId, undefined, title, date, status, duration, payment, description, (error) => {
         if (error) return Alert.alert(error.message)
@@ -148,15 +159,16 @@ export default function Home({ onHandleLogout }) {
   }
 
   const handleRetrieveLives = () => {
-    
+
     AsyncStorage.getItem('token')
       .then(token => {
         try {
+          debugger
           retrieveLives(token, (error, lives) => {
             if (error) return alert(error.message);
-
             setLives(lives);
-            setView("list-mode");
+
+            setView("lives");
           });
         } catch (error) {
           alert(error.message);
@@ -175,8 +187,14 @@ export default function Home({ onHandleLogout }) {
         paddingHorizontal: 20,
       }}><ArtistsMap users={users} onGoToArtistProfile={handleonGoToArtistProfile} />
       </View>}
+
       { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} />}
       { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} />}
+      { view === 'lives' && <View style={{
+        backgroundColor: "#f8f4f4",
+        paddingHorizontal: 20,
+      }}><LivesMap lives={lives} user={user} />
+      </View>}
     </View>
   );
 }

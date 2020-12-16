@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSearch, onGoToCreateEvent, user }) {
+function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSearch, user }) {
     const [ query, setQuery ] = useState('')
-    const imageURL = `../../../LiveSessions-api/data/users/${user.id}.jpg`
+    // const imageURL = `../../../LiveSessions-api/data/users/5fce23f2e64b2e62d37a6e95.jpg`
     // const imageURL = `../assets/testImage.jpg`
     if (user.role === 'PROMOTER')
         return (
@@ -39,7 +39,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                             <View style={styles.artistProfileBody}>
 
                                 <TouchableOpacity onPress={onGoToEditProfile}>
-                                    <Image style={styles.profileAvatar} style={{ width: 75, height: 75 }} source={{uri:imageURL}} />
+                                <Avatar.Image style={styles.profileAvatar} size={120} source={require('../assets/default-profile-image.png')}  />
                                     <Text style={styles.artistName}>@{user.artistName}</Text>
                                 </TouchableOpacity>
 
@@ -108,11 +108,7 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
 
-    
 
-    profileAvatar: {
-        backgroundColor: "gray"
-    },
 
     petitionsButton: {
         fontSize: 25,

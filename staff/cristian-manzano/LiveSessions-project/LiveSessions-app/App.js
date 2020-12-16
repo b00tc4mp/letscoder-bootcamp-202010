@@ -17,7 +17,7 @@ import authenticateUser from './app/logic/authenticate-user';
 
 
 export default function App() {
-  const [view, setView] = useState('sign-in')
+  const [view, setView] = useState('')
 
   const handleGoToSignUp = () => {
     setView("sign-up")
@@ -64,7 +64,7 @@ export default function App() {
           .then(token => {
             token && setView('home')
       })
-        } catch(error) {
+        } catch {
           AsyncStorage.removeItem('token')
           setView('sign-in')
         }
