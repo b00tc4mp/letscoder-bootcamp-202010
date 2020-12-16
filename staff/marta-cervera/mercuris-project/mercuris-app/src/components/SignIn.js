@@ -9,7 +9,7 @@ function SignIn({ onSignIn, error }) {
         <form className="sign-in__form"onSubmit= { event => {
             event.preventDefault()
             
-            const { target: {email : { value: email}, password: { value:password}}} = event
+            const { target: {email : { value: email}, password: { value:password} } } = event
             
             onSignIn(email, password)
         }}>

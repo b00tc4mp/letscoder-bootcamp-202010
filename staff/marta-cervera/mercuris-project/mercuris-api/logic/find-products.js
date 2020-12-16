@@ -3,11 +3,11 @@ const { models: { User, Product }, mongoose: { Types: { ObjectId } } } = require
 const { validateQuery, validatePrice} = require('./helpers/validations')
 
 module.exports = function (userId, queryCompany, queryProduct, price, priceMin, priceMax) {
-    validateQuery(queryCompany)    
+    /* validateQuery(queryCompany)    
     validateQuery(queryProduct)    
     validatePrice(price)
     validatePrice(priceMin)
-    validatePrice(priceMax)
+    validatePrice(priceMax)   */
     
     
     const criteria = {}

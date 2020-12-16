@@ -1,5 +1,5 @@
 import { Feedback } from '.'
-
+import './Profile.sass'
 function Profile ({currentUser, onModify}){
 
     return <section className="profile">

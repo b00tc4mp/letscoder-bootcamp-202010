@@ -10,7 +10,8 @@ const {
     handleSaveProductImage,
     handleRetrieveProductImage,
     handleRetrieveProductDetail,
-    handleModifyUser   
+    handleModifyUser,
+    handleDeleteProduct   
     
 
 } = require('./handlers')
@@ -37,6 +38,8 @@ router.get('/api/products/:productId/images', withErrorHandling(handleRetrievePr
 router.get('/api/products/:productId', withErrorHandling(handleRetrieveProductDetail))
 //modifyUser
 router.post('/api/users/edit', jsonBodyParser, withErrorHandling(handleModifyUser))
+//deleteProduct
+router.delete('/api/products/:productId', withErrorHandling(handleDeleteProduct))
 
 module.exports = router
 

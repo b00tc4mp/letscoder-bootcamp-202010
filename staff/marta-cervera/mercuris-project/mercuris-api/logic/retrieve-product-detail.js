@@ -14,7 +14,7 @@ module.exports = function (productId) {
 
             return User
 
-                .findById(ownerId)
+                .findById(ownerId).lean()
                 .then(user => {
                     debugger
 

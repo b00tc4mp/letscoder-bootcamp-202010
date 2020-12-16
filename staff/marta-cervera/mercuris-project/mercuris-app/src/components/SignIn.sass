@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap')
-$font-main: 'Permanent Marker', cursive
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap')
+$font-main: 'Playfair Display', serif
 
 .sign-in
     background-color: #CBAFDA 
@@ -22,6 +21,33 @@ $font-main: 'Permanent Marker', cursive
         &__input
             margin: 10px auto
             border-radius: 5px
-            width: 50vw
-            height: 5vh
-            
+            width: 25vw
+        &__btn
+            height: 25px
+            width: 25px
+            text-align: center
+            justify-content: center  
+            margin: auto
+            border-radius: 5px
+            background-color: #c90959
+
+
+@media (max-width: 700px)
+    body
+    margin: 0px
+    padding: 0px
+
+.sign-in
+    &__title
+        font-family: $font-main
+        font-size: 8vw
+        content-align: center
+        align-content: center
+        justify-content: center
+    &__form
+        width: 40vw
+        height: 52vh
+        
+        &__btn
+            height: 50px
+            width: 60px

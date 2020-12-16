@@ -1,28 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap')
-$font-main: 'Permanent Marker', cursive
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap')
+$font-main: 'Playfair Display', serif
 .sign-up
-    background-color: #CBAFDA 
+    background-color: #c90959
     opacity: 0.8
+    height: 80vh
+    margin-top: 12vh
 
     &__title
         font-family: $font-main
-        font-size: 5vw
+        font-size: 6vw
+        content-align: center
+        align-content: center
+        justify-content: center
+      
+    
     &__form
-        width: 75%
+        width: 40vw        
+        height: 60vh
         margin: auto
-        padding: 1rem
-        overflow: auto
+        padding: 1rem        
         border-radius: 1rem
         display: flex
         flex-direction: column
-        border: 5px groove
+        border: 10px groove
 
         &__input
             margin: 10px auto
             border-radius: 5px
-            width: 80vw
+            
+        &__btn
+            height: 25px
+            width: 25px
+            text-align: center
+            justify-content: center  
+            margin: auto
+            border-radius: 5px
+            background-color: #c90959
             
 
+@media (max-width: 700px)
+    body
+    margin: 0px
+    padding: 0px
 
-    
+.sign-up
+    &__title
+        font-family: $font-main
+        font-size: 8vw
+        content-align: center
+        align-content: center
+        justify-content: center
+    &__form
+        width: 40vw
+        height: 52vh
+        &__btn
+            height: 50px
+            width: 60px
+        
+
+
+

@@ -6,6 +6,8 @@ import findProducts from './find-products'
 import saveProductImage from './save-product-image'
 import context from './context'
 import retrieveProductDetail from './retrieve-product-detail'
+import modifyUser from './modify-user'
+import deleteProduct from './delete-product'
 
 export {
     registerUser,
@@ -15,5 +17,7 @@ export {
     findProducts,    
     saveProductImage,
     context,
-    retrieveProductDetail
+    retrieveProductDetail,
+    modifyUser,
+    deleteProduct
 }

@@ -1,9 +1,33 @@
 import './DetailProduct.sass'
+import { deleteProduct, retrieveProduct } from '../logic'
+
+
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function DetailProduct({ result: {id, name, description, price, fullname, contact, city, address,phone} }) {   
+function DetailProduct({ result: {id, name, email, description, price, fullname, contact, city, address,phone} }) {   
     
+    const { token } = sessionStorage
+
+
+
+    const handleDeleteProduct = productId => {
+
+        try {
+            deleteProduct(productId, (error) => {
+
+                if (error) return alert(error.message)
+
+               
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+
+
+
 
 
 return <article className="result">
@@ -11,12 +35,13 @@ return <article className="result">
         <p className="result__p">Product Name: {name}</p>
         <p className="result__p">Description: {description}</p>
         <p className="result__p">Price: {price} €</p>
-        <p className="result__p">Company Name: {fullname}</p>
-        <p className="result__p">Contact: {contact}</p>
-        <p className="result__p">City: {city}</p>
-        <p className="result__p">Address: {address}</p>
-        <p className="result__p">Phone: {phone}</p>
-        
+        {!token && <p className="result__p">Company Name: {fullname}</p>}
+        {!token && <p className="result__p">Contact: {contact}</p>}
+        {!token && <a className="result__p" href={`mailto:${email}`}>E-mail: {email}</a>}
+        {!token && <p className="result__p">City: {city}</p>}
+        {!token && <p className="result__p">Address:{address}</p>}
+        {!token &&<a className="result__p" href={`tel:${phone}`}>Phone: {phone}</a>}
+        {token && <button className="result__button" onClick={() => handleDeleteProduct(id)}>DELETE PRODUCT</button>}
     </article> 
 }
 

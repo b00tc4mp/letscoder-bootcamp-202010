@@ -10,7 +10,7 @@ export default function ({error}) {
 
     const [results, setResults] = useState()
     const [result, setResult] = useState()
-
+    const [criteria, setCriteria] = useState()
 
     const { token } = sessionStorage
 
@@ -66,20 +66,43 @@ export default function ({error}) {
             alert(error.message)
         }
     }
+    /* 
+    const handleRefreshResults = () => {
+        const { queryCompany, queryProduct, price, priceMax, priceMin } = criteria;
+  
+        try {
+            
+            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, results) => {
 
+                if (error) return alert(error.message)
+
+                setResults(results)
+
+
+                setView(null)
+                setCriteria({ queryCompany, queryProduct, price, priceMin, priceMax});
+            
+
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    } */
     return (
         <>
-            <form onSubmit={handleFindProducts} className="searchform">                
+        <div className="searching">
+            <form onSubmit={handleFindProducts} className="searching__form">                
                 {!token && <input type="text" name="queryCompany" placeholder="Info Company" />}
-                <input type="text" name="queryProduct" placeholder="Info Product" />
-                <input type="number" name="price" placeholder="Introduce price" />
-                <input type="number" name="priceMin" placeholder="priceMin" />
-                <input type="number" name="priceMax" placeholder="priceMax" />
+                <input className="searching__form__input"type="text" name="queryProduct" placeholder="Info Product" />
+                <input className="searching__form__input"type="number" name="price" placeholder="Introduce price" />
+                <input className="searching__form__input" type="number" name="priceMin" placeholder="priceMin" />
+                <input className="searching__form__input"type="number" name="priceMax" placeholder="priceMax" />
                 <button>Search</button>
             </form>
 
             {results && results.length >0 && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
-            {!results && result && <DetailProduct result={result}/>}
+            {!results && result && <DetailProduct result={result} />}
+        </div>
         </>
     );
 }

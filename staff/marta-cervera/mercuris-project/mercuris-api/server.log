@@ -1419,3 +1419,451 @@ error 2020-12-15T20:30:45.556Z - TypeError: undefined is not a query
 info 2020-12-15T20:43:15.990Z - stopping server
 info 2020-12-15T20:43:21.175Z - starting server
 info 2020-12-15T20:43:21.310Z - undefined
+error 2020-12-15T21:08:08.630Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:11:04.862Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-15T21:11:57.609Z - starting server
+info 2020-12-15T21:12:04.023Z - stopping server
+info 2020-12-15T21:16:56.942Z - starting server
+info 2020-12-15T21:16:57.058Z - undefined
+error 2020-12-15T21:18:06.615Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:18:59.716Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-15T21:24:14.481Z - stopping server
+info 2020-12-15T21:24:17.689Z - starting server
+info 2020-12-15T21:24:17.798Z - undefined
+error 2020-12-15T21:25:26.382Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:31:03.888Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:7:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:31:05.553Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:7:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:31:06.536Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:7:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:31:07.120Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:7:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:31:07.575Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:7:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-15T21:36:36.334Z - stopping server
+info 2020-12-15T21:36:42.826Z - starting server
+info 2020-12-15T21:36:42.937Z - undefined
+error 2020-12-15T21:38:04.609Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T21:38:30.471Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:40:05.737Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T21:43:35.875Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:31:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-15T21:54:14.693Z - stopping server
+info 2020-12-15T21:54:17.764Z - starting server
+info 2020-12-15T21:54:17.863Z - undefined
+error 2020-12-15T21:56:35.422Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-15T21:57:00.923Z - stopping server
+info 2020-12-15T21:57:13.008Z - starting server
+info 2020-12-15T22:01:07.857Z - starting server
+info 2020-12-15T22:01:07.957Z - undefined
+error 2020-12-15T22:01:31.612Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-15T22:03:14.322Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-15T22:06:45.700Z - stopping server
+info 2020-12-15T22:06:57.002Z - starting server
+info 2020-12-15T22:06:57.102Z - undefined
+info 2020-12-16T08:31:16.404Z - stopping server
+info 2020-12-16T08:31:25.203Z - starting server
+info 2020-12-16T08:31:25.332Z - undefined
+info 2020-12-16T08:31:35.646Z - stopping server
+info 2020-12-16T08:58:37.942Z - starting server
+info 2020-12-16T08:58:38.046Z - undefined
+error 2020-12-16T09:26:27.443Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-16T11:01:17.334Z - TypeError: undefined is not a query
+    at validateQuery (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:51:46)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:6:5)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-16T11:12:52.203Z - stopping server
+info 2020-12-16T11:12:56.513Z - starting server
+info 2020-12-16T11:12:56.660Z - undefined
+info 2020-12-16T11:13:40.465Z - stopping server
+info 2020-12-16T11:13:46.044Z - starting server
+info 2020-12-16T11:13:46.166Z - undefined
+info 2020-12-16T11:14:59.357Z - stopping server
+info 2020-12-16T11:15:49.881Z - starting server
+info 2020-12-16T11:15:50.007Z - undefined
+info 2020-12-16T11:25:07.623Z - stopping server
+info 2020-12-16T11:25:10.640Z - starting server
+info 2020-12-16T11:25:10.773Z - undefined
+error 2020-12-16T12:10:39.421Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T16:36:43.154Z - stopping server
+info 2020-12-16T16:37:00.098Z - starting server
+info 2020-12-16T16:37:00.281Z - undefined
+error 2020-12-16T16:41:34.455Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\authenticate-user.js:13:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T16:53:12.850Z - stopping server
+info 2020-12-16T16:53:15.329Z - starting server
+info 2020-12-16T16:53:15.447Z - undefined
+error 2020-12-16T16:53:26.691Z - NotFoundError: product with id 5fd61189cd071a1f2061153f not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-product-detail.js:11:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T18:39:20.831Z - stopping server
+info 2020-12-16T18:39:25.674Z - starting server
+info 2020-12-16T18:39:25.831Z - undefined
+info 2020-12-16T18:50:54.154Z - stopping server
+info 2020-12-16T18:50:57.693Z - starting server
+info 2020-12-16T18:50:57.826Z - undefined
+error 2020-12-16T18:51:53.798Z - ReferenceError: deletePet is not defined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-delete-product.js:12:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-16T18:52:44.541Z - stopping server
+info 2020-12-16T18:52:47.345Z - starting server
+info 2020-12-16T18:52:47.485Z - undefined
+error 2020-12-16T18:53:44.966Z - TypeError: deleteProduct is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-delete-product.js:12:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-16T18:53:58.736Z - TypeError: deleteProduct is not a function
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-delete-product.js:12:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-16T18:56:22.415Z - stopping server
+info 2020-12-16T18:56:25.937Z - starting server
+info 2020-12-16T18:56:26.094Z - undefined
+error 2020-12-16T18:57:22.902Z - ReferenceError: petId is not defined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:16:38)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-delete-product.js:12:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+info 2020-12-16T18:58:28.498Z - stopping server
+info 2020-12-16T18:58:32.671Z - starting server
+info 2020-12-16T18:58:32.832Z - undefined
+error 2020-12-16T19:02:05.275Z - NotFoundError: product with id 5fd9ec58b85be935e8975cb7 not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:18:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

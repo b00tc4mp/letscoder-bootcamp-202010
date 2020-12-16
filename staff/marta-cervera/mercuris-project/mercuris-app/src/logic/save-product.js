@@ -4,10 +4,10 @@ import context from './context'
 
 export default (function saveProduct(productId, token, name, description, price, callback) {
     debugger
-    validateToken(token)
     if (typeof productId !== 'undefined') validateId(productId)
-    validateDescription(description)
+    validateToken(token)
     validateName(name)
+    validateDescription(description)
     validatePrice(price)
     validateCallback(callback)
 

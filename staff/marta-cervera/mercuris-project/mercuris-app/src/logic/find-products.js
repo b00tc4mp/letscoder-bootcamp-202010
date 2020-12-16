@@ -5,7 +5,7 @@ import context from './context'
 export default (function (token, queryCompany, queryProduct, price, priceMin, priceMax, callback) {
     if (token !== undefined) validateToken(token) 
     validateCallback(callback)
-
+debugger
 
     const { API_URL } = this
 
