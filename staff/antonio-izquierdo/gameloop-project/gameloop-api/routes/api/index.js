@@ -10,7 +10,8 @@ const {
     handleRetrieveGame,
     handleSaveGameImage,
     handleRetrieveGameImage,
-    handleRetrieveUserGames
+    handleRetrieveUserGames,
+    handleDeleteGame
 } = require('./handlers')
 
 const withErrorHandling = require('./helpers/with-error-handling')
@@ -35,6 +36,7 @@ router.get('/api/games/:gameId/images', withErrorHandling(handleRetrieveGameImag
 
 router.get('/api/user/games', withErrorHandling(handleRetrieveUserGames))
 
+router.delete('/api/games/:gameId', withErrorHandling(handleDeleteGame))
 //'http://localhost:4000/api/games/?query=<query>&gameconsole=<gameconsole>&budget=<budget>&priceMin=<priceMin>&priceMax=<priceMax>'
 
 module.exports = router

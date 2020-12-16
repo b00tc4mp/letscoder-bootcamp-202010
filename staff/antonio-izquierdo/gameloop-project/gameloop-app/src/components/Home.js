@@ -11,6 +11,7 @@ import SignIn from './SignIn'
 export default function Home({onLogout}) {
 
     const [name, setName] = useState()
+    const [criteria, setCriteria] = useState()
     const [games, setGames] = useState()
     const [userGames, setUserGames] = useState()
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
@@ -93,6 +94,20 @@ export default function Home({onLogout}) {
         }
     }
 
+    const handleRefreshGames = () => {
+        try {
+            retrieveUserGames(token, (error, games) => {
+
+                if (error) return alert(error.message)
+
+                setUserGames(games)
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+
     return <section className="home">
         {token ? <h1>Hello, {name}!</h1> : <> </>}
         {<button className="home__logout" onClick={() => {
@@ -105,6 +120,6 @@ export default function Home({onLogout}) {
         {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
         {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames}/>}
-        {view === 'profile' && <Profile name={name} onRetrieveUserGames={handleRetrieveUserGames} games={userGames}/>}
+        {view === 'profile' && <Profile name={name} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames }/>}
     </section>
 }

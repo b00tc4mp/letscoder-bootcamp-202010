@@ -7,5 +7,6 @@ module.exports = {
     retrieveGame: require('./retrieve-game'),
     saveGameImage: require('./save-game-image'),
     retrieveGameImage: require('./retrieve-game-image'),
-    retrieveUserGames: require('./retrieve-user-games')
+    retrieveUserGames: require('./retrieve-user-games'),
+    deleteGame: require('./delete-game')
 }
