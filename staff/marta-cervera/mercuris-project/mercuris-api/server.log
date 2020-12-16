@@ -1867,3 +1867,7 @@ info 2020-12-16T18:58:32.832Z - undefined
 error 2020-12-16T19:02:05.275Z - NotFoundError: product with id 5fd9ec58b85be935e8975cb7 not found
     at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:18:33
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T20:01:15.230Z - NotFoundError: product with id 5fda66fba2ffbc23fc5f5bff not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:18:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

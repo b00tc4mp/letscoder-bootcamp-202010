@@ -14,10 +14,10 @@ function SignIn({ onSignIn, error }) {
             onSignIn(email, password)
         }}>
             { error && <Feedback error= {error}/>}          
-            <input type="email" name="email" placeholder="e-mail"/>
-            <input type="password" name="password" placeholder="password" />
+            <input className="sign-in__form__input"type="email" name="email" placeholder="e-mail"/>
+            <input className="sign-in__form__input" type="password" name="password" placeholder="password" />
             
-            <button>Send</button>
+            <button className="sign-up__form__btn">Send</button>
             
 
         </form>

@@ -43,8 +43,9 @@ export default function ({error}) {
                 if (error) return alert(error.message)
 
                 setResults(results)
+                setCriteria({ queryCompany, queryProduct, price, priceMin, priceMax})
 
-
+            
                 setView('find-products')
 
             })
@@ -66,7 +67,7 @@ export default function ({error}) {
             alert(error.message)
         }
     }
-    /* 
+    
     const handleRefreshResults = () => {
         const { queryCompany, queryProduct, price, priceMax, priceMin } = criteria;
   
@@ -77,8 +78,6 @@ export default function ({error}) {
                 if (error) return alert(error.message)
 
                 setResults(results)
-
-
                 setView(null)
                 setCriteria({ queryCompany, queryProduct, price, priceMin, priceMax});
             
@@ -87,7 +86,7 @@ export default function ({error}) {
         } catch (error) {
             alert(error.message)
         }
-    } */
+    } 
     return (
         <>
         <div className="searching">
@@ -101,7 +100,7 @@ export default function ({error}) {
             </form>
 
             {results && results.length >0 && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
-            {!results && result && <DetailProduct result={result} />}
+            {!results && result && <DetailProduct result={result} doRefreshProducts={handleRefreshResults} />}
         </div>
         </>
     );

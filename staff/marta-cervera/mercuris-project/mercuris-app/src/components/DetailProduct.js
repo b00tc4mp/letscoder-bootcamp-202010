@@ -5,7 +5,7 @@ import { deleteProduct, retrieveProduct } from '../logic'
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function DetailProduct({ result: {id, name, email, description, price, fullname, contact, city, address,phone} }) {   
+function DetailProduct({ result: {id, name, email, description, price, fullname, contact, city, address,phone},doRefreshProducts }) {   
     
     const { token } = sessionStorage
 
@@ -17,7 +17,8 @@ function DetailProduct({ result: {id, name, email, description, price, fullname,
             deleteProduct(productId, (error) => {
 
                 if (error) return alert(error.message)
-
+                
+                doRefreshProducts()
                
             })
         } catch (error) {
