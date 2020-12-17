@@ -15,8 +15,11 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                     behavior={Platform.OS == "ios" ? "padding" : "height"}
                 >
                         <View style={styles.artistProfileHeader}>
-                            <TouchableOpacity onPress={onGoToProfile}>
-                                <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} />
+                        <TouchableOpacity onPress={onGoToEditProfile}>
+                                <Image style={styles.profileAvatar}
+                                    source={{ uri: `${imageURL}` }}
+                                    style={{ width: 50, height: 50, borderRadius: 60 / 2 }} />
+
                             </TouchableOpacity>
 
                             <TouchableOpacity onPress={onLogOut}>
