@@ -53,6 +53,12 @@ export default withRouter(props => {
 
     props.history.push('/sign-in')
 }
+
+  const handleGoToSignIn = () => {
+  
+    props.history.push('/sign-in')
+  
+  }
   
 
   const { token } = sessionStorage
@@ -64,7 +70,7 @@ export default withRouter(props => {
       <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} error ={error}/>} />
       <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} onGoToMainSearch = {handleGoToMainSearch} error ={error}/>} />
       <Route exact path='/' render={() => token ? <Home onSignIn={handleSignIn} onGoToMainSearch = {handleGoToMainSearch} error ={error} onLogout = {handleLogout}/> : <Redirect to="/sign-in" />} />
-      <Route path='/mainSearch' render = {()=> <SearchPets error ={error}/> }/>
+      <Route path='/mainSearch' render = {()=> <SearchPets error ={error} onGoToSignIn={handleGoToSignIn}/> }/>
       
 
       </header>

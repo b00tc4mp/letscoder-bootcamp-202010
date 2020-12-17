@@ -4,7 +4,7 @@ import { useState } from "react";
 import { findPets } from "../logic";
 import RetrievePet from "./RetrievePet";
 
-function SearchPets({ onError }) {
+function SearchPets({ onError, onGoToSignIn }) {
   const [pets, setPets] = useState();
   const [petId, setPetId] = useState();
   const [criteria, setCriteria] = useState();
@@ -88,8 +88,11 @@ function SearchPets({ onError }) {
         } 
 
     };
+
+
     return (
     <>
+      {!token && <button className="search__logout" onClick={ onGoToSignIn }>Go To SignIn</button>}
       {!token && <h1 className="search__title">Find your pet</h1>}
       <form className="search" onSubmit={handleResults}>
         {!token && (

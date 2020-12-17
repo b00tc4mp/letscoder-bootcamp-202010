@@ -7,12 +7,14 @@ import SignIn from './SignIn'
 import Feedback from './Feedback'
 
 
+
 export default function ({onSignIn, onGoToMainSearch, onLogout}) {
+    
 
     const [error, setError] = useState(null)
-
     const [view, setView] = useState('home')
     const [name, setName] = useState()
+    
     
  
     function handleError(error) {
@@ -58,7 +60,7 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
     const handleGoToCreate = () => {
 
         setView('create-pet')
-      }
+      } 
 
 
  
@@ -79,11 +81,9 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
 
     {error && <h2 className="home__feedback"><Feedback error={error}/></h2>}
 
-    
-
     {token && view === 'home' && <div><img className="home__img"src="variosperretes4.jpg"/></div>}
 
-    {token && view === 'search-pet' && <SearchPets onError ={handleError}/>}
+    {token && view === 'search-pet' && <SearchPets onError ={handleError} />}
     {token && view === 'create-pet' && <CreatePet onCreated={handleCreated} onError ={handleError} />}
     {!token && view === 'sign-in' && <SignIn onGoToMainSearch={onGoToMainSearch} onSignIn= {onSignIn}/>}
 
