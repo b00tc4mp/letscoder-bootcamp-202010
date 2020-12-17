@@ -3,13 +3,13 @@ require('dotenv').config()
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
-const detailPet = require('./detail-pet')
+const retrievePet = require('./retrieve-pet')
 const { mongoose: { Types: { ObjectId } }, models: { User, Pet}, mongoose } = require('adogtapp-data')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-describe('detailPet()', () => {
+describe('RetrievePet()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
@@ -42,7 +42,7 @@ describe('detailPet()', () => {
         })
 
         it('shoud succed on a existing pet', () => {
-            return detailPet(petId)
+            return retrievePet(petId)
             .then(pet => {
                 expect(ObjectId.isValid(pet.id)).be.true
 
@@ -70,7 +70,7 @@ describe('detailPet()', () => {
         )
 
         it('shoud fail when pet does not exists', () => 
-            detailPet(petId)
+            retrievePet(petId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
                     expect(error.message).to.equal(`pet with id ${petId} not found`)
@@ -93,7 +93,7 @@ describe('detailPet()', () => {
                     })
             
                     it('should fail on an empty or blank name', () => {
-                        expect(() => detailPet(petId, () => { })).to.throw(ContentError, 'id is empty or blank')
+                        expect(() => retrievePet(petId, () => { })).to.throw(ContentError, 'id is empty or blank')
                     })
                 })
                 describe('when id is not a string', () => {
@@ -105,7 +105,7 @@ describe('detailPet()', () => {
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => detailPet(petId, () => { })).to.throw(TypeError, `${petId} is not an id`)
+                        expect(() => retrievePet(petId, () => { })).to.throw(TypeError, `${petId} is not an id`)
                     })
             
                 })
@@ -118,7 +118,7 @@ describe('detailPet()', () => {
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => detailPet(petId, () => { })).to.throw(LengthError, `id length ${petId.length} is not 24`)
+                        expect(() => retrievePet(petId, () => { })).to.throw(LengthError, `id length ${petId.length} is not 24`)
                     })
                     
                 })
