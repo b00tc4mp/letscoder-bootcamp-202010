@@ -16,6 +16,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user 
     const [description, setDescription] = useState(user.description)
 
     const [imageUri, setImageUri] = useState();
+    
     const requestPermission = async () => {
         const { granted } = await ImagePicker.requestCameraPermissionsAsync();
         if (!granted) alert("You need to enable permission to access the library");
@@ -54,7 +55,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user 
                                 >Edit Profile</TextInput>
                         <View style={styles.editProfileForm}>
                             <View style={styles.imagecontainer}>
-
+                            
                                 <Image
                                     source={
                                         imageUri

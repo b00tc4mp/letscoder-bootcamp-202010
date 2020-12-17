@@ -5,8 +5,8 @@ import { Avatar } from 'react-native-paper';
 function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSearch, onGoToProfile, user }) {
     const [ query, setQuery ] = useState('')
     const userId = user.id
-    // const imageURL = `../../../LiveSessions-api/data/users/5fce23f2e64b2e62d37a6e95.jpg`
-    // const imageURL = `../assets/testImage.jpg`
+    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
+
     if (user.role === 'PROMOTER')
         return (
 
@@ -43,7 +43,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
 
                                 <TouchableOpacity onPress={onGoToEditProfile}>
                                 <Image style={styles.profileAvatar}  
-                                source={{uri: `http://192.168.1.131:4000/api/users/${userId}/images`}}
+                                source={{uri: `${imageURL}`}}
                                 style={{width: 150, height: 170, borderRadius: 60/2}}/>
                                     <Text style={styles.artistName}>@{user.artistName}</Text>
                                 </TouchableOpacity>

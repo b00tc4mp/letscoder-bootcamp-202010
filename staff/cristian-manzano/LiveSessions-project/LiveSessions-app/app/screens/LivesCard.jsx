@@ -1,11 +1,15 @@
 import React from "react";
-import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, TextInput, Image, TouchableOpacity } from "react-native";
 
 export default function LivesCard({ title, liveDate, duration, status, payment, description }) {
   return (
     <View style={styles.card}>
       <View style={styles.detailsContainer}>
-        <Text style={styles.titleActivity}>{title}</Text>
+        <View style={styles.livesCardHeader}>
+          
+          <TextInput style={styles.titleActivity}
+          editable={false}>{title}</TextInput>
+        </View>
         <Text style={styles.subTitleActivity}>Date: {liveDate}</Text>
         <Text style={styles.subTitleActivity}>Duration: {duration}</Text>
         <Text style={styles.subTitleActivity}>Payment: {payment}</Text>
@@ -23,15 +27,26 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     marginTop: 10,
     marginBottom: 10,
+    
     overflow: "hidden",
+    
     // flexDirection: "row"
 
   },
 
+  livesCardHeader: {
+    
+  },
+
   titleActivity: {
-    color: "black",
-    fontSize: 18,
-    alignSelf: "center"
+    // marginTop: "-10%",
+    // marginBottom: "10%",
+    fontSize: 30,
+    borderBottomWidth: 5,
+    borderColor: "lightgray",
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
     // fontFamily: Platform.OS === "ios" ? "Roboto" : "Avenir",
   },
 
@@ -44,11 +59,9 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: 7,
+    
   },
-  subTitle: {
-    color: "green",
-    fontWeight: "bold",
-  },
+
 
   buttonsContainer: {
     flexDirection: "row",

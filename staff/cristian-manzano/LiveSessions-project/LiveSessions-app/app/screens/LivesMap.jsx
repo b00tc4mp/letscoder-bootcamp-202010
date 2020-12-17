@@ -60,6 +60,6 @@ const styles = StyleSheet.create({
   livesList: {
     marginTop: "10%",
     width: "90%",
-    height: "70%"
+    height: "80%"
   }
 });

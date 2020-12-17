@@ -50,7 +50,7 @@ function SignUpScreen({ onSignUp }) {
 
                                 <TextInput
                                     secureTextEntry={true}
-                                    onSubmitEditing={onSignUp}
+                                    onSubmitEditing={() => { onSignUp({ email, fullname, password, role }) }}
                                     placeholder=" Password"
                                     style={styles.inputsSignUp}
                                     placeholderTextColor="#343a40"

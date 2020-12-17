@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
 function ArtistProfileScreen({ onGoToEditProfile, onGoToLivePetitions, onLogOut, onGoToProfile, user }) {
     const userId = user.id
+    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
         return (
 
             <SafeAreaView style={styles.artistProfileContainer}>
@@ -26,7 +27,7 @@ function ArtistProfileScreen({ onGoToEditProfile, onGoToLivePetitions, onLogOut,
 
                                 <TouchableOpacity onPress={onGoToEditProfile}>
                                 <Image style={styles.profileAvatar}  
-                                source={{uri: `http://192.168.1.131:4000/api/users/${userId}/images`}}
+                                source={{uri: `${imageURL}`}}
                                 style={{width: 150, height: 170, borderRadius: 60/2}}/>
                                 <Text style={styles.artistName}>@{user.artistName}</Text>
                                 </TouchableOpacity>
