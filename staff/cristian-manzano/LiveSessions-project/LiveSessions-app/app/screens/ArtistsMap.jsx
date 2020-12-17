@@ -3,7 +3,7 @@ import ArtistsCard from "./ArtistsCard";
 import { FlatList, ScrollView, TouchableOpacity, View, StyleSheet, Image} from "react-native";
 
 export default function ArtistMap({ users, onGoToArtistProfile, onGoToProfile }) {
-  const userId = item._id
+  // const userId = item._id
   return (
     <View>
       <View style={styles.livesListHeader}>
@@ -21,7 +21,7 @@ export default function ArtistMap({ users, onGoToArtistProfile, onGoToProfile })
               <ArtistsCard
                 artistName={item.artistName}
                 tags={item.tags}
-                image= {{uri: `http://192.168.1.131:4000/api/users/${userId}/images`}}
+                image= {{uri: `http://192.168.1.131:4000/api/users/${item._id}/images`}}
               />
               </TouchableOpacity>
             
