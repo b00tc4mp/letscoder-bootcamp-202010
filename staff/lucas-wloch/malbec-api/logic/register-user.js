@@ -1,16 +1,20 @@
-const { validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
+const { validateKey, validateEmail, validatePassword, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
-const { ConflictError } = require('../errors')
+const { ConflictError, AuthError } = require('../errors')
 const { models: { User } } = require('malbec-data')
 
 const bcryptjs = require('bcryptjs')
 
 
-module.exports = (fullname, email, password) => {
+module.exports = (key, fullname, email, password) => {
+    validateKey(key)
     validateFullname(fullname)
     validateEmail(email)
     validatePassword(password)
 
+    const SECRET_KEY = process.env.SECRET_KEY
+
+    if(key !== SECRET_KEY) throw new AuthError('wrong secret key')
 
     return semaphore(() => {
         return User

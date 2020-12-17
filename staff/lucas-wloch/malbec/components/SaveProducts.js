@@ -89,7 +89,7 @@ function SaveProducts({ onExit, category, onSaved }) {
                     <p>Gluten Free:</p>
                     <select className="saveProducts__gluten-free" name="glutenFree" id="gluten-free">
                         <option className="saveProducts__option" value={false} defaultValue >No</option>
-                        <option className="saveProducts__option" value={true} >yes</option>
+                        <option className="saveProducts__option" value={true} >Yes</option>
                     </select>
                     <p>Vegan:</p>
                     <select className="saveProducts__vegan" name="vegan" id="vegan">
@@ -118,6 +118,7 @@ function SaveProducts({ onExit, category, onSaved }) {
                         <option className="saveProducts__optionC" value="aguas-refrescos" >aguas-refrescos</option>
                         <option className="saveProducts__optionC" value="vinos">vinos</option>
                         <option className="saveProducts__optionC" value="cervezas">cervezas</option>
+                        <option className="saveProducts__optionC" value="tragos">tragos</option>
                     </select>
                     {/* <div className="saveProducts__div"> */}
                     <p>Available:</p>

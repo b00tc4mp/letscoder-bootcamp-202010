@@ -1,5 +1,5 @@
 import React from 'react';
-import NextDocument, {Html, Head, Main, NextScript} from 'next/document';
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 
 class Document extends NextDocument {
     static async getInitialProps(ctx) {
@@ -16,6 +16,10 @@ class Document extends NextDocument {
         return (
             <Html>
                 <Head>
+                    <link rel="icon"
+                        type="image/png"
+                        href="/icon.png" />
+                    {/* link favIcon */}
                     {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
                     <style>
                         {

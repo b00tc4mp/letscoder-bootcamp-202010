@@ -118,6 +118,7 @@ const EditProduct = ({ product, onSaved }) => {
                     <option className="editProduct__optionC" value="aguas-refrescos" >aguas-refrescos</option>
                     <option className="editProduct__optionC" value="vinos">vinos</option>
                     <option className="editProduct__optionC" value="cervezas">cervezas</option>
+                    <option className="editProduct__optionC" value="tragos">Tragos</option>
                 </select>
                 {/* <div className="editProduct__div"> */}
                 <p>Available:</p>

@@ -2,6 +2,7 @@ require('dotenv').config()
 const { models: { Menu, Product }, mongoose } = require('malbec-data')
 const { Types: { ObjectId } } = mongoose
 const saveMenu = require('./save-menu')
+const findMenu = require('./find-menu')
 
 const { env: { MONGODB_URL } } = process
 
@@ -12,6 +13,7 @@ mongoose.connect(MONGODB_URL, {
 }).then(() => {
     return Product.find().lean()
         .then(products => {
+            debugger
             let parrilla = products.filter(product => product.category === 'parrilla')
             let pescados = products.filter(product => product.category === 'pescados')
             let empanadas = products.filter(product => product.category === 'empanadas')
@@ -27,7 +29,7 @@ mongoose.connect(MONGODB_URL, {
 
             const menu = {
                 entrantes: {
-                    parrilla : entrantesParrilla,
+                    parrilla: entrantesParrilla,
                     empanadas,
                     ensaladas,
                     acompañamientosGuarniciones
@@ -49,13 +51,8 @@ mongoose.connect(MONGODB_URL, {
         })
 })
     .then((menu) => saveMenu("5fc61cc871c3ab8240aecd97", menu))
-    // .then(() => findMenu())
-    // .then(([menu]) => menu)
-    // .then(([menu]) => {
-    //     const entrantes = menu.entrantes
-    //     return entrantes
-    // })
-    .then(console.log)
+    .then(() => findMenu())
+    .then(menu => console.dir(menu))
     .catch(error => console.error(error))
     .then(mongoose.disconnect)
 

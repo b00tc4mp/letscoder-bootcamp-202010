@@ -1,4 +1,4 @@
-import { Layout, Footer, FeedbackAccess } from '../components'
+import { Layout, Feedback, FeedbackAccess } from '../components'
 import '../components/Login.sass'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -39,12 +39,16 @@ const Login = (req, res) => {
         <section className="login">
             <Link href="/access"><button className="login__back" >◀ back</button></Link>
             <h2 className="login__h2">Sign In</h2>
+            <p className="register__p1">Solo para administradores</p>
+
             <form className="login__form" onSubmit={handleSubmit}>
                 <p className="login__p">E-mail Address</p>
                 <input className="login__input" name="email" type="text" placeholder="email@example.com" />
                 <p className="login__p">Password</p>
                 <input className="login__input" name="password" type="password" placeholder="********" />
                 {error && <FeedbackAccess error={error} />}
+                {/* {error && <Feedback error={error} />} */}
+
                 <br /> <button className="login__button">Sign In</button>
             </form>
             <p className="login__p2">Have an account?<Link href="/register"><span className="login__span" >Register here</span></Link></p>

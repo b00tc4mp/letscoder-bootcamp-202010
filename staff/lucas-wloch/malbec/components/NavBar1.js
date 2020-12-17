@@ -44,10 +44,12 @@ const NavBar = (req) => {
             <a className="closebtn" onClick={closeNav}>&times;</a>
             <div className="overlay-content">
             <Link href="/"><a className="navBar__a">Home</a></Link>
+            <Link href="/nuestro-local"><a className="navBar__a" >Nuestro Local</a></Link>
             <Link href="/carta"><a className="navBar__a">Nuestra Carta</a></Link>
             {user || <Link href="/access"><a className="navBar__a">Acceder</a></Link>}
             {user && <a className="navBar__a" onClick={handleLogOut} >Log Out</a>}
             {user && <Link href="/my-products"><a className="navBar__a" >My Products</a></Link>}
+            <a href="http://www.google.com/maps/place/41.486020,2.039880/@41.486020,2.039880,17z" className="navBar__a">Ubicacion</a>
 
             </div>
         </div>

@@ -134,6 +134,11 @@ module.exports = {
     
     validateStream(stream) {
         // TODO where the f*ck is the the class to validate this instance!!?
+    },
+    validateKey(key){
+        if (typeof key !== 'string') throw new TypeError(key + ' is not a key')
+
+        if (!key.trim().length) throw new Error('key is empty or blank')
     }
 
 }

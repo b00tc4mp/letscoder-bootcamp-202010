@@ -1,4 +1,4 @@
-import { Layout, FeedbackAccess, Footer } from '../components'
+import { Layout, FeedbackAccess, Feedback } from '../components'
 import '../components/Register.sass'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
@@ -23,13 +23,14 @@ const Register = () => {
         var fullname = event.target.fullname.value
         var email = event.target.email.value
         var password = event.target.password.value
+        var key = event.target.key.value
 
-        handleRegister(fullname, email, password)
+        handleRegister(key, fullname, email, password)
     }
 
-    const handleRegister = (fullname, email, password) => {
+    const handleRegister = (key, fullname, email, password ) => {
         try {
-            registerUser(fullname, email, password)
+            registerUser(key, fullname, email, password)
                 .then(() => setRegisterSuccess(true))
                 .catch(error => setError(error.message))
         } catch (error) {
@@ -41,7 +42,8 @@ const Register = () => {
     return <><Layout>
         {registerSuccess || <section className="register">
             <Link href="/access"><button className="register__back" >◀ back</button></Link>
-            <h2 className="register__h2">Sign Up</h2>
+            <h2 className="register__h2">Sign Up </h2>
+            <p className="register__p1">Solo para administradores</p>
             <form className="register__form" onSubmit={handleSubmit}>
                 <p className="register__p">Fullname</p>
                 <input className="register__input" name="fullname" type="text" placeholder="Fullname" />
@@ -49,7 +51,11 @@ const Register = () => {
                 <input className="register__input" name="email" type="text" placeholder="email@example.com" />
                 <p className="register__p">Password</p>
                 <input className="register__input" name="password" type="password" placeholder="********" />
+                <p className="register__p">Secret key</p>
+                <input className="register__input" name="key" type="password" placeholder="********" />
+
                 {error && <FeedbackAccess error={error} />}
+                {/* {error && <Feedback error={error} />} */}
                 <br /> <button className="register__button">Sign Up</button>
             </form>
             <p className="register__p2">Have an account?<Link href="/login"><span className="register__span" >Log in here</span></Link></p>

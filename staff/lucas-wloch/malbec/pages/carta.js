@@ -1,4 +1,4 @@
-import { Footer, Layout } from '../components'
+import { Footer, Layout, ShowProduct } from '../components'
 import '../components/Carta.sass'
 // import { retrieveProducts } from '../api/logic'
 import { useEffect, useState } from 'react'
@@ -8,6 +8,7 @@ import { findMenu } from '../logic'
 const Carta = () => {
     const [menu, setMenu] = useState()
     const [error, setError] = useState()
+    const [detail, setDetail] = useState()
 
 
     const API_URL = process.env.NEXT_APP_API_URL
@@ -30,6 +31,7 @@ const Carta = () => {
         <div className="carta">
             <h2 className="carta__title">Nuestra Carta</h2>
             {error && <Feedback error={error} onExit={setError()} />}
+            {detail && <ShowProduct product={detail} onExit={() => setDetail()} />}
             {menu && <div className="carta__container">
                 <div className="carta__references">
                     <div className="carta__glutenFree">
@@ -44,188 +46,199 @@ const Carta = () => {
                 <h2 className="carta__h2">Entrantes</h2>
                 {/* <h3 className="carta__h3">Parrilla</h3> */}
                 <ul className="carta__ul">
-                    {menu.entrantes.parrilla.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.entrantes.parrilla.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
                 </ul>
                 {/* <h3 className="carta__h3">Empanadas</h3> */}
                 <ul className="carta__ul">
-                    {menu.entrantes.empanadas.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.entrantes.empanadas.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
                 </ul>
                 {/* <h3 className="carta__h3">Ensaladas</h3> */}
                 <ul className="carta__ul">
-                    {menu.entrantes.ensaladas.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.entrantes.ensaladas.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
 
                 </ul>
                 {/* Principales */}
                 <h2 className="carta__h2">Principales</h2>
                 {/* <h3 className="carta__h3">Parrilla</h3> */}
                 <ul className="carta__ul">
-                    {menu.principales.parrilla.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.principales.parrilla.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
                 </ul>
                 {/* <h3 className="carta__h3">Pescados</h3> */}
                 <ul className="carta__ul">
-                    {menu.principales.pescados.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.principales.pescados.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
                 </ul>
                 {/* <h3 className="carta__h3">Otras Sugerencias</h3> */}
                 <ul className="carta__ul">
-                    {menu.principales.otrasSugerencias.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.principales.otrasSugerencias.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
 
                 </ul>
                 {/* Bebidas */}
                 <h2 className="carta__h2">Bebidas</h2>
                 <h3 className="carta__h3">Aguas y Refrescos</h3>
                 <ul className="carta__ul">
-                    {menu.bebidas.aguasRefrescos.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.bebidas.aguasRefrescos.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
                 </ul>
                 <h3 className="carta__h3">Vinos</h3>
                 <ul className="carta__ul">
-                    {menu.bebidas.vinos.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.bebidas.vinos.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
                 </ul>
                 <h3 className="carta__h3">Cervezas</h3>
                 <ul className="carta__ul">
-                    {menu.bebidas.cervezas.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.bebidas.cervezas.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
 
                 </ul>
                 <h3 className="carta__h3">Tragos</h3>
                 <ul className="carta__ul">
-                    {menu.bebidas.tragos.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.bebidas.tragos.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
 
                 </ul>
                 {/* Postres */}
                 <h2 className="carta__h2">Postres</h2>
                 <ul className="carta__ul">
-                    {menu.postres.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) => <li className="carta__li" key={id}>
-                        <h4 className="carta__name">{name}</h4>
-                        <div className="carta__div" >
-                            <p className="carta__price">{price}€</p>
-                            {glutenFree ? <div className="carta__glutenFree">
-                                <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
-                                {/* <p> Gluten Free </p> */}
-                            </div> : ''}
-                            {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
-                        </div>
-                        {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos}</p> : ''}
-                        {available ? '' : <p>not available</p>}
-                    </li>)}
+                    {menu.postres.map(({ _id: id, name, description, price, glutenFree, vegan, alergenos, category, available }) =>
+                        <li onClick={() => setDetail({ id, name, description, price, glutenFree, vegan, alergenos, category, available })} className="carta__li" key={id}>
+                            <h4 className="carta__name">{name}</h4>
+                            <div className="carta__div" >
+                                <p className="carta__price">{price}€</p>
+                                {glutenFree ? <div className="carta__glutenFree">
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    {/* <p> Gluten Free </p> */}
+                                </div> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                            </div>
+                            {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
+                            {available ? '' : <p>not available</p>}
+                        </li>)}
                 </ul>
             </div>}
         </div>

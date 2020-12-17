@@ -118,5 +118,11 @@ module.exports = {
     },
     validateFile(file) {
         if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
+    },
+
+    validateKey(key){
+        if (typeof key !== 'string') throw new TypeError(key + ' is not a key')
+
+        if (!key.trim().length) throw new Error('key is empty or blank')
     }
 }

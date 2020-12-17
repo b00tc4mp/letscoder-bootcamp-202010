@@ -8,6 +8,7 @@ import NavBar1 from './NavBar1'
 import Slides from './Slides'
 import Slides1 from './Slides1'
 import Footer from './Footer'
+import ShowProduct from './ShowProduct'
 // import Map from './Map'
 
 export  {
@@ -20,6 +21,7 @@ export  {
     Feedback,
     Slides,
     Slides1,
-    Footer
+    Footer,
+    ShowProduct
     // Map
 }
