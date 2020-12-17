@@ -27,6 +27,7 @@ import toggleWorkoutsUser from './toggle-workouts-user'
 import retrieveSavedWorkouts from './retrieve-saved-workouts'
 import savePictureUser from './save-picture-user'
 import saveWeightUser from './save-weight-user'
+import deleteUser from './delete-user'
 
 export {
     caloriesCalc,
@@ -57,5 +58,6 @@ export {
     toggleWorkoutsUser,
     retrieveSavedWorkouts,
     savePictureUser,
-    saveWeightUser
+    saveWeightUser,
+    deleteUser
 }

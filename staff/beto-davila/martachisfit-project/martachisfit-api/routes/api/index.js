@@ -5,7 +5,7 @@ const {
     handleRegisterUser,
     handleAuthenticateUser,
     handleRetrieveUser,
-    // handleAddFood,
+    // handleAddFood, (admin version)
     handleFindFood,
     handleToggleFoodUserDiet,
     handleRetrieveSavedFood,
@@ -26,7 +26,8 @@ const {
     handleSavePictureUser,
     handleRetrievePictureUser,
     handleRetrieveSavedWorkouts,
-    handleSaveWeightUser
+    handleSaveWeightUser,
+    handleDeleteUser
 } = require('./handlers/index')
 
 const router = new Router()
@@ -107,5 +108,8 @@ router.post('/api/users/uploads', withErrorHandling(handleSavePictureUser))
 
 // retrieve user picture upload
 router.get('/api/users/:userId/uploads', withErrorHandling(handleRetrievePictureUser))
+
+// user profile deletetion
+router.delete('/api/users/delete', withErrorHandling(handleDeleteUser))
 
 module.exports = router

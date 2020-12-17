@@ -18,7 +18,8 @@ import {
     toggleWorkoutsUser,
     retrieveSavedWorkouts,
     savePictureUser,
-    saveWeightUser
+    saveWeightUser,
+    deleteUser
 } from '../logic'
 
 import logo from '../../src/logo.png'
@@ -385,6 +386,20 @@ export default function Home() {
         })
     }
 
+    const handleDeleteUser = () => {
+        try {
+            deleteUser(token, error => {
+                if (error) return feedbackError('No se pudo borrar el usuario. Error en el servidor.')
+    
+                delete sessionStorage.token
+                window.location.reload(false)
+            })
+
+        } catch (error) {
+            return feedbackError(error.message)
+        }
+    }
+
     const handleGoToLogOut = () => {
         setView('logout')
     }
@@ -459,6 +474,7 @@ export default function Home() {
                     feedbackWeight={messageWeight}
                     onSaveWeight={handleSaveWeight}
                     onSaved={handleModifiedWeightUser}
+                    onDelete={handleDeleteUser}
                     // refreshWeight={refreshWeight}
                 />}
             {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle} />}

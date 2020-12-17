@@ -24,5 +24,6 @@ module.exports = {
     retrieveSavedWorkouts: require('./retrieve-saved-workouts'),
     savePictureUser: require('./save-picture-user'),
     retrievePictureUser: require('./retrieve-picture-user'),
-    saveWeightUser: require('./save-weight-user')
+    saveWeightUser: require('./save-weight-user'),
+    deleteUser: require('./delete-user')
 }

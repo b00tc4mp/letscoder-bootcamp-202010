@@ -2,11 +2,11 @@ import { Line, defaults } from 'react-chartjs-2'
 
 defaults.global.tooltips.enabled = true
 
-export default function Chart () {
+export default function Chart() {
     return <div>
         <Line
             data={{
-                labels: ['01/01/20', '01/02/20', '01/03/20', '01/04/20', '01/05/20', '01/06/20', '01/07/20' , '01/08/20', '01/09/20'],
+                labels: ['01/01/20', '01/02/20', '01/03/20', '01/04/20', '01/05/20', '01/06/20', '01/07/20', '01/08/20', '01/09/20'],
                 datasets: [
                     {
                         label: 'peso (Kg)',

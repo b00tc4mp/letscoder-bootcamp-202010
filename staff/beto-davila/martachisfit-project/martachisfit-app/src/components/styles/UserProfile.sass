@@ -17,6 +17,13 @@
 
     .user-profile
 
+        &__weights-container
+            background-color: #eaf0f0
+            padding: .2rem
+            margin-top: .3rem
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+            max-width: 400px
+
         &__weights > p
             font-size: .8rem
             margin-bottom: 0
@@ -43,7 +50,7 @@
             margin: auto
 
         &__pic
-            max-width: 150px
+            width: 120px
             margin: .3rem
 
         &__progression-title
@@ -63,7 +70,9 @@
             background-color: #c2caca
 
         &__progression-input
-            margin: 0
+            // margin-bottom: .2rem
+            width: 270px
+            margin: 0 auto .2rem auto
 
         &__progression-input::-webkit-file-upload-button
             visibility: hidden
@@ -83,8 +92,9 @@
         &__progression-input:hover::before 
             border-color: #686b6b
 
-        &__feedback-pic
-            font-size: .8rem
+        &__feedback
+            font-size: .7rem
+            text-align: center
             
         &__workout-container
             background-color: #eaf0f0
@@ -93,6 +103,12 @@
             border-radius: 1rem
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__workout-container > h3
+            margin-bottom: 0
+
+        &__workout
+            margin-top: 0
 
         &__recipes-container
             background-color: #eaf0f0
@@ -134,13 +150,15 @@
 
             &--name
                 font-weight: bold
+                font-size: .7rem
 
-        &__logout
+        &__logout , &__delete
             border: none
             background-color: transparent
             cursor: pointer
             margin: .5rem 0
             float: right
+            font-size: .7rem
 
         &__name-logout
             display: flex

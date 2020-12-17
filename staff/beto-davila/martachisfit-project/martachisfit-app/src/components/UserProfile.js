@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import mancuerna from './icons/mancuerna.png'
 
 
-export default function UserProfile({ user, avatar, onSaved, feedbackImage, feedbackWeight, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture, onSaveWeight }) {
+export default function UserProfile({ user, avatar, onSaved, feedbackImage, feedbackWeight, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture, onSaveWeight, onDelete }) {
     const [userChosenFoods, setUserChosenFoods] = useState()
     const [message, setMessage] = useState()
 
@@ -71,6 +71,7 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
             <div className="user-profile__name-pic">
                 <div className="user-profile__logout-container">
                     <button className="user-profile__logout" onClick={onLogout}>Logout</button>
+                    <button className="user-profile__delete" onClick={onDelete}>Borrar perfil</button>
                 </div>
                 <div className="user-profile__question-btn">
                     {fullname && <p className="user-profile__user">¡Hola, <span className="user-profile__user--name">{fullname}</span>!</p>}
@@ -79,21 +80,23 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
                         <form className="user-profile__avatar-form" onSubmit={handleSubmitPicture}>
                             <input className="user-profile__progression-input" type="file" id="image" name="image" />
                             <button className="user-profile__progression-btn">Guardar</button>
-                            {feedbackImage && <p className="user-profile__feedback-pic">Imagen guardada correctamente</p>}
+                            {feedbackImage && <p className="user-profile__feedback">Imagen guardada correctamente</p>}
                         </form>
                     </div>
-                    <div className="user-profile__weights">
-                        {weightHistory.length > 1 ? <p>Peso anterior: {weightHistory[weightHistory.length - 2]} Kg ({today.toLocaleDateString()})</p> : <p>Peso anterior: No existe registro</p>}
-                        {weightHistory.length ? <p><span className="bold">Peso actual: {weightHistory[weightHistory.length - 1]} Kg </span>({today.toLocaleDateString()})</p> : <p>Peso actual: No existe registro</p>}
+                    <div className="user-profile__weights-container">
+                        <div className="user-profile__weights">
+                            {weightHistory.length > 1 ? <p>Peso anterior: {weightHistory[weightHistory.length - 2]} Kg ({today.toLocaleDateString()})</p> : <p>Peso anterior: No existe registro</p>}
+                            {weightHistory.length ? <p><span className="bold">Peso actual: {weightHistory[weightHistory.length - 1]} Kg </span>({today.toLocaleDateString()})</p> : <p>Peso actual: No existe registro</p>}
+                        </div>
+                        <div className="user-profile__chart">
+                            <Chart />
+                            <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
+                                <input type="text" name="weight" placeholder="Tu peso"></input>
+                                <button className="user-profile__weight-btn">Peso</button>
+                            </form>
+                        </div>
                     </div>
-                    <div className="user-profile__chart">
-                        <Chart />
-                        <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
-                            <input type="text" name="weight" placeholder="Tu peso"></input>
-                            <button className="user-profile__weight-btn">Peso</button>
-                            {feedbackWeight && <p className="user-profile__feedback-weight">Peso actualizado</p>}
-                        </form>
-                    </div>
+                    {feedbackWeight && <p className="user-profile__feedback">Peso actualizado</p>}
                 </div>
             </div>
 

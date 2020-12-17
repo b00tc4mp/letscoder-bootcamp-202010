@@ -23,5 +23,6 @@ module.exports = {
     handleRetrieveSavedWorkouts: require('./handle-retrieve-saved-workouts'),
     handleSavePictureUser: require('./handle-save-picture-user'),
     handleRetrievePictureUser: require('./handle-retrieve-picture-user'),
-    handleSaveWeightUser: require('./handle-save-weight-user')
+    handleSaveWeightUser: require('./handle-save-weight-user'),
+    handleDeleteUser: require('./handle-delete-user')
 }

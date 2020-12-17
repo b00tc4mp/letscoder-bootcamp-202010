@@ -21,7 +21,7 @@ export default withRouter(props => {
   const handleRegister = (fullname, email, password, calories) => {
     try {
       registerUser(fullname, email, password, calories, error => {
-        if (error) return feedbackError('No se pudo registrar el usuario')
+        if (error) return feedbackError('No se pudo registrar el usuario. Error de conexión')
   
         props.history.push('/sign-in')
       })
@@ -61,7 +61,7 @@ export default withRouter(props => {
   const { token } = sessionStorage
   
   return <div className="App">
-  <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onRegister={handleRegister} />} />
+  <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp error={error} onRegister={handleRegister} />} />
   <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn error={error} onLogin={handleAuthenticateUser} />} />
   <Route exact path='/' render={() => token ? <Home /> : <Redirect to="/landing" />} />
   <Route path='/landing' render={() => <Landing />} />
