@@ -17,7 +17,7 @@ export default function Workout({ source, onGoToWorkouts, onSaveWorkout, like, e
                     <a onClick={onGoToWorkouts} className="workout__to-workouts">Atrás</a>
                     <h3 className="workout__name">{name}</h3>
                     <div className="workout__feedback">
-                    {like? <p>¡A darle caña!</p> :<p>¿Arrancamos?</p>}
+                    {like? <p>¡Empezamos!</p> :<p>¿Arrancamos?</p>}
                     <button className="workout__heart-btn" onClick={() => onSaveWorkout(level)}>{like ? <img src={powerOn} alt="on" width="20"></img> : <img src={powerOff} alt="off" width="20"></img>}</button>
                     </div>
                     {error && <Feedback error={error}/>}

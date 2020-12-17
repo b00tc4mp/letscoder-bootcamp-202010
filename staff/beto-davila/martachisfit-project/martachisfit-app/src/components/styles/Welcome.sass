@@ -57,7 +57,7 @@
         content: ""
         background-image: url("../images/background-img.png")
         background-repeat: no-repeat
-        opacity: .4
+        opacity: .2
         top: 0
         left: 0
         bottom: 0
@@ -70,6 +70,9 @@
     .welcome
         // min-height: 100vh
         padding: 1rem
+
+        &__instagram-title
+            margin-top: 0
 
         &__dietsdesign-link
             font-size: .9rem
@@ -84,6 +87,7 @@
         &__container
             display: grid
             grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr
 
         &__subtitle
             font-size: 1rem
@@ -92,25 +96,36 @@
             background-color: #eaf0f0
             padding: .3rem 1rem
             width: 275px
-            margin: 2rem auto 2rem 2rem
+            margin: 2rem auto
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+            cursor: pointer
+
+        &__workouts
+            background-color: #eaf0f0
+            padding: .3rem 1rem
+            width: 275px
+            margin: 2rem auto
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
             cursor: pointer
 
         &__diets
             background-color: #eaf0f0
             width: 275px
             padding: .3rem 1rem
-            margin: 2rem auto 2rem 1rem
+            margin: 2rem auto
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
             cursor: pointer
 
         &__tips
             background-color: #eaf0f0
             width: 275px
+            height: 150px
             padding: .3rem 1rem
-            margin: 2rem auto 2rem 0
+            margin: 2rem auto
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
             cursor: pointer
+            grid-column-start: 2
+            grid-row-start: 2
 
         &__marta-img:hover
             -webkit-filter: brightness(50%)

@@ -1,13 +1,13 @@
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 900px)
     .user-profile-pseudo
         display: block
         position: relative
-        min-height: 105vh
+        min-height: 100vh
         
     .user-profile-pseudo::after
         content: ""
         background-image: url("../images/back-img-profile.jpg")
-        opacity: .3
+        opacity: .2
         top: 0
         left: 0
         bottom: 0
@@ -16,6 +16,29 @@
         z-index: -1
 
     .user-profile
+
+        &__chart
+            padding: 1.2rem 0 0 0
+
+        &__weight-btn
+            text-decoration-line: none
+            padding: .2rem 0
+            cursor: pointer
+            border-radius: .3rem
+            border: none
+            background-color: #eaf0f0
+            font-size: .7rem
+            margin-left: .2rem
+
+        &__weight-form
+            margin-left: .3rem
+
+        &__weight-form > input
+            border: 1px solid grey
+
+        &__name-pic
+            max-width: 400px
+            margin: auto
 
         &__pic
             max-width: 150px
@@ -39,7 +62,6 @@
 
         &__progression-input
             margin: 0
-            line-height: .9rem
 
         &__progression-input::-webkit-file-upload-button
             visibility: hidden
@@ -98,7 +120,7 @@
             margin: 0
 
         &__question-btn
-            width: 80%
+            width: 85%
             text-align: left
             margin: auto
             padding-top: .5rem
@@ -131,6 +153,7 @@
             padding: 0
     
             &--link
+                font-size: .7rem
                 color: #303236
 
         &__articles-list
@@ -158,7 +181,7 @@
                 text-align: center
                 align-self: center
                 color: #303236
-                font-size: 1.1rem
+                font-size: .8rem
 
         &__recipes-carousel
             width: 90%
@@ -200,7 +223,7 @@
     background: #489899
     border-radius: 10px
 
-@media only screen and (min-width: 1000px)
+@media only screen and (min-width: 900px)
     .user-profile-pseudo
         display: block
         position: relative
@@ -218,6 +241,53 @@
         z-index: -1
 
     .user-profile
+
+        &__name-pic
+
+        &__pic
+            max-width: 150px
+            margin: .3rem
+
+        &__progression-title
+            margin-top: 0
+
+        &__progression-btn
+            text-decoration-line: none
+            padding: .2rem 0
+            cursor: pointer
+            border-radius: .3rem
+            border: none
+            background-color: #eaf0f0
+            font-size: .7rem
+            margin-left: .5rem
+
+        &__progression-btn:hover
+            background-color: #c2caca
+
+        &__progression-input
+            margin: 0
+            line-height: .9rem
+
+        &__progression-input::-webkit-file-upload-button
+            visibility: hidden
+
+        &__progression-input::before
+            content: 'Elige avatar'
+            display: inline-block
+            border: 1px solid #0b7f94
+            border-radius: 4px
+            padding: 5px 3px
+            outline: none
+            white-space: nowrap
+            cursor: pointer
+            font-weight: 600
+            font-size: 9pt
+    
+        &__progression-input:hover::before 
+            border-color: #686b6b
+
+        &__feedback-pic
+            font-size: .8rem
 
         &__workout
             padding: 0
@@ -286,9 +356,6 @@
             background-color: transparent
             outline: none
             cursor: pointer
-
-        &__name-logout
-            display: flex
 
         &__no-articles
             text-align: center

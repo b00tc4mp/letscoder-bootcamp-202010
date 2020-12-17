@@ -44,7 +44,7 @@ export default function DietDesign () {
             <div className="diet-design-pseudo">
             <section className="diet-design">
                 <h3 className="diet-design__title">Busca un alimento</h3>
-                    <p className="diet-design__description"> Conoce tus alimentos y añádelos a tu registro diario para ser más consciente de tu consumo calórico.</p>
+                    <p className="diet-design__description"> Conoce tus alimentos y añádelos a tu registro diario en tu perfil, para ser más consciente de tu consumo calórico.</p>
                     <div className="diet-design__bar-result">
                         <form className="diet-design__search-form" onSubmit={event => {
                             event.preventDefault()

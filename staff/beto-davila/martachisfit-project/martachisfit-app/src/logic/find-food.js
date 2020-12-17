@@ -9,7 +9,6 @@ export default (function findFood(query, callback) {
     const { API_URL } = this
 
     call('GET', `${API_URL}/foods?q=${query}`, {},
-        //JSON.stringify( {query} ),
         null,
         (status, response) => {
             if (status === 0)

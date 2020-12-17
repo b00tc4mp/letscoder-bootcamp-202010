@@ -22,6 +22,7 @@ import Diets from './Diets'
 import Workouts from './Workouts'
 import Workout from './Workout'
 import Movements from './Movements'
+import Chart from './Chart'
 
 export {
     Landing,
@@ -47,5 +48,6 @@ export {
     Diets,
     Workouts,
     Workout,
-    Movements
+    Movements,
+    Chart
 }

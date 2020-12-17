@@ -2,7 +2,7 @@ const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { User, Diet } } = require('martachisfit-data')
 
-// this is a not-finished logic for a 'premium' version of the app
+// this is a not-finished logic for a forseeable 'premium' version of the app
 
 /**
  * Retrieves a diet by its id according the day of the week and the calories user goal
