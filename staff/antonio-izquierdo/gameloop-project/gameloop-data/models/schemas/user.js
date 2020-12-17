@@ -28,6 +28,11 @@ module.exports = new Schema({
         required: true
     },
 
+    phone: {
+        type: String,
+        default: 'no phone'
+    },
+
     city: {
         type: String,
         default: 'no city',

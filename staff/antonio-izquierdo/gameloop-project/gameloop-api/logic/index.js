@@ -8,5 +8,6 @@ module.exports = {
     saveGameImage: require('./save-game-image'),
     retrieveGameImage: require('./retrieve-game-image'),
     retrieveUserGames: require('./retrieve-user-games'),
-    deleteGame: require('./delete-game')
+    deleteGame: require('./delete-game'),
+    modifyUser: require('./modify-user')
 }

@@ -3,7 +3,7 @@ import { deleteGame } from '../logic'
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function Profile ({name, onRetrieveUserGames, doRefreshGames, games}) {
+function Profile ({name, onRetrieveUserGames, doRefreshGames, games, onModify, currentUser}) {
 const handleDeleteGame = gameId =>{
     try {
         deleteGame(gameId, error => {
@@ -14,7 +14,6 @@ const handleDeleteGame = gameId =>{
         alert(error.message)
     }
 }
-    
     
 return <section>
     <h2>Hello {name} </h2>
@@ -32,6 +31,29 @@ return <section>
                     <button onClick={()=>handleDeleteGame(id)}>DELETE</button> 
                 </li>)}
         </ul>
+
+        <form className="profile__form" onSubmit ={(event =>{
+            event.preventDefault()
+            
+            const {target: { fullname: {value: fullname}, contact: {value: contact}, city:{ value: city} , phone:{value: phone} } }= event
+            console.log(fullname)
+            try {
+                onModify(fullname, contact, city, phone)
+            } catch (error) {
+                alert(error.message)
+            }
+        })}>
+            <div className="profile__form">
+                <input type="text" name= "fullname" placeholder=""defaultValue={currentUser.fullname}></input>
+                <input type="text" name= "contact" placeholder="How do you want to be contact? Insert your phone and a description" defaultValue={currentUser.contact}></input>
+                <input type="text" name= "city" placeholder="Insert your city" defaultValue={currentUser.city}></input>
+                <input type="text" name= "phone" placeholder="Insert your phone" defaultValue={currentUser.phone}></input>
+                <button>SAVE</button>               
+
+            </div>
+
+
+        </form>
 </section>
 }
 

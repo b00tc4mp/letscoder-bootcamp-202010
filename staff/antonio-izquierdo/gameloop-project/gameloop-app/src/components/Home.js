@@ -1,6 +1,6 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
-import { retrieveUser, saveGame, findGames, saveGameImage, retrieveUserGames } from '../logic'
+import { retrieveUser, saveGame, findGames, saveGameImage, retrieveUserGames, modifyUser } from '../logic'
 import Profile from './Profile'
 import logo from "../assets/img/logo.png"
 import SaveGame from './SaveGame'
@@ -15,6 +15,7 @@ export default function Home({onLogout}) {
     const [userGames, setUserGames] = useState()
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
     const [error, setError] = useState(null)
+    const [currentUser, setCurrentUser] = useState()
 
     function feedbackError(error) {
         setError(error)
@@ -30,8 +31,8 @@ export default function Home({onLogout}) {
         try {
             retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
-
-                const { fullname } = user
+                const { fullname, contact, phone, city } = user
+                setCurrentUser({fullname, contact, phone, city})
                 setName(fullname)
 
             })
@@ -106,7 +107,24 @@ export default function Home({onLogout}) {
         }
     }
 
+    const handleModifyUser = (fullname, contact, phone, city) => {
 
+        try {
+            const { token } = sessionStorage
+
+            modifyUser(token, { fullname, contact, phone, city }, (error, changes) => {
+                if (error) return feedbackError('could not find any changes')
+                
+
+                setCurrentUser({fullname, contact, phone, city})
+
+
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+        
     return <section className="home">
         {token && <img className="sign-in__logo" src={logo} />} 
         {<h1>Welcome to Gameloop!</h1>}
@@ -120,6 +138,6 @@ export default function Home({onLogout}) {
         {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
         {view === 'profile' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames}/>}
-        {view === 'profile' && <Profile name={name} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames }/>}
+        {view === 'profile' && <Profile name={name} currentUser={currentUser} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames } onModify={handleModifyUser}/>}
     </section>
 }

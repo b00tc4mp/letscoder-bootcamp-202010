@@ -5,7 +5,7 @@ const retrieveGame = require('./retrieve-game')
 const { env: { MONGODB_URL }} =process
 
 mongoose.connect(MONGODB_URL, {useUnifiedTopology: true, useNewUrlParser:true, useCreateIndex: true})
-    .then(()=> retrieveGame('5fd7844e56dd3c3c881089a4'))
+    .then(()=> retrieveGame('5fdb59db1e1940098097288d'))
     .then(console.log)
     .catch(console.error)
     .then(mongoose.disconnect)

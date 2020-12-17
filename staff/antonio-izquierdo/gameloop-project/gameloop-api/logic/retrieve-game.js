@@ -1,7 +1,7 @@
 //change to retrieve game
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
-const { models: { Game }  } = require('gameloop-data')
+const { models: { Game, User } } = require('gameloop-data')
 
 /**
  * Retrieves a game by its id
@@ -10,21 +10,26 @@ const { models: { Game }  } = require('gameloop-data')
  * 
  * @returns {Promise}
  */
-module.exports = function(gameId) {
-debugger
+module.exports = function (gameId) {
+    debugger
     validateId(gameId)
 
     return Game.findById(gameId).lean()
         .then(game => {
             if (!game) throw new NotFoundError(`game with id ${gameId} not found`)
+            const { owner } = game
+            const ownerId = owner.toString()
 
-            const { _id } = game
+            return User.findById(ownerId).lean()
+                .then(user => {
+                    const { _id } = game
 
-            game.id = _id.toString()
-            
-            delete game._id
-            delete game.__v
+                    game.id = _id.toString()
 
-            return game
+                    delete game._id
+                    delete game.__v
+
+                    return { ...game, ...user }
+                })
         })
 }

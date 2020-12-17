@@ -2398,3 +2398,436 @@ info 2020-12-17T12:20:54.086Z - server running on port 4000
 info 2020-12-17T12:24:35.790Z - stopping server
 info 2020-12-17T12:55:38.100Z - server running on port 4000
 info 2020-12-17T12:56:52.213Z - stopping server
+info 2020-12-17T13:43:26.035Z - server running on port 4000
+error 2020-12-17T13:46:37.856Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T13:57:21.324Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T13:57:32.444Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T13:57:41.885Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T13:58:34.722Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T13:58:37.089Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T13:58:38.304Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T13:58:50.353Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-17T14:01:30.485Z - stopping server
+info 2020-12-17T14:01:33.714Z - server running on port 4000
+error 2020-12-17T14:03:23.898Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:05:43.907Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:07:20.025Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:08:25.498Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:08:28.984Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:08:29.663Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:08:30.921Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:08:42.885Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:08:45.352Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:08:46.039Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:10:18.378Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-17T14:11:42.909Z - stopping server
+info 2020-12-17T14:11:45.733Z - server running on port 4000
+error 2020-12-17T14:11:53.943Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:11:57.328Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:11:58.624Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:12:00.010Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:13:07.252Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-17T14:13:12.503Z - stopping server
+info 2020-12-17T14:13:14.858Z - server running on port 4000
+error 2020-12-17T14:13:16.532Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:13:26.790Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:14:52.730Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:00.138Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:00.937Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:01.585Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:02.202Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:04.578Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:11.964Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:15.375Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:14:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-17T14:15:32.816Z - stopping server
+info 2020-12-17T14:15:35.580Z - server running on port 4000
+error 2020-12-17T14:15:39.026Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:15:56.218Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:16:01.512Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:16:06.463Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:16:08.041Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:16:30.992Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:17:39.920Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T14:17:41.249Z - ReferenceError: userId is not defined
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\modify-user.js:7:26)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-modify-user.js:12:9)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-17T14:17:45.042Z - stopping server
+info 2020-12-17T14:17:48.728Z - server running on port 4000
+error 2020-12-17T14:18:15.734Z - Error: wrong credentials
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T14:19:14.763Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-17T14:20:59.669Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-17T14:21:03.664Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-17T14:21:39.368Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+error 2020-12-17T14:22:05.195Z - Error: ENOENT: no such file or directory, open 'C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\data\games\default.jpg'
+info 2020-12-17T14:22:40.598Z - stopping server

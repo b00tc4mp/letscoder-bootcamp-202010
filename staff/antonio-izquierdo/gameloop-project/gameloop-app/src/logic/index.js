@@ -8,6 +8,8 @@ import retrieveGame from './retrieve-game'
 import saveGameImage from './save-game-image'
 import retrieveUserGames from './retrieve-user-games'
 import deleteGame from './delete-game'
+import modifyUser from './modify-user'
+
 
 export {
     registerUser,
@@ -19,5 +21,6 @@ export {
     saveGameImage,
     retrieveUserGames,
     deleteGame,
-    context
+    context,
+    modifyUser
 }
