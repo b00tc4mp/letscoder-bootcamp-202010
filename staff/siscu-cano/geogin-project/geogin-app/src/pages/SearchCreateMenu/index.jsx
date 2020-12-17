@@ -56,7 +56,7 @@ export class SearchCreateMenu extends React.Component {
               trigger={() => <Link to='#'><RiPrinterFill className='Menu-Icon' size={ICON_SIZE} />Imprimir Qr Codes <span>(pruebas)</span></Link>}
               content={() => this.componentRef}
             />
-            <Link to='/ranking'><RiGamepadLine className='Menu-Icon' size={ICON_SIZE} />Iniciar el juego</Link>
+            <Link to={`/search-game/${this.props.questId}`}><RiGamepadLine className='Menu-Icon' size={ICON_SIZE} />Iniciar el juego</Link>
             <SocialShare gameId={this.props.questId} />
           </div>
 

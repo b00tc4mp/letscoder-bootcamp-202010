@@ -23,10 +23,13 @@ const CustomReactPopup = ({ item }) => {
 
 export const MapViewPos = ({ gameTests }) => {
   const mapRef = useRef(null)
-  const [tests, setTests] = useState()
+  const layerRef = useRef(null)
+  const markerRef = React.useRef(null)
+
+  const [position, setPosition] = useState()
 
   // Posicionamiento jugador
-  const onLocationFound = (e) => {
+  const onLocationFound = e => {
     const radius = e.accuracy
     L.marker(e.latlng, { icon: markerUser }).addTo(mapRef.current)
     //   .bindPopup('You are within ' + radius + ' meters from this point').openPopup()
@@ -47,55 +50,59 @@ export const MapViewPos = ({ gameTests }) => {
 
   // add map
   useEffect(() => {
-    setTests(gameTests)
-    mapRef.current = L.map('map', {
-      center: [49.8419, 24.0315],
-      zoom: 16,
-      layers: [
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-          attribution:
-            '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    navigator.geolocation &&
+      navigator.geolocation.getCurrentPosition(position => {
+        setPosition([position.coords.latitude, position.coords.longitude])
+        mapRef.current = L.map('map', {
+          center: [position.coords.latitude, position.coords.longitude],
+          zoom: 16,
+          layers: [
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+              attribution:
+                '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            })
+          ]
         })
-      ]
-    })
 
-    mapRef.current.on('locationerror', onLocationError)
-    mapRef.current.on('locationfound', (e, mapRef) => onLocationFound(e, mapRef))
-    mapRef.current.on('zoomend', _changeLocateMaxZoom)
-    // mapRef.current.on('zoomstart', function (e) { console.log('ZOOMSTART', e) })
-    // mapRef.current.on('zoomend', function (e) { console.log('ZOOMEND', e) })
-    mapRef.current.locate({ setView: true, watch: true, maxZoom: 16, enableHighAccuracy: true, timeout: 30000 })
-    mapRef.current.createPane('fixed', document.getElementById('map'))
-  }, [])
+        mapRef.current.on('locationerror', onLocationError)
+        mapRef.current.on('locationfound', (e, mapRef) =>
+          onLocationFound(e, mapRef)
+        )
+        mapRef.current.on('zoomend', _changeLocateMaxZoom)
+        mapRef.current.locate({
+          setView: true,
+          watch: true,
+          maxZoom: 16,
+          enableHighAccuracy: true,
+          timeout: 30000
+        })
+        mapRef.current.createPane('fixed', document.getElementById('map'))
+        layerRef.current = L.layerGroup().addTo(mapRef.current)
 
-  // add layer
-  const layerRef = useRef(null)
-  useEffect(() => {
-    layerRef.current = L.layerGroup().addTo(mapRef.current)
-  }, [])
+        gameTests &&
+          gameTests.length &&
+          layerRef &&
+          layerRef.current &&
+          gameTests.map(({ location: { coordinates } = {} }, index) => {
+            const marker = L.marker([coordinates[0], coordinates[1]], {
+              icon: markerGame
+            }).addTo(layerRef.current)
 
-  // add markers
-  const markerRef = React.useRef(null)
-  useEffect(
-    () => {
-      // layerRef.current.clearLayers()
-      console.log('tests', tests)
-      tests &&
-      tests.length &&
-      tests.map(({ location: { coordinates } = {} }, index) => {
-        const marker = L.marker([coordinates[0], coordinates[1]], { icon: markerGame }).addTo(layerRef.current)
+            const popup = L.popup({
+              pane: 'fixed',
+              className: 'popup-fixed',
+              autoPan: false
+            }).setContent(
+              ReactDOMServer.renderToString(
+                <CustomReactPopup item={gameTests[index]} />
+              )
+            )
 
-        const popup = L.popup({
-          pane: 'fixed',
-          className: 'popup-fixed',
-          autoPan: false
-        }).setContent(ReactDOMServer.renderToString(<CustomReactPopup item={tests[index]} />))
-
-        marker.bindPopup(popup)
+            marker.bindPopup(popup)
+          })
       })
-    },
-    [tests]
-  )
+    return () => mapRef.current.remove()
+  }, [])
 
   return (
     <MapViewPosWrapper>

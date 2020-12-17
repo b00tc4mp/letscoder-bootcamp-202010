@@ -192,8 +192,6 @@ export const SearchCreate = () => {
     evaluations,
     tests
   ) => {
-    window.alert('handleSaveQuest')
-
     saveQuest(
       token,
       questId,

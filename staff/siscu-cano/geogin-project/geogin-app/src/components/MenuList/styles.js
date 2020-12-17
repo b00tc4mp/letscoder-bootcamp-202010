@@ -5,27 +5,36 @@ export const MenuListWrapper = styled.div`
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+
+    .menu-icon {
+      display: inline-block;
+      margin: 0 10px 0 20px;
+      vertical-align: middle;
+    }
 `
 
 export const Link = styled(LinkRouter)`
+ width: 100%;
+  padding: 8px 5px;
+  background: #634056;
+  background: linear-gradient(rgba(99, 64, 86, 0.5), rgba(76, 49, 65, 0.7));
+  border-radius: 5px;
+  border: 1px solid #4e3043;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 2px 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  font-size: 20px;
-  border: none;
-  margin: 15px 15px 30px;
-  border-top: 3px solid rgba(255, 255, 255, 0.3);
-  color: #fff !important;
-  border-radius: 6px;
-  padding: 8px 15px 10px;
-  background: #92cc7b;
-  margin: 0 auto 30px auto;
-  border-bottom: 3px solid rgba(40, 117, 29, 0.5);
-  text-shadow: 2px 2px #4390437d;
-  display: block;
-  min-width: 276px;
+  transition: all 0.3s ease-out;
+  color: white;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Raleway', 'Lato', Arial, sans-serif;
   text-decoration: none;
-  &[aria-current] {
-    box-shadow: 0px 0px 24px #ff00ff69 inset;
-    font-weight: bold;
+  span {
+    font-size: 12px;
   }
 `
