@@ -1,20 +1,18 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const savePet = require('./save-pet')
-
 const { ContentError, LengthError } = require('../errors')
-const { models: { User, Pet}, mongoose } = require('adogtapp-data')
+const { mongoose: { Types: { ObjectId } }, models: { User, Pet}, mongoose } = require('adogtapp-data')
 const { env: { MONGODB_URL } } = process
 
 describe('savePet()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let userName, email, password, address, city, phone, name, breed, species, color, description
+        let userName, email, password, address, city, phone, name, breed, species, color, description, shelter
 
         beforeEach(() => {
             userName = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -33,14 +31,13 @@ describe('savePet()', () => {
             const user = { userName, email, password, address, city, phone, description }
             
             return User.create(user)
-                .then(user => userId = user.id)
+                .then(user => shelter = user.id)
             
             
         })
 
         it('shoud succeed on new pet', () => {
-            savePet(userId, undefined, name, breed, species, color, description )
-               
+            savePet(shelter, undefined, name, breed, species, color, description )
             .then(() =>{
 
                 Pet.findOne({ name })
@@ -57,8 +54,51 @@ describe('savePet()', () => {
                 })
         })
         
-        afterEach(() =>{
+        afterEach(() =>{ Pet.deleteMany()
+    })
+
+        describe('when user already has pets', () => {
+            let  name, breed, species, color, description, petId
+
+            beforeEach(()=>{
+
+            name = randomStringWithPrefix('name')
+            breed = randomStringWithPrefix('breed')
+            species = 'dog'
+            color = randomStringWithPrefix('color')
+            description = randomStringWithPrefix('description')
+
+            return Pet.create({name, breed, species, color, description, shelter})
+                .then(pet => petId = pet.id)
+
+            })
+            it('should succeed updating the pet', () => {
+                name = randomStringWithPrefix('name')
+                breed = randomStringWithPrefix('breed')
+                
+
+                return savePet( shelter, petId, name, breed, species, color, description)
+                .then(petId => {
+                    
+                    expect(ObjectId.isValid(petId)).be.true
+
+                    return Pet.find({ shelter})
+                    .then(pets => {
+                        expect(pets).to.have.lengthOf(1)
+    
+                        const [pet] = pets
+    
+                        expect(pet.name).to.equal(name)
+                        expect(pet.breed).to.equal(breed)
+                        
+                        
+                    })
+                })
+                
+            })
+            afterEach(() =>{
                 User.deleteMany().then(()=>{Pet.deleteMany().then(()=>{})})
+            })
         })
     })
 
