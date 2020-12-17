@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap')
-$font-main: 'Playfair Display', serif
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+$Bebas: 'Bebas Neue', cursive
 
 .sign-in
-    background-color: #c90959
+    
     opacity: 0.8
+    height: 80vh
+    &__div
+        display: flex
 
     &__title
-        font-family: $font-main
+        font-family: $Bebas
         font-size: 8vw
+        color:#58a5d1
     &__form
         width: 40vw        
         height: 50vh
@@ -19,18 +23,33 @@ $font-main: 'Playfair Display', serif
         border: 10px groove
 
         &__input
-            margin: 10px auto
-            border-radius: 5px
-            width: 25vw
-            height: 7vw
+            text-align: center            
+            font-size: 15px            
+            color:  #58a5d1
+            width: 70vw
+            max-height: 6vh
+            background-color: white
+            border-radius: 10px
+            line-height: 30px
+            margin: 5px auto
+            font-family: $Bebas
+            &::placeholder
+                color: #58a5d1
+            
         &__btn
-            height: 25px
-            width: 25px
-            text-align: center
-            justify-content: center  
-            margin: auto
-            border-radius: 5px
-            background-color: #c90959
+            text-align: center            
+            font-size: 15px            
+            color: white
+            width: 70vw
+            max-height: 6vh
+            background-color: #58a5d1
+            border-radius: 10px
+            line-height: 30px
+            margin: 5px auto
+            font-family: $Bebas
+            
+            &::placeholder
+                color: #58a5d1
 
 
 @media (max-width: 700px)
@@ -40,15 +59,14 @@ $font-main: 'Playfair Display', serif
 
 .sign-in
     &__title
-        font-family: $font-main
+        font-family: $Bebas
         font-size: 8vw
         content-align: center
         align-content: center
         justify-content: center
     &__form
-        width: 40vw
-        height: 40vh
-        
+        width: 73vw
+        height: 30vh
         &__btn
-            height: 35px
-            width: 25px
+            height: 30px
+            width: 120px

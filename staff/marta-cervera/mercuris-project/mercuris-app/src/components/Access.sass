@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap')
-$font-main: 'Playfair Display', serif
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+$Bebas: 'Bebas Neue', cursive
 
 .root 
     background-position: center center
@@ -17,20 +17,16 @@ body
 
 
 .access
-    
-    background-position: center center
-    background-size: cover
+    background-image: url(../assets/images/marcagua.png)      
     max-width: 100%
     height: 100vh
-    opacity: 0.9
+    background-repeat: no-repeat
     
 
     &__logo
         height: 20vh
         width: 60vw
-        margin-left: 15vw
-        
-        
+        margin-left: 5vw
 
 
     &__register
@@ -39,56 +35,49 @@ body
         flex-wrap: wrap
         justify-content: center
         align-items: center
-        align-content: stretch
-        
+        align-content: stretch      
 
-        &__title
-            font-family: $font-main
-            content-align: center
-            justify-content: center
-            align-items: center
-            opacity: 0.9
-            color: #c90959
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
-
+     
         &__title2
-            font-family: $font-main
+            font-family: $Bebas
             content-align: center
             justify-content: center
             align-items: center
             opacity: 0.9
-            color: #c90959
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+            color: #d158b7
+           
 
         &__title
-            font-family: $font-main
+            font-family: $Bebas
             font-size: 5vw
             justify-content: center
             text-align: center
-            color:#c90959
+            color: #58a5d1
 
         &__signup
-            font-family: $font-main
+            font-family: $Bebas
             font-size: 3vw
             color: white
             text-align: center
             justify-content: center           
-            background-color:#c90959
+            background-color: #d158b7
             height: 8vh
             width: 25vw
             margin: 25px
+            border: 0px solid
 
 
         &__signin
-            font-family: $font-main
+            font-family: $Bebas
             font-size: 3vw
             color: white
             text-align: center
             justify-content: center           
-            background-color:#c90959
+            background-color: #d158b7
             height: 8vh
             width: 25vw
             margin: 25px
+            border: 0px solid
 
     &__search        
         display: flex
@@ -99,22 +88,23 @@ body
         align-content: stretch
 
         &__title
-            font-family: $font-main
+            font-family: $Bebas
             font-size: 5vw
             justify-content: center
             text-align: center
-            color: #c90959
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+            color:  #58a5d1
+            
         &__btn
-            font-family: $font-main
+            font-family: $Bebas
             font-size: 3vw
             color: white
             text-align: center
             justify-content: center           
-            background-color:#c90959
+            background-color: #d158b7
             height: 8vh
             width: 25vw
             margin: 25px
+            border: 0px solid
 
 
 @media (max-width: 700px)

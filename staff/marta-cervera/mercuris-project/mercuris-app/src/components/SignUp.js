@@ -1,11 +1,14 @@
 import './SignUp.sass'
 import {Link} from 'react-router-dom'
 import{ Feedback } from '.'
+import logo from "../assets/images/logo1.jpg"
 
 function SignUp({ onSignUp, error }) {
     return <div className= "sign-up">
-        <h2 className="sign-up__title">Sign Up</h2>
-        
+        <div className="sign-up__div">
+        <h2 className="sign-up__title">Sign Up TO</h2>
+        <img className="access__logo" src={logo} />  
+        </div>
         { error && <Feedback error= {error}/>}       
 
         <form className ="sign-up__form" onSubmit= { event => {
@@ -23,7 +26,7 @@ function SignUp({ onSignUp, error }) {
             {<input className="sign-up__form__input"type="text" name="city" placeholder="city" /> }            
             {<input className="sign-up__form__input"type="text" name="phone" placeholder="phone" /> }            
             
-            <button className="sign-up__form__btn">Send</button>
+            <button className="sign-up__form__btn">SEND</button>
            
 
         </form> 

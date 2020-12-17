@@ -1871,3 +1871,9 @@ error 2020-12-16T20:01:15.230Z - NotFoundError: product with id 5fda66fba2ffbc23
     at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:18:33
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T20:22:10.391Z - stopping server
+info 2020-12-16T20:22:14.386Z - starting server
+info 2020-12-16T20:22:14.521Z - undefined
+info 2020-12-16T22:00:47.311Z - stopping server
+info 2020-12-16T22:01:15.855Z - starting server
+info 2020-12-16T22:01:15.969Z - undefined

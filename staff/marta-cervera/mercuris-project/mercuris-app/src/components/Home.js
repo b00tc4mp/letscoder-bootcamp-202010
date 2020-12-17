@@ -87,6 +87,9 @@ export default function Home({ onLogout }) {
             alert(error.message)
         }
     }
+    const handleGoToSearchProducts = () => {
+        setView('search-products')
+    }
 
     const handleModifyUser = (name, contact, address, city, phone) => {
 
@@ -115,10 +118,11 @@ export default function Home({ onLogout }) {
                 onLogout()
             }}>LOGOUT</button>
             {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
-            {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
+            {view === 'profile' || 'search-products' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
+            {view === 'home' && <button className="home__profile" onClick={handleGoToSearchProducts}>SEARCH</button>}
             {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={currentUser && currentUser.name} error={error} />}
             {view === 'profile' && <Profile currentUser={currentUser} onModify={handleModifyUser} />}
-            {view === 'profile' && <SearchProducts onSearch={handleSearchProducts} />}
+            {view === 'search-products' && <SearchProducts onSearch={handleSearchProducts} />}
             {success && <h2>PRODUCT SAVED 🤩 </h2>}
         </div >
     );

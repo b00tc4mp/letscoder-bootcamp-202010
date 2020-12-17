@@ -1,11 +1,14 @@
 import './SignIn.sass'
 import {Link} from 'react-router-dom'
 import { Feedback } from '.'
+import logo from "../assets/images/logo1.jpg"
 
 function SignIn({ onSignIn, error }) {
     return <main className= "sign-in">
-        <h2 className="sign-in__title">Sign In</h2>
-
+        <div className="sign-in__div">
+        <h2 className="sign-in__title">Sign In to</h2>
+        <img className="access__logo" src={logo} />   
+        </div>
         <form className="sign-in__form"onSubmit= { event => {
             event.preventDefault()
             
@@ -17,7 +20,7 @@ function SignIn({ onSignIn, error }) {
             <input className="sign-in__form__input"type="email" name="email" placeholder="e-mail"/>
             <input className="sign-in__form__input" type="password" name="password" placeholder="password" />
             
-            <button className="sign-up__form__btn">Send</button>
+            <button className="sign-in__form__btn">Send</button>
             
 
         </form>

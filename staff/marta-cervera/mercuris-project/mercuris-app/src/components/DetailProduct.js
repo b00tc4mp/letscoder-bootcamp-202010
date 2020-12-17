@@ -9,8 +9,6 @@ function DetailProduct({ result: {id, name, email, description, price, fullname,
     
     const { token } = sessionStorage
 
-
-
     const handleDeleteProduct = productId => {
 
         try {

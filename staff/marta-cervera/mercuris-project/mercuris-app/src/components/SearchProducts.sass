@@ -1,5 +1,4 @@
 .searching
-    
     background-position: center center
     background-size: cover
     max-width: 100%
@@ -11,17 +10,45 @@
     justify-content: center
     align-items: center
     align-content: center
+    
+
+    &__title
+        color: #C71585
+        margin-top: 60vw
 
     &__form
         display: grid
+        padding: 1rem
+        border: 10px groove
         &__input
-            background-color: #FFF0F5
-            border-radius: 15px
+            background-color: #FFF0F5            
             color: white
             font-size: 3vw
             height: 5vh
             margin: 2vh
 
+@media (max-width: 700px)
+    .access
+        display: grid
+
+        .register
+            display: grid
+            flex-direction: column
+            flex-wrap: wrap
+
+            &__title
+                width: 50vw
+                height: 45vh
+                color: #9F08ED
+            &__signup
+                height: 2vw
+                border-radius: 25px
+                background-color: #E8D0F5
+            &__signin
+                height: 20vw
+                width: 10vw
+                background-color: #E8D0F5
+                border-radius: 25px
 
 
    

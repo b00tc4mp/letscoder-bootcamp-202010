@@ -17,7 +17,7 @@ function Profile ({currentUser, onModify}){
                 alert(error.message)
             }
         })}>
-            <div>
+            <div className="profile__form">
                 <input type="text" name= "name" placeholder=""defaultValue={currentUser.name}></input>
                 <input type="text" name= "contact" placeholder="How do you want to be contact? Insert your phone and a description" defaultValue={currentUser.contact}></input>
                 <input type="text" name= "address" placeholder="Insert your address" defaultValue={currentUser.address}></input>

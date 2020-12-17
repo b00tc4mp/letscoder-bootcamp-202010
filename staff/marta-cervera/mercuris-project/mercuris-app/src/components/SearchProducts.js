@@ -90,13 +90,14 @@ export default function ({error}) {
     return (
         <>
         <div className="searching">
+        <h1 className="searching__title">Your Searching form</h1>
             <form onSubmit={handleFindProducts} className="searching__form">                
-                {!token && <input type="text" name="queryCompany" placeholder="Info Company" />}
+                {!token && <input className="searching__form__input"type="text" name="queryCompany" placeholder="Info Company" />}
                 <input className="searching__form__input"type="text" name="queryProduct" placeholder="Info Product" />
                 <input className="searching__form__input"type="number" name="price" placeholder="Introduce price" />
                 <input className="searching__form__input" type="number" name="priceMin" placeholder="priceMin" />
                 <input className="searching__form__input"type="number" name="priceMax" placeholder="priceMax" />
-                <button>Search</button>
+                <button className="searching__form__btn">Search</button>
             </form>
 
             {results && results.length >0 && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
