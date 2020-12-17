@@ -5,7 +5,7 @@ import * as ImagePicker from "expo-image-picker";
 import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
-function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
+function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user }) {
     const [fullname, setFullname] = useState(user.fullname)
     const [artistName, setArtistName] = useState(user.artistName)
     const [city, setCity] = useState(user.city)
@@ -38,17 +38,23 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                 <ScrollView>
                     <View style={styles.formEditProfile}>
                         <View style={styles.signUpHeader}>
-                            <Image style={styles.logo} source={require('../assets/logo.png')} />
+                            {user.role === "ARTIST" ? <TouchableOpacity onPress={onGoToProfile}>
+                                <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
+                            </TouchableOpacity> :
+                                <TouchableOpacity onPress={onGoToProfile}>
+                                    <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} />
+                                </TouchableOpacity>
+                            }
 
                         </View>
-        
+
                         <View>
-                            
+
                             <Image
                                 source={
-                                imageUri
-                                    ? { uri: imageUri.localUri }
-                                    : require("../assets/default-profile-image.png")
+                                    imageUri
+                                        ? { uri: imageUri.localUri }
+                                        : require("../assets/default-profile-image.png")
                                 }
                                 style={{ width: 200, height: 200 }}
                             />
@@ -56,7 +62,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                                 /* style={styles.imageUpload} */ title="select image"
                                 onPress={selectImage}
                             />
-                        </View> 
+                        </View>
 
                         <TextInput
                             placeholder=' Fullname'
@@ -67,7 +73,7 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                             defaultValue={(user.fullname ? ' ' + user.fullname : '')}
                         >
                         </TextInput>
-                                
+
                         <TextInput
                             placeholder=' Artist Name'
                             style={styles.inputsSignUp}
@@ -85,24 +91,24 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, user }) {
                             defaultValue={user.city ? ' ' + user.city : ''}
                         >
                         </TextInput>
-                        
 
-                        {user.role === "ARTIST" ? 
-                        <TextInput
-                            placeholder=' Music Tags (Rock, Jazz, punk, etc)'
-                            style={styles.inputsSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
-                            defaultValue={user.tags ? user.tags : ''}
-                        >
-                        </TextInput> 
-                        : <TextInput
-                        onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
-                        defaultValue={user.tags ? ' ' + user.tags : ''}
-                    >
-                    </TextInput> }
-                        
-                        
+
+                        {user.role === "ARTIST" ?
+                            <TextInput
+                                placeholder=' Music Tags (Rock, Jazz, punk, etc)'
+                                style={styles.inputsSignUp}
+                                placeholderTextColor="#343a40"
+                                onChangeText={tags => setTags(tags ? tags.split(',') : "")}
+                                defaultValue={user.tags ? user.tags : ''}
+                            >
+                            </TextInput>
+                            : <TextInput
+                                onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
+                                defaultValue={user.tags ? ' ' + user.tags : ''}
+                            >
+                            </TextInput>}
+
+
 
                         <TextInput
                             placeholder=" Youtube Link"

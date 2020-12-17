@@ -274,27 +274,37 @@ export default function Home({ onHandleLogout }) {
     }
   }
 
+  const handleGoToProfile = () => {
+    if (user.role === 'ARTIST') {
+      setView('artist-profile')
+    }
+    else {
+      setView('promoter-profile')
+    }
+  }
+  
+
   return (
 
     <View>
-      { view === 'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} />}
-      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} />}
-      { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} />}
+      { view === 'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile}/>}
+      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile}/>}
+      { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile}/>}
       { view === 'results' && <View style={{
         backgroundColor: "#f8f4f4",
         paddingHorizontal: 20,
-      }}><ArtistsMap users={users} onGoToArtistProfile={handleGoToArtistProfile} />
+      }}><ArtistsMap users={users} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile}/>
       </View>}
 
-      { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} />}
-      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} />}
+      { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} onGoToProfile={handleGoToProfile}/>}
+      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} onGoToProfile={handleGoToProfile}/>}
       { view === 'lives' && <View style={{
         backgroundColor: "#f8f4f4",
         paddingHorizontal: 20,
-      }}><LivesMap lives={lives} user={user} onGoToLiveDetail={handleGoToLiveDetail} />
+      }}><LivesMap lives={lives} user={user} onGoToLiveDetail={handleGoToLiveDetail} onGoToProfile={handleGoToProfile}/>
       </View>}
-      { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} />}
-      { view === 'edit-live' && <EditLiveScreen live={live} onModifyLive={handleModifyLive} />}
+      { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} onGoToProfile={handleGoToProfile}/>}
+      { view === 'edit-live' && <EditLiveScreen live={live} onModifyLive={handleModifyLive} onGoToProfile={handleGoToProfile}/>}
     </View>
   );
 }

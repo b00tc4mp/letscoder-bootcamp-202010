@@ -18,7 +18,9 @@ export default function PetitionScreen({ onSubmitPetition }) {
                 behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
             >
                 <ScrollView>
-
+                <TouchableOpacity onPress={onGoToProfile}>
+                        <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} />
+                        </TouchableOpacity>
                     <View style={styles.LivePetitionContainer}>
                     <TextInput
                             placeholder=' Title'

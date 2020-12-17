@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, item }) {
+function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onGoToProfile, item }) {
 
     return (
 
@@ -11,8 +11,11 @@ function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, ite
                 behavior={Platform.OS == "ios" ? "padding" : "height"}
             >
                 <ScrollView>
+                    
                     <View style={styles.artistProfileHeader}>
+                        <TouchableOpacity onPress={onGoToProfile}>
                         <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
+                        </TouchableOpacity>
 
                         <TouchableOpacity onPress={onGoToPetitions}>
                             <Image style={styles.PetitionsIcon} source={require('../assets/petitions-image.png')} />

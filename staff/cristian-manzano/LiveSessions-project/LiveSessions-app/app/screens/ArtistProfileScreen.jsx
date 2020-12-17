@@ -2,7 +2,8 @@ import React from 'react';
 import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-function ArtistProfileScreen({ onGoToEditProfile, onGoToLivePetitions, onLogOut, user }) {
+function ArtistProfileScreen({ onGoToEditProfile, onGoToLivePetitions, onLogOut, onGoToProfile, user }) {
+    const userId = user.id
         return (
 
             <SafeAreaView style={styles.artistProfileContainer}>
@@ -11,7 +12,9 @@ function ArtistProfileScreen({ onGoToEditProfile, onGoToLivePetitions, onLogOut,
                 >
                     <ScrollView>
                             <View style={styles.artistProfileHeader}>
+                                <TouchableOpacity onPress={onGoToProfile}>
                                 <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
+                                </TouchableOpacity>
 
 
                                 <TouchableOpacity onPress={onLogOut}>
@@ -22,8 +25,10 @@ function ArtistProfileScreen({ onGoToEditProfile, onGoToLivePetitions, onLogOut,
                             <View style={styles.artistProfileBody}>
 
                                 <TouchableOpacity onPress={onGoToEditProfile}>
-                                    <Avatar.Image style={styles.profileAvatar} size={120} source={require('../assets/default-profile-image.png')} />
-                                    <Text style={styles.artistName}>@{user.artistName}</Text>
+                                <Image style={styles.profileAvatar}  
+                                source={{uri: `http://192.168.1.131:4000/api/users/${userId}/images`}}
+                                style={{width: 150, height: 170, borderRadius: 60/2}}/>
+                                <Text style={styles.artistName}>@{user.artistName}</Text>
                                 </TouchableOpacity>
 
                                 <View style={styles.linkContainer}>

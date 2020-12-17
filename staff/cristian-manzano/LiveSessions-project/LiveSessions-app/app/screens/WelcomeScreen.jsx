@@ -5,16 +5,16 @@ function WelcomeScreen({ onGoToSignUp, onGoToSignIn }) {
     return (
         <View
             style={styles.background}
-            source={require('../assets/background.png')}
+        // source={require('../assets/background.png')}
         >
-            
+
             <Image style={styles.logo} source={require('../assets/logo.png')} />
 
 
             <Text style={styles.messageText}>Find your next live session</Text>
 
-            <Image style={styles.welcomeImage} source={require('../assets/welcome-image-nirvana.png')}/>
-        
+            <Image style={styles.welcomeImage} source={require('../assets/welcome-image-nirvana.png')} />
+
             <View style={styles.buttonsContainer}>
                 <TouchableOpacity style={styles.signInButton} onPress={onGoToSignIn}>
                     <Text style={styles.buttonText}>Sign In</Text>
@@ -32,36 +32,46 @@ function WelcomeScreen({ onGoToSignUp, onGoToSignIn }) {
 const styles = StyleSheet.create({
     background: {
         flex: 1,
-        justifyContent: "space-around", 
+        justifyContent: "space-around",
     },
-    buttonsContainer: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-around" ,   
-    },
-
-    signInButton: {
-        width: '20%',
-        height: 70,
-    },
-
+    
     logo: {
+        marginTop: "-5%",
         width: 50,
         height: 50,
     },
-
+    
+    
     messageText: {
         fontSize: 25,
         color: "white",
-        marginTop: "-10%",
-        marginLeft: "10%",
+        marginTop: "-30%",
+        marginLeft: "15%",
     },
-
-
+    
     welcomeImage: {
         width: "100%",
+        marginTop: "-20%",
         height: 200,
     },
+
+    buttonsContainer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+    },
+    
+    signInButton: {
+        width: '20%',
+        height: 30,
+        // borderWidth: .2,
+        justifyContent: 'center',
+        // borderColor: "purple"
+    },
+
+
+
+
 
     introMessage: {
         marginTop: 10,

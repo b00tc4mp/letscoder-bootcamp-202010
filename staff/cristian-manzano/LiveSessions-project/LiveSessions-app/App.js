@@ -55,7 +55,7 @@ export default function App() {
 
   const handleLogOut = () => {
     AsyncStorage.removeItem('token')
-    setView('sign-in')
+    setView('')
   }
 
       useEffect(() => { 
@@ -73,7 +73,7 @@ export default function App() {
 
   return <ImageBackground 
   style={styles.background}
-  source={require('./app/assets/background.png')}>
+  source={require('./app/assets/background-color-black.png')}>
 
     { view === "" && <WelcomeScreen onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn}/>}
     { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} />}
