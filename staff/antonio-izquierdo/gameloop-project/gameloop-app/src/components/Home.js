@@ -118,7 +118,7 @@ export default function Home({onLogout}) {
         } }>LOGOUT</button>}
         {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
         {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
-        {view === 'home' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
+        {view === 'profile' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames}/>}
         {view === 'profile' && <Profile name={name} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames }/>}
     </section>

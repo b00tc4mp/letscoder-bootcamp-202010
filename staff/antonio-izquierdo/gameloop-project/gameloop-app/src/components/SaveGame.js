@@ -17,11 +17,11 @@ export default function SaveGame ({onSaveGame, error}) {
     }
  
     return <section className="save-game">
-        <form onSubmit={handleSubmitGame}> 
+        <form className="save-game__form" onSubmit={handleSubmitGame}> 
             {error && <Feedback error={error}/>}
-            <input name="name" type="text" placeholder="Game Tittle"></input>
-            <textarea name="description" type ="text" placeholder="Description"></textarea>
-            <input name="budget" type ="text" placeholder="Price"></input>
+            <input className="save-game__form__name" name="name" type="text" placeholder="Game Tittle"></input>
+            <textarea className="save-game__form__description" name="description" type ="text" placeholder="Description"></textarea>
+            <input className="save-game__form__price"name="budget" type ="text" placeholder="Price"></input>
             <select className="save-game__select" name="gameconsole" id="gameconsole">
             <option className="save-game__option" value="game boy">Game Boy</option>
             <option className="save-game__option" value="game boy advance">Game Boy Advance</option>

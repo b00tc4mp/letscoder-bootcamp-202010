@@ -4,6 +4,7 @@ import logo from "../assets/img/logo.png"
 
 function Access( ) {
     return <section className="access">
+       
         <img className="access__logo" src={logo} />
         <p> PAY LESS <br /> <br /> PLAY MORE</p>
         <div className="access__div">

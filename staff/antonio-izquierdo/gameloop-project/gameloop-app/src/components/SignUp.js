@@ -5,7 +5,9 @@ import { Feedback } from '.'
 
 function SignUp({ onSignUp, error }) {
     return <section className="sign-up">
+         <Link to='/'>
         <img className="sign-up__logo" src={logo}/>
+        </Link>
         <div className="sign-up__container">
             <form className="sign-up__container__form" onSubmit={event => {
                 event.preventDefault()

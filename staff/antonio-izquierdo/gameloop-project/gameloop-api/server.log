@@ -2355,3 +2355,46 @@ info 2020-12-16T21:28:48.358Z - server running on port 4000
 info 2020-12-16T21:29:06.610Z - stopping server
 info 2020-12-16T21:29:47.099Z - server running on port 4000
 info 2020-12-16T21:58:12.958Z - stopping server
+info 2020-12-16T22:01:02.458Z - server running on port 4000
+error 2020-12-16T22:07:13.269Z - TypeError: berenjena is not a valid gameconsole
+    at validateGameconsole (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\helpers\validations.js:54:197)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\find-games.js:7:44)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-find-games.js:25:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-16T22:07:13.272Z - TypeError: berenjena is not a valid gameconsole
+    at validateGameconsole (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\helpers\validations.js:54:197)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\find-games.js:7:44)
+    at module.exports (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\handlers\handle-find-games.js:25:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-17T00:06:04.203Z - server running on port 4000
+info 2020-12-17T09:02:56.548Z - server running on port 4000
+info 2020-12-17T09:03:17.585Z - stopping server
+info 2020-12-17T09:03:26.433Z - server running on port 4000
+info 2020-12-17T12:20:54.086Z - server running on port 4000
+info 2020-12-17T12:24:35.790Z - stopping server
+info 2020-12-17T12:55:38.100Z - server running on port 4000
+info 2020-12-17T12:56:52.213Z - stopping server

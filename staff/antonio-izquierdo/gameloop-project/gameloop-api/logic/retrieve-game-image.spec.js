@@ -1,127 +1,124 @@
-/* require('dotenv').config()
+require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId, randomWrongLengthId, randomGameConsole, randomInteger} = require('../utils/randoms')
 require('../utils/array-polyfills')
-const retrievePetImage = require('./delete-pet')
-const { models: { User, Pet }, mongoose } = require('adogtapp-data')
+const retrieveGameImage = require('./retrieve-game-image')
+const { models: { User, Game }, mongoose } = require('gameloop-data')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-describe('retrievePetImage()', () => {
+describe('retrieveGameImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let userName, email, password, address, city, phone, name, breed, species, color, description, petId, shelter, image
+        let fullname, email, password, gameId, name, description, gameconsole, owner, userId, image
 
-        beforeEach(async() => {
-            userName = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+        beforeEach(async () => {
+            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
-            address = randomStringWithPrefix('address')
-            city = randomStringWithPrefix('city')
-            phone = randomStringWithPrefix('phone')
+
+            gameId = randomId()
+            name = randomStringWithPrefix('password')
             description = randomStringWithPrefix('description')
+            gameconsole = randomGameConsole()
+            budget = '' + randomInteger(1, 100)
+            owner = randomId()
 
-            name = randomStringWithPrefix('name')
-            breed = randomStringWithPrefix('breed')
-            species = 'dog'
-            color = randomStringWithPrefix('color')
+            image = '../populate/games/default.jpg'
 
-            image = '../populate/pets/default.jpg'
-
-            const user = { userName, email, password, address, city, phone, description }
+            const user = { fullname, email, password }
 
             const newUser = await User.create(user)
-            shelter = '' + newUser._id
-            
-            const pet = {name, breed, species, color, description, shelter, image}
+            userId = '' + newUser._id
 
-            const newPet = await Pet.create(pet)
-            petId = '' + newPet._id
+            const game = { gameId, name, description, gameconsole, budget, owner, image }
+
+            const newGame = await Game.create(game)
+            gameId = '' + newGame._id
 
         })
 
-        it('shoud succed on a existing pet', () => {
-            retrievePetImage(petId)
-               
-            .then(result => (image).to.equal(result))
-            
+        it('shoud succed on a existing game', () => {
+            retrieveGameImage(gameId)
+
+                .then(result => (image).to.equal(result))
+
         })
 
         afterEach(() =>
-            User.deleteMany().then(()=>{Pet.deleteMany().then(()=>{})})
-                
+            User.deleteMany().then(() => { Game.deleteMany().then(() => { }) })
+
         )
     })
 
-    describe('on a non existing pet', () => {
-        let petId
+    describe('on a non existing game', () => {
+        let gameId
 
         beforeEach(() => {
-            
-            petId = randomId()
+
+            gameId = randomId()
 
         })
 
-        it('shoud fail when pet does not exists', () => {
-            retrievePetImage(petId)
+        it('shoud fail when game does not exists', () => {
+            retrieveGameImage(gameId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 
-                    expect(error.message).to.equal(`pet with id ${petId} not found`)
+                    expect(error.message).to.equal(`game with id ${gameId} not found`)
                 })
-            
         })
 
-    }) 
-
-     describe('when any parameter is wrong', () => {
-        describe('when id is wrong', () => {
-            
-                describe('when id is empty or blank', () => {
-                    let petId
-            
-                    beforeEach(() => {
-            
-                        petId = randomEmptyOrBlankString()
-                        
-                    })
-            
-                    it('should fail on an empty or blank name', () => {
-                        expect(() => retrievePetImage(petId, () => { })).to.throw(ContentError, 'id is empty or blank')
-                    })
-                })
-                describe('when id is not a string', () => {
-                    let petId
-            
-                    beforeEach(() => {
-                        petId = randomNonString()
-                        
-                    })
-            
-                    it('should fail when id is not an string', () => {
-                        expect(() => retrievePetImage(petId, () => { })).to.throw(TypeError, `${petId} is not an id`)
-                    })
-            
-                })
-                describe('when id lenght is not 24', () => {
-                    let petId
-            
-                    beforeEach(() => {
-                        petId = '5fbcd46c1cc24f9c7ce22db000'
-                        
-                    })
-            
-                    it('should fail when id is not an string', () => {
-                        expect(() => retrievePetImage(petId, () => { })).to.throw(LengthError, `id length ${petId.length} is not 24`)
-                    })
-                    
-                })
-        
-        }) 
-    
-    after(mongoose.disconnect)
     })
-}) */
+
+    describe('when any parameter is wrong', () => {
+        describe('when id is wrong', () => {
+
+            describe('when id is empty or blank', () => {
+                let gameId
+
+                beforeEach(() => {
+
+                    gameId = randomEmptyOrBlankString()
+
+                })
+
+                it('should fail on an empty or blank id', () => {
+                    expect(() => retrieveGameImage(gameId, () => { })).to.throw(ContentError, 'id is empty or blank')
+                })
+            })
+            describe('when id is not a string', () => {
+                let gameId
+
+                beforeEach(() => {
+                    gameId = randomNonString()
+
+                })
+
+                it('should fail when id is not an string', () => {
+                    expect(() => retrieveGameImage(gameId, () => { })).to.throw(TypeError, `${gameId} is not an id`)
+                })
+
+            })
+            describe('when id lenght is not 24', () => {
+                let gameId
+
+                beforeEach(() => {
+                    gameId = randomWrongLengthId()
+
+                })
+
+                it('should fail when id is length is wrong', () => {
+                    expect(() => retrieveGameImage(gameId, () => { })).to.throw(LengthError, `id length ${gameId.length} is not 24`)
+                })
+
+            })
+
+        })
+
+        after(mongoose.disconnect)
+    })
+}) 

@@ -18,15 +18,15 @@ module.exports = {
     },
 
     randomNotId() {
-        return [true, false, 0, 254, -5087, true, false, {}, [], new Date, new Array, new Object].random()
+        return [true, false, 0, 254, -5087, {}, [], new Date, new Array, new Object].random()
     },
 
     randomNotStringNumber() {
-        return [ 0, 3454, true, 2342311,false, undefined, {}, [], new Date, new Array, new Object].random()
+        return [ 3454, true, 2342311, {}, [], new Date, new Array, new Object].random()
     },
 
     randomNonString() {
-        return [1, -50, true, undefined, {}, [], new Date, new Array, new Object].random()
+        return [1, -50, 23426, 84930242, -473924, true, {}, [], new Date, new Array, new Object].random()
     },
 
     randomStringNumber(from, to) {  // 1, 10

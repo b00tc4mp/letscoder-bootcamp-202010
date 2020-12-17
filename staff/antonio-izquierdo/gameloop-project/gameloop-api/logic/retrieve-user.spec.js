@@ -36,6 +36,13 @@ describe('retrieveUser()', () => {
                 })
         )
 
+        it('should succeed with undefined parameters', () => {
+            retrieveUser(undefined)
+                .then(game => {
+                    expect(game).to.be(null)
+                })
+        })
+
         describe('when user id is wrong', () => {
             let userId
 

@@ -10,24 +10,24 @@ module.exports = function( gameId, name, description, gameconsole, budget, owner
     if (typeof budget !== 'undefined')validatePrice(budget)
     if (typeof ownerId !== 'undefined') validateId(ownerId)
 
-    const _id = ObjectId(ownerId)
+    const _userId = ObjectId(ownerId)
 
     return User
-        .findById({_id})
+        .findById({_id: _userId})
         .then(user => {
             if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
 
             if (gameId) {
 
-                const _id = ObjectId(gameId)
+                const _gameId = ObjectId(gameId)
 
                 return Game
-                    .findOne({_id})
+                    .findById({_id: _gameId})
                     .then(game => {
                         if (!game) throw new NotFoundError(`game with id ${gameId} not found`)
 
                         return Game
-                            .updateOne({ _id }, { $set: { name, description, budget } } )
+                            .updateOne({ _id: _gameId }, { $set: { name, description, budget } } )
                             .then(result => result.id)
                     })
             } else

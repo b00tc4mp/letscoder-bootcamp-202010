@@ -54,9 +54,17 @@ describe('saveGameImage()', () => {
                 })
         })
 
+        it('should succeed with undefined parameters', () => {
+            saveGameImage(undefined)
+                .then(game => {
+                    expect(game).to.be(null)
+                })
+        })
+
         afterEach(() =>
-            User.deleteMany().then(()=>{Game.deleteMany().then(()=>{})})
-                
+            User.deleteMany().then(()=>
+                {Game.deleteMany().then(()=>
+                    {Game.deleteOne({ _id: userId })})})       
         )
     })
 
