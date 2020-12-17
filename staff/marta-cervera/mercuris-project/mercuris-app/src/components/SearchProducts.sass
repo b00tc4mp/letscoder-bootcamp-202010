@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+$Bebas: 'Bebas Neue', cursive
+.search
+    &__title
+        
 .searching
-    background-position: center center
-    background-size: cover
-    max-width: 100%
-    height: 27vh
-    height: 35vh
+         
+    height: 100%
+    width: 100%
+    padding: 5%
+    text-align: justify
+    background-repeat: no-repeat
+    
     display: flex
     flex-direction: column
     flex-wrap: nowrap
@@ -11,45 +18,71 @@
     align-items: center
     align-content: center
     
-
     &__title
-        color: #C71585
-        margin-top: 60vw
-
+        color: #d158b7
+        
     &__form
         display: grid
         padding: 1rem
         border: 10px groove
+        background-color:#d158b7
+        width: 55vw    
         &__input
-            background-color: #FFF0F5            
+            background-color: #d158b7           
             color: white
             font-size: 3vw
             height: 5vh
             margin: 2vh
+            color:#d158b7
+                     
 
-@media (max-width: 700px)
-    .access
-        display: grid
+@media (max-width: 700px)// minwidth
+    .search
+        display: flex
+        padding: 4px
+        &__title            
+            color: #58a5d1
+            font-family: $Bebas
+            font-size: 10vw
+        &__logo
+            height: 20vh
+            width: 60vw
+            margin-left: 5vw
 
-        .register
-            display: grid
-            flex-direction: column
-            flex-wrap: wrap
+    .searching
+       
+        display: flex
+        flex-direction: column
+        flex-wrap: nowrap
+        justify-content: center
+        align-items: center
+        align-content: center
+        background-color: 
+        &__form
+            background-color:#d158b7
+                     
+            &__input
+                background-color: white        
+                font-family: $Bebas
+                font-size: 3vw
+                height: 5vh
+                margin: 2vh  
+                color:#d158b7
+            &__btn
+                text-align: center            
+                font-size: 15px            
+                color: white
+                width: 40vw
+                max-height: 6vh
+                background-color: #58a5d1
+                border-radius: 10px
+                line-height: 30px
+                margin: 5px auto
+                font-family: $Bebas
 
-            &__title
-                width: 50vw
-                height: 45vh
-                color: #9F08ED
-            &__signup
-                height: 2vw
-                border-radius: 25px
-                background-color: #E8D0F5
-            &__signin
-                height: 20vw
-                width: 10vw
-                background-color: #E8D0F5
-                border-radius: 25px
 
+        
+        
 
    
 

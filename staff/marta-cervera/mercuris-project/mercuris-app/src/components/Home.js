@@ -19,14 +19,14 @@ export default function Home({ onLogout }) {
         }, 10000)
     }
 
-    const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
+    const [view, setView] = useState(sessionStorage.token ? 'search-products' : 'access')
     const [success, setSuccess] = useState()
     const [currentUser, setCurrentUser] = useState()
     const [products, setProducts] = useState()
     const [changes, setChanges] = useState()
 
 
-    
+
     useEffect(() => {
         const { token } = sessionStorage
         try {
@@ -98,9 +98,9 @@ export default function Home({ onLogout }) {
 
             modifyUser(token, { name, contact, address, city, phone }, (error, changes) => {
                 if (error) return feedbackError('could not find any changes')
-                
 
-                setCurrentUser({name, contact,address,city,phone})
+
+                setCurrentUser({ name, contact, address, city, phone })
 
 
             })
@@ -112,14 +112,14 @@ export default function Home({ onLogout }) {
 
     return (
         <div className="home">
-            <button className="home__logout" onClick={() => {
+            {<button className="home__logout" onClick={() => {
                 setCurrentUser(null)
                 setError(null)
                 onLogout()
-            }}>LOGOUT</button>
-            {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
-            {view === 'profile' || 'search-products' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
-            {view === 'home' && <button className="home__profile" onClick={handleGoToSearchProducts}>SEARCH</button>}
+            }}>LOGOUT</button>}
+            {<button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
+            {<button className="home__profile" onClick={handleGoToHome}>REGISTER PRODUCT</button>}
+            {<button className="home__profile" onClick={handleGoToSearchProducts}>SEARCH</button>}            
             {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={currentUser && currentUser.name} error={error} />}
             {view === 'profile' && <Profile currentUser={currentUser} onModify={handleModifyUser} />}
             {view === 'search-products' && <SearchProducts onSearch={handleSearchProducts} />}

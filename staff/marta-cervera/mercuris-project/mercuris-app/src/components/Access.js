@@ -2,7 +2,8 @@ import './Access.sass'
 import {Link} from 'react-router-dom'
 
 function Access({  onGoToSearch }){
-    return <div className="access">               
+    return <div className="access">
+        <h1 className="access__maintitle">MERCURIS</h1>               
         <div className= "access__register">        
         <h1 className= "access__register__title">RAISE YOUR PRODUCT</h1>
         <h2 className= "access__register__title2">Register your Company</h2>

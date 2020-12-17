@@ -3,7 +3,7 @@ import { validateToken, validateId, validateDescription, validatePrice, validate
 import context from './context'
 
 export default (function saveProduct(productId, token, name, description, price, callback) {
-    debugger
+    
     if (typeof productId !== 'undefined') validateId(productId)
     validateToken(token)
     validateName(name)

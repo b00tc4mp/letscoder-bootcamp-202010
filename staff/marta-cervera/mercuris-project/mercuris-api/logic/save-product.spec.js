@@ -182,6 +182,43 @@ describe('when price is wrong', () => {
             expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(TypeError, `${price} is not a number`)
         })
     })
+    describe('when Id is wrong', () => {
+        describe('when Id is not a valid id', () => {
+            describe('when productId is not a product Id', () => {
+                let productId, name, description, price, ownerId
+
+                beforeEach(() => {
+                    productId = randomNotId()
+                    name = randomStringWithPrefix('name')
+                    description = randomStringWithPrefix('password')
+                    price =  '' + randomInteger(1, 100)
+                    ownerId = randomId()
+                })
+                it ('should fail when productId is not an id', () => {
+                    expect(() => saveProduct(productId, ownerId, name, description, price, () => {})).to.throw(TypeError, `${gameId} is not an id`)
+                })
+            })
+            describe('when ownerId is not an Id', () => {
+                let productId, name, description
+            })
+        })
+        let productId, description, price
+
+        beforeEach(() => {
+            productId = randomId()
+            description = randomStringWithPrefix('description')
+            price = '' + randomInteger(10, 100)                
+        })
+        //productId, ownerId, name, description, price)
+        it('should fail on trying to update a product that does not exist any more', () =>
+            saveProduct(undefined, ownerId, name, description, price)
+                .catch(error => {
+                    expect(error).to.be.instanceOf(Error)
+
+                    expect(error.message).to.equal(`product with id ${productId} not found`)
+                })
+        )
+    })
 
 
 

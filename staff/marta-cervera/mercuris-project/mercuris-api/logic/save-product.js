@@ -4,12 +4,12 @@ const { NotFoundError } = require('../errors')
 
 
 module.exports = function (productId, ownerId, name, description, price) {
-    debugger
+    
     validateId(ownerId)
     if (typeof productId !== 'undefined') validateId(productId)
     validateName(name)
     validateDescription(description)
-    validatePrice(price)
+    if ( typeof price !== 'undefined')validatePrice(price)
 
     const _id = ObjectId(ownerId)
 

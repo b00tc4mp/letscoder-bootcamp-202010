@@ -2,7 +2,7 @@ import { call } from '../utils'
 import {  validateCallback, validateId } from './helpers/validations'
 
 export default function (id, callback) {
-    debugger
+    
     validateId(id)
     validateCallback(callback)
 

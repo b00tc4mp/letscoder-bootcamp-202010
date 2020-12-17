@@ -3,33 +3,36 @@ require('dotenv').config()
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId, randomInteger } = require('../utils/random')
 require('../utils/array-polyfills')
-const retrieveProductDetail = require('./retrieve-product-detail')
+const deleteProduct = require('./delete-product')
 const { models: { User, Product }, mongoose } = require('mercuris-data')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-describe('retrieveProductDetail()', () => {
+describe('deleteProduct()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let  email, password, name, description, productId, owner
+        let name, email, password, address, phone, price, description, owner
 
         beforeEach(async() => {
             name = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
+            address = randomStringWithPrefix('address')
+            city = randomStringWithPrefix('city')
+            phone = randomStringWithPrefix('phone')
             
 
             name = randomStringWithPrefix('name')
             description = randomStringWithPrefix('description')
             price = '' + randomInteger(10, 100)
-            productId = randomId()   
+            owner= randomId()
 
-            const user = { name, email, password }
+            const user = { name, email, password, address, city, phone}
 
             const newUser = await User.create(user)
-             owner = '' + newUser._id
+            owner = '' + newUser._id
             
             const product = {name, description, price, owner}
 
@@ -39,17 +42,9 @@ describe('retrieveProductDetail()', () => {
         })
 
         it('shoud succed on a existing product', () => {
-            return retrieveProductDetail(productId)           
+            deleteProduct(productId)
                
-            .then(() =>
-                    Product.findOne({ productId })
-                )
-                .then(product => {
-                    expect(product.productId).to.equal(productId)
-                    expect(product.name).to.equal(name)
-                    expect(product.description).to.equal(description)
-                  
-                })
+            .then(result => expect(result.deletedCount).to.equal(1))
         })
 
         afterEach(() =>
@@ -68,11 +63,12 @@ describe('retrieveProductDetail()', () => {
         })
 
         it('shoud fail when product does not exists', () => {
-            retrieveProductDetail(productId)
+            deleteProduct(productId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
+
                     expect(error.message).to.equal(`product with id ${productId} not found`)
-            })
+                })
             
         })
 
@@ -91,7 +87,7 @@ describe('retrieveProductDetail()', () => {
                     })
             
                     it('should fail on an empty or blank name', () => {
-                        expect(() => retrieveProductDetail(productId, () => { })).to.throw(ContentError, 'id is empty or blank')
+                        expect(() => deleteProduct(productId, () => { })).to.throw(ContentError, 'id is empty or blank')
                     })
                 })
                 describe('when id is not a string', () => {
@@ -103,7 +99,7 @@ describe('retrieveProductDetail()', () => {
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => retrieveProductDetail(productId, () => { })).to.throw(TypeError, `${productId} is not an id`)
+                        expect(() => deleteProduct(productId, () => { })).to.throw(TypeError, `${productId} is not an id`)
                     })
             
                 })
@@ -111,12 +107,12 @@ describe('retrieveProductDetail()', () => {
                     let productId
             
                     beforeEach(() => {
-                        productId = '5fd76a98396e732e306c953242'
+                        productId = '5fbcd46c1cc24f9c7ce22db000'
                         
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => retrieveProductDetail(productId, () => { })).to.throw(LengthError, `id length ${productId.length} is not 24`)
+                        expect(() => deleteProduct(productId, () => { })).to.throw(LengthError, `id length ${productId.length} is not 24`)
                     })
                     
                 })

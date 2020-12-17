@@ -1877,3 +1877,31 @@ info 2020-12-16T20:22:14.521Z - undefined
 info 2020-12-16T22:00:47.311Z - stopping server
 info 2020-12-16T22:01:15.855Z - starting server
 info 2020-12-16T22:01:15.969Z - undefined
+info 2020-12-17T08:11:07.947Z - stopping server
+info 2020-12-17T08:11:13.758Z - starting server
+info 2020-12-17T08:11:13.938Z - undefined
+info 2020-12-17T09:00:50.362Z - stopping server
+info 2020-12-17T09:00:55.689Z - starting server
+info 2020-12-17T09:00:55.851Z - undefined
+info 2020-12-17T09:08:10.724Z - stopping server
+info 2020-12-17T09:08:13.920Z - starting server
+info 2020-12-17T09:08:14.039Z - undefined
+info 2020-12-17T09:32:58.932Z - stopping server
+info 2020-12-17T10:45:46.674Z - starting server
+info 2020-12-17T10:45:46.783Z - undefined
+info 2020-12-17T13:53:23.918Z - stopping server
+info 2020-12-17T13:53:27.937Z - starting server
+info 2020-12-17T13:53:28.046Z - undefined
+info 2020-12-17T14:03:31.631Z - stopping server
+info 2020-12-17T14:03:34.859Z - starting server
+info 2020-12-17T14:03:34.967Z - undefined
+info 2020-12-17T14:08:41.540Z - stopping server
+info 2020-12-17T14:09:03.547Z - starting server
+info 2020-12-17T14:09:03.659Z - undefined
+info 2020-12-17T17:48:25.124Z - stopping server
+info 2020-12-17T17:48:31.438Z - starting server
+info 2020-12-17T17:48:31.595Z - undefined
+error 2020-12-17T20:14:45.950Z - NotFoundError: product with id 5fdb66741f9e1442ec6b4509 not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:18:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

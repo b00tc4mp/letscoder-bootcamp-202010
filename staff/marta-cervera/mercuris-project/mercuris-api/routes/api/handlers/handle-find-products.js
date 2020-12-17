@@ -5,9 +5,7 @@ const { env: { JWT_SECRET }
 } = process
 
 module.exports = (req, res, handleError) => {
-    debugger
-    
-
+      
     let { headers: { authorization }, query: { queryCompany, queryProduct, price, priceMin, priceMax } } = req;
 
     if (price) price = Number(price)

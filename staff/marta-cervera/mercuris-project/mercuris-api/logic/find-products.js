@@ -3,12 +3,12 @@ const { models: { User, Product }, mongoose: { Types: { ObjectId } } } = require
 const { validateQuery, validatePrice} = require('./helpers/validations')
 
 module.exports = function (userId, queryCompany, queryProduct, price, priceMin, priceMax) {
-    /* validateQuery(queryCompany)    
-    validateQuery(queryProduct)    
-    validatePrice(price)
-    validatePrice(priceMin)
-    validatePrice(priceMax)   */
-    
+    if (typeof queryCompany !== 'undefined') validateQuery(queryCompany)
+    if (typeof queryProduct !== 'undefined') validateQuery(queryProduct)
+    if (typeof price !== 'undefined') validatePrice(price)
+    if (typeof priceMax !== 'undefined') validatePrice(price)
+    if (typeof priceMin !== 'undefined') validateQuery(price)  
+     
     
     const criteria = {}
 

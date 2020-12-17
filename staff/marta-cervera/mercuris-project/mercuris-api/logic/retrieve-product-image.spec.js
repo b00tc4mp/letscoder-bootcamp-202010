@@ -13,7 +13,7 @@ describe('retrieveProductImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let name, email, password, address, city, phone, description, price
+        let name, email, password, address, city, phone, description, price, owner
 
         beforeEach(async() => {
             name = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -28,22 +28,22 @@ describe('retrieveProductImage()', () => {
             description= randomStringWithPrefix('description')
             price = '' + randomInteger(10, 100)   
 
-            image = '../populate/products/default.jpg'
+            image = '../data/products/default.jpg'
 
             const user = { name, email, password, address, city, phone, owner }
 
             const newUser = await User.create(user)
             owner = '' + newUser._id
             
-            const product = {name, descritpion, price, image}
+            const product = {name, description, price, image, owner}
 
-            const newProduct = await Pet.create(pet)
+            const newProduct = await Product.create(product)
             productId = '' + newProduct._id
 
         })
 
         it('shoud succed on a existing product', () => {
-            retrieveProductImage(productId)
+           return  retrieveProductImage(productId)
                
             .then(result => (image).to.equal(result))
             
@@ -65,7 +65,7 @@ describe('retrieveProductImage()', () => {
         })
 
         it('shoud fail when product does not exists', () => {
-            retrieveProductImage(productId)
+            return retrieveProductImage(productId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 
@@ -89,7 +89,7 @@ describe('retrieveProductImage()', () => {
                     })
             
                     it('should fail on an empty or blank name', () => {
-                        expect(() => retrievePetImage(productId, () => { })).to.throw(ContentError, 'id is empty or blank')
+                        expect(() => retrieveProductImage(productId, () => { })).to.throw(ContentError, 'id is empty or blank')
                     })
                 })
                 describe('when id is not a string', () => {
@@ -101,7 +101,7 @@ describe('retrieveProductImage()', () => {
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => retrievePetImage(productId, () => { })).to.throw(TypeError, `${producttId} is not an id`)
+                        expect(() => retrieveProductImage(productId, () => { })).to.throw(TypeError, `${productId} is not an id`)
                     })
             
                 })

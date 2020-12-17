@@ -16,8 +16,7 @@ module.exports = function (productId) {
 
                 .findById(ownerId).lean()
                 .then(user => {
-                    debugger
-
+                    
                     const { _id } = product
 
                     const { name } = user

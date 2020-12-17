@@ -3,19 +3,20 @@ import FindProducts from './FindProducts'
 import DetailProduct from './DetailProduct'
 import { useState, useEffect } from 'react'
 import { findProducts, retrieveProductDetail } from '../logic'
+import logo from "../assets/images/logo1.jpg"
+import {useHistory} from 'react-router-dom'
 
-
-export default function ({error}) {
+export default function ({ doGoToAccess }) {
     const [view, setView] = useState('find-products')
-
+    const history = useHistory()
     const [results, setResults] = useState()
     const [result, setResult] = useState()
     const [criteria, setCriteria] = useState()
 
     const { token } = sessionStorage
 
-    const handleFindProducts = event => {  
-        debugger           
+    const handleFindProducts = event => { 
+                 
 
 
         event.preventDefault()
@@ -60,7 +61,7 @@ export default function ({error}) {
                 if(error) return alert(error.message)
                 
                 setResult(result)
-                setResults(null)
+                
             })
             
         } catch (error) {
@@ -80,29 +81,43 @@ export default function ({error}) {
                 setResults(results)
                 setView(null)
                 setCriteria({ queryCompany, queryProduct, price, priceMin, priceMax});
-            
+                setResult(null)
 
             })
         } catch (error) {
             alert(error.message)
         }
+
+        
     } 
+    const handleGoToSearch =() => {
+        setResult(null)
+    }
+    
+    const handleGoToAccess =() => {
+        history.push('/')
+    } 
+    
     return (
         <>
+        {!token && <button onClick= {handleGoToAccess}>GO TO ACCESS</button>}
+        <main>
+        <div className="search">        
+        <img className="search__logo" src={logo} />
+        </div>
         <div className="searching">
-        <h1 className="searching__title">Your Searching form</h1>
-            <form onSubmit={handleFindProducts} className="searching__form">                
+                {!results && !result && <form onSubmit={handleFindProducts} className="searching__form">                
                 {!token && <input className="searching__form__input"type="text" name="queryCompany" placeholder="Info Company" />}
                 <input className="searching__form__input"type="text" name="queryProduct" placeholder="Info Product" />
                 <input className="searching__form__input"type="number" name="price" placeholder="Introduce price" />
                 <input className="searching__form__input" type="number" name="priceMin" placeholder="priceMin" />
                 <input className="searching__form__input"type="number" name="priceMax" placeholder="priceMax" />
                 <button className="searching__form__btn">Search</button>
-            </form>
-
-            {results && results.length >0 && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
-            {!results && result && <DetailProduct result={result} doRefreshProducts={handleRefreshResults} />}
+            </form>}
+            {results && results.length >0 && !result && <FindProducts onSearch={handleFindProducts} results={results} onDetailProduct={handleDetailProduct}/>}
+            {result && <DetailProduct result={result} doRefreshProducts={handleRefreshResults} doGoToSearch={handleGoToSearch} />}
         </div>
+        </main>
         </>
     );
 }

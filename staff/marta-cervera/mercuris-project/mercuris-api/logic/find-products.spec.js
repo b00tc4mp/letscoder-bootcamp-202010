@@ -132,6 +132,48 @@ describe('findProducts()', () => {
         })
 
 
+    })
+    describe('when priceMin is wrong', () => {
+        describe('when priceMin is not a number', () => {
+
+            let owner, queryCompany, queryProduct, price, priceMin, priceMax
+            beforeEach(() => {
+                owner = randomId()
+                queryCompany = randomStringWithPrefix('queryCompany')
+                queryProduct = randomStringWithPrefix('queryProduct')
+                price = '' + randomInteger(10, 100)
+                priceMin = randomNotNumber()
+                priceMax = '' + randomInteger(10, 100)
+            })
+
+            it('should fail on a non number priceMin', () => {
+
+                expect(() => findProducts(owner, queryCompany, queryProduct, price, priceMin, priceMax, () => { })).to.throw(TypeError, `${price} is not a number`)
+            })
+        })
+
+
+    })
+    describe('when priceMax is wrong', () => {
+        describe('when priceMax is not a number', () => {
+
+            let owner, queryCompany, queryProduct, price, priceMin, priceMax
+            beforeEach(() => {
+                owner = randomId()
+                queryCompany = randomStringWithPrefix('queryCompany')
+                queryProduct = randomStringWithPrefix('queryProduct')
+                price = '' + randomInteger(10, 100)
+                priceMin = '' + randomInteger(10, 100)
+                priceMax = randomNotNumber()
+            })
+
+            it('should fail on a non number priceMin', () => {
+
+                expect(() => findProducts(owner, queryCompany, queryProduct, price, priceMin, priceMax, () => { })).to.throw(TypeError, `${price} is not a number`)
+            })
+        })
+
+
 
 
     })

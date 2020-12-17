@@ -6,7 +6,6 @@ import logo from "../assets/images/logo1.jpg"
 function SignUp({ onSignUp, error }) {
     return <div className= "sign-up">
         <div className="sign-up__div">
-        <h2 className="sign-up__title">Sign Up TO</h2>
         <img className="access__logo" src={logo} />  
         </div>
         { error && <Feedback error= {error}/>}       
@@ -26,8 +25,7 @@ function SignUp({ onSignUp, error }) {
             {<input className="sign-up__form__input"type="text" name="city" placeholder="city" /> }            
             {<input className="sign-up__form__input"type="text" name="phone" placeholder="phone" /> }            
             
-            <button className="sign-up__form__btn">SEND</button>
-           
+            <button className="sign-up__form__btn">SIGN UP</button>
 
         </form> 
 

@@ -10,7 +10,7 @@ module.exports = {
     },
     
     randomNonString() {
-        return [1, true, null, undefined, {}, [], function () { }, new Date].random()
+        return [1, true,  {}, [], function () { }, new Date].random()
     },
 
     randomEmptyOrBlankString() { 
