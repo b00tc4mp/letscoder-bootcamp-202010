@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+const Busboy = require('busboy')
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
@@ -13,7 +13,7 @@ describe('savePetImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let userName, email, password, address, city, phone, name, breed, species, color, description, petId, shelter, stream
+        let userName, email, password, address, city, phone, name, breed, species, color, description, petId, shelter, image
 
         beforeEach(async() => {
             userName = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -29,7 +29,12 @@ describe('savePetImage()', () => {
             species = 'dog'
             color = randomStringWithPrefix('color')
 
-            stream = '../populate/pets/default.jpg'
+            image = '../populate/pets/default.jpg'
+
+            var formData = new FormData();
+            formData.append("image", image);
+
+            const busboy = new Busboy({ formData })
 
             const user = { userName, email, password, address, city, phone, description }
 
@@ -43,17 +48,19 @@ describe('savePetImage()', () => {
 
         })
 
-        it('shoud succeed on new pet', () => {
+        it.skip('shoud succeed on new pet', () => {
+            busboy.on('file', (fieldname, file, filename, encoding, mimetype) => 
+            savePetImage(petId, file).then( Pet.findOne({ petId })
+            .then(pet => {
+                console.log(pet)
+                expect(pet.petId).to.equal(petId)
+                expect(pet.image).to.equal(file)
+            })
+            )
+                .catch(handleError) 
 
-            savePetImage(petId, stream)
-               
-            .then(() =>
-                    Pet.findOne({ petId })
-                )
-                .then(pet => {
-                    expect(pet.petId).to.equal(petId)
-                    expect(pet.stream).to.equal(stream)
-                })
+        )
+            
         })
 
         afterEach(() =>
@@ -72,8 +79,8 @@ describe('savePetImage()', () => {
 
         })
 
-        it('shoud fail when user and pet does not exists', () => {
-            savePetImage(petId, stream)
+        it.skip('shoud fail when user and pet does not exists', () => {
+            return savePetImage(petId, stream)
 
             .catch(error => {
                 expect(error).to.be.instanceOf(Error)

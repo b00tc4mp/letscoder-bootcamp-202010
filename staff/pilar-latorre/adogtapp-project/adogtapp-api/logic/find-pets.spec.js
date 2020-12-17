@@ -43,25 +43,27 @@ describe('findPets()', () => {
             petId = '' + newPet._id
 
         })
-
+        
         it('shoud succeed on a existing pet', () => {
-            findPets(shelter, queryShelter, city, queryPet, species, breed)
-               
+            return findPets(shelter, queryShelter, city, queryPet, species, breed)
                 .then(pet => {
-                    expect(pet.petId).to.equal(petId)
-                    expect(pet.name).to.equal(name)
-                    expect(pet.breed).to.equal(breed)
-                    expect(pet.species).to.equal(species)
+                    expect(pet[0].id).to.equal(petId)
+                    expect(pet[0].name).to.equal(name)
+                    expect(pet[0].breed).to.equal(breed)
+                    expect(pet[0].species).to.equal(species)
                     
                   
                 })
         })
 
         it('should succeed with undefined parameters', () => {
-            findPets(undefined)
-               
+            return findPets(undefined)
                 .then(pet => {
-                    expect(pet).to.be(null)
+                    expect(pet[0].id).to.equal(petId)
+                    expect(pet[0].name).to.equal(name)
+                    expect(pet[0].breed).to.equal(breed)
+                    expect(pet[0].species).to.equal(species)
+                    
                     
                   
                 })

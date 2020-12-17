@@ -42,10 +42,13 @@ describe('deletePet()', () => {
         })
 
         it('shoud succed on a existing pet', () => {
-            deletePet(petId)
-               
-            .then(result => expect(result.deletedCount).to.equal(1))
-        })
+            return deletePet(petId)
+                .then(result => {
+                    expect(result).to.be.instanceOf(Object)
+                    expect(result.petId).to.be.undefined
+                
+                })
+            })
 
         afterEach(() =>
             User.deleteMany().then(()=>{Pet.deleteMany().then(()=>{})})
@@ -62,7 +65,7 @@ describe('deletePet()', () => {
 
         })
 
-        it('shoud fail when pet does not exists', () => {
+        it('shoud fail when pet does not exists', () => 
             deletePet(petId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
@@ -70,7 +73,7 @@ describe('deletePet()', () => {
                     expect(error.message).to.equal(`pet with id ${petId} not found`)
                 })
             
-        })
+        )
 
     }) 
 

@@ -37,21 +37,20 @@ describe('savePet()', () => {
         })
 
         it('shoud succeed on new pet', () => {
-            savePet(shelter, undefined, name, breed, species, color, description )
-            .then(() =>{
+            return savePet(shelter, undefined, name, breed, species, color, description )
+            .then(petId => {
+                expect(ObjectId.isValid(petId)).be.true
 
-                Pet.findOne({ name })
-               
-            }
-                )
-                .then(pet => {
-                    expect(pet).to.exist
-                    expect(pet.name).to.equal(name)
-                    expect(pet.breed).to.equal(breed)
-                    expect(pet.description).to.equal(description)
-                    expect(pet.color).to.equal(color)
+                return Pet.find({ shelter })
+            })
+            .then(pet => {
+                expect(pet).to.exist
+                expect(pet[0].name).to.equal(name)
+                expect(pet[0].breed).to.equal(breed)
+                expect(pet[0].description).to.equal(description)
+                expect(pet[0].color).to.equal(color)
 
-                })
+            })
         })
         
         afterEach(() =>{ Pet.deleteMany()
@@ -79,7 +78,6 @@ describe('savePet()', () => {
 
                 return savePet( shelter, petId, name, breed, species, color, description)
                 .then(petId => {
-                    
                     expect(ObjectId.isValid(petId)).be.true
 
                     return Pet.find({ shelter})

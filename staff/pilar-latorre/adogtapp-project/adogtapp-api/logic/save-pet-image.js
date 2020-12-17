@@ -5,12 +5,13 @@ const fs = require('fs')
 module.exports = (petId, stream) => {
     validateId(petId)
     //validateStream(stream)
-
+    console.log(stream)
     return new Promise((resolve, reject) => {
         try {
             const toStream = fs.createWriteStream(path.join(__dirname, `../data/pets/${petId}.jpg`))
 
             stream.pipe(toStream)
+            
 
             resolve()
         } catch (error) {

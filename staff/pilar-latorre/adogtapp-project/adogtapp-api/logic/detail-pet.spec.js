@@ -4,7 +4,7 @@ const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const detailPet = require('./detail-pet')
-const { models: { User, Pet }, mongoose } = require('adogtapp-data')
+const { mongoose: { Types: { ObjectId } }, models: { User, Pet}, mongoose } = require('adogtapp-data')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
@@ -42,16 +42,18 @@ describe('detailPet()', () => {
         })
 
         it('shoud succed on a existing pet', () => {
-            detailPet(petId)
-               
-            .then((pet) => {
-                 
-                    expect(pet.petId).to.equal(petId)
-                    expect(pet.name).to.equal(name)
-                    expect(pet.breed).to.equal(breed)
-                    expect(pet.species).to.equal(species)
-                })
-         
+            return detailPet(petId)
+            .then(pet => {
+                expect(ObjectId.isValid(pet.id)).be.true
+
+                expect(pet.id).to.equal(petId)
+                expect(pet.name).to.equal(name)
+                expect(pet.breed).to.equal(breed)
+                expect(pet.species).to.equal(species)
+
+            })
+
+            
         })
 
         afterEach(() =>
@@ -63,20 +65,18 @@ describe('detailPet()', () => {
     describe('on a non existing pet', () => {
         let petId
 
-        beforeEach(() => {
-            
+        beforeEach(() => 
             petId = randomId()
+        )
 
-        })
-
-        it('shoud fail when pet does not exists', () => {
+        it('shoud fail when pet does not exists', () => 
             detailPet(petId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
                     expect(error.message).to.equal(`pet with id ${petId} not found`)
             })
             
-        })
+        )
 
     }) 
 
