@@ -22,5 +22,6 @@ module.exports = {
     handleToggleWorkoutsUser: require('./handle-toggle-workouts-user'),
     handleRetrieveSavedWorkouts: require('./handle-retrieve-saved-workouts'),
     handleSavePictureUser: require('./handle-save-picture-user'),
-    handleRetrievePictureUser: require('./handle-retrieve-picture-user')
+    handleRetrievePictureUser: require('./handle-retrieve-picture-user'),
+    handleSaveWeightUser: require('./handle-save-weight-user')
 }

@@ -32,6 +32,10 @@ module.exports = new Schema({
         enum: ['hombre', 'mujer']
     },
 
+    weightHistory: {
+        type: [Number]
+    },
+
     vegan: {
         type: Boolean
     },

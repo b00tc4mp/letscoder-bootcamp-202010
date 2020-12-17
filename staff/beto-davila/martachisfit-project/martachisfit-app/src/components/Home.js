@@ -17,7 +17,8 @@ import {
     retrieveMuscularGroup,
     toggleWorkoutsUser,
     retrieveSavedWorkouts,
-    savePictureUser
+    savePictureUser,
+    saveWeightUser
 } from '../logic'
 
 import logo from '../../src/logo.png'
@@ -61,8 +62,10 @@ export default function Home() {
     const [movements, setMovements] = useState()
     const [myWorkouts, setSavedWorkouts] = useState()
     const [likedWorkout, setLikedWorkout] = useState()
-    const [userId, setUserId] = useState()
+    const [user, setUser] = useState()
     const [avatar, setAvatar] = useState()
+    const [messageWeight, setMessageWeight] = useState()
+    // const [refreshWeight, setRefreshWeight] = useState()
 
     const { token } = sessionStorage
 
@@ -71,9 +74,7 @@ export default function Home() {
             retrieveUser(token, (error, user) => {
                 if (error) return feedbackError('No se pudo recuperar el usuario. Error en el servidor :(')
 
-                const { fullname, id } = user
-                setName(fullname)
-                setUserId(id)
+                setUser(user)
             })
         } catch (error) {
             alert(error.message)
@@ -359,9 +360,28 @@ export default function Home() {
             }, 3000);
             retrieveUser(token, (error, user) => {
                 if (error) return alert(error.message)
-    
+
                 setAvatar(true)
             })
+        })
+    }
+
+    const handleSaveWeight = weight => {
+        saveWeightUser(token, weight, (error) => {
+            if (error) feedbackError('No se pudo guardar su peso. Error de servidor')
+
+            setMessageWeight(true)
+            setTimeout(() => {
+                setMessageWeight(false)
+            }, 2000)
+        })
+    }
+
+    const handleModifiedWeightUser = () => {
+        retrieveUser(token, (error, user) => {
+            if (error) return feedbackError('Error de servidor')
+
+            setUser(user)
         })
     }
 
@@ -427,16 +447,19 @@ export default function Home() {
                 <UserProfile onGoToRecipe={handleGoToRecipe}
                     onLogout={handleGoToLogOut}
                     savedRecipes={savedRecipes}
-                    name={name}
+                    user={user}
                     savedArticles={savedArticles}
                     onGoToChosenArticle={handleGoToChosenArticle}
                     onGoToMyWorkout={handleRetrieveWorkout}
                     myWorkouts={myWorkouts}
                     onSavePicture={handleSavePicture}
                     error={error}
-                    feedback={message}
-                    userId={userId}
+                    feedbackImage={message}
                     avatar={avatar}
+                    feedbackWeight={messageWeight}
+                    onSaveWeight={handleSaveWeight}
+                    onSaved={handleModifiedWeightUser}
+                    // refreshWeight={refreshWeight}
                 />}
             {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle} />}
             {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name} />}

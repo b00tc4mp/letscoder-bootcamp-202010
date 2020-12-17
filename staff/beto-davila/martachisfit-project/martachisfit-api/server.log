@@ -1411,3 +1411,32 @@ info 2020-12-16T15:56:34.767Z - stopping server
 info 2020-12-16T16:09:40.987Z - starting server
 info 2020-12-16T16:09:41.148Z - server running on port 4000
 info 2020-12-17T06:24:10.881Z - stopping server
+info 2020-12-17T06:25:22.395Z - starting server
+info 2020-12-17T06:25:22.555Z - server running on port 4000
+info 2020-12-17T06:56:56.538Z - stopping server
+info 2020-12-17T09:10:57.329Z - starting server
+error 2020-12-17T09:10:57.468Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-save-weight-user.js:2
+const { saveWeightUser } = require('../../../logic')
+        ^
+
+SyntaxError: Identifier 'saveWeightUser' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:26:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:30:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-17T09:10:57.470Z - stopping server
+info 2020-12-17T09:11:38.157Z - starting server
+info 2020-12-17T09:11:38.267Z - server running on port 4000
+info 2020-12-17T11:52:21.896Z - stopping server

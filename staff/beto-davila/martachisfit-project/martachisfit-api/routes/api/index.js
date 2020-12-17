@@ -25,7 +25,8 @@ const {
     handleToggleWorkoutsUser,
     handleSavePictureUser,
     handleRetrievePictureUser,
-    handleRetrieveSavedWorkouts
+    handleRetrieveSavedWorkouts,
+    handleSaveWeightUser
 } = require('./handlers/index')
 
 const router = new Router()
@@ -58,6 +59,9 @@ router.patch('/api/users/workouts/:level', jsonBodyParser, withErrorHandling(han
 
 // add food to user diet
 router.patch('/api/users/foods', jsonBodyParser, withErrorHandling(handleAddFoodUserDiet))
+
+// save user's current weight 
+router.patch('/api/users', jsonBodyParser, withErrorHandling(handleSaveWeightUser))
 
 // add article to read later
 router.patch('/api/users/articles/:articleId', jsonBodyParser, withErrorHandling(handleAddUserArticles))

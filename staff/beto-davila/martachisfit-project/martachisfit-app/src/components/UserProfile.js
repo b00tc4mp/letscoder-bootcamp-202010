@@ -5,13 +5,18 @@ import { useState, useEffect } from 'react'
 import mancuerna from './icons/mancuerna.png'
 
 
-export default function UserProfile({ userId, avatar, feedback, name, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture }) {
+export default function UserProfile({ user, avatar, onSaved, feedbackImage, feedbackWeight, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture, onSaveWeight }) {
     const [userChosenFoods, setUserChosenFoods] = useState()
     const [message, setMessage] = useState()
 
     const API_URL = process.env.REACT_APP_API_URL
 
     const { token } = sessionStorage
+
+    const { fullname, weightHistory, id } = user
+
+    const timeElapsed = Date.now();
+    const today = new Date(timeElapsed);
 
     useEffect(() => {
         try {
@@ -51,6 +56,16 @@ export default function UserProfile({ userId, avatar, feedback, name, onLogout, 
         onSavePicture(image.files[0])
     }
 
+    const handleSubmitWeight = event => {
+        event.preventDefault()
+
+        let { target: { weight: { value: weight } } } = event
+
+        onSaveWeight(parseFloat(weight))
+        onSaved()
+
+    }
+
     return <section className="user-profile">
         <div className="user-profile-pseudo">
             <div className="user-profile__name-pic">
@@ -58,20 +73,25 @@ export default function UserProfile({ userId, avatar, feedback, name, onLogout, 
                     <button className="user-profile__logout" onClick={onLogout}>Logout</button>
                 </div>
                 <div className="user-profile__question-btn">
-                    {name && <p className="user-profile__user">¡Hola, <span className="user-profile__user--name">{name}</span>!</p>}
-                    {avatar ? <img className="user-profile__pic" src={`${API_URL}/users/${userId}/uploads`} /> : <img className="user-profile__pic" src='https://st3.depositphotos.com/4111759/13425/v/380/depositphotos_134255626-stock-illustration-avatar-male-profile-gray-person.jpg' width='90' />}
+                    {fullname && <p className="user-profile__user">¡Hola, <span className="user-profile__user--name">{fullname}</span>!</p>}
+                    {avatar ? <img className="user-profile__pic" src={`${API_URL}/users/${id}/uploads`} /> : <img className="user-profile__pic" src='https://st3.depositphotos.com/4111759/13425/v/380/depositphotos_134255626-stock-illustration-avatar-male-profile-gray-person.jpg' width='90' />}
                     <div className="user-profile__progression">
                         <form className="user-profile__avatar-form" onSubmit={handleSubmitPicture}>
                             <input className="user-profile__progression-input" type="file" id="image" name="image" />
                             <button className="user-profile__progression-btn">Guardar</button>
-                            {feedback && <p className="user-profile__feedback-pic">Imagen guardada correctamente</p>}
+                            {feedbackImage && <p className="user-profile__feedback-pic">Imagen guardada correctamente</p>}
                         </form>
                     </div>
+                    <div className="user-profile__weights">
+                        {weightHistory.length > 1 ? <p>Peso anterior: {weightHistory[weightHistory.length - 2]} Kg ({today.toLocaleDateString()})</p> : <p>Peso anterior: No existe registro</p>}
+                        {weightHistory.length ? <p><span className="bold">Peso actual: {weightHistory[weightHistory.length - 1]} Kg </span>({today.toLocaleDateString()})</p> : <p>Peso actual: No existe registro</p>}
+                    </div>
                     <div className="user-profile__chart">
-                        <Chart/>
-                        <form className="user-profile__weight-form">
-                            <input type="numner" name="weight"></input>
+                        <Chart />
+                        <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
+                            <input type="text" name="weight" placeholder="Tu peso"></input>
                             <button className="user-profile__weight-btn">Peso</button>
+                            {feedbackWeight && <p className="user-profile__feedback-weight">Peso actualizado</p>}
                         </form>
                     </div>
                 </div>
@@ -101,7 +121,6 @@ export default function UserProfile({ userId, avatar, feedback, name, onLogout, 
                     </div>
                 </div>
 
-
                 <div className="user-profile__articles-container">
                     <h3>Para leer....</h3>
                     {!savedArticles.length && <p className="user-profile__no-articles">No tienes artículos por leer</p>}
@@ -113,7 +132,6 @@ export default function UserProfile({ userId, avatar, feedback, name, onLogout, 
                         </li>)}
                     </ul>}
                 </div>
-
 
                 <div className="user-profile__record-container">
                     <h3>Registro de alimentos</h3>
