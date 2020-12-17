@@ -39,7 +39,7 @@ describe('savePet()', () => {
         })
 
         it('shoud succeed on new pet', () => {
-            savePet(undefined, name, breed, species, color, description, userId)
+            savePet(userId, undefined, name, breed, species, color, description )
                
             .then(() =>{
 
@@ -56,13 +56,14 @@ describe('savePet()', () => {
 
                 })
         })
+        
         afterEach(() =>{
                 User.deleteMany().then(()=>{Pet.deleteMany().then(()=>{})})
         })
     })
 
     describe('on a non existing user', () => {
-        let name, breed, species, color, description, shelter
+        let shelter,name, breed, species, color, description
 
         beforeEach(() => {
             
@@ -71,13 +72,13 @@ describe('savePet()', () => {
             species = 'dog'
             color = randomStringWithPrefix('color')
             description = randomStringWithPrefix('description')
-            shelter = '5fbcd46c1cc24f9c7ce22db1'
+            shelter = randomId()
         
             
         })
 
         it('shoud fail when user does not exists', () => {
-            savePet(undefined, name, breed, species, color, description, shelter)
+            savePet(shelter, undefined, shelter, name, breed, species, color, description )
 
             .catch(error => {
                 expect(error).to.be.instanceOf(Error)
@@ -91,7 +92,7 @@ describe('savePet()', () => {
         
         describe('when name is wrong', () => {
             describe('when name is empty or blank', () => {
-                let name, breed, species, color, description
+                let shelter, name, breed, species, color, description
 
                 beforeEach(() => {
                     name = randomEmptyOrBlankString()
@@ -99,16 +100,17 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomStringWithPrefix('color')
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                    
                 })
 
                 it('should fail on an empty or blank name', () => {
-                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(ContentError, 'name is empty or blank')
+                    expect(() => savePet(shelter, undefined, name, breed, species, color, description, () => { })).to.throw(ContentError, 'name is empty or blank')
                 })
             })
 
             describe('when name is not a string', () => {
-                let name, breed, species, color, description
+                let shelter, name, breed, species, color, description
 
                 beforeEach(() => {
                     userName = randomNonString()
@@ -116,10 +118,11 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomStringWithPrefix('color')
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                 })
 
                 it('should fail when name is not an string', () => {
-                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${name} is not a name`)
+                    expect(() => savePet(shelter, undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${name} is not a name`)
                 })
             })
         })
@@ -127,7 +130,7 @@ describe('savePet()', () => {
         
         describe('when breed is wrong', () => {
             describe('when breed is empty or blank', () => {
-                let name, breed, species, color, description
+                let shelter, name, breed, species, color, description
 
                 beforeEach(() => {
                     name = randomStringWithPrefix('name')
@@ -135,15 +138,16 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomStringWithPrefix('color')
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                 })
 
                 it('should fail on an empty or blank breed', () => {
-                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(ContentError, 'breed is empty or blank')
+                    expect(() => savePet(shelter, undefined, name, breed, species, color, description, () => { })).to.throw(ContentError, 'breed is empty or blank')
                 })
             })
 
             describe('when breed is not a string', () => {
-                let name, breed, species, color, description
+                let shelter, name, breed, species, color, description
 
                 beforeEach(() => {
                     name = randomStringWithPrefix('name')
@@ -151,10 +155,11 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomStringWithPrefix('color')
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                 })
 
                 it('should fail when breed is not an string', () => {
-                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${breed} is not a breed`)
+                    expect(() => savePet(shelter, undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${breed} is not a breed`)
                 })
             })
         })
@@ -162,7 +167,7 @@ describe('savePet()', () => {
         describe('when color is wrong', () => {
             
             describe('when color is not a string', () => {
-                let name, breed, species, color, description
+                let shelter, name, breed, species, color, description
 
                 beforeEach(() => {
                     name = randomStringWithPrefix('name')
@@ -170,16 +175,17 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomNonString()
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                 })
 
                 it('should fail when color is not an string', () => {
-                    expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${color} is not a color`)
+                    expect(() => savePet(shelter, undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${color} is not a color`)
                 })
             })
         })
 
         describe('when description is not a string', () => {
-            let name, breed, species, color, description
+            let shelter,name, breed, species, color, description
 
             beforeEach(() => {
                 name = randomStringWithPrefix('name')
@@ -187,16 +193,17 @@ describe('savePet()', () => {
                 species = 'cat'
                 color = randomStringWithPrefix('color')
                 description = randomNonString()
+                shelter = randomId()
             })
 
             it('should fail when description is not an string', () => {
-                expect(() => savePet(undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${description} is not a description`)
+                expect(() => savePet(shelter, undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${description} is not a description`)
             })
         })
 
          describe('when id is wrong', () => {
             describe('when id is empty or blank', () => {
-                let id, name, breed, species, color, description
+                let shelter,id, name, breed, species, color, description
 
                 beforeEach(() => {
 
@@ -206,16 +213,17 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomStringWithPrefix('color')
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                    
                 })
 
-                it('should fail on an empty or blank name', () => {
-                    expect(() => savePet(id, name, breed, species, color, description, () => { })).to.throw(ContentError, 'id is empty or blank')
+                it('should fail on an empty or blank id', () => {
+                    expect(() => savePet(shelter, id, name, breed, species, color, description, () => { })).to.throw(ContentError, 'id is empty or blank')
                 })
             })
 
             describe('when id is not a string', () => {
-                let id, name, breed, species, color, description
+                let shelter,id, name, breed, species, color, description
 
                 beforeEach(() => {
                     id = randomNonString()
@@ -224,15 +232,16 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomStringWithPrefix('color')
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                 })
 
                 it('should fail when id is not an string', () => {
-                    expect(() => savePet(id, name, breed, species, color, description, () => { })).to.throw(TypeError, `${id} is not an id`)
+                    expect(() => savePet(shelter, id, name, breed, species, color, description, () => { })).to.throw(TypeError, `${id} is not an id`)
                 })
 
             })
             describe('when id lenght is not 24', () => {
-                let id, name, breed, species, color, description
+                let shelter, id, name, breed, species, color, description
 
                 beforeEach(() => {
                     id = '5fbcd46c1cc24f9c7ce22db000'
@@ -241,14 +250,75 @@ describe('savePet()', () => {
                     species = 'cat'
                     color = randomStringWithPrefix('color')
                     description = randomStringWithPrefix('description')
+                    shelter = randomId()
                 })
 
                 it('should fail when id is not an string', () => {
-                    expect(() => savePet(id, name, breed, species, color, description, () => { })).to.throw(LengthError, `id length ${id.length} is not 24`)
+                    expect(() => savePet(shelter, id, name, breed, species, color, description, () => { })).to.throw(LengthError, `id length ${id.length} is not 24`)
                 })
                 
             })
         })  
+
+        describe('when shelter is wrong', () => {
+            describe('when shelter is empty or blank', () => {
+                let shelter,id, name, breed, species, color, description
+
+                beforeEach(() => {
+
+                    id = randomId()
+                    name = randomStringWithPrefix('name')
+                    breed = randomStringWithPrefix('breed')
+                    species = 'cat'
+                    color = randomStringWithPrefix('color')
+                    description = randomStringWithPrefix('description')
+                    shelter = randomEmptyOrBlankString()
+                   
+                })
+
+                it('should fail on an empty or blank shelter', () => {
+                    expect(() => savePet(shelter, id, name, breed, species, color, description, () => { })).to.throw(ContentError, 'id is empty or blank')
+                })
+            })
+
+            describe('when shelter is not a string', () => {
+                let shelter,id, name, breed, species, color, description
+
+                beforeEach(() => {
+                    id = randomId()
+                    userName = randomStringWithPrefix('userName')
+                    breed = randomStringWithPrefix('breed')
+                    species = 'cat'
+                    color = randomStringWithPrefix('color')
+                    description = randomStringWithPrefix('description')
+                    shelter = randomNonString()
+                })
+
+                it('should fail when shelter is not an string', () => {
+                    expect(() => savePet(shelter, id, name, breed, species, color, description, () => { })).to.throw(TypeError, `${shelter} is not an id`)
+                })
+
+            })
+            describe('when shelter lenght is not 24', () => {
+                let shelter, id, name, breed, species, color, description
+
+                beforeEach(() => {
+                    id = randomId()
+                    userName = randomStringWithPrefix('userName')
+                    breed = randomStringWithPrefix('breed')
+                    species = 'cat'
+                    color = randomStringWithPrefix('color')
+                    description = randomStringWithPrefix('description')
+                    shelter = '5fbcd46c1cc24f9c7ce22db000'
+                })
+
+                it('should fail when shelter is not an string', () => {
+                    expect(() => savePet(shelter, id, name, breed, species, color, description, () => { })).to.throw(LengthError, `id length ${shelter.length} is not 24`)
+                })
+                
+            })
+        })  
+
 
     }) 
     

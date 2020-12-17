@@ -3,7 +3,7 @@ require('dotenv').config()
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId } = require('../utils/randoms')
 require('../utils/array-polyfills')
-const retrievePetImage = require('./delete-pet')
+const retrievePetImage = require('./retrieve-pet-image')
 const { models: { User, Pet }, mongoose } = require('adogtapp-data')
 const { ContentError, LengthError } = require('../errors')
 
