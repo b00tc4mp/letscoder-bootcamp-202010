@@ -1,32 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView, ImageBackground } from 'react-native';
 
 
 function SignUpScreen({ onSignUp }) {
     const [role, setRole] = useState('')
-
     const [email, setEmail] = useState('')
     const [fullname, setFullname] = useState('')
     const [password, setPassword] = useState('')
 
-    useEffect(() => {
-        setTimeout(() => {
-            <Image source={require('../assets/signUp-background-image-timeOut.png')}
-                style={{ width: 150, height: 170, borderRadius: 60 / 2 }} />;
-        }, 5000)
-    }, [])
-    
+
+
     return (
         <SafeAreaView>
             <KeyboardAvoidingView
                 behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
-                >
+            >
                 <ScrollView>
+
                     <View style={styles.SignUpContainer}>
                         <Image style={styles.logo} source={require('../assets/logo.png')} />
 
 
                         <View style={styles.SignUpForm}>
+
+                            <TextInput style={styles.registerTitle}
+                                editable={false}
+                            >Register</TextInput>
 
                             <View style={styles.inputsContainer}>
                                 <TextInput
@@ -39,6 +38,10 @@ function SignUpScreen({ onSignUp }) {
 
                                 <TextInput
                                     placeholder=" e-mail"
+                                    keyboardType='email-address'
+                                    autoCapitalize='none'
+                                    autoCorrect={false}
+                                    autoCompleteType='email'
                                     style={styles.inputsSignUp}
                                     placeholderTextColor="#343a40"
                                     onChangeText={email => setEmail(email)}
@@ -47,6 +50,7 @@ function SignUpScreen({ onSignUp }) {
 
                                 <TextInput
                                     secureTextEntry={true}
+                                    onSubmitEditing={onSignUp}
                                     placeholder=" Password"
                                     style={styles.inputsSignUp}
                                     placeholderTextColor="#343a40"
@@ -88,6 +92,9 @@ function SignUpScreen({ onSignUp }) {
 }
 
 const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+    },
     SignUpContainer: {
         justifyContent: "flex-start",
         height: Dimensions.get("window").height,
@@ -95,23 +102,19 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-        marginTop: "5%",
-        width: 50,
-        height: 50,
+        // marginTop: "5%",
+        width: 40,
+        height: 40,
     },
 
     SignUpForm: {
-        marginTop: "25%",
+        marginTop: "30%",
         width: "75%",
         height: "50%",
         alignSelf: "center",
         justifyContent: "center",
-        alignItems: "center",
-        borderWidth: .5,
-        borderColor: "#343a40",
-        borderRadius: 40,
-        backgroundColor: "white",
-        shadowColor: "white",
+        // backgroundColor: "white",
+        shadowColor: "gray",
         shadowOffset: {
             width: 0,
             height: 12,
@@ -123,10 +126,20 @@ const styles = StyleSheet.create({
 
     },
 
+    registerTitle: {
+        marginTop: "-10%",
+        marginBottom: "10%",
+        fontSize: 35,
+        borderBottomWidth: 5,
+        borderColor: "lightgray",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
     inputsContainer: {
         width: "100%",
-        // marginTop: "20%",
-        // height: "50%",
+
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
@@ -139,21 +152,24 @@ const styles = StyleSheet.create({
         fontSize: 20,
         width: "80%",
         height: "15%",
-        borderWidth: 1,
+        borderBottomWidth: .5,
         borderColor: "#343a40",
         color: "#343a40"
     },
 
     roleContainer: {
         // marginTop: "60%",
+        marginBottom: "10%",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center"
     },
 
     roleImage: {
-        width: 50,
-        height: 50,
+        marginLeft: "10%",
+        marginRight: "10%",
+        width: 70,
+        height: 70,
         opacity: 0.4,
         // opacity: 50,
         color: "red"
@@ -161,8 +177,8 @@ const styles = StyleSheet.create({
     },
 
     roleImageClicked: {
-        width: 50,
-        height: 50,
+        width: 70,
+        height: 70,
         opacity: 0.9,
         color: "green"
     },
@@ -171,10 +187,10 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "center",
-        marginTop: "5%",
+        marginTop: "15%",
         borderWidth: 1,
         backgroundColor: "gray",
-        width: 88,
+        width: 132,
         height: 44
     }
 })

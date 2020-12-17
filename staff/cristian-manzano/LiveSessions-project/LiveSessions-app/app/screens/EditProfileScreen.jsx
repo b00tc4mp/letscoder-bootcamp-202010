@@ -35,8 +35,10 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user 
             <KeyboardAvoidingView
                 behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
             >
-                <ScrollView>
-                    <View style={styles.formEditProfile}>
+                <ScrollView >
+                    <View style={styles.EditProfileContainer}
+                        
+                    style={{ padding: 10 }}>
                         <View style={styles.signUpHeader}>
                             {user.role === "ARTIST" ? <TouchableOpacity onPress={onGoToProfile}>
                                 <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
@@ -47,114 +49,122 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user 
                             }
 
                         </View>
+                            <TextInput style={styles.registerTitle}
+                                    editable={false}
+                                >Edit Profile</TextInput>
+                        <View style={styles.editProfileForm}>
+                            <View style={styles.imagecontainer}>
 
-                        <View>
-
-                            <Image
-                                source={
-                                    imageUri
-                                        ? { uri: imageUri.localUri }
-                                        : require("../assets/default-profile-image.png")
-                                }
-                                style={{ width: 200, height: 200 }}
-                            />
-                            <Button
+                                <Image
+                                    source={
+                                        imageUri
+                                            ? { uri: imageUri.localUri }
+                                            : require("../assets/default-profile-image.png")
+                                    }
+                                    style={{ width: 150, height: 150 }}
+                                />
+                                <Button
                                 /* style={styles.imageUpload} */ title="select image"
-                                onPress={selectImage}
-                            />
+                                    onPress={selectImage}
+                                />
+                            </View>
+
+                            <View style={styles.inputsContainer}>
+                                <TextInput
+                                    placeholder=' Fullname'
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={fullname => setFullname(fullname)}
+
+                                    defaultValue={(user.fullname ? ' ' + user.fullname : '')}
+                                >
+                                </TextInput>
+
+                                <TextInput
+                                    placeholder=' Artist Name'
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={artistName => setArtistName(artistName)}
+                                    defaultValue={user.artistName ? ' ' + user.artistName : ''}
+                                >
+                                </TextInput>
+
+                                <TextInput
+                                    placeholder=' City'
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={city => setCity(city)}
+                                    defaultValue={user.city ? ' ' + user.city : ''}
+                                >
+                                </TextInput>
+
+
+                                {user.role === "ARTIST" ?
+                                    <TextInput
+                                        placeholder=' Music Tags (Rock, Jazz, punk, etc)'
+                                        style={styles.inputsSignUp}
+                                        placeholderTextColor="#343a40"
+                                        onChangeText={tags => setTags(tags ? tags.split(',') : "")}
+                                        defaultValue={user.tags ? user.tags : ''}
+                                    >
+                                    </TextInput>
+                                    : <TextInput
+                                        onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
+                                        defaultValue={user.tags ? ' ' + user.tags : ''}
+                                    >
+                                    </TextInput>}
+
+
+
+                                <TextInput
+                                    placeholder=" Youtube Link"
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
+                                    defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
+                                >
+                                </TextInput>
+
+                                <TextInput
+                                    placeholder=" Bandcamp Link"
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
+                                    defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
+                                >
+                                </TextInput>
+
+                                <TextInput
+                                    placeholder=" Spotify Link"
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
+                                    defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
+                                >
+                                </TextInput>
+
+                                <TextInput
+                                    placeholder=' Description'
+                                    style={styles.descriptionSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={description => setDescription(description)}
+                                    defaultValue={user.description ? ' ' + user.description : ""}
+                                >
+                                </TextInput>
+                            </View>
+                            <View style={styles.buttonsContainer}>
+                            <TouchableOpacity style={styles.editProfileButton}
+                                onPress={() => { onCancelEditProfile() }}>
+                                <Text style={styles.buttonText}>Cancel!</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={styles.editProfileButton}
+                                onPress={() => { onEditProfile({ imageUri, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description }) }}>
+                                <Text style={styles.buttonText}>Save!</Text>
+                            </TouchableOpacity>
+
+                            </View>
                         </View>
-
-                        <TextInput
-                            placeholder=' Fullname'
-                            style={styles.inputsSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={fullname => setFullname(fullname)}
-
-                            defaultValue={(user.fullname ? ' ' + user.fullname : '')}
-                        >
-                        </TextInput>
-
-                        <TextInput
-                            placeholder=' Artist Name'
-                            style={styles.inputsSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={artistName => setArtistName(artistName)}
-                            defaultValue={user.artistName ? ' ' + user.artistName : ''}
-                        >
-                        </TextInput>
-
-                        <TextInput
-                            placeholder=' City'
-                            style={styles.inputsSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={city => setCity(city)}
-                            defaultValue={user.city ? ' ' + user.city : ''}
-                        >
-                        </TextInput>
-
-
-                        {user.role === "ARTIST" ?
-                            <TextInput
-                                placeholder=' Music Tags (Rock, Jazz, punk, etc)'
-                                style={styles.inputsSignUp}
-                                placeholderTextColor="#343a40"
-                                onChangeText={tags => setTags(tags ? tags.split(',') : "")}
-                                defaultValue={user.tags ? user.tags : ''}
-                            >
-                            </TextInput>
-                            : <TextInput
-                                onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
-                                defaultValue={user.tags ? ' ' + user.tags : ''}
-                            >
-                            </TextInput>}
-
-
-
-                        <TextInput
-                            placeholder=" Youtube Link"
-                            style={styles.inputsSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
-                            defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
-                        >
-                        </TextInput>
-
-                        <TextInput
-                            placeholder=" Bandcamp Link"
-                            style={styles.inputsSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
-                            defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
-                        >
-                        </TextInput>
-
-                        <TextInput
-                            placeholder=" Spotify Link"
-                            style={styles.inputsSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
-                            defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
-                        >
-                        </TextInput>
-
-                        <TextInput
-                            placeholder=' Description'
-                            style={styles.descriptionSignUp}
-                            placeholderTextColor="#343a40"
-                            onChangeText={description => setDescription(description)}
-                            defaultValue={user.description ? ' ' + user.description : ""}
-                        >
-                        </TextInput>
-
-                        <TouchableOpacity style={styles.editProfileButton}
-                            onPress={() => { onEditProfile({ imageUri, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description }) }}>
-                            <Text style={styles.buttonText}>Save!</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={styles.editProfileButton}
-                            onPress={() => { onCancelEditProfile() }}>
-                            <Text style={styles.buttonText}>Cancel!</Text>
-                        </TouchableOpacity>
 
                     </View>
                 </ScrollView>
@@ -164,36 +174,72 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user 
 }
 
 const styles = StyleSheet.create({
-    formEditProfile: {
-        justifyContent: "space-evenly",
-        // marginTop: "-15%",
+    EditProfileContainer: {
+        justifyContent: "space-around",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
     },
 
-    signUpHeader: {
-        backgroundColor: "gray",
-        // marginTop: "-8%",
-        width: "100%",
-        height: "10%",
-    },
 
     logo: {
         width: 50,
         height: 50,
     },
 
+    editProfileForm: {
+        marginTop: "70%",
+        width: "75%",
+        height: "50%",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        shadowColor: "gray",
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        },
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+
+        elevation: 24,
+    },
+
+    registerTitle: {
+        // marginTop: "-10%",
+        marginBottom: "30%",
+        fontSize: 35,
+        borderBottomWidth: 5,
+        borderColor: "lightgray",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    imagecontainer: {
+        marginBottom: "20%",
+        marginTop: "50%"
+    },
+
+    inputsContainer: {
+        width: "100%",
+        marginTop: "50%",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
     inputsSignUp: {
-        marginLeft: "5%",
-        width: "50%",
-        height: "5%",
-        borderWidth: 1,
+        marginBottom: "10%",
+        fontSize: 20,
+        width: "80%",
+        height: "15%",
+        borderBottomWidth: .5,
         borderColor: "#343a40",
         color: "#343a40"
     },
 
     descriptionSignUp: {
-        marginLeft: "5%",
+        // marginLeft: "5%",
         width: "90%",
         height: "25%",
         borderWidth: 1,
@@ -201,14 +247,24 @@ const styles = StyleSheet.create({
         color: "#343a40"
     },
 
+    buttonsContainer: {
+        marginTop: "70%",
+        flexDirection: "row",
+
+        alignSelf: "center",
+    },
+
     editProfileButton: {
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "center",
+        marginTop: "15%",
+        marginLeft: "10%",
+        marginRight:"10%",
         borderWidth: 1,
         backgroundColor: "gray",
-        width: "30%",
-        height: "5%"
+        width: 88,
+        height: 44
     }
 })
 

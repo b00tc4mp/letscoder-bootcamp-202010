@@ -2,102 +2,168 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
-function SignUpScreen({ onSignIn }) {
-    const [ email, setEmail ] = useState('')
-    const [ password , setPassword ] = useState('')
+function SignInScreen({ onSignIn }) {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
         <SafeAreaView>
-        <KeyboardAvoidingView
-      //behavior={Platform.OS == "ios" ? "padding" : "height"}
-    >
-        <ScrollView>
-            <View style={styles.formSignUp}>
-                <View style={styles.signUpHeader}>
-                <Image style={styles.logo} source={require('../assets/logo.png')} />
-    
-                </View>
+            <KeyboardAvoidingView
+                behavior={Platform.OS == "ios" && "android" ? "padding" : "height"}
+            >
+                <ScrollView>
+
+                    <View style={styles.SignUpContainer}>
+                        <Image style={styles.logo} source={require('../assets/logo.png')} />
 
 
-                <TextInput
-                    placeholder=" e-mail"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40" 
-                    onChangeText={email => setEmail(email)}
-                    email={email}>
-                </TextInput>
+                        <View style={styles.SignUpForm}>
 
-                <TextInput
-                    secureTextEntry={true}
-                    placeholder=" Password"
-                    style={styles.inputsSignUp}
-                    placeholderTextColor="#343a40"
-                    onChangeText={password => setPassword(password)}
-                    value={password} >
-                </TextInput>
+                            <TextInput style={styles.registerTitle}
+                                editable={false}
+                            >Log In</TextInput>
+
+                            <View style={styles.inputsContainer}>
+
+                                <TextInput
+                                    placeholder=" e-mail"
+                                    keyboardType='email-address'
+                                    autoCapitalize='none'
+                                    autoCorrect={false}
+                                    autoCompleteType='email'
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={email => setEmail(email)}
+                                    email={email}>
+                                </TextInput>
+
+                                <TextInput
+                                    secureTextEntry={true}
+                                    placeholder=" Password"
+                                    onSubmitEditing={onSignIn}
+                                    style={styles.inputsSignUp}
+                                    placeholderTextColor="#343a40"
+                                    onChangeText={password => setPassword(password)}
+                                    value={password} >
+                                </TextInput>
+                            </View>
 
 
-                <TouchableOpacity style={styles.signInButton}
-                onPress={ () => {onSignIn ({ email, password })}}>
-                    <Text style={styles.buttonText}>Sign In!</Text>
-                </TouchableOpacity>
-
-            </View>
-            <View style={styles.signInFooter}></View>
-        </ScrollView>
-        </KeyboardAvoidingView>
+                            <TouchableOpacity style={styles.signUpButton}
+                                onPress={() => { onSignIn({ email, password }) }}>
+                                <Text style={styles.buttonText}>Sign In!</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </ScrollView>
+            </KeyboardAvoidingView>
         </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
-    formSignUp: {
-        justifyContent: "space-evenly",
-        // marginTop: "-25%",
+    background: {
+        flex: 1,
+    },
+    SignUpContainer: {
+        justifyContent: "flex-start",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
     },
 
-    signUpHeader: {
-        backgroundColor: "#343a40",
-        // marginTop: "-10%",
-        display: "flex",
-        justifyContent: "center",
-        alignContent: "center",
-        width: "100%",
-        height: "10%",
+    logo: {
+        // marginTop: "5%",
+        width: 40,
+        height: 40,
     },
 
-    logo: {
-        width: 50,
-        height: 50,
+    SignUpForm: {
+        marginTop: "30%",
+        width: "75%",
+        height: "50%",
+        alignSelf: "center",
+        justifyContent: "center",
+        // backgroundColor: "white",
+        shadowColor: "gray",
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        },
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+
+        elevation: 24,
+
     },
+
+    registerTitle: {
+        marginTop: "-10%",
+        marginBottom: "10%",
+        fontSize: 35,
+        borderBottomWidth: 5,
+        borderColor: "lightgray",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    inputsContainer: {
+        width: "100%",
+
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+
+    },
+
 
     inputsSignUp: {
-        marginLeft: "5%",
-        // marginBottom:"-20%",
-        width: "50%",
-        height: "5%",
-        borderWidth: 1,
+        marginBottom: "10%",
+        fontSize: 20,
+        width: "80%",
+        height: "15%",
+        borderBottomWidth: .5,
         borderColor: "#343a40",
         color: "#343a40"
     },
 
-    signInButton: {
+    roleContainer: {
+        // marginTop: "60%",
+        marginBottom: "10%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center"
+    },
+
+    roleImage: {
+        marginLeft: "10%",
+        marginRight: "10%",
+        width: 70,
+        height: 70,
+        opacity: 0.4,
+        // opacity: 50,
+        color: "red"
+
+    },
+
+    roleImageClicked: {
+        width: 70,
+        height: 70,
+        opacity: 0.9,
+        color: "green"
+    },
+
+    signUpButton: {
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "center",
+        marginTop: "15%",
         borderWidth: 1,
         backgroundColor: "gray",
-        width: "30%",
-        height: "5%" 
-    },
-
-    signInFooter: {
-        backgroundColor: "gray",
-        width: "100%",
-        height:  "20%",
-    },
+        width: 132,
+        height: 44
+    }
 })
 
-export default SignUpScreen;
+
+export default SignInScreen;

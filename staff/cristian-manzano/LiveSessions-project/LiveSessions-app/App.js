@@ -73,7 +73,7 @@ export default function App() {
 
   return <ImageBackground 
   style={styles.background}
-  source={require('./app/assets/background-color-black.png')}>
+  source={require('./app/assets/background-light-gray.png')}>
 
     { view === "" && <WelcomeScreen onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn}/>}
     { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} />}
