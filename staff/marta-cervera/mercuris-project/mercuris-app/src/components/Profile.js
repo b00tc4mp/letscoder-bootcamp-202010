@@ -4,7 +4,7 @@ function Profile ({currentUser, onModify}){
 
     return <section className="profile">
         <h2 className="profile__title">Hello,{currentUser.name}</h2>
-        <h3>Your Profile</h3>
+        <h3 className="profile__title2">Update your Profile</h3>
         <img className="profile__avatar"></img>
         <form className="profile__form" onSubmit ={(event =>{
             event.preventDefault()
@@ -23,7 +23,7 @@ function Profile ({currentUser, onModify}){
                 <input  className="profile__btn" type="text" name= "address" placeholder="Insert your address" defaultValue={currentUser.address}></input>
                 <input className="profile__btn"type="text" name= "city" placeholder="Insert your city" defaultValue={currentUser.city}></input>
                 <input className="profile__btn" type="text" name= "phone" placeholder="Insert your phone" defaultValue={currentUser.phone}></input>
-                <button>SAVE</button>               
+                <button className="profile__save">SAVE</button>               
 
             </div>
 

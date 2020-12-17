@@ -100,7 +100,7 @@ export default function ({ doGoToAccess }) {
     
     return (
         <>
-        {!token && <button onClick= {handleGoToAccess}>GO TO ACCESS</button>}
+        {!token && <button onClick= {handleGoToAccess} className="gotoaccess">GO TO ACCESS</button>}
         <main>
         <div className="search">        
         <img className="search__logo" src={logo} />

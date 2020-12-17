@@ -1905,3 +1905,75 @@ error 2020-12-17T20:14:45.950Z - NotFoundError: product with id 5fdb66741f9e1442
     at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:18:33
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T21:32:39.943Z - TypeError: undefined is not a number
+    at validatePrice (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:43:78)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:9:42)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-17T21:33:52.122Z - TypeError: undefined is not a number
+    at validatePrice (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:43:78)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:9:42)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-17T21:34:07.372Z - TypeError: undefined is not a number
+    at validatePrice (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:43:78)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:9:42)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-17T21:34:20.193Z - TypeError: 25 is not a number
+    at validatePrice (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\helpers\validations.js:43:78)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\find-products.js:8:39)
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-find-products.js:32:9)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-17T21:35:15.033Z - stopping server
+info 2020-12-17T21:35:19.545Z - starting server
+info 2020-12-17T21:35:19.694Z - undefined
+info 2020-12-17T23:21:20.779Z - stopping server

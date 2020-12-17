@@ -5,9 +5,9 @@ const { validateQuery, validatePrice} = require('./helpers/validations')
 module.exports = function (userId, queryCompany, queryProduct, price, priceMin, priceMax) {
     if (typeof queryCompany !== 'undefined') validateQuery(queryCompany)
     if (typeof queryProduct !== 'undefined') validateQuery(queryProduct)
-    if (typeof price !== 'undefined') validatePrice(price)
+     /* if (typeof price !== 'undefined') validatePrice(price)
     if (typeof priceMax !== 'undefined') validatePrice(price)
-    if (typeof priceMin !== 'undefined') validateQuery(price)  
+    if (typeof priceMin !== 'undefined') validatePrice(price)   */ 
      
     
     const criteria = {}

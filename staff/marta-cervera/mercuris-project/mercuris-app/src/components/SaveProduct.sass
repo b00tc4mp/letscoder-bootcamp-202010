@@ -1,30 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap')
-$font-main: 'Permanent Marker', cursive
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+$Bebas: 'Bebas Neue', cursive
 
 .save-product
-    &__maintitle
-        color: #FFB6C1
-        
+           
     &__h2
-        color: #FFB6C1
+        color: #d158b7
         display: flex
         align-items: center
         justify-content: center
-   
+        font-family: $Bebas
+        font-size: 10vw
     &__textarea
         height: 20vh
+        font-family: $Bebas
+        font-size: 6vw
+    &__price
+        font-family: $Bebas
+        font-size: 4vw
+    &__name
+        font-family: $Bebas
+        font-size: 4vw
     &__form
         width: 75vw
         margin: auto
         padding: 1rem
         overflow: auto
         border-radius: 1rem
-        display: grid
-        border: 5px groove
+        display: grid        
         height: 50vh
+        font-family: $Bebas
 
         &__input
             margin: 50px auto
             border-radius: 5px
             width: 80vw
-            
+            font-family: $Bebas
+    &__btn
+        text-align: center            
+        font-size: 25px            
+        color: white
+        width: 40vw
+        max-height: 6vh
+        background-color: #58a5d1                
+        line-height: 30px
+        margin: 5px auto
+        font-family: $Bebas
