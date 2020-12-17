@@ -18,7 +18,6 @@ module.exports = (req, res, handleError) => {
       sport,
       repeat,
       spots,
-      activityDate,
       selectedItems,
       duration,
     },
@@ -41,7 +40,6 @@ module.exports = (req, res, handleError) => {
       sport,
       repeat,
       spots,
-      activityDate,
       selectedItems,
       duration
     )

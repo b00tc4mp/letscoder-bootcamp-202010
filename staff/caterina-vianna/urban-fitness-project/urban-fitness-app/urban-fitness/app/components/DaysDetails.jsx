@@ -40,6 +40,8 @@ export default function DaysDetails(props) {
         <View style={styles.containerDay}>
           <LinearGradient
             colors={["#FF6161", "#FF61DC"]}
+            start={{ x: 0, y: 0.5 }}
+            end={{ x: 1, y: 0.5 }}
             style={{
               height: 70,
               width: 70,

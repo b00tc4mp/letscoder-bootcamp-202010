@@ -9,7 +9,25 @@ import {
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Avatar } from "react-native-paper";
 import { LinearTextGradient } from "react-native-text-gradient";
-export default function EditProfile({ onCloseProfile, onTrainerMode }) {
+
+import { AppLoading } from "expo";
+
+import {
+  useFonts,
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  Nunito_900Black,
+} from "@expo-google-fonts/nunito";
+
+export default function EditProfile({ onCloseProfile, onTrainMode }) {
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <View>
       <View>
@@ -40,20 +58,19 @@ export default function EditProfile({ onCloseProfile, onTrainerMode }) {
           <TouchableOpacity>
             <Text style={styles.profileOptions}>EDIT PROFILE</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.profileOptions}>HISTORY</Text>
-          </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              onTrainerMode();
+              onTrainMode();
             }}
           >
             <Text style={styles.profileOptions}>TRAINER MODE</Text>
           </TouchableOpacity>
           <TouchableOpacity>
+            <Text style={styles.profileOptions}>HISTORY</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
             <Text style={styles.profileLogOut}>LOG OUT</Text>
           </TouchableOpacity>
-          <Text style={styles.profileLogOut}>LOG OUT</Text>
         </View>
       </View>
     </View>
@@ -78,18 +95,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontSize: 18,
     textAlign: "center",
+    fontFamily: "Nunito_900Black",
   },
   profileOptions: {
     color: "white",
-    fontSize: 25,
-    fontWeight: "bold",
+    fontSize: 23,
     textAlign: "center",
+    fontFamily: "Nunito_600SemiBold",
   },
   profileLogOut: {
     color: "white",
     textAlign: "center",
     fontSize: 15,
-    marginTop: 160,
+    marginTop: 100,
+    fontFamily: "Nunito_600SemiBold",
   },
   /* underlineProfile: {
     borderBottomWidth: 3,

@@ -14,6 +14,7 @@ import {
   View,
   Button,
   TextInput,
+  Dimensions,
 } from "react-native";
 import { retrieveUser } from "../logic";
 import Profile from "./Profile";
@@ -29,14 +30,22 @@ import saveActivity from "../logic/save-activity";
 import retrieveActivity from "../logic/retrieve-activity";
 import searchByActivity from "../logic/search-by-activity";
 import saveActivityImage from "../logic/save-activity-image";
+import ModifyActivity from "./ModifyActivity";
+import TrainerMode from "./TrainerMode";
+import AddActivityButton from "./AddActivityButton";
+import modifyActivity from "../logic/modify-activity";
+import ModifyActivityDetail from "./ModifyActivityDetail";
+import retrieveActivityOwner from "../logic/retrieve-activity-owner";
 
 export default function Home({ token }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
-  const [activities, setActivity] = useState([]);
+  const [activities, setActivities] = useState([]);
   const [results, setResults] = useState([]);
   const [item, setItem] = useState();
   const [activityId, setActivityId] = useState();
+  const [activity, setActivity] = useState();
+  const [activitiesModified, setActivitiesModified] = useState();
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -54,7 +63,16 @@ export default function Home({ token }) {
         retrieveActivity(token, (error, activities) => {
           debugger;
           if (error) return alert(error.message);
-          setActivity(activities);
+          setActivities(activities);
+        });
+      } catch (error) {
+        alert(error.message);
+      }
+      try {
+        retrieveActivityOwner(token, (error, activitiesModified) => {
+          debugger;
+          if (error) return alert(error.message);
+          setActivitiesModified(activitiesModified);
         });
       } catch (error) {
         alert(error.message);
@@ -74,10 +92,6 @@ export default function Home({ token }) {
     setView("list-mode");
   };
 
-  const handleChangeToTrainerMode = () => {
-    setView("trainer-mode");
-  };
-
   const handleSubmitActivity = ({
     imageUri,
     title,
@@ -88,7 +102,6 @@ export default function Home({ token }) {
     sport,
     repeat,
     spots,
-    activityDate,
     selectedItems,
     duration,
   }) => {
@@ -106,7 +119,6 @@ export default function Home({ token }) {
           sport,
           repeat,
           spots,
-          activityDate,
           selectedItems,
           duration,
           (error, activityId) => {
@@ -118,7 +130,7 @@ export default function Home({ token }) {
                   retrieveActivity(token, (error, activities) => {
                     if (error) return alert(error.message);
                     debugger;
-                    setActivity(activities);
+                    setActivities(activities);
                     setView("list-mode");
                   });
                 } catch (error) {
@@ -168,6 +180,76 @@ export default function Home({ token }) {
     setView("listing-details");
   };
 
+  const handleChangeToTrainerProfile = () => {
+    setView("trainer-profile");
+  };
+
+  const handleChangeToCreateActivity = () => {
+    setView("create-activity");
+  };
+
+  const handleModifyActivity = ({
+    activityId,
+    imageUri,
+    title,
+    description,
+    price,
+    checked,
+    address,
+    sport,
+    repeat,
+    spots,
+    selectedItems,
+    duration,
+  }) => {
+    try {
+      saveActivityImage(activityId, imageUri, (error) => {
+        if (error) return alert(error.message);
+
+        try {
+          modifyActivity(
+            activityId,
+            title,
+            description,
+            price,
+            checked,
+            address,
+            sport,
+            repeat,
+            spots,
+            selectedItems,
+            duration,
+            (error) => {
+              if (error) return Alert.alert(error.message);
+              AsyncStorage.getItem("token").then((token) => {
+                try {
+                  debugger;
+                  retrieveActivityOwner(token, (error, activitiesModified) => {
+                    if (error) return alert(error.message);
+                    setActivitiesModified(activitiesModified);
+
+                    setView("trainer-profile");
+                  });
+                } catch (error) {
+                  alert(error.message);
+                }
+              });
+            }
+          );
+        } catch (error) {
+          Alert.alert(error.message);
+        }
+      });
+    } catch (error) {
+      Alert.alert(error.message);
+    }
+  };
+
+  const handleGoToModifyActivity = ({ activity }) => {
+    setActivity(activity);
+    setView("modify-activity-detail");
+  };
+
   return (
     <View style={styles.backgroundDefault}>
       <View>
@@ -181,9 +263,10 @@ export default function Home({ token }) {
         {view === "edit-profile" && (
           <EditProfile
             onCloseProfile={handleChangeToProfile}
-            onTrainerMode={handleChangeToTrainerMode}
+            onTrainMode={handleChangeToTrainerProfile}
           />
         )}
+
         {view === "list-mode" && (
           <>
             <ProfileList
@@ -203,6 +286,24 @@ export default function Home({ token }) {
               />
             </View>
           </>
+        )}
+        {view === "trainer-profile" && (
+          <View
+            style={{
+              backgroundColor: "#f8f4f4",
+              paddingHorizontal: 20,
+              height: Dimensions.get("window").height,
+              width: Dimensions.get("window").width,
+            }}
+          >
+            <TrainerMode
+              activities={activitiesModified}
+              onModifyActivityDetail={handleGoToModifyActivity}
+            />
+            <AddActivityButton
+              onCreateActivity={handleChangeToCreateActivity}
+            />
+          </View>
         )}
         {view === "results" && (
           <>
@@ -231,10 +332,18 @@ export default function Home({ token }) {
           </View>
         )}
 
-        {view === "trainer-mode" && (
+        {view === "create-activity" && (
           <CreateActivity
             onSubmitActivity={handleSubmitActivity}
             onCloseProfile={handleChangeToEditProfile}
+          />
+        )}
+
+        {view === "modify-activity-detail" && (
+          <ModifyActivityDetail
+            activity={activity}
+            onModifyActivity={handleModifyActivity}
+            onCloseProfile={handleChangeToTrainerProfile}
           />
         )}
       </View>

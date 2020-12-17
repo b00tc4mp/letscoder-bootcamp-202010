@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Checkbox } from "react-native-paper";
+import { AppLoading } from "expo";
 import {
   Image,
   StyleSheet,
@@ -19,6 +20,23 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import RNPickerSelect from "react-native-picker-select";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import MultiSelect from "react-native-multiple-select";
+import {
+  useFonts,
+  Nunito_200ExtraLight,
+  Nunito_200ExtraLight_Italic,
+  Nunito_300Light,
+  Nunito_300Light_Italic,
+  Nunito_400Regular,
+  Nunito_400Regular_Italic,
+  Nunito_600SemiBold,
+  Nunito_600SemiBold_Italic,
+  Nunito_700Bold,
+  Nunito_700Bold_Italic,
+  Nunito_800ExtraBold,
+  Nunito_800ExtraBold_Italic,
+  Nunito_900Black,
+  Nunito_900Black_Italic,
+} from "@expo-google-fonts/nunito";
 
 export default function CreateActivity({ onSubmitActivity, onCloseProfile }) {
   const [checked, setChecked] = React.useState(false);
@@ -50,6 +68,14 @@ export default function CreateActivity({ onSubmitActivity, onCloseProfile }) {
     else console.log("Error reading an image");
   };
 
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate || activityDate;
     setShow(Platform.OS === "ios");
@@ -305,7 +331,6 @@ export default function CreateActivity({ onSubmitActivity, onCloseProfile }) {
                   sport,
                   repeat,
                   spots,
-                  activityDate,
                   selectedItems,
                   duration,
                 });

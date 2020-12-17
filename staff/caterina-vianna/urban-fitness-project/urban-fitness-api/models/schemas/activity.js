@@ -54,10 +54,7 @@ module.exports = new Schema({
     type: [ObjectId],
     ref: "Session",
   }, */
-  activityDate: {
-    type: Date,
-    required: true,
-  },
+
   selectedItems: {
     type: Array,
     required: true,

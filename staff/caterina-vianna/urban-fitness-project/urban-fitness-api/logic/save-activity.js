@@ -20,7 +20,6 @@ module.exports = (
   sport,
   repeat,
   spots,
-  activityDate,
   selectedItems,
   duration
 ) => {
@@ -47,7 +46,6 @@ module.exports = (
           activityId.sport = sport;
           activityId.repeat = repeat;
           activityId.spots = spots;
-          activityId.activityDate = activityDate;
           activityId.selectedItems = selectedItems;
           activityId.duration = duration;
           debugger;
@@ -64,7 +62,6 @@ module.exports = (
         sport,
         repeat,
         spots,
-        activityDate,
         selectedItems,
         duration,
         owner: ObjectId(ownerId),

@@ -52,7 +52,9 @@ export default function ListingDetailsScreen({
     <View style={styles.backgroundColorListing}>
       <ImageBackground
         style={styles.image}
-        source={require("../assets/yoga.jpg")}
+        source={{
+          uri: `http://192.168.0.11:4000/api/activity/${image}/images`,
+        }}
       >
         <View>
           <TouchableOpacity

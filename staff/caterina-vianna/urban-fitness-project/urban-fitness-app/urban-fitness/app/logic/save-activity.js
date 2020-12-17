@@ -11,7 +11,6 @@ export default function saveActivity(
   sport,
   repeat,
   spots,
-  activityDate,
   selectedItems,
   duration,
   callback
@@ -35,7 +34,6 @@ export default function saveActivity(
       sport,
       repeat,
       spots,
-      activityDate,
       selectedItems,
       duration,
     }),

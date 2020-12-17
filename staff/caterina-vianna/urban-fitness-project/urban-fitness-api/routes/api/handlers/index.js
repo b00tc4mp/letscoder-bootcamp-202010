@@ -7,4 +7,5 @@ module.exports = {
   handleSearchActivity: require("./handle-search-activity"),
   handleSaveImage: require("./handle-save-image"),
   handleRetrieveActivityImage: require("./handle-retrieve-activity-image"),
+  handleModifyActivity: require("./handle-modify-activity"),
 };

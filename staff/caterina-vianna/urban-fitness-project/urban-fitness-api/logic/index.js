@@ -7,4 +7,5 @@ module.exports = {
   searchActivity: require("./search-by-activity"),
   saveActivityImage: require("./save-activity-image"),
   retrieveActivityImage: require("./retrieve-activity-image"),
+  modifyActivity: require("./modify-activity"),
 };

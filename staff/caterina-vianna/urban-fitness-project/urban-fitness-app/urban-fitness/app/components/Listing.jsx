@@ -26,7 +26,7 @@ export default function Listing({ activities, onListingDetails }) {
           <Card
             title={item.title}
             subTitle={"$" + item.price}
-            image={item._id}
+            image={item.id}
             location={item.address}
             dates={item.selectedItems}
             hour={item.duration}

@@ -12,6 +12,14 @@ const {
 import Icon from "react-native-vector-icons";
 const { Avatar } = require("react-native-paper");
 import MapView, { AnimatedRegion, Marker } from "react-native-maps";
+import { AppLoading } from "expo";
+
+import {
+  useFonts,
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  Nunito_900Black,
+} from "@expo-google-fonts/nunito";
 
 import React, { useState } from "react";
 
@@ -32,7 +40,14 @@ export default function Profile({ onAvatar, onListMode, onSearch }) {
       subtitle: "1234 Foo Drive",
     },
   ];
-
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <View>
       <View style={styles.containerNavigation}>
@@ -84,7 +99,7 @@ export default function Profile({ onAvatar, onListMode, onSearch }) {
         >
           <Marker
             coordinate={{ latitude: 41.4, longitude: 2.15 }}
-            image={require("../assets/pin4.png")}
+            image={require("../assets/pin.png")}
           />
         </MapView>
       </View>
@@ -112,6 +127,7 @@ const styles = StyleSheet.create({
     height: 48,
     width: 150,
     paddingLeft: 20,
+    fontFamily: "Nunito_600SemiBold",
   },
   listIcon: {
     width: 48,

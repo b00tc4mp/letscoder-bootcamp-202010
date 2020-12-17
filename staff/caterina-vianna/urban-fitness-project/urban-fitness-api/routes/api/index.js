@@ -11,6 +11,7 @@ const {
   handleSearchActivity,
   handleSaveImage,
   handleRetrieveActivityImage,
+  handleModifyActivity,
 } = require("./handlers");
 
 const withErrorHandling = require("./helpers/with-error-handling");
@@ -48,6 +49,12 @@ router.post(
   withErrorHandling(handleSaveActivityImage)
 ); */
 
+router.post(
+  `/api/activity/edit`,
+  jsonBodyParser,
+  withErrorHandling(handleModifyActivity)
+);
+
 router.get("/api/activity", withErrorHandling(handleRetrieveActivity));
 
 router.get(`/api/activity/search`, withErrorHandling(handleSearchActivity));
@@ -58,4 +65,5 @@ router.get(
   "/api/activity/:activityId/images",
   withErrorHandling(handleRetrieveActivityImage)
 );
+
 module.exports = router;

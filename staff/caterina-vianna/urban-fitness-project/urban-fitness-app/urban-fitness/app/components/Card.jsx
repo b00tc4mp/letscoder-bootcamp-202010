@@ -40,7 +40,9 @@ export default function Card({
     <View style={styles.card}>
       <Image
         style={styles.image}
-        source={`http://192.168.0.11:4000/api/activity/${image}/images`}
+        source={{
+          uri: `http://192.168.0.11:4000/api/activity/${image}/images`,
+        }}
       />
       <View style={styles.detailsContainer}>
         <Text style={styles.titleActivity}>{title}</Text>
