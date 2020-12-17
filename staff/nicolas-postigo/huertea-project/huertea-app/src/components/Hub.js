@@ -11,27 +11,30 @@ import Useroffers from './Useroffers'
 import {Link} from 'react-router-dom'
 import {deleteOffer} from './../logic'
 import {retrieveUser} from './../logic'
+import Modifyoffer from './Modifyoffer'
+import modifyOffer from '../logic/modify-offer'
 
-function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, offers, useroffers }) {
+function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffers }) {
     const [results, setResults] = useState()
     const [view, setView] = useState('default')
     const [offer, setOffer] = useState([])
+    const [offers, setOffers] = useState([])
     const [name, setName]=useState(fullname)
     // const [effectOffers, setEffectOffers]=useState(offers)
     const { token } = sessionStorage
 
-/* useEffect(()=>{
+ useEffect(()=>{
     retrieveUser(sessionStorage.token, (error, user) => {
         if (error) return alert(error.message)
         setName(user.fullname)
       })
-      retrieveOffer(sessionStorage.token, (error, offersResult) => {
+       retrieveOffer(sessionStorage.token, (error, offersResult) => {
         if (error) return alert(error.message)
 
         setOffers(offersResult)
 
-      })
-},[]) */
+      }) 
+},[]) 
 
 
     const handleGoSearcher = (results) => {
@@ -61,33 +64,44 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, offers, u
     const handleGoDelete = (id) => {
         const { token } = sessionStorage
         try {
-debugger
+
 
             deleteOffer(token, id, (error, offerId) => {
             if (error) return alert (error.message)
             setView("user-offers")
+
+            retrieveOffer(sessionStorage.token, (error, offersResult) => {
+                if (error) return alert(error.message)
+        
+                setOffers(offersResult)
+        
+              }) 
 
             })
         } catch (error) {
             alert(error.message)
         }
     }
+    const handleGoModify = () => {
+       
+          
+        setView("modify")
 
-/*     const handleGoModify = (id) => {
-        const { token } = sessionStorage
-        try {
+
+} 
 
 
-            createOffer(token, id, (error, offerId) => {
-            if (error) return alert (error.message)
-            setView("detail")
+    const handleModify = (offer) => {
+        //offerId: offer.id, offername, titleoffer, price, pic: pic.files[0], offeraddress, phonecontact, emailcontact
+const {offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact} = offer
+     modifyOffer(sessionStorage.token, offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact, (error, user) => {
+            if (error) return alert(error.message)
 
-            })
-        } catch (error) {
-            alert(error.message)
-        }
-    } */
-    
+          })
+        setView("user-offers")
+
+
+} 
 
 return <sections>
         <div>
@@ -111,9 +125,10 @@ return <sections>
     {view === 'offersfound' && <FindOffer results={results} onGoDetail={handleGoDetail} />}
 
     {view === 'default' && <ListOffersRetrieve offers={offers} onGoDetail={handleGoDetail} />}
-    {view === 'user-offers' && <Useroffers useroffers={useroffers} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete}/>}
+    {view === 'user-offers' && <Useroffers useroffers={useroffers} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete} onGoModify={handleGoModify}/>}
     {/* {view === 'user-offers' && <Useroffers useroffers={useroffers} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete} onGoModify={handleGoModify}/>} */}
     {view === 'detail' && <Detail offer={offer} />}
+    {view === 'modify' && <Modifyoffer offer={offer} onModifyoffer={handleModify}/>}
 </sections>
 
 }

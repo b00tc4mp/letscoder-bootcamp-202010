@@ -8,6 +8,8 @@ import deleteOffer from './delete-offer'
 import saveOfferImage from './save-offer-image'
 import context from './context'
 import retrieveUserOffer from './retrieve-user-offers'
+import offerModify from './modify-offer'
+
 
 export {
     registerUser,
@@ -19,5 +21,6 @@ export {
     deleteOffer,
     saveOfferImage,
     context,
-    retrieveUserOffer
+    retrieveUserOffer,
+    offerModify
 }

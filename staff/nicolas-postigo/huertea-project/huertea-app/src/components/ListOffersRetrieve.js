@@ -4,8 +4,8 @@ const API_URL = process.env.REACT_APP_API_URL
 
 // export default function ({ offers, onGoDetail }) {
 function ListOffersRetrieve ({ offers, onGoDetail }) {
-    debugger
-    return <section className="list-offers">
+
+return <section className="list-offers">
 {/*offers ? <p>{offers.titleoffer}</p> : <p>no definido</p>*/}
            {offers && offers.map(({ id, titleoffer, offername, price, offeraddress, phonecontact, emailcontact }) => 
                 <li key={id} className="list-offers__offer">

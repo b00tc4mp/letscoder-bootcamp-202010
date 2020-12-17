@@ -7,7 +7,7 @@ const { ObjectID } = require('mongodb')
 
 module.exports = function (ownerId, offerId) {
     validateId(ownerId)
-debugger
+
     validateId(offerId)
 
 
@@ -17,7 +17,7 @@ debugger
             .findById(ownerId).lean()
             .then(user => {
                 if (!user) throw new NotFoundError(`user with id  ${ownerId}  not found`)
-                debugger
+                
                 if (offerId) {
 
 
@@ -25,7 +25,7 @@ debugger
                         .findById(offerId)
                         .then(offer => {
                             if (!offer) throw new NotFoundError(`offer with id ${offerId} not found`)
-                            debugger
+                            
                             return Offer
                                 .deleteOne({ _id: ObjectID(offerId) })
                                 .then(() => {})

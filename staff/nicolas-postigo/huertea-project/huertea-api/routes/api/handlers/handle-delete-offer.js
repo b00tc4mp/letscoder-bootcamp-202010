@@ -9,7 +9,7 @@ module.exports = (req, res, handleError) => {
     const token = authorization.replace('Bearer ', '')
     try {
         const { sub: ownerId } = jwt.verify(token, JWT_SECRET)
-debugger
+
         deleteOffer( ownerId, offerId )
             .then(() => res.status(204).send())
             .catch(handleError)

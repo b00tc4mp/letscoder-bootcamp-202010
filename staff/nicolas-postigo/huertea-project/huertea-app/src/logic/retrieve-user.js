@@ -1,11 +1,11 @@
 import { call } from '../utils'
 import { validateToken, validateCallback } from './helpers/validations'
 
-export default function (token, callback) {
+export default (function (token, callback) {
     validateToken(token)
     validateCallback(callback)
 
-    call('GET', 'http://localhost:4000/api/users', { Authorization: `Bearer ${token}` },
+    call('GET', `${API_URL}/users`, { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {
             
@@ -17,8 +17,8 @@ export default function (token, callback) {
                 return callback(new Error(error))
             }
             const user = JSON.parse(response)
-            debugger
+            
 
             callback(null, user)
-        })
-}
+        }).bind(context) 
+}).bind(context) 

@@ -59,7 +59,7 @@ describe('createOffer()', () => {
                         expect(offer.emailcontact).to.deep.equal(emailcontact)
                     })
             )
-
+            afterEach(() => Offer.deleteMany())
         })
 
         describe('when user already has offers', () => {
@@ -102,7 +102,7 @@ describe('createOffer()', () => {
                     })
             })
 
-
+            afterEach(() => Offer.deleteMany())
         })
 
         describe('when user offer does not exist (it was removed from db)', () => {
@@ -129,7 +129,7 @@ describe('createOffer()', () => {
             )
         })
 
-
+       
     })
 
     describe('when user does not exist', () => {
@@ -156,6 +156,7 @@ describe('createOffer()', () => {
                 })
         )
     })
+    afterEach(() => Offer.deleteMany())
 
 
     after(mongoose.disconnect)

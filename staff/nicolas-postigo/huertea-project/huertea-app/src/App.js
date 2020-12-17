@@ -132,11 +132,13 @@ function App(props) {
     } */
 
   const handleCreateOffer = ({ offername, titleoffer, price, pic, offeraddress, phonecontact, emailcontact }) => {
-    debugger
+    
     const { token } = sessionStorage
     try {
       createOffer(token, undefined, offername, titleoffer, price, offeraddress, phonecontact, emailcontact, (error, offerId) => {
         if (error) return alert(error.message)
+        
+        if(pic) { 
 
         saveOfferImage(offerId, pic, error => {
           if (error) return alert(error.message)
@@ -153,6 +155,10 @@ function App(props) {
 
 
         })
+      } else {
+
+
+      }
       })
       props.history.push('/hub')
 
@@ -164,7 +170,7 @@ function App(props) {
 
 
   const handleRetrieveUserOffers = () => {
-    debugger
+    
     try {
 
       retrieveUserOffer(sessionStorage.token, (error, offersResult) => {

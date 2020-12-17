@@ -44,7 +44,7 @@ describe('retrieveOffer()', () => {
 
                 })
         )
-
+        afterEach(() => Offer.deleteMany())
         describe('when offer id is wrong', () => {
             let offerId
 
@@ -90,5 +90,6 @@ describe('retrieveOffer()', () => {
             })
         })
     })
+    afterEach(() => Offer.deleteMany())
     after(mongoose.disconnect)
 })

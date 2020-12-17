@@ -8,7 +8,7 @@ import ListOffersRetrieve from './ListOffersRetrieve'
 import Useroffers from './Useroffers'
 import MapView from './MapView'
 import Detail from './Detail'
-
+import Modifyoffer from './Modifyoffer'
 
 
 export {
@@ -22,6 +22,6 @@ export {
     Useroffers,
     MapView,
     Detail,
-
+    Modifyoffer
 
 }

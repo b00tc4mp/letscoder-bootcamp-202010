@@ -42,7 +42,9 @@ describe('retrieveUserOffers()', () => {
                     expect(offer.emailcontact).to.equal(emailcontact)
 
                 })
+                
         )
+        afterEach(() => Offer.deleteMany())
 
         describe('when offer id is wrong', () => {
             let offerId
@@ -57,8 +59,9 @@ describe('retrieveUserOffers()', () => {
                         expect(error.message).to.equal(`the user with id ${offerId} was not found`)
                     })
             )
+            
         })
-
+        
     })
     describe('when offer id is wrong', () => {
         describe('when offer id is not a string', () => {
@@ -90,5 +93,6 @@ describe('retrieveUserOffers()', () => {
             })
         })
     })
+    afterEach(() => Offer.deleteMany())
     after(mongoose.disconnect)
 })

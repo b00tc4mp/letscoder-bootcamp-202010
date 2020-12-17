@@ -9,7 +9,7 @@ export default function (token, offerId, callback) {
     validateCallback(callback)
 
 
-    call('DELETE', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json', 
+    call('DELETE', `${API_URL}/offer`, { 'Content-type': 'application/json', 
     Authorization: `Bearer ${token}`, 'Content-type': 'application/json'
     },
     JSON.stringify({ offerId }),

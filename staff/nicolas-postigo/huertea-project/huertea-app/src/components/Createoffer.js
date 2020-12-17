@@ -1,6 +1,6 @@
 import React from 'react'
 import './Createoffer.sass'
-function Createoffer({ backHub, offername, titleoffer, onCreateoffer, price, offeraddress, phonecontact, emailcontact }) {
+function Createoffer({ offername, titleoffer, onCreateoffer, price, offeraddress, phonecontact, emailcontact }) {
     return <sections>
         <form className="offer__form" onSubmit={function (event) {
             event.preventDefault()
@@ -10,7 +10,7 @@ function Createoffer({ backHub, offername, titleoffer, onCreateoffer, price, off
 
             onCreateoffer({offername, titleoffer, price, pic: pic.files[0], offeraddress, phonecontact, emailcontact})
         }}>
-            <button className="backhub" onclick={backHub}>&#128072;</button>
+            {/* <button className="backhub" onclick={backHub}>&#128072;</button> */}
 
             <input type="text" name="titleoffer" placeholder="Título producto(s)" defaultValue={titleoffer} />
             <input type="text" name="offername" placeholder="Descripción de la oferta" defaultValue={offername} />

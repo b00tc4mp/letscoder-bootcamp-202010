@@ -13,7 +13,7 @@ export default (function (offerId, pic, callback) {
 
 
     const { API_URL } = this
-debugger
+
     call('POST', `${API_URL}/offers/${offerId}/pics`, {},
         formData,
         (status, response) => {

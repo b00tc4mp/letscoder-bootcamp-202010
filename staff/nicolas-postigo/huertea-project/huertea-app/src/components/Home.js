@@ -1,26 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.sass'
 import {retrieveOffer} from './../logic'
 import { useState } from 'react'
 
 function Home({ onHome, onGoRegister, onGoLogin }) {
     const [offers, setOffers] = useState([])
-        
-/*         try {
     
-          retrieveOffer(sessionStorage.token, (error, offersResult) => {
-            if (error) return alert(error.message)
-    
-            setOffers(offersResult)
+/*     useEffect(()=>{
 
-    
-          })
-    
-    
-        } catch (error) {
-          alert(error.message)
-        }
-     */
+      try {
+  
+      retrieveOffer(sessionStorage.token, (error, offersResult) => {
+        if (error) return alert(error.message)
+  
+        setOffers(offersResult)
+  
+  
+      })
+  
+  
+    } catch (error) {
+      alert(error.message)
+    } 
+
+    },[]) */
+
+
       
   
   
@@ -36,13 +41,23 @@ function Home({ onHome, onGoRegister, onGoLogin }) {
         }}>
             <button className="homebuttons" onClick={onGoRegister}>Regístrate</button>
             <button className="homebuttons" onClick={onGoLogin}>Entra</button>
-            <nav className="searcherProducts">
+{/*             <nav className="searcherProducts">
             <input className="searcher" type="text" name="query" placeholder="🔍 Busca en huertea" />
             </nav>
-        </form>
+ */}        </form>
         
         
-        <h3>¿Qué alimento quieres hoy?</h3>
+        <h5>yo huerteo,
+        </h5>
+        <h4>
+        tu huerteas,
+        </h4>
+        <h3>
+        él huertea,
+        </h3>
+        <h2>
+        nosotros huerteamos,
+        </h2>
 
 
     </sections>

@@ -9,7 +9,7 @@ export default function (token, offerId, offername, titleoffer, price, offeraddr
     validateCallback(callback)
 
 
-    call('POST', 'http://localhost:4000/api/offer', { 'Content-type': 'application/json', 
+    call('POST', `${API_URL}/offer`, { 'Content-type': 'application/json', 
     Authorization: `Bearer ${token}`,
     },
     JSON.stringify({ offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact}),

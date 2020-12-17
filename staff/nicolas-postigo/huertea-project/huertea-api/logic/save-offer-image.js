@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs')
 
 module.exports = (offerId, stream) => {
-    debugger
+    
     validateId(offerId)
 
 

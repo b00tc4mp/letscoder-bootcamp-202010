@@ -4,7 +4,7 @@ import { validateCallback } from './helpers/validations'
 export default function ( titleoffer, offername, price, callback) {
 
 
-    call('POST', 'http://localhost:4000/api/offers/find', {'Content-type': 'application/json' },
+    call('POST', `${API_URL}/offers/find`, {'Content-type': 'application/json' },
         JSON.stringify({ titleoffer, offername, price}),
         (status, response) => {
             if (status === 0)
