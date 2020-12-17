@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactToPrint from 'react-to-print'
 import { MenuListWrapper, Link } from './styles'
-import { RiTeamLine, RiStackshareLine, RiPrinterFill, RiGamepadLine } from 'react-icons/ri'
+import { RiPrinterFill, RiGamepadLine } from 'react-icons/ri'
 import { SocialShare } from '../../components/SocialShare'
 import PrintItem from '../../components/PrintItem'
 import { retrieveGame } from '../../logic'
