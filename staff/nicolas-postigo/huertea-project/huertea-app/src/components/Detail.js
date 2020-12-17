@@ -5,9 +5,12 @@ const API_URL = process.env.REACT_APP_API_URL
 
 function Detail ({ offer }) {
     return <section className="list-offers">
+        <div>
+            <button onClick className="log-out-button">🔙</button>
+        </div>
 {/*offers ? <p>{offers.titleoffer}</p> : <p>no definido</p>*/}
            {offer &&  
-                <li key={offer.id} className="list-offers__offer">
+                <li key={offer.id} className="list-offers2__offer2_">
                 <img src={`${API_URL}/offers/${offer.id}/pics`} width="250px" />
                 <span>{offer.image}</span>
                 <h5>{offer.titleoffer}</h5>

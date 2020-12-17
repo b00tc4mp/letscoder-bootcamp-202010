@@ -1102,3 +1102,143 @@ error 2020-12-17T11:18:12.429Z - AuthError: wrong credentials
     at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-17T11:26:48.612Z - stopping server
+info 2020-12-17T11:30:57.840Z - starting server
+info 2020-12-17T11:31:00.002Z - server running on port 4000
+info 2020-12-17T11:33:54.749Z - stopping server
+info 2020-12-17T11:34:08.464Z - starting server
+info 2020-12-17T11:34:09.450Z - server running on port 4000
+info 2020-12-17T11:35:58.718Z - stopping server
+info 2020-12-17T11:36:05.681Z - starting server
+info 2020-12-17T11:36:06.384Z - server running on port 4000
+info 2020-12-17T12:02:13.340Z - stopping server
+info 2020-12-17T12:02:23.964Z - starting server
+info 2020-12-17T12:02:24.984Z - server running on port 4000
+info 2020-12-17T12:33:41.462Z - stopping server
+info 2020-12-17T12:33:51.408Z - starting server
+info 2020-12-17T12:33:54.320Z - server running on port 4000
+info 2020-12-17T12:48:42.760Z - starting server
+info 2020-12-17T12:48:43.690Z - server running on port 4000
+error 2020-12-17T12:49:42.040Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T12:49:45.137Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T12:49:52.239Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T13:57:19.196Z - stopping server
+info 2020-12-17T13:59:10.905Z - starting server
+info 2020-12-17T13:59:11.955Z - server running on port 4000
+error 2020-12-17T15:06:54.415Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:56.314Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:57.768Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.396Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.553Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.716Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.891Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:01.656Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:01.858Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:02.022Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:11.221Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:13.140Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:13.750Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:13.916Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:14.072Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T16:21:40.047Z - NotFoundError: offer with id 5fda37561f3641179c3536df not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T16:28:25.186Z - NotFoundError: offer with id 5fda37131f3641179c3536dd not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T16:59:43.311Z - NotFoundError: offer with id 5fdb8da0088b993fc007d216 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T17:00:15.023Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "frefreer" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:1301:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:105:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:4693:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\index.js:1135:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\create-offer.js:38:34
+error 2020-12-17T17:17:47.911Z - NotFoundError: offer with id 5fdb8ead088b993fc007d219 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T17:34:37.486Z - NotFoundError: offer with id 5fdb95e1088b993fc007d21b not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T17:35:16.365Z - stopping server
+info 2020-12-17T17:36:39.559Z - starting server
+info 2020-12-17T17:36:41.062Z - server running on port 4000
+info 2020-12-17T17:39:26.622Z - stopping server
+info 2020-12-17T17:39:39.977Z - starting server
+info 2020-12-17T17:39:40.680Z - server running on port 4000
+error 2020-12-17T18:05:27.700Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T18:05:33.184Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T18:05:37.831Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-17T18:07:57.706Z - stopping server
+info 2020-12-17T18:08:11.853Z - starting server
+info 2020-12-17T18:08:13.898Z - server running on port 4000

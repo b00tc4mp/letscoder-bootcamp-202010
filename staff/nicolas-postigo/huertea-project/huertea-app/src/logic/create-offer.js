@@ -1,12 +1,15 @@
 import { call } from '../utils'
 import { validateCallback, validateOffer, validateId, validateToken, validateTitleoffer } from './helpers/validations'
+import context from './context'
 
-export default function (token, offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact, callback) {
+export default (function (token, offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact, callback) {
     validateToken(token)
     validateOffer(offername)
     if (typeof offerId !== 'undefined') validateId(offerId)
     validateTitleoffer(titleoffer)
     validateCallback(callback)
+
+    const { API_URL } = this
 
 
     call('POST', `${API_URL}/offer`, { 'Content-type': 'application/json', 
@@ -26,7 +29,7 @@ export default function (token, offerId, offername, titleoffer, price, offeraddr
         callback(null, offerId)
     })
 
-}
+}).bind(context) 
 
 /* import { call } from '../utils'
 import { validateCallback, validateOffer, validateId, validateToken, validateTitleoffer } from './helpers/validations'

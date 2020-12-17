@@ -1,8 +1,10 @@
 import { call } from '../utils'
 import { validateCallback } from './helpers/validations'
+import context from './context'
 
-export default function ( titleoffer, offername, price, callback) {
+export default (function ( titleoffer, offername, price, callback) {
 
+    const { API_URL } = this
 
     call('POST', `${API_URL}/offers/find`, {'Content-type': 'application/json' },
         JSON.stringify({ titleoffer, offername, price}),
@@ -19,4 +21,4 @@ export default function ( titleoffer, offername, price, callback) {
 
             callback(null, offers)
         })
-}
+}).bind(context) 

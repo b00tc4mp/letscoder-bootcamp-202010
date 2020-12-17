@@ -190,7 +190,13 @@ function App(props) {
 
   }
 
+  const handleGoHome = () => {
 
+
+    props.history.push('/')
+
+
+}
 
   return (
     <div className="App">
@@ -198,8 +204,8 @@ function App(props) {
         <Route exact path='/' render={() => <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />} />
         <Route exact path='/register' render={(props) => <Register onRegister={handleRegister} {...props} />} />
         <Route exact path='/login' render={() => <Login onLogin={handleLogin} />} />
-        <Route exact path='/hub' render={() => token ? <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} useroffers={useroffers} onRetrieveUserOffers={handleRetrieveUserOffers} /> : <Redirect to='/' />} />
-        <Route exact path='/createoffer' render={() => <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />} />
+        <Route exact path='/hub' render={() => token ? <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} useroffers={useroffers} onRetrieveUserOffers={handleRetrieveUserOffers} onGoHome={handleGoHome} /> : <Redirect to='/' />} />
+        <Route exact path='/createoffer' render={() => <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} onGoHub={handleGoHub} />} />
 
 
         {/**          {view === 'home' && <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />}

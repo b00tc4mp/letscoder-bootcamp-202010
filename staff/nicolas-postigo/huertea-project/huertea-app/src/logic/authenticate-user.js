@@ -1,10 +1,14 @@
 import { call } from '../utils'
 import { validateEmail, validatePassword, validateCallback } from './helpers/validations'
+import context from './context'
 
-export default function (email, password, callback) {
+
+export default (function (email, password, callback) {
     validateEmail(email)
     validatePassword(password)
     validateCallback(callback)
+
+    const { API_URL } = this
 
     call('POST', `${API_URL}/users/auth`, { 'Content-type': 'application/json' },
         JSON.stringify({ email, password }),
@@ -21,7 +25,7 @@ export default function (email, password, callback) {
 
             callback(null, token)
         })
-}
+}).bind(context) 
 
 /* import { call } from '../utils'
 import { validateEmail, validatePassword, validateCallback } from './helpers/validations'
