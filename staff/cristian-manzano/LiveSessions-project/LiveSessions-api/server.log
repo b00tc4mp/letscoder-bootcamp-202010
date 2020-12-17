@@ -3436,3 +3436,6 @@ error 2020-12-17T21:29:16.089Z - AuthError: wrong credentials
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-17T22:00:29.313Z - stopping server
+info 2020-12-17T22:26:16.298Z - starting server
+info 2020-12-17T22:26:18.027Z - server running on port 4000
+info 2020-12-17T23:36:07.456Z - stopping server

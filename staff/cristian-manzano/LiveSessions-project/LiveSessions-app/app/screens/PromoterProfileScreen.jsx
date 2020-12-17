@@ -14,28 +14,30 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                 <KeyboardAvoidingView
                     behavior={Platform.OS == "ios" ? "padding" : "height"}
                 >
-                        <View style={styles.artistProfileHeader}>
+                    <View style={styles.artistProfileHeader}>
+                        <View>
                         <TouchableOpacity onPress={onGoToEditProfile}>
-                                <Image style={styles.profileAvatar}
-                                    source={{ uri: `${imageURL}` }}
-                                    style={{ width: 50, height: 50, borderRadius: 60 / 2 }} />
+                            <Image style={styles.profileAvatar}
+                                source={{ uri: `${imageURL}` }}
+                            />
+                            <Text style={styles.roleText}>PROMOTER</Text>
+                        </TouchableOpacity>
 
-                            </TouchableOpacity>
+                        <TextInput
+                            style={styles.artistName}
+                            placeholder={'@'+user.artistName.trim()}
+                            placeholderTextColor={"purple"}
+                            editable={false}>
+                            
 
-                            <TouchableOpacity onPress={onLogOut}>
-                                <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
-                            </TouchableOpacity>
+                        </TextInput>
                         </View>
-                    <ScrollView>
 
-
+                        {/* <TouchableOpacity onPress={onLogOut}>
+                                <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
+                            </TouchableOpacity> */}
                         <View style={styles.containerNavigation}>
-                            <TouchableOpacity onPress={onGoToEditProfile}>
-                                <Image style={styles.profileAvatar}
-                                    source={{ uri: `${imageURL}` }}
-                                    style={{ width: 50, height: 50, borderRadius: 60 / 2 }} />
 
-                            </TouchableOpacity>
                             <View style={styles.containerInputSearch}>
                                 <TextInput
                                     placeholder=" Search artists by genres"
@@ -44,9 +46,9 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
 
                                 />
                                 <TouchableOpacity
-                                    onPress={ () => {onSearch ({ query })}}>
-                                    
-                                
+                                    onPress={() => { onSearch({ query }) }}>
+
+
                                     <View style={styles.searchContainer}>
                                         <Image
                                             style={styles.searchIcon}
@@ -57,17 +59,16 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                             </View>
 
                         </View>
+                    </View>
+                    <ScrollView>
+
+
 
 
 
 
                         <View style={styles.artistProfileBody}>
-                            <TextInput
-                                style={styles.artistName}
-                                placeholder={'@' + user.artistName}
-                                editable={false}>
 
-                            </TextInput>
                             <View style={styles.linkContainer}>
 
                                 <View style={styles.findMeContainer}>
@@ -80,9 +81,9 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                                 </TouchableOpacity>
                             </View>
 
-                            <TouchableOpacity 
-                            style={styles.petitionsButtonContainer}
-                            onPress={onGoToLives}>
+                            <TouchableOpacity
+                                style={styles.petitionsButtonContainer}
+                                onPress={onGoToLives}>
                                 <Text style={styles.petitionsButton}>Lives</Text>
                             </TouchableOpacity>
 
@@ -95,31 +96,14 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
 }
 
 const styles = StyleSheet.create({
-    logo: {
-        width: 60,
-        height: 60
-    },
-
-
 
     containerNavigation: {
-        marginTop: "8%",
-        // marginLeft: "5%",
-
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
         // backgroundColor: "black",
         marginBottom: 20,
-        shadowColor: "gray",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
 
-        elevation: 24,
     },
 
     containerInputSearch: {
@@ -131,8 +115,11 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         borderTopLeftRadius: 40,
         borderBottomLeftRadius: 40,
+        borderWidth: 1,
+        borderColor: "purple",
+        borderRightColor: "white",
         height: 48,
-        width: 150,
+        width: 200,
         paddingLeft: 20,
     },
     logoutIcon: {
@@ -148,6 +135,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         borderTopRightRadius: 40,
         borderBottomRightRadius: 40,
+        borderWidth: 1,
+        borderColor: "purple",
+        borderLeftColor: "white",
 
         alignItems: "center",
     },
@@ -161,8 +151,30 @@ const styles = StyleSheet.create({
 
 
     profileAvatar: {
-        borderRadius: 50
+        width: 50,
+        height: 50,
+        borderRadius: 60 / 2,
+        marginLeft: "10%",
+        borderWidth: 3,
+        borderColor: "purple"
     },
+
+    roleText: {
+        textAlign: "center",
+        marginTop: "6%",
+        marginLeft: "-15%",
+        // marginBottom: "-1%",
+        fontSize: 7,
+        // borderBottomWidth: 2
+    },
+
+    artistName: {
+        textAlign: "center",
+        marginTop: "3%",
+        fontSize: 10,
+        
+    },
+
 
     petitionsButtonContainer: {
         marginTop: "43%",
@@ -172,31 +184,26 @@ const styles = StyleSheet.create({
         alignContent: "center",
         alignSelf: "center",
         justifyContent: "center",
-        
+
     },
 
 
     petitionsButton: {
         fontSize: 25,
         marginTop: "15%",
-        alignSelf: "stretch",
         textAlign: "center",
         height: 40,
         borderRadius: 50,
-        // borderWidth: 1,
-        // justifyContent: "flex-end",
-        color: "#343a40",
-    
-        shadowColor: "gray",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
-
-        elevation: 24,
-        
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: "15%",
+        borderRadius: 5,
+        borderWidth: 3,
+        borderColor: "purple",
+        backgroundColor: "lightgray",
+        width: 132,
+        height: 44
     },
 
 
@@ -210,8 +217,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "stretch",
-        borderBottomWidth: 4,
-        borderBottomColor: "#343a40"
     },
 
     artistProfileBody: {
@@ -219,15 +224,15 @@ const styles = StyleSheet.create({
         alignItems: "center",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
-        shadowColor: "gray",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
+        // shadowColor: "gray",
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 12,
+        // },
+        // shadowOpacity: 0.58,
+        // shadowRadius: 16.00,
 
-        elevation: 24,
+        // elevation: 24,
     },
 
     linkContainer: {
@@ -237,14 +242,6 @@ const styles = StyleSheet.create({
 
     },
 
-    artistName: {
-        textAlign: "center",
-        marginTop: "10%",
-        // marginBottom: "-1%",
-        fontSize: 38,
-        // borderBottomWidth: 2
-
-    },
 
     findMeContainer: {
         flexDirection: "row"
