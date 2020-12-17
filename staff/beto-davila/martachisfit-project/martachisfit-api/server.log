@@ -1455,3 +1455,33 @@ info 2020-12-17T13:31:39.516Z - stopping server
 info 2020-12-17T13:40:04.093Z - starting server
 info 2020-12-17T13:40:04.259Z - server running on port 4000
 info 2020-12-17T14:46:32.428Z - stopping server
+info 2020-12-17T14:50:52.213Z - starting server
+info 2020-12-17T14:50:52.372Z - server running on port 4000
+info 2020-12-17T19:46:52.521Z - stopping server
+info 2020-12-17T19:46:55.892Z - starting server
+info 2020-12-17T19:46:56.072Z - server running on port 4000
+error 2020-12-17T19:47:31.244Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T19:47:40.402Z - stopping server
+info 2020-12-17T19:47:43.076Z - starting server
+info 2020-12-17T19:47:43.208Z - server running on port 4000
+error 2020-12-17T19:47:46.573Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-articles.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T19:48:07.735Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T19:48:46.846Z - stopping server
+info 2020-12-17T19:48:49.455Z - starting server
+info 2020-12-17T19:48:49.588Z - server running on port 4000
+error 2020-12-17T19:48:52.683Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T19:49:12.298Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T20:01:40.717Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T20:17:07.128Z - stopping server

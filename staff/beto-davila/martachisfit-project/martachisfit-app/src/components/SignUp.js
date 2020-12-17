@@ -15,7 +15,7 @@ function SignUp({ onRegister, error }) {
                 <input className='sign-up__input' type="text" name="fullname" placeholder="Nombre y apellido" required />
                 <input className='sign-up__input' type="email" name="email" placeholder="Introduce tu e-mail" required />
                 <input className='sign-up__input' type="password" name="password" placeholder="Contraseña" required />
-                <input className='sign-up__input' type="number" name="calories" placeholder="Tus calorías objetivo. P.e.: 1800" required />
+                <input className='sign-up__input' type="number" name="calories" placeholder="Calorías calculadas" required />
                 <button className='sign-up__btn'>Continuar</button>
                 {error && <Feedback error={error} />}
             </form>

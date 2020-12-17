@@ -3,20 +3,23 @@
     &__title
         text-align: center
         margin: 0 auto 3rem auto
+        font-size: 1.6rem
+        padding-top: .5rem
 
     &__gender
         width: 60%
         margin: auto
 
     &__goal
-        width: 45%
+        width: 300px
         margin: auto
 
     &__numbers
-        width: 300px
+        width: 200px
         margin: 1.5rem auto
         display: grid
-        grid-template-columns: .5fr .5fr
+        grid-template-columns: 1fr 130px
+        grid-template-rows: 35px 35px 35px
         grid-row-gap: 1rem
 
     &__activity
@@ -28,7 +31,7 @@
     &__p
         width: 90%
         margin: 4.5rem auto
-        font-size: 1rem
+        font-size: 1.2rem
 
     &__next
         border: none
@@ -51,6 +54,10 @@
 
 .user-info > input, label, select
     background-color: transparent
+    font-size: 1.3rem
+
+.user-info > input, input::-webkit-input-placeholder
+    font-size: 1.2rem
 
 .user-info-pseudo
     display: block

@@ -7,7 +7,7 @@
     .user-profile-pseudo::after
         content: ""
         background-image: url("../images/back-img-profile.jpg")
-        opacity: .2
+        opacity: .1
         top: 0
         left: 0
         bottom: 0
@@ -20,27 +20,50 @@
         &__weights-container
             background-color: #eaf0f0
             padding: .2rem
-            margin-top: .3rem
+            margin: .5rem auto auto auto
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
-            max-width: 400px
+            width: 320px
+            border-radius: 1rem
+            display: grid
+            grid-template-columns: 80px 5px 200px 5px 5px
+            grid-template-rows: 1fr 1fr 1fr
 
         &__weights > p
-            font-size: .8rem
+            font-size: 1rem
             margin-bottom: 0
 
         &__weight-btn
             text-decoration-line: none
-            padding: .1rem 0
+            padding: 0 .2rem
             cursor: pointer
-            border-radius: .3rem
+            border-radius: .5rem
             border: none
-            background-color: #eaf0f0
-            font-size: .7rem
+            background-color: #cfd4d4
+            font-size: .9rem
             margin-left: .2rem
 
         &__weight-form
             margin-left: .3rem
-            margin-top: .3rem
+            margin-top: .5rem
+            grid-column-start: 1 
+            grid-column-end: 5
+            justify-self: left
+
+        &__before
+            grid-row-start: 1
+            grid-column-start: 3
+            grid-column-end: 4
+        
+        &__current
+            grid-row-start: 2
+            grid-column-start: 3
+            grid-column-end: 4
+
+        &__scale-img
+            grid-row-start: 1
+            grid-row-end: 3
+            justify-self: center
+            margin-top: 1rem
 
         &__weight-form > input
             border: 1px solid #0b7f94
@@ -50,7 +73,7 @@
             margin: auto
 
         &__pic
-            width: 120px
+            width: 175px
             margin: .3rem
 
         &__progression-title
@@ -58,19 +81,15 @@
 
         &__progression-btn
             text-decoration-line: none
-            padding: .2rem 0
+            padding: .3rem 0
             cursor: pointer
             border-radius: .3rem
             border: none
             background-color: #eaf0f0
-            font-size: .7rem
+            font-size: .8rem
             margin-left: .5rem
 
-        &__progression-btn:hover
-            background-color: #c2caca
-
         &__progression-input
-            // margin-bottom: .2rem
             width: 270px
             margin: 0 auto .2rem auto
 
@@ -87,13 +106,13 @@
             white-space: nowrap
             cursor: pointer
             font-weight: 600
-            font-size: 8pt
+            font-size: 10pt
     
         &__progression-input:hover::before 
             border-color: #686b6b
 
         &__feedback
-            font-size: .7rem
+            font-size: 1rem
             text-align: center
             
         &__workout-container
@@ -141,24 +160,27 @@
             width: 85%
             text-align: left
             margin: auto
-            padding-top: .5rem
         
         &__user
-            font-size: .8rem
-            margin: 0 .5rem
+            font-size: 1.2rem
+            margin: 0
             width: 200px
 
             &--name
                 font-weight: bold
-                font-size: .7rem
+                font-size: 1rem
+
+        &__logout-container
+            display: flex
+            justify-content: flex-end
+            width: 100%
 
         &__logout , &__delete
             border: none
             background-color: transparent
             cursor: pointer
-            margin: .5rem 0
             float: right
-            font-size: .7rem
+            font-size: 1rem
 
         &__name-logout
             display: flex
@@ -173,7 +195,7 @@
             padding: 0
     
             &--link
-                font-size: .7rem
+                font-size: .9rem
                 color: #303236
 
         &__articles-list
@@ -201,7 +223,7 @@
                 text-align: center
                 align-self: center
                 color: #303236
-                font-size: .8rem
+                font-size: 1rem
 
         &__recipes-carousel
             width: 90%
@@ -252,7 +274,7 @@
     .user-profile-pseudo::after
         content: ""
         background-image: url("../images/back-img-profile.jpg")
-        opacity: .3
+        opacity: .2
         top: 0
         left: 0
         bottom: 0

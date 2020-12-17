@@ -7,23 +7,23 @@ const caloriesCalc = (gender, goal, age, height, weight, activity, callback) => 
 
     if (gender === 'man' && goal) {
         const tmbMan = (10 * weight) + (6.25 * height) - (5 * age) +  5
-        const totalCaloriesMan = tmbMan * (activity === 'sedentary'? 1.3 : 1.7 )
+        const totalCaloriesMan = tmbMan * (activity === 'sedentary'? 1.4 : 1.6 )
         //return callback(Math.floor(totalCaloriesMan))
         if (goal === 'gain')
-            return callback(Math.floor(totalCaloriesMan + 500))
+            return callback(Math.floor(totalCaloriesMan + 250))
         else if(goal === 'lose')
-            return callback(Math.floor(totalCaloriesMan - 500))
+            return callback(Math.floor(totalCaloriesMan - 250))
         else if (goal === 'maintain')
             return callback(Math.floor(totalCaloriesMan))
     }
     else if (gender === 'woman' && goal) {
         const tmbWoman = (10 * weight) + (6.25 * height) - (5 * age) - 161
-        const totalCaloriesWoman = tmbWoman * (activity === 'sedentary'? 1.3 : 1.7 )
+        const totalCaloriesWoman = tmbWoman * (activity === 'sedentary'? 1.4 : 1.6 )
         // return callback(Math.floor(totalCaloriesWoman))
         if (goal === 'gain')
-            return callback(Math.floor(totalCaloriesWoman + 500))
+            return callback(Math.floor(totalCaloriesWoman + 250))
         else if(goal === 'lose')
-            return callback(Math.floor(totalCaloriesWoman - 500))
+            return callback(Math.floor(totalCaloriesWoman - 250))
         else if (goal === 'maintain')
             return callback(Math.floor(totalCaloriesWoman))
     }

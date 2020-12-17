@@ -2,8 +2,8 @@ import ReactMarkdown from 'react-markdown'
 import './styles/Workout.sass'
 // import redHeart from '../components/icons/heart-red.png'
 // import emptyHeart from '../components/icons/heart-empty.png'
-import powerOff from '../components/icons/power-off.png'
-import powerOn from '../components/icons/power-on.png'
+import quitar from '../components/icons/quitar.png'
+import anadir from '../components/icons/anadir.png'
 import { Feedback } from '../components/index'
 
 export default function Workout({ source, onGoToWorkouts, onSaveWorkout, like, error }) {
@@ -17,8 +17,8 @@ export default function Workout({ source, onGoToWorkouts, onSaveWorkout, like, e
                     <a onClick={onGoToWorkouts} className="workout__to-workouts">Atrás</a>
                     <h3 className="workout__name">{name}</h3>
                     <div className="workout__feedback">
-                    {like? <p>¡Empezamos!</p> :<p>¿Arrancamos?</p>}
-                    <button className="workout__heart-btn" onClick={() => onSaveWorkout(level)}>{like ? <img src={powerOn} alt="on" width="20"></img> : <img src={powerOff} alt="off" width="20"></img>}</button>
+                    {like ? <p>¡Añadida!</p> :<p>¿Añadir?</p>}
+                    <button className="workout__heart-btn" onClick={() => onSaveWorkout(level)}>{like ? <img src={quitar} alt="on" width="20"></img> : <img src={anadir} alt="off" width="20"></img>}</button>
                     </div>
                     {error && <Feedback error={error}/>}
                 </div>

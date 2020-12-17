@@ -6,7 +6,7 @@ export default function SavedFood ({ food, onDelete, message }) {
         {food && food.length !== 0? <div className="saved-food__row-header">
         <p>Kcal</p><p>HC(g)</p><p>Pr.(g)</p><p>Gr.(g)</p>
         </div> : "" }
-        {food && food.length && 
+        {food && !!food.length && 
         <ul className="saved-food__list">
         {food.map(({ name, calories, carbs, protein, fats, _id }) => <li key={_id} className="saved-food__food">
         <div className="saved-food__block">

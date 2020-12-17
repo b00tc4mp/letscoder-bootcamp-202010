@@ -14,6 +14,10 @@ h1, h2, h3, a, button {
   color: #0bb1ba;
 }
 
+button {
+  font-size: 1.2rem;
+}
+
 p,
 h4,
 input,
@@ -24,6 +28,11 @@ select {
 }
 
 input, label, select {
-  margin: .2rem;
+  margin: .3rem;
   background-color: #f8fafa;
+}
+
+input[type="email"], input[type="text"], input[type="number"]
+{
+  font-size: 1.1rem;
 }

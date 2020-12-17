@@ -71,7 +71,7 @@ export default function UserInfo({onGoToGoalCaloriesAndMacros}) {
             </div>
                 <button className="user-info__next">Siguiente</button>
             </form>
-          <p className="user-info__p">* Asumimos que una persona sedentaria apenas tiene actividad física diaria. Por otro lado, la persona deportista realiza ejercicio intenso al menos, 5 veces por semana.</p>
+          <p className="user-info__p">* Asumimos que una persona sedentaria tiene poca actividad física diaria. Por otro lado, la persona deportista realiza ejercicio intenso como mínimo entre 3-5 veces por semana.</p>
         </section>
         </div>
       </>

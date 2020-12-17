@@ -3,6 +3,7 @@ import { SavedFood, Chart } from '.'
 import { retrieveSavedFood, toggleFoodUserDiet } from '../logic'
 import { useState, useEffect } from 'react'
 import mancuerna from './icons/mancuerna.png'
+import bascula from './icons/bascula.png'
 
 
 export default function UserProfile({ user, avatar, onSaved, feedbackImage, feedbackWeight, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture, onSaveWeight, onDelete }) {
@@ -70,8 +71,8 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
         <div className="user-profile-pseudo">
             <div className="user-profile__name-pic">
                 <div className="user-profile__logout-container">
-                    <button className="user-profile__logout" onClick={onLogout}>Logout</button>
                     <button className="user-profile__delete" onClick={onDelete}>Borrar perfil</button>
+                    <button className="user-profile__logout" onClick={onLogout}>Logout</button>
                 </div>
                 <div className="user-profile__question-btn">
                     {fullname && <p className="user-profile__user">¡Hola, <span className="user-profile__user--name">{fullname}</span>!</p>}
@@ -80,32 +81,29 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
                         <form className="user-profile__avatar-form" onSubmit={handleSubmitPicture}>
                             <input className="user-profile__progression-input" type="file" id="image" name="image" />
                             <button className="user-profile__progression-btn">Guardar</button>
-                            {feedbackImage && <p className="user-profile__feedback">Imagen guardada correctamente</p>}
+                            {/* {feedbackImage && <p className="user-profile__feedback">Imagen guardada correctamente</p>} */}
                         </form>
                     </div>
+                </div>
+
+                <div className="user-profile__container">
                     <div className="user-profile__weights-container">
-                        <div className="user-profile__weights">
-                            {weightHistory.length > 1 ? <p>Peso anterior: {weightHistory[weightHistory.length - 2]} Kg ({today.toLocaleDateString()})</p> : <p>Peso anterior: No existe registro</p>}
-                            {weightHistory.length ? <p><span className="bold">Peso actual: {weightHistory[weightHistory.length - 1]} Kg </span>({today.toLocaleDateString()})</p> : <p>Peso actual: No existe registro</p>}
-                        </div>
-                        <div className="user-profile__chart">
-                            <Chart />
-                            <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
-                                <input type="text" name="weight" placeholder="Tu peso"></input>
-                                <button className="user-profile__weight-btn">Peso</button>
-                            </form>
-                        </div>
+                        <img src={bascula} className="user-profile__scale-img" alt="bascula"></img>
+                        {weightHistory.length > 1 ? <p className="user-profile__before">Previo: {weightHistory[weightHistory.length - 2]} Kg ({today.toLocaleDateString()})</p> : <p className="user-profile__before">Peso anterior: Sin registro</p>}
+                        {weightHistory.length ? <p className="user-profile__current"><span className="bold">Actual: {weightHistory[weightHistory.length - 1]} Kg </span>({today.toLocaleDateString()})</p> : <p className="user-profile__current">Peso actual: Sin registro</p>}
+                        {/* <Chart /> */}
+                        <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
+                            <input type="text" name="weight" placeholder="Tu peso actual"></input>
+                            <button className="user-profile__weight-btn">Guardar</button>
+                        </form>
                     </div>
                     {feedbackWeight && <p className="user-profile__feedback">Peso actualizado</p>}
                 </div>
-            </div>
-
-            <div className="user-profile__container">
 
                 <div className="user-profile__workout-container">
                     <h3>Mi Rutina</h3>
                     {!myWorkouts.length && <p className="user-profile__no-workout">No has añadido tu rutina de entrenamiento</p>}
-                    {myWorkouts && myWorkouts.length && <ul className="user-profile__workout">
+                    {myWorkouts && !!myWorkouts.length && <ul className="user-profile__workout">
                         {myWorkouts.map(({ name, id, level }) => <li key={id} className="user-profile__workout-list">
                             <div className="user-profile__workout--list">
                                 <img src={mancuerna} alt="mancuerna"></img><a className="user-profile__workout--link" onClick={() => onGoToMyWorkout(level)} href="#">{name}</a>
@@ -127,7 +125,7 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
                 <div className="user-profile__articles-container">
                     <h3>Para leer....</h3>
                     {!savedArticles.length && <p className="user-profile__no-articles">No tienes artículos por leer</p>}
-                    {savedArticles && savedArticles.length && <ul className="user-profile__articles">
+                    {savedArticles && !!savedArticles.length && <ul className="user-profile__articles">
                         {savedArticles.map(({ title, _id }) => <li key={_id} className="user-profile__articles-list">
                             <div className="user-profile__articles--list">
                                 <a className="user-profile__articles--link" onClick={() => onGoToChosenArticle(_id)} href="#">{title}</a>
