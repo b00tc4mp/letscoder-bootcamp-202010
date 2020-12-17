@@ -93,7 +93,7 @@ module.exports = {
     },
 
     validateProductPrice(price){
-        if (typeof price !== 'number') throw new TypeError(price + ' is not a price')
+        if (typeof price !== 'string') throw new TypeError(price + ' is not a price')
     },
 
     validateProductGlutenFree(glutenFree){
@@ -122,7 +122,7 @@ module.exports = {
 
         if (!(category === 'entrantes-parrilla' || category === 'empanadas' || category === 'ensaladas' || category === 'parrilla' || category === 'pescados'
         || category === 'otras-sugerencias' || category === 'acompañamientos-guarniciones' || category === 'postres' || category === 'aguas-refrescos'
-        || category === 'vinos' || category === 'cervezas')) throw new ValueError('category is incorrect')
+        || category === 'vinos' || category === 'cervezas' || category === 'tragos' )) throw new ValueError('category is incorrect')
 
         // ["entrantes-parrilla", "empanadas", "ensaladas", "parrilla", "pescados", "otras-sugerencias", 
         // "acompañamientos-guarniciones", "postres", "aguas-refrescos", "vinos", "cervezas"]
@@ -134,6 +134,11 @@ module.exports = {
     
     validateStream(stream) {
         // TODO where the f*ck is the the class to validate this instance!!?
+    },
+    validateKey(key){
+        if (typeof key !== 'string') throw new TypeError(key + ' is not a key')
+
+        if (!key.trim().length) throw new Error('key is empty or blank')
     }
 
 }

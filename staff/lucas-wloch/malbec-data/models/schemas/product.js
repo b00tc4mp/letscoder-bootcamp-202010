@@ -10,7 +10,7 @@ module.exports = new Schema({
         required: [true, 'Please add a description'],
     },
     price: {
-        type: Number,
+        type: String,
         // required: [true, 'Please add a price'],
     },
     glutenFree: {
@@ -32,7 +32,7 @@ module.exports = new Schema({
     category: {
         type: String,
         enum: ['entrantes-parrilla', 'empanadas', 'ensaladas', 'parrilla', 'pescados', 'otras-sugerencias',
-        'acompañamientos-guarniciones', 'postres', 'aguas-refrescos', 'vinos', 'cervezas' ],
+        'acompañamientos-guarniciones', 'postres', 'aguas-refrescos', 'vinos', 'cervezas', 'tragos' ],
         required: true
     },
     img: {

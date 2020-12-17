@@ -878,3 +878,125 @@ info 2020-12-14T11:30:26.601Z - server running on port 4000
 info 2020-12-14T15:23:03.314Z - stopping server
 info 2020-12-15T12:43:30.410Z - starting server
 info 2020-12-15T12:43:31.541Z - server running on port 4000
+info 2020-12-15T17:14:05.592Z - stopping server
+info 2020-12-16T08:45:25.314Z - starting server
+info 2020-12-16T08:45:26.177Z - server running on port 4000
+error 2020-12-16T21:11:17.949Z - TypeError: 9,5 is not a price
+    at validateProductPrice (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:96:46)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:12:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:17:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-16T21:12:49.899Z - TypeError: 9,5 is not a price
+    at validateProductPrice (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:96:46)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:12:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:17:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-16T21:13:21.053Z - TypeError: 9.5 is not a price
+    at validateProductPrice (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:96:46)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:12:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:17:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-16T21:14:02.307Z - TypeError: 9.5 is not a price
+    at validateProductPrice (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:96:46)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:12:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:17:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-16T21:29:56.898Z - TypeError: 9,5 is not a price
+    at validateProductPrice (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\helpers\validations.js:96:46)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:12:5)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-save-products.js:17:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-16T21:30:11.490Z - stopping server
+info 2020-12-16T21:30:17.582Z - starting server
+info 2020-12-16T21:30:17.735Z - server running on port 4000
+info 2020-12-16T22:38:48.755Z - stopping server
+info 2020-12-16T22:48:06.003Z - starting server
+info 2020-12-16T22:48:06.132Z - server running on port 4000
+info 2020-12-16T22:50:07.921Z - stopping server
+info 2020-12-16T22:50:14.827Z - starting server
+info 2020-12-16T22:50:15.001Z - server running on port 4000
+info 2020-12-16T22:55:19.359Z - stopping server
+info 2020-12-16T22:55:25.678Z - starting server
+info 2020-12-16T22:55:25.782Z - server running on port 4000
+info 2020-12-16T23:00:36.291Z - stopping server
+info 2020-12-16T23:05:10.539Z - starting server
+info 2020-12-16T23:05:10.644Z - server running on port 4000
+info 2020-12-16T23:07:41.596Z - stopping server
+info 2020-12-16T23:07:46.382Z - starting server
+info 2020-12-16T23:07:46.488Z - server running on port 4000
+info 2020-12-16T23:09:35.399Z - stopping server
+info 2020-12-16T23:10:27.864Z - starting server
+info 2020-12-16T23:10:27.980Z - server running on port 4000
+info 2020-12-16T23:16:03.810Z - stopping server
+info 2020-12-16T23:27:57.815Z - starting server
+info 2020-12-16T23:27:57.932Z - server running on port 4000
+info 2020-12-16T23:33:38.669Z - stopping server
+info 2020-12-17T09:22:11.823Z - starting server
+info 2020-12-17T09:22:12.070Z - server running on port 4000
+info 2020-12-17T09:27:52.705Z - stopping server
+info 2020-12-17T09:29:18.985Z - starting server
+info 2020-12-17T09:29:19.845Z - server running on port 4000
+info 2020-12-17T09:54:04.613Z - starting server
+info 2020-12-17T09:54:04.828Z - server running on port 4000
+info 2020-12-17T10:04:49.615Z - stopping server
+info 2020-12-17T10:06:35.718Z - starting server
+info 2020-12-17T10:06:36.038Z - server running on port 4000
+info 2020-12-17T10:06:48.666Z - stopping server
+info 2020-12-17T10:26:56.254Z - starting server
+info 2020-12-17T10:26:56.467Z - server running on port 4000
+info 2020-12-17T10:29:27.439Z - stopping server
+info 2020-12-17T10:29:43.314Z - starting server
+info 2020-12-17T10:29:43.477Z - server running on port 4000
+info 2020-12-17T10:32:32.676Z - stopping server
+info 2020-12-17T10:32:43.837Z - starting server
+info 2020-12-17T10:32:43.981Z - server running on port 4000
+info 2020-12-17T10:36:42.247Z - stopping server
+info 2020-12-17T10:36:50.833Z - starting server
+info 2020-12-17T10:36:50.957Z - server running on port 4000
+info 2020-12-17T15:29:10.463Z - stopping server
+info 2020-12-17T15:29:13.666Z - starting server
+info 2020-12-17T15:29:13.844Z - server running on port 4000
+error 2020-12-17T15:37:50.546Z - AuthError: wrong secret key
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\register-user.js:17:34)
+    at module.exports (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\handlers\handle-register-user.js:8:9)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\routes\api\helpers\with-error-handling.js:7:9
+    at Layer.handle [as handle_request] (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\middlewares\json-body-parser.js:18:9)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-17T15:39:10.244Z - AuthError: wrong credentials
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\authenticate-user.js:15:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T19:08:08.018Z - stopping server

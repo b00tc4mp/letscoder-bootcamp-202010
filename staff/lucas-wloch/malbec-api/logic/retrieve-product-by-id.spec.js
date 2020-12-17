@@ -21,9 +21,10 @@ describe('retrieveProductById() SPEC', () => {
         let name, description, price, glutenFree, vegan, alergenos, category, available, productId
 
         beforeEach(() => {
-            name = randomStringWithPrefix('password')
-            description = randomStringWithPrefix('password')
-            price = randomInteger(10, 100)
+            name = randomStringWithPrefix('name')
+            description = randomStringWithPrefix('description')
+            price = randomStringWithPrefix('price')
+            // price = randomInteger(10, 100)
             glutenFree = randomBoolean()
             vegan = randomBoolean()
             alergenos = new Array(randomInteger(10, 100))

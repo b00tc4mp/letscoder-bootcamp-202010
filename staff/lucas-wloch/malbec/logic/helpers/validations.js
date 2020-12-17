@@ -107,7 +107,7 @@ module.exports = {
 
         if (!(category === 'entrantes-parrilla' || category === 'empanadas' || category === 'ensaladas' || category === 'parrilla' || category === 'pescados'
         || category === 'otras-sugerencias' || category === 'acompañamientos-guarniciones' || category === 'postres' || category === 'aguas-refrescos'
-        || category === 'vinos' || category === 'cervezas')) throw new Error(`category ${category} does not exist`)
+        || category === 'vinos' || category === 'cervezas' || category === 'tragos')) throw new Error(`category ${category} does not exist`)
 
         // entrantes parrilla, empanadas, ensaladas, parrilla, pescados, otras sugerencias, acompañamientos/guarniciones, postres, aguas/refrescos
         // vinos, cervezas
@@ -118,5 +118,11 @@ module.exports = {
     },
     validateFile(file) {
         if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
+    },
+
+    validateKey(key){
+        if (typeof key !== 'string') throw new TypeError(key + ' is not a key')
+
+        if (!key.trim().length) throw new Error('key is empty or blank')
     }
 }

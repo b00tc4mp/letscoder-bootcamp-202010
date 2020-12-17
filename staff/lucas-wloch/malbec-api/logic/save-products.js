@@ -1,5 +1,5 @@
 const { validateId, validateProductName, validateProductDescription, validateProductPrice, validateProductGlutenFree, validateProductVegan, validateProductAlergenos, validateProductCategory, validateProductAvailable } = require('./helpers/validations')
-const { ConflictError, NotFoundError } = require('../errors')
+const { ConflictError, NotFoundError, AuthError } = require('../errors')
 const { models: { Product, User } } = require('malbec-data')
 
 
@@ -19,6 +19,7 @@ module.exports = (userId, productId, name, description, price, glutenFree, vegan
     return User.findById(userId).lean()
         .then(user => {
             if (user) {
+                // if(!(user.fullname === 'Lucas Wloch' && user.password === "$2a$10$3IgZJxiNsmziWsSdYsUv6Os0SInshfmSkskcAoqhefxqv0dWi9586")) throw new AuthError(`user ${user.fullname} is not authorized to do this`)
                 if (!productId) {
                     // return Product.findOne({ $or: [{ name }, { description }] })
                     return Product.findOne({ name, category, description, price, vegan, glutenFree })

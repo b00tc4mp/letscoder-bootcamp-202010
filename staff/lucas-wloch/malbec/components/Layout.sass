@@ -1,15 +1,19 @@
 @import config
 
 .layout
-    background-image: url('/home-background-img1.jpeg')
-    background-size: cover 
-    background-position: center
+    background-image: url('/Malbec-fondo.jpeg')
+    // background-size: cover
+    // background-size: contain
+    background-size: 375px 667px 
+    // background-repeat: unset
+        // background-position: center
     min-height: 100vh
     &__h1
         color: $general-title-color
         font-size: 5rem
         margin-top: 20px
         text-align: center
+    
 
 @media (min-width: 1000px)
     .layout

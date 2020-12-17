@@ -1,10 +1,13 @@
 .home
+    position: absolute
+    top: 660px
     display: flex
     justify-items:  center
     text-align: center
     align-items: center
     flex-direction: column
     width: 100%
+    background-color: rgba(0,0 ,0 ,.8 )
     & > button 
         width: 35%
         // height: 4vh
@@ -12,6 +15,16 @@
         align-self: center
         font-size: 1rem
         padding: 8px
+    &__h3
+        color: white
+        font-size: 1.8rem
+        margin-bottom: 20px
+    &__nuestroLocal
+        border: 1px solid white
+        padding: 5px
+        display: grid
+        gap: 10px
+
 
 @media (max-width: 999px) and (min-width: 550px)
     .home

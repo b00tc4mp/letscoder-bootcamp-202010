@@ -1,6 +1,7 @@
 const { models: { Product }, mongoose } = require('malbec-data')
 
-const fsp = require('fs').promises
+const fs = require('fs')
+const { promises: fsp } = fs
 const path = require('path')
 
 module.exports = () => {
@@ -9,53 +10,34 @@ module.exports = () => {
 
             const productsPath = path.join(__dirname, '../data/products/copies')
 
-            return products.map(({ _id, name, description, price, glutenFree, vegan, alergenos, category, available }) => {
+            products.map(({ _id, name, description, price, glutenFree, vegan, alergenos, category, available }) => {
+                const id = _id.toString()
+                const file = path.join(productsPath, `/${id}.json`)
 
-                return fsp.readdir(productsPath)
-                    .then(files => {
+                return fsp.access(file, fs.constants.F_OK)
+                    .then(() => {
+                        const product = { _id, name, description, price, glutenFree, vegan, alergenos, category, available }
 
-                        (function check(files, index = 0) {
-                            if (index < files.length) {
-                                const file = files[index]
+                        const json = JSON.stringify(product)
 
-                                return fsp.readFile(path.join(productsPath, file), 'utf8')
-                                    .then(json => {
+                        return fsp.writeFile(path.join(productsPath, `${id}.json`), json)
+                            .then(() => null)
+                            .catch(error => { throw new Error(error.message) })
 
-                                        const { name: _name, description: _description, price: _price, category: _category, _id,
-                                            glutenFree: _glutenFree, vegan: _vegan, alergenos: _alergenos, available: _available } = JSON.parse(json)
+                    })
+                    .catch(() => {
+                        const product = { _id, name, description, price, glutenFree, vegan, alergenos, category, available }
 
-                                        if (name === _name &&
-                                            description === _description &&
-                                            price === _price &&
-                                            category === _category) {
+                        const json = JSON.stringify(product)
 
-                                            const product = { _id, name, description, price, glutenFree, vegan, alergenos, category, available }
-
-                                            const json = JSON.stringify(product)
-
-                                            const id = _id.toString()
-
-                                            return fsp.writeFile(path.join(productsPath, `${id}.json`), json)
-                                                .then(() => null)
-
-                                        } else check(files, ++index)
-                                    })
-                            } else {
-                                const product = { _id, name, description, price, glutenFree, vegan, alergenos, category, available }
-
-                                const json = JSON.stringify(product)
-
-                                const id = _id.toString()
-
-                                return fsp.writeFile(path.join(productsPath, `${id}.json`), json)
-                                    .then(() => null)
-                            }
-                        })(files)
+                        return fsp.writeFile(path.join(productsPath, `${id}.json`), json)
+                            .then(() => null)
+                            .catch(error => { throw new Error(error.message) })
                     })
             })
-        })
 
+        }
+        )
 }
-
 
 

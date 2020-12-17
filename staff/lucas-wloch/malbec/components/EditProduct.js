@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Feedback } from '.'
 import saveProducts from '../logic/save-products'
 import './EditProduct.sass'
 
@@ -6,6 +7,7 @@ import './EditProduct.sass'
 
 const EditProduct = ({ product, onSaved }) => {
     const [success, setSuccess] = useState()
+    const [error, setError] = useState()
 
 
     const normalizeBoolean = value => {
@@ -55,15 +57,16 @@ const EditProduct = ({ product, onSaved }) => {
                         }, 4000);
                     }
                 })
-                .catch(alert)
+                .catch(error => setError(error))
 
 
-        else return alert('name, description or category is missing')
+        else return setError('name, description or category is missing')
 
     }
 
     return <li className="editProduct" key={product.id} >
-        {success && <h1 className="editProduct__title" >OK, Product saved!</h1>}
+        {success && <h2 className="editProduct__title" >OK, Product saved!</h2>}
+        {error && <Feedback error={error} onExit={setError()}/>}
         <form key={product.id} className="editProduct__form" onSubmit={handleSubmit}>
             <div className="editProduct__div">
                 <p>Name:</p>
@@ -75,7 +78,7 @@ const EditProduct = ({ product, onSaved }) => {
             </div>
             <div className="editProduct__div">
                 <p>Price:</p>
-                <input className="editProduct__inputPrice" type="number" id="price" name="price" defaultValue={product.price} placeholder="product Price" />
+                <input className="editProduct__inputPrice" type="text" id="price" name="price" defaultValue={product.price} placeholder="product Price" />
             </div>
             <div className="editProduct__div">
                 <p>Gluten Free:</p>
@@ -115,6 +118,7 @@ const EditProduct = ({ product, onSaved }) => {
                     <option className="editProduct__optionC" value="aguas-refrescos" >aguas-refrescos</option>
                     <option className="editProduct__optionC" value="vinos">vinos</option>
                     <option className="editProduct__optionC" value="cervezas">cervezas</option>
+                    <option className="editProduct__optionC" value="tragos">Tragos</option>
                 </select>
                 {/* <div className="editProduct__div"> */}
                 <p>Available:</p>

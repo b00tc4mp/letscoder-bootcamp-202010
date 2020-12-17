@@ -1,0 +1,88 @@
+.nuestroLocal
+    padding-top: 10px
+    
+    background-color: black
+    &__images
+        max-width: 100vw
+    &__img
+        max-width: 100vw
+        // border-bottom 2px solid black
+        // margin-bottom: 50px
+
+    &__lineas
+        left: 50%
+        width: 10px
+        height: 2px
+        // height: 150px
+        // width: 4px
+        margin-left: -1px
+        background-color: white
+        // duration | timing-function | iteration-count | name
+        animation: 4s linear infinite myAnimation
+        // animation: 4s ease-in-out infinite myAnimation
+        animation-play-state: running
+        transition: width 6s
+        // transition-timing-function: cubic-bezier(.455,.03,.515,.955)
+    &__lineasContainer
+        position: relative
+        width: 100%
+        height: 50px
+        display: flex
+        // padding: 70px 0
+        overflow: hidden
+        align-items: center
+        justify-content: center
+        
+
+@keyframes myAnimation
+    0%
+       width: 10px 
+    50%
+       width: 200px
+    100%
+        width: 10px
+        
+
+
+// .vertical-line__inner {
+//     position: relative;
+//     top: -5%;
+//     left: 50%;
+//     height: 100%;
+//     width: 2px;
+//     margin-left: -1px;
+//     background-color: #cba525;
+//     -webkit-transform-origin: 50% 50%;
+//     transform-origin: 50% 50%;
+//     -webkit-animation: g 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
+//     animation: g 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
+
+
+.nuestroLocalFooter
+    display: flex
+    width: 100vw
+    padding: 20px
+    // background-color: rgba(0,0 ,0 ,.3 )
+    background-color: #202224
+    border-top: 5px solid black
+    // padding-top:  20px
+    // background-color: #202224
+    // position: relat
+    // top: 1400px
+    bottom: 0
+    &__ig
+        font-size: 1rem
+        color: white
+        text-decoration: none
+    &__p 
+        text-decoration: none
+        color: white
+
+.svgicon
+    display: inline-block
+    position: relative
+    width: 1em
+    height: 1em
+    top: -0.0625em
+    fill: currentColor
+    vertical-align: middle

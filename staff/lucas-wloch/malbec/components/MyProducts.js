@@ -1,7 +1,7 @@
 import './MyProducts.sass'
 import { useState, useEffect } from 'react'
 import { retrieveProductCategory } from '../logic'
-import { EditProduct, SaveProducts } from '.'
+import { EditProduct, Feedback, SaveProducts } from '.'
 
 function MyProducts() {
     // const [products, setProducts] = useState()
@@ -16,21 +16,13 @@ function MyProducts() {
     const [aguasRefrescos, setProductsAguasRefrescos] = useState()
     const [vinos, setProductsVinos] = useState()
     const [cervezas, setProductsCervezas] = useState()
+    const [tragos, setProductsTragos] = useState()
+
+    const [error, setError] = useState()
 
     const [add, setAdd] = useState()
-    // useEffect(() => {
-    // try {
-    //     retrieveProducts()
-    //         .then(results => setProducts(results))
-    //         .catch(error => alert(error))
-
-    // } catch (error) {
-    //     alert(error)
-    // }
-    // }, [])
 
     const toggleView = (event) => {
-        //// PREGUNTARLE A MANU SI SE PUEDE MEJORAR ESTO PARA QUE APAREZCAN LOS PRODUCTOS EN EL CODIGO FUENTE DE LA PAG ( CARGADOS DESDE EL SERVER)
         const { target } = event
 
         if (!target.classList.contains("active"))
@@ -39,99 +31,108 @@ function MyProducts() {
                     try {
                         retrieveProductCategory("parrilla")
                             .then(results => setProductsParrilla(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "pescados":
                     try {
                         retrieveProductCategory("pescados")
                             .then(results => setProductsPescados(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "empanadas":
                     try {
                         retrieveProductCategory("empanadas")
                             .then(results => setProductsEmpanadas(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "ensaladas":
                     try {
                         retrieveProductCategory("ensaladas")
                             .then(results => setProductsEnsaladas(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "entrantes-parrilla":
                     try {
                         retrieveProductCategory("entrantes-parrilla")
                             .then(results => setProductsEntrantesParrilla(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "acompañamientos-guarniciones":
                     try {
                         retrieveProductCategory("acompañamientos-guarniciones")
                             .then(results => setProductsAcompañamientosGuarniciones(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "otras-sugerencias":
                     try {
                         retrieveProductCategory("otras-sugerencias")
                             .then(results => setProductsOtrasSugerencias(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "postres":
                     try {
                         retrieveProductCategory("postres")
                             .then(results => setProductsPostres(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "aguas-refrescos":
                     try {
                         retrieveProductCategory("aguas-refrescos")
                             .then(results => setProductsAguasRefrescos(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "vinos":
                     try {
                         retrieveProductCategory("vinos")
                             .then(results => setProductsVinos(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
                     }
                     break;
                 case "cervezas":
                     try {
                         retrieveProductCategory("cervezas")
                             .then(results => setProductsCervezas(results))
-                            .catch(error => alert(error))
+                            .catch(error => setError(error))
                     } catch (error) {
-                        alert(error)
+                        setError(error)
+                    }
+                    break;
+                case "tragos":
+                    try {
+                        retrieveProductCategory("tragos")
+                            .then(results => setProductsTragos(results))
+                            .catch(error => setError(error))
+                    } catch (error) {
+                        setError(error)
                     }
                     break;
 
@@ -160,6 +161,7 @@ function MyProducts() {
     return <>
         <section className="myProducts" >
             <h3 className="myProducts__h3">My Products</h3>
+            {error && <Feedback error={error} onExit={setError()} />}
 
             <button className="myProducts__acordion" onClick={toggleView} name="parrilla">Parrilla</button>
             <div className="myProducts__panel">
@@ -253,6 +255,8 @@ function MyProducts() {
                     {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
+            
+            
 
             {/* <button className="myProducts__acordion" onClick={toggleView} name="vinos">Vinos</button>
             <div className="myProducts__panel">
@@ -270,6 +274,15 @@ function MyProducts() {
             <div className="myProducts__panel">
                 <ul className="myProducts__ul">
                     {cervezas && cervezas.length > 0 && cervezas.map(product => <EditProduct product={product} />)}
+                    <button className="myProducts__add" onClick={handleAdd} >Add</button>
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
+                </ul>
+            </div>
+
+            <button className="myProducts__acordion" onClick={toggleView} name="tragos">Tragos</button>
+            <div className="myProducts__panel">
+                <ul className="myProducts__ul">
+                    {tragos && tragos.length > 0 && tragos.map(product => <EditProduct product={product} />)}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
                     {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
