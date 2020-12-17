@@ -25,7 +25,7 @@ function SignIn({onSignIn, onGoToMainSearch, error}){
 
             <input className='signIn__input' type="email" name="email" placeholder="e-mail" />
             <input className='signIn__input' type="password" name="password" placeholder="password" />
-            <button className='signIn__button'>SEND</button>
+            <button className='signIn__button'>SIGN IN</button>
         </form>
         <p className='signIn__p'>Don´t have an account? <Link to ='sign-up'><span className='signIn__span'>Sign Up</span></Link></p>
 

@@ -1,4 +1,4 @@
-const { detailPet } = require('../../../logic')
+const { retrievePet } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
 
@@ -6,7 +6,7 @@ module.exports = (req, res, handleError) => {
    
     
     try {
-        detailPet(petId)
+        retrievePet(petId)
             .then(pet => res.status(200).json(pet))
             .catch(handleError)
     } catch (error) {

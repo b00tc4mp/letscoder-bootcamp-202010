@@ -116,12 +116,11 @@ describe('savePet()', () => {
         })
 
         it('shoud fail when user does not exists', () => {
-            savePet(shelter, undefined, shelter, name, breed, species, color, description )
-
+            return savePet(shelter, undefined, shelter, name, breed, species, color, description )
             .catch(error => {
                 expect(error).to.be.instanceOf(Error)
 
-                expect(error.message).to.equal(`user with id ${userId} not found`)
+                expect(error.message).to.equal(`user with id ${shelter} not found`)
             })
         })
     })
@@ -159,9 +158,9 @@ describe('savePet()', () => {
                     shelter = randomId()
                 })
 
-                it('should fail when name is not an string', () => {
+                it('should fail when name is not an string', () => 
                     expect(() => savePet(shelter, undefined, name, breed, species, color, description, () => { })).to.throw(TypeError, `${name} is not a name`)
-                })
+                )
             })
         })
 

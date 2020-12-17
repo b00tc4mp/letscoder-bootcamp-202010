@@ -8,7 +8,7 @@ const {
     handleRetrieveUser,
     handleSavePet,
     handleFindPets,
-    handleDetailPet,
+    handleRetrievePet,
     handleDeletePet,
     handleSavePetImage,
     handleRetrievePetImage
@@ -19,18 +19,18 @@ const withErrorHandling = require('./helpers/with-error-handling')
 
 const router = new Router()
 
-
+//user
 router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
 
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
-
+//pet
 router.post('/api/pets', jsonBodyParser, withErrorHandling(handleSavePet))
 
 router.get('/api/pets', withErrorHandling(handleFindPets))
 
-router.get('/api/pets/:petId', withErrorHandling(handleDetailPet))
+router.get('/api/pets/:petId', withErrorHandling(handleRetrievePet))
 
 router.delete('/api/pets/:petId', withErrorHandling(handleDeletePet))
 
