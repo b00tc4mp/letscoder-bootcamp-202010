@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView, ImageBackground } from 'react-native';
 
 
-function SignInScreen({ onSignIn }) {
+function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+
 
     return (
         <SafeAreaView>
@@ -18,10 +20,18 @@ function SignInScreen({ onSignIn }) {
 
 
                         <View style={styles.SignUpForm}>
-
+                            <View style={styles.signUpHeader}>
+                            <TouchableOpacity onPress={onGoToSignUp}>
                             <TextInput style={styles.registerTitle}
                                 editable={false}
-                            >Log In</TextInput>
+                            >Register</TextInput>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={onGoToSignIn}>
+                            <TextInput style={styles.logInTitle}
+                                editable={false}
+                            >Log in</TextInput>
+                            </TouchableOpacity>
+                            </View>
 
                             <View style={styles.inputsContainer}>
 
@@ -39,8 +49,8 @@ function SignInScreen({ onSignIn }) {
 
                                 <TextInput
                                     secureTextEntry={true}
+                                    onSubmitEditing={() => { onSignUp({ email, fullname, password, role }) }}
                                     placeholder=" Password"
-                                    onSubmitEditing={onSignIn}
                                     style={styles.inputsSignUp}
                                     placeholderTextColor="#343a40"
                                     onChangeText={password => setPassword(password)}
@@ -49,9 +59,11 @@ function SignInScreen({ onSignIn }) {
                             </View>
 
 
+                            
+
                             <TouchableOpacity style={styles.signUpButton}
                                 onPress={() => { onSignIn({ email, password }) }}>
-                                <Text style={styles.buttonText}>Sign In!</Text>
+                                <Text style={styles.buttonText}>Sign Up!</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -96,12 +108,28 @@ const styles = StyleSheet.create({
 
     },
 
+    signUpHeader: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center"
+    },
+
     registerTitle: {
-        marginTop: "-10%",
         marginBottom: "10%",
-        fontSize: 35,
+        marginRight: "30%",
+        fontSize: 30,
         borderBottomWidth: 5,
-        borderColor: "lightgray",
+        borderColor: "purple",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    logInTitle: {
+        marginBottom: "10%",
+        fontSize: 30,
+        borderBottomWidth: 5,
+        borderColor: "purple",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
@@ -158,12 +186,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: "15%",
-        borderWidth: 1,
-        backgroundColor: "gray",
+        borderRadius: 5,
+        borderWidth: 3,
+        borderColor: "purple",
+        backgroundColor: "lightgray",
         width: 132,
         height: 44
     }
 })
-
 
 export default SignInScreen;

@@ -72,6 +72,7 @@ export default function Home({ onHandleLogout }) {
     }
   }
 
+
   const handleEditProfile = ({ fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, imageUri }) => {
     console.log(user.email, fullname, artistName, city, description, tags)
     debugger
@@ -95,11 +96,12 @@ export default function Home({ onHandleLogout }) {
                   }
                 })
               try {
-                retrieveUser(token, (error, user) => {
-                  if (error) return Alert.alert(error.message)
+                if (!imageUri)
+                  retrieveUser(token, (error, user) => {
+                    if (error) return Alert.alert(error.message)
 
-                  setUser(user)
-                })
+                    setUser(user)
+                  })
               } catch (error) {
                 Alert.alert(error.message)
               }
@@ -282,29 +284,29 @@ export default function Home({ onHandleLogout }) {
       setView('promoter-profile')
     }
   }
-  
+
 
   return (
 
     <View>
-      { view === 'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile}/>}
-      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile}/>}
-      { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile}/>}
+      { view === 'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile} />}
+      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} />}
+      { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} />}
       { view === 'results' && <View style={{
         backgroundColor: "#f8f4f4",
         paddingHorizontal: 20,
-      }}><ArtistsMap users={users} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile}/>
+      }}><ArtistsMap users={users} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile} />
       </View>}
 
-      { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} onGoToProfile={handleGoToProfile}/>}
-      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} onGoToProfile={handleGoToProfile}/>}
+      { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} onGoToProfile={handleGoToProfile} />}
+      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} onGoToProfile={handleGoToProfile} />}
       { view === 'lives' && <View style={{
         backgroundColor: "#f8f4f4",
         paddingHorizontal: 20,
-      }}><LivesMap lives={lives} user={user} onGoToLiveDetail={handleGoToLiveDetail} onGoToProfile={handleGoToProfile}/>
+      }}><LivesMap lives={lives} user={user} onGoToLiveDetail={handleGoToLiveDetail} onGoToProfile={handleGoToProfile} />
       </View>}
-      { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} onGoToProfile={handleGoToProfile}/>}
-      { view === 'edit-live' && <EditLiveScreen live={live} onModifyLive={handleModifyLive} onGoToProfile={handleGoToProfile}/>}
+      { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} onGoToProfile={handleGoToProfile} />}
+      { view === 'edit-live' && <EditLiveScreen live={live} onModifyLive={handleModifyLive} onGoToProfile={handleGoToProfile} />}
     </View>
   );
 }

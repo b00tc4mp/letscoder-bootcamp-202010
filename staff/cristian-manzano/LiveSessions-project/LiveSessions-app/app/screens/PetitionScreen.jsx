@@ -5,7 +5,7 @@ import * as ImagePicker from "expo-image-picker";
 import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
-export default function PetitionScreen({ onSubmitPetition }) {
+export default function PetitionScreen({ onSubmitPetition, onGoToProfile }) {
     const [title, setTitle] = useState(title)
     const [date, setDate] = useState(date)
     const [duration, setDuration] = useState(duration)

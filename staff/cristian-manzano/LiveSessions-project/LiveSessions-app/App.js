@@ -5,7 +5,6 @@ import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Screens
-import WelcomeScreen from './app/screens/WelcomeScreen';
 import SignUpScreen from './app/screens/SignUpScreen';
 import SignInScreen from './app/screens/SignInScreen';
 import HomeScreen from './app/screens/HomeScreen';
@@ -17,7 +16,7 @@ import authenticateUser from './app/logic/authenticate-user';
 
 
 export default function App() {
-  const [view, setView] = useState('')
+  const [view, setView] = useState('sign-up')
 
   const handleGoToSignUp = () => {
     setView("sign-up")
@@ -71,16 +70,13 @@ export default function App() {
   },[])
 
 
-  return <ImageBackground 
-  style={styles.background}
-  source={require('./app/assets/background-light-gray.png')}>
+  return <View>
 
-    { view === "" && <WelcomeScreen onGoToSignUp={handleGoToSignUp} onGoToSignIn={handleGoToSignIn}/>}
-    { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} />}
-    { view === "sign-in" && <SignInScreen onSignIn={handleSignIn}/>}
+    { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} onGoToSignIn={handleGoToSignIn}/>}
+    { view === "sign-in" && <SignInScreen onSignIn={handleSignIn} onGoToSignUp={handleGoToSignUp}/>}
     { view === "home" && <HomeScreen onHandleLogout={handleLogOut}/>}
     
-  </ImageBackground> 
+  </View> 
 };
 
 const styles = StyleSheet.create({

@@ -14,8 +14,6 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                 <KeyboardAvoidingView
                     behavior={Platform.OS == "ios" ? "padding" : "height"}
                 >
-                    <ScrollView>
-
                         <View style={styles.artistProfileHeader}>
                             <TouchableOpacity onPress={onGoToProfile}>
                                 <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} />
@@ -25,6 +23,8 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                                 <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
                             </TouchableOpacity>
                         </View>
+                    <ScrollView>
+
 
                         <View style={styles.containerNavigation}>
                             <TouchableOpacity onPress={onGoToEditProfile}>

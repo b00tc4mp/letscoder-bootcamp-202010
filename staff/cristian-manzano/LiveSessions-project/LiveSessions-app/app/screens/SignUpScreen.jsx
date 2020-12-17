@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView, ImageBackground } from 'react-native';
 
 
-function SignUpScreen({ onSignUp }) {
+function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
     const [role, setRole] = useState('')
     const [email, setEmail] = useState('')
     const [fullname, setFullname] = useState('')
@@ -22,10 +22,18 @@ function SignUpScreen({ onSignUp }) {
 
 
                         <View style={styles.SignUpForm}>
-
+                            <View style={styles.signUpHeader}>
+                            <TouchableOpacity onPress={onGoToSignUp}>
                             <TextInput style={styles.registerTitle}
                                 editable={false}
                             >Register</TextInput>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={onGoToSignIn}>
+                            <TextInput style={styles.logInTitle}
+                                editable={false}
+                            >Log in</TextInput>
+                            </TouchableOpacity>
+                            </View>
 
                             <View style={styles.inputsContainer}>
                                 <TextInput
@@ -126,12 +134,28 @@ const styles = StyleSheet.create({
 
     },
 
+    signUpHeader: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center"
+    },
+
     registerTitle: {
-        marginTop: "-10%",
         marginBottom: "10%",
-        fontSize: 35,
+        marginRight: "30%",
+        fontSize: 30,
         borderBottomWidth: 5,
-        borderColor: "lightgray",
+        borderColor: "purple",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    logInTitle: {
+        marginBottom: "10%",
+        fontSize: 30,
+        borderBottomWidth: 5,
+        borderColor: "purple",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
@@ -177,6 +201,8 @@ const styles = StyleSheet.create({
     },
 
     roleImageClicked: {
+        marginLeft: "10%",
+        marginRight: "10%",
         width: 70,
         height: 70,
         opacity: 0.9,
@@ -188,8 +214,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: "15%",
-        borderWidth: 1,
-        backgroundColor: "gray",
+        borderRadius: 5,
+        borderWidth: 3,
+        borderColor: "purple",
+        backgroundColor: "lightgray",
         width: 132,
         height: 44
     }
