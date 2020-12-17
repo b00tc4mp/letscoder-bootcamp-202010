@@ -2,7 +2,7 @@ import "./SearchPets.sass";
 import PetResults from "./PetResults";
 import { useState } from "react";
 import { findPets } from "../logic";
-import DetailPet from "./DetailPet";
+import RetrievePet from "./RetrievePet";
 
 function SearchPets({ onError }) {
   const [pets, setPets] = useState();
@@ -37,7 +37,7 @@ function SearchPets({ onError }) {
   
   const handleGoToDetail = (petId) => {
     setPetId(petId)
-    setView('detail')
+    setView('retrievePet')
     
   }
   
@@ -142,7 +142,7 @@ function SearchPets({ onError }) {
           <img className="search__img" src="patitas.jpg" />
         </div>
       )}
-      {view === 'detail' && petId &&(<DetailPet petId={petId} onDeleted={handleRefreshResults} onError={onError} />)}
+      {view === 'retrievePet' && petId &&(<RetrievePet petId={petId} onDeleted={handleRefreshResults} onError={onError} />)}
     </>
   );
 }

@@ -3,7 +3,7 @@ import SignIn from './SignIn'
 import Home from './Home'
 import CreatePet from './CreatePet'
 import PetResults from './PetResults'
-import DetailPet from './DetailPet'
+import RetrievePet from './RetrievePet'
 import Feedback from './Feedback'
 import SearchPets from './SearchPets'
 import ModifyPets from './ModifyPet'
@@ -16,7 +16,7 @@ export {
     Home,
     CreatePet,
     PetResults,
-    DetailPet,
+    RetrievePet,
     Feedback,
     SearchPets,
     ModifyPets

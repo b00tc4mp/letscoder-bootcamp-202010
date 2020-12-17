@@ -1,6 +1,6 @@
 import './Home.sass'
 import { useState, useEffect } from 'react'
-import {  retrieveUser, savePet, savePetImage, modifyPet } from '../logic'
+import {  retrieveUser } from '../logic'
 import SearchPets from './SearchPets'
 import CreatePet from './CreatePet'
 import SignIn from './SignIn'

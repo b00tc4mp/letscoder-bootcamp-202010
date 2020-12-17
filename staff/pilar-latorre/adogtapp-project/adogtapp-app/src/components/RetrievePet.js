@@ -1,5 +1,5 @@
 import { deletePet, retrievePet } from '../logic'
-import './DetailPet.sass'
+import './RetrievePet.sass'
 import { useState, useEffect } from 'react'
 import ModifyPet from './ModifyPet'
 

@@ -1,5 +1,5 @@
 import { SignUp, SignIn, Home } from './components'
-import { registerUser, authenticateUser, findPets } from './logic'
+import { registerUser, authenticateUser } from './logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import SearchPets from './components/SearchPets'
 import { useState } from 'react'
