@@ -19,8 +19,13 @@ import {
   Image,
   StyleSheet,
 } from "react-native";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-export default function TrainerMode({ activities, onModifyActivityDetail }) {
+export default function TrainerMode({
+  activities,
+  onModifyActivityDetail,
+  onCloseProfile,
+}) {
   debugger;
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
@@ -32,7 +37,22 @@ export default function TrainerMode({ activities, onModifyActivityDetail }) {
   }
   return (
     <View>
-      <View style={{ alignItems: "center", marginTop: 60, marginBottom: 20 }}>
+      <View style={{ marginTop: 25, marginBottom: 20 }}>
+        <TouchableOpacity
+          onPress={() => {
+            {
+              onCloseProfile();
+            }
+          }}
+        >
+          <Icon
+            style={{ marginTop: 20, marginLeft: 280, color: "black" }}
+            name="close"
+            size={25}
+          />
+        </TouchableOpacity>
+      </View>
+      <View style={{ alignItems: "center", marginTop: 10, marginBottom: 25 }}>
         <Text
           style={{
             fontSize: 20,

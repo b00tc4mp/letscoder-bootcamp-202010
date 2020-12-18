@@ -19,7 +19,7 @@ import {
   Nunito_900Black,
 } from "@expo-google-fonts/nunito";
 
-export default function EditProfile({ onCloseProfile, onTrainMode }) {
+export default function EditProfile({ onCloseProfile, onTrainMode, onLogOut }) {
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
     Nunito_700Bold,
@@ -68,7 +68,11 @@ export default function EditProfile({ onCloseProfile, onTrainMode }) {
           <TouchableOpacity>
             <Text style={styles.profileOptions}>HISTORY</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              onLogOut();
+            }}
+          >
             <Text style={styles.profileLogOut}>LOG OUT</Text>
           </TouchableOpacity>
         </View>

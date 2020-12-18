@@ -19,6 +19,25 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import RNPickerSelect from "react-native-picker-select";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import MultiSelect from "react-native-multiple-select";
+import { AppLoading } from "expo";
+
+import {
+  useFonts,
+  Nunito_200ExtraLight,
+  Nunito_200ExtraLight_Italic,
+  Nunito_300Light,
+  Nunito_300Light_Italic,
+  Nunito_400Regular,
+  Nunito_400Regular_Italic,
+  Nunito_600SemiBold,
+  Nunito_600SemiBold_Italic,
+  Nunito_700Bold,
+  Nunito_700Bold_Italic,
+  Nunito_800ExtraBold,
+  Nunito_800ExtraBold_Italic,
+  Nunito_900Black,
+  Nunito_900Black_Italic,
+} from "@expo-google-fonts/nunito";
 
 export default function ModifyActivityDetail({
   onModifyActivity,
@@ -49,6 +68,14 @@ export default function ModifyActivityDetail({
     requestPermission();
   }, []);
 
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   const selectImage = async () => {
     const result = await ImagePicker.launchImageLibraryAsync();
     if (!result.cancelled) setImageUri({ localUri: result.uri });
@@ -101,7 +128,7 @@ export default function ModifyActivityDetail({
       fontSize: 11,
       marginRight: 40,
       marginLeft: 40,
-
+      fontFamily: "Nunito_600SemiBold",
       backgroundColor: "white",
       borderRadius: 20,
       placeholderColor: "black",
@@ -114,7 +141,7 @@ export default function ModifyActivityDetail({
       <ScrollView style={styles.scrollView}>
         <View style={styles.backgroundNewActivity}>
           <ScrollView style={styles.scrollView}>
-            <View>
+            <View style={{ marginTop: 25, marginBottom: 20 }}>
               <TouchableOpacity
                 onPress={() => {
                   {
@@ -338,7 +365,6 @@ const styles = StyleSheet.create({
   closeIcon: {
     marginTop: 30,
     marginLeft: 310,
-
     color: "white",
   },
   containerMultiselect: {
@@ -360,12 +386,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     overflow: "hidden",
   },
-  underlineNewActivity: {
+  /* underlineNewActivity: {
     borderBottomWidth: 3,
     borderBottomColor: "white",
     marginHorizontal: 128,
     marginBottom: 30,
-  },
+  }, */
   containerChecked: {
     display: "flex",
     flexDirection: "row",
@@ -377,7 +403,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 15,
     marginTop: 20,
-    marginBottom: 10,
+    marginBottom: 20,
+    fontFamily: "Nunito_900Black",
   },
   textMaterialRequired: {
     color: "#9c9c9c",
@@ -385,6 +412,7 @@ const styles = StyleSheet.create({
     marginLeft: 40,
     marginTop: 20,
     fontSize: 11,
+    fontFamily: "Nunito_600SemiBold",
   },
   textInputForm: {
     borderBottomColor: "#ccc",
@@ -394,11 +422,13 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
     marginTop: 20,
+    fontFamily: "Nunito_600SemiBold",
   },
   textInputFormDescription: {
     marginHorizontal: 20,
-    color: "white",
+    color: "#4a4a4a",
     textDecorationLine: "none",
+    fontFamily: "Nunito_600SemiBold",
   },
   textInputFormDescriptionContainer: {
     borderWidth: 1,
@@ -422,6 +452,7 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     color: "black",
     textAlign: "center",
+    fontFamily: "Nunito_900Black",
   },
 
   /* Here, style the background of your button */

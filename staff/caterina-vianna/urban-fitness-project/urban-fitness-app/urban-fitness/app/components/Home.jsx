@@ -37,7 +37,7 @@ import modifyActivity from "../logic/modify-activity";
 import ModifyActivityDetail from "./ModifyActivityDetail";
 import retrieveActivityOwner from "../logic/retrieve-activity-owner";
 
-export default function Home({ token }) {
+export default function Home({ token, handleLogOut }) {
   const [name, setName] = useState();
   const [view, setView] = useState();
   const [activities, setActivities] = useState([]);
@@ -264,6 +264,7 @@ export default function Home({ token }) {
           <EditProfile
             onCloseProfile={handleChangeToProfile}
             onTrainMode={handleChangeToTrainerProfile}
+            onLogOut={handleLogOut}
           />
         )}
 
@@ -299,6 +300,7 @@ export default function Home({ token }) {
             <TrainerMode
               activities={activitiesModified}
               onModifyActivityDetail={handleGoToModifyActivity}
+              onCloseProfile={handleChangeToEditProfile}
             />
             <AddActivityButton
               onCreateActivity={handleChangeToCreateActivity}

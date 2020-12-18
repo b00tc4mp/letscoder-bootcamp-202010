@@ -374,12 +374,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     overflow: "hidden",
   },
-  underlineNewActivity: {
+  /* underlineNewActivity: {
     borderBottomWidth: 3,
     borderBottomColor: "white",
     marginHorizontal: 128,
     marginBottom: 30,
-  },
+  }, */
   containerChecked: {
     display: "flex",
     flexDirection: "row",
@@ -392,6 +392,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginTop: 20,
     marginBottom: 10,
+    fontFamily: "Nunito_900Black",
   },
   textMaterialRequired: {
     color: "#9c9c9c",
@@ -399,6 +400,7 @@ const styles = StyleSheet.create({
     marginLeft: 40,
     marginTop: 20,
     fontSize: 11,
+    fontFamily: "Nunito_600SemiBold",
   },
   textInputForm: {
     borderBottomColor: "#ccc",
@@ -408,11 +410,13 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
     marginTop: 20,
+    fontFamily: "Nunito_600SemiBold",
   },
   textInputFormDescription: {
     marginHorizontal: 20,
     color: "white",
     textDecorationLine: "none",
+    fontFamily: "Nunito_600SemiBold",
   },
   textInputFormDescriptionContainer: {
     borderWidth: 1,
@@ -436,6 +440,7 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     color: "black",
     textAlign: "center",
+    fontFamily: "Nunito_900Black",
   },
 
   /* Here, style the background of your button */

@@ -109,7 +109,7 @@ export default function Profile({ onAvatar, onListMode, onSearch }) {
 
 const styles = StyleSheet.create({
   containerNavigation: {
-    marginTop: 20,
+    marginTop: 40,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",

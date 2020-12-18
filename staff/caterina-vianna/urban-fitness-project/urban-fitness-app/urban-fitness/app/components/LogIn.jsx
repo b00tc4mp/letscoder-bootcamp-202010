@@ -9,10 +9,36 @@ import {
   Dimensions,
 } from "react-native";
 import { MaterialComunityIcons } from "@expo/vector-icons";
+import {
+  useFonts,
+  Nunito_200ExtraLight,
+  Nunito_200ExtraLight_Italic,
+  Nunito_300Light,
+  Nunito_300Light_Italic,
+  Nunito_400Regular,
+  Nunito_400Regular_Italic,
+  Nunito_600SemiBold,
+  Nunito_600SemiBold_Italic,
+  Nunito_700Bold,
+  Nunito_700Bold_Italic,
+  Nunito_800ExtraBold,
+  Nunito_800ExtraBold_Italic,
+  Nunito_900Black,
+  Nunito_900Black_Italic,
+} from "@expo-google-fonts/nunito";
+import { AppLoading } from "expo";
 
 export default function LogIn({ changeToSignUp, onLogIn }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
 
   return (
     <View style={styles.containerSignUp}>
@@ -73,12 +99,12 @@ const styles = StyleSheet.create({
   signUp: {
     color: "grey",
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Nunito_900Black",
   },
   logIn: {
     color: "white",
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Nunito_900Black",
   },
   containerSignUp: {
     height: Dimensions.get("window").height,
@@ -94,12 +120,14 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
     marginTop: 20,
+    fontFamily: "Nunito_600SemiBold",
   },
   customBtnText: {
     fontSize: 15,
     fontWeight: "400",
     color: "#000000",
     textAlign: "center",
+    fontFamily: "Nunito_600SemiBold",
   },
 
   /* Here, style the background of your button */

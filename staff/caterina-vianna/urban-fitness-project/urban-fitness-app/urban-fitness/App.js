@@ -45,6 +45,11 @@ export default function App() {
     }
   };
 
+  const handleLogOut = () => {
+    AsyncStorage.removeItem("token");
+    setView("sign-up");
+  };
+
   useEffect(() => {
     try {
       AsyncStorage.getItem("token").then((token) => {
@@ -65,7 +70,7 @@ export default function App() {
         <LogIn onLogIn={handleLogIn} changeToSignUp={handleChangeToSignUp} />
       )}
       {view === "welcome" && <WelcomeScreen />}
-      {view === "home" && <Home />}
+      {view === "home" && <Home handleLogOut={handleLogOut} />}
     </View>
   );
 }

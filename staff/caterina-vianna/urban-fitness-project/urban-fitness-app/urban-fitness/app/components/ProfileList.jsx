@@ -14,9 +14,35 @@ const {
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 const { Avatar } = require("react-native-paper");
 import MapView, { AnimatedRegion } from "react-native-maps";
+import {
+  useFonts,
+  Nunito_200ExtraLight,
+  Nunito_200ExtraLight_Italic,
+  Nunito_300Light,
+  Nunito_300Light_Italic,
+  Nunito_400Regular,
+  Nunito_400Regular_Italic,
+  Nunito_600SemiBold,
+  Nunito_600SemiBold_Italic,
+  Nunito_700Bold,
+  Nunito_700Bold_Italic,
+  Nunito_800ExtraBold,
+  Nunito_800ExtraBold_Italic,
+  Nunito_900Black,
+  Nunito_900Black_Italic,
+} from "@expo-google-fonts/nunito";
+import { AppLoading } from "expo";
 
 export default function ProfileList({ onAvatar, onMapMode, onSearch }) {
   const [queryList, setQueryList] = useState("");
+  let [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <View>
       <View style={styles.containerNavigation}>
@@ -61,7 +87,7 @@ export default function ProfileList({ onAvatar, onMapMode, onSearch }) {
 
 const styles = StyleSheet.create({
   containerNavigation: {
-    marginTop: 20,
+    marginTop: 40,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
@@ -79,6 +105,7 @@ const styles = StyleSheet.create({
     height: 48,
     width: 150,
     paddingLeft: 20,
+    fontFamily: "Nunito_600SemiBold",
   },
   searchContainer: {
     backgroundColor: "white",
