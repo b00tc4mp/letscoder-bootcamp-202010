@@ -132,19 +132,18 @@ export default function Home({onLogout}) {
         
     return <section className="home">
         {/* <div className="home__container"> */}
-        {token && <img className="home__logo" src={logo} onClick={ handleGoToHome }/>} 
-        <BsHouseFill className="home__home" size= {42} onClick={ handleGoToHome } />
-        {<BsBoxArrowInLeft className="home__logout" size= {35} onClick={() => {
+        {token && <img className="home__logo" src={logo} onClick={ handleGoToHome }/>}
+        <BsHouseFill className="home__button-menu" size= {42} onClick={ handleGoToHome } />
+        {<BsBoxArrowInLeft className="home__button-logout" size= {40} onClick={() => {
             setName(null)
             setGames(null)
             setError(null)
             onLogout()
         } }/>}
-        {/* </div>  */}
-        {view === 'home' && <BsPeopleCircle className="home__profile" size= {40} onClick={ handleGoToProfile } />}
+        {view === 'home' && <BsPeopleCircle className="home__button-profile" size= {40} onClick={ handleGoToProfile } />}
+        {view === 'profile' && <Profile name={name} currentUser={currentUser} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames } onModify={handleModifyUser}/>}
         {view === 'profile' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
         {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
-        {view === 'profile' && <Profile name={name} currentUser={currentUser} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames } onModify={handleModifyUser}/>}
         <div className= "home__container">
             <div className= "home__container__menu"></div>
         </div>

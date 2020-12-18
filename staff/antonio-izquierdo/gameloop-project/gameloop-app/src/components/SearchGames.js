@@ -44,7 +44,7 @@ export default withRouter(({ onSearch, history, location, match }) => {
 
 
     return (
-        <> <div class="box">
+        <> <div className="box">
                 <div class="container">
                     <form className="search-games" onSubmit={handleFindGames}>
                         <input className="search-games__input" type="search" id="search" name="query" placeholder="name" />
@@ -52,10 +52,10 @@ export default withRouter(({ onSearch, history, location, match }) => {
                         <input className="search-games__input" type="search" id="search" name="budget" placeholder="budget" />
                         <input className="search-games__input" type="search" id="search" name="priceMin" placeholder="priceMin" />
                         <input className="search-games__input" type="search" id="search" name="priceMax" placeholder="priceMax" />
-                        <button>Search</button>
+                        <button className="search-games__button">SEARCH</button>
                     </form>
                 </div>
-                <span class="icon"><i class="fa fa-search"></i></span>
+                <span className="icon"><i className="fa fa-search"></i></span>
             </div>
 
 
