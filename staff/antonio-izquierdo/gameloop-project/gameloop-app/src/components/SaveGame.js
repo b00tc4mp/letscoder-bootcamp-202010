@@ -17,11 +17,11 @@ export default function SaveGame ({onSaveGame, error}) {
     }
  
     return <section className="save-game">
-        <form className="save-game__form" onSubmit={handleSubmitGame}> 
+        <form onSubmit={handleSubmitGame}> 
             {error && <Feedback error={error}/>}
-            <input className="save-game__form__name" name="name" type="text" placeholder="Game Tittle"></input>
-            <textarea className="save-game__form__description" name="description" type ="text" placeholder="Description"></textarea>
-            <input className="save-game__form__price"name="budget" type ="text" placeholder="Price"></input>
+            <input className="save-game__form" name="name" type="text" placeholder="Game Tittle"></input>
+            <textarea className="save-game__form" name="description" type ="text" placeholder="Description"></textarea>
+            <input className="save-game__form"name="budget" type ="text" placeholder="Price"></input>
             <select className="save-game__select" name="gameconsole" id="gameconsole">
             <option className="save-game__option" value="game boy">Game Boy</option>
             <option className="save-game__option" value="game boy advance">Game Boy Advance</option>
@@ -40,9 +40,9 @@ export default function SaveGame ({onSaveGame, error}) {
             <option className="save-game__option" value="xbox 360">Xbox 360</option>
             <option className="save-game__option" value="xbox one">Xbox One</option>
             </select>
-            <button>Save</button>
-            <input type="file" id="image" name="image" />
-            <label htmlFor="image"> Insert Picture </label>
+            <input className="save-game__input-image" type="file" id="image" name="image" />
+            <label htmlFor="image"></label>
+            <button className="save-game__button">SAVE</button>
         </form>
     </section>
 

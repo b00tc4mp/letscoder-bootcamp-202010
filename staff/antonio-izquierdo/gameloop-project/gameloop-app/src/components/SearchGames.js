@@ -47,11 +47,11 @@ export default withRouter(({ onSearch, history, location, match }) => {
         <> <div className="box">
                 <div class="container">
                     <form className="search-games" onSubmit={handleFindGames}>
-                        <input className="search-games__input" type="search" id="search" name="query" placeholder="name" />
-                        <input className="search-games__input" type="search" id="search" name="gameconsole" placeholder="console" />
-                        <input className="search-games__input" type="search" id="search" name="budget" placeholder="budget" />
-                        <input className="search-games__input" type="search" id="search" name="priceMin" placeholder="priceMin" />
-                        <input className="search-games__input" type="search" id="search" name="priceMax" placeholder="priceMax" />
+                        <input className="search-games__input" type="search" id="text" name="query" placeholder="name" />
+                        <input className="search-games__input" type="search" id="text" name="gameconsole" placeholder="console" />
+                        <input className="search-games__input" type="search" id="number" name="budget" placeholder="budget" />
+                        <input className="search-games__input" type="search" id="number" name="priceMin" placeholder="priceMin" />
+                        <input className="search-games__input" type="search" id="number" name="priceMax" placeholder="priceMax" />
                         <button className="search-games__button">SEARCH</button>
                     </form>
                 </div>

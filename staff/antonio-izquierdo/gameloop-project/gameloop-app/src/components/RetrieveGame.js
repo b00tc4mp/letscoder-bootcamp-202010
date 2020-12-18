@@ -4,7 +4,7 @@ import { retrieveGame, retrieveUser } from '../logic'
 
 const API_URL = process.env.REACT_APP_API_URL
 
-function RetrieveGame({ gameId, doGoToSearch }) {
+function RetrieveGame({ gameId }) {
     const [game, setGame] = useState()
     const [currentUser, setCurrentUser] = useState()
     useEffect(() => {
@@ -15,27 +15,24 @@ function RetrieveGame({ gameId, doGoToSearch }) {
                 if (error) return alert(error.message)
 
                 setGame(game)
-
-
             })
             const { token } = sessionStorage
-            retrieveUser(token, (error, user) => {
-            if (error) return alert(error.message)
-            const { fullname, contact, phone, city } = user
-            setCurrentUser({fullname, contact, phone, city})
 
+            retrieveUser(token, (error, user) => {
+
+            if (error) return alert(error.message)
+
+            const { fullname, contact, phone, city } = user
+
+            setCurrentUser({fullname, contact, phone, city})
+            
             })
         } catch (error) {
             alert(error.message)
         }
     }, [])
 
-    const handleGoBack = () =>{
-        doGoToSearch()
-    }
-
     return game ? <article className="result">
-        {<button onClick= {handleGoBack} className="result__btn">GO BACK</button>}
         <p className="result__li__title">game: {game.name}</p>
         <img className="result__li__img" src={`${API_URL}/games/${game.id}/images`} width="100px" />
         <p className="result__p">description: {game.description}</p>
@@ -45,7 +42,8 @@ function RetrieveGame({ gameId, doGoToSearch }) {
         <p className="result__p">fullname: {currentUser.fullname}</p>
         <p className="result__p">phone: {currentUser.phone}</p>
         <p className="result__p">budget: {currentUser.contact}</p>
-        <p className="result__p">budget: {currentUser.city}</p>
+        <p className="result__p">city: {currentUser.city}</p>
+        
     </article> : <> </>
 
 }

@@ -9,7 +9,6 @@ function FindGames({ games, onRetrieveGame }) {
         onRetrieveGame(id)
     }
 
-
     return games ? <section className="u-p-h-20">
         <ul className="u-grid">
             {games.map(({ id, name, budget }) =>
