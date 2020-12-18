@@ -9,18 +9,33 @@ function FindGames({ games, onRetrieveGame }) {
         onRetrieveGame(id)
     }
 
-    return <div className="results">
-        <ul className="results__ul">
-            {games.map(({ id, name, description, gameconsole, budget }) =>
-                <li key={id} className="results__li">
-                    <p className="results__li__title">{name}</p>
-                    <img className="results__li__img" src={`${API_URL}/games/${id}/images`} width="500px" onClick={() => handleRetrieveGame(id)} />
-                    {/* <p className="results__li__p">description: {description}</p>
-                    <p className="results__p">gameconsole: {gameconsole}</p> */}
-                    <p className="results__p">budget: {budget}</p>
-                </li>)}
+
+    return games ? <section className="u-p-h-20">
+        <ul className="u-grid">
+            {games.map(({ id, name, budget }) =>
+                <li
+                    className="u-grid__item">
+                    <article key={id} className="card">
+                        <header className="card-header">
+                            <img
+                                className="card-header__image"
+                                src={`${API_URL}/games/${id}/images`}
+                                height="120"
+                                alt="Api"
+                                onClick={() => handleRetrieveGame(id)}
+                            />
+                        </header>
+                        <div className="card-body">
+                            <h4 className="card-body__title">
+                                {name}
+                            </h4>
+                            <p className="card-body__description"> {budget + ' ' + '$'}</p>
+                        </div>
+                    </article>
+                </li>
+            )}
         </ul>
-    </div>
+    </section> : <> </>
 }
 
 export default FindGames

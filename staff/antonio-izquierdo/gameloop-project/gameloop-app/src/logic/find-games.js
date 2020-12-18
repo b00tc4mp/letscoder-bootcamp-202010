@@ -1,7 +1,6 @@
 import { call } from '../utils'
 import context from './context'
-//import { validateCallback } from './helpers/validations'
-debugger
+//import { validateCallback } from './helpers/validations
 export default (function (query, gameconsole, budget, priceMin, priceMax, callback) {
 
    /*  validateToken(token)

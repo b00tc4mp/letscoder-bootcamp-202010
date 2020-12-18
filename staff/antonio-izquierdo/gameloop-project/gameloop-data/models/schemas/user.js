@@ -37,9 +37,5 @@ module.exports = new Schema({
         type: String,
         default: 'no city',
         required: true
-    },
-
-    geo: [
-        Number
-    ]
+    }
 })

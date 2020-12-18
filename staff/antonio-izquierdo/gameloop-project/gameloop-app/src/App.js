@@ -54,12 +54,18 @@ export default withRouter(props => {
     props.history.push('/')
 }
 
+  const handleGoToSearch = () => {
+    props.history.push('/')
+
+  }
+
   return (
     <header className="App-header">
         <Route path='/sign-up' render={() => token ? <Redirect to="/" /> : <SignUp onSignUp={handleSignUp} error={error} />} />
         <Route path='/sign-in' render={() => token ? <Redirect to="/" /> : <SignIn onSignIn={handleSignIn} error={error} />} />
         <Route exact path='/' render={(props) => token ? <Home onLogout ={handleLogout} /> : <Access />} />
-        <Route path='/game/:gameId' render={props => <RetrieveGame gameId={props.match.params.gameId}/>} /> 
+        <Route path='/game/:gameId' render={props => <RetrieveGame gameId={props.match.params.gameId} doGoToSearch={handleGoToSearch}/>} /> 
+        
     </header>
   );
 })

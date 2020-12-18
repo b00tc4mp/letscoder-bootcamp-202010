@@ -49,11 +49,9 @@ return <section>
                 <input type="text" name= "city" placeholder="Insert your city" defaultValue={currentUser.city}></input>
                 <input type="text" name= "phone" placeholder="Insert your phone" defaultValue={currentUser.phone}></input>
                 <button>SAVE</button>               
-
             </div>
-
-
         </form>
+        
 </section>
 }
 

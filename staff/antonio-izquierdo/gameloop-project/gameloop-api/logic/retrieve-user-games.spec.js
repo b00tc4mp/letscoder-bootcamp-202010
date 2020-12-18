@@ -23,33 +23,27 @@ describe('retrieveUserGames()', () => {
             description = randomStringWithPrefix('description')
             gameconsole = randomGameConsole()
             budget = '' + randomInteger(1, 1000)
-            owner = randomId()
-
-            gameId = randomId()
 
             const user = { fullname, email, password }
 
             const newUser = await User.create(user)
             userId = '' + newUser._id
 
-            const game = { name, description, gameconsole, budget, owner }
+            const game = { name, description, gameconsole, budget, owner: userId }
 
             const newGame = await Game.create(game)
             gameId = '' + newGame._id
         })
 
         it('shoud succed on a existing game', () => {
-            retrieveUserGames(userId)
-
-                .then(() =>
-                    Game.findOne({ userId })
-                )
+            return retrieveUserGames(userId)
                 .then(game => {
-                    expect(game.name).to.equal(name)
-                    expect(game.description).to.equal(description)
-                    expect(game.gameconsole).to.equal(gameconsole)
-                    expect(game.budget).to.be.a('number')
-                    expect(game.owner).to.equal(owner)
+
+                    expect(game[0].name).to.equal(name)
+                    expect(game[0].description).to.equal(description)
+                    expect(game[0].gameconsole).to.equal(gameconsole)
+                    expect(game[0].budget).to.be.a('number')
+                    expect(game[0].id).to.equal(gameId) 
                 })
         })
 
@@ -65,7 +59,7 @@ describe('retrieveUserGames()', () => {
         })
 
         it('shoud fail when game does not exists', () => {
-            retrieveUserGames(gameId)
+            return retrieveUserGames(gameId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 

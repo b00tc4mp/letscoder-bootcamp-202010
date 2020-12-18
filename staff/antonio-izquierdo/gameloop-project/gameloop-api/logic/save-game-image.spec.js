@@ -40,7 +40,7 @@ describe('saveGameImage()', () => {
 
         })
 
-        it('shoud succed on new game', () => {
+        it.skip('shoud succed on new game', () => {
             let stream = '../populate/games/default.jpg'
 
             saveGameImage(gameId, stream)
@@ -54,7 +54,7 @@ describe('saveGameImage()', () => {
                 })
         })
 
-        it('should succeed with undefined parameters', () => {
+        it.skip('should succeed with undefined parameters', () => {
             saveGameImage(undefined)
                 .then(game => {
                     expect(game).to.be(null)
@@ -78,7 +78,7 @@ describe('saveGameImage()', () => {
 
         })
 
-        it('shoud fail when user and pet does not exists', () => {
+        it.skip('shoud fail when user and pet does not exists', () => {
             saveGameImage(gameId, stream)
 
             .catch(error => {

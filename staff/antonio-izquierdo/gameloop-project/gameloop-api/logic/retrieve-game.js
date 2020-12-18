@@ -11,7 +11,6 @@ const { models: { Game, User } } = require('gameloop-data')
  * @returns {Promise}
  */
 module.exports = function (gameId) {
-    debugger
     validateId(gameId)
 
     return Game.findById(gameId).lean()

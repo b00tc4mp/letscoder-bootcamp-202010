@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken')
 const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
-debugger
     const { headers: { authorization } } = req
    
     const token = authorization.replace('Bearer ', '')

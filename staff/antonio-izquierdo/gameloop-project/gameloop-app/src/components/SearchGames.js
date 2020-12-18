@@ -5,8 +5,6 @@ import { Route, withRouter } from 'react-router-dom'
 import { findGames } from '../logic'
 import RetrieveGame from './RetrieveGame'
 
- 
-//{ onSearch }
 export default withRouter(({ onSearch, history, location, match }) => {
     const [games, setGames] = useState()
 
@@ -39,24 +37,27 @@ export default withRouter(({ onSearch, history, location, match }) => {
         }
     }
     //const { token } = sessionStorage
-debugger
     const handleRetrieveGame = gameId => {
         history.push(`/game/${gameId}`)
         console.log(gameId)
-        setGames(undefined)
     }
 
 
     return (
-        <>
-            <form onSubmit={handleFindGames}>
-                <input type="text" name="query" placeholder="name" />
-                <input type="text" name="gameconsole" placeholder="console" />
-                <input type="number" name="budget" placeholder="budget" />
-                <input type="number" name="priceMin" placeholder="priceMin" />
-                <input type="number" name="priceMax" placeholder="priceMax" />
-                <button>Search</button>
-            </form>
+        <> <div class="box">
+                <div class="container">
+                    <form className="search-games" onSubmit={handleFindGames}>
+                        <input className="search-games__input" type="search" id="search" name="query" placeholder="name" />
+                        <input className="search-games__input" type="search" id="search" name="gameconsole" placeholder="console" />
+                        <input className="search-games__input" type="search" id="search" name="budget" placeholder="budget" />
+                        <input className="search-games__input" type="search" id="search" name="priceMin" placeholder="priceMin" />
+                        <input className="search-games__input" type="search" id="search" name="priceMax" placeholder="priceMax" />
+                        <button>Search</button>
+                    </form>
+                </div>
+                <span class="icon"><i class="fa fa-search"></i></span>
+            </div>
+
 
             { games && games.length > 0 && <FindGames onSearch={handleFindGames} games={games} onRetrieveGame={handleRetrieveGame} />}
         </>

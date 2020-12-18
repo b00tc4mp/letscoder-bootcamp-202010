@@ -5,6 +5,7 @@ import Profile from './Profile'
 import logo from "../assets/img/logo.png"
 import SaveGame from './SaveGame'
 import SearchGames from './SearchGames'
+import { BsBoxArrowInLeft, BsPeopleCircle, BsHouseFill } from "react-icons/bs";
 //import FindGames from './FindGames'
 
 export default function Home({onLogout}) {
@@ -84,7 +85,6 @@ export default function Home({onLogout}) {
    
     const handleRetrieveUserGames = () => {
         try {
-            debugger
             retrieveUserGames(token, (error, games)=> {
                 if (error) return alert(error.message)
                 setUserGames(games)
@@ -126,18 +126,22 @@ export default function Home({onLogout}) {
     }
         
     return <section className="home">
-        {token && <img className="sign-in__logo" src={logo} />} 
-        {<h1>Welcome to Gameloop!</h1>}
-        {<button className="home__logout" onClick={() => {
+        {/* <div className="home__container"> */}
+        {token && <img className="home__logo" src={logo} onClick={ handleGoToHome }/>} 
+        <BsHouseFill className="home__home" size= {42} onClick={ handleGoToHome } />
+        {<BsBoxArrowInLeft className="home__logout" size= {35} onClick={() => {
             setName(null)
             setGames(null)
             setError(null)
             onLogout()
-        } }>LOGOUT</button>}
-        {view === 'home' && <button className="home__profile" onClick={handleGoToProfile}>PROFILE</button>}
-        {view === 'profile' && <button className="home__profile" onClick={handleGoToHome}>HOME</button>}
+        } }/>}
+        {/* </div>  */}
+        {view === 'home' && <BsPeopleCircle className="home__profile" size= {40} onClick={ handleGoToProfile } />}
         {view === 'profile' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
-        {view === 'home' && <SearchGames onSearch={handleSearchGames}/>}
+        {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
         {view === 'profile' && <Profile name={name} currentUser={currentUser} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames } onModify={handleModifyUser}/>}
+        <div className= "home__container">
+            <div className= "home__container__menu"></div>
+        </div>
     </section>
 }

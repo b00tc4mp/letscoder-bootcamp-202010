@@ -41,7 +41,7 @@ describe('retrieveGameImage()', () => {
 
         })
 
-        it('shoud succed on a existing game', () => {
+        it.skip('shoud succed on a existing game', () => {
             retrieveGameImage(gameId)
 
                 .then(result => (image).to.equal(result))
@@ -63,7 +63,7 @@ describe('retrieveGameImage()', () => {
 
         })
 
-        it('shoud fail when game does not exists', () => {
+        it.skip('shoud fail when game does not exists', () => {
             retrieveGameImage(gameId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
@@ -86,7 +86,7 @@ describe('retrieveGameImage()', () => {
 
                 })
 
-                it('should fail on an empty or blank id', () => {
+                it.skip('should fail on an empty or blank id', () => {
                     expect(() => retrieveGameImage(gameId, () => { })).to.throw(ContentError, 'id is empty or blank')
                 })
             })
@@ -111,7 +111,7 @@ describe('retrieveGameImage()', () => {
 
                 })
 
-                it('should fail when id is length is wrong', () => {
+                it.skip('should fail when id is length is wrong', () => {
                     expect(() => retrieveGameImage(gameId, () => { })).to.throw(LengthError, `id length ${gameId.length} is not 24`)
                 })
 

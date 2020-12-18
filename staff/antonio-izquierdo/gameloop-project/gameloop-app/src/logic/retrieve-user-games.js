@@ -1,7 +1,7 @@
 import { call } from '../utils'
 import context from './context'
 //import { validateCallback } from './helpers/validations'
-debugger
+
 export default (function (token, callback) {
 
    /*  validateToken(token)

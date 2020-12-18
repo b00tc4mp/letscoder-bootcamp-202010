@@ -39,17 +39,14 @@ describe('retrieveGame()', () => {
         })
 
         it('shoud succed on a existing game', () => {
-            retrieveGame(gameId)
-
-                .then(() =>
-                    Game.findOne({ gameId })
-                )
+            return retrieveGame(gameId)
                 .then(game => {
+                    console.log(game)
                     expect(game.name).to.equal(name)
                     expect(game.description).to.equal(description)
                     expect(game.gameconsole).to.equal(gameconsole)
                     expect(game.budget).to.be.a('number')
-                    expect(game.owner).to.equal(owner)
+                    expect(game.id).to.equal(gameId)
                 })
         })
 
@@ -67,11 +64,11 @@ describe('retrieveGame()', () => {
         })
 
         it('shoud fail when game does not exists', () => {
-            retrieveGame(gameId)
+            return retrieveGame(gameId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 
-                    expect(error.message).to.equal(`game with id ${gamesId} not found`)
+                    expect(error.message).to.equal(`game with id ${gameId} not found`)
                 })
         })
     })

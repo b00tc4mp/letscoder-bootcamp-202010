@@ -1,12 +1,58 @@
-.App 
-    text-align: center
-    max-width: 500px
-    border: 1px solid yellow
-    margin: 0px auto
+html, body, #root, .header, .home, .section
+    min-height: 100vh
+    
+.home
+    display: flex-start
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    align-content: center
 
+    &__profile
+        margin-left: 20px
+        bottom: 0
+        left: 0
+        color:#fffc00
+        position: fixed
+        z-index: 1 
+        margin-bottom: 23px
+      
+    &__home
+        bottom: 0
+        left: 0
+        margin-left: 110px
+        color:#fffc00
+        position: fixed
+        z-index: 1 
+        margin-bottom: 23px
+        
 
-@media only screen and (min-width: 480px)
-    .App
-        max-width: 1024px
-        border: 1px solid red
-        margin: 0px auto
+    &__logo
+        margin-top: 20px
+        width: 360px
+
+    &__logout
+        margin-top: 20px
+        color: #fffc00
+    
+    &__container
+        min-height: 100%
+        width: 100%
+
+        &__menu
+            width: 100%
+            height: 90px
+            position: fixed
+            bottom: 0
+            left: 0
+            background-color: #63416e
+            justify-content: space-around
+        
+    &__placeholder-menu
+        
+    
+    
+
+    
+
