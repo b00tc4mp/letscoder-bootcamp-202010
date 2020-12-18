@@ -14,6 +14,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
     const [query, setQuery] = useState('')
     const userId = user.id
     const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
+    
 
     if (user.role === 'PROMOTER')
         return (
@@ -87,7 +88,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
                                         duration={item.duration}
                                         payment={item.payment}
                                         description={item.description}
-                                        image= {{uri: `http://192.168.1.131:4000/api/users/${item._id}/images`}}
+                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
                                     />
                                 </TouchableOpacity>
                             )}

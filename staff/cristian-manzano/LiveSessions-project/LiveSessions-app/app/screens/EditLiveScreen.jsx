@@ -13,6 +13,22 @@ export default function PetitionScreen({ onModifyLive, onGoToProfile, live }) {
     const [payment, setPayment] = useState(live.payment)
     const liveId = live._id
 
+    const [imageUri, setImageUri] = useState();
+    
+    const requestPermission = async () => {
+        const { granted } = await ImagePicker.requestCameraPermissionsAsync();
+        if (!granted) alert("You need to enable permission to access the library");
+    };
+    useEffect(() => {
+        requestPermission();
+    }, []);
+
+    const selectImage = async () => {
+        const result = await ImagePicker.launchImageLibraryAsync();
+        if (!result.cancelled) setImageUri({ localUri: result.uri });
+        else console.log("Error reading image");
+    };
+
     return (
         <SafeAreaView>
             <KeyboardAvoidingView
@@ -25,6 +41,21 @@ export default function PetitionScreen({ onModifyLive, onGoToProfile, live }) {
                     </TouchableOpacity>
 
                     <View style={styles.LivePetitionContainer}>
+                        <View style={styles.imagecontainer}>
+
+                            <Image
+                                source={
+                                    imageUri
+                                        ? { uri: imageUri.localUri }
+                                        : require("../assets/default-profile-image.png")
+                                }
+                                style={{ width: 150, height: 150 }}
+                            />
+                            <Button
+                            /* style={styles.imageUpload} */ title="select image"
+                                onPress={selectImage}
+                            />
+                        </View>
                         <TextInput
                             placeholder=' Title'
                             style={styles.livesInputs}
@@ -74,7 +105,7 @@ export default function PetitionScreen({ onModifyLive, onGoToProfile, live }) {
                         </TextInput>
 
                         <TouchableOpacity style={styles.submitPetitionButton}
-                            onPress={() => { onModifyLive({ liveId, title, liveDate, duration, payment, description }) }}>
+                            onPress={() => { onModifyLive({ imageUri, liveId, title, liveDate, duration, payment, description }) }}>
                             <Text style={styles.buttonText}>Save!</Text>
                         </TouchableOpacity>
 

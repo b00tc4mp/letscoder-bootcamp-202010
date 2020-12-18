@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import ArtistsCard from "./ArtistsCard";
+import { LogBox } from 'react-native';
 import { FlatList, ScrollView, TouchableOpacity, View, StyleSheet, Image} from "react-native";
 
 export default function ArtistMap({ users, onGoToArtistProfile, onGoToProfile }) {
-  // const userId = item._id
+  useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+}, [])
   return (
     <View>
       <View style={styles.livesListHeader}>

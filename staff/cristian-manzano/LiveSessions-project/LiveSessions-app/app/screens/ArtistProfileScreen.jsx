@@ -5,7 +5,7 @@ import { Avatar } from 'react-native-paper';
 import { LogBox } from 'react-native';
 
 
-function ArtistProfileScreen({ onGoToEditProfile, onGoToLives, onGoToLiveDetail, onSearch, user, lives }) {
+function ArtistProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, user, lives }) {
     useEffect(() => {
         LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
     }, [])

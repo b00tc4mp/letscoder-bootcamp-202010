@@ -10,7 +10,9 @@ const {
     handleSaveImage,
     handleRetrieveUserImage,
     handleSaveLive,
+    handleSaveLiveImage,
     handleRetrieveLives,
+    handleRetrieveLiveImage,
     handleModifyLive
 } = require('./handlers')
 
@@ -46,9 +48,16 @@ router.post(`/api/lives`, jsonBodyParser, withErrorHandling(handleSaveLive))
 
 router.post(`/api/lives/edit`, jsonBodyParser, withErrorHandling(handleModifyLive))
 
+router.post("/api/lives/:liveId/images", withErrorHandling(handleSaveLiveImage)
+); 
+
+
 // API LIVES GET
 
 router.get(`/api/lives`, withErrorHandling(handleRetrieveLives))
+
+router.get("/api/lives/:liveId/images", withErrorHandling(handleRetrieveLiveImage))
+
 
 
 

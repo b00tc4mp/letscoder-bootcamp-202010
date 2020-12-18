@@ -5,7 +5,7 @@ import * as ImagePicker from "expo-image-picker";
 import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
-function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user }) {
+function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user, onLogOut }) {
     const [fullname, setFullname] = useState(user.fullname)
     const [artistName, setArtistName] = useState(user.artistName)
     const [city, setCity] = useState(user.city)
@@ -165,6 +165,9 @@ function SignUpScreen({ onCancelEditProfile, onEditProfile, onGoToProfile, user 
                             </TouchableOpacity>
 
                             </View>
+                            <TouchableOpacity onPress={onLogOut}>
+                                <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
+                            </TouchableOpacity>
                         </View>
 
                     </View>

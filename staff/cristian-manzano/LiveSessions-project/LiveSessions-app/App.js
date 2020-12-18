@@ -1,8 +1,20 @@
 //modules
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect, Alert } from 'react';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// import {
+//   useFonts,
+//   Inter_900Black,
+// } from '@expo-google-fonts/inter';
+
+import {
+  setCustomView,
+  setCustomTextInput,
+  setCustomText,
+  setCustomImage,
+  setCustomTouchableOpacity
+} from 'react-native-global-props';
 
 // Screens
 import SignUpScreen from './app/screens/SignUpScreen';
@@ -15,13 +27,59 @@ import authenticateUser from './app/logic/authenticate-user';
 
 
 
-export default function App() {
-  const [view, setView] = useState('sign-up')
 
+// Setting a default background color for all View components.
+const customViewProps = {
+  style: {
+  }
+};
+ 
+// Getting rid of that ugly line on Android and adding some custom style to all TextInput components.
+const customTextInputProps = {
+  // underlineColorAndroid: 'rgba(0,0,0,0)',
+  style: {
+    // fontFamily: "San Francisco"
+  }
+};
+ 
+// Setting default styles for all Text components.
+const customTextProps = {
+  style: {
+    // fontFamily: "San Francisco"
+  }
+};
+ 
+// Makes every image resize mode cover by default.
+const customImageProps = {
+  // resizeMode: 'contain'
+};
+ 
+// Adds a bigger hit box for all TouchableOpacity's.
+const customTouchableOpacityProps = {
+
+};
+
+// let [fontsLoaded] = useFonts({
+//   Roboto_Regular400,
+//   Roboto_Bold700,
+//   Roboto_Black900,
+// });
+// if (!fontsLoaded) {
+//   return <AppLoading />;
+export default function App() {
+  setCustomView(customViewProps);
+  setCustomTextInput(customTextInputProps);
+  setCustomText(customTextProps);
+  setCustomImage(customImageProps);
+  setCustomTouchableOpacity(customTouchableOpacityProps);
+
+  
+  const [view, setView] = useState('sign-up')
+  
   const handleGoToSignUp = () => {
     setView("sign-up")
   }
-
+  
   const handleGoToSignIn = () => {
     setView("sign-in")
   }

@@ -9,8 +9,9 @@ import { editUser } from '../logic';
 import { searchArtists } from '../logic';
 import { saveUserImage } from '../logic';
 import { saveLive } from '../logic';
-import { retrieveLives } from '../logic'
-import { modifyLive } from '../logic'
+import { saveLiveImage } from '../logic';
+import { retrieveLives } from '../logic';
+import { modifyLive } from '../logic';
 
 //Screens
 import ArtistProfileScreen from './ArtistProfileScreen'
@@ -262,7 +263,7 @@ export default function Home({ onHandleLogout }) {
     setView('edit-live')
   }
 
-  const handleModifyLive = ({ liveId, title, liveDate, duration, payment, description }) => {
+  const handleModifyLive = ({imageUri, liveId, title, liveDate, duration, payment, description }) => {
     debugger
     try {
       modifyLive(liveId, title, liveDate, duration, payment, description, (error) => {
@@ -270,16 +271,42 @@ export default function Home({ onHandleLogout }) {
         AsyncStorage.getItem('token')
           .then(token => {
             try {
-              debugger
-              retrieveLives(token, (error, lives) => {
-                if (error) return alert(error.message);
-                setLives(lives);
+              if (imageUri)
+                saveLiveImage(liveId, imageUri, (error) => {
+                  if (error) return alert(error.message);
+                  try {
+                    retrieveLives(token, (error, lives) => {
+                      if (error) return Alert.alert(error.message)
 
-                setView("lives");
-              });
+                      setLives(lives)
+                    })
+                  } catch (error) {
+                    Alert.alert(error.message)
+                  }
+                })
+              try {
+                if (!imageUri)
+                  retrieveLives(token, (error, lives) => {
+                    if (error) return Alert.alert(error.message)
+
+                    setLives(lives)
+                  })
+              } catch (error) {
+                Alert.alert(error.message)
+              }
             } catch (error) {
-              alert(error.message);
+              Alert.alert(error.message)
+
             }
+
+            if (user.role === 'ARTIST') {
+              setView('artist-profile')
+            }
+            else {
+
+              setView('promoter-profile')
+            }
+            
           })
       })
     } catch (error) {
@@ -300,8 +327,8 @@ export default function Home({ onHandleLogout }) {
   return (
 
     <View>
-      { view === 'promoter-profile' && <PromoterProfileScreen user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail} />}
-      { view === 'artist-profile' && <ArtistProfileScreen user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} />}
+      { view === 'promoter-profile' && <PromoterProfileScreen user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail}/>}
+      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} />}
       { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} />}
       { view === 'results' && <View style={{
         backgroundColor: "#f8f4f4",
