@@ -5,9 +5,8 @@ const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
     const { headers: { authorization } } = req
-
-    // Bearer <token>
-    const token = authorization.replace('Bearer ', '')
+    
+    const token = authorization ? authorization.replace('Bearer ', ''): ''
 
     try {
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
