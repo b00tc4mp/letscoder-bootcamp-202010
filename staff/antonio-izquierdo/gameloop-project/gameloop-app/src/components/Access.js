@@ -6,7 +6,7 @@ function Access( ) {
     return <section className="access">
        
         <img className="access__logo" src={logo} />
-        <p> PAY LESS <br /> <br /> PLAY MORE</p>
+        <p> PAY LESS <br /> <br/> PLAY MORE</p>
         <div className="access__div">
             <Link to='/sign-up'>
                 <button className="access__div__sign-up-button"> SIGN UP</button>

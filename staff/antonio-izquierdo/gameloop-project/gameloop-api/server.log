@@ -2915,3 +2915,5 @@ error 2020-12-17T23:54:23.829Z - Error: user with e-mail paquita@salas.com is al
     at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\register-user.js:15:28
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-18T00:48:00.403Z - stopping server
+info 2020-12-18T00:49:51.655Z - server running on port 4000
+info 2020-12-18T03:07:27.174Z - stopping server

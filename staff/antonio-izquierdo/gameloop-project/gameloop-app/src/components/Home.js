@@ -82,6 +82,11 @@ export default function Home({onLogout}) {
         setView('home')
     }
 
+    const handleGoToCreateGame = () => {
+        setView('c')
+    }
+
+
    
     const handleRetrieveUserGames = () => {
         try {

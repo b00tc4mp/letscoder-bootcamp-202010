@@ -1,9 +1,12 @@
 import './Profile.sass'
 import { deleteGame } from '../logic'
+import { BsPeopleCircle } from "react-icons/bs";
+import { BsTrashFill } from "react-icons/bs";
 
 const API_URL = process.env.REACT_APP_API_URL
 
 function Profile ({name, onRetrieveUserGames, doRefreshGames, games, onModify, currentUser}) {
+    
 const handleDeleteGame = gameId =>{
     try {
         deleteGame(gameId, error => {
@@ -14,23 +17,45 @@ const handleDeleteGame = gameId =>{
         alert(error.message)
     }
 }
+
     
 return <section>
     <h2>Hello {name} </h2>
-    <h3>Your Profile</h3>
+    <h3>Save Your Game</h3>
     <button className="botonsinmas" onClick={onRetrieveUserGames}>MY GAMES</button>
-   
-    <ul className="results__ul">
+
+<section className="profile">
+  <section className="u-p-h-20">
+        <ul className="u-grid">
             {games && games.length && games.map(({ id, name, description, gameconsole, budget }) =>
-                <li key={id} className="results__li">
-                    <p className="results__li__title">{name}</p>
-                    <img className="results__li__img" src={`${API_URL}/games/${id}/images`} width="500px" />
-                    <p className="results__li__p">description: {description}</p>
-                    <p className="results__p">gameconsole: {gameconsole}</p> 
-                    <p className="results__p">budget: {budget}</p>
-                    <button onClick={()=>handleDeleteGame(id)}>DELETE</button> 
-                </li>)}
+                <li
+                    className="u-grid__item">
+                    <article key={id} className="card2">
+                        <header className="card2-header">
+                            <img
+                                className="card2-header__image"
+                                src={`${API_URL}/games/${id}/images`}
+                                height="120"
+                                alt="Api"
+                            />
+                        </header>
+                        <div className="card2-body">
+                            <h4 className="card2-body__title">
+                                {name}
+                            </h4>
+                            <p className="card2-body__description"> {description}</p>
+                            <p className="card2-body__gameconsole"> { gameconsole }</p>
+                            <div className="card2-body__container">
+                            <BsTrashFill className="card2-body__trash" size= {39} onClick={() => handleDeleteGame(id)}></BsTrashFill>
+                            <span className="card2-body__dot"> <p className="card2-body__budget"> {budget + ' ' + '$'}</p></span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            )}
         </ul>
+    </section>
+    </section> : <> </>
 
         <form className="profile__form" onSubmit ={(event =>{
             event.preventDefault()
@@ -51,6 +76,7 @@ return <section>
                 <button>SAVE</button>               
             </div>
         </form>
+        { <BsPeopleCircle className="home__profile" size= {40} />}
         
 </section>
 }
