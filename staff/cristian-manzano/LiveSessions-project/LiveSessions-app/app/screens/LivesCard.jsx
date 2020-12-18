@@ -1,12 +1,12 @@
 import React from "react";
 import { View, StyleSheet, Text, TextInput, Image, TouchableOpacity } from "react-native";
 
-export default function LivesCard({ title, liveDate, duration, status, payment, description }) {
+export default function LivesCard({ title, liveDate, duration, status, payment, description, image }) {
   return (
     <View style={styles.card}>
       <View style={styles.detailsContainer}>
         <View style={styles.livesCardHeader}>
-          
+        <Image style={styles.image} source={image} />
           <TextInput style={styles.titleActivity}
           editable={false}>{title}</TextInput>
         </View>

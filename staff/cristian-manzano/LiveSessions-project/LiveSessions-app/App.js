@@ -54,7 +54,7 @@ export default function App() {
 
   const handleLogOut = () => {
     AsyncStorage.removeItem('token')
-    setView('')
+    setView('sign-in')
   }
 
       useEffect(() => { 

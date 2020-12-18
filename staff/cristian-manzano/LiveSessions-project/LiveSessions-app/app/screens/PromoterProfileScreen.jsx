@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Image, Dimensions, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import LivesCard from "./LivesCard";
+import { View, StyleSheet, Image, Dimensions, FlatList, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
+import { LogBox } from 'react-native';
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSearch, onGoToProfile, user }) {
+
+function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoToLiveDetail, onSearch, user, lives }) {
+    useEffect(() => {
+        LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+    }, [])
+
+    
     const [query, setQuery] = useState('')
     const userId = user.id
     const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
@@ -16,21 +24,21 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                 >
                     <View style={styles.artistProfileHeader}>
                         <View>
-                        <TouchableOpacity onPress={onGoToEditProfile}>
-                            <Image style={styles.profileAvatar}
-                                source={{ uri: `${imageURL}` }}
-                            />
-                            <Text style={styles.roleText}>PROMOTER</Text>
-                        </TouchableOpacity>
+                            <TouchableOpacity onPress={onGoToEditProfile}>
+                                <Image style={styles.profileAvatar}
+                                    source={{ uri: `${imageURL}` }}
+                                />
+                                <Text style={styles.roleText}>PROMOTER</Text>
+                            </TouchableOpacity>
 
-                        <TextInput
-                            style={styles.artistName}
-                            placeholder={'@'+user.artistName.trim()}
-                            placeholderTextColor={"purple"}
-                            editable={false}>
-                            
+                            <TextInput
+                                style={styles.artistName}
+                                placeholder={'@' + user.artistName.trim()}
+                                placeholderTextColor={"purple"}
+                                editable={false}>
 
-                        </TextInput>
+
+                            </TextInput>
                         </View>
 
                         {/* <TouchableOpacity onPress={onLogOut}>
@@ -60,7 +68,31 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
 
                         </View>
                     </View>
-                    <ScrollView>
+
+                    <ScrollView showsVerticalScrollIndicator={false}>
+                    <View style={styles.livesListContainer}>
+                            
+                        <FlatList style={styles.livesList}
+                            // horizontal
+                            
+                            showsVerticalScrollIndicator={false}
+                            data={lives}
+                            keyExtractor={user._id}
+                            renderItem={({ item }) => (
+                                <TouchableOpacity onPress={() => { onGoToLiveDetail({ live: item }) }}>
+                                    <LivesCard
+                                        title={item.title}
+                                        liveDate={item.liveDate}
+                                        status={item.status}
+                                        duration={item.duration}
+                                        payment={item.payment}
+                                        description={item.description}
+                                        image= {{uri: `http://192.168.1.131:4000/api/users/${item._id}/images`}}
+                                    />
+                                </TouchableOpacity>
+                            )}
+                        />
+                    </View>
 
 
 
@@ -80,13 +112,6 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onSea
                                     <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
                                 </TouchableOpacity>
                             </View>
-
-                            <TouchableOpacity
-                                style={styles.petitionsButtonContainer}
-                                onPress={onGoToLives}>
-                                <Text style={styles.petitionsButton}>Lives</Text>
-                            </TouchableOpacity>
-
                         </View>
 
                     </ScrollView>
@@ -102,7 +127,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-around",
         // backgroundColor: "black",
-        marginBottom: 20,
+        marginTop: 15,
 
     },
 
@@ -172,7 +197,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginTop: "3%",
         fontSize: 10,
-        
+
     },
 
 
@@ -262,7 +287,25 @@ const styles = StyleSheet.create({
         marginTop: "8%",
         width: 200,
         height: 60,
-    }
+    },
+
+    livesListContainer: {
+        height: "70%",
+        width: Dimensions.get("window").width,
+      },
+    
+      livesListHeader: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignSelf: "stretch",
+        marginTop: "15%"
+      },
+    
+      livesList: {
+        marginTop: "10%",
+        width: "90%",
+        height: "80%"
+      }
 
 })
 
