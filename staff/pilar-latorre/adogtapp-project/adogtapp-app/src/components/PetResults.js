@@ -2,7 +2,7 @@ import "./PetResults.sass";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function PetResults({ pets, onDetail }) {
+function PetResults({ pets, onRetrieve }) {
   return (
     <div className="results">
       <ul className="results__ul">
@@ -11,7 +11,7 @@ function PetResults({ pets, onDetail }) {
             <img
               className="results__img"
               src={`${API_URL}/pets/${id}/images`}
-              onClick={() => onDetail(id)}
+              onClick={() => onRetrieve(id)}
             />
             <div>
               <p className="results__p">{name}</p>

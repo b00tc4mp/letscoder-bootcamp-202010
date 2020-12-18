@@ -2,7 +2,7 @@
 
 ## Intro
 
-This APP provides you information about the closest shelters and shows you the pets available to adopt
+This APP provides gives you the oportunity to find the pets available to adopt, it only can be shelter pets. Here is not possible to sell or buy any pet. This app was made to go visibility to shelters.
 
 ![Alt Adogtap](https://media2.giphy.com/media/eYilisUwipOEM/giphy.gif?cid=ecf05e471g8xjdntjop71tdweqwwnuf5vdu8ru15eta7o9v1&rid=giphy.gif)
 
@@ -18,7 +18,7 @@ This APP provides you information about the closest shelters and shows you the p
 
 ### Activities
 
-Search shelters and find a pet, and if you are a shelter sign in & sing up, update and delete info about the animals.
+Search shelters and find a pet, and if you are a shelter sign in & sing up,create, update and delete info about the animals.
 
 ![Alt Operate Activity](./adogtapp-doc/opActivities.png)
 

@@ -35,7 +35,7 @@ function SearchPets({ onError, onGoToSignIn }) {
   };
 
   
-  const handleGoToDetail = (petId) => {
+  const handleGoToRetrieve = (petId) => {
     setPetId(petId)
     setView('retrievePet')
     
@@ -92,7 +92,7 @@ function SearchPets({ onError, onGoToSignIn }) {
 
     return (
     <>
-      {!token && <button className="search__logout" onClick={ onGoToSignIn }>Go To SignIn</button>}
+      {!token && <button className="search__logout" onClick={ onGoToSignIn }>Go To Sign In if you are a shelter</button>}
       {!token && <h1 className="search__title">Find your pet</h1>}
       <form className="search" onSubmit={handleResults}>
         {!token && (
@@ -138,7 +138,7 @@ function SearchPets({ onError, onGoToSignIn }) {
         <p className="search__sorry">Sorry, there are no pets for this query</p>
       )}
       {!petId && pets && pets.length > 0 && (
-        <PetResults pets={pets} onDetail={handleGoToDetail} />
+        <PetResults pets={pets} onRetrieve={handleGoToRetrieve} />
       )}
       {!pets && !petId && (
         <div>
