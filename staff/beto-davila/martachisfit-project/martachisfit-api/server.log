@@ -1548,3 +1548,9 @@ error 2020-12-18T13:39:09.358Z - ConflictError: user with e-mail pepigri@gmail.c
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-18T13:42:47.646Z - stopping server
+info 2020-12-18T13:44:06.502Z - starting server
+info 2020-12-18T13:44:06.661Z - server running on port 4000
+error 2020-12-18T13:53:58.732Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-18T15:57:40.299Z - stopping server
