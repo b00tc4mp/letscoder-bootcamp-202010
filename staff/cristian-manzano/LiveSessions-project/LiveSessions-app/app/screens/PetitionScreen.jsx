@@ -7,7 +7,7 @@ import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollVi
 
 export default function PetitionScreen({ onSubmitPetition, onGoToProfile }) {
     const [title, setTitle] = useState(title)
-    const [date, setDate] = useState(date)
+    const [liveDate, setLiveDate] = useState(liveDate)
     const [duration, setDuration] = useState(duration)
     const [description, setDescription] = useState(description)
     const [payment, setPayment] = useState(payment)
@@ -36,7 +36,7 @@ export default function PetitionScreen({ onSubmitPetition, onGoToProfile }) {
                             placeholder=' Date'
                             style={styles.livesInputs}
                             placeholderTextColor="#343a40"
-                            onChangeText={date => setDate(date)}
+                            onChangeText={liveDate => setLiveDate(liveDate)}
 
                             // defaultValue={(date ? ' ' + date : '')}
                         >
@@ -73,7 +73,7 @@ export default function PetitionScreen({ onSubmitPetition, onGoToProfile }) {
                     </TextInput>
 
                     <TouchableOpacity style={styles.submitPetitionButton}
-                            onPress={() => { onSubmitPetition({ title, date, status, duration, payment, description }) }}>
+                            onPress={() => { onSubmitPetition({ title, liveDate, status, duration, payment, description }) }}>
                             <Text style={styles.buttonText}>Save!</Text>
                     </TouchableOpacity>
 

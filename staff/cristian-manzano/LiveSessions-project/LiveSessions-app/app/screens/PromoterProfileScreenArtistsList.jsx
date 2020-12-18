@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import LivesCard from "./LivesCard";
+import ArtistsCard from "./ArtistsCard";
 import { View, StyleSheet, Image, Dimensions, FlatList, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 import { LogBox } from 'react-native';
 
 
-function DetailArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onGoToProfile, item }) {
+function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, users, onGoToArtistProfile }) {
+    useEffect(() => {
+        LogBox.ignoreLogs(['VirtualizedList: missing keys for items']);
+    }, [])
 
+    
+    const [query, setQuery] = useState('')
+    const userId = user.id
+    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
+    
 
-    const itemId = item._id
-    const imageURL = `http://192.168.1.131:4000/api/users/${itemId}/images`
-
-    if (item.role === 'ARTIST')
+    if (user.role === 'PROMOTER')
         return (
 
             <SafeAreaView style={styles.artistProfileContainer}>
@@ -24,27 +29,72 @@ function DetailArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOu
                                 <Image style={styles.profileAvatar}
                                     source={{ uri: `${imageURL}` }}
                                 />
-                                <Text style={styles.roleText}>Artist</Text>
+                                <Text style={styles.roleText}>PROMOTER</Text>
                             </TouchableOpacity>
 
                             <TextInput
                                 style={styles.artistName}
-                                placeholder={'@' + item.artistName.trim()}
-                                placeholderTextColor={"green"}
+                                placeholder={'@' + user.artistName.trim()}
+                                placeholderTextColor={"purple"}
                                 editable={false}>
 
 
                             </TextInput>
-                            <TouchableOpacity onPress={onGoToPetitions}>
-                                <Image style={styles.PetitionsIcon} source={require('../assets/petitions-image.png')} />
-                            </TouchableOpacity>
                         </View>
 
+                        {/* <TouchableOpacity onPress={onLogOut}>
+                                <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
+                            </TouchableOpacity> */}
+                        <View style={styles.containerNavigation}>
+
+                            <View style={styles.containerInputSearch}>
+                                <TextInput
+                                    placeholder=" Search artists by genres"
+                                    style={styles.inputSearchActivity}
+                                    onChangeText={query => setQuery(query)}
+
+                                />
+                                <TouchableOpacity
+                                    onPress={() => { onSearch({ query }) }}>
 
 
+                                    <View style={styles.searchContainer}>
+                                        <Image
+                                            style={styles.searchIcon}
+                                            source={require("../assets/search-icon.png")}
+                                        />
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+
+                        </View>
                     </View>
 
                     <ScrollView showsVerticalScrollIndicator={false}>
+                    <View style={styles.livesListContainer}>
+                            
+                    <FlatList
+            style={styles.ArtistList}
+            data={users}
+            keyExtractor={users.id}
+            renderItem={({ item }) => (
+
+              <TouchableOpacity onPress={() => { onGoToArtistProfile({ item }) }}>
+                <ArtistsCard
+                  artistName={item.artistName}
+                  tags={item.tags}
+                  image={{ uri: `http://192.168.1.131:4000/api/users/${item._id}/images` }}
+                />
+              </TouchableOpacity>
+
+            )}
+          />
+                    </View>
+
+
+
+
+
 
                         <View style={styles.artistProfileBody}>
 
@@ -55,16 +105,8 @@ function DetailArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOu
                                     <Image style={styles.instagramLogo} source={require('../assets/instagram-logo.png')} />
                                 </View>
 
-                                <TouchableOpacity onPress={() => Linking.openURL(item.youtubeLink)}>
+                                <TouchableOpacity onPress={() => Linking.openURL(user.youtubeLink)}>
                                     <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
-                                </TouchableOpacity>
-
-                                <TouchableOpacity onPress={() => Linking.openURL(item.bandcampLink)}>
-                                    <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
-                                </TouchableOpacity>
-
-                                <TouchableOpacity onPress={() => Linking.openURL(item.spotifyLink)}>
-                                    <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -83,16 +125,50 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         // backgroundColor: "black",
         marginTop: 15,
-        marginRight: 5
 
     },
 
-    PetitionsIcon: {
-        backgroundColor: "gray",
-        marginTop: "30%",
-        width: 40,
-        height: 40
+    containerInputSearch: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        marginLeft: "10%"
+    },
+    inputSearchActivity: {
+        backgroundColor: "white",
+        borderTopLeftRadius: 40,
+        borderBottomLeftRadius: 40,
+        borderWidth: 1,
+        borderColor: "purple",
+        borderRightColor: "white",
+        height: 48,
+        width: 200,
+        paddingLeft: 20,
+    },
+    logoutIcon: {
+        marginTop: "20%",
+        width: 48,
+        height: 48,
+    },
+    searchContainer: {
+        backgroundColor: "white",
+        width: 50,
+        height: 48,
+        alignContent: "center",
+        justifyContent: "center",
+        borderTopRightRadius: 40,
+        borderBottomRightRadius: 40,
+        borderWidth: 1,
+        borderColor: "purple",
+        borderLeftColor: "white",
 
+        alignItems: "center",
+    },
+    searchIcon: {
+        width: 30,
+        height: 30,
+        alignContent: "center",
+        alignSelf: "center",
+        justifyContent: "center"
     },
 
 
@@ -102,7 +178,7 @@ const styles = StyleSheet.create({
         borderRadius: 60 / 2,
         marginLeft: "10%",
         borderWidth: 3,
-        borderColor: "green"
+        borderColor: "purple"
     },
 
     roleText: {
@@ -213,21 +289,21 @@ const styles = StyleSheet.create({
     livesListContainer: {
         height: "70%",
         width: Dimensions.get("window").width,
-    },
-
-    livesListHeader: {
+      },
+    
+      livesListHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "stretch",
         marginTop: "15%"
-    },
-
-    livesList: {
+      },
+    
+      livesList: {
         marginTop: "10%",
         width: "90%",
         height: "80%"
-    }
+      }
 
 })
 
-export default DetailArtistProfileScreen;
+export default PromoterProfileScreenArtistsList;

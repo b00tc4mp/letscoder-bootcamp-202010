@@ -128,7 +128,7 @@ export default function App() {
   },[])
 
 
-  return <View>
+  return <View style={{backgroundColor: "#ECECEC"}}>
 
     { view === "sign-up" && <SignUpScreen onSignUp={handleSignUp} onGoToSignIn={handleGoToSignIn}/>}
     { view === "sign-in" && <SignInScreen onSignIn={handleSignIn} onGoToSignUp={handleGoToSignUp}/>}

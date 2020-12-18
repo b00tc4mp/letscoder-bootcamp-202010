@@ -38,7 +38,6 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
                                 placeholderTextColor={"purple"}
                                 editable={false}>
 
-
                             </TextInput>
                         </View>
 
@@ -137,6 +136,7 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         marginLeft: "10%"
     },
+
     inputSearchActivity: {
         backgroundColor: "white",
         borderTopLeftRadius: 40,
@@ -148,11 +148,9 @@ const styles = StyleSheet.create({
         width: 200,
         paddingLeft: 20,
     },
-    logoutIcon: {
-        marginTop: "20%",
-        width: 48,
-        height: 48,
-    },
+
+
+
     searchContainer: {
         backgroundColor: "white",
         width: 50,
@@ -167,6 +165,7 @@ const styles = StyleSheet.create({
 
         alignItems: "center",
     },
+
     searchIcon: {
         width: 30,
         height: 30,
@@ -174,7 +173,6 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         justifyContent: "center"
     },
-
 
     profileAvatar: {
         width: 50,
@@ -202,37 +200,6 @@ const styles = StyleSheet.create({
     },
 
 
-    petitionsButtonContainer: {
-        marginTop: "43%",
-        borderTopWidth: 4,
-        width: "100%",
-        height: 44,
-        alignContent: "center",
-        alignSelf: "center",
-        justifyContent: "center",
-
-    },
-
-
-    petitionsButton: {
-        fontSize: 25,
-        marginTop: "15%",
-        textAlign: "center",
-        height: 40,
-        borderRadius: 50,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: "15%",
-        borderRadius: 5,
-        borderWidth: 3,
-        borderColor: "purple",
-        backgroundColor: "lightgray",
-        width: 132,
-        height: 44
-    },
-
-
     artistProfileContainer: {
         justifyContent: "flex-start",
         height: Dimensions.get("window").height,
@@ -250,24 +217,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
-        // shadowColor: "gray",
-        // shadowOffset: {
-        //     width: 0,
-        //     height: 12,
-        // },
-        // shadowOpacity: 0.58,
-        // shadowRadius: 16.00,
-
-        // elevation: 24,
     },
 
     linkContainer: {
         marginTop: "30%",
         alignItems: "center",
-
-
     },
-
 
     findMeContainer: {
         flexDirection: "row"
@@ -292,20 +247,20 @@ const styles = StyleSheet.create({
 
     livesListContainer: {
         height: "70%",
-        width: Dimensions.get("window").width,
+        
+        
       },
     
       livesListHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "stretch",
-        marginTop: "15%"
       },
     
       livesList: {
         marginTop: "10%",
         width: "90%",
-        height: "80%"
+        height: "80%",
       }
 
 })

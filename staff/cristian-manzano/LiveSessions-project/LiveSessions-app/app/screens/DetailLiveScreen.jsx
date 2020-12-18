@@ -1,7 +1,8 @@
 import React from "react";
-import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions, ScrollView } from "react-native";
+import { TextInput } from "react-native-paper";
 
-export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeniePetition, onModifyLive, onGoToProfile }) {
+export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeniePetition, onModifyLive, onGoBack }) {
   const title = live.title
   const liveDate = live.liveDate
   const duration = live.duration
@@ -10,49 +11,73 @@ export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeni
   const promoterId = live.promoterId
   const artistId = live.artistId
   const liveId = live._id
+  const status = live.status
+
+  const imageURL = `http://192.168.1.131:4000/api/lives/${liveId}/images`
+
   return (
-    <View style={styles.card}>
-      <View style={styles.detailsContainer}>
-        {user.role === "ARTIST" ? <TouchableOpacity onPress={onGoToProfile}>
-          <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
-        </TouchableOpacity> :
-          <TouchableOpacity onPress={onGoToProfile}>
-            <Image style={styles.logo} source={require('../assets/promoter-role-image.png')} />
-          </TouchableOpacity>
-        }
-        <Text style={styles.titleActivity}>{title}</Text>
-        <Text style={styles.subTitleActivity}>Date: {liveDate}</Text>
-        <Text style={styles.subTitleActivity}>Duration: {duration}</Text>
-        <Text style={styles.subTitleActivity}>Payment: {payment}</Text>
-        <Text style={styles.subTitleActivity}>{description}</Text>
-        {/* <Text style={styles.subTitleActivity}>Status: {status}</Text> */}
 
-        <View style={styles.buttonsContainer}>
-          {user.role === "ARTIST" ? <View>
-            <TouchableOpacity style={styles.livesButtons}
-              onPress={() => { onAcceptPetition({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
-              <Text
-              >Accept
-            </Text>
-            </TouchableOpacity>
+    <View style={{
+      backgroundColor: "#f8f4f4",
+      paddingHorizontal: 20,
+      height: Dimensions.get("window").height,
+      width: Dimensions.get("window").width,
+    }}>
 
-            <TouchableOpacity style={styles.livesButtons}
-              onPress={() => { onDeniePetition({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
-              <Text
-              >Accept
+      <View style={{ marginTop: 70 }}>
+        <TouchableOpacity onPress={onGoBack}>
+      <Image
+        style={styles.goBackIcon}
+        source={require("../assets/Arrow_Back.png")}
+      />
+        </TouchableOpacity>
+
+        <View style={{ borderBottomWidth: "4", borderBottomColor: "purple", width: 150, alignSelf: "center" }}>
+          <Text style={styles.registerTitle}>Live Detail</Text>
+        </View>
+        <View style={styles.card}>
+          <Image style={styles.liveImage}
+            source={{ uri: `${imageURL}` }}
+          />
+          <View style={styles.detailsContainer}>
+            <Text style={{ fontSize: 20 }}>{title}</Text>
+            <Text style={styles.subTitleActivity}>Date: {liveDate}</Text>
+            <Text style={styles.subTitleActivity}>Duration: {duration}</Text>
+            <Text style={styles.subTitleActivity}>Payment: {payment}</Text>
+            <Text style={styles.subTitleActivity}>Description:</Text>
+            <Text style={styles.subTitleActivity}>{description}</Text>
+
+            <Text style={styles.subTitleActivity}>Status: {status}</Text>
+            <View style={styles.buttonsContainer}>
+              {user.role === "ARTIST" ? <View style={styles.acceptAndDenieButtons}>
+                <TouchableOpacity style={styles.livesButtons}
+                  onPress={() => { onAcceptPetition({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
+                  <Text style={styles.buttonText}
+                  >Accept
             </Text>
-            </TouchableOpacity>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.livesButtons}
+                  onPress={() => { onDeniePetition({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
+                  <Text style={styles.buttonText}
+                  >Denie
+            </Text>
+                </TouchableOpacity>
+              </View>
+
+                : <TouchableOpacity style={styles.modifyLivesButtons}
+                  onPress={() => { onModifyLive({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
+                  <Text style={styles.buttonText}
+                  >Modify</Text>
+                </TouchableOpacity>}
+            </View>
           </View>
-
-            : <TouchableOpacity style={styles.livesButtons}
-              onPress={() => { onModifyLive({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
-              <Text
-              >Modify</Text>
-            </TouchableOpacity>}
         </View>
 
       </View>
+
     </View>
+
   );
 }
 
@@ -60,36 +85,32 @@ const styles = StyleSheet.create({
   card: {
     borderRadius: 15,
     backgroundColor: "#fff",
-    marginTop: 10,
+    marginTop: 50,
     marginBottom: 10,
     overflow: "hidden",
+    width: "80%",
+    alignSelf: "center"
     // flexDirection: "row"
-
   },
 
-  titleActivity: {
-    color: "black",
-    fontSize: 18,
-    alignSelf: "center"
-    // fontFamily: Platform.OS === "ios" ? "Roboto" : "Avenir",
+  goBackIcon: {
+    width: 40,
+    height: 20,
+    marginTop: "-5%"
+  },
+
+  liveImage: {
+    width: "100%",
+    height: 200,
   },
 
   detailsContainer: {
-    padding: 20,
-  },
-  image: {
-    width: "50%",
-    height: 200,
-  },
-  title: {
-    marginBottom: 7,
-  },
-  subTitle: {
-    color: "green",
-    fontWeight: "bold",
+    padding: 20
   },
 
-  buttonsContainer: {
+
+
+  acceptAndDenieButtons: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignSelf: "stretch"
@@ -99,9 +120,44 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 1,
-    backgroundColor: "gray",
-    width: "25%",
-    height: "45%"
-  }
+    marginTop: "15%",
+    marginLeft: "5%",
+    marginRight: "5%",
+    borderRadius: 5,
+    borderWidth: 3,
+    borderColor: "black",
+    backgroundColor: "black",
+    width: 88,
+    height: 38
+  },
+
+  modifyLivesButtons: {
+    marginLeft: "20%",
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: "15%",
+    borderRadius: 5,
+    borderWidth: 3,
+    borderColor: "black",
+    backgroundColor: "black",
+    width: 132,
+    height: 44
+  },
+
+  registerTitle: {
+    // marginBottom: "10%",
+    // marginRight: "30%",
+    fontSize: 33,
+    borderBottomWidth: 5,
+    borderColor: "black",
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    // opacity: .2
+  },
+  buttonText: {
+    color: "white"
+  },
+
 });

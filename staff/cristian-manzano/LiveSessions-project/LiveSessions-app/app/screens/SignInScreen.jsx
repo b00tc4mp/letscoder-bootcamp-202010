@@ -119,10 +119,11 @@ const styles = StyleSheet.create({
         marginRight: "30%",
         fontSize: 30,
         borderBottomWidth: 5,
-        borderColor: "purple",
+        borderColor: "black",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
+        opacity: .2
     },
 
     logInTitle: {
@@ -188,11 +189,15 @@ const styles = StyleSheet.create({
         marginTop: "15%",
         borderRadius: 5,
         borderWidth: 3,
-        borderColor: "purple",
-        backgroundColor: "lightgray",
+        borderColor: "black",
+        backgroundColor: "black",
         width: 132,
-        height: 44
-    }
+        height: 44,
+    },
+
+    buttonText: {
+        color: "white"
+    },
 })
 
 export default SignInScreen;

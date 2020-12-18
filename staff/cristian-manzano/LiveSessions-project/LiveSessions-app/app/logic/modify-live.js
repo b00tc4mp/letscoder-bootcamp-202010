@@ -1,10 +1,10 @@
 import { call } from '../../utils'
 
-export default function (liveId, title, date, duration, payment, description, callback) {
+export default function (liveId, title, liveDate, duration, payment, description, callback) {
 
 
     call('POST', 'http://192.168.1.131:4000/api/lives/edit', { 'Content-type': 'application/json' }, 
-    JSON.stringify({ liveId, title, date, duration, payment, description }),
+    JSON.stringify({ liveId, title, liveDate, duration, payment, description }),
     (status, response) => {
         debugger
         if (status === 0)
