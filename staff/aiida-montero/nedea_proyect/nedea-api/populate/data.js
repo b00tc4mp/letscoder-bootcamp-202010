@@ -56,7 +56,7 @@ module.exports = [
 {
   title : 'Comer',
   description : 'Hambre',
-  image: 'triste' 
+  image: 'comer' 
 },
 
 {

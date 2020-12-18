@@ -1,6 +1,8 @@
 import './Search.scss'
+import Feedback from './Feedback'
 
-export default function ({onSearchPictograms}) {
+export default function ({onSearchPictograms, error}) {
+
       return <div className="search">
         <form onSubmit = {(event) => {
           event.preventDefault()
@@ -15,5 +17,6 @@ export default function ({onSearchPictograms}) {
             <i className="search-content__icon fa fa-search"></i>
           </button>
         </form>
+          {error && <Feedback error = {error}/>}
       </div>
 }

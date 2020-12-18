@@ -12,7 +12,7 @@ export default function (pictogramId, image, callback) {
     call('POST', `http://localhost:4000/api/pictograms/${pictogramId}/images`, {},
         formData,
         (status, response) => {
-            debugger
+            
             if (status === 0)
                 return callback(new Error('server error'))
             else if (status !== 204) {

@@ -14,7 +14,7 @@ export default function (token, pictogramId, callback) {
               (status, response) => {
                 if (status === 200) callback(null);
                 else {
-                  debugger
+                  
                   var response = JSON.parse(this.responseText);
     
                   callback(new Error(response.error));

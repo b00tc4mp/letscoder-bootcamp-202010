@@ -1,18 +1,14 @@
 .sign-in {
-  min-height: 100vh;
-  background-image:url(https://mymodernmet.com/wp/wp-content/uploads/2019/09/moon-puzzle-4.png);
-  background-size: cover;
-      
     body, html {
         height: 100%;
       }
 
       body {
-        font-family: 'Open Sans';
+        font-family: 'Mada';
         font-weight: 100;
         display: flex;
         overflow: hidden;
-        background-color: #6d4453;
+        background-color: #939393;
         min-height: 100vh;
       }
       input {
@@ -38,45 +34,50 @@
           }
         }
       }
+      .logo{
+        margin: 0 auto;
+        display: block;
+        height: 7rem;
+        outline: none;
+        border:none;
+        background-color: white;
+        margin-top: 10px;
+      }
       
       .login-form {
         background: #222;
         box-shadow: 0 0 1rem rgba(0,0,0,0.3);
         min-height: 10rem;
         margin: auto;
-        max-width: 50%;
+        max-width: 90%;
         padding: .5rem;
-        background-color: #6d4453;
-        border-radius: 50px;
-        margin-top: 117px
+        background-color: #ee4949;
+        border-radius: 15px;
+        margin-top: 30px
       }
       .login-text {
-        //background: hsl(40,30,60);
-        //border-bottom: .5rem solid white;
         color: white;
         font-size: 1.5rem;
         margin: 0 auto;
         max-width: 50%;
-        padding: .5rem;
         text-align: center;
-        //text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
+        margin-bottom:15px ;
         .fa-stack-1x {
-          color: black;
+          color: #000000;
+           
         }
       }
       
       .login-username, .login-password {
-        border-radius: 50px;
-        background: transparent;
+        border-radius: 10px;
         border: 0 solid;
         border-bottom: 1px solid rgba(white, .5);
-  
         color: white;
         display: block;
         margin: 1rem;
-        padding: .5rem;
         transition: 250ms background ease-in;
-        width: calc(100% - 3rem);
+        width: calc(100% - 2rem);
+        height:30px ;
         &:focus {
           background: white;
           color: black;
@@ -84,13 +85,19 @@
         }
       }
       .login-submit {
-        border: 1px solid white;
-        background: transparent;
-        color: white;
+        text-decoration: none;
+        margin: 0 auto;
+        color: #fdfdfd;
+        font-size: 18px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        border: 7px solid black ;
+        width: 16rem;
+        height: 2.5rem;
+        background-color: black;
+        justify-content: center;
         display: block;
-        margin: 1rem auto;
-        min-width: 1px;
-        padding: .25rem;
+        margin-top: 50px;
         
         &:hover, &:focus {
           background: white;
@@ -101,7 +108,7 @@
       
 }
 body {
-    font-family: 'Open Sans';
+    font-family: 'Mada';
     font-weight: 100;
     display: flex;
     background-color: rgba(251, 251, 255, 0.637);
@@ -113,7 +120,12 @@ body {
 .input{
     border-radius: 5px;
 }
+
 h2{
-    text-align: center;
-    margin-top:20p ;
+  color: black;
+}
+
+@media (max-width: 600px){
+  
+
 }

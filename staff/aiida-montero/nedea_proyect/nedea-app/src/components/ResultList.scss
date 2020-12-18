@@ -1,6 +1,5 @@
 .card {
   width: 280px;
-  height: 28vw;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -8,6 +7,7 @@
   transition: 0.25s;
   border: 1px solid #d8d8d8;
   font-size: 18px;
+  margin-bottom: 15px;
     & div {
       height: 260px;
       width: 100%;
@@ -22,6 +22,7 @@
       object-fit: cover;
       object-position: 1 0;
       padding: 0;
+      border: 3px solid #9E9E9E;
     }
     &-body {
       flex: 1;
@@ -31,7 +32,7 @@
       &__title {
         margin-bottom: 10px;
         font-weight: bold;
-        color: #6d4453;
+        color: black;
       }
       &__description {
         display: -webkit-box;
@@ -47,4 +48,11 @@
   grid-gap: 25px;
   justify-content: center;
 }
+
+
+@media (max-width: 600px) {
+  .section_card{
+    grid-template-columns:none;
   
+  }
+}

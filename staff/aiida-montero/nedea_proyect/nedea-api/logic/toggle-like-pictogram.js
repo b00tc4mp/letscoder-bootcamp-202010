@@ -9,7 +9,7 @@ module.exports = (userId, likeId) =>   {
     return User
         .findById(userId)
         .then(user => {
-            debugger
+            
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
             const { likes = [] } = user

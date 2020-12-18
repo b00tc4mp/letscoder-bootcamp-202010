@@ -3,6 +3,7 @@ const { AuthError } = require('../errors')
 const { models: { User } } = require('nedea-data')
 const bcryptjs = require('bcryptjs')
 
+
 module.exports = function (email, password) {
     validateEmail(email)
     validatePassword(password)

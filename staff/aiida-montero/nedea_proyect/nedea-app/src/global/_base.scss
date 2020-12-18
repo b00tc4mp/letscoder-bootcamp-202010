@@ -8,19 +8,18 @@
 
 html{
   font-size: 15px;
-  background-color: #6d4453ba;
+  background-color: #939393ba;
+  font-family: 'Mada';
 }
  body {
   box-sizing: border-box;
   min-height: 100vh;
   font-size: 1.6rem;
-  font-family: $text_font;
+  font-family: 'Mada';
   font-weight: 100;
   color: #5b5b5b;
-  border-left: 4px solid #6d4453;
-  border-right: 4px solid #6d4453;
-  border-top: 4px solid #6d4453;
-  border-bottom: 4px solid;
+  border-bottom: 4px solid #939393;
+  border-top: 4px solid #939393;
   display: flex;
   flex-direction: column;
   min-width: 70vw; 
@@ -37,7 +36,7 @@ html{
   flex-direction: column;
   flex: 1;
   justify-content: stretch;
-  background-color: #ffffff99;
+  background-color: white
 
 } 
 @media (min-width: 600px) {

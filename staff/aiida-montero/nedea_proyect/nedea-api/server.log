@@ -3594,3 +3594,211 @@ error 2020-12-15T23:06:31.125Z - Error: ENOENT: no such file or directory, unlin
 error 2020-12-15T23:06:49.750Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
 error 2020-12-15T23:06:51.890Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd94189c957d93804d85b57.jpg'
 info 2020-12-15T23:07:50.180Z - stopping server
+info 2020-12-15T23:36:06.093Z - starting server
+info 2020-12-15T23:36:06.310Z - server running on port 4000
+error 2020-12-15T23:36:25.391Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:37:20.221Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+info 2020-12-15T23:43:17.926Z - stopping server
+info 2020-12-15T23:43:24.000Z - starting server
+info 2020-12-15T23:43:24.157Z - server running on port 4000
+error 2020-12-15T23:44:08.253Z - NotFoundError: user with id 5fd75ddce3c5611e205335f7 not found
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T23:44:08.271Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:44:27.059Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:45:10.304Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:45:22.984Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:46:55.839Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-15T23:46:55.840Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+info 2020-12-16T08:42:12.020Z - starting server
+info 2020-12-16T08:42:12.193Z - server running on port 4000
+error 2020-12-16T08:46:46.699Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T08:46:46.700Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+info 2020-12-16T09:09:14.688Z - stopping server
+info 2020-12-16T09:09:18.049Z - starting server
+error 2020-12-16T09:09:48.080Z - MongooseServerSelectionError: connect ECONNREFUSED 192.168.1.136:27017
+    at NativeConnection.Connection.openUri (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-16T09:09:48.082Z - stopping server
+info 2020-12-16T09:10:42.486Z - starting server
+info 2020-12-16T09:10:42.639Z - server running on port 4000
+info 2020-12-16T09:10:53.794Z - stopping server
+info 2020-12-16T09:10:56.562Z - starting server
+info 2020-12-16T09:10:56.718Z - server running on port 4000
+error 2020-12-16T09:16:36.369Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd9d068b4257a0e28e55ee0.jpg'
+error 2020-12-16T09:21:37.215Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd9d102b4257a0e28e55ee1.jpg'
+info 2020-12-16T09:22:14.961Z - stopping server
+info 2020-12-16T09:22:19.891Z - starting server
+info 2020-12-16T09:22:20.095Z - server running on port 4000
+error 2020-12-16T09:22:42.420Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd948796667fa06c82eb528.jpg'
+info 2020-12-16T09:49:34.698Z - stopping server
+info 2020-12-16T09:49:39.130Z - starting server
+info 2020-12-16T09:49:39.302Z - server running on port 4000
+error 2020-12-16T09:50:03.336Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T09:53:30.318Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:01:13.265Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:01:18.208Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:01:26.137Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:01:31.888Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:02:23.082Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:02:28.544Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:02:36.707Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:02:47.664Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd94a92dc5f8c2dbca39e74.jpg'
+error 2020-12-16T10:36:35.945Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:50:21.249Z - Error: ENOENT: no such file or directory, open 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\default.jpg'
+error 2020-12-16T10:58:43.866Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd9e3329052e617042cf06d.jpg'
+error 2020-12-16T10:59:07.978Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd9e3329052e617042cf06d.jpg'
+error 2020-12-16T10:59:08.529Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd9e3329052e617042cf06d.jpg'
+error 2020-12-16T10:59:08.684Z - Error: ENOENT: no such file or directory, unlink 'C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\data\pictograms\5fd9e3329052e617042cf06d.jpg'
+info 2020-12-16T11:11:44.655Z - stopping server
+info 2020-12-16T12:21:15.378Z - starting server
+info 2020-12-16T12:21:15.661Z - server running on port 4000
+error 2020-12-16T12:21:50.603Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T12:22:11.247Z - MongoError: text index required for $text query (no such collection 'nedea-app-test.pictograms')
+    at MessageStream.messageHandler (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-12-16T12:22:23.990Z - stopping server
+info 2020-12-16T12:22:43.748Z - starting server
+info 2020-12-16T12:22:44.061Z - server running on port 4000
+error 2020-12-16T12:22:47.616Z - MongoError: text index required for $text query
+    at MessageStream.messageHandler (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-12-16T12:24:10.314Z - stopping server
+info 2020-12-16T12:50:07.202Z - starting server
+info 2020-12-16T12:50:07.394Z - server running on port 4000
+error 2020-12-16T12:50:11.653Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T12:50:13.153Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T13:08:15.722Z - MongoError: text index required for $text query
+    at MessageStream.messageHandler (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-data\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-12-16T13:08:31.937Z - stopping server
+info 2020-12-16T13:09:06.229Z - starting server
+info 2020-12-16T13:09:06.425Z - server running on port 4000
+info 2020-12-16T13:10:00.618Z - stopping server
+info 2020-12-16T13:10:06.600Z - starting server
+info 2020-12-16T13:10:06.794Z - server running on port 4000
+error 2020-12-16T13:10:25.686Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T13:23:13.317Z - stopping server
+info 2020-12-16T13:29:37.124Z - starting server
+info 2020-12-16T13:29:37.378Z - server running on port 4000
+error 2020-12-16T13:29:41.337Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T15:11:50.322Z - stopping server
+info 2020-12-16T16:20:42.210Z - starting server
+info 2020-12-16T16:20:42.403Z - server running on port 4000
+info 2020-12-16T17:24:11.832Z - stopping server
+info 2020-12-16T17:24:50.709Z - starting server
+info 2020-12-16T17:24:50.879Z - server running on port 4000
+error 2020-12-16T17:59:35.330Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T18:25:51.634Z - stopping server
+info 2020-12-16T20:47:56.979Z - starting server
+info 2020-12-16T20:47:57.201Z - server running on port 4000
+info 2020-12-16T20:48:09.050Z - stopping server
+info 2020-12-16T20:48:19.277Z - starting server
+info 2020-12-16T20:48:19.478Z - server running on port 4000
+info 2020-12-16T20:58:11.629Z - stopping server
+info 2020-12-17T08:52:22.970Z - starting server
+info 2020-12-17T08:52:23.145Z - server running on port 4000
+error 2020-12-17T08:59:32.040Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T08:59:33.839Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T09:43:41.508Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T09:43:51.589Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T09:47:29.316Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T09:47:38.426Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T09:57:53.413Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:18:39
+info 2020-12-17T14:05:28.947Z - stopping server
+info 2020-12-17T14:06:04.091Z - starting server
+info 2020-12-17T14:06:04.396Z - server running on port 4000
+info 2020-12-17T15:45:09.420Z - stopping server
+info 2020-12-17T17:08:23.675Z - starting server
+info 2020-12-17T17:08:23.895Z - server running on port 4000
+error 2020-12-17T17:08:36.296Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:13:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T17:08:38.072Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:13:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T17:08:39.761Z - stopping server
+info 2020-12-17T17:08:56.942Z - starting server
+info 2020-12-17T17:08:57.098Z - server running on port 4000
+error 2020-12-17T17:09:16.615Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:13:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T17:09:18.076Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:13:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T17:17:39.173Z - stopping server
+info 2020-12-17T17:17:42.113Z - starting server
+info 2020-12-17T17:17:42.351Z - server running on port 4000
+info 2020-12-17T17:49:05.006Z - stopping server
+info 2020-12-17T17:49:08.420Z - starting server
+info 2020-12-17T17:49:08.636Z - server running on port 4000
+info 2020-12-17T17:58:35.117Z - stopping server
+info 2020-12-17T17:58:37.539Z - starting server
+info 2020-12-17T17:58:37.716Z - server running on port 4000
+info 2020-12-18T05:28:39.166Z - stopping server

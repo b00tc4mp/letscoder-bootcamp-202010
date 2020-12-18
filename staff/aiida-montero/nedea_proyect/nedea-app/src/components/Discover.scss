@@ -16,6 +16,22 @@
           height: 100%;
 
             }     
+ .logo_inicial{
+   border: none;
+   outline: none;
+   background-color: white;
+   cursor: pointer;
+
+ }
 
   }
  
+  @media (max-width: 600px) {
+    .discover{
+       height: auto;
+       min-height: auto;
+       &__image{
+       height: auto;
+       }
+    }
+  }

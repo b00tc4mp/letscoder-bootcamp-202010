@@ -1,15 +1,16 @@
 
 .header_home {
   position: relative;
-  flex: none;
-  display: flex;
-  height: 80px;
-  align-items: center;
-  justify-content: space-between;
-  background:#6d4453;
- 
-
-  direction: rtl;
+    flex: none;
+    display: flex;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    background: #00000000;
+    direction: rtl;
+  
+    border-bottom: 4px solid #9E9E9E;
+    background-color: white;
 
 
   &__logouno {
@@ -39,8 +40,8 @@
   .exit{
     margin-right: 20px;
     border: none;
-    background-color: #6d4453;
-    color: white;
+   background-color: #ffffff;
+    color: #ee4949;
     outline: none;
   }
     
@@ -48,8 +49,8 @@
 
   .avatar__initials{
     margin: 0px;
-    color: white;
-    background-color:#6d4453;
+    color: black;
+    background-color: #ffffff;
 
     border: none;
     outline: none;
@@ -58,14 +59,14 @@
 
   .logo_puzzle {
     color: white;
-    background-color:#6d4453;
+    background-color: #ffffff;
 
     border: none;
     outline: none;
     margin-left: 10px;
     cursor: pointer;
   .logo_button{
-    max-width: 10vh;
+    max-width: 6vh;
   }
     
 

@@ -3,21 +3,17 @@ import {useState} from 'react'
 import {deletePictogram, toggleLikePictogram} from '../logic'
 
 const API_URL = process.env.REACT_APP_API_URL
-export default function ({likedPictograms = [], data:{id, title, description}, deleteOption}) {
+export default function ({likedPictograms = [], data:{id, title, description}, deleteOption, onDeletePictogram}) {
   const [isActive, setActive] = useState(likedPictograms.includes(id)? true : false);
   const token = sessionStorage.token
 
   const handleLike = () => {
     setActive(!isActive);
     toggleLikePictogram (token, id , error => console.log(error))
+    /* window.location.reload(true) */
   };
 
-  const handleDelete = () => {
-    console.log(id)
-    console.log(token)
-    deletePictogram (id, token, error => console.log(error))
   
-  }
     return <article className="card">
           <div className="card-div">
             <img
@@ -30,7 +26,7 @@ export default function ({likedPictograms = [], data:{id, title, description}, d
           <div className="card-body">
 
             {token && <button onClick = {handleLike} className = {isActive ? 'heart active': 'heart'} ></button>}
-            {deleteOption && <button onClick  = {(event)  => {event.preventDefault() ; handleDelete()}}>BORRAR</button>}
+            {deleteOption && <button className=  "deletebutton" onClick  = {(event)  => {event.preventDefault() ; onDeletePictogram(id)}}><img className=  "delete "  src = "https://icons555.com/images/icons-red/image_icon_trash_2_pic_512x512.png"/></button>}
             <h4 className="card-body__title">
               {title} 
             </h4>

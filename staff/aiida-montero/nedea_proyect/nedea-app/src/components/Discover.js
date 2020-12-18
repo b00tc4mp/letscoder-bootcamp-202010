@@ -1,10 +1,10 @@
 import './Discover.scss'
 
-export default function () {
+export default function ({onGoToInitial}) {
 
     return <section className >
    <div class="discover"> 
-       <img className=" discover__image" src="../imagenes/fondo_madera.jpg"></img>
+       <button className = "logo_inicial" onClick = {onGoToInitial}><img className=" discover__image" src="../imagenes/logocentralnedea.png"></img></button>
   </div>
 </section>
 }

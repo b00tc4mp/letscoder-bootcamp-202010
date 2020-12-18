@@ -1,7 +1,4 @@
 .sign-up {
-  min-height: 100vh;
-  background-image:url(https://mymodernmet.com/wp/wp-content/uploads/2019/09/moon-puzzle-4.png);
-  background-size: cover;
       
       input {
         ::-webkit-input-placeholder {
@@ -26,17 +23,25 @@
           }
         }
       }
-      
+      .logo{
+        margin: 0 auto;
+        display: block;
+        height: 7rem;
+        outline: none;
+        border:none;
+        background-color: white;
+        margin-top: 10px;
+      }
       .register_form {
         background: #222;
         box-shadow: 0 0 1rem rgba(0,0,0,0.3);
         min-height: 10rem;
         margin: auto;
-        max-width: 50%;
+        max-width: 90%;
         padding: .5rem;
-        background-color: #6d4453; 
-        border-radius: 50px;
-        margin-top: 117px
+        background-color: #ee4949;
+        border-radius: 15px;
+        margin-top: 30px
       }
       .register-text {
         //background: hsl(40,30,60);
@@ -54,15 +59,15 @@
       }
       
       .register-username, .register-password ,.register-fullname{
-        border-radius: 50px;
+        border-radius: 10px;
         border: 0 solid;
         border-bottom: 1px solid rgba(white, .5);
         color: white;
         display: block;
         margin: 1rem;
-        padding: .5rem;
         transition: 250ms background ease-in;
-        width: calc(100% - 3rem);
+        width: calc(100% - 2rem);
+        height:30px ;
         &:focus {
           background: white;
           color: black;
@@ -70,13 +75,19 @@
         }
       }
       .register-submit {
-        border: 1px solid white;
-        background: transparent;
-        color: white;
-        display: block;
-        margin: 1rem auto;
-        min-width: 1px;
-        padding: .25rem;
+        text-decoration: none;
+    margin: 0 auto;
+    color: #fdfdfd;
+    font-size: 18px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border: 7px solid black ;
+    width: 16rem;
+    height: 2.5rem;
+    background-color: black;
+    justify-content: center;
+    display: block;
+    margin-top: 50px;
         
         &:hover, &:focus {
           background: white;
@@ -87,14 +98,11 @@
       
     }
 body {
-    font-family: 'Open Sans';
+    font-family: 'Mada';
     font-weight: 100;
     display: flex;
     background-color: rgba(251, 251, 255, 0.637);
   }
-.register{
-    margin-bottom: 150px;
-}
 
 .input{
     border-radius: 5px;
@@ -102,11 +110,18 @@ body {
 
 h2{
     text-align: center;
-    margin-top: 20px;
 }
 
 .imagen_camara{
   max-height: 25vw;
   margin-left: 17%;
   margin-right: 17%;
+}
+
+@media (max-width: 600px) {
+  h2{
+    font-size: 18px;
+   
+  }
+
 }

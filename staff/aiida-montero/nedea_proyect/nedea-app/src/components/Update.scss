@@ -4,15 +4,15 @@
           text-align: center;
           color: black;
           font-size: 30px;
-          font-family: Special Elite ;
+          font-family: 'Mada' ;
           margin-top: 10px;
       }
       body {
-        font-family: 'Open Sans';
+        font-family: 'Mada';
         font-weight: 100;
         display: flex;
         overflow: hidden;
-        background-color: #6d4453;
+        background-color: #939393;
       }
       input {
         ::-webkit-input-placeholder {
@@ -44,14 +44,13 @@
         box-shadow: 0 0 1rem rgba(0,0,0,0.3);
         min-height: 10rem;
         margin: auto;
-        max-width: 50%;
+        max-width: 80%;
         padding: .5rem;
-        background-color: #6d4453;
+        background-color: #939393;
         border-radius: 50px;
         margin-top: 15px;
         margin-bottom:25px;
         #image{
-          margin: 0 auto;
           border: 1px solid white;
           border-radius: 15px;
           color: white;
@@ -125,4 +124,67 @@
   text-align: center;
   display: block;
   margin-bottom: 15px;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+#image{
+margin: 0;
+}
+
+.form_favorite{
+    margin: 0 auto;
+    width: 16rem;
+    height: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    padding: 6px;
+    background-color: #ee4949;
+    color: white;
+    border-radius: 10px;
+    border: 7px solid #ee4949;
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+.form_update{
+  margin: 0 auto;
+  width: 16rem;
+  height: 2.5rem;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  padding: 6px;
+  background-color: #040404;
+  color: white;
+  border-radius: 10px;
+  border: 7px solid #090909;
+  margin-bottom: 15px;
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.form{
+  margin: 0 auto;
+  width: 16rem;
+  height: 2.5rem;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  padding: 6px;
+  background-color: #ee4949;
+  color: white;
+  border-radius: 10px;
+  border: 7px solid #ee4949;
+  margin-bottom: 15px;
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
 }

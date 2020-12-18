@@ -4,3 +4,14 @@
         justify-content: center;
         grid-gap: 10px;
     }
+
+    @media (max-width: 600px) {
+        .my_pictograms{
+            display: flex; 
+            flex-direction: column;
+
+        }
+
+  
+  
+    }

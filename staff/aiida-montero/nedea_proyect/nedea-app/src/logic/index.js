@@ -9,6 +9,8 @@ import toggleLikePictogram from './toggle-like-pictogram'
 import deletePictogram from './delete-pictogram'
 import modifyPictogram from './modify-pictogram'
 import context from './context'
+import searchPictogram from './search-pictogram'
+
 
 export{
     registerUser,
@@ -21,5 +23,6 @@ export{
     toggleLikePictogram,
     deletePictogram,
     modifyPictogram, 
-    context
+    context,
+    searchPictogram
 }
