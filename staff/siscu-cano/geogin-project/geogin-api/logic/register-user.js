@@ -33,7 +33,6 @@ module.exports = function (fullname, email, password) {
             .findOne({ email })
             .then(user => {
                 if (user) throw new ConflictError(`user with e-mail ${email} already registered`)
-
                 return bcrypt.hash(password, 10)
             })
             .then(hash => User.create({ fullname, email, password: hash }))

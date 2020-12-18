@@ -5,11 +5,11 @@ const { models: { Game, Quest } } = require('geogin-data')
 /**
  * Retrieve user
  * 
- * @param {string} gameId user id
+ * @param {string} gameId game id
  * 
- * @throws {NotFoundError} if user id dos not exist
+ * @throws {NotFoundError} user doesn't exist
  * 
- * @return {object} user object
+ * @return {object} user data
  */
 
 module.exports = function (gameId) {

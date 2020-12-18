@@ -21,8 +21,8 @@ const router = new Router()
 // Users
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
-router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 router.patch('/api/users', jsonBodyParser, withErrorHandling(handleUpdateUser))
+router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 
 // Game
 router.post('/api/quest', jsonBodyParser, withErrorHandling(handleSaveQuest))

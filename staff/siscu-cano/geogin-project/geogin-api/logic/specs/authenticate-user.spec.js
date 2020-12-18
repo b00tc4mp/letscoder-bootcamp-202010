@@ -1,115 +1,148 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('geogin-utils/randoms')
+
+const {
+  randomStringWithPrefix,
+  randomWithPrefixAndSuffix,
+  randomNonString,
+  randomEmptyOrBlankString
+} = require('geogin-utils/randoms')
+
 const authenticateUser = require('../authenticate-user')
-const { mongoose, models: { User } } = require('geogin-data')
+
+const {
+  mongoose,
+  models: { User }
+} = require('geogin-data')
+
 const bcrypt = require('bcryptjs')
 
-const { env: { MONGODB_URL } } = process
+const {
+  env: { MONGODB_URL }
+} = process
+
+/**
+ * Checks user credentials against the storage
+ * 
+ * @param {string} email user's e-mail
+ * @param {string} password user's password
+ * 
+ * @returns {Promise<string>} user's id
+ * 
+ * @throws {AuthError} wrong credentials or user disabled
+ */
 
 describe('authenticateUser()', () => {
-    before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
+  before(() =>
+    mongoose.connect(MONGODB_URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useCreateIndex: true
+    })
+  )
 
-    describe('when user already exists', () => {
-        let userId, fullname, email, password
+  describe('when user already exists', () => {
+    let userId, fullname, email, password
 
-        beforeEach(async () => {
-            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
-            email = randomWithPrefixAndSuffix('email', '@mail.com')
-            password = randomStringWithPrefix('password')
+    beforeEach(async () => {
+      fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix(
+        'surname'
+      )}`
+      email = randomWithPrefixAndSuffix('email', '@mail.com')
+      password = randomStringWithPrefix('password')
 
-            const hash = await bcrypt.hash(password, 10)
+      const hash = await bcrypt.hash(password, 10)
+      const user = { fullname, email, password: hash }
+      const _user = await User.create(user)
 
-            const user = { fullname, email, password: hash }
-
-            const _user = await User.create(user)
-
-            userId = _user.id
-        })
-
-        it('should succeed on correct credentials', async () => {
-            const _userId = await authenticateUser(email, password)
-
-            expect(_userId).to.equal(userId)
-        })
-
-        describe('when wrong credentials', () => {
-            it('should fail on wrong e-mail', async () => {
-                try {
-                    await authenticateUser(`wrong${email}`, password)
-                } catch (error) {
-                    expect(error).to.be.instanceOf(Error)
-
-                    expect(error.message).to.equal('wrong credentials')
-                }
-            })
-
-            it('should fail on wrong password', async () => {
-                try {
-                    await authenticateUser(email, `wrong${password}`)
-                } catch (error) {
-                    expect(error).to.be.instanceOf(Error)
-
-                    expect(error.message).to.equal('wrong credentials')
-                }
-            })
-        })
-
-        afterEach(() => User.deleteMany())
+      userId = _user.id
     })
 
-    describe('when user does not exist', () => {
+    it('should succeed on correct credentials', async () => {
+      const _userId = await authenticateUser(email, password)
+
+      expect(_userId).to.equal(userId)
+    })
+
+    describe('when wrong credentials', () => {
+      it('should fail on wrong e-mail', async () => {
+        try {
+          await authenticateUser(`wrong${email}`, password)
+        } catch (error) {
+          expect(error).to.be.instanceOf(Error)
+          expect(error.message).to.equal('wrong credentials')
+        }
+      })
+
+      it('should fail on wrong password', async () => {
+        try {
+          await authenticateUser(email, `wrong${password}`)
+        } catch (error) {
+          expect(error).to.be.instanceOf(Error)
+          expect(error.message).to.equal('wrong credentials')
+        }
+      })
+    })
+
+    afterEach(() => User.deleteMany())
+  })
+
+  describe('when user does not exist', () => {
+    let email, password
+
+    beforeEach(() => {
+      email = randomWithPrefixAndSuffix('email', '@mail.com')
+      password = randomStringWithPrefix('password')
+    })
+
+    it('should fail on valid credentials', async () => {
+      try {
+        await authenticateUser(email, password)
+      } catch (error) {
+        expect(error).to.be.instanceOf(Error)
+
+        expect(error.message).to.equal('wrong credentials')
+      }
+    })
+  })
+
+  describe('when any parameter is wrong', () => {
+    describe('when e-mail is wrong', () => {
+      describe('when e-mails is not a string', () => {
         let email, password
 
         beforeEach(() => {
-            email = randomWithPrefixAndSuffix('email', '@mail.com')
-            password = randomStringWithPrefix('password')
+          email = randomNonString()
+          password = randomStringWithPrefix('password')
         })
 
-        it('should fail on valid credentials', async () => {
-            try {
-                await authenticateUser(email, password)
-            } catch (error) {
-                expect(error).to.be.instanceOf(Error)
-
-                expect(error.message).to.equal('wrong credentials')
-            }
+        it('should fail on empty or blank email', () => {
+          expect(() => authenticateUser(email, password, () => {})).to.throw(
+            TypeError,
+            `${email} is not an e-mail`
+          )
         })
+      })
+
+      describe('when e-mails is empty or blank', () => {
+        let email, password
+
+        beforeEach(() => {
+          email = randomEmptyOrBlankString()
+          password = randomStringWithPrefix('password')
+        })
+
+        it('should fail on non-string email', () => {
+          expect(() => authenticateUser(email, password, () => {})).to.throw(
+            Error,
+            'e-mail is empty or blank'
+          )
+        })
+      })
     })
 
-    describe('when any parameter is wrong', () => {
-        describe('when e-mail is wrong', () => {
-            describe('when e-mails is not a string', () => {
-                let email, password
+  })
 
-                beforeEach(() => {
-                    email = randomNonString()
-                    password = randomStringWithPrefix('password')
-                })
-
-                it('should fail on empty or blank email', () => {
-                    expect(() => authenticateUser(email, password, () => { })).to.throw(TypeError, `${email} is not an e-mail`)
-                })
-            })
-
-            describe('when e-mails is empty or blank', () => {
-                let email, password
-
-                beforeEach(() => {
-                    email = randomEmptyOrBlankString()
-                    password = randomStringWithPrefix('password')
-                })
-
-                it('should fail on non-string email', () => {
-                    expect(() => authenticateUser(email, password, () => { })).to.throw(Error, 'e-mail is empty or blank')
-                })
-            })
-        })
-
-        // TODO when password is wrong and its subcases
-        // TODO when callback is wrong
-    })
-
-    after(mongoose.disconnect)
+  after(mongoose.disconnect)
 })
