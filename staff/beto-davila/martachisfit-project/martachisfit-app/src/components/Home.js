@@ -76,6 +76,8 @@ export default function Home() {
                 if (error) return feedbackError('No se pudo recuperar el usuario. Error en el servidor :(')
 
                 setUser(user)
+                const { fullname } = user
+                setName(fullname)
             })
         } catch (error) {
             alert(error.message)
@@ -390,7 +392,7 @@ export default function Home() {
         try {
             deleteUser(token, error => {
                 if (error) return feedbackError('No se pudo borrar el usuario. Error en el servidor.')
-    
+
                 delete sessionStorage.token
                 window.location.reload(false)
             })
@@ -475,7 +477,7 @@ export default function Home() {
                     onSaveWeight={handleSaveWeight}
                     onSaved={handleModifiedWeightUser}
                     onDelete={handleDeleteUser}
-                    // refreshWeight={refreshWeight}
+                // refreshWeight={refreshWeight}
                 />}
             {view === 'chosen-article' && <ChosenArticle source={chosenArticle} error={error} message={message} onReadArticle={handleReadArticle} />}
             {view === 'logout' && <Logout onRefresh={handleGoToLanding} name={name} />}

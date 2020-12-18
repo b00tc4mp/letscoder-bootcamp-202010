@@ -8,7 +8,7 @@ export default function Landing() {
         <h1 className="landing__title">
           MartachisFIT
         </h1>
-        <h4 className="landing_subtitle">Tu mejor versión, ¡aquí y ahora!</h4>
+        <h4 className="landing__subtitle">Tu mejor versión, ¡aquí y ahora!</h4>
         
         <div className="landing__buttons">
           <Link to="/user-info" className="landing__reg-btn btn">Registrarse</Link>

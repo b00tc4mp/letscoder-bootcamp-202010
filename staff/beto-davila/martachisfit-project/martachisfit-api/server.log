@@ -1485,3 +1485,52 @@ error 2020-12-17T20:01:40.717Z - AuthError: wrong credentials
     at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-17T20:17:07.128Z - stopping server
+info 2020-12-18T04:12:39.807Z - starting server
+info 2020-12-18T04:12:39.964Z - server running on port 4000
+info 2020-12-18T04:54:55.174Z - stopping server
+info 2020-12-18T04:55:03.250Z - starting server
+info 2020-12-18T04:55:03.403Z - server running on port 4000
+info 2020-12-18T06:48:59.109Z - stopping server
+info 2020-12-18T07:08:03.383Z - starting server
+error 2020-12-18T07:08:33.405Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-18T07:08:33.409Z - stopping server
+info 2020-12-18T07:08:44.164Z - starting server
+error 2020-12-18T07:09:14.180Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-18T07:09:14.185Z - stopping server
+info 2020-12-18T07:20:42.495Z - starting server
+info 2020-12-18T07:20:42.636Z - server running on port 4000
+error 2020-12-18T07:32:19.515Z - ConflictError: user with e-mail dagoman19@gmail.com already registered
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js:27:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-18T08:22:12.600Z - stopping server
+info 2020-12-18T08:27:02.819Z - starting server
+info 2020-12-18T08:27:02.987Z - server running on port 4000
+info 2020-12-18T12:18:21.149Z - stopping server

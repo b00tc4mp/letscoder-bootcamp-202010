@@ -18,6 +18,7 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
 
     const timeElapsed = Date.now();
     const today = new Date(timeElapsed);
+    const newToday = today.toLocaleDateString() 
 
     useEffect(() => {
         try {
@@ -90,7 +91,7 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
                     <div className="user-profile__weights-container">
                         <img src={bascula} className="user-profile__scale-img" alt="bascula"></img>
                         {weightHistory.length > 1 ? <p className="user-profile__before">Previo: {weightHistory[weightHistory.length - 2]} Kg ({today.toLocaleDateString()})</p> : <p className="user-profile__before">Peso anterior: Sin registro</p>}
-                        {weightHistory.length ? <p className="user-profile__current"><span className="bold">Actual: {weightHistory[weightHistory.length - 1]} Kg </span>({today.toLocaleDateString()})</p> : <p className="user-profile__current">Peso actual: Sin registro</p>}
+                        {weightHistory.length ? <p className="user-profile__current"><span className="bold">Actual: {weightHistory[weightHistory.length - 1]} Kg </span>({newToday})</p> : <p className="user-profile__current">Peso actual: Sin registro</p>}
                         {/* <Chart /> */}
                         <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
                             <input type="text" name="weight" placeholder="Tu peso actual"></input>

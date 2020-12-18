@@ -30,23 +30,23 @@ We will use this number to offer you some diet plans that you could even change,
 
 ## Technical Description
 
-### Models
-
-![Alt Models](./images/models.jpg)
-
 ### Blocks
 
-![Alt Blocks](./images/ "Blocks")
+![Alt Blocks](./images/blocks.jpg "Blocks")
 
 ### Packages
 
 #### React components
 
-![Alt React comonents](./images/ "React components")
+![Alt React comonents](./images/components.jpg "React components")
 
 #### Logic functions
 
-![Alt Logic functions](./images/ "Logic functions")
+![Alt Logic functions](./images/logic.jpg "Logic functions")
+
+### Models
+
+![Alt Models](./images/models.jpg)
 
 ### Testing (QA)
 
@@ -58,24 +58,22 @@ We will use this number to offer you some diet plans that you could even change,
 
 ![Alt MERN](https://i.morioh.com/200630/7055e259.jpg "MERN")
 
-#### Style
-![Alt Sass](https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg "Sass")
-
 ### TODO
 
 #### Code-related:
-- App Testing
+- App Testing and reach 100% in server-side.
 - Watch out order, "cleanness" and semantic
 - Implement react-router-dom on Home compo
-- Implement async-await
+- Start implementing async-await
 
 #### App-related:
 - Experience level (in the gym) input for the user
 - Improve the visual aspect of the meals layout (diet component)
 - Articles index creation (visual)
 - Populate the food db with more items
-- Watch out the images quality
-- Improve the overall style
+- Watch out the images quality (some of them will be changed for self-made videos)
 - Comments component for recipes and articles
+- Historic weight chart on the profile with Chart.js (model below):
+![Alt Chart](./images/chartjs.png "chart")
 
 

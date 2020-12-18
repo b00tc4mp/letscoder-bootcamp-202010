@@ -5,7 +5,7 @@ const { models: { User, Diet } } = require('martachisfit-data')
 /**
  * Retrieves a diet by its id
  * 
- * @param {string} dietId 
+ * @param {string} userId 
  * 
  * @returns {Promise}
  */
