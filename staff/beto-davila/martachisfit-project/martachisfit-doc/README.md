@@ -44,7 +44,7 @@ We will use this number to offer you some diet plans that you could even change,
 
 ![Alt Logic functions](./images/logic.jpg "Logic functions")
 
-### Models
+### Data Model
 
 ![Alt Models](./images/models.jpg)
 
