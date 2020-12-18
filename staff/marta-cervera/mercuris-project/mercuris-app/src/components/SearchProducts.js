@@ -106,7 +106,7 @@ export default function ({ doGoToAccess }) {
         <img className="search__logo" src={logo} />
         </div>
         <div className="searching">
-                {!results && !result && <form onSubmit={handleFindProducts} className="searching__form">                
+                {!result && <form onSubmit={handleFindProducts} className="searching__form">                
                 {!token && <input className="searching__form__input"type="text" name="queryCompany" placeholder="Info Company" />}
                 <input className="searching__form__input"type="text" name="queryProduct" placeholder="Info Product" />
                 <input className="searching__form__input"type="number" name="price" placeholder="Introduce price" />
