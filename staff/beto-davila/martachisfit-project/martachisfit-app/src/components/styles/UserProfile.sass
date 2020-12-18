@@ -284,10 +284,30 @@
 
     .user-profile
 
+        &__weight-form > input
+            border: 1px solid #0b7f94
+
+        &__name-weight-desktop
+            display: flex
+            justify-content: space-around
+            padding: 1rem 0
+
+        &__logout-container
+            display: flex
+            justify-content: flex-end
+
+        &__delete, &__weight-btn
+            border: none
+            background-color: transparent
+            outline: none
+            cursor: pointer
+
         &__name-pic
+            display: flex
+            flex-direction: column
 
         &__pic
-            max-width: 150px
+            max-width: 400px
             margin: .3rem
 
         &__progression-title
@@ -299,8 +319,6 @@
             cursor: pointer
             border-radius: .3rem
             border: none
-            background-color: #eef5f5
-            font-size: .7rem
             margin-left: .5rem
 
         &__progression-btn:hover
@@ -336,24 +354,23 @@
 
             &--list
                 display: flex
-                justify-content: space-evenly
-                width: 200px
+                justify-content: space-between
+                width: 250px
                 margin: auto
 
             &--link
                 text-align: center
                 align-self: center
-                font-size: 1.1rem
+                font-size: 1rem
 
         &__container
             display: grid
             grid-template-columns: 1fr 1fr
-            margin-top: 2.5rem
             justify-items: center
 
         &__workout-container
             background-color: #eef5f5
-            width: 350px
+            width: 400px
             border-radius: 1rem
             margin: 1rem 0
             padding: 0 0 .3rem 0
@@ -361,7 +378,7 @@
 
         &__recipes-container
             background-color: #eef5f5
-            width: 350px
+            width: 400px
             border-radius: 1rem
             margin: 1rem 0
             padding: 0 0 .3rem 0
@@ -369,17 +386,19 @@
 
         &__articles-container
             background-color: #eef5f5
-            width: 350px
+            width: 400px
             border-radius: 1rem
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+            margin-top: 1rem
 
         &__record-container
             background-color: #eef5f5
-            width: 350px
+            width: 400px
             border-radius: 1rem
             padding: 0 0 .3rem 0
             box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+            margin-top: 1rem
 
         &__question
             margin-top: 1rem
@@ -387,11 +406,13 @@
         &__name-pic
             display: flex
             justify-content: space-evenly
+
+        &__user
         
-        &__name
-            font-size: 1rem
-            font-weight: bold
-            margin: .2rem
+            &--name
+                font-size: 1rem
+                font-weight: bold
+                margin: .2rem
 
         &__logout
             border: none

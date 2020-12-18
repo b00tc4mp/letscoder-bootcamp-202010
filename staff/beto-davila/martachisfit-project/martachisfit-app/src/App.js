@@ -21,7 +21,7 @@ export default withRouter(props => {
   const handleRegister = (fullname, email, password, calories) => {
     try {
       registerUser(fullname, email, password, calories, error => {
-        if (error) return feedbackError('No se pudo registrar el usuario. Error de conexión')
+        if (error) return feedbackError('Usuario ya registrado con este email')
   
         props.history.push('/sign-in')
       })

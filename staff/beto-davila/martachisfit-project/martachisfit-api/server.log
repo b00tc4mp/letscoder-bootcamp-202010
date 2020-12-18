@@ -1534,3 +1534,17 @@ info 2020-12-18T08:22:12.600Z - stopping server
 info 2020-12-18T08:27:02.819Z - starting server
 info 2020-12-18T08:27:02.987Z - server running on port 4000
 info 2020-12-18T12:18:21.149Z - stopping server
+info 2020-12-18T12:20:34.622Z - starting server
+info 2020-12-18T12:20:34.780Z - server running on port 4000
+info 2020-12-18T12:22:30.522Z - stopping server
+info 2020-12-18T12:24:28.698Z - starting server
+info 2020-12-18T12:24:28.844Z - server running on port 4000
+error 2020-12-18T13:34:28.193Z - ConflictError: user with e-mail pepigri@gmail.com already registered
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js:27:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T13:39:09.358Z - ConflictError: user with e-mail pepigri@gmail.com already registered
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js:27:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-18T13:42:47.646Z - stopping server
