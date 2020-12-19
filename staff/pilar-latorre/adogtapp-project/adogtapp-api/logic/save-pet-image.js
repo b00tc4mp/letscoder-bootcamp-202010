@@ -2,17 +2,25 @@ const { validateId } = require('./helpers/validations')
 const path = require('path')
 const fs = require('fs')
 
+/**
+ *  Upload pet's picture
+ * 
+ * @param {string} petId pet's identification number(ObjectId)
+ * @param {Stream} stream data image
+ * @returns {Promise} empty promise on successful upload 
+ * 
+ */
+
 module.exports = (petId, stream) => {
     validateId(petId)
     //validateStream(stream)
-    console.log(stream)
+    
     return new Promise((resolve, reject) => {
         try {
             const toStream = fs.createWriteStream(path.join(__dirname, `../data/pets/${petId}.jpg`))
 
             stream.pipe(toStream)
             
-
             resolve()
         } catch (error) {
             reject(error)

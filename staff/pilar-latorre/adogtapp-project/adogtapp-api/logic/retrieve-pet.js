@@ -1,13 +1,17 @@
 const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { User, Pet } } =require('adogtapp-data')
+
 /**
  * Retrieves a pet by its id
  * 
  * @param {string} petId 
  * 
- * @returns {Promise}
+ * @returns {Promise} pet and user info
+ * 
+ * @throws {NotFoundError} if the petId does not exist
  */
+
 module.exports = function (petId) {
     validateId(petId)
 
@@ -30,12 +34,8 @@ module.exports = function (petId) {
                     
                     delete user.description
 
-
-        
                     return {...pet, ...user}
 
                 }) 
-
-
         })
 }

@@ -1,6 +1,17 @@
 import { call } from '../utils'
 import {  validateCallback, validateId } from './helpers/validations'
 
+/**
+ * Delete a pet by its id
+ * 
+ * @param {string} id pet's identification number
+ * 
+ * @returns {null} of succefully result
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ */
+
 export default function ( id, callback) {
     validateId(id)
     validateCallback(callback)

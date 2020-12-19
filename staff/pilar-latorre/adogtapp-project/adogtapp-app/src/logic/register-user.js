@@ -1,6 +1,23 @@
 import { call } from '../utils'
 import { validateuserName, validateEmail, validatePassword, validateAddress, validateCity, validatePhone, validateCallback } from './helpers/validations'
 
+/**
+ * Registers a new user 
+ * 
+ * @param {string} userName user's fullname
+ * @param {string} email user's e-mail
+ * @param {string} password user's password
+ * @param {string} address user's address
+ * @param {string} city user's city
+ * @param {string} phone user's phone
+ * @param {string} description user's description
+ * 
+ * @returns {null} onsuccessful registration
+ * 
+ * @throws {Error} on server error or user registered already
+ * @throws {Error} if status is not 201
+ */
+
 export default function (userName, email, password, address, city, phone, description, callback) {
     validateuserName(userName)
     validateEmail(email)

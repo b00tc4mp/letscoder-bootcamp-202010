@@ -9,6 +9,7 @@ const { models: { User } } =require('adogtapp-data')
  * 
  * @returns {Promise}
  */
+
 module.exports = function (userId) {
     validateId(userId)
 

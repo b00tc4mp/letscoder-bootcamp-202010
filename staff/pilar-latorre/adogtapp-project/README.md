@@ -2,7 +2,7 @@
 
 ## Intro
 
-This APP provides gives you the oportunity to find the pets available to adopt, it only can be shelter pets. Here is not possible to sell or buy any pet. This app was made to go visibility to shelters.
+This APP gives you the oportunity to find the pets available to adopt, it only can be shelter pets. Here is not possible to sell or buy any pet. This app was made to give visibility to shelters.
 
 ![Alt Adogtap](https://media2.giphy.com/media/eYilisUwipOEM/giphy.gif?cid=ecf05e471g8xjdntjop71tdweqwwnuf5vdu8ru15eta7o9v1&rid=giphy.gif)
 

@@ -3,6 +3,15 @@ const path = require('path')
 const { validateId } = require('./helpers/validations')
 const { promises: fsp } = fs
 
+/**
+ * Retrieves a pet image by its id
+ * 
+ * @param {string} petId 
+ * 
+ * @returns {Promise} with pet´s photo
+ * 
+ */
+
 module.exports = petId => {
     validateId(petId)
 

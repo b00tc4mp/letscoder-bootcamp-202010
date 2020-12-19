@@ -4,11 +4,13 @@ const { models: { Pet } } =require('adogtapp-data')
 
 
 /**
- * Retrieves a pet by its id
+ * Delete a pet by its id
  * 
  * @param {string} petId 
  * 
- * @returns {Promise}
+ * @returns {Promise} with empty object
+ * 
+ * @throws {NotFoundError} if the petId does not exist
  */
 module.exports = function (petId) {
     validateId(petId)
@@ -17,7 +19,6 @@ module.exports = function (petId) {
         .then(pet => {
             if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
 
-     
             return {}
         })
 }
