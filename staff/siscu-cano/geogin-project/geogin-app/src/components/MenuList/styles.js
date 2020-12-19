@@ -2,24 +2,24 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 
 export const MenuListWrapper = styled.div`
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 80%;
-    margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 80%;
+  margin: 0 auto;
 
-    .menu-icon {
-      display: inline-block;
-      margin: 0 10px 0 20px;
-      vertical-align: middle;
-    }
+  .menu-icon {
+    display: inline-block;
+    margin: 0 10px 0 20px;
+    vertical-align: middle;
+  }
 `
 
 export const Link = styled(LinkRouter)`
- width: 100%;
+  width: 100%;
   padding: 8px 5px;
   background: #634056;
   background: linear-gradient(rgba(99, 64, 86, 0.5), rgba(76, 49, 65, 0.7));

@@ -149,6 +149,14 @@ export const ProfileWrapper = styled.div`
       &:focus {
         outline: none;
       }
+      &.disabled {
+        pointer-events: none;
+        opacity: .6;
+        cursor: pointer;
+        background: #e0e0e0;
+        text-shadow: none;
+        color: #909090;
+      }
     }
   }
   .fileContainer {
