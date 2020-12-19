@@ -14,11 +14,16 @@ This APP provides gives you the oportunity to find the pets available to adopt, 
 
 ### Use Cases
 
+In this app the shelters can register and introduce information about the pets, and also, they can modify and delete this info.
+The people that want to addopt can search by some different queries, queries about the shelter and another ones about the pet, for instance, shelter´s city or pet´s breed.
+Onces they found the pet they liked they can click the picture and see more info about the pet and all the relevant information about the shelter, phone, city,...
+
 ![Alt Use Cases](./adogtapp-doc/useCases.png)
 
 ### Activities
 
-Search shelters and find a pet, and if you are a shelter sign in & sing up,create, update and delete info about the animals.
+If you are a shelter sign in & sing up,create, update and delete info about the animals. And if you want to find a pet, you can use the queries to find the pet you are looking for.
+
 
 ![Alt Operate Activity](./adogtapp-doc/opActivities.png)
 
@@ -48,11 +53,19 @@ Search shelters and find a pet, and if you are a shelter sign in & sing up,creat
 
 ### Technologies
 
-![Alt React](https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg "React")
+![Alt React](https://nearlearn.com/public/images/reactjs.jpg "React")
 
-![Alt Sass](https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg "Sass")
+![Alt Sass](https://www.seekpng.com/png/small/377-3772047_sass-logo.png "Sass")
+
+![Alt Sass](https://victorroblesweb.es/wp-content/uploads/2016/11/mongodb.png "MongoDB")
+
 
 ### TODO
 
-
-- ...
+- change code to Async Await
+- Register for users than want to addopt
+- Create profile
+- Likes
+- Change to Promisse App part
+- URL friendly
+- Responsive desktop
