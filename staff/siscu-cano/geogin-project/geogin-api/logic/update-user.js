@@ -12,6 +12,7 @@ const { NotFoundError, ValueError, ConflictError } = require('geogin-errors')
 const {
   models: { User }
 } = require('geogin-data')
+const bcrypt = require('bcryptjs')
 
 /**
  * Updates user.
@@ -98,6 +99,11 @@ module.exports = (id, data) => {
     if (email) {
       const userEmail = await User.findOne({email})
       if (userEmail) throw new ConflictError(`email ${email} already in use`)
+    }
+
+    if (data.password) {
+      const newPassword = await bcrypt.hash(data.password, 10)
+      data.password = newPassword
     }
     
     const user = await User.findByIdAndUpdate(id, data, {new: true})

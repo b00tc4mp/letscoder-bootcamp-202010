@@ -10,12 +10,14 @@ import { GiTrophyCup } from 'react-icons/gi'
 import { IoLogoGameControllerA } from 'react-icons/io'
 import { RiSave3Fill } from 'react-icons/ri'
 import { IoEye, IoEyeOff } from 'react-icons/io5'
+import { toast } from 'react-toastify'
+import { FcHighPriority, FcOk } from 'react-icons/fc'
 
 const ICON_SIZE = '22px'
 
 export const Profile = () => {
   const [userState, setUserState] = useState(false)
-  const [fullName, setFullName] = useState()
+  const [fullname, setFullname] = useState()
   const [email, setEmail] = useState()
   const [image, setImage] = useState()
   const [password, setPassword] = useState()
@@ -28,36 +30,39 @@ export const Profile = () => {
   useBodyClass('profile')
 
   const handleUpdateData = event => {
-    const token = window.sessionStorage.token
     event.preventDefault()
+    const token = window.sessionStorage.token
+    let emailFiltered
+    if (email && email !== userState.email) emailFiltered = email
+
     try {
       updateUser(
         token,
-        fullName,
-        email,
-        undefined,
+        fullname,
+        emailFiltered,
+        password,
         image,
         undefined,
         undefined,
         (error, res) => {
-          if (error) console.log(error)
-          console.log(res)
+          if (error) toast.error(<span><FcHighPriority size={ICON_SIZE} />{error}</span>)
+          else toast.success(<span><FcOk size={ICON_SIZE} />Datos de pefil modificados</span>)
         }
       )
     } catch (error) {
-      console.log(error.message)
+      toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
     }
   }
 
   const retrieveUserState = token => {
     try {
       retrieveUser(token, (error, user) => {
-        if (error) return window.alert(error.message)
+        if (error) return toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
         console.log('USER RETRIEVE:', user)
         setUserState(user)
       })
     } catch (error) {
-      window.alert(error.message)
+      toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
     }
   }
 
@@ -74,7 +79,7 @@ export const Profile = () => {
             className='profile__image'
             src={image || userState.image || avatarDefault}
           />
-          <figcaption>{fullName || userState.fullname}</figcaption>
+          <figcaption>{fullname || userState.fullname}</figcaption>
         </figure>
       </header>
       <section>
@@ -100,14 +105,13 @@ export const Profile = () => {
         </div>
         <div className='modify-info'>
           <h2>Modificación perfil usuario:</h2>
-          <form action=''>
-            {/* <form onSubmit={handleSubmit}> */}
+          <form>
             <label htmlFor='name'>Nombre:</label>
             <input
               id='name'
               className='profile__name'
               type='text'
-              onChange={event => setFullName(event.target.value)}
+              onChange={event => setFullname(event.target.value)}
               name='fullname'
               placeholder='full name'
               defaultValue={userState.fullname}
@@ -144,7 +148,19 @@ export const Profile = () => {
               previewImage={image}
               preview={false}
             />
-            <button onClick={handleUpdateData} className='btn'>
+
+            <button
+              onClick={handleUpdateData}
+              className={
+                (
+                  (email && email !== userState.email) ||
+                  (fullname && fullname !== userState.fullname) ||
+                  (password && password !== userState.password) ||
+                  (image && image !== userState.image))
+                  ? 'btn'
+                  : 'btn disabled'
+                  }
+            >
               <RiSave3Fill className='menu-icon' size={14} /> Guardar
             </button>
           </form>

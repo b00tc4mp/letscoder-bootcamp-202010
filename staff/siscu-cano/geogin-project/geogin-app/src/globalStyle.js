@@ -121,6 +121,41 @@ textarea {
   }
 }
 
+
+.Toastify__toast-container {
+  max-width: 460px;
+  width: 100%;
+  span {
+    font-size: 13px;
+    font-family: 'Patrick Hand';
+    margin-left: 4px;
+  }
+  svg {
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+}
+.Toastify__toast {
+  font-size: 12px;
+}
+.Toastify__toast--success {
+  background: #bbe4b1;
+  box-shadow: 5px 4px #7ff43654;
+  span {
+    color: #1d9c22;  }
+}
+}
+.Toastify__toast--error {
+  background: #fd958a;
+  box-shadow: 5px 4px #f4443654;
+  span {
+    color: #9c1d1d;
+  }
+}
+.Toastify__close-button {
+  color: rgb(0 0 0 / 26%);
+}
+
 // Pages
 .splashscreen {
   > div {

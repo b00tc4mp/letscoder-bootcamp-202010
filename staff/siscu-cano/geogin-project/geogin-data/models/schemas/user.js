@@ -3,13 +3,15 @@ const { Schema, Schema: { Types: { ObjectId } } } = require('mongoose')
 const user = new Schema({
   fullname: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
 
   email: {
     type: String,
     required: true,
     unique: true,
+    trim: true,
     validate: {
       validator: email =>
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -26,12 +28,14 @@ const user = new Schema({
   },
 
   image: {
-    type: String
+    type: String,
+    trim: true
   },
 
   score: {
     type: Number,
-    default: 0
+    default: 0,
+    trim: true
   },
 
   favorites: [{

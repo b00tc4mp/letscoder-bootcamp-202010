@@ -23,9 +23,16 @@ export const App = () => {
   }
   return (
     <ThemeProvider theme={themeMode}>
-      <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
+      {/* <ToggleTheme theme={theme} toggleTheme={toggleTheme} /> */}
       <GlobalStyle />
-      <ToastContainer />
+      <ToastContainer
+        position='top-center'
+        autoClose={5000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnHover
+        draggable={false}
+      />
       <PublicRoute />
       <NavBar />
     </ThemeProvider>
