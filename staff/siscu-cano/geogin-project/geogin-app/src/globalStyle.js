@@ -135,4 +135,10 @@ textarea {
   }
 }
 
+.profile {
+  #app{
+    background: linear-gradient(to bottom, #88bfe8 0%,#70b0e0 100%);
+  }
+}
+
 `

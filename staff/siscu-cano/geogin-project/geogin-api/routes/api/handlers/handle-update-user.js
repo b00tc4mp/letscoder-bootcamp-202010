@@ -16,7 +16,7 @@ module.exports = (req, res, handleError) => {
   try {
     const { sub: userId } = jwt.verify(token, JWT_SECRET)
     updateUser(userId, data)
-      .then(() => res.status(200).json({ message: 'user updated' }))
+      .then((user) => res.status(200).json({ message: 'user updated', data: user }))
       .catch(handleError)
   } catch (error) {
     handleError(error)

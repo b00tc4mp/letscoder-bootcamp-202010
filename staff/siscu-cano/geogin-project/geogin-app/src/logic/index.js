@@ -5,6 +5,7 @@ import uploadPdf from './upload-pdf'
 import saveQuest from './save-quest'
 import saveGame from './save-game'
 import retrieveGame from './retrieve-game'
+import retrieveUser from './retrieve-user'
 
 export {
   authenticateUser,
@@ -13,5 +14,6 @@ export {
   saveQuest,
   saveGame,
   retrieveGame,
-  uploadPdf
+  uploadPdf,
+  retrieveUser
 }

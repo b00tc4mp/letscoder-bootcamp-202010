@@ -8,7 +8,7 @@ const {
   validateScore,
   validateFavorites
 } = require('./helpers/validations')
-const { NotFoundError, ValueError } = require('geogin-errors')
+const { NotFoundError, ValueError, ConflictError } = require('geogin-errors')
 const {
   models: { User }
 } = require('geogin-data')
@@ -94,6 +94,12 @@ module.exports = (id, data) => {
   return (async () => {
     const _user = await User.findById(id)
     if (!_user) throw new NotFoundError(`user with id ${userId} not found`)
+
+    if (email) {
+      const userEmail = await User.findOne({email})
+      if (userEmail) throw new ConflictError(`email ${email} already in use`)
+    }
+    
     const user = await User.findByIdAndUpdate(id, data, {new: true})
 
     return user
