@@ -1,9 +1,8 @@
 import { call } from 'notes-utils'
-import { validateToken, validateId, validateFile, validateCallback } from './helpers/validations'
+import { validateId, validateFile, validateCallback } from './helpers/validations'
 import context from './context'
 
-export default (function (token, noteId, image, callback) {
-    validateToken(token)
+export default (function (noteId, image, callback) {
     validateId(noteId)
     validateFile(image)
     validateCallback(callback)
@@ -13,7 +12,7 @@ export default (function (token, noteId, image, callback) {
 
     const { API_URL } = this
 
-    call('POST', `${API_URL}/notes/${noteId}/images`, { Authorization: `Bearer ${token}` },
+    call('POST', `${API_URL}/notes/${noteId}/images`, {},
         formData,
         (error, response) => {
             if (error)

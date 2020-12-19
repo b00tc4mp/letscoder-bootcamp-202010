@@ -1,4 +1,4 @@
-const { ContentError, LengthError, ValueError, FormatError } = require('notes-errors')
+const { ContentError, LengthError, ValueError, Format } = require('notes-errors')
 
 module.exports = { 
     validateEmail(email) {

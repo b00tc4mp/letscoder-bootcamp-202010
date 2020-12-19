@@ -1,6 +1,6 @@
 const { ContentError, LengthError, ValueError, FormatError } = require('notes-errors')
 
-module.exports = { 
+module.exports = {
     validateEmail(email) {
         if (typeof email !== 'string') throw new TypeError(`${email} is not an e-mail`)
 
@@ -26,17 +26,11 @@ module.exports = {
     },
 
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new ContentError('id is empty or blank')
 
-        if (id.length !== 24) throw new LengthError('id length is not 24')
-    },
-
-    validateToken(token) {
-        if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
-
-        if (!token.trim().length) throw new ContentError('token is empty or blank')
+        if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
     validateText(text) {
@@ -63,7 +57,13 @@ module.exports = {
         if (visibility !== 'public' && visibility !== 'private') throw new ValueError('visibility is not public or private')
     },
 
-    validateFile(file) {
-        if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(query + ' is not a query')
+
+        if (!query.trim().length) throw new ContentError('query is empty or blank')
+    },
+
+    validateStream(stream) {
+        // TODO where the f*ck is the the class to validate this instance!!?
     }
 }

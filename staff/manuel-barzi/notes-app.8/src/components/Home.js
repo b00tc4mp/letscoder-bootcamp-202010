@@ -43,7 +43,7 @@ export default function () {
             saveNote(token, undefined, text, tags, visibility, (error, noteId) => {
                 if (error) return alert(error.message)
 
-                saveNoteImage(token, noteId, image, error => {
+                saveNoteImage(noteId, image, error => {
                     if (error) return alert(error.message)
 
                     try {
