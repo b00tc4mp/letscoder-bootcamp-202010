@@ -76,6 +76,39 @@ describe('deletePet()', () => {
 
     }) 
 
+    describe('on a non existing petId', () => {
+        let petId, shelter, userName, email, password, address, city, phone, description
+
+        beforeEach(async() => {
+            userName = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+            email = randomWithPrefixAndSuffix('email', '@mail.com')
+            password = randomStringWithPrefix('password')
+            address = randomStringWithPrefix('address')
+            city = randomStringWithPrefix('city')
+            phone = randomStringWithPrefix('phone')
+            description = randomStringWithPrefix('description')
+
+            petId = randomId()
+
+            const user = { userName, email, password, address, city, phone, description }
+
+            const newUser = await User.create(user)
+            shelter = '' + newUser._id
+
+        })
+
+        it('shoud fail when petId does not exists', () => 
+            deletePet(shelter, petId)
+                .catch(error => {
+                    expect(error).to.be.instanceOf(Error)
+
+                    expect(error.message).to.equal(`pet with id ${petId} not found`)
+                })
+            
+        )
+
+    }) 
+
     
 
     describe('when any parameter is wrong', () => {

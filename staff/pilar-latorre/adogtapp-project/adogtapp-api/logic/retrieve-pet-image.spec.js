@@ -47,7 +47,7 @@ describe('retrievePetImage()', () => {
             petId = '' + newPet._id
             
         })
-        it.only('shoud succed on a existing pet', () => {
+        it('shoud succed on a existing pet', () => {
             return retrievePetImage(petId)
             .then(file => {
                 expect(file).to.be.instanceOf(Object)

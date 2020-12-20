@@ -111,12 +111,11 @@ describe('savePet()', () => {
             color = randomStringWithPrefix('color')
             description = randomStringWithPrefix('description')
             shelter = randomId()
-        
             
         })
 
         it('shoud fail when user does not exists', () => {
-            return savePet(shelter, undefined, shelter, name, breed, species, color, description )
+            return savePet(shelter, undefined, name, breed, species, color, description )
             .catch(error => {
                 expect(error).to.be.instanceOf(Error)
 

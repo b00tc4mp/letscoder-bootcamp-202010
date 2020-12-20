@@ -85,6 +85,41 @@ describe('savePetImage()', () => {
 
     }) 
 
+    describe('on a non existing petId', () => {
+        let petImage, petId, shelter
+
+        beforeEach(async() => {
+
+            userName = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+            email = randomWithPrefixAndSuffix('email', '@mail.com')
+            password = randomStringWithPrefix('password')
+            address = randomStringWithPrefix('address')
+            city = randomStringWithPrefix('city')
+            phone = randomStringWithPrefix('phone')
+            description = randomStringWithPrefix('description')
+
+            petId = randomId()
+            petImage = fs.createReadStream(path.join(__dirname,'../data/pets/default.jpg'))
+
+            const user = { userName, email, password, address, city, phone, description }
+
+            const newUser = await User.create(user)
+            shelter = '' + newUser._id
+
+        })
+
+        it('shoud fail when petId and pet does not exists', () => {
+            return savePetImage(shelter, petId, petImage)
+            .catch(error => {
+                expect(error).to.be.instanceOf(Error)
+
+                expect(error.message).to.equal(`pet with id ${petId} not found`)
+            })
+            
+        })
+
+    }) 
+
     describe('when any parameter is wrong', () => {
         describe('when id is wrong', () => {
             
