@@ -1,6 +1,8 @@
 const { validateId } = require('./helpers/validations')
 const path = require('path')
 const fs = require('fs')
+const { models: { User, Pet } } = require('adogtapp-data')
+const { NotFoundError } = require('../errors')
 
 /**
  *  Upload pet's picture
@@ -11,19 +13,29 @@ const fs = require('fs')
  * 
  */
 
-module.exports = (petId, stream) => {
+module.exports = (userId, petId, stream) => {
     validateId(petId)
     //validateStream(stream)
     
-    return new Promise((resolve, reject) => {
-        try {
-            const toStream = fs.createWriteStream(path.join(__dirname, `../data/pets/${petId}.jpg`))
+    return User.findById(userId)
+        .then(user => {
+            if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            stream.pipe(toStream)
-            
-            resolve()
-        } catch (error) {
-            reject(error)
-        }
-    })
+            return Pet.findById(petId)
+                .then(pet => {
+                    if (!pet) throw new NotFoundError(`pet with id ${petId} not found`)
+
+                    return new Promise((resolve, reject) => {
+                        try {
+                            const toStream = fs.createWriteStream(path.join(__dirname, `../data/pets/${petId}.jpg`))
+
+                            stream.pipe(toStream)
+
+                            stream.once('end', resolve)
+                        } catch (error) {
+                            reject(error)
+                        }
+                    })
+                })
+        })
 }

@@ -15,7 +15,7 @@ import context from './context'
  * 
  */
 
-export default (function (petId, image, callback) {
+export default (function (token, petId, image, callback) {
     validateId(petId)
     if (typeof image !== 'undefined') validateFile(image)
     validateCallback(callback)
@@ -25,7 +25,7 @@ export default (function (petId, image, callback) {
 
     const { API_URL } = this
 
-    call('POST', `${API_URL}/pets/${petId}/images`, {},
+    call('POST', `${API_URL}/pets/${petId}/images`, {Authorization: `Bearer ${token}`},
         formData,
         (status, response) => {
             if (status === 0)

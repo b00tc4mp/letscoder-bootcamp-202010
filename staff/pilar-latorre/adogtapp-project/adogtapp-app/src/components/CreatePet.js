@@ -12,7 +12,7 @@ function CreatePet({onCreated, onError}){
             savePet( token, undefined, name, breed, species, color, description, (error, petId) => {
                 if (error) return onError(error.message)
                 
-                savePetImage(petId, image, error => {
+                savePetImage(token, petId, image, error => {
                     if (error) return onError(error.message)
                     try {
                         

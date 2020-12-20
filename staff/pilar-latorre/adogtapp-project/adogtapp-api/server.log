@@ -2182,3 +2182,58 @@ info 2020-12-19T18:49:22.039Z - stopping server
 info 2020-12-19T18:49:25.968Z - starting server
 info 2020-12-19T18:49:26.200Z - server running on port 4000
 info 2020-12-19T18:51:01.702Z - stopping server
+info 2020-12-20T08:35:19.867Z - starting server
+info 2020-12-20T08:35:20.098Z - server running on port 4000
+error 2020-12-20T08:35:57.351Z - ReferenceError: validateStream is not defined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet-image.js:18:5)
+    at Busboy.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet-image.js:18:13)
+    at Busboy.emit (events.js:315:20)
+    at Busboy.emit (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\busboy\lib\main.js:37:33)
+    at PartStream.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\busboy\lib\types\multipart.js:214:13)
+    at PartStream.emit (events.js:315:20)
+    at HeaderParser.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\Dicer.js:50:16)
+    at HeaderParser.emit (events.js:315:20)
+    at HeaderParser._finish (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:315:20)
+    at SBMH._sbmh_feed (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\streamsearch\lib\sbmh.js:159:14)
+    at SBMH.push (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\Dicer.js:196:25)
+    at SBMH.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\Dicer.js:126:10)
+error 2020-12-20T08:36:04.825Z - ReferenceError: validateStream is not defined
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet-image.js:18:5)
+    at Busboy.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-save-pet-image.js:18:13)
+    at Busboy.emit (events.js:315:20)
+    at Busboy.emit (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\busboy\lib\main.js:37:33)
+    at PartStream.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\busboy\lib\types\multipart.js:214:13)
+    at PartStream.emit (events.js:315:20)
+    at HeaderParser.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\Dicer.js:50:16)
+    at HeaderParser.emit (events.js:315:20)
+    at HeaderParser._finish (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:315:20)
+    at SBMH._sbmh_feed (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\streamsearch\lib\sbmh.js:159:14)
+    at SBMH.push (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\Dicer.js:196:25)
+    at SBMH.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\dicer\lib\Dicer.js:126:10)
+info 2020-12-20T08:38:09.537Z - stopping server
+info 2020-12-20T08:38:12.143Z - starting server
+info 2020-12-20T08:38:12.257Z - server running on port 4000
+info 2020-12-20T08:39:09.210Z - stopping server
+info 2020-12-20T08:39:19.238Z - starting server
+info 2020-12-20T08:39:19.400Z - server running on port 4000
+error 2020-12-20T08:40:12.495Z - ReferenceError: noteId is not defined
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet-image.js:24:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-20T08:40:49.179Z - ReferenceError: noteId is not defined
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet-image.js:24:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+error 2020-12-20T08:41:07.979Z - ReferenceError: noteId is not defined
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\save-pet-image.js:24:33
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-20T08:41:17.386Z - stopping server
+info 2020-12-20T08:41:20.430Z - starting server
+info 2020-12-20T08:41:20.541Z - server running on port 4000
+info 2020-12-20T08:45:57.651Z - stopping server
