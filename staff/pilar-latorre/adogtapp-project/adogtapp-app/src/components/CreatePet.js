@@ -11,7 +11,7 @@ function CreatePet({onCreated, onError}){
         try {
             savePet( token, undefined, name, breed, species, color, description, (error, petId) => {
                 if (error) return onError(error.message)
-                
+                if(image){
                 savePetImage(token, petId, image, error => {
                     if (error) return onError(error.message)
                     try {
@@ -27,7 +27,12 @@ function CreatePet({onCreated, onError}){
                         onError(error.message)
                     }
                 }) 
-               
+            }
+            setSuccess(true)
+            setTimeout(() => {
+                setSuccess(false)
+                onCreated()
+            }, 3000)
             })
         } catch (error) {
             onError(error.message)
@@ -38,6 +43,7 @@ function CreatePet({onCreated, onError}){
 
     return <div className="CreatePet">
         <h3 className="CreatePet__h1">Please fill all the information about the pet</h3> 
+        {success && <h2 className="home__success">PET SAVED 🐶🐱 </h2>}
     
         <form className="CreatePet__form" onSubmit={event => {
             event.preventDefault()
@@ -59,7 +65,6 @@ function CreatePet({onCreated, onError}){
            
             <button className="CreatePet__button">SAVE INFO</button>
             
-            {success && <h2 className="home__success">PET SAVED 🐶🐱 </h2>}
         </form>
             
       

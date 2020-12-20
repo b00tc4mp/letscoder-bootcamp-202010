@@ -6,6 +6,9 @@ require('../utils/array-polyfills')
 const retrievePetImage = require('./retrieve-pet-image')
 const { models: { User, Pet }, mongoose } = require('adogtapp-data')
 const { ContentError, LengthError } = require('../errors')
+const fs = require('fs')
+const fsp = fs.promises
+const path = require('path')
 
 const { env: { MONGODB_URL } } = process
 
@@ -13,7 +16,7 @@ describe('retrievePetImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let userName, email, password, address, city, phone, name, breed, species, color, description, petId, shelter, image
+        let userName, email, password, address, city, phone, name, breed, species, color, description, petId, shelter, image, file
 
         beforeEach(async() => {
             userName = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -29,25 +32,27 @@ describe('retrievePetImage()', () => {
             species = 'dog'
             color = randomStringWithPrefix('color')
 
-            image = '../populate/pets/default.jpg'
+            image = fs.createReadStream(path.join(__dirname,'../data/pets/default.jpg'))
 
+            file = path.join(__dirname, `../data/pets/${petId}.jpg`)
+            
             const user = { userName, email, password, address, city, phone, description }
-
+            
             const newUser = await User.create(user)
             shelter = '' + newUser._id
             
             const pet = {name, breed, species, color, description, shelter, image}
-
+            
             const newPet = await Pet.create(pet)
             petId = '' + newPet._id
-
-        })
-
-        it.skip('shoud succed on a existing pet', () => {
-            return retrievePetImage(petId)
-               
-            .then(result => expect(image).to.equal(result))
             
+        })
+        it('shoud succed on a existing pet', () => {
+            return retrievePetImage(petId)
+            .then(file => {
+                expect(file).to.be.instanceOf(Object)
+               
+                })
         })
 
         afterEach(() =>

@@ -41,15 +41,15 @@ If you are a shelter sign in & sing up,create, update and delete info about the 
 
 #### React Components 
 
-![Alt React comonents](./adogtapp-doc/componentsReact.png)
+![Alt React components](./adogtapp-doc/componentsReact.png)
 
 #### Logic function
 
 ![Alt Logic function](./adogtapp-doc/logic.png)
 
-### Testing (QA)
+### Testing
 
-![Alt Testing](./adogtapp-doc/testing.png)
+![Alt Testing](./adogtapp-doc/test.png)
 
 ### Technologies
 
