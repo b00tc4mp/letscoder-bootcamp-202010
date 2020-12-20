@@ -24,7 +24,7 @@ export default function ArtistMap({ users, onGoToArtistProfile, onGoToProfile })
                 <ArtistsCard
                   artistName={item.artistName}
                   tags={item.tags}
-                  image={{ uri: `http://192.168.1.131:4000/api/users/${item._id}/images` }}
+                  image={{ uri: `http://192.168.0.21:4000/api/users/${item._id}/images` }}
                 />
               </TouchableOpacity>
 

@@ -10,10 +10,9 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
         LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
     }, [])
 
-    
     const [query, setQuery] = useState('')
     const userId = user.id
-    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
+    const imageURL = `http://192.168.0.21:4000/api/users/${userId}/images`
     
 
     if (user.role === 'PROMOTER')
@@ -34,19 +33,18 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
 
                             <TextInput
                                 style={styles.artistName}
-                                placeholder={'@' + user.artistName.trim()}
+                                placeholder={'@' + user.artistName}
                                 placeholderTextColor={"purple"}
                                 editable={false}>
 
                             </TextInput>
                         </View>
 
-                        {/* <TouchableOpacity onPress={onLogOut}>
-                                <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
-                            </TouchableOpacity> */}
-                        <View style={styles.containerNavigation}>
 
+                        <View style={styles.containerNavigation}>
                             <View style={styles.containerInputSearch}>
+                        
+                            
                                 <TextInput
                                     placeholder=" Search artists by genres"
                                     style={styles.inputSearchActivity}
@@ -65,13 +63,16 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
                                     </View>
                                 </TouchableOpacity>
                             </View>
-
                         </View>
                     </View>
 
                     <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={styles.livesListContainer}>
-                            
+
+                    <TextInput style={styles.registerTitle}
+                                editable={false}
+                            >Live Sessions</TextInput>
+
                         <FlatList style={styles.livesList}
                             // horizontal
                             
@@ -87,17 +88,12 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
                                         duration={item.duration}
                                         payment={item.payment}
                                         description={item.description}
-                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
+                                        image= {{uri:`http://192.168.0.21:4000/api/lives/${item._id}/images`}}
                                     />
                                 </TouchableOpacity>
                             )}
                         />
                     </View>
-
-
-
-
-
 
                         <View style={styles.artistProfileBody}>
 
@@ -135,6 +131,17 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         marginLeft: "10%"
+    },
+
+    registerTitle: {
+        marginTop: "10%",
+        // marginBottom: "10%",
+        fontSize: 35,
+        borderBottomWidth: 5,
+        borderColor: "purple",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
     },
 
     inputSearchActivity: {

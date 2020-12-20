@@ -17,7 +17,7 @@ export default (function (liveId, imageUri, callback) {
 
   call(
     "POST",
-    `http://192.168.1.131:4000/api/lives/${liveId}/images`,
+    `http://192.168.0.21:4000/api/lives/${liveId}/images`,
     {'Content-Type': 'image/jpeg',
     'Content-Type': 'multipart/form-data'},
     formData,

@@ -7,7 +7,7 @@ export default function retrieveLives(token, callback) {
 
   call(
     "GET",
-    "http://192.168.1.131:4000/api/lives",
+    "http://192.168.0.21:4000/api/lives",
     { Authorization: `Bearer ${token}` },
     "",
     (status, response) => {

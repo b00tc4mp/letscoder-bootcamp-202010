@@ -11,6 +11,7 @@ export default function PetitionScreen({ onSubmitPetition, onGoToProfile }) {
     const [duration, setDuration] = useState(duration)
     const [description, setDescription] = useState(description)
     const [payment, setPayment] = useState(payment)
+    const [status, setStatus] = useState('PENDING')
 
     return (
         <SafeAreaView>

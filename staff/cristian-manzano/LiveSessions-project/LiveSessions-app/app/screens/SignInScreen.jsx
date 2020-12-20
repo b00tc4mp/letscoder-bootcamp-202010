@@ -56,14 +56,11 @@ function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
                                     onChangeText={password => setPassword(password)}
                                     value={password} >
                                 </TextInput>
+                                
                             </View>
-
-
-                            
-
                             <TouchableOpacity style={styles.signUpButton}
                                 onPress={() => { onSignIn({ email, password }) }}>
-                                <Text style={styles.buttonText}>Sign Up!</Text>
+                                <Text style={styles.buttonText}>Sign In!</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -90,7 +87,7 @@ const styles = StyleSheet.create({
     },
 
     SignUpForm: {
-        marginTop: "30%",
+        marginTop: "5%",
         width: "75%",
         height: "50%",
         alignSelf: "center",

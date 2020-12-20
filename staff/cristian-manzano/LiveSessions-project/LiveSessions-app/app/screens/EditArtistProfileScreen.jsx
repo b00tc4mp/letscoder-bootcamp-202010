@@ -64,44 +64,59 @@ function EditArtistProfileScreen({ onCancelEditProfile, onEditProfile, user, onL
                                 </View>
 
                                 <View style={styles.inputsContainer}>
-                                    <TextInput
-                                        placeholder=' Fullname'
-                                        style={styles.inputsSignUp}
-                                        placeholderTextColor="#343a40"
-                                        onChangeText={fullname => setFullname(fullname)}
 
-                                        defaultValue={(user.fullname ? ' ' + user.fullname : '')}
-                                    >
-                                    </TextInput>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={styles.textInputsTitle}>
+                                            Fullname:
+                                    </Text>
+                                        <TextInput
+                                            placeholder=' Fullname'
+                                            style={styles.inputsSignUp}
+                                            placeholderTextColor="#343a40"
+                                            onChangeText={fullname => setFullname(fullname)}
 
-                                    <TextInput
-                                        placeholder=' Artist Name'
-                                        style={styles.inputsSignUp}
-                                        placeholderTextColor="#343a40"
-                                        onChangeText={artistName => setArtistName(artistName)}
-                                        defaultValue={user.artistName ? ' ' + user.artistName : ''}
-                                    >
-                                    </TextInput>
+                                            defaultValue={(user.fullname ? ' ' + user.fullname : '')}
+                                        >
+                                        </TextInput>
 
-                                    <TextInput
-                                        placeholder=' City'
-                                        style={styles.inputsSignUp}
-                                        placeholderTextColor="#343a40"
-                                        onChangeText={city => setCity(city)}
-                                        defaultValue={user.city ? ' ' + user.city : ''}
-                                    >
-                                    </TextInput>
+                                    </View>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={styles.textInputsTitle}>Artist:</Text>
+                                        <TextInput
+                                            placeholder=' Artist Name'
+                                            style={styles.inputsSignUp}
+                                            placeholderTextColor="#343a40"
+                                            onChangeText={artistName => setArtistName(artistName)}
+                                            defaultValue={user.artistName ? user.artistName : ''}
+                                        >
+                                        </TextInput>
+                                    </View>
+
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={styles.textInputsTitle}>City</Text>
+                                        <TextInput
+                                            placeholder=' City'
+                                            style={styles.inputsSignUp}
+                                            placeholderTextColor="#343a40"
+                                            onChangeText={city => setCity(city)}
+                                            defaultValue={user.city ? ' ' + user.city : ''}
+                                        >
+                                        </TextInput>
+                                    </View>
 
 
                                     {user.role === "ARTIST" ?
-                                        <TextInput
-                                            placeholder=' Music Tags (Rock, Jazz, punk, etc)'
-                                            style={styles.inputsSignUp}
-                                            placeholderTextColor="#343a40"
-                                            onChangeText={tags => setTags(tags ? tags.split(',') : "")}
-                                            defaultValue={user.tags ? user.tags : ''}
-                                        >
-                                        </TextInput>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={styles.textInputsTitle}>Genre:</Text>
+                                            <TextInput
+                                                placeholder=' Music Tags (Rock, Jazz, punk, etc)'
+                                                style={styles.inputsSignUp}
+                                                placeholderTextColor="#343a40"
+                                                onChangeText={tags => setTags(tags ? tags.split(',') : "")}
+                                                defaultValue={user.tags ? user.tags : ''}
+                                            >
+                                            </TextInput>
+                                        </View>
                                         : <TextInput
                                             onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
                                             defaultValue={user.tags ? ' ' + user.tags : ''}
@@ -109,42 +124,56 @@ function EditArtistProfileScreen({ onCancelEditProfile, onEditProfile, user, onL
                                         </TextInput>}
 
 
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={styles.textInputsTitle}>Youtube Link:</Text>
+                                        <TextInput
+                                            placeholder=" Youtube Link"
+                                            style={styles.inputsSignUp}
+                                            placeholderTextColor="#343a40"
+                                            onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
+                                            defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
+                                        >
+                                        </TextInput>
+                                    </View>
 
-                                    <TextInput
-                                        placeholder=" Youtube Link"
-                                        style={styles.inputsSignUp}
-                                        placeholderTextColor="#343a40"
-                                        onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
-                                        defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
-                                    >
-                                    </TextInput>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={styles.textInputsTitle}>Bandcamp Link:</Text>
+                                        <TextInput
+                                            placeholder=" Bandcamp Link"
+                                            style={styles.inputsSignUp}
+                                            placeholderTextColor="#343a40"
+                                            onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
+                                            defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
+                                        >
+                                        </TextInput>
+                                    </View>
 
-                                    <TextInput
-                                        placeholder=" Bandcamp Link"
-                                        style={styles.inputsSignUp}
-                                        placeholderTextColor="#343a40"
-                                        onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
-                                        defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
-                                    >
-                                    </TextInput>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={styles.textInputsTitle}>Spotify Link:</Text>
+                                        <TextInput
+                                            placeholder=" Spotify Link"
+                                            style={styles.inputsSignUp}
+                                            placeholderTextColor="#343a40"
+                                            onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
+                                            defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
+                                        >
+                                        </TextInput>
+                                    </View>
 
-                                    <TextInput
-                                        placeholder=" Spotify Link"
-                                        style={styles.inputsSignUp}
-                                        placeholderTextColor="#343a40"
-                                        onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
-                                        defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
-                                    >
-                                    </TextInput>
-
-                                    <TextInput
-                                        placeholder=' Description'
-                                        style={styles.descriptionSignUp}
-                                        placeholderTextColor="#343a40"
-                                        onChangeText={description => setDescription(description)}
-                                        defaultValue={user.description ? ' ' + user.description : ""}
-                                    >
-                                    </TextInput>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={{marginRight: 30}}>Description: </Text>
+                                        <TextInput
+                                            placeholder=' Description'
+                                            
+                                            multiline={true}
+                                            maxLength={200}
+                                            style={styles.descriptionSignUp}
+                                            placeholderTextColor="#343a40"
+                                            onChangeText={description => setDescription(description)}
+                                            defaultValue={user.description ? ' ' + user.description : ""}
+                                        >
+                                        </TextInput>
+                                    </View>
                                 </View>
                                 <View style={styles.buttonsContainer}>
                                     <TouchableOpacity style={styles.editProfileButton}
@@ -162,6 +191,7 @@ function EditArtistProfileScreen({ onCancelEditProfile, onEditProfile, user, onL
                                     <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
                                 </TouchableOpacity>
                             </View>
+                            
                         </View>
                     </View>
                 </ScrollView>
@@ -175,6 +205,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
+
     },
 
 
@@ -186,6 +217,7 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
+
     },
 
     registerTitle: {
@@ -193,16 +225,21 @@ const styles = StyleSheet.create({
         marginBottom: "10%",
         fontSize: 35,
         borderBottomWidth: 5,
-        borderColor: "green",
+        borderColor: "purple",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
     },
 
     imagecontainer: {
-        marginRight: "90%",
-        marginBottom: "20%",
-        marginTop: "60%"
+        // marginRight: "90%",
+        marginBottom: "60%",
+        marginTop: "70%"
+    },
+
+    textInputsTitle: {
+        marginTop: "3%"
+
     },
 
     inputsContainer: {
@@ -216,20 +253,25 @@ const styles = StyleSheet.create({
 
     inputsSignUp: {
         marginBottom: "10%",
+        alignSelf: "flex-end",
+        marginLeft: "10%",
         fontSize: 20,
         width: "80%",
-        height: "15%",
-        borderBottomWidth: .5,
-        borderColor: "green",
+        height: "50%",
+        borderWidth: .5,
+        borderColor: "purple",
         color: "#343a40"
     },
 
     descriptionSignUp: {
         // marginLeft: "5%",
-        width: "90%",
-        height: "25%",
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 10,
+        paddingBottom: 50,
+        width: "80%",
         borderWidth: 1,
-        borderColor: "#343a40",
+        borderColor: "purple",
         color: "#343a40"
     },
 
@@ -249,10 +291,14 @@ const styles = StyleSheet.create({
         marginRight: "10%",
         borderRadius: 5,
         borderWidth: 3,
-        borderColor: "green",
-        backgroundColor: "lightgray",
+        borderColor: "black",
+        backgroundColor: "black",
         width: 132,
         height: 44
+    },
+
+    buttonText: {
+        color: "white"
     },
 
     logoutIcon: {

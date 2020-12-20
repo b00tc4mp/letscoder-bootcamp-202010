@@ -9,7 +9,7 @@ function DetailArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOu
 
 
     const itemId = item._id
-    const imageURL = `http://192.168.1.131:4000/api/users/${itemId}/images`
+    const imageURL = `http://192.168.0.21:4000/api/users/${itemId}/images`
 
     if (item.role === 'ARTIST')
         return (
@@ -36,7 +36,7 @@ function DetailArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOu
 
                             </TextInput>
                             <TouchableOpacity onPress={onGoToPetitions}>
-                                <Image style={styles.PetitionsIcon} source={require('../assets/petitions-image.png')} />
+                                <Text>Send Live Petition</Text>
                             </TouchableOpacity>
                         </View>
 
@@ -184,8 +184,6 @@ const styles = StyleSheet.create({
     linkContainer: {
         marginTop: "30%",
         alignItems: "center",
-
-
     },
 
 

@@ -10,11 +10,11 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
         LogBox.ignoreLogs(['VirtualizedList: missing keys for items']);
     }, [])
 
-    
+
     const [query, setQuery] = useState('')
     const userId = user.id
-    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
-    
+    const imageURL = `http://192.168.0.21:4000/api/users/${userId}/images`
+
 
     if (user.role === 'PROMOTER')
         return (
@@ -42,9 +42,6 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
                             </TextInput>
                         </View>
 
-                        {/* <TouchableOpacity onPress={onLogOut}>
-                                <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
-                            </TouchableOpacity> */}
                         <View style={styles.containerNavigation}>
 
                             <View style={styles.containerInputSearch}>
@@ -71,30 +68,25 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
                     </View>
 
                     <ScrollView showsVerticalScrollIndicator={false}>
-                    <View style={styles.livesListContainer}>
-                            
-                    <FlatList
-            style={styles.ArtistList}
-            data={users}
-            keyExtractor={users.id}
-            renderItem={({ item }) => (
+                        <View style={styles.livesListContainer}>
 
-              <TouchableOpacity onPress={() => { onGoToArtistProfile({ item }) }}>
-                <ArtistsCard
-                  artistName={item.artistName}
-                  tags={item.tags}
-                  image={{ uri: `http://192.168.1.131:4000/api/users/${item._id}/images` }}
-                />
-              </TouchableOpacity>
+                            <FlatList
+                                style={styles.ArtistList}
+                                data={users}
+                                keyExtractor={users.id}
+                                renderItem={({ item }) => (
 
-            )}
-          />
-                    </View>
+                                    <TouchableOpacity onPress={() => { onGoToArtistProfile({ item }) }}>
+                                        <ArtistsCard
+                                            artistName={item.artistName}
+                                            tags={item.tags}
+                                            image={{ uri: `http://192.168.0.21:4000/api/users/${item._id}/images` }}
+                                        />
+                                    </TouchableOpacity>
 
-
-
-
-
+                                )}
+                            />
+                        </View>
 
                         <View style={styles.artistProfileBody}>
 
@@ -289,20 +281,20 @@ const styles = StyleSheet.create({
     livesListContainer: {
         height: "70%",
         width: Dimensions.get("window").width,
-      },
-    
-      livesListHeader: {
+    },
+
+    livesListHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "stretch",
         marginTop: "15%"
-      },
-    
-      livesList: {
+    },
+
+    livesList: {
         marginTop: "10%",
         width: "90%",
         height: "80%"
-      }
+    }
 
 })
 

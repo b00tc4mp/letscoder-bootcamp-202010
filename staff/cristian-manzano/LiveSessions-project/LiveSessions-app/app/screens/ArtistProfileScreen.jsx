@@ -11,9 +11,8 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
     }, [])
 
     
-    const [query, setQuery] = useState('')
     const userId = user.id
-    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
+    const imageURL = `http://192.168.0.21:4000/api/users/${userId}/images`
     
 
     if (user.role === 'ARTIST')
@@ -34,7 +33,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
 
                             <TextInput
                                 style={styles.artistName}
-                                placeholder={'@' + user.artistName.trim()}
+                                placeholder={'@' + user.artistName}
                                 placeholderTextColor={"green"}
                                 editable={false}>
 
@@ -61,7 +60,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
                                         duration={item.duration}
                                         payment={item.payment}
                                         description={item.description}
-                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
+                                        image= {{uri:`http://192.168.0.21:4000/api/lives/${item._id}/images`}}
                                     />
                                 </TouchableOpacity>
                             )}

@@ -5,7 +5,7 @@ import * as ImagePicker from "expo-image-picker";
 import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 
-function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, onLogOut }) {
+function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, onLogOut, onGoBack }) {
     const [fullname, setFullname] = useState(user.fullname)
     const [artistName, setArtistName] = useState(user.artistName)
     const [city, setCity] = useState(user.city)
@@ -42,6 +42,12 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                         style={{ padding: 10 }}>
                         <View style={styles.signUpHeader}>
 
+                        <TouchableOpacity onPress={onGoBack}>
+                            <Image
+                                style={styles.goBackIcon}
+                                source={require("../assets/Arrow_Back.png")}
+                            />
+                        </TouchableOpacity>
 
                             <TextInput style={styles.registerTitle}
                                 editable={false}
@@ -139,6 +145,8 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
 
                                     <TextInput
                                         placeholder=' Description'
+                                        multiline={true}
+                                        maxLength={200}
                                         style={styles.descriptionSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={description => setDescription(description)}
@@ -178,6 +186,11 @@ const styles = StyleSheet.create({
     },
 
 
+    goBackIcon: {
+        width: 40,
+        height: 20,
+        // marginTop: "-5%"
+    },
 
     editProfileForm: {
         marginTop: "30%",
@@ -230,6 +243,7 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingTop: 10,
         paddingBottom: 50,
+        width: "80%",
         borderWidth: 1,
         borderColor: "purple",
         color: "#343a40"
