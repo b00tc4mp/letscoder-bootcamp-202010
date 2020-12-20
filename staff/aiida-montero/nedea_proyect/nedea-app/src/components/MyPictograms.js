@@ -5,7 +5,7 @@ function MyPictograms({ myPictograms, onDeletePictogram }) {
     return (<>
         <section className="my_pictograms">
             {myPictograms && myPictograms.map((pictogram) => (<>
-                <Pictogram data={pictogram} deleteOption = {true} onDeletePictogram = {onDeletePictogram}/>
+                <Pictogram data={pictogram} deleteOption = {true} onDeletePictogram = {onDeletePictogram} onLikePictogram={()=>{ return null}}/>
             </>))}
         </section>
     </>)

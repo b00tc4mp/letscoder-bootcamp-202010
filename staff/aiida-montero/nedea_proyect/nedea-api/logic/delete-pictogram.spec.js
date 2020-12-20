@@ -33,11 +33,11 @@ describe ('deletePictogram()', () => {
             beforeEach(() => {
                 title = randomStringWithPrefix('title')
                 description = randomStringWithPrefix('description')
-                pictogramId = randomId().toString()
+                pictogramId = '5fdc77ff35a0182a60f8c79a'
             })
 
-            it('should succeed unregister user', () => {
-                deletePictogram(pictogramId, ownerId)
+            it('should succeed delete pictogram', () => {
+                return deletePictogram(pictogramId, ownerId)
                 .then(pictogramId => {
                     expect(pictogramId).to.be.sealed
                 })

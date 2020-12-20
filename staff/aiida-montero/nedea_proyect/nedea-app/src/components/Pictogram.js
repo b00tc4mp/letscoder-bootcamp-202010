@@ -1,15 +1,26 @@
 import './Pictogram.scss'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import {deletePictogram, toggleLikePictogram} from '../logic'
 
 const API_URL = process.env.REACT_APP_API_URL
-export default function ({likedPictograms = [], data:{id, title, description}, deleteOption, onDeletePictogram}) {
-  const [isActive, setActive] = useState(likedPictograms.includes(id)? true : false);
+export default function ({likedPictograms = [], data:{id, title, description}, deleteOption, onDeletePictogram, onLikePictogram}) {
+  const [isActive, setActive] = useState(false);
   const token = sessionStorage.token
+
+  useEffect(()=> {
+    debugger
+    const liked = likedPictograms.includes(id) ? true : false
+
+    setActive(liked)
+  },[id])
 
   const handleLike = () => {
     setActive(!isActive);
-    toggleLikePictogram (token, id , error => console.log(error))
+    toggleLikePictogram (token, id , error =>{
+      console.log(error)
+      onLikePictogram()
+    })
+    
     /* window.location.reload(true) */
   };
 

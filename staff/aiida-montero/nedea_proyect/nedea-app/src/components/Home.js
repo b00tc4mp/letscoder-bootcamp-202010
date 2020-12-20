@@ -7,6 +7,10 @@ import ResultList from './ResultList'
 import {searchPictogram}from '../logic'
 
 
+function updateUserSettings(){
+    
+}
+
 export default function({onSetUser,token,onGoToInitial}) {
     const [name, setName] = useState()
     const [likedPictograms, setLikedPictograms] = useState([])
@@ -39,11 +43,25 @@ useEffect(() => {
 }, [])
 
  const handleSearchPictogram = (query) => {
-  try{
-   searchPictogram(query, result => setQueryResults(result)) 
+  try{ 
+    searchPictogram(query, result => setQueryResults(result)) 
   }catch(error){
     feedbackError(error.message)
   }
+
+ }
+
+ const handleOnLikePictogram = () => {
+     debugger
+    const {token} = sessionStorage
+    retrieveUser(token, (error, user) => {
+        if(error) return feedbackError(error.message)
+
+        const {fullname, likes} = user
+
+        setName(fullname)
+        setLikedPictograms(likes)
+    })  
 
  }
  
@@ -52,7 +70,7 @@ useEffect(() => {
       <h1>Bienvenid@ {name}</h1>
       <Discover onGoToInitial = {onGoToInitial}/>
       <Search onSearchPictograms = {handleSearchPictogram} error = {error}/>
-      {queryResults && <ResultList pictograms = {queryResults} likedPictograms = {likedPictograms} token = {token}/>}
+      {queryResults && <ResultList pictograms = {queryResults} likedPictograms = {likedPictograms} token = {token} onLikePictogram={handleOnLikePictogram}/>}
 
  </section>
 }

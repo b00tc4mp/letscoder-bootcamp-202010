@@ -21,13 +21,24 @@ export default function Profile() {
       setIsLoading(!isLoading)
     })
   }, [])
+
+  const handleOnLikePictogram = ()=> {
+    retrieveFavouritePictogram(token, (error, response) => {
+      if (error) return setError(error)
+      setTimeout(() => {
+        setError(null)
+      }, 6000)
+      setFavourite(response)
+    })
+  }
+  
   return <section className="profile">
     <h3>MIS PICTOGRAMAS FAVORITOS</h3>
     {error && <Feedback error={error} />}
     {isLoading ? <Spinner /> : favourites.length !== 0 ?
 
       favourites.map(({ _id, title, description }) => {
-       return <Pictogram data = {{id : _id, title, description}} likedPictograms = {[_id]}/>
+       return <Pictogram data = {{id : _id, title, description}} likedPictograms = {[_id]} onLikePictogram={handleOnLikePictogram}/>
       }) :
       <h2>You dont have any favourite pictromas yet :/</h2>}
 
