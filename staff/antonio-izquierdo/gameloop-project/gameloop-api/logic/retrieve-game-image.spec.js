@@ -25,7 +25,7 @@ describe('retrieveGameImage()', () => {
             description = randomStringWithPrefix('description')
             gameconsole = randomGameConsole()
             budget = '' + randomInteger(1, 100)
-            owner = randomId()
+            owner = userId
 
             image = '../populate/games/default.jpg'
 

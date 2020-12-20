@@ -13,14 +13,14 @@ describe('findGames()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let fullname, email, password, query, gameconsole, budget, priceMin, priceMax, name, description, owner
+        let fullname, email, password, query, gameconsole, budget, priceMin, priceMax, name, description, owner, gameId
 
         beforeEach(async () => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
-            query = randomStringWithPrefix('query')
+            query = name
             gameconsole = randomGameConsole()
             budget = '' + randomInteger(1, 1000)
             priceMin = '' + randomInteger(1, 1000)
@@ -28,12 +28,11 @@ describe('findGames()', () => {
 
             name = randomStringWithPrefix('name')
             description = randomStringWithPrefix('description')
-            owner = randomId()
 
             const user = { fullname, email, password }
 
             const newUser = await User.create(user)
-            userId = '' + newUser._id
+            owner = '' + newUser._id
 
             const game = { name, description, gameconsole, budget, owner }
 
@@ -43,23 +42,24 @@ describe('findGames()', () => {
         })
 
         it('shoud succed on a existing game', () => {
-            findGames(query, gameconsole, budget, priceMin, priceMax)
-
+            return findGames(query, gameconsole, budget, priceMin, priceMax)
                 .then(game => {
-                    expect(game.query).to.equal(name)
-                    expect(game.query).to.equal(description)
-                    expect(game.gameconsole).to.equal(gameconsole)
-                    expect(game.budget).to.be.a("number")
-                    expect(game.priceMin).to.be.a("number")
-                    expect(game.priceMax).to.be.a("number")
-                    expect(game.owner).to.equal(owner)
+                    console.log("game:", game)
+                    expect(game[0].name).to.equal(name)
+                    expect(game[0].description).to.equal(description)
+                    expect(game[0].gameconsole).to.equal(gameconsole)
+                    expect(game[0].budget).to.be.a("number")
                 })
         })
 
         it('should succeed with undefined parameters', () => {
-            findGames(undefined)
+            return findGames(undefined)
                 .then(game => {
-                    expect(game).to.be(null)
+                    expect(game[0].id).to.equal(gameId)
+                    expect(game[0].name).to.equal(name)
+                    expect(game[0].description).to.equal(description)
+                    expect(game[0].gameconsole).to.equal(gameconsole)
+                    expect(game[0].budget).to.be.a("number")
                 })
         })
 

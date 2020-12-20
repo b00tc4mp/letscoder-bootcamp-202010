@@ -15,8 +15,6 @@ module.exports = function (gameId) {
     return Game.findByIdAndRemove(gameId).lean()
         .then(game => {
             if (!game) throw new NotFoundError(`game with id ${gameId} not found`)
-
-
             return {}
         })
 }

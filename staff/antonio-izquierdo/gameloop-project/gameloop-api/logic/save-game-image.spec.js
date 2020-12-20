@@ -1,11 +1,12 @@
 require('dotenv').config()
-
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomGameConsole, randomId, randomInteger, randomEmptyOrBlankString, randomWrongLengthId } = require('../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomGameConsole, randomNotStringNumber, randomId, randomNotId, randomWrongLengthId, randomInteger  } = require('../utils/randoms')
 require('../utils/array-polyfills')
 const saveGameImage = require('./save-game-image')
-const { models: { User, Game }, mongoose: { Types: { ObjectId } }, mongoose } = require('gameloop-data')
-const saveGame = require('./save-game')
+const { mongoose, models: { User, Game } } = require('gameloop-data')
+const fs = require('fs')
+const fsp = fs.promises
+const path = require('path')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
@@ -14,124 +15,110 @@ describe('saveGameImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let fullname, email, password, gameId, name, description, gameconsole, budget, owner
+        let fullname, email, password, name, description, gameconsole, budget
 
-        beforeEach(async() => {
+        beforeEach(async () => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 
-            gameId = randomId()
-            name = randomStringWithPrefix('password')
+            name = randomStringWithPrefix('name')
             description = randomStringWithPrefix('description')
             gameconsole = randomGameConsole()
-            budget = '' + randomInteger(1, 100)
-            owner = randomId()
-            
+            budget = '' + randomInteger(1, 1000)
+
+            gameImage = fs.createReadStream(path.join(__dirname, '../data/games/default.jpg'))
+
             const user = { fullname, email, password }
 
             const newUser = await User.create(user)
-            userId = '' + newUser._id
-            
-            const game = {gameId, name, description, gameconsole, budget, owner}
+            owner = '' + newUser._id
+
+            const game = { name, description, gameconsole, budget, owner }
 
             const newGame = await Game.create(game)
             gameId = '' + newGame._id
-
         })
 
-        it.skip('shoud succed on new game', () => {
-            let stream = '../populate/games/default.jpg'
+        it('should succeed saving the game image', () => {
+            return saveGameImage(owner, gameId, gameImage)
+                .then(result => {
+                    expect(result).to.be.undefined
 
-            saveGameImage(gameId, stream)
-               
-            .then(() =>
-                    Game.findOne({ gameId })
-                )
-                .then(game => {
-                    expect(game.gameId).to.equal(gameId)
-                    expect(game.stream).to.equal(stream)
+                    return fsp.access(path.join(__dirname, `../data/games/${gameId}.jpg`), fs.F_OK)
                 })
         })
 
-        it.skip('should succeed with undefined parameters', () => {
-            saveGameImage(undefined)
-                .then(game => {
-                    expect(game).to.be(null)
-                })
-        })
-
-        afterEach(() =>
-            User.deleteMany().then(()=>
-                {Game.deleteMany().then(()=>
-                    {Game.deleteOne({ _id: userId })})})       
-        )
+        afterEach(() => Promise.all([
+            Game.deleteMany(),
+            fsp.unlink(path.join(__dirname, `../data/games/${gameId}.jpg`))
+        ]))
     })
 
     describe('on a non existing user', () => {
-        let stream, gameId
+        let owner, gameImage, gameId
 
         beforeEach(() => {
-
-            gameId = randomId()            
-            stream = '../populate/games/default.jpg'
+            owner = randomId()
+            gameId = randomId()
+            gameImage = fs.createReadStream(path.join(__dirname, '../data/games/default.jpg'))
 
         })
 
-        it.skip('shoud fail when user and pet does not exists', () => {
-            saveGameImage(gameId, stream)
+        it('shoud fail when user and game does not exists', () => {
+            return saveGameImage(gameId, gameImage)
 
-            .catch(error => {
-                expect(error).to.be.instanceOf(Error)
+                .catch(error => {
+                    expect(error).to.be.instanceOf(Error)
 
-                expect(error.message).to.equal(`user with id ${userId} not found`)
-            })
-            
+                    expect(error.message).to.equal(`user with id ${userId} not found`)
+                })
         })
-
-    }) 
+    })
 
     describe('when any parameter is wrong', () => {
         describe('when gameId is wrong', () => {
+
             describe('when gameId is empty or blank', () => {
-                let gameId, stream
+                let gameId, gameImage
 
                 beforeEach(() => {
                     gameId = randomEmptyOrBlankString()
-                    stream = '../populate/games/default.jpg'
+                    gameImage = fs.createReadStream(path.join(__dirname, '../data/games/default.jpg'))
+
                 })
 
-                it('should fail on an empty or blank gameId', () => {
-                    expect(() => saveGameImage(gameId, stream, () => { })).to.throw(ContentError, 'id is empty or blank')
-                })
+                it('should fail on an empty or blank gameId', () =>
+                    expect(() => saveGameImage(gameId, gameImage, () => { })).to.throw(ContentError, 'id is empty or blank')
+                )
             })
-
             describe('when gameId is not a string', () => {
-                let gameId, stream
+                let gameId, gameImage
 
                 beforeEach(() => {
                     gameId = randomNonString()
-                    stream = '../populate/games/default.jpg'
+                    gameImage = fs.createReadStream(path.join(__dirname, '../data/games/default.jpg'))
                 })
 
-                it('should fail on a non string gameId', () => {
-                    expect(() => saveGameImage(gameId, stream, () => { })).to.throw(TypeError, `${gameId} is not an id`)
-                })
+                it('should fail when gameId is not an string', () =>
+                    expect(() => saveGameImage(gameId, gameImage, () => { })).to.throw(TypeError, `${gameId} is not an id`)
+                )
+
             })
-
-            describe('when gameId length is wrong', () => {
-                let gameId, stream
+            describe('when gameId lenght is not 24', () => {
+                let gameId, gameImage
 
                 beforeEach(() => {
-                    gameId = randomWrongLengthId()
-                    stream = '../populate/games/default.jpg'
+                    gameId = '5fbcd46c1cc24f9c7ce22db000'
+                    gameImage = fs.createReadStream(path.join(__dirname, '../data/games/default.jpg'))
                 })
 
-                it('should fail on a non valid gameId length', () => {
-                    expect(() => saveGameImage(gameId, stream, () => { })).to.throw(`id length ${gameId.length} is not 24`)
-                })
+                it('should fail when gameId lenght is not 24', () =>
+                    expect(() => saveGameImage(gameId, gameImage, () => { })).to.throw(LengthError, `id length ${gameId.length} is not 24`)
+                )
+
             })
         })
+        after(mongoose.disconnect)
     })
-    after(mongoose.disconnect)
 })

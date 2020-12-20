@@ -13,14 +13,13 @@ describe('deleteGame()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let fullname, email, password, gameId, name, description, gameconsole, owner, userId, image
+        let fullname, email, password, gameId, name, description, gameconsole, owner, userId
 
         beforeEach(async() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
            
-            gameId = randomId()
             name = randomStringWithPrefix('password')
             description = randomStringWithPrefix('description')
             gameconsole = randomGameConsole()
@@ -32,17 +31,19 @@ describe('deleteGame()', () => {
             const newUser = await User.create(user)
             userId = '' + newUser._id
             
-            const game = { gameId, name, description, gameconsole, budget, owner, image }
-
+            const game = { name, description, gameconsole, budget, owner }
+            
             const newGame = await Game.create(game)
             gameId = '' + newGame._id
-
         })
 
         it('shoud succed on a existing game', () => {
-            deleteGame(gameId)
+            return deleteGame(gameId)
                
-            .then(result => expect(result.deletedCount).to.equal(1))
+            .then(result => {
+                    console.log("result :", result)
+                    expect(result).to.be.an.instanceOf(Object)
+                })     
         })
 
         afterEach(() =>
@@ -61,7 +62,7 @@ describe('deleteGame()', () => {
         })
 
         it('shoud fail when a game does not exists', () => {
-            deleteGame(gameId)
+            return deleteGame(gameId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 

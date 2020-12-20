@@ -24,7 +24,7 @@ describe('saveGame()', () => {
                 .then(user => userId = user.id)
         })
         describe('when user doesn\'t have games', () => {
-            let  name, description, gameconsole, budget
+            let name, description, gameconsole, budget
 
             beforeEach(() => {
                 name = randomStringWithPrefix('name')
@@ -33,8 +33,8 @@ describe('saveGame()', () => {
                 budget = '' + randomInteger(1, 100)
             })
 
-            it('should succeed creating a new game', () =>
-                saveGame(undefined, name, description, gameconsole, budget, userId)
+            it('should succeed creating a new game', () => {
+                return saveGame(undefined, name, description, gameconsole, budget, userId)
                     .then(gameId => {
 
                         expect(ObjectId.isValid(gameId)).be.true
@@ -51,7 +51,7 @@ describe('saveGame()', () => {
                         expect(game.gameconsole).to.equal(gameconsole)
                         expect(game.budget).to.be.a('number')
                     })
-            )
+            })
 
             afterEach(() => Game.deleteMany())
         })
@@ -72,9 +72,9 @@ describe('saveGame()', () => {
                 const user = { fullname, email, password }
 
                 User.create(user)
-                .then(user => userId = user.id)
-                .then(Game.create({ name, description, gameconsole, budget, owner: userId })
-                .then(game => gameId = game._id))
+                    .then(user => userId = user.id)
+                    .then(Game.create({ name, description, gameconsole, budget, owner: userId })
+                        .then(game => gameId = game._id))
             })
 
             it('should succeed updating the game', () => {
@@ -84,31 +84,22 @@ describe('saveGame()', () => {
                 budget = '' + randomInteger(1, 100)
 
 
-                return saveGame(gameId, name, description, gameconsole, budget, userId )
+                return saveGame(gameId, name, description, gameconsole, budget, userId)
                     .then(gameId => {
                         expect(ObjectId.isValid(gameId)).be.true
 
                         return Game.findById({ _id: gameId })
-                        .then(game => {    
-                            expect(game.name).to.equal(name)
-                            expect(game.description).to.equal(description)
-                            expect(game.gameconsole).to.equal(gameconsole)
-                            expect(game.budget).to.be.a('number')
-                        })
+                            .then(game => {
+                                expect(game.name).to.equal(name)
+                                expect(game.description).to.equal(description)
+                                expect(game.gameconsole).to.equal(gameconsole)
+                                expect(game.budget).to.be.a('number')
+                            })
                     })
             })
-
-            it('should succeed with undefined parameters', () => {
-                saveGame(undefined)
-                    .then(game => {
-                        expect(game).to.be(null)
-                    })
-            })
-
-            afterEach(() => Game.deleteMany())
         })
 
-        describe('when user game does not exist (it was removed from db)', () => {
+        describe('when user`s game does not exist (it was removed from db)', () => {
             let gameId, name, description, gameconsole, budget
 
             beforeEach(() => {
@@ -119,39 +110,41 @@ describe('saveGame()', () => {
                 budget = '' + randomInteger(1, 100)
             })
 
-            it('should fail on trying to update a game that does not exist any more', () =>
-                saveGame(undefined, name, description, gameconsole, budget, userId)
+            it('should fail on trying to update a game that does not exist any more', () => {
+                return saveGame(undefined, name, description, gameconsole, budget, userId)
                     .catch(error => {
                         expect(error).to.be.instanceOf(Error)
 
                         expect(error.message).to.equal(`game with id ${gameId} not found`)
                     })
-            )
+            })
+
+            afterEach(() => Game.deleteMany())
+        })
+        describe('when user does not exist', () => {
+            let name, description, gameconsole, budget, userId
+
+            beforeEach(() => {
+                name = randomStringWithPrefix('name')
+                description = randomStringWithPrefix('description')
+                gameconsole = randomGameConsole()
+                budget = '' + randomInteger(1, 100)
+                userId = randomId()
+            })
+
+            it('should fail alerting user with message: "id does not exist"', () => {
+                return saveGame(undefined, name, description, gameconsole, budget, userId)
+                    .catch(error => {
+                        expect(error).to.be.instanceOf(Error)
+
+                        expect(error.message).to.equal(`user with id ${userId} not found`)
+                    })
+            })
         })
 
         afterEach(() => User.deleteMany())
     })
 
-    describe('when user does not exist', () => {
-        let name, description, gameconsole, budget, userId
-
-        beforeEach(() => {
-            name = randomStringWithPrefix('name')
-            description = randomStringWithPrefix('description')
-            gameconsole = randomGameConsole()
-            budget = '' + randomInteger(1, 100)
-            userId = randomId()
-        })
-
-        it('should fail alerting user with message: "id does not exist"', () =>
-            saveGame(undefined, name, description, gameconsole, budget, userId)
-                .catch(error => {
-                    expect(error).to.be.instanceOf(Error)
-
-                    expect(error.message).to.equal(`user with id ${userId} not found`)
-                })
-        )
-    })
 
     describe('when any parameter is wrong', () => {
         describe('when name is wrong', () => {
@@ -274,7 +267,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non valid gameconsole', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId,() => { })).to.throw(TypeError, `${gameconsole} is not a valid gameconsole`)
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${gameconsole} is not a valid gameconsole`)
                 })
             })
         })
@@ -348,7 +341,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail when gameId is not an id', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError,`${gameId} is not an id`)
+                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${gameId} is not an id`)
                 })
             })
 

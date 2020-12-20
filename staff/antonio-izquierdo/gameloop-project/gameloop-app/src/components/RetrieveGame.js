@@ -9,13 +9,13 @@ function RetrieveGame({ gameId }) {
     const [currentUser, setCurrentUser] = useState()
     useEffect(() => {
         try {
-            debugger
             retrieveGame(gameId, (error, game) => {
                 console.log(gameId)
 
                 if (error) return alert(error.message)
 
                 setGame(game)
+                console.log(game)
             })
             const { token } = sessionStorage
 
@@ -39,11 +39,10 @@ function RetrieveGame({ gameId }) {
         <p className="result__p">description: {game.description}</p>
         <p className="result__p">gameconsole: {game.gameconsole}</p>
         <p className="result__p">budget: {game.budget}</p>
-
-        <p className="result__p">fullname: {currentUser.fullname}</p>
-        <p className="result__p">phone: {currentUser.phone}</p>
-        <p className="result__p">budget: {currentUser.contact}</p>
-        <p className="result__p">city: {currentUser.city}</p>
+        <p className="result__p">fullname: {game.fullname}</p>
+        <p className="result__p">phone: {game.phone}</p>
+        <p className="result__p">contact: {game.contact}</p>
+        <p className="result__p">city: {game.city}</p>
         
     </article> : <> </>
 

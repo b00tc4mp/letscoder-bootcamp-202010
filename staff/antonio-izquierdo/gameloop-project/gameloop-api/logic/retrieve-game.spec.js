@@ -41,7 +41,6 @@ describe('retrieveGame()', () => {
         it('shoud succed on a existing game', () => {
             return retrieveGame(gameId)
                 .then(game => {
-                    console.log(game)
                     expect(game.name).to.equal(name)
                     expect(game.description).to.equal(description)
                     expect(game.gameconsole).to.equal(gameconsole)
