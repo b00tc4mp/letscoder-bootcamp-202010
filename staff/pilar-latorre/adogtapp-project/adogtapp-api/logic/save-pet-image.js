@@ -14,6 +14,7 @@ const { NotFoundError } = require('../errors')
  */
 
 module.exports = (userId, petId, stream) => {
+    validateId(userId)
     validateId(petId)
     //validateStream(stream)
     
