@@ -21,16 +21,26 @@ function Profile({ name, onRetrieveUserGames, doRefreshGames, games, onModify, c
     return <section>
         <h2>Hello, {name}! </h2>
 
-        <div className="profile__form">
+    <form className="profile__form" onSubmit={(event => {
+            event.preventDefault()
+
+            const { target: { fullname: { value: fullname }, contact: { value: contact }, city: { value: city }, phone: { value: phone } } } = event
+            console.log(fullname)
+            try {
+                onModify(fullname, contact, city, phone)
+            } catch (error) {
+                alert(error.message)
+            }
+        })}>
             <input className="profile__input" type="text" name="fullname" placeholder="" defaultValue={currentUser.fullname}></input>
             <input className="profile__input" type="text" name="contact" placeholder="How do you want to be contact? Insert your phone and a description" defaultValue={currentUser.contact}></input>
             <input className="profile__input" type="text" name="city" placeholder="Insert your city" defaultValue={currentUser.city}></input>
             <input className="profile__input" type="text" name="phone" placeholder="Insert your phone" defaultValue={currentUser.phone}></input>
-        </div>
         <div className="buttons-container">
-        <button className="button-save">SAVE</button>
-        <button className="button-my-games" onClick={onRetrieveUserGames}>MY GAMES</button>
+            <button className="button-save">SAVE</button>
+            <button className="button-my-games" onClick={onRetrieveUserGames}>MY GAMES</button>
         </div>
+    </form>
 
         <section className="profile">
             <section className="u-p-h-20">
@@ -65,19 +75,6 @@ function Profile({ name, onRetrieveUserGames, doRefreshGames, games, onModify, c
             </section>
         </section>
 
-        <form className="profile__form" onSubmit={(event => {
-            event.preventDefault()
-
-            const { target: { fullname: { value: fullname }, contact: { value: contact }, city: { value: city }, phone: { value: phone } } } = event
-            console.log(fullname)
-            try {
-                onModify(fullname, contact, city, phone)
-            } catch (error) {
-                alert(error.message)
-            }
-        })}>
-
-        </form>
         {<BsPeopleCircle className="home__button-profile" size={40} />}
 
     </section>

@@ -9,6 +9,7 @@ function RetrieveGame({ gameId }) {
     const [currentUser, setCurrentUser] = useState()
     useEffect(() => {
         try {
+            debugger
             retrieveGame(gameId, (error, game) => {
                 console.log(gameId)
 

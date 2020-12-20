@@ -107,14 +107,12 @@ export default function Home({onLogout}) {
     }
 
     const handleModifyUser = (fullname, contact, phone, city) => {
-
         try {
             const { token } = sessionStorage
 
             modifyUser(token, { fullname, contact, phone, city }, (error, changes) => {
                 if (error) return feedbackError('could not find any changes')
                 
-
                 setCurrentUser({fullname, contact, phone, city})
 
 
