@@ -1,0 +1,491 @@
+info 2020-11-17T16:19:13.188Z - server running on port 3000
+info 2020-11-17T16:19:23.643Z - stopping server
+info 2020-11-17T16:21:52.952Z - server running on port 3000
+error 2020-11-17T16:22:22.069Z - Error: Failed to lookup view "login" in views directory "/Users/manuelbarzi/.../letscoder/letscoder-bootcamp-202010/collab/letscoder-bootcamp-202010/staff/manuel-barzi/web-server/views"
+info 2020-11-17T16:31:56.568Z - server running on port 3000
+info 2020-11-17T16:32:51.784Z - server running on port 3000
+info 2020-11-17T16:32:55.107Z - stopping server
+info 2020-11-17T16:40:45.941Z - server running on port 3000
+info 2020-11-17T16:49:00.267Z - stopping server
+info 2020-11-17T16:49:00.268Z - stopping server
+info 2020-11-17T16:49:11.080Z - server running on port 3000
+error 2020-11-17T16:49:24.446Z - could not accept cookies :(
+error 2020-11-17T16:50:33.684Z - could not accept cookies :(
+info 2020-11-17T17:11:52.252Z - stopping server
+
+info 2020-11-17T17:13:02.777Z - server running on port 3000
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-17T17:14:34.355Z - stopping server
+info 2020-11-18T13:00:35.228Z - server running on port 4000
+info 2020-11-18T13:01:12.536Z - stopping server
+info 2020-11-18T13:01:12.537Z - stopping server
+info 2020-11-18T13:01:15.670Z - server running on port 4000
+info 2020-11-18T13:03:18.380Z - stopping server
+info 2020-11-18T13:03:18.381Z - stopping server
+info 2020-11-18T13:15:25.409Z - server running on port 4000
+info 2020-11-18T13:18:09.224Z - server running on port 4000
+error 2020-11-18T13:18:23.101Z - Error: fullname is empty or blank
+error 2020-11-18T13:18:36.202Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:03.308Z - stopping server
+info 2020-11-18T13:19:04.401Z - server running on port 4000
+error 2020-11-18T13:19:06.886Z - Error: e-mail serpiente@mail.com already registered
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:19:42.673Z - stopping server
+info 2020-11-18T13:20:26.360Z - server running on port 4000
+info 2020-11-18T13:43:31.863Z - stopping server
+info 2020-11-18T13:43:31.864Z - stopping server
+info 2020-11-18T13:45:50.034Z - server running on port 4000
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:15.244Z - stopping server
+info 2020-11-18T13:49:34.615Z - server running on port 4000
+info 2020-11-18T13:53:43.043Z - server running on port 4000
+info 2020-11-18T13:55:43.167Z - server running on port 4000
+info 2020-11-18T13:56:35.766Z - server running on port 4000
+info 2020-11-18T13:58:25.580Z - server running on port 4000
+info 2020-11-18T13:59:49.053Z - server running on port 4000
+info 2020-11-18T14:00:17.901Z - server running on port 4000
+error 2020-11-18T14:00:43.219Z - Error: e-mail manuelbarzi@gmail.com already registered
+info 2020-11-18T16:09:02.857Z - server running on port 4000
+info 2020-11-18T16:09:54.854Z - stopping server
+info 2020-11-18T16:09:54.855Z - stopping server
+info 2020-11-18T16:10:52.852Z - server running on port 4000
+info 2020-11-18T16:15:28.282Z - stopping server
+info 2020-11-18T16:15:28.283Z - stopping server
+info 2020-11-18T16:15:30.485Z - server running on port 4000
+error 2020-11-18T17:12:11.936Z - TypeError: undefined is not a password
+info 2020-11-18T17:13:24.691Z - stopping server
+info 2020-11-18T17:13:24.692Z - stopping server
+info 2020-11-18T17:13:28.237Z - server running on port 4000
+error 2020-11-18T17:14:41.571Z - Error: wrong credentials
+info 2020-11-18T17:16:38.933Z - stopping server
+info 2020-11-18T17:16:38.936Z - stopping server
+info 2020-11-18T17:16:55.436Z - server running on port 4000
+error 2020-11-18T17:17:14.735Z - Error: wrong credentials
+info 2020-11-18T17:19:27.726Z - stopping server
+info 2020-11-18T17:19:27.727Z - stopping server
+info 2020-11-18T17:20:09.125Z - server running on port 4000
+info 2020-11-18T17:27:42.997Z - server running on port 4000
+error 2020-11-18T17:36:01.912Z - Error: wrong credentials
+error 2020-11-18T18:16:20.488Z - Error: wrong credentials
+error 2020-11-18T18:16:24.867Z - Error: wrong credentials
+error 2020-11-18T18:16:30.460Z - Error: wrong credentials
+info 2020-11-18T18:20:49.794Z - stopping server
+info 2020-11-18T18:20:49.796Z - stopping server
+info 2020-11-19T06:54:27.137Z - server running on port 4000
+info 2020-11-19T07:28:20.761Z - stopping server
+info 2020-11-19T07:28:25.951Z - server running on port 4000
+info 2020-11-19T07:32:42.858Z - stopping server
+info 2020-11-19T07:32:42.858Z - stopping server
+info 2020-11-19T07:32:45.984Z - server running on port 4000
+info 2020-11-19T07:33:01.593Z - stopping server
+info 2020-11-19T07:33:01.593Z - stopping server
+info 2020-11-19T07:35:32.862Z - server running on port 4000
+error 2020-11-19T07:35:37.581Z - ReferenceError: id is not defined
+info 2020-11-19T09:02:54.112Z - stopping server
+info 2020-11-19T09:02:54.113Z - stopping server
+info 2020-11-19T09:03:22.345Z - server running on port 4000
+error 2020-11-19T10:32:49.021Z - ReferenceError: id is not defined
+info 2020-11-19T10:43:38.201Z - stopping server
+info 2020-11-19T10:43:38.205Z - stopping server
+info 2020-11-19T10:43:40.452Z - server running on port 4000
+error 2020-11-19T10:43:45.848Z - TypeError: undefined is not an e-mail
+error 2020-11-19T10:44:38.209Z - TypeError: undefined is not an e-mail
+info 2020-11-19T10:54:25.182Z - stopping server
+info 2020-11-19T10:54:25.184Z - stopping server
+info 2020-11-19T10:54:27.149Z - server running on port 4000
+info 2020-11-19T10:54:47.209Z - stopping server
+info 2020-11-19T10:54:47.210Z - stopping server
+info 2020-11-19T10:56:59.441Z - server running on port 4000
+info 2020-11-19T11:10:19.519Z - stopping server
+info 2020-11-19T11:10:19.520Z - stopping server
+info 2020-11-19T11:10:21.481Z - server running on port 4000
+error 2020-11-19T11:10:37.525Z - TypeError: undefined is not a id
+info 2020-11-19T11:11:29.142Z - stopping server
+info 2020-11-19T11:11:29.142Z - stopping server
+info 2020-11-19T11:11:30.656Z - server running on port 4000
+error 2020-11-19T11:11:33.641Z - TypeError: undefined is not a id
+info 2020-11-19T11:12:06.014Z - stopping server
+info 2020-11-19T11:12:06.015Z - stopping server
+info 2020-11-19T11:12:07.944Z - server running on port 4000
+error 2020-11-19T11:12:10.727Z - TypeError: undefined is not a id
+info 2020-11-19T11:12:49.139Z - stopping server
+info 2020-11-19T11:12:49.139Z - stopping server
+info 2020-11-19T11:29:42.968Z - server running on port 4000
+info 2020-11-19T11:32:59.954Z - server running on port 4000
+error 2020-11-19T11:35:25.619Z - TypeError: undefined is not an e-mail
+info 2020-11-19T11:36:32.331Z - stopping server
+info 2020-11-19T11:36:34.839Z - server running on port 4000
+error 2020-11-19T11:36:43.132Z - TypeError: Assignment to constant variable.
+info 2020-11-19T11:36:59.208Z - stopping server
+info 2020-11-19T11:36:59.209Z - stopping server
+info 2020-11-19T11:37:02.312Z - server running on port 4000
+info 2020-11-19T11:37:51.226Z - stopping server
+info 2020-11-19T11:37:51.227Z - stopping server
+info 2020-11-19T11:37:53.305Z - server running on port 4000
+error 2020-11-19T11:37:57.632Z - Error: wrong credentials
+info 2020-11-19T11:41:47.830Z - stopping server
+info 2020-11-19T11:41:47.834Z - stopping server
+info 2020-11-19T11:41:50.283Z - server running on port 4000
+error 2020-11-19T11:41:54.636Z - TypeError: undefined is not an e-mail
+info 2020-11-19T11:44:02.576Z - stopping server
+info 2020-11-19T11:44:02.576Z - stopping server
+info 2020-11-19T11:44:37.941Z - server running on port 4000
+info 2020-11-19T11:45:22.512Z - stopping server
+info 2020-11-19T11:45:22.513Z - stopping server
+info 2020-11-19T11:46:26.931Z - server running on port 4000
+error 2020-11-19T11:46:30.575Z - TypeError: [object Object] is not an e-mail
+info 2020-11-19T11:47:00.144Z - stopping server
+info 2020-11-19T11:47:00.145Z - stopping server
+info 2020-11-19T11:47:01.731Z - server running on port 4000
+error 2020-11-19T11:47:04.792Z - TypeError: [object Object] is not an e-mail
+info 2020-11-19T11:47:24.778Z - stopping server
+info 2020-11-19T11:47:24.779Z - stopping server
+info 2020-11-19T11:47:26.655Z - server running on port 4000
+error 2020-11-19T11:47:31.787Z - TypeError: [object Object] is not an e-mail
+info 2020-11-19T11:48:26.082Z - stopping server
+info 2020-11-19T11:48:26.082Z - stopping server
+info 2020-11-19T12:13:39.021Z - server running on port 4000
+error 2020-11-19T12:13:51.391Z - Error: id length is not 31
+error 2020-11-19T12:14:37.495Z - Error: id length is not 31
+error 2020-11-19T12:18:06.166Z - Error: id length is not 31
+error 2020-11-19T12:18:11.133Z - Error: id length is not 31
+error 2020-11-19T12:18:14.093Z - Error: id length is not 31
+info 2020-11-19T13:48:11.779Z - stopping server
+info 2020-11-19T13:48:11.780Z - stopping server
+info 2020-11-19T13:48:15.200Z - server running on port 4000
+error 2020-11-19T13:48:28.587Z - Error: id length is not 31
+info 2020-11-19T13:49:25.699Z - stopping server
+info 2020-11-19T13:49:25.699Z - stopping server
+info 2020-11-19T13:49:30.931Z - server running on port 4000
+error 2020-11-19T13:49:36.941Z - Error: user with id Bearer not found
+info 2020-11-19T13:50:38.231Z - stopping server
+info 2020-11-19T13:50:38.232Z - stopping server
+info 2020-11-19T13:50:39.643Z - server running on port 4000
+error 2020-11-19T13:50:42.586Z - Error: user with id Bearer not found
+info 2020-11-19T13:51:04.760Z - stopping server
+info 2020-11-19T13:51:04.761Z - stopping server
+info 2020-11-19T13:51:06.413Z - server running on port 4000
+error 2020-11-19T13:51:08.749Z - Error: user with id Bearer not found
+error 2020-11-19T13:52:51.113Z - Error: user with id Bearer not found
+info 2020-11-19T13:53:11.720Z - stopping server
+info 2020-11-19T13:53:25.437Z - server running on port 4000
+error 2020-11-19T13:53:28.071Z - Error: user with id Bearer not found
+info 2020-11-19T13:54:07.221Z - stopping server
+info 2020-11-19T13:54:08.432Z - server running on port 4000
+error 2020-11-19T13:54:10.920Z - Error: user with id Bearer not found
+info 2020-11-19T13:55:31.271Z - stopping server
+info 2020-11-19T13:55:31.272Z - stopping server
+info 2020-11-19T13:58:52.574Z - server running on port 4000
+error 2020-11-19T13:58:58.315Z - Error: user with id Bearer not found
+info 2020-11-19T13:59:22.531Z - stopping server
+info 2020-11-19T13:59:22.532Z - stopping server
+info 2020-11-19T13:59:50.682Z - server running on port 4000
+error 2020-11-19T13:59:52.839Z - Error: user with id Bearer not found
+info 2020-11-19T14:00:54.313Z - stopping server
+info 2020-11-19T14:00:55.546Z - server running on port 4000
+error 2020-11-19T14:00:58.107Z - Error: user with id Bearer not found
+info 2020-11-19T14:01:59.726Z - stopping server
+info 2020-11-19T14:01:59.726Z - stopping server
+info 2020-11-19T14:02:01.105Z - server running on port 4000
+error 2020-11-19T14:02:03.262Z - ReferenceError: id is not defined
+info 2020-11-19T14:03:10.961Z - stopping server
+info 2020-11-19T14:03:10.961Z - stopping server
+info 2020-11-19T14:03:12.432Z - server running on port 4000
+error 2020-11-19T14:03:14.910Z - Error: user with id Bearer not found
+info 2020-11-19T14:04:08.295Z - stopping server
+info 2020-11-19T14:04:08.296Z - stopping server
+info 2020-11-19T14:04:17.072Z - server running on port 4000
+info 2020-11-19T14:09:36.934Z - stopping server
+info 2020-11-19T14:09:36.936Z - stopping server
+info 2020-11-19T14:11:59.884Z - server running on port 4000
+info 2020-11-19T14:17:29.069Z - stopping server
+info 2020-11-19T14:17:29.070Z - stopping server
+info 2020-11-19T14:18:36.747Z - server running on port 4000
+error 2020-11-19T14:18:41.908Z - Error: user with id Bearer not found
+info 2020-11-19T14:20:31.038Z - stopping server
+info 2020-11-19T14:20:31.038Z - stopping server
+info 2020-11-19T14:20:32.820Z - server running on port 4000
+info 2020-11-19T14:21:14.785Z - stopping server
+info 2020-11-19T14:21:14.786Z - stopping server
+info 2020-11-19T14:21:17.163Z - server running on port 4000
+error 2020-11-19T14:21:20.513Z - Error: user with id Bearer not found
+info 2020-11-19T14:31:53.102Z - stopping server
+info 2020-11-19T14:31:53.105Z - stopping server
+info 2020-11-19T14:31:54.973Z - server running on port 4000
+error 2020-11-19T14:31:57.897Z - Error: user with id Bearer not found
+info 2020-11-19T14:32:52.672Z - stopping server
+info 2020-11-19T14:32:52.672Z - stopping server
+info 2020-11-19T14:32:54.248Z - server running on port 4000
+error 2020-11-19T14:32:56.415Z - Error: user with id Bearer not found
+info 2020-11-19T14:34:12.934Z - stopping server
+info 2020-11-19T14:34:12.935Z - stopping server
+info 2020-11-19T14:34:14.631Z - server running on port 4000
+info 2020-11-19T14:34:36.671Z - stopping server
+info 2020-11-19T14:34:36.671Z - stopping server
+info 2020-11-19T14:34:38.001Z - server running on port 4000
+info 2020-11-19T15:10:31.364Z - stopping server
+info 2020-11-19T15:10:31.363Z - stopping server
+info 2020-11-19T15:12:46.331Z - server running on port 4000
+info 2020-11-19T15:13:26.715Z - stopping server
+info 2020-11-19T15:13:26.715Z - stopping server
+info 2020-11-19T15:58:44.407Z - server running on port 4000
+info 2020-11-19T16:06:12.176Z - stopping server
+info 2020-11-19T16:06:12.178Z - stopping server
+info 2020-11-19T16:06:13.922Z - server running on port 4000
+error 2020-11-19T16:06:18.299Z - Error: id length is not 31 digits
+error 2020-11-19T16:07:29.873Z - Error: id length is not 31 digits
+error 2020-11-19T16:09:13.382Z - Error: id length is not 31 digits
+error 2020-11-19T16:10:02.873Z - Error: id length is not 31 digits
+info 2020-11-19T16:11:35.338Z - stopping server
+info 2020-11-19T16:11:35.340Z - stopping server
+info 2020-11-19T16:11:41.278Z - server running on port 4000
+info 2020-11-19T17:04:55.407Z - stopping server
+info 2020-11-19T17:04:55.409Z - stopping server
+info 2020-11-20T10:53:58.826Z - server running on port 4000
+error 2020-11-20T12:00:25.936Z - Error: id is empty or blank
+error 2020-11-20T13:14:47.000Z - TypeError: undefined is not a id
+error 2020-11-20T13:18:31.445Z - TypeError: undefined is not a id
+error 2020-11-20T13:19:29.420Z - TypeError: undefined is not a id
+error 2020-11-20T13:24:57.795Z - TypeError: undefined is not a id
+error 2020-11-20T13:25:28.490Z - TypeError: undefined is not a id
+error 2020-11-20T13:35:37.582Z - TypeError: undefined is not a id
+error 2020-11-20T13:36:33.674Z - TypeError: undefined is not a id
+error 2020-11-20T13:51:34.609Z - TypeError: undefined is not a id
+info 2020-11-20T13:53:19.503Z - server running on port 4000
+info 2020-11-20T13:55:24.928Z - server running on port 4000
+info 2020-11-20T17:35:13.625Z - starting server
+info 2020-11-20T17:35:30.455Z - stopping server
+info 2020-11-20T17:36:03.617Z - starting server
+info 2020-11-20T17:36:14.162Z - starting server
+info 2020-11-20T17:36:14.191Z - server running on port 4000
+info 2020-11-20T17:38:12.594Z - stopping server
+info 2020-11-20T17:38:12.595Z - stopping server
+info 2020-11-20T18:08:01.795Z - starting server
+info 2020-11-20T18:10:05.313Z - starting server
+info 2020-11-20T18:13:11.896Z - starting server
+info 2020-11-20T18:18:20.181Z - starting server
+info 2020-11-20T18:18:58.931Z - starting server
+info 2020-11-20T18:19:27.242Z - starting server
+info 2020-11-20T18:20:51.170Z - starting server
+info 2020-11-20T18:21:44.590Z - starting server
+info 2020-11-20T18:23:29.226Z - starting server
+error 2020-11-20T18:24:49.487Z - MongoServerSelectionError: connection timed out
+info 2020-11-20T18:24:49.496Z - stopping server
+info 2020-11-21T04:26:30.253Z - starting server
+info 2020-11-21T04:26:30.304Z - server running on port 4000
+info 2020-11-21T04:34:08.026Z - starting server
+info 2020-11-21T04:34:08.072Z - server running on port 4000
+info 2020-11-21T04:34:49.249Z - starting server
+info 2020-11-21T04:34:49.292Z - server running on port 4000
+info 2020-11-21T04:36:58.016Z - stopping server
+info 2020-11-21T04:38:30.748Z - starting server
+info 2020-11-21T04:47:15.626Z - starting server
+info 2020-11-21T04:48:59.900Z - starting server
+info 2020-11-21T04:49:30.556Z - starting server
+info 2020-11-21T04:54:43.819Z - starting server
+info 2020-11-21T09:39:57.482Z - starting server
+info 2020-11-21T09:39:57.523Z - server running on port 4000
+info 2020-11-21T10:36:24.568Z - starting server
+info 2020-11-21T10:36:24.609Z - server running on port 4000
+error 2020-11-21T10:36:45.862Z - Error: the email dagoman19@gmail.com was registered already
+error 2020-11-21T10:41:23.028Z - Error: the email dagoman19@gmail.com was registered already
+info 2020-11-21T10:45:57.996Z - stopping server
+info 2020-11-21T10:46:37.836Z - starting server
+info 2020-11-21T11:08:35.719Z - starting server
+info 2020-11-21T11:08:35.763Z - server running on port 4000
+error 2020-11-21T11:09:00.441Z - Error: id length is not 31 digits
+error 2020-11-21T11:12:22.499Z - Error: the email dagoman19@gmail.com was registered already
+error 2020-11-21T11:12:44.407Z - Error: the email dagoman19@gmail1.com was registered already
+error 2020-11-21T11:12:55.324Z - Error: the email dagoman19@mail.com was registered already
+error 2020-11-21T11:13:13.039Z - Error: the email lola@gmail.com was registered already
+info 2020-11-21T11:14:21.791Z - stopping server
+info 2020-11-21T11:15:38.974Z - starting server
+info 2020-11-21T11:15:39.014Z - server running on port 4000
+error 2020-11-21T11:15:55.248Z - Error: user with id 5fb898ff3a550d5535a9963d not found
+error 2020-11-21T11:19:31.765Z - Error: user with id 5fb898ff3a550d5535a9963d not found
+error 2020-11-21T11:22:55.941Z - Error: the email dagoman19@gmail.com was registered already
+info 2020-11-21T11:23:52.539Z - stopping server
+info 2020-11-21T11:34:15.396Z - starting server
+info 2020-11-21T11:34:15.436Z - server running on port 4000
+error 2020-11-21T11:34:27.950Z - Error: the email dagoman19@gmail1.com was registered already
+info 2020-11-21T11:34:44.161Z - stopping server
+info 2020-11-21T11:44:56.462Z - starting server
+info 2020-11-21T11:44:56.502Z - server running on port 4000
+error 2020-11-21T11:46:01.235Z - Error: the email culebra@gmail.com was registered already
+error 2020-11-21T11:46:48.475Z - Error: the email guepardo@gmail.com was registered already
+error 2020-11-21T11:46:57.149Z - Error: the email lola@gmail.com was registered already
+info 2020-11-21T11:48:02.971Z - stopping server
+info 2020-11-21T11:59:44.946Z - starting server
+info 2020-11-21T11:59:44.986Z - server running on port 4000
+info 2020-11-21T12:06:52.714Z - starting server
+info 2020-11-21T12:06:52.753Z - server running on port 4000
+error 2020-11-21T12:06:56.294Z - Error: user with id 5fb8fad9a15a822fff0a201b not found
+info 2020-11-21T12:07:24.477Z - stopping server
+info 2020-11-21T12:08:58.939Z - starting server
+info 2020-11-21T12:08:58.979Z - server running on port 4000
+error 2020-11-21T12:09:02.380Z - Error: wrong credentials
+error 2020-11-21T12:09:12.349Z - Error: user with id 5fb8fad9a15a822fff0a201b not found
+info 2020-11-21T12:09:40.107Z - stopping server
+info 2020-11-21T12:19:46.678Z - starting server
+info 2020-11-21T12:19:46.719Z - server running on port 4000
+info 2020-11-21T12:20:08.179Z - stopping server
+info 2020-11-21T14:13:28.343Z - starting server
+info 2020-11-21T14:13:28.383Z - server running on port 4000
+info 2020-11-21T14:15:15.357Z - stopping server
+info 2020-11-21T14:57:42.851Z - starting server
+info 2020-11-21T14:57:42.895Z - server running on port 4000
+info 2020-11-21T15:01:30.017Z - stopping server
+info 2020-11-21T15:04:18.411Z - starting server
+info 2020-11-21T15:04:18.450Z - server running on port 4000
+info 2020-11-21T15:05:51.400Z - stopping server
+info 2020-11-21T16:09:52.915Z - starting server
+info 2020-11-21T16:09:52.958Z - server running on port 4000
+info 2020-11-21T16:35:52.371Z - stopping server
+info 2020-11-21T17:39:26.650Z - starting server
+info 2020-11-21T17:39:26.691Z - server running on port 4000
+info 2020-11-22T04:22:00.315Z - stopping server
+info 2020-11-22T09:53:39.008Z - starting server
+info 2020-11-22T09:53:39.061Z - server running on port 4000
+info 2020-11-22T10:04:05.755Z - stopping server
+info 2020-11-22T10:29:54.325Z - starting server
+info 2020-11-22T10:29:54.375Z - server running on port 4000
+info 2020-11-22T10:31:59.319Z - stopping server
+info 2020-11-22T15:01:15.788Z - starting server
+info 2020-11-22T15:01:40.840Z - starting server
+info 2020-11-22T15:01:40.881Z - server running on port 4000
+info 2020-11-22T16:37:03.132Z - stopping server
+info 2020-11-22T16:53:30.050Z - starting server
+info 2020-11-22T16:53:30.091Z - server running on port 4000
+info 2020-11-23T06:23:14.629Z - starting server
+info 2020-11-23T06:23:14.667Z - server running on port 4000
+info 2020-11-23T06:31:41.072Z - stopping server
+info 2020-11-23T06:31:43.183Z - starting server
+info 2020-11-23T06:31:43.211Z - server running on port 4000
+error 2020-11-23T08:37:09.349Z - Error: wrong credentials
+info 2020-11-23T08:48:59.911Z - stopping server
+info 2020-11-23T08:49:01.333Z - starting server
+info 2020-11-23T08:49:01.363Z - server running on port 4000
+info 2020-11-23T08:50:05.835Z - stopping server
+info 2020-11-23T08:50:06.998Z - starting server
+info 2020-11-23T08:50:07.026Z - server running on port 4000
+info 2020-11-23T08:50:58.813Z - stopping server
+info 2020-11-23T08:51:00.009Z - starting server
+info 2020-11-23T08:51:00.043Z - server running on port 4000
+info 2020-11-23T08:56:37.966Z - stopping server
+info 2020-11-23T11:07:58.733Z - starting server
+info 2020-11-23T11:07:58.772Z - server running on port 4000
+info 2020-11-23T11:08:01.393Z - stopping server
+info 2020-11-23T11:17:33.355Z - starting server
+info 2020-11-23T11:17:33.401Z - server running on port 4000
+info 2020-11-23T11:25:00.037Z - stopping server
+info 2020-11-23T11:28:15.990Z - starting server
+info 2020-11-23T11:28:16.037Z - server running on port 4000
+info 2020-11-23T11:35:34.920Z - stopping server
+info 2020-11-23T11:58:30.890Z - starting server
+info 2020-11-23T11:58:30.937Z - server running on port 4000
+info 2020-11-23T12:08:29.076Z - stopping server
+info 2020-11-23T12:19:35.054Z - starting server
+info 2020-11-23T12:19:35.107Z - server running on port 4000
+info 2020-11-23T12:57:10.660Z - stopping server
+info 2020-11-23T15:50:24.770Z - starting server
+info 2020-11-23T15:50:24.809Z - server running on port 4000
+info 2020-11-23T15:53:47.900Z - stopping server
+info 2020-11-23T16:37:56.316Z - starting server
+info 2020-11-23T16:37:56.355Z - server running on port 4000
+info 2020-11-23T16:44:22.827Z - stopping server
+info 2020-11-24T10:37:26.207Z - starting server
+info 2020-11-24T10:37:26.241Z - server running on port 4000
+info 2020-11-24T10:37:28.872Z - stopping server
+info 2020-11-24T10:37:28.872Z - stopping server
+info 2020-11-25T12:13:45.174Z - starting server
+info 2020-11-25T12:13:45.232Z - server running on port 4000
+info 2020-11-25T12:23:12.424Z - stopping server
+info 2020-11-25T12:23:14.680Z - starting server
+info 2020-11-25T12:23:14.722Z - server running on port 4000
+info 2020-11-25T12:30:10.579Z - stopping server
+info 2020-11-25T12:36:46.110Z - starting server
+info 2020-11-25T12:36:46.150Z - server running on port 4000
+info 2020-11-25T12:46:57.652Z - stopping server
+info 2020-11-25T12:54:52.338Z - starting server
+info 2020-11-25T12:54:52.385Z - server running on port 4000
+info 2020-11-25T13:08:48.561Z - stopping server
+info 2020-11-25T13:08:50.324Z - starting server
+info 2020-11-25T13:08:50.361Z - server running on port 4000
+info 2020-11-25T14:39:32.274Z - stopping server
+info 2020-11-25T15:28:34.050Z - starting server
+info 2020-11-25T15:28:34.094Z - server running on port 4000
+error 2020-11-25T15:28:49.733Z - Error: id length is not 24 digits
+info 2020-11-25T15:53:30.175Z - stopping server
+info 2020-11-25T15:53:31.587Z - starting server
+info 2020-11-25T15:53:31.630Z - server running on port 4000
+info 2020-11-25T15:55:20.521Z - stopping server
+info 2020-11-25T15:55:22.335Z - starting server
+info 2020-11-25T15:55:22.370Z - server running on port 4000
+info 2020-11-25T15:57:30.850Z - stopping server
+info 2020-11-25T16:01:10.966Z - starting server
+info 2020-11-25T16:01:10.995Z - server running on port 4000
+info 2020-11-25T16:02:05.403Z - stopping server
+info 2020-11-25T16:02:06.628Z - starting server
+info 2020-11-25T16:02:06.667Z - server running on port 4000
+error 2020-11-25T16:02:09.390Z - ReferenceError: emaill is not defined
+info 2020-11-25T16:02:17.393Z - stopping server
+info 2020-11-25T16:18:26.887Z - starting server
+info 2020-11-25T16:18:26.927Z - server running on port 4000
+info 2020-11-25T16:26:20.375Z - stopping server
+info 2020-11-25T16:42:05.904Z - starting server
+info 2020-11-25T16:42:05.943Z - server running on port 4000
+info 2020-11-25T16:42:53.890Z - stopping server
+info 2020-11-25T16:48:40.894Z - starting server
+info 2020-11-25T16:48:40.923Z - server running on port 4000
+info 2020-11-25T16:51:16.787Z - stopping server
+info 2020-11-25T17:16:59.061Z - starting server
+info 2020-11-25T17:16:59.103Z - server running on port 4000
+info 2020-11-25T17:17:54.068Z - stopping server
+info 2020-11-25T17:18:22.140Z - starting server
+info 2020-11-25T17:18:22.181Z - server running on port 4000
+info 2020-11-25T17:19:07.812Z - stopping server
+info 2020-11-25T18:26:39.254Z - starting server
+info 2020-11-25T18:26:39.326Z - server running on port 4000
+info 2020-11-26T08:01:32.356Z - stopping server
+info 2020-11-26T10:20:37.821Z - starting server
+info 2020-11-26T10:20:37.899Z - server running on port 4000
+info 2020-11-26T10:32:01.156Z - stopping server
+info 2020-11-26T10:32:02.931Z - starting server
+info 2020-11-26T10:32:03.007Z - server running on port 4000
+info 2020-11-26T10:34:28.388Z - stopping server
+info 2020-11-26T10:34:30.395Z - starting server
+info 2020-11-26T10:34:30.458Z - server running on port 4000
+info 2020-11-26T12:10:29.633Z - stopping server
+info 2020-11-26T14:11:35.960Z - starting server
+info 2020-11-26T14:11:36.038Z - server running on port 4000
+error 2020-11-26T14:19:39.924Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/notes-api/logic/authenticate-user.js:30:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-11-26T14:29:01.583Z - stopping server
+info 2020-11-27T06:39:53.142Z - starting server
+info 2020-11-27T06:39:53.261Z - server running on port 4000
+info 2020-11-27T06:40:45.712Z - stopping server
+info 2020-11-27T12:50:51.013Z - starting server
+info 2020-11-27T12:50:51.118Z - server running on port 4000
+info 2020-11-27T12:51:32.200Z - stopping server
+info 2020-11-27T12:51:34.426Z - starting server
+info 2020-11-27T12:51:34.529Z - server running on port 4000
+info 2020-11-27T12:52:27.245Z - stopping server
+info 2020-11-27T13:20:48.190Z - starting server
+info 2020-11-27T13:20:48.298Z - server running on port 4000
+error 2020-11-27T13:21:07.194Z - 204
+error 2020-11-27T13:21:18.975Z - 204
+info 2020-11-27T13:22:47.296Z - stopping server
+info 2020-11-27T14:18:01.018Z - starting server
+info 2020-11-27T14:18:01.124Z - server running on port 4000
+info 2020-11-27T14:41:23.912Z - stopping server
+info 2020-11-27T17:09:46.681Z - starting server
+info 2020-11-27T17:09:46.792Z - server running on port 4000
+error 2020-11-27T17:10:02.100Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/notes-api/logic/authenticate-user.js:26:47
+error 2020-11-27T17:12:36.599Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/notes-api/logic/authenticate-user.js:26:47
+info 2020-11-27T17:12:49.249Z - stopping server
+info 2020-11-27T17:28:49.922Z - starting server
+info 2020-11-27T17:28:50.046Z - server running on port 4000
+info 2020-11-27T17:31:00.665Z - stopping server
