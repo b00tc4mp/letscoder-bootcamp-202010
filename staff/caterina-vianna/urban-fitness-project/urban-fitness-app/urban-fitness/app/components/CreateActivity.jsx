@@ -440,7 +440,7 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     color: "black",
     textAlign: "center",
-    fontFamily: "Nunito_900Black",
+    fontFamily: "Nunito_600SemiBold",
   },
 
   /* Here, style the background of your button */

@@ -7,6 +7,7 @@ import {
   Button,
   TouchableOpacity,
   Dimensions,
+  Image,
 } from "react-native";
 import { MaterialComunityIcons } from "@expo/vector-icons";
 import {
@@ -43,7 +44,18 @@ export default function LogIn({ changeToSignUp, onLogIn }) {
   return (
     <View style={styles.containerSignUp}>
       {/* {icon && <MaterialComunityIcons name={icon} size={20} />} */}
-      <Text style={styles.logoSign}>urban fitness</Text>
+      <View>
+        <Image
+          source={require("../assets/logo-urban-fitness-app-2.png")}
+          style={{
+            width: null,
+            resizeMode: "contain",
+            height: 150,
+            marginTop: 60,
+            marginBottom: 50,
+          }}
+        />
+      </View>
       <View style={styles.signContainer}>
         <View>
           <TouchableOpacity onPress={() => changeToSignUp()}>
