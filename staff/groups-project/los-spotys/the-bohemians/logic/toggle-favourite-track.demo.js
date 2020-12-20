@@ -1,0 +1,5 @@
+toggleFavouriteTrack("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjllOWQ4MWJiZjdmMjAwMTc0NWYyMjMiLCJpYXQiOjE2MDQ2NjIwMzcsImV4cCI6MTYwNDY2NTYzN30.5HQgAqGONj3gENyKWV6HRFls8VCGDCh2ecp03WjuX2E",
+    '4u7EnebtmKWzUH433cf5Qv',
+    console.log
+
+)
