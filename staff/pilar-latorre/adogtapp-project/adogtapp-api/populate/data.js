@@ -25,7 +25,7 @@
         description: 'Protectora de animales. En Espolones puedes adoptar una mascota, un perro, un gato...También puedes ser Voluntario, donar tus manualidades o dinero.',
         pets: [
             { name: 'Eros', breed: 'galgo', species: 'dog', color: 'black', description: '3 years old, male, 20kg, quiet and sensitive' , image: 'galgoNegro'},
-            { name: 'Simon', breed: 'Sphynx', species: 'cat', color: 'white', description: '5 years old, male, 5kg, very sociable and loyable', image: 'gatocalvo'},
+            { name: 'Simon', breed: 'Sphynx', species: 'cat', color: 'white', description: '5 years old, male, 5kg, very gallician', image: 'gatocalvo'},
             { name: 'Magüi', breed: 'gato común', species: 'cat', color: 'black', description: '2 years old, female, 4kg, a little bit moody ', image: 'gatoNegro'},
             { name: 'Anubis', breed: 'labrador', species: 'dog', color: 'ligth brown', description: '3 years old, male, 30kg, quiet and sensitive', image: 'labrador'},
             { name: 'Erik', breed: 'labrador', species: 'dog', color: 'brown', description: '2 months old, male, 6kg, very active, affectionate', image: 'labradorMarron'}

@@ -2252,3 +2252,77 @@ info 2020-12-20T11:35:50.567Z - stopping server
 info 2020-12-20T11:37:14.237Z - starting server
 info 2020-12-20T11:37:14.450Z - server running on port 4000
 info 2020-12-20T11:41:15.441Z - stopping server
+info 2020-12-20T12:04:59.427Z - starting server
+info 2020-12-20T12:04:59.907Z - server running on port 4000
+error 2020-12-20T12:05:40.731Z - AuthError: wrong credentials
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+info 2020-12-20T12:05:51.849Z - stopping server
+info 2020-12-20T12:07:32.321Z - starting server
+info 2020-12-20T12:07:32.533Z - server running on port 4000
+info 2020-12-20T12:18:20.130Z - stopping server
+info 2020-12-20T12:18:24.435Z - starting server
+info 2020-12-20T12:18:24.670Z - server running on port 4000
+info 2020-12-20T12:19:44.291Z - stopping server
+info 2020-12-20T12:19:47.725Z - starting server
+error 2020-12-20T12:19:47.794Z - Error: Cannot find module 'mongodb'
+Require stack:
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-register-user.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js:4:22)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\index.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+info 2020-12-20T12:19:47.800Z - stopping server
+info 2020-12-20T12:20:53.077Z - starting server
+error 2020-12-20T12:20:53.166Z - Error: Cannot find module 'mongodb'
+Require stack:
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-register-user.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\index.js
+- C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\delete-pet.js:4:22)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\index.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+info 2020-12-20T12:20:53.174Z - stopping server
+info 2020-12-20T12:22:37.507Z - starting server
+info 2020-12-20T12:22:37.677Z - server running on port 4000
+info 2020-12-20T12:24:36.659Z - stopping server
+info 2020-12-20T12:24:41.419Z - starting server
+info 2020-12-20T12:24:41.670Z - server running on port 4000
+info 2020-12-20T17:14:17.188Z - starting server
+info 2020-12-20T17:14:17.554Z - server running on port 4000
+info 2020-12-20T17:35:01.190Z - stopping server

@@ -42,11 +42,9 @@ describe('deletePet()', () => {
         })
 
         it('shoud succed on a existing pet', () => {
-            return deletePet(petId)
+            return deletePet(shelter, petId)
                 .then(result => {
-                    expect(result).to.be.instanceOf(Object)
-                    expect(result.petId).to.be.undefined
-                
+                  expect(result).to.be.undefined
                 })
             })
 
@@ -56,66 +54,117 @@ describe('deletePet()', () => {
         )
     })
 
-    describe('on a non existing pet', () => {
-        let petId
+    describe('on a non existing shelter', () => {
+        let petId, shelter
 
         beforeEach(() => {
             
+            shelter = randomId()
             petId = randomId()
 
         })
 
-        it('shoud fail when pet does not exists', () => 
-            deletePet(petId)
+        it('shoud fail when shelter does not exists', () => 
+            deletePet(shelter, petId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 
-                    expect(error.message).to.equal(`pet with id ${petId} not found`)
+                    expect(error.message).to.equal(`user with id ${shelter} not found`)
                 })
             
         )
 
     }) 
 
+    
+
     describe('when any parameter is wrong', () => {
+
+        describe('when shelter is wrong', () => {
+            
+            describe('when shelter is empty or blank', () => {
+                let shelter, petId
+        
+                beforeEach(() => {
+                    petId = randomId()
+                    shelter = randomEmptyOrBlankString()
+                    
+                })
+        
+                it('should fail on an empty or blank shelter', () => {
+                    expect(() => deletePet(shelter, petId, () => { })).to.throw(ContentError, 'id is empty or blank')
+                })
+            })
+            describe('when shelter is not a string', () => {
+                let petId, shelter
+        
+                beforeEach(() => {
+                    petId = randomId()
+                    shelter = randomNonString()
+                    
+                })
+        
+                it('should fail when shelter is not an string', () => {
+                    expect(() => deletePet(shelter, petId, () => { })).to.throw(TypeError, `${shelter} is not an id`)
+                })
+        
+            })
+            describe('when shelter lenght is not 24', () => {
+                let petId, shelter
+        
+                beforeEach(() => {
+                    petId = randomId()
+                    shelter = '5fbcd46c1cc24f9c7ce22db000'
+                    
+                })
+        
+                it('should fail when shelter is not an string', () => {
+                    expect(() => deletePet(shelter, petId, () => { })).to.throw(LengthError, `id length ${shelter.length} is not 24`)
+                })
+                
+            })
+    
+    })
         describe('when id is wrong', () => {
             
                 describe('when id is empty or blank', () => {
-                    let petId
+                    let shelter, petId
             
                     beforeEach(() => {
-            
+                        shelter = randomId()
                         petId = randomEmptyOrBlankString()
                         
                     })
             
                     it('should fail on an empty or blank name', () => {
-                        expect(() => deletePet(petId, () => { })).to.throw(ContentError, 'id is empty or blank')
+                        expect(() => deletePet(shelter, petId, () => { })).to.throw(ContentError, 'id is empty or blank')
                     })
                 })
                 describe('when id is not a string', () => {
-                    let petId
+                    let petId, shelter
             
                     beforeEach(() => {
+                        shelter = randomId()
                         petId = randomNonString()
                         
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => deletePet(petId, () => { })).to.throw(TypeError, `${petId} is not an id`)
+                        expect(() => deletePet(shelter, petId, () => { })).to.throw(TypeError, `${petId} is not an id`)
                     })
             
                 })
                 describe('when id lenght is not 24', () => {
-                    let petId
+                    let petId, shelter
             
                     beforeEach(() => {
+                        shelter = randomId()
                         petId = '5fbcd46c1cc24f9c7ce22db000'
                         
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => deletePet(petId, () => { })).to.throw(LengthError, `id length ${petId.length} is not 24`)
+                        expect(() => deletePet(shelter, petId, () => { })).to.throw(LengthError, `id length ${petId.length} is not 24`)
                     })
                     
                 })

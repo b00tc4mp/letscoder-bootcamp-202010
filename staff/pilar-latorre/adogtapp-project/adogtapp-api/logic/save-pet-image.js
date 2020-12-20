@@ -7,6 +7,7 @@ const { NotFoundError } = require('../errors')
 /**
  *  Upload pet's picture
  * 
+ * @param {string} userId pet's identification number(ObjectId)
  * @param {string} petId pet's identification number(ObjectId)
  * @param {Stream} stream data image
  * @returns {Promise} empty promise on successful upload 

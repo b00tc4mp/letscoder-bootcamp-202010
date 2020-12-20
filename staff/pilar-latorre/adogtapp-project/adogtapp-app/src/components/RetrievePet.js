@@ -3,9 +3,7 @@ import './RetrievePet.sass'
 import { useState, useEffect } from 'react'
 import ModifyPet from './ModifyPet'
 
-
 const API_URL = process.env.REACT_APP_API_URL
-
 
 function DetailPet({ petId, onDeleted, onError }) {
 
@@ -14,16 +12,13 @@ function DetailPet({ petId, onDeleted, onError }) {
     const [pet, setPet] = useState()
 
     useEffect(() => {
-
         handleRetrievePet()
-
 
     }, [])
 
     const handleDeletePet = petId => {
-
         try {
-            deletePet(petId, (error) => {
+            deletePet(token, petId, (error) => {
 
                 if (error) return onError(error.message)
 
@@ -36,19 +31,16 @@ function DetailPet({ petId, onDeleted, onError }) {
 
 
     const handleGoToModify = () => {
-
         setView('modify-pet')
     }
 
     const handleModified = () => {
-
         setView()
         handleRetrievePet()
 
     }
 
     const handleRetrievePet = () => {
-
         try {
             retrievePet(petId, (error, pet) => {
                 if (error) return onError(error.message)
