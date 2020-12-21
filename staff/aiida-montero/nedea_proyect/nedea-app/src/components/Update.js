@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import MyPictograms from "./MyPictograms";
 
 
-export default function ({ onSavePictogram, pictograms, onModify, title, description, onDeletePictogram }) {
+export default function ({ onSavePictogram, pictograms,onDeletePictogram }) {
 
   const [showForm, setShowForm] = useState(false)
 

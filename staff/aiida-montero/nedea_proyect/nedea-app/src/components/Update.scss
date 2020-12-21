@@ -46,18 +46,19 @@
         margin: auto;
         max-width: 80%;
         padding: .5rem;
-        background-color: #939393;
-        border-radius: 50px;
+        background-color:#9e9e9e;
+        border-radius: 15px;
         margin-top: 15px;
         margin-bottom:25px;
         #image{
-          border: 1px solid white;
+          border: 1px solid #000000;
           border-radius: 15px;
-          color: white;
+          color: #ffffff;
           cursor: pointer;
+          background-color: #ee4949;
           
         }
-      
+  
         
       }
       .login-text {
@@ -94,16 +95,17 @@
         }
       }
       .send-submit {
-        border: 3px solid white;
-        border-radius: 15px;
+        border: 7px solid black;
+        border-radius: 10px;
         cursor: pointer;
-        background: transparent;
+        background-color: #080808;
         color: white;
         display: block;
         margin: 1rem auto;
-        min-width: 1px;
         padding: .25rem;
-        
+        height: 2.5rem;
+        width: 16rem;
+        font-size: 18px;
         &:hover, &:focus {
           background: white;
           color: black;
@@ -126,6 +128,11 @@
   margin-bottom: 15px;
   text-decoration: none;
 }
+
+#file-upload-button{
+  background-color: #000000;
+}
+  
 @media (max-width: 600px) {
 #image{
 margin: 0;
