@@ -1,3 +1,28 @@
+/**
+ *  The callback expression that manages the result of the authentication
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ */
+
+/** Get retrieve user.
+ * 
+ * @example
+ * 
+ * 
+ * @param {string} pictogramId 
+ * @param {function} callback The callback exppression that manage of the unregister.
+ * @param {string} token
+ * @param {string} title
+ * @param {description}
+ * 
+ * @throws(TypeError)On type validation error
+ * @throws(Error)On content validation error
+ * 
+ * 
+ */
+
 import { call } from '../utils'
 import { validateToken, validateId, validateTitle, validateCallback } from './helpers/validations'
 

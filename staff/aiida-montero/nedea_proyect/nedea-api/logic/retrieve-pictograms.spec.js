@@ -12,7 +12,7 @@ describe('retrievePictogram()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let fullname, email, password, title,  description
+        let fullname, email, password, title,  description, pictogramId, userId
 
         beforeEach(async () => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -31,18 +31,15 @@ describe('retrievePictogram()', () => {
             const pictogram = {title, description, owner:userId}
 
             const newPictogram = await Pictogram.create(pictogram)
-            PictogramId = '' + newPictogram._id
+            pictogramId = '' + newPictogram._id
         })
 
         it('shoud succed on a existing pictogram', () => {
-            retrievePictogram(PictogramId)
+            return retrievePictogram(userId)
 
-                .then(() =>
-                    Pictogram.findOne({ pictogramId })
-                )
                 .then(pictogram => {
-                    expect(pictogram.title).to.equal(title)
-                    expect(pictogram.description).to.equal(description)
+                    expect(pictogram[0].title).to.equal(title)
+                    expect(pictogram[0].description).to.equal(description)
                     
                 })
         })
@@ -61,7 +58,8 @@ describe('retrievePictogram()', () => {
         })
 
         it('shoud fail when pictogram does not exists', () => {
-            retrievePictogram(pictogramId)
+            userId = randomId().toString()
+            return retrievePictogram(userId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 

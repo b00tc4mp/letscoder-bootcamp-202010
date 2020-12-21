@@ -2,13 +2,6 @@ const { validateId } = require('./helpers/validations')
 const { NotFoundError } = require('../errors')
 const { models: { User } } = require('nedea-data')
 
-/**
- * Retrieves a user by its id
- * 
- * @param {string} id 
- * 
- * @returns {Promise}
- */
 module.exports = function (id) {
     validateId(id)
 

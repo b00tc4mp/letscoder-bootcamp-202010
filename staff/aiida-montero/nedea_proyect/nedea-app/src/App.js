@@ -1,6 +1,6 @@
 import {Initial, Header, Footer, SignUp, SignIn, Home, Update, Profile, MyPictograms} from './components'
 
-import {registerUser, authenticateUser, savePictogram, savePictogramImage, retrievePictograms, retrieveUser, modifyPictogram} from './logic';
+import {registerUser, authenticateUser, savePictogram, savePictogramImage, retrievePictograms, retrieveUser} from './logic';
 import {withRouter, Route, Redirect } from 'react-router-dom';
 import {useEffect, useState} from 'react'
 import {searchPictogramsByUser, deletePictogram} from './logic'
@@ -113,23 +113,7 @@ function App(props) {
 
   }
 
-  const handleModify = (title, description) => {
-    try {
-      const {token} = sessionStorage
 
-      modifyPictogram(token, {title, description}, (error, changes) => {
-        if(error) return feedbackError('could not find any changes')
-
-        
-      })
-      setTitle(title)
-      setDescription(description)
-
-    }catch(error){
-
-    }
-
-  }
 
   const handleDelete = (id) => {
     const { token } = sessionStorage
@@ -152,7 +136,7 @@ function App(props) {
     < >
 
       {token && <Header onGoToUpdate = {handleGoToUpdate} onGoToHome={handleGoToHome}  onGoInitial={handleGoToInitial}/> }
-      <Route exact path ='/update' render={()=> token ?<Update onSavePictogram= {handleSavePictogram} pictograms = {pictograms} onModify = {handleModify} title = {title} description= {description}  onDeletePictogram={handleDelete} /> :
+      <Route exact path ='/update' render={()=> token ?<Update onSavePictogram= {handleSavePictogram} pictograms = {pictograms}  onDeletePictogram={handleDelete} /> :
       <Redirect to = "/"/> }/>
       <Route exact path ='/' render ={() => <Initial onGoToHome = {handleGoToHome} />}/>
       <Route exact path = '/sign-up' render ={()=><SignUp onSignUp = {handleSignUp} error = {error} onGoToInitial = {handleGoToInitial}/>}/>

@@ -3816,3 +3816,30 @@ info 2020-12-20T16:13:05.351Z - stopping server
 info 2020-12-21T01:50:55.055Z - starting server
 info 2020-12-21T01:50:55.265Z - server running on port 4000
 info 2020-12-21T02:03:16.263Z - stopping server
+info 2020-12-21T11:10:44.106Z - starting server
+info 2020-12-21T11:10:44.372Z - server running on port 4000
+error 2020-12-21T11:19:08.201Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:13:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T11:19:10.431Z - AuthError: wrong credentials
+    at C:\Users\aiida\bootcamp\collab\letscoder-bootcamp-202010\staff\aiida-montero\nedea_proyect\nedea-api\logic\authenticate-user.js:13:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-21T11:25:39.851Z - stopping server
+info 2020-12-21T11:25:59.488Z - starting server
+info 2020-12-21T11:25:59.677Z - server running on port 4000
+info 2020-12-21T11:34:38.173Z - stopping server
+info 2020-12-21T11:34:41.168Z - starting server
+info 2020-12-21T11:34:41.387Z - server running on port 4000
+info 2020-12-21T11:45:23.149Z - stopping server
+info 2020-12-21T11:45:25.984Z - starting server
+info 2020-12-21T11:45:26.171Z - server running on port 4000
+info 2020-12-21T11:47:46.885Z - stopping server
+info 2020-12-21T11:48:05.301Z - starting server
+info 2020-12-21T11:48:05.508Z - server running on port 4000
+info 2020-12-21T11:52:41.572Z - stopping server
+info 2020-12-21T11:52:48.023Z - starting server
+info 2020-12-21T11:52:48.253Z - server running on port 4000
+info 2020-12-21T11:54:47.130Z - stopping server
+info 2020-12-21T11:54:55.596Z - starting server
+info 2020-12-21T11:54:55.791Z - server running on port 4000
+info 2020-12-21T11:55:54.809Z - stopping server

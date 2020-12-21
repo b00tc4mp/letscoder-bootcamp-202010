@@ -7,10 +7,6 @@ import ResultList from './ResultList'
 import {searchPictogram}from '../logic'
 
 
-function updateUserSettings(){
-    
-}
-
 export default function({onSetUser,token,onGoToInitial}) {
     const [name, setName] = useState()
     const [likedPictograms, setLikedPictograms] = useState([])
@@ -52,7 +48,6 @@ useEffect(() => {
  }
 
  const handleOnLikePictogram = () => {
-     debugger
     const {token} = sessionStorage
     retrieveUser(token, (error, user) => {
         if(error) return feedbackError(error.message)

@@ -7,7 +7,6 @@ import retrievePictograms from './retrieve-pictograms'
 import savePictogramImage from './save-pictogram-image'
 import toggleLikePictogram from './toggle-like-pictogram'
 import deletePictogram from './delete-pictogram'
-import modifyPictogram from './modify-pictogram'
 import context from './context'
 import searchPictogram from './search-pictogram'
 
@@ -22,7 +21,6 @@ export{
     savePictogramImage,
     toggleLikePictogram,
     deletePictogram,
-    modifyPictogram, 
     context,
     searchPictogram
 }

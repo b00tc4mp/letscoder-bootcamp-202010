@@ -11,5 +11,4 @@ module.exports = {
     handleToggleLikePictogram: require('./handle-toggle-like-pictogram'),
     handleRetrieveFavouritePictogram: require('./handle-retrieve-favourite-pictogram'),
     handleDeletePictogram : require('./handle-delete-pictogram'),
-    handleModifyPictogram : require ('./handle-modify-pictogram')
 }

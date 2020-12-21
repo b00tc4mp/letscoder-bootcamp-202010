@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomId, randomInteger, randomEmptyOrBlankString, randomNonString, randomWrongLengthId } = require('../utils/randoms')
-const { models: { User,  Pictogram }, mongoose } = require('nedea-data')
+const { models: { User,  Pictogram }, mongoose: { Types: { ObjectId } }, mongoose } = require('nedea-data')
 const { ContentError, LengthError } = require('../errors')
 const retrieveFavouritePictogram = require('./retrieve-favourite-pictograms')
 
@@ -12,7 +12,7 @@ describe('retrieveFavouritePictogram()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let fullname, email, password, title,  description
+        let fullname, email, password, title,  description, userId, pictogramId
 
         beforeEach(async () => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -31,19 +31,15 @@ describe('retrieveFavouritePictogram()', () => {
             const pictogram = {title, description, owner:userId}
 
             const newPictogram = await Pictogram.create(pictogram)
-            PictogramId = '' + newPictogram._id
+            pictogramId = '' + newPictogram._id
+            return User.updateOne({_id : ObjectId(userId)}, { $set: { likes : [pictogramId] } }) 
         })
 
         it('shoud succed on a existing pictogram', () => {
-            retrieveFavouritePictogram(PictogramId)
-
-                .then(() =>
-                    Pictogram.findOne({ pictogramId })
-                )
+            return retrieveFavouritePictogram(userId)
                 .then(pictogram => {
-                    expect(pictogram.title).to.equal(title)
-                    expect(pictogram.description).to.equal(description)
-                    
+                    expect(pictogram[0].title).to.equal(title)
+                    expect(pictogram[0].description).to.equal(description)
                 })
         })
 

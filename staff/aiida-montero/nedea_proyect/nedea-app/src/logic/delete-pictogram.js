@@ -1,4 +1,29 @@
 
+/**
+ *  The callback expression that manages the result of the authentication
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * @param {string} token The auth token when credentials are correct (validation in API)
+ */
+
+/**
+ * Delete pictogram from his token.
+ * 
+ * @example
+ * 
+ * 
+ * @param {string} token The token of the user generated when authenticating.
+ * @param {string} pictogramId The pictogramId of the user who wants to register. 
+ * @param {function} callback The callback exppression that manage of the unregister.
+ * 
+ * @throws(TypeError)On type validation error
+ * @throws(Error)On content validation error
+ * 
+ * 
+ */
+
 import { call } from '../utils'
 import { validateId, validateCallback } from './helpers/validations'
 

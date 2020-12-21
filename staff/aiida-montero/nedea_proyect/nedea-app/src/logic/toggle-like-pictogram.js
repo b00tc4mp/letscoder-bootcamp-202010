@@ -1,3 +1,29 @@
+/**
+ *  The callback expression that manages the result of the authentication
+ *
+ * @callback callback
+ * 
+ * @param {Error} error In case a fail is detected on response from API
+ * 
+ */
+
+/**
+ * Get toggle like pictograms.
+ * 
+ * @example
+ * 
+ * 
+ * 
+ * @param {string} token The token of the user generated when authenticating.
+ * @param {string} pictogramId The pictogramId of the pictograms generated for the Api. 
+ * @param {function} callback The callback exppression that manage of the toggle-like-pictogram.
+ * 
+ * @throws(TypeError)On type validation error
+ * @throws(Error)On content validation error
+ * 
+ * 
+ */
+
 import { call } from '../utils'
 import { validateId, validateCallback, validateToken } from './helpers/validations'
 

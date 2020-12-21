@@ -8,7 +8,6 @@ export default function ({likedPictograms = [], data:{id, title, description}, d
   const token = sessionStorage.token
 
   useEffect(()=> {
-    debugger
     const liked = likedPictograms.includes(id) ? true : false
 
     setActive(liked)

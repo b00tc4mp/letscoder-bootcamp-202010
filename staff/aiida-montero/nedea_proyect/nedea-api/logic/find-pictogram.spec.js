@@ -1,19 +1,15 @@
 require('dotenv').config()
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger, randomId } = require('../utils/randoms')
-const { models: { User, Pictogram }, mongoose: { Types: { ObjectId } }, mongoose } = require('nedea-data')
+const { models: { User, Pictogram }, mongoose/*  mongoose: { Types: { ObjectId } }, mongoose  */} = require('nedea-data')
 const findPictogram = require('./find-pictogram')
-const { query } = require('nedea-data/models/schemas/user')
-const pictogram = require('nedea-data/models/schemas/pictogram')
-
 
 const { env: { MONGODB_URL } } = process
 
 describe('findPictogram()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
-    describe('when user exists', () => {
-        debugger
+    describe('when user exists', () => { 
         let fullname, email, password, ownerId
 
         beforeEach(() => {
@@ -30,19 +26,20 @@ describe('findPictogram()', () => {
 
         describe('when user create a pictogram', () => {
 
-            let title, description
+            let title, description, owner
 
             beforeEach(() => {
                 title = randomStringWithPrefix('title')
                 description = randomStringWithPrefix('description')
-                Pictogram.create(ownerId, title, description)
+                owner = randomId().toString()
+                return Pictogram.create({owner, title, description})
+       
             })
             
-            it.only('should find pictogram', () => {
-                return findPictogram(title)
+            it('should find pictogram', () => {
+                 return findPictogram(title)
                 .then(pictogram =>{
-                    console.log(pictogram)
-                   expect(pictogram[1].description).to.equal(description)
+                   expect(pictogram[0].description).to.equal(description)
                 })
             })
         })

@@ -8,21 +8,6 @@ export default function ({ onSavePictogram, pictograms,onDeletePictogram }) {
 
   const [showForm, setShowForm] = useState(false)
 
-  /*   const [pictograms, setPictograms] = useState([])
-    useEffect(()=>{
-      const { token } = sessionStorage;
-  
-      if (token) {
-        
-  
-        searchPictogramsByUser(token, pictograms => {
-            setPictograms(pictograms);
-        });
-    }
-  
-  }, []); */
-
-
   const handleSubmit = event => {
     event.preventDefault()
 
@@ -54,27 +39,6 @@ export default function ({ onSavePictogram, pictograms,onDeletePictogram }) {
     </>}
     
     <MyPictograms myPictograms={pictograms} onDeletePictogram={onDeletePictogram} />
-
-    {/*   <form onSubmit = {(event => {
-       event.preventDefault()
-
-       const{target : {title : {value : title}, description: {value : description}}} = event
-
-       try {
-         onModify(title, description)
-        
-       }catch(error){
-         alert(error.message)
-       }
-     })}>
-
-       <div>
-         <input type = "text" title = "text" placeholder = "title" defaultValue = {title}></input>
-         <input type = "text" description = "text" placeholder = "description" defaultValue = {description}></input>
-         <button>Send</button>
-         
-       </div>
-     </form> */}
 
 
   </section>
