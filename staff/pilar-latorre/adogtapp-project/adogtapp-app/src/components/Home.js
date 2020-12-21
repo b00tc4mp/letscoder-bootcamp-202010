@@ -9,13 +9,9 @@ import Feedback from './Feedback'
 
 
 export default function ({onSignIn, onGoToMainSearch, onLogout}) {
-    
-
     const [error, setError] = useState(null)
     const [view, setView] = useState('home')
     const [name, setName] = useState()
-    
-    
  
     function handleError(error) {
         setError(error)
@@ -43,25 +39,19 @@ export default function ({onSignIn, onGoToMainSearch, onLogout}) {
             alert(error.message)
         }
     }, [])
-
-
     
     const handleCreated = () => {
-
         setView()
 
     }
     
     const handleGoToSearch = () => {
-
         setView('search-pet')
       }
 
     const handleGoToCreate = () => {
-
         setView('create-pet')
       } 
-
 
  
     return(

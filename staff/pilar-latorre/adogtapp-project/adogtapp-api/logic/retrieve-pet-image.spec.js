@@ -51,7 +51,6 @@ describe('retrievePetImage()', () => {
             return retrievePetImage(petId)
             .then(file => {
                 expect(file).to.be.instanceOf(Object)
-                console.log(file)
                
                 })
         })

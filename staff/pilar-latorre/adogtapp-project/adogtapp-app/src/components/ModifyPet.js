@@ -11,15 +11,11 @@ function ModifyPet({petId, onModified, onError}){
 
 
     useEffect(() => {
-
-    
         try {
             retrievePet( petId, (error, pet) => {
                 if (error) return onError(error.message)
 
                 setPet(pet)
-              
-               
 
             })
         } catch (error) {
@@ -30,8 +26,6 @@ function ModifyPet({petId, onModified, onError}){
 
    
     const handleModify = (name, breed, species, color, description) => {
-
-
         try {
             savePet( token, petId, name, breed, species, color, description, (error) => {
                 if (error) return onError(error.message)

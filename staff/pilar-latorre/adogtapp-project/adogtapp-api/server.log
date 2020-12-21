@@ -2341,3 +2341,67 @@ error 2020-12-20T19:29:11.418Z - AuthError: wrong credentials
     at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\authenticate-user.js:24:30
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
 info 2020-12-20T19:31:53.463Z - stopping server
+info 2020-12-21T08:36:12.482Z - starting server
+info 2020-12-21T08:36:12.666Z - server running on port 4000
+info 2020-12-21T08:38:13.985Z - stopping server
+info 2020-12-21T08:39:55.512Z - starting server
+info 2020-12-21T08:39:55.663Z - server running on port 4000
+info 2020-12-21T09:20:25.229Z - stopping server
+info 2020-12-21T09:34:59.615Z - starting server
+info 2020-12-21T09:34:59.915Z - server running on port 4000
+info 2020-12-21T11:27:56.720Z - stopping server
+info 2020-12-21T11:30:00.537Z - starting server
+info 2020-12-21T11:30:00.715Z - server running on port 4000
+error 2020-12-21T11:31:04.248Z - TypeError: null is not an id
+    at validateId (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\helpers\validations.js:47:43)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\find-pets.js:19:43)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-find-pets.js:26:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:284:7
+error 2020-12-21T11:32:04.647Z - TypeError: null is not an id
+    at validateId (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\helpers\validations.js:47:43)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\logic\find-pets.js:19:43)
+    at module.exports (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\handlers\handle-find-pets.js:26:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\node_modules\express\lib\router\index.js:284:7
+info 2020-12-21T11:32:10.526Z - stopping server
+info 2020-12-21T11:32:13.325Z - starting server
+info 2020-12-21T11:32:13.463Z - server running on port 4000
+info 2020-12-21T11:36:20.577Z - stopping server
+info 2020-12-21T11:36:24.454Z - starting server
+info 2020-12-21T11:36:24.637Z - server running on port 4000
+info 2020-12-21T11:43:05.712Z - stopping server
+info 2020-12-21T11:43:09.173Z - starting server
+info 2020-12-21T11:43:09.325Z - server running on port 4000
+info 2020-12-21T12:36:44.997Z - stopping server
+info 2020-12-21T12:36:49.213Z - starting server
+info 2020-12-21T12:36:49.482Z - server running on port 4000
+info 2020-12-21T12:37:41.149Z - stopping server
+info 2020-12-21T12:37:44.136Z - starting server
+info 2020-12-21T12:37:44.337Z - server running on port 4000
+info 2020-12-21T13:03:02.552Z - stopping server
+info 2020-12-21T13:04:32.044Z - starting server
+info 2020-12-21T13:04:32.190Z - server running on port 4000
+info 2020-12-21T14:10:38.215Z - stopping server
