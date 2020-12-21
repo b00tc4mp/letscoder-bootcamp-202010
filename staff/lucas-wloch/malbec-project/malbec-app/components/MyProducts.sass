@@ -1,0 +1,68 @@
+@import config
+
+    
+.myProducts
+    &__h3
+        font-size: 2rem
+        color: white
+        text-align: center
+    &__add
+        background-color: #eee
+        color: #444
+        cursor: pointer
+        padding: 18px
+        width: 50%  
+    &__acordion
+        background-color: #eee
+        color: #444
+        cursor: pointer
+        padding: 18px
+        width: 100%
+        border: none
+        text-align: left
+        outline: none
+        font-size: 15px
+        transition: 0.4s
+    &__panel
+        padding: 0
+        display: none
+        background-color: white
+        overflow: hidden
+    &__ul
+        list-style: none
+        width: 100%
+    &__h4
+    &__p
+    &__price
+    &__saveMenu
+        float: right
+        margin: 0px 0 30px 0
+        padding: 10px 20px 10px 20px
+        background-color: transparentize(white,.3 )
+        border-radius: 10px
+.active, .accordion:hover
+    background-color: #ccc
+.myProductsFooter
+    display: flex
+    width: 100vw
+    padding: 20px
+    background-color: #202224
+    position: relative
+    // top: 680px
+    bottom: 0
+    &__ig
+        font-size: 1rem
+        color: white
+        text-decoration: none
+    &__p 
+        text-decoration: none
+        color: white
+
+.svgicon
+    display: inline-block
+    position: relative
+    width: 1em
+    height: 1em
+    top: -0.0625em
+    fill: currentColor
+    vertical-align: middle

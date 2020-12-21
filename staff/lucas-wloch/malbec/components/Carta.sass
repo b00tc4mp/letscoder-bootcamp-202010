@@ -1,0 +1,127 @@
+@import config
+
+.carta
+    display: flex
+    flex-direction: column
+    align-items: center
+    // background-color: black
+    background-color: transparentize(black,.3)
+
+    &__title
+        color: white
+        margin: 30px
+        font-size: 2rem
+    &__container
+        width: 80vw
+        // background-color: black
+    &__h2
+        text-decoration: underline
+        text-align: center
+        margin: 20px 0 10px 0
+        padding: 10px
+        color: white
+    &__h3
+        text-align: left
+        padding: 10px
+        margin: 10px 20px 5px 0
+        border-bottom: 1px solid white
+        color: white
+        
+    &__ul
+        list-style: none
+
+    &__li
+        // background-color: white
+        align-items:  center
+        // width: 85%
+        justify-content: space-around
+        // justify-items: center
+        text-justify: center
+        display: flex
+        
+        margin: 5px
+        // padding: 5px
+    &__glutenFree
+        display: flex
+        margin-top: 5px
+        color: white
+        font-size: 1rem
+        font-weight: bold
+        &--img
+        // background-color: b
+    &__reference
+        display: flex
+        margin-top: 5px
+        color: white
+        font-size: 1rem
+        font-weight: bold
+        gap: 10px
+    
+    &__price
+        text-align: right
+        font-weight: 600
+        color: white
+        font-weight: bolder
+        font-size: 1.5rem
+
+    &__div
+        display: flex
+        // align-items:  center
+        // width: 85%
+        gap: 10px
+        align-items:  center
+        text-justify: center
+        // justify-items: center
+    &__alergenos
+        color: white
+        
+        margin-left: 10px
+    &__vegan
+        
+
+
+    &__name
+        margin: 10px 5px 10px 0
+        text-align: center
+        color: white
+        font-weight: bolder
+        font-size: 1.5rem
+    &__references
+        display: flex
+        gap: 10px
+        justify-content: space-evenly
+
+.cartaFooter
+    display: flex
+    width: 100vw
+    padding: 20px
+    background-color: rgba(0,0 ,0 ,.3 )
+    border-top: 5px solid black
+    // padding-top:  20px
+    // background-color: #202224
+    // position: relat
+    // top: 1400px
+    bottom: 0
+    &__ig
+        font-size: 1rem
+        color: white
+        text-decoration: none
+    &__p 
+        text-decoration: none
+        color: white
+
+.svgicon
+    display: inline-block
+    position: relative
+    width: 1em
+    height: 1em
+    top: -0.0625em
+    fill: currentColor
+    vertical-align: middle
+@media (max-width: 999px) and (min-width: 550px)
+    .carta
+@media (min-width: 1000px)
+    .carta
+        &__image
+            width: 200px
+            height: 140px

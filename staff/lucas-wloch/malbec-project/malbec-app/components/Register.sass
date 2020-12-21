@@ -1,0 +1,110 @@
+@import config
+
+    
+.register
+    background-color: white
+    border: 2px solid white
+    border-radius: .7rem
+    padding: 20px
+    padding-top: 5px
+    width: 63vw
+    display: grid
+    justify-content: center
+    margin: auto
+    margin-top: 15vh
+
+    &__back
+        width: 12vw
+        background-color: black
+        color: White
+    &__h2
+        margin: 0
+        padding: 20px
+        padding-top: 10px
+        font-weight: bolder
+        font-size: 2rem
+        justify-self: center
+
+
+    &__input
+        width: 60vw
+        height: 8vw
+        background-color: #efeff4
+        margin-left: 0
+        margin-right: 0
+        border-radius: .5rem
+        &::placeholder
+            color: black
+            font-weight: 550
+    &__p
+        display: flex
+        padding-left: 2vw
+        margin-bottom: 2px
+        font-size: .8rem
+        color: #8e8e93
+    &__p1 
+        margin-bottom: 10px
+        font-size: 1rem
+        justify-self: center
+        font-weight: bold
+    &__button
+        width: 60vw
+        height: 9vw
+        background-color: black
+        color: white
+        border-radius: 10px
+        margin-top: 25px
+        font-size: 1.2rem
+        transition: all 200ms ease
+        &:hover
+            background-color: #fc8823
+            color: white
+    &__span
+        color: black
+        transition: all 200ms ease
+        &:hover
+            color: black
+            text-decoration: underline
+.registerFooter
+    display: flex
+    width: 100vw
+    padding: 20px
+    background-color: #202224
+    position: relative
+    top: 8px
+    &__ig
+        font-size: 1rem
+        color: white
+        text-decoration: none
+    &__p 
+        text-decoration: none
+        color: white
+
+.svgicon
+    display: inline-block
+    position: relative
+    width: 1em
+    height: 1em
+    top: -0.0625em
+    fill: currentColor
+    vertical-align: middle
+
+@media (min-width: 1000px)
+    .register
+            width: 25vw
+            &__input
+                width: 23vw
+                height: 3vw
+            &__button
+                width: 23vw
+                height: 3vw
+
+@media (max-width: 999px) and (min-width: 550px)
+    .register
+            width: 28vw
+            &__input
+                width: 25vw
+                height: 4vw
+            &__button
+                width: 25vw
+                height: 4vw

@@ -1,0 +1,26 @@
+///////////////// CLIENT SIDE
+
+import cookieCutter from 'cookie-cutter'
+// Get a cookie
+cookieCutter.get('myCookieName')
+// Set a cookie
+cookieCutter.set('myCookieName', 'some-value')
+// Delete a cookie
+cookieCutter.set('myCookieName', '', { expires: new Date(0) })
+
+
+///////////////// SERVER SIDE
+
+import Cookies from 'cookies'
+Homepage.getInitialProps = ({ req, res }) => {
+    // Create a cookies instance
+    const cookies = new Cookies(req, res)
+    // Get a cookie
+    cookies.get('myCookieName')
+    // Set a cookie
+    cookies.set('myCookieName', 'some-value', {
+        httpOnly: true // true by default
+    })
+    // Delete a cookie
+    cookies.set('myCookieName')
+}
