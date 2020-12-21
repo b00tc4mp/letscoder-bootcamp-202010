@@ -16,6 +16,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.23.0",
+    "core-util-is": "^1.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "geogin-data": "file:../geogin-data",
@@ -23,13 +24,14 @@
     "geogin-middlewares": "file:../geogin-middlewares",
     "geogin-utils": "file:../geogin-utils",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.16",
+    "mongoose": "^5.11.3",
     "pdfkit": "^0.11.0",
     "svg-to-pdfkit": "^0.1.8",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "chai-subset": "^1.6.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0"
   }
