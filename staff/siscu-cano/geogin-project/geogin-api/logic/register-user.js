@@ -21,8 +21,11 @@ const bcrypt = require('bcryptjs')
  * @throws {TypeError} - if password is not a password (string)
  * @throws {ContentError} - if password is empty or blank
  * 
+ * @throws {ConflictError} - user alreadyregistered
+ * 
  * @returns {String} - id. 
  */
+
 module.exports = function (fullname, email, password) {
     validateFullname(fullname)
     validateEmail(email)

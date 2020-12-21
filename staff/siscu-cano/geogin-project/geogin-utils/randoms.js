@@ -19,5 +19,12 @@ module.exports = {
 
     randomInteger(from, to) {  // 1, 10
         return Math.round(Math.random() * (to - from) + from)
-    }
+    },
+    randomTime() {
+        hrs = Math.round(Math.random()*12);
+        mins = Math.round(Math.random()*60);    
+        const hFormat = (hrs<10 ? "0" : "");
+        const mFormat = (mins<10 ? "0" : "");
+        return String(hFormat+hrs+ ":" +mFormat+mins);
+      }
 }

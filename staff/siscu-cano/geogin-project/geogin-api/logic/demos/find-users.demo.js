@@ -1,22 +1,24 @@
-require('dotenv').config()
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
+const {
+    env: { MONGODB_URL }
+} = process
+const { mongoose } = require('geogin-data')
+const { models: { User } } = require('geogin-data')
+const findUsers = require('../find-users')
 
-const { MongoClient } = require('mongodb')
-const context = require('./context')
-const findUsers = require('./find-users')
-
-MONGODB_URL = 'mongodb://localhost:27017/geogin-app'
-
-const client = new MongoClient(MONGODB_URL, { useUnifiedTopology: true })
-
-client.connect()
-    .then(connection => {
-        context.connection = connection
-
-        //eturn findUsers('falo buffy')
-        //return findUsers('gr') // WARN the $search operator in mongo works as the search engines (mathing elements by words matching full criteria, not starting by criteria)
-        return findUsers('jarito')
-    })
-    .then(console.log)
-    .catch(console.error)
-    .then(() => client.close())
-    .catch(console.error)
+    ; (async () => {
+        try {
+            await mongoose.connect(MONGODB_URL, {
+                useUnifiedTopology: true,
+                useNewUrlParser: true,
+                useCreateIndex: true
+            })
+            const user = await findUsers('aa')
+            console.log(user)
+        } catch (error) {
+            console.error(error)
+        } finally {
+            mongoose.disconnect()
+        }
+    })()

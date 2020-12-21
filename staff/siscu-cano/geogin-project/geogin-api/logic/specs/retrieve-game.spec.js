@@ -1,12 +1,12 @@
 require('dotenv').config()
 
-const { expect } = require('chai')
+const chai = require('chai')
+const { expect } = chai
+const chaiSubset = require('chai-subset');
 
 const {
   randomStringWithPrefix,
   randomWithPrefixAndSuffix,
-  randomNonString,
-  randomEmptyOrBlankString,
   randomTime
 } = require('geogin-utils/randoms')
 
@@ -14,6 +14,7 @@ const retrieveGame = require('../retrieve-game')
 
 const {
   mongoose,
+  mongoose: { Types: { ObjectId } },
   models: { User, Game, Quest }
 } = require('geogin-data')
 
@@ -22,6 +23,8 @@ const bcrypt = require('bcryptjs')
 const {
   env: { MONGODB_URL }
 } = process
+
+chai.use(chaiSubset);
 
 /**
  * Retrieves game with all fields
@@ -41,7 +44,7 @@ describe('retrieveGame()', () => {
   )
 
   describe('when game exists', () => {
-    let gameId
+    let idPlayer, idQuest, idGame, quest
 
     beforeEach(async () => {
       // Add Player
@@ -56,6 +59,7 @@ describe('retrieveGame()', () => {
 
       const player = { fullname, email, password, image, score, favorites }
       const playerBD = await User.create(player)
+      idPlayer = playerBD._id
 
       // Add Quest
       title = `${randomStringWithPrefix('title')}`
@@ -75,7 +79,7 @@ describe('retrieveGame()', () => {
       evaluations = []
       tests = []
 
-      const quest = {
+      quest = {
         ownerId: playerBD._id,
         undefined,
         title,
@@ -90,38 +94,55 @@ describe('retrieveGame()', () => {
         tests
       }
       const questBD = await Quest.create(quest)
-    
+      idQuest = questBD._id
+
       // Add Game
       qrCode = `${randomStringWithPrefix('qrCode')}`
       players = []
-      teams  = []
-      questGame  = Math.round(Math.random() * 100)
-      progress  = []
-      organizer  = Math.round(Math.random() * 100)
+      teams = []
+      questGame = Math.round(Math.random() * 100)
+      progress = []
+      organizer = Math.round(Math.random() * 100)
 
-      const game = { undefined, organizerId: playerBD._id, questId: questBD._id, qrCode, teams, players, progress}
+      const game = { undefined, organizerId: playerBD._id, quest: questBD._id, qrCode, teams, players, progress }
       const gameBD = await Game.create(game)
 
-      gameId = gameBD._id
+      idGame = gameBD._id
     })
 
     it('should succeed on retrieve Game', () =>
-      retrieveGame(gameId.toString())
-      .then(game => {
-        console.log(game.players)
+      retrieveGame(idGame.toString())
+        .then(game => {
           expect(game).to.exist
+          expect(game._id.toString()).to.equal(idGame.toString())
           expect(game.qrCode).to.equal(qrCode)
-          expect(game.players).to.equal(players)
-          expect(game.questGame).to.equal(questGame)
-          expect(game.progress).to.equal(progress)
-          expect(game.organizer).to.equal(organizer)
-      })
+          expect(game.quest.title).to.equal(quest.title)
+          expect(game.quest.coverImg).to.equal(quest.coverImg)
+          expect(game.quest.description).to.equal(quest.description)
+          expect(game.quest.time).to.equal(quest.time)
+          expect(game.quest.modePrivate).to.equal(quest.modePrivate)
+          expect(game.quest.homeLocation).to.containSubset(quest.homeLocation)
+          expect(game.quest.endLocation).to.containSubset(quest.endLocation)
+          expect(game.quest.tests).to.containSubset(quest.tests)
+        })
     )
 
-    afterEach(() => {})
-  })
+    afterEach(() => {
+      User
+      .deleteOne({ _id: idPlayer })
+      .then(deleteObj => expect(deleteObj.deletedCount).to.equal(1))
+      Quest
+      .deleteOne({ _id: idQuest })
+      .then(deleteObj => expect(deleteObj.deletedCount).to.equal(1))
+      Game
+      .deleteOne({ _id: idGame })
+      .then(deleteObj => expect(deleteObj.deletedCount).to.equal(1))
+    
+    }) // End afterEach
+
+
+  }) // End describe
 
   after(mongoose.disconnect)
 })
 
-// const player = {fullname, email, password ,image, score, favorites }

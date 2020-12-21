@@ -1,13 +1,18 @@
 const { validateQuery } = require('./helpers/validations')
-const { models: { User } } = require('notes-data')
+const { models: { User } } = require('geogin-data')
+ /**
+ * Find user.
+ * 
+ * @param {String} query 
+ * 
+ * @throws {TypeError} - if is not a query (string)
+ *
+ * @returns {String} - users Object
+ */
 
 module.exports = query => {
     validateQuery(query)
 
-    // TODO search users by query matching any part of the fullname or the e-mail
-
-
-    // IMPORTANT! create an index in db for this search SEE user schema that creates index from mongoose
     return User.find({ $text: { $search: query, $caseSensitive: false, $diacriticSensitive: false } })
         .then(users => {
             users.forEach(user => {

@@ -15,7 +15,10 @@ const bcrypt = require('bcryptjs')
  * @throws {TypeError} - if password is not a password (string)
  * @throws {ContentError} - if password is empty or blank
  * 
- * @returns {String} - id.  
+ * @throws {AuthError} - on wrong credentials
+ * @throws {AuthError} - password does not match with hash
+ *
+ * @returns {String} - id and handle token
  */
 
 module.exports = (email, password) => {
@@ -34,7 +37,7 @@ module.exports = (email, password) => {
         if (!match) throw new AuthError('wrong credentials')
 
         const { _id } = user
-
+        
         return _id.toString()
     })()
 }
