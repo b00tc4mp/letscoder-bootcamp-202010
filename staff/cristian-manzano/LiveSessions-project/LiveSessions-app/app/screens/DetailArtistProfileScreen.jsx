@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import LivesCard from "./LivesCard";
 import { View, StyleSheet, Image, Dimensions, FlatList, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
-import { Avatar } from 'react-native-paper';
 import { LogBox } from 'react-native';
 
 
-function DetailArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onGoToProfile, item }) {
+function DetailArtistProfileScreen({ onGoToPetitions, item }) {
 
 
     const itemId = item._id
-    const imageURL = `http://192.168.0.21:4000/api/users/${itemId}/images`
+    const imageURL = `http://192.168.1.131:4000/api/users/${itemId}/images`
 
     if (item.role === 'ARTIST')
         return (
@@ -20,12 +18,12 @@ function DetailArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOu
                 >
                     <View style={styles.artistProfileHeader}>
                         <View>
-                            <TouchableOpacity onPress={onGoToEditProfile}>
+                            
                                 <Image style={styles.profileAvatar}
                                     source={{ uri: `${imageURL}` }}
                                 />
                                 <Text style={styles.roleText}>Artist</Text>
-                            </TouchableOpacity>
+                            
 
                             <TextInput
                                 style={styles.artistName}

@@ -16,7 +16,7 @@ export default function saveLive(
 
   call(
     "POST",
-    "http://192.168.0.21:4000/api/lives",
+    "http://192.168.1.131:4000/api/lives",
     {
       "Content-type": "application/json",
     },

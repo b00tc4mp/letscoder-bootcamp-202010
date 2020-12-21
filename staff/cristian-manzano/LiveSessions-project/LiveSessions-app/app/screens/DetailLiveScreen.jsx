@@ -13,7 +13,7 @@ export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeni
   const liveId = live._id
   const status = live.status
 
-  const imageURL = `http://192.168.0.21:4000/api/lives/${liveId}/images`
+  const imageURL = `http://192.168.1.131:4000/api/lives/${liveId}/images`
 
   return (
 

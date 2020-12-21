@@ -14,7 +14,7 @@ export default (function (token, queryTags, callback) {
     console.log(queryString)
 
 
-    call('GET', `http://192.168.0.21:4000/api/artists/?${queryString}`,
+    call('GET', `http://192.168.1.131:4000/api/artists/?${queryString}`,
         { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {

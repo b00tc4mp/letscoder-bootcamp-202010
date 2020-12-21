@@ -4223,3 +4223,98 @@ error 2020-12-20T10:57:46.753Z - Error: ENOENT: no such file or directory, open 
 error 2020-12-20T10:57:52.333Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/lives/default-profile-image.jpg'
 error 2020-12-20T11:01:24.301Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
 info 2020-12-20T11:37:39.085Z - stopping server
+info 2020-12-20T11:38:58.414Z - starting server
+info 2020-12-20T11:39:00.551Z - server running on port 4000
+error 2020-12-20T12:07:06.357Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2020-12-20T12:07:23.916Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2020-12-20T12:32:58.664Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+info 2020-12-21T14:34:44.523Z - stopping server
+info 2020-12-21T15:56:57.023Z - starting server
+info 2020-12-21T15:56:58.351Z - server running on port 4000
+error 2020-12-21T16:01:39.111Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2020-12-21T16:01:45.700Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2020-12-21T16:01:49.859Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2020-12-21T16:01:57.532Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2020-12-21T16:02:02.048Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2020-12-21T16:13:31.943Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+info 2020-12-21T16:14:44.128Z - stopping server

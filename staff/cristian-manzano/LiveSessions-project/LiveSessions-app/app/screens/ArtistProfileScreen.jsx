@@ -12,7 +12,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
 
     
     const userId = user.id
-    const imageURL = `http://192.168.0.21:4000/api/users/${userId}/images`
+    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
     
 
     if (user.role === 'ARTIST')
@@ -60,17 +60,12 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
                                         duration={item.duration}
                                         payment={item.payment}
                                         description={item.description}
-                                        image= {{uri:`http://192.168.0.21:4000/api/lives/${item._id}/images`}}
+                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
                                     />
                                 </TouchableOpacity>
                             )}
                         />
                     </View>
-
-
-
-
-
 
                         <View style={styles.artistProfileBody}>
 

@@ -13,7 +13,7 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
 
     const [query, setQuery] = useState('')
     const userId = user.id
-    const imageURL = `http://192.168.0.21:4000/api/users/${userId}/images`
+    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
 
 
     if (user.role === 'PROMOTER')
@@ -80,7 +80,7 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
                                         <ArtistsCard
                                             artistName={item.artistName}
                                             tags={item.tags}
-                                            image={{ uri: `http://192.168.0.21:4000/api/users/${item._id}/images` }}
+                                            image={{ uri: `http://192.168.1.131:4000/api/users/${item._id}/images` }}
                                         />
                                     </TouchableOpacity>
 

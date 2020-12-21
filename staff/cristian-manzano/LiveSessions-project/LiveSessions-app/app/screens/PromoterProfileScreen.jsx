@@ -5,14 +5,14 @@ import { Avatar } from 'react-native-paper';
 import { LogBox } from 'react-native';
 
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoToLiveDetail, onSearch, user, lives }) {
+function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, user, lives }) {
     useEffect(() => {
         LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
     }, [])
 
     const [query, setQuery] = useState('')
     const userId = user.id
-    const imageURL = `http://192.168.0.21:4000/api/users/${userId}/images`
+    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
     
 
     if (user.role === 'PROMOTER')
@@ -88,7 +88,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoT
                                         duration={item.duration}
                                         payment={item.payment}
                                         description={item.description}
-                                        image= {{uri:`http://192.168.0.21:4000/api/lives/${item._id}/images`}}
+                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
                                     />
                                 </TouchableOpacity>
                             )}
