@@ -44,7 +44,6 @@ describe('findGames()', () => {
         it('shoud succed on a existing game', () => {
             return findGames(query, gameconsole, budget, priceMin, priceMax)
                 .then(game => {
-                    console.log("game:", game)
                     expect(game[0].name).to.equal(name)
                     expect(game[0].description).to.equal(description)
                     expect(game[0].gameconsole).to.equal(gameconsole)

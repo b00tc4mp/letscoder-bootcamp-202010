@@ -41,7 +41,6 @@ describe('deleteGame()', () => {
             return deleteGame(gameId)
                
             .then(result => {
-                    console.log("result :", result)
                     expect(result).to.be.an.instanceOf(Object)
                 })     
         })

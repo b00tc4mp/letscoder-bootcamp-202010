@@ -40,6 +40,24 @@ module.exports = {
         if (id.length !== 24) throw new LengthError(`id length ${id.length} is not 24`)
     },
 
+    validateContact(contact) {
+        if (typeof contact !== 'string') throw new TypeError(`${contact} is not a contact`)
+
+        if (!contact.trim().length) throw new ContentError('contact is empty or blank')
+    },
+
+    validatePhone(phone) {
+        if (typeof phone !== 'string') throw new TypeError(`${phone} is not a phone`)
+
+        if (!phone.trim().length) throw new ContentError('phone is empty or blank')
+    },
+
+    validateCity(city) {
+        if (typeof city !== 'string') throw new TypeError(`${city} is not a city`)
+
+        if (!city.trim().length) throw new ContentError('city is empty or blank')
+    },
+
     validateQuery(query) {
         if (typeof query !== 'string') throw new TypeError(`${query} is not a query`)
 

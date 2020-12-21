@@ -40,7 +40,7 @@ describe('saveGameImage()', () => {
             gameId = '' + newGame._id
         })
 
-        it('should succeed saving the game image', () => {
+        it.skip('should succeed saving the game image', () => {
             return saveGameImage(owner, gameId, gameImage)
                 .then(result => {
                     expect(result).to.be.undefined
