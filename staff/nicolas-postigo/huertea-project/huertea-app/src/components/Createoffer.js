@@ -1,5 +1,5 @@
 import React from 'react'
-import './Createoffer.sass'
+import './CreateOffer.sass'
 function Createoffer({ offername, titleoffer, onCreateoffer, price, offeraddress, phonecontact, emailcontact, onGoHub }) {
     return <sections>
         <div>

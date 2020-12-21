@@ -3,6 +3,7 @@ import './Home.sass'
 import {retrieveOffer} from './../logic'
 import { useState } from 'react'
 
+
 function Home({ onHome, onGoRegister, onGoLogin }) {
     const [offers, setOffers] = useState([])
     
@@ -30,7 +31,7 @@ function Home({ onHome, onGoRegister, onGoLogin }) {
   
   
           
-    
+
 
     return <sections>
 
@@ -39,6 +40,21 @@ function Home({ onHome, onGoRegister, onGoLogin }) {
             var product = event.target.query.value
             onHome(product)
         }}>
+
+          {/* <img width="100" height="200" src="./default.jpg"></img> */}
+            <div className="slogan">
+            <h5>yo huerteo,
+            </h5>
+            <h4>
+            tu huerteas,
+            </h4>
+            <h3>
+            él huertea,
+            </h3>
+            <h2>
+            nosotros huerteamos,
+            </h2>
+            </div>
             <button className="homebuttons" onClick={onGoRegister}>Regístrate</button>
             <button className="homebuttons" onClick={onGoLogin}>Entra</button>
 {/*             <nav className="searcherProducts">
@@ -46,19 +62,6 @@ function Home({ onHome, onGoRegister, onGoLogin }) {
             </nav>
  */}        </form>
         
-        
-        <h5>yo huerteo,
-        </h5>
-        <h4>
-        tu huerteas,
-        </h4>
-        <h3>
-        él huertea,
-        </h3>
-        <h2>
-        nosotros huerteamos,
-        </h2>
-
 
     </sections>
 

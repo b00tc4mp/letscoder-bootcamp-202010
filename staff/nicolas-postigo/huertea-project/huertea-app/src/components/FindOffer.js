@@ -13,7 +13,7 @@ export default function FindOffers({ results, onGoDetail, onGoHub }) {
                 {results.map(({ id, titleoffer, offername, price }) =>
                         <li key={id} className="list-offers__offer">
                                 <img src={`${API_URL}/offers/${id}/pics`} width="85px" />
-                                <h5>{titleoffer}</h5>
+                                {/* <h5>{titleoffer}</h5> */}
                                 <p>{offername}</p>
                                 <p>{price} €</p>
                                 <a onClick={(event) => onGoDetail(event, { id, titleoffer, offername, price })} href="#" className="button_detail_offer">Detalle Oferta</a>

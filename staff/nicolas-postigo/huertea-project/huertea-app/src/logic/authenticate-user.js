@@ -1,7 +1,7 @@
 import { call } from '../utils'
 import { validateEmail, validatePassword, validateCallback } from './helpers/validations'
 import context from './context'
-
+import { AuthError } from 'offers-errors'
 
 export default (function (email, password, callback) {
     validateEmail(email)
@@ -18,7 +18,7 @@ export default (function (email, password, callback) {
             else if (status !== 200) {
                 const { error } = JSON.parse(response)
 
-                return callback(new Error(error))
+                return callback(new AuthError(error))
             }
 
             const { token } = JSON.parse(response)

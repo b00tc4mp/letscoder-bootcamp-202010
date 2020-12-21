@@ -7,10 +7,12 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
     "emoji-dictionary": "^1.0.11",
+    "fontsource-amatic-sc": "^3.1.5",
+    "huertea-utils": "file:../huertea-utils",
     "leaflet": "^1.7.1",
     "mongoose": "^5.10.17",
     "node-sass": "^4.14.1",
-    "huertea-utils": "file:../huertea-utils",
+    "offers-errors": "file:../offers-errors",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-leaflet": "^3.0.2",
@@ -46,5 +48,4 @@
     "bcryptjs": "^2.4.3",
     "huertea-data": "file:../huertea-data"
   }
-  }
-
+}

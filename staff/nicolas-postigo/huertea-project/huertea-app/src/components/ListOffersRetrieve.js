@@ -9,11 +9,11 @@ return <section className="list-offers">
 {/*offers ? <p>{offers.titleoffer}</p> : <p>no definido</p>*/}
            {offers && offers.map(({ id, titleoffer, offername, price, offeraddress, phonecontact, emailcontact }) => 
                 <li key={id} className="list-offers__offer">
-                <img src={`${API_URL}/offers/${id}/pics`} width="85px" />
-                <h5>{titleoffer}</h5>
+                <img src={`${API_URL}/offers/${id}/pics`} width="125px" />
+                {/* <h5>{titleoffer}</h5> */}
                 <p className="offername_width">{offername}</p>
                 <p>{price} €</p>
-                <a onClick={(event)=>{onGoDetail(event,{id,titleoffer, offername, price, offeraddress, phonecontact, emailcontact,  event})}} href="#" className="button_detail_offer">Detalle Oferta</a> 
+                <a onClick={(event)=>{onGoDetail(event,{id,titleoffer, offername, price, offeraddress, phonecontact, emailcontact,  event})}} href="#" className="button_detail_offer">Detalle</a> 
                 {/* <a href="#" className="button_detail_offer">Detalle Oferta</a> */}
             </li>)}  
         

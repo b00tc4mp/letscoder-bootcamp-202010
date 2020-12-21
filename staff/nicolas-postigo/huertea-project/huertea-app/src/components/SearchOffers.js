@@ -28,7 +28,7 @@ function SearchOffers({onGoSearcher}){
             <>
                 <form className="searchhub" onSubmit={(event) => event.preventDefault()}>
                     <input
-                        className="searcher" type="text" name="query" placeholder="🔍 Busca en huertea"
+                        className="searcher" type="text" name="query" placeholder="🔎Busca en huertea"
                         onChange={(event) => (query = event.target.value)}
                     />
     
@@ -42,7 +42,7 @@ function SearchOffers({onGoSearcher}){
                         className="searchByName__button"
                         onClick={() => handleFindOffers( undefined, query, undefined)}
                     >
-                        Busca
+                        🔍 
                 </button>
 {/*                 <button
                         className="searchByName__button"

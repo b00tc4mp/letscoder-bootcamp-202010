@@ -1,11 +1,11 @@
 import './App.css';
-import { Register, Login, Hub, Home, Createoffer, Useroffers } from './components'
+import { Register, Login, Hub, Home, Createoffer, Useroffers, Feedback } from './components'
 import { useState } from 'react'
 // import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer, saveOfferImage } from './logic'
 import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer, retrieveUserOffer, saveOfferImage } from './logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import { BrowserRouter as Switch } from "react-router-dom";
-
+import { AuthError } from 'offers-errors'
 
 
 // function App() {
@@ -15,7 +15,7 @@ function App(props) {
   const [view, setView] = useState('')
   const [offers, setOffers] = useState([])
   const [useroffers, setUseroffers] = useState([])
-
+  const [error, setError] = useState()
 
 
   const { token } = sessionStorage
@@ -80,7 +80,9 @@ function App(props) {
       })
 
     } catch (error) {
-      alert(error.message)
+      if (error instanceof AuthError)
+        return setError({ message: error.message, level: 'warning'})
+        setError({ message: error.message, level:'error'})
     }
 
   }
@@ -204,7 +206,7 @@ function App(props) {
         <Route exact path='/' render={() => <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />} />
         <Route exact path='/register' render={(props) => <Register onRegister={handleRegister} {...props} />} />
         <Route exact path='/login' render={() => <Login onLogin={handleLogin} />} />
-        <Route exact path='/hub' render={() => token ? <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} useroffers={useroffers} onRetrieveUserOffers={handleRetrieveUserOffers} onGoHome={handleGoHome} /> : <Redirect to='/' />} />
+        <Route exact path='/hub' render={() => token ? <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} useroffers={useroffers} onRetrieveUserOffers={handleRetrieveUserOffers} onGoHome={handleGoHome} onGoHome={handleGoHome} /> : <Redirect to='/' />} />
         <Route exact path='/createoffer' render={() => <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} onGoHub={handleGoHub} />} />
 
 

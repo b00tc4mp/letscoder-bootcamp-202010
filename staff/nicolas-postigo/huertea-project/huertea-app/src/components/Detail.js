@@ -3,10 +3,10 @@ import MapView from './MapView'
 import './Detail.sass'
 const API_URL = process.env.REACT_APP_API_URL
 
-function Detail ({ offer }) {
+function Detail ({ offer, onGoHub }) {
     return <section className="list-offers">
         <div>
-            <button onClick className="log-out-button">🔙</button>
+            <button onClick={onGoHub} className="log-out-button">🔙</button>
         </div>
 {/*offers ? <p>{offers.titleoffer}</p> : <p>no definido</p>*/}
            {offer &&  

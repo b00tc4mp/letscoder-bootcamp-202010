@@ -15,7 +15,7 @@ import Modifyoffer from './Modifyoffer'
 import modifyOffer from '../logic/modify-offer'
 import Home from './Home'
 
-function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffers }) {
+function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffers, onGoHome }) {
     const [results, setResults] = useState()
     const [view, setView] = useState('default')
     const [offer, setOffer] = useState([])
@@ -55,6 +55,7 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
         setResults(results)
         setView('user-offers')
     }
+
     const handleGoDetail = (event, offer) => {
         event.preventDefault()
         try {
@@ -68,6 +69,7 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
 
     }
 
+    
 
 
 
@@ -129,9 +131,6 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
 
     return <sections className="wrap">
         <div>
-            <button onClick className="log-out-button">logout 👋</button>
-        </div>
-        <div>
             {/* <button onClick={(evento)=>onRetrieveUserOffers(evento)} className="retrieve-offer">mis ofertas &#127806;</button> */}
             <button onClick={() => { onRetrieveUserOffers(); handleGoUserOffers() }} className="retrieve-offer">mis ofertas &#127806;</button>
         </div>
@@ -144,17 +143,19 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
             onHub(product)
         }}>
         </form>
+        <div>
+            <button onClick={onGoHome} className="log-out-button">🔚</button>
+        </div>
         <h3>Hola {name}, ¿Qué alimento quieres hoy?</h3>
 
 
         <SearchOffers onGoSearcher={handleGoSearcher} />
         {/* <Link to ='/register'>tu</Link> */}
         {view === 'offersfound' && <FindOffer results={results} onGoDetail={handleGoDetail} onGoHub={handleGoHub} />}
-
         {view === 'default' && <ListOffersRetrieve offers={offers} onGoDetail={handleGoDetail} />}
         {view === 'user-offers' && <Useroffers useroffers={offeruser} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete} onGoModify={handleGoModify} onGoHub={handleGoHub} />}
         {/* {view === 'user-offers' && <Useroffers useroffers={useroffers} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete} onGoModify={handleGoModify}/>} */}
-        {view === 'detail' && <Detail offer={offer} />}
+        {view === 'detail' && <Detail offer={offer} useroffers={offeruser} results={results} onGoHub={handleGoHub} />}
         {view === 'modify' && <Modifyoffer offer={offer} onModifyoffer={handleModify} />}
         {view === 'home' && <Home />}
     </sections>
