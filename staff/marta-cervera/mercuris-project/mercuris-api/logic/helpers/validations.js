@@ -38,8 +38,7 @@ module.exports = {
 
         if (!description.trim().length) throw new ContentError('description is empty or blank')
     },
-    validatePrice(price) {
-        
+    validatePrice(price) {        
         if (typeof price !== 'string' && (!(price instanceof Number))) throw new TypeError(`${price} is not a number`)
 
         if (!price.trim().length) throw new ContentError('price is empty or blank')

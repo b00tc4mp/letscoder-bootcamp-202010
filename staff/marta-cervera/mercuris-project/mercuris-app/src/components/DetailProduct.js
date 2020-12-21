@@ -36,13 +36,13 @@ function DetailProduct({ result: {id, name, email, description, price, fullname,
     return <article className="result">
         {<button onClick= {handleGoBack} className="result__btn">GO BACK</button>}
         <img className="results__li__img" src={`${API_URL}/products/${id}/images`} width="150px" />
-        <p className="result__p">Product Name: {name}</p>
-        <p className="result__p">Description: {description}</p>
-        <p className="result__p">Price: {price} €</p>
-        {!token && <p className="result__p">Company Name: {fullname}</p>}
-        {!token && <p className="result__p">More info: {contact}</p>}
+        <p className="result__p">{name}</p>
+        <p className="result__p">{description}</p>
+        <p className="result__price">{price} €</p>
+        {!token && <p className="result__p">{fullname}</p>}
+        {!token && <p className="result__p">{contact}</p>}
         {!token && <a className="result__p" href={`mailto:${email}`}>E-mail: {email}</a>}
-        {!token && <p className="result__p">City: {city}</p>}
+        {!token && <p className="result__p">{city}</p>}
         {!token &&<a className="result__p" href={`tel:${phone}`}>Phone: {phone}</a>}
         {token && <button className="result__button" onClick={() => handleDeleteProduct(id)}>DELETE PRODUCT</button>}
     </article> 

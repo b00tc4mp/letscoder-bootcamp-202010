@@ -19,7 +19,7 @@ function Profile ({currentUser, onModify}){
         })}>
             <div className="profile__form">
                 <input className="profile__btn" type="text" name= "name" placeholder=""defaultValue={currentUser.name}></input>
-                <input  className="profile__btncontact" type="text" name= "contact" placeholder="How do you want to be contact? Insert your phone and a description" defaultValue={currentUser.contact}></input>
+                <input  className="profile__btn" type="text" name= "contact" placeholder="How do you want to be contact? Insert your phone and a description" defaultValue={currentUser.contact}></input>
                 <input  className="profile__btn" type="text" name= "address" placeholder="Insert your address" defaultValue={currentUser.address}></input>
                 <input className="profile__btn"type="text" name= "city" placeholder="Insert your city" defaultValue={currentUser.city}></input>
                 <input className="profile__btn" type="text" name= "phone" placeholder="Insert your phone" defaultValue={currentUser.phone}></input>

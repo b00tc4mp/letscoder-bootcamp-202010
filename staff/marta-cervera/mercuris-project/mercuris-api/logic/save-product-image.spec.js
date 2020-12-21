@@ -4,6 +4,9 @@ const { models: { User, Product },  mongoose } = require('mercuris-data')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId, randomInteger } = require('../utils/random')
 require('../utils/array-polyfills')
 const saveProductImage = require('./save-product-image')
+const fs = require('fs')
+const fsp = fs.promises
+const path = require('path')
 const { ContentError, LengthError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
@@ -24,6 +27,8 @@ describe('saveProductImage()', () => {
             description = randomStringWithPrefix('description')
             price = '' + randomInteger(10, 100)   
 
+            productImage = fs.createReadStream(path.join(__dirname,'../data/products/dafault.jpg'))
+
             const user = { name, email, password}
 
             const newUser = await User.create(user)
@@ -37,37 +42,31 @@ describe('saveProductImage()', () => {
         })
 
         it('shoud succed on new product', () => {
-            let stream = '../populate/products/default.jpg'
+           return saveProductImage(productId, productImage)
+                .then(result => {
+                   expect(result).to.be.undefined
 
-            saveProductImage(productId, stream)
-
-            .then(() =>
-                    Product.findOne({ productId })
-                )
-                .then(product => {
-                    expect(product.productId).to.equal(productId)
-                    expect(product.stream).to.equal(stream)
+                   return fsp.access(path.join(__dirname, `../data/products/${productId}.jpg`), fs.F_OK)
                 })
         })
 
-        afterEach(() =>
-            User.deleteMany().then(()=>{Product.deleteMany().then(()=>{})})
-
-        )
+        afterEach(() => Promise.all([
+            Product.deleteMany(),
+            fsp.unlink(path.join(__dirname, `../data/products/${productId}.jpg`))
+        ]))
     })
 
     describe('on a non existing user', () => {
         
 
-        beforeEach(() => {
-
-            stream = '../populate/products/default.jpg'
+        beforeEach(() => {    
             productId = randomId()
+            productImage = fs.createReadStream(path.join(__dirname,'../data/products/default.jpg'))
 
         })
 
-        it('shoud fail when user and pet does not exists', () => {
-            saveProductImage(productId, stream)
+        it('shoud fail when user and product does not exists', () => {
+            return saveProductImage(productId, productImage)
 
             .catch(error => {
                 expect(error).to.be.instanceOf(Error)
@@ -83,42 +82,41 @@ describe('saveProductImage()', () => {
         describe('when id is wrong', () => {
 
                 describe('when id is empty or blank', () => {
-                    let productId, stream
+                    let productId, productImage
 
                     beforeEach(() => {
-
                         productId = randomEmptyOrBlankString()
-                        stream = '../populate/products/default.jpg'
+                        productImage = fs.createReadStream(path.join(__dirname,'../data/products/default.jpg'))
 
                     })
 
                     it('should fail on an empty or blank name', () => {
-                        expect(() => saveProductImage(productId, stream, () => { })).to.throw(ContentError, 'id is empty or blank')
+                        expect(() => saveProductImage(productId, productImage, () => { })).to.throw(ContentError, 'id is empty or blank')
                     })
                 })
                 describe('when id is not a string', () => {
-                    let productId, stream
+                    let productId, productImage
 
                     beforeEach(() => {
                         productId = randomNonString()
-                        stream = '../populate/products/default.jpg'
+                        productImage = fs.createReadStream(path.join(__dirname,'../data/products/default.jpg'))
                     })
 
                     it('should fail when id is not an string', () => {
-                        expect(() => saveProductImage(productId, stream, () => { })).to.throw(TypeError, `${productId} is not an id`)
+                        expect(() => saveProductImage(productId, productImage, () => { })).to.throw(TypeError, `${productId} is not an id`)
                     })
 
                 })
                 describe('when id lenght is not 24', () => {
-                    let productId, stream
+                    let productId, productImage
 
                     beforeEach(() => {
                         productId = '5fd76a98396e732e306c953125'
-                        stream = '../populate/products/default.jpg'
+                        productImage = fs.createReadStream(path.join(__dirname,'../data/products/default.jpg'))
                     })
 
                     it('should fail when id is not an string', () => {
-                        expect(() => saveProductImage(productId, stream, () => { })).to.throw(LengthError, `id length ${productId.length} is not 24`)
+                        expect(() => saveProductImage(productId, productImage, () => { })).to.throw(LengthError, `id length ${productId.length} is not 24`)
                     })
 
                 })

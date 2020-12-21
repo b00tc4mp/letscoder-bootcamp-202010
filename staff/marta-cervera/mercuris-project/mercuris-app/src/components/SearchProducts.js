@@ -100,10 +100,10 @@ export default function ({ doGoToAccess }) {
     
     return (
         <>
-        {!token && <button onClick= {handleGoToAccess} className="gotoaccess">GO TO ACCESS</button>}
+        {!token && <img className="search__logo" src={logo} onClick= {handleGoToAccess} className="gotoaccess"></img>}
         <main>
         <div className="search">        
-        <img className="search__logo" src={logo} />
+        
         </div>
         <div className="searching">
                 {!result && <form onSubmit={handleFindProducts} className="searching__form">                

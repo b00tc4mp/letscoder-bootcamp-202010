@@ -1,6 +1,6 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger, randomId, randomNonString, randomEmptyOrBlankString , randomNotNumber} = require('../utils/random')
+const { randomStringWithPrefix,randomNotId, randomWithPrefixAndSuffix, randomInteger, randomId, randomNonString, randomEmptyOrBlankString , randomNotNumber} = require('../utils/random')
 const { models: { User, Product }, mongoose: { Types: { ObjectId } }, mongoose } = require('mercuris-data')
 const saveProduct = require('./save-product')
 const { ContentError, LengthError } = require('../errors')
@@ -195,18 +195,19 @@ describe('when price is wrong', () => {
                     ownerId = randomId()
                 })
                 it ('should fail when productId is not an id', () => {
-                    expect(() => saveProduct(productId, ownerId, name, description, price, () => {})).to.throw(TypeError, `${gameId} is not an id`)
+                    expect(() => saveProduct(productId, ownerId, name, description, price, () => {})).to.throw(TypeError, `${productId} is not an id`)
                 })
             })
-            describe('when ownerId is not an Id', () => {
-                let productId, name, description
-            })
+            
         })
-        let productId, description, price
+    })
+    describe('when ownerId is not an Id', () => {
+        let productId, description, price,name
 
         beforeEach(() => {
             productId = randomId()
             description = randomStringWithPrefix('description')
+            name = randomStringWithPrefix('name')
             price = '' + randomInteger(10, 100)                
         })
         //productId, ownerId, name, description, price)

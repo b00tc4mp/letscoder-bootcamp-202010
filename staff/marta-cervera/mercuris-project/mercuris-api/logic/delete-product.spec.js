@@ -42,10 +42,12 @@ describe('deleteProduct()', () => {
         })
 
         it('shoud succed on a existing product', () => {
-            deleteProduct(productId)
-               
-            .then(result => expect(result.deletedCount).to.equal(1))
+            return deleteProduct(productId)
+                .then(result => {
+                    console.log()
+                    expect(result).to.be.an.instanceOf(Object)
         })
+    })
 
         afterEach(() =>
             User.deleteMany().then(()=>{Product.deleteMany().then(()=>{})})

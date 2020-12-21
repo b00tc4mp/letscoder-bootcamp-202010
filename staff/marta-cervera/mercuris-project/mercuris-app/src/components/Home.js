@@ -77,6 +77,7 @@ export default function Home({ onLogout }) {
     const handleSearchProducts = (queryCompany, queryProduct, price, priceMin, priceMax) => {
         try {
             const { token } = sessionStorage
+            
 
             findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) => {
                 if (error) return feedbackError('could not find any product')

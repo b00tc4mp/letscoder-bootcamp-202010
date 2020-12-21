@@ -13,7 +13,7 @@ describe('retrieveProductDetail()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let  email, password, name, description, productId, owner
+        let  name, email, password, description, productId, owner
 
         beforeEach(async() => {
             name = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -21,7 +21,7 @@ describe('retrieveProductDetail()', () => {
             password = randomStringWithPrefix('password')
             
 
-            name = randomStringWithPrefix('name')
+           
             description = randomStringWithPrefix('description')
             price = '' + randomInteger(10, 100)
             productId = randomId()   
@@ -40,14 +40,12 @@ describe('retrieveProductDetail()', () => {
 
         it('shoud succed on a existing product', () => {
             return retrieveProductDetail(productId)           
-               
-            .then(() =>
-                    Product.findOne({ productId })
-                )
+            
                 .then(product => {
-                    expect(product.productId).to.equal(productId)
-                    expect(product.name).to.equal(name)
+                    
+                    expect(product.email).to.equal(email)
                     expect(product.description).to.equal(description)
+                    expect(product.price).to.be.a('number')
                   
                 })
         })

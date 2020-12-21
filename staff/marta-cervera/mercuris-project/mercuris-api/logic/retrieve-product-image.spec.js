@@ -29,6 +29,7 @@ describe('retrieveProductImage()', () => {
             price = '' + randomInteger(10, 100)   
 
             image = '../data/products/default.jpg'
+            file = path.join(__dirname, `../data/products/${productId}.jpg`)
 
             const user = { name, email, password, address, city, phone, owner }
 
@@ -45,7 +46,8 @@ describe('retrieveProductImage()', () => {
         it('shoud succed on a existing product', () => {
            return  retrieveProductImage(productId)
                
-            .then(result => (image).to.equal(result))
+            .then(file => 
+                expect(file).to.be.instanceOf(Object))
             
         })
 
@@ -113,7 +115,7 @@ describe('retrieveProductImage()', () => {
                         
                     })
             
-                    it('should fail when id is not an string', () => {
+                    it('should fail swhen id is not an string', () => {
                         expect(() => retrieveProductImage(productId, () => { })).to.throw(LengthError, `id length ${productId.length} is not 24`)
                     })
                     
