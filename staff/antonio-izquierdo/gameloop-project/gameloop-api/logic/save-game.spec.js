@@ -53,6 +53,13 @@ describe('saveGame()', () => {
                     })
             })
 
+            it('should succeed with undefined parameters', () => {
+                saveGame(undefined)
+                    .then(game => {
+                        expect(game).to.be(null)
+                    })
+            })
+
             afterEach(() => Game.deleteMany())
         })
 
@@ -72,7 +79,7 @@ describe('saveGame()', () => {
                 const user = { fullname, email, password }
 
                 User.create(user)
-                    .then(user => userId = user.id)
+                    .then(user => userId = user._id)
                     .then(Game.create({ name, description, gameconsole, budget, owner: userId })
                         .then(game => gameId = game._id))
             })

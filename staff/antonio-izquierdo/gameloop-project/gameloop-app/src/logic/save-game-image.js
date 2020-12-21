@@ -1,9 +1,10 @@
 import { call } from '../utils'
-import { validateId, validateFile, validateCallback } from './helpers/validations'
+import { validateId, validateFile, validateCallback, validateToken } from './helpers/validations'
 import context from './context'
 
  
-export default (function (gameId, image, callback) {
+export default (function (token, gameId, image, callback) {
+    validateToken(token)
     validateId(gameId)
     if (typeof image !== 'undefined') validateFile(image)
     validateCallback(callback)
@@ -14,7 +15,7 @@ export default (function (gameId, image, callback) {
 
     const { API_URL } = this
 
-    call('POST',`${API_URL}/games/${gameId}/images`, {},
+    call('POST',`${API_URL}/games/${gameId}/images`, { Authorization: `Bearer ${token}` },
         formData,
         (status, response) => {
             if (status === 0)

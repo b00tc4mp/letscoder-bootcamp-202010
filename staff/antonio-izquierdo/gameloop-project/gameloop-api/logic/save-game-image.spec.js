@@ -7,7 +7,7 @@ const { mongoose, models: { User, Game } } = require('gameloop-data')
 const fs = require('fs')
 const fsp = fs.promises
 const path = require('path')
-const { ContentError, LengthError } = require('../errors')
+const { ContentError, LengthError, NotFoundError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -40,7 +40,7 @@ describe('saveGameImage()', () => {
             gameId = '' + newGame._id
         })
 
-        it.skip('should succeed saving the game image', () => {
+        it('should succeed saving the game image', () => {
             return saveGameImage(owner, gameId, gameImage)
                 .then(result => {
                     expect(result).to.be.undefined
@@ -66,12 +66,12 @@ describe('saveGameImage()', () => {
         })
 
         it('shoud fail when user and game does not exists', () => {
-            return saveGameImage(gameId, gameImage)
+            return saveGameImage(owner, gameId, gameImage)
 
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 
-                    expect(error.message).to.equal(`user with id ${userId} not found`)
+                    expect(error.message).to.equal(`user with id ${owner} not found`)
                 })
         })
     })

@@ -49,7 +49,7 @@ export default function Home({onLogout}) {
             saveGame(undefined, name, description, gameconsole, budget, token, (error, gameId) => {
                 if (error) return feedbackError(error.message)
 
-                saveGameImage(gameId, image, error => {
+                saveGameImage(token, gameId, image, error => {
                     if (error) return feedbackError(error.message)
                     try {
                         alert('game saved')

@@ -1,11 +1,11 @@
 import './SearchGames.sass'
 import FindGames from './FindGames'
 import { useState } from 'react'
-import { Route, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { findGames } from '../logic'
-import RetrieveGame from './RetrieveGame'
 
-export default withRouter(({ onSearch, history, location, match }) => {
+
+export default withRouter(({ onSearch, history }) => {
     const [games, setGames] = useState()
 
     const handleFindGames = event => {
