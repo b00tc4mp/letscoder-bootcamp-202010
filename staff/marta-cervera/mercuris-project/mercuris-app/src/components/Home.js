@@ -54,7 +54,7 @@ export default function Home({ onLogout }) {
             saveProduct(undefined, token, name, description, price, (error, productId) => {
                 if (error) return feedbackError(error.message)
 
-                saveProductImage(productId, image, error => {
+                saveProductImage(token,productId, image, error => {
                     if (error) return feedbackError(error.message)
                     setSuccess(true)
 

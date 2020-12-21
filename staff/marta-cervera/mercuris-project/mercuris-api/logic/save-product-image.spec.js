@@ -41,12 +41,12 @@ describe('saveProductImage()', () => {
 
         })
 
-        it('shoud succed on new product', () => {
+        it.only('shoud succed on new product', () => {
            return saveProductImage(productId, productImage)
                 .then(result => {
                    expect(result).to.be.undefined
 
-                   return fsp.access(path.join(__dirname, `../data/products/${productId}.jpg`), fs.F_OK)
+                   return fsp.access(path.join(__dirname, `../data/products/default.jpg`), fs.F_OK)
                 })
         })
 

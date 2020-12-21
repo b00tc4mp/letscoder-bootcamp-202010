@@ -2216,3 +2216,69 @@ info 2020-12-21T08:39:42.671Z - undefined
 info 2020-12-21T08:40:29.657Z - stopping server
 info 2020-12-21T08:40:49.848Z - starting server
 info 2020-12-21T08:40:49.959Z - undefined
+info 2020-12-21T12:49:54.665Z - starting server
+info 2020-12-21T12:49:54.833Z - undefined
+info 2020-12-21T12:50:03.427Z - stopping server
+info 2020-12-21T12:57:23.715Z - starting server
+info 2020-12-21T12:57:23.825Z - undefined
+error 2020-12-21T12:58:44.611Z - ReferenceError: jwt is not defined
+    at Busboy.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-save-product-image.js:14:37)
+    at Busboy.emit (events.js:314:20)
+    at Busboy.emit (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\busboy\lib\main.js:37:33)
+    at PartStream.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\busboy\lib\types\multipart.js:214:13)
+    at PartStream.emit (events.js:314:20)
+    at HeaderParser.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:50:16)
+    at HeaderParser.emit (events.js:314:20)
+    at HeaderParser._finish (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:314:20)
+    at SBMH._sbmh_feed (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\streamsearch\lib\sbmh.js:159:14)
+    at SBMH.push (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:196:25)
+    at SBMH.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:126:10)
+    at SBMH.emit (events.js:314:20)
+info 2020-12-21T13:05:55.400Z - stopping server
+info 2020-12-21T13:05:58.894Z - starting server
+info 2020-12-21T13:05:59.006Z - undefined
+error 2020-12-21T13:08:11.780Z - ReferenceError: jwt is not defined
+    at Busboy.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-save-product-image.js:15:37)
+    at Busboy.emit (events.js:314:20)
+    at Busboy.emit (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\busboy\lib\main.js:37:33)
+    at PartStream.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\busboy\lib\types\multipart.js:214:13)
+    at PartStream.emit (events.js:314:20)
+    at HeaderParser.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:50:16)
+    at HeaderParser.emit (events.js:314:20)
+    at HeaderParser._finish (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:314:20)
+    at SBMH._sbmh_feed (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\streamsearch\lib\sbmh.js:159:14)
+    at SBMH.push (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:196:25)
+    at SBMH.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:126:10)
+    at SBMH.emit (events.js:314:20)
+info 2020-12-21T13:14:39.953Z - stopping server
+info 2020-12-21T13:14:42.844Z - starting server
+info 2020-12-21T13:14:42.965Z - undefined
+error 2020-12-21T13:15:57.909Z - ReferenceError: ownerId is not defined
+    at module.exports (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\save-product-image.js:10:16)
+    at Busboy.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\routes\api\handlers\handle-save-product-image.js:21:13)
+    at Busboy.emit (events.js:314:20)
+    at Busboy.emit (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\busboy\lib\main.js:37:33)
+    at PartStream.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\busboy\lib\types\multipart.js:214:13)
+    at PartStream.emit (events.js:314:20)
+    at HeaderParser.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:50:16)
+    at HeaderParser.emit (events.js:314:20)
+    at HeaderParser._finish (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:68:8)
+    at SBMH.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:40:12)
+    at SBMH.emit (events.js:314:20)
+    at SBMH._sbmh_feed (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\streamsearch\lib\sbmh.js:159:14)
+    at SBMH.push (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\streamsearch\lib\sbmh.js:56:14)
+    at HeaderParser.push (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\HeaderParser.js:46:19)
+    at Dicer._oninfo (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:196:25)
+    at SBMH.<anonymous> (C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\node_modules\dicer\lib\Dicer.js:126:10)
+info 2020-12-21T13:16:53.498Z - stopping server
+info 2020-12-21T13:16:56.956Z - starting server
+info 2020-12-21T13:16:57.086Z - undefined
+info 2020-12-21T13:18:51.721Z - stopping server

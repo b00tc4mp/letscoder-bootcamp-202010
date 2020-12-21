@@ -1,8 +1,9 @@
 import { call } from '../utils'
-import { validateId, validateFile, validateCallback } from './helpers/validations'
+import { validateId, validateFile, validateCallback, validateToken } from './helpers/validations'
 import context from './context'
 
-export default (function (productId, image, callback) {
+export default (function (token,productId, image, callback) {
+    validateToken(token)
     validateId(productId)
     validateFile(image)
     validateCallback(callback)
@@ -13,7 +14,7 @@ export default (function (productId, image, callback) {
 
     const { API_URL } = this
 
-    call('POST',`${API_URL}/products/${productId}/images`, {},
+    call('POST',`${API_URL}/products/${productId}/images`, {Authorization: `Bearer ${token}` },
         formData,
         (status, response) => {
             if (status === 0)
