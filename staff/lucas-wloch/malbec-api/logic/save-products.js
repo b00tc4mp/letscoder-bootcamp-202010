@@ -6,7 +6,7 @@ const { models: { Product, User } } = require('malbec-data')
 
 module.exports = (userId, productId, name, description, price, glutenFree, vegan, alergenos, category, available) => {
     if (typeof productId !== "undefined") validateId(productId)
-    if (typeof userId !== "undefined") validateId(userId)
+    validateId(userId)
     validateProductName(name)
     validateProductDescription(description)
     validateProductPrice(price)

@@ -1,4 +1,4 @@
-import { Feedback, Layout, Footer, Slides1  } from '../components'
+import { Feedback, Layout, Footer, Slides  } from '../components'
 import '../components/Home.sass'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -33,7 +33,7 @@ const Home = () => {
             {/* {user && view === undefined && <button onClick={() => setView('save-product')}>Create a product</button>}
             {user && view === 'save-product' && <SaveProducts onExit={() => setView()} />} */}
             {/* {view === undefined && <Link href="/carta"><button >Ver La Carta</button></Link>} */}
-            <Slides1/>
+            <Slides/>
             {error && <Feedback error={error}  onExit={setError()}/>}
             {/* <h3 className="home__h3" >Nuestro Local</h3> */}
 

@@ -1000,3 +1000,155 @@ error 2020-12-17T15:39:10.244Z - AuthError: wrong credentials
     at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\authenticate-user.js:15:30
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-17T19:08:08.018Z - stopping server
+info 2020-12-17T19:12:26.108Z - starting server
+error 2020-12-17T19:12:56.136Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-data\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-data\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-data\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-data\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\index.js:13:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-17T19:12:56.152Z - stopping server
+info 2020-12-17T19:13:09.212Z - starting server
+info 2020-12-17T19:13:09.348Z - server running on port 4000
+info 2020-12-18T10:40:36.347Z - starting server
+info 2020-12-18T10:40:36.922Z - server running on port 4000
+info 2020-12-18T11:18:01.925Z - stopping server
+info 2020-12-19T11:39:19.378Z - starting server
+info 2020-12-19T11:39:20.209Z - server running on port 4000
+info 2020-12-19T14:01:57.108Z - stopping server
+info 2020-12-19T17:35:17.073Z - starting server
+info 2020-12-19T17:35:18.018Z - server running on port 4000
+error 2020-12-20T15:55:50.503Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:55:53.326Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:11.764Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:13.106Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:13.345Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:13.513Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:14.004Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:14.363Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:14.564Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:14.753Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:56:59.450Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:59:06.715Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T15:59:54.719Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:00:31.374Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:00:32.706Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:00:37.174Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:01:12.592Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:01:14.094Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:01:17.844Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:01:18.665Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:01:29.597Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:01:31.213Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:01:58.429Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:02:11.212Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-20T16:03:30.439Z - TypeError: Cannot destructure property 'entrantes' of '_menu' as it is undefined.
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-menu.js:10:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-20T16:05:29.010Z - stopping server
+info 2020-12-20T16:05:38.142Z - starting server
+info 2020-12-20T16:05:38.483Z - server running on port 4000
+info 2020-12-20T16:09:06.346Z - starting server
+info 2020-12-20T16:09:06.525Z - server running on port 4000
+info 2020-12-20T17:45:06.262Z - stopping server
+info 2020-12-21T08:21:44.697Z - starting server
+info 2020-12-21T08:21:45.311Z - server running on port 4000
+error 2020-12-21T13:00:30.639Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:27:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T13:00:53.745Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:27:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T13:04:27.923Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:27:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T13:06:01.598Z - ConflictError: product with name a already exists
+    at C:\Users\lucas\bootcamp\collab\letscoder-bootcamp-202010\staff\lucas-wloch\malbec-api\logic\save-products.js:27:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-21T13:08:15.473Z - stopping server

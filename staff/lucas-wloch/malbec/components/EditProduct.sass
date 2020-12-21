@@ -1,3 +1,5 @@
+@import config
+
 .editProduct
     border: 1.5px solid black
     color: black
@@ -23,9 +25,11 @@
         flex-direction: column
     &__div
         display: flex
+        gap: 15px
         padding: 0
         margin: 0
         align-items: center
+        margin-bottom: 10px
         &::first-child
             text-align: left
     &__inputAlergenos
@@ -35,14 +39,15 @@
         outline: none
     &__gluten-free, &__vegan, &__category, &__available
         outline: none
-        width: 20%
-        height: 7vh
-        margin: 10px
+        padding: 5px 0px 5px 10px
+        // margin: 10px
     &__button 
-        width: 15vw
-        height: 10vh
-        border-radius: 10px
+        width: 25%
+        height: 4vh
+        border-radius: 5px
         outline: none
+        margin-top: 10px
+        margin-left: 80%
     &__inputPrice
 
         

@@ -4,7 +4,7 @@ import '../components/NuestroLocal.sass'
 
 
 
-const Home = () => {
+const NuestroLocal = () => {
 
     return <><Layout>
         <div className="nuestroLocal">
@@ -65,5 +65,5 @@ const Home = () => {
 
 
 
-export default Home
+export default NuestroLocal
 

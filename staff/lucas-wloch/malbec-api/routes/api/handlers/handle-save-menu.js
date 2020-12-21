@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
-    const { body: { menu }, headers: { authorization } } = req
+    const { headers: { authorization } } = req
 
     const token = authorization.replace('Bearer ', '')
 
@@ -13,8 +13,8 @@ module.exports = (req, res, handleError) => {
 
     debugger
     try {
-        saveMenu(userId, menu)
-            .then((menuId) => res.status(204).send({menuId}))
+        saveMenu(userId)
+            .then((menuId) => res.status(200).send({menuId}))
             .catch(handleError)
     } catch (error) {
         handleError(error)

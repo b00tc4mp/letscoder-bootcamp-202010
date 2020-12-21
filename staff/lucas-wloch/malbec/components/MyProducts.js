@@ -1,6 +1,6 @@
 import './MyProducts.sass'
 import { useState, useEffect } from 'react'
-import { retrieveProductCategory } from '../logic'
+import { retrieveProductCategory, saveMenu } from '../logic'
 import { EditProduct, Feedback, SaveProducts } from '.'
 
 function MyProducts() {
@@ -21,6 +21,7 @@ function MyProducts() {
     const [error, setError] = useState()
 
     const [add, setAdd] = useState()
+    const [savedMenu, setSavedMenu] = useState()
 
     const toggleView = (event) => {
         const { target } = event
@@ -156,11 +157,24 @@ function MyProducts() {
         setAdd(category)
     }
 
-
+    const handleSaveMenu = () => {
+        const { token } = sessionStorage
+        try {
+            return Promise.all([
+                saveMenu(token)
+                    .then(() => setSavedMenu(true))
+                    .catch(error => setError(error))
+            ])
+        } catch (error) {
+            setError(error)
+        }
+    }
 
     return <>
         <section className="myProducts" >
             <h3 className="myProducts__h3">My Products</h3>
+            {savedMenu && <h3 className="myProducts__h3">Ok Menu Saved !</h3>}
+            {savedMenu || <button className="myProducts__saveMenu" onClick={() => handleSaveMenu()}>Save Menu</button>}
             {error && <Feedback error={error} onExit={setError()} />}
 
             <button className="myProducts__acordion" onClick={toggleView} name="parrilla">Parrilla</button>
@@ -170,7 +184,7 @@ function MyProducts() {
                     {/* <AddOrRemove/> */}
                     {/* <div className="myProducts__addOrRemove"> */}
                     <button className="myProducts__add" onClick={handleAdd} >Add</button>
-                    {add && <SaveProducts  category={add} onExit={() => setAdd()} />}
+                    {add && <SaveProducts category={add} onExit={() => setAdd()} />}
 
                 </ul>
             </div>
@@ -201,6 +215,7 @@ function MyProducts() {
                     {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
+            {error && <Feedback error={error} onExit={setError()} />}
 
             <button className="myProducts__acordion" onClick={toggleView} name="entrantes-parrilla">Entrantes Parrilla</button>
             <div className="myProducts__panel">
@@ -237,6 +252,7 @@ function MyProducts() {
                     {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
+            {error && <Feedback error={error} onExit={setError()} />}
 
             <button className="myProducts__acordion" onClick={toggleView} name="aguas-refrescos"> Aguas y Refrescos</button>
             <div className="myProducts__panel">
@@ -255,8 +271,8 @@ function MyProducts() {
                     {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
-            
-            
+
+
 
             {/* <button className="myProducts__acordion" onClick={toggleView} name="vinos">Vinos</button>
             <div className="myProducts__panel">
@@ -287,6 +303,8 @@ function MyProducts() {
                     {add && <SaveProducts category={add} onExit={() => setAdd()} />}
                 </ul>
             </div>
+            {error && <Feedback error={error} onExit={setError()} />}
+
         </section>
 
     </>

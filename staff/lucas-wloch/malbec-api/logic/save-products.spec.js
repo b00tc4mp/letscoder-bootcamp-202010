@@ -305,7 +305,7 @@ describe('saveProducts() SPEC', () => {
 
         })
         describe('when productId is wrong', () => {
-            describe.skip('when productId is not a string', () => {
+            describe('when productId is not a string', () => {
                 let userId, productId, name, description, price, glutenFree, vegan, alergenos, category, available
 
                 beforeEach(() => {
@@ -320,6 +320,7 @@ describe('saveProducts() SPEC', () => {
                     category = ["entrantes-parrilla", "empanadas", "ensaladas", "parrilla", "pescados", "otras-sugerencias", "acompañamientos-guarniciones", "postres", "aguas-refrescos", "vinos", "cervezas"].random()
                     available = randomBoolean()
                     userId = ["5fce18ca958cfd3e2490feb4", "5fc61cc871c3ab8240aecd97", "5fd26f956e06c444d854d6c2", "5fd35a599c87a73328271388"].random()
+                    // productId = randomNonString()
                     productId = randomNonString()
                 })
 
@@ -503,6 +504,7 @@ describe('saveProducts() SPEC', () => {
                 beforeEach(() => {
                     name = randomStringWithPrefix('name')
                     description = randomStringWithPrefix('description')
+                    // price = 5
                     price = randomNonNumber()
                     glutenFree = randomBoolean()
                     vegan = randomBoolean()

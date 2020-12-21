@@ -1,4 +1,4 @@
-import { Footer, Layout, ShowProduct } from '../components'
+import { Footer, Layout, ShowProduct, Feedback } from '../components'
 import '../components/Carta.sass'
 // import { retrieveProducts } from '../api/logic'
 import { useEffect, useState } from 'react'
@@ -34,13 +34,13 @@ const Carta = () => {
             {detail && <ShowProduct product={detail} onExit={() => setDetail()} />}
             {menu && <div className="carta__container">
                 <div className="carta__references">
-                    <div className="carta__glutenFree">
-                        <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                    <div className="carta__reference">
+                        <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                         <p> Gluten Free </p>
                     </div>
-                    <div className="carta__glutenFree">
-                        <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" />
-                        <p> Vegam </p>
+                    <div className="carta__reference">
+                        <img className="carta__vegan" src="/images/100-vegan.png" height="20px" />
+                        <p> Vegan </p>
                     </div>
                 </div>
                 <h2 className="carta__h2">Entrantes</h2>
@@ -52,10 +52,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -69,10 +69,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -86,10 +86,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -106,10 +106,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -123,10 +123,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -140,10 +140,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -160,10 +160,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -177,10 +177,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -194,10 +194,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -212,10 +212,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}
@@ -231,10 +231,10 @@ const Carta = () => {
                             <div className="carta__div" >
                                 <p className="carta__price">{price}€</p>
                                 {glutenFree ? <div className="carta__glutenFree">
-                                    <img className="carta__glutenFree--img" src="/images/gluten-free.jpg" height="20px" />
+                                    <img className="carta__glutenFree--img" src="/images/gluten-free.png" height="20px" />
                                     {/* <p> Gluten Free </p> */}
                                 </div> : ''}
-                                {vegan ? <img className="carta__vegan" src="/images/vegan-friendly-icon.png" height="20px" /> : ''}
+                                {vegan ? <img className="carta__vegan" src="/images/100-vegan.png" height="20px" /> : ''}
                             </div>
                             {alergenos && alergenos.length ? <p className="carta__alergenos">alergenos: {alergenos.length > 1 ? alergenos.join(' ') : alergenos}</p> : ''}
                             {available ? '' : <p>not available</p>}

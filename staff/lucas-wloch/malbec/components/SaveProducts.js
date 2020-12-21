@@ -1,6 +1,6 @@
 import saveProducts from '../logic/save-products'
 import saveProductImage from '../logic/save-product-image'
-import {Feedback} from '../components'
+import { Feedback } from '../components'
 import './SaveProducts.sass'
 import { useState } from 'react'
 
@@ -35,32 +35,37 @@ function SaveProducts({ onExit, category, onSaved }) {
         const { token } = sessionStorage
 
         if (name && description && category)
-            saveProducts(token, undefined, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available)
-                .then(productId => {
+            try {
+                saveProducts(token, undefined, name, description, price, glutenFree, vegan, alergenos ? alergenos.split(' ') : [], category, available)
+                    .then(productId => {
 
-                    if (productId && image.files[0])
-                        saveProductImage(token, productId, image.files[0])
-                            .then(() => {
-                                setSuccess(true)
+                        if (productId && image.files[0])
+                            saveProductImage(token, productId, image.files[0])
+                                .then(() => {
+                                    setSuccess(true)
 
-                                setTimeout(() => {
-                                    setSuccess(false)
-                                }, 4000);
+                                    setTimeout(() => {
+                                        setSuccess(false)
+                                    }, 4000);
 
-                                onSaved && onSaved()
-                            })
-                            .catch(error => setError(error))
-                    else {
-                        setSuccess(true)
+                                    onSaved && onSaved()
+                                })
+                                .catch(error => setError(error.message))
+                        else {
+                            setSuccess(true)
 
-                        setTimeout(() => {
-                            setSuccess(false)
-                        }, 4000);
+                            setTimeout(() => {
+                                setSuccess(false)
+                            }, 4000);
 
-                        onSaved && onSaved()
-                    }
-                })
-                .catch(error => setError(error))
+                            onSaved && onSaved()
+                        }
+                    })
+                    .catch(error => setError(error.message))
+
+            } catch (error) {
+                setError(error)
+            }
 
         else return setError('name, description or category is missing')
     }
@@ -70,7 +75,8 @@ function SaveProducts({ onExit, category, onSaved }) {
             <button onClick={onExit}>❌</button>
             {success || <h1 className="saveProducts__title" >Create your Product</h1>}
             {success && <h1 className="saveProducts__title" >OK, Product saved!</h1>}
-            {error && <Feedback error={error} onExit={setError()} />}
+            {error && <h4>Error: {error}</h4>}
+            {/* {error && <Feedback error={error} onExit={setError()} />} */}
             {/* <Feedback error={'hola'} onExit={() => setError()}/> */}
             <form className="saveProducts__form" onSubmit={handleSubmit}>
                 <div className="saveProducts__div">

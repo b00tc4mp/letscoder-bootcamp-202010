@@ -1,18 +1,15 @@
 const { models: { Product } } = require('malbec-data')
+const { validateProductCategory } = require('./helpers/validations')
 
 module.exports = (category) => {
-    return Promise.resolve()
-        .then(() => {
+    validateProductCategory(category)
+    return Product.find({ category }).lean()
+        .then(products => {
             debugger
+            if (products)
+                products = products.map(({ _id, name, description, price, glutenFree, vegan, alergenos, category, available }) => ({ id: _id.toString(), name, description, price, glutenFree, vegan, alergenos, category, available }))
 
-            return Product.find({ category }).lean()
-                .then(products => {
-                    debugger
-                    if (products)
-                        products = products.map(({ _id, name, description, price, glutenFree, vegan, alergenos, category, available }) => ({ id: _id.toString(), name, description, price, glutenFree, vegan, alergenos, category, available }))
-
-                    return products
-                })
+            return products
         })
 
 }

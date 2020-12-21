@@ -120,14 +120,14 @@ const EditProduct = ({ product, onSaved }) => {
                     <option className="editProduct__optionC" value="cervezas">cervezas</option>
                     <option className="editProduct__optionC" value="tragos">Tragos</option>
                 </select>
-                {/* <div className="editProduct__div"> */}
+            </div>
+                <div className="editProduct__div">
                 <p>Available:</p>
                 <select className="editProduct__available" name="available" id="available" defaultValue={product.available}>
                     <option className="editProduct__option" value={true} >Yes</option>
                     <option className="editProduct__option" value={false}  >No</option>
                 </select>
-                {/* </div> */}
-            </div>
+                </div>
             <p>Image:</p>
             <input type="file" id="image" name="image" />
 

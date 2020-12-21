@@ -6,7 +6,7 @@ import authenticateUser from '../logic/authenticate-user'
 import { useRouter } from 'next/router'
 // const { authenticateUser } = require('../logic')
 
-const Login = (req, res) => {
+const Login = () => {
 
     const [error, setError] = useState()
     const router = useRouter()

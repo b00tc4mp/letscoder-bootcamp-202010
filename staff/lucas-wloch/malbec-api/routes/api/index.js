@@ -35,7 +35,7 @@ router.get('/api/products/category/:category', withErrorHandling(handleRetrieveP
 
 router.get('/api/products/:productId', withErrorHandling(handleRetrieveProductById))
 
-router.post('/api/menu',jsonBodyParser, withErrorHandling(handleSaveMenu))
+router.post('/api/menu', withErrorHandling(handleSaveMenu))
 
 router.get('/api/menu', withErrorHandling(handleFindMenu))
 

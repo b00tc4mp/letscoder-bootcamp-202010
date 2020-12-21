@@ -1,3 +1,6 @@
+@import config
+
+    
 .showProduct
     display: flex
     flex-direction: column
@@ -9,16 +12,18 @@
     padding: 30px
     justify-content: center
     padding: 15px
+    max-width: 70%
     &__exit
         width: 30px
         align-self: flex-end
 
     &__background
-        // position: absolute
-        // top: 0
-        // width: 100vw
-        // height: 100vh
-        background-color: transparentize(black,.8 )
+        position: fixed
+        overflow-y: scroll
+        top: 0
+        width: 100vw
+        height: 100%
+        background-color: transparentize(black,.2 )
         display: flex
         justify-content: center
         align-items: flex-end
@@ -32,8 +37,15 @@
         color: black
         font-size: 1rem
         font-weight: bold
+    &__glutenFree--img
+        width: 30px
+        height:  30px
+
     &__vegan--img
-        width: 20px
+        width: 30px
+        height:  30px
+        align-self: center
+
     &__alergenos
         color: black
         
@@ -45,10 +57,16 @@
         font-weight: bolder
         font-size: 1.5rem
         align-self: flex-start
+        margin-top: 0
+        margin-bottom: 15px
     &__description
+        font-size: 1.2rem
+        padding-bottom: 20px
     &__price
         text-align: right
         font-weight: 600
         color: black
         font-weight: bolder
         font-size: 1.5rem
+        align-self: center
+        

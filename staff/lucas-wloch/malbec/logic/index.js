@@ -7,6 +7,7 @@ import retrieveProductById from './retrieve-product-by-id'
 import saveProductImage from './save-product-image'
 import context from './context'
 import findMenu from './find-menu'
+import saveMenu from './save-menu'
 
 export {
     registerUser,
@@ -17,5 +18,6 @@ export {
     retrieveProductById,
     saveProductImage,
     context,
-    findMenu
+    findMenu,
+    saveMenu
 } 
