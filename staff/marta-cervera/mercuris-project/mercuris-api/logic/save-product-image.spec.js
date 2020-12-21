@@ -27,7 +27,7 @@ describe('saveProductImage()', () => {
             description = randomStringWithPrefix('description')
             price = '' + randomInteger(10, 100)   
 
-            productImage = fs.createReadStream(path.join(__dirname,'../data/products/dafault.jpg'))
+            productImage = fs.createReadStream(path.join(__dirname,'../data/products/default.jpg'))
 
             const user = { name, email, password}
 
@@ -41,8 +41,8 @@ describe('saveProductImage()', () => {
 
         })
 
-        it.only('shoud succed on new product', () => {
-           return saveProductImage(productId, productImage)
+        it('shoud succed on new product', () => {
+           return saveProductImage(owner, productId, productImage)
                 .then(result => {
                    expect(result).to.be.undefined
 
@@ -66,12 +66,12 @@ describe('saveProductImage()', () => {
         })
 
         it('shoud fail when user and product does not exists', () => {
-            return saveProductImage(productId, productImage)
+            return saveProductImage(owner, productId, productImage)
 
             .catch(error => {
                 expect(error).to.be.instanceOf(Error)
 
-                expect(error.message).to.equal(`user with id ${userId} not found`)
+                expect(error.message).to.equal(`user with id ${owner} not found`)
             })
 
         })

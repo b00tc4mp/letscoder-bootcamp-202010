@@ -114,14 +114,14 @@ export default function Home({ onLogout }) {
     return (
         <div className="home">
             <div className="home__div">
+            {<button className="home__div__btn" onClick={handleGoToSearchProducts}>SEARCH</button>}
+            {<button className="home__div__btn" onClick={handleGoToProfile}>PROFILE</button>}
+            {<button className="home__div__btn" onClick={handleGoToHome}>REGISTER PRODUCT</button>}
             {<button className="home__div__btn1" onClick={() => {
                 setCurrentUser(null)
                 setError(null)
                 onLogout()
             }}>LOGOUT</button>}
-            {<button className="home__div__btn" onClick={handleGoToProfile}>PROFILE</button>}
-            {<button className="home__div__btn" onClick={handleGoToHome}>REGISTER PRODUCT</button>}
-            {<button className="home__div__btn" onClick={handleGoToSearchProducts}>SEARCH</button>}
             </div>            
             {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={currentUser && currentUser.name} error={error} />}
             {view === 'profile' && <Profile currentUser={currentUser} onModify={handleModifyUser} />}

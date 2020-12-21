@@ -30,26 +30,26 @@ describe('retrieveProductImage()', () => {
             priceMin = '' + randomInteger(10, 100)
             priceMax = '' + randomInteger(10, 100)
 
-            image = fs.createReadStream(path.join(__dirname,'../data/products/default.jpg'))
+            productImage = fs.createReadStream(path.join(__dirname,'../data/products/default.jpg'))
 
             file = path.join(__dirname, `../data/products/${productId}.jpg`)
             
-            const user = { name, }
+            const user = { name,email, password }
             
             const newUser = await User.create(user)
             owner = '' + newUser._id
             
-            const product = { name,  description, price, priceMax, priceMin}
+            const product = { name,owner, description, price, priceMax, priceMin}
             
             const newProduct = await Product.create(product)
-            productId = '' + newPet._id
+            productId = '' + newProduct._id
             
         })
         it('shoud succed on a existing product', () => {
             return retrieveProductImage(productId)
             .then(file => {
                 expect(file).to.be.instanceOf(Object)
-                console.log(file)
+               
                
                 })
         })
