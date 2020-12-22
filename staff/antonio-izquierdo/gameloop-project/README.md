@@ -25,11 +25,11 @@ In the Home section the user can search games that are filtered by different que
 If you are a casual gamer, just sign in, sing up,create, update and delete info about your own games. Maybe you just want to buy other games at a cheaper price, then search whatever you want
 
 
-![Alt Operate Activity](./gameloop-doc/opActivities.png)
+![Alt Operate Activity](./gameloop-doc/activities.png)
 
 ## Technical Description
 
-### Collections
+### Data Model
 
 ![Alt Collections](./gameloop-doc/collections.png)
 

@@ -19,7 +19,7 @@ function SignIn({ onSignIn, error }) {
                 {error && <Feedback error={error}/>}
                 <input className="sign-in__container__form__input" type="email" name="email" placeholder="E-MAIL" />
                 <input className="sign-in__container__form__input" type="password" name="password" placeholder="PASSWORD" />
-                <button className="sign-in__container__form__button"> SEND </button>
+                <button className="sign-in__container__form__button"> SIGN-IN </button>
                 <hr />
                 <p> IF YOU DONT HAVE AN ACCOUNT&nbsp; 
                     <Link className="link" to="/sign-up">

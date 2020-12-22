@@ -20,7 +20,7 @@ function SignUp({ onSignUp, error }) {
                 <input className="sign-up__container__form__input" type="text" name="fullname" placeholder="FULLNAME" />
                 <input className="sign-up__container__form__input" type="email" name="email" placeholder="E-MAIL" />
                 <input className="sign-up__container__form__input" type="password" name="password" placeholder="PASSWORD" />
-                <button className="sign-up__container__form__button"> SEND </button>
+                <button className="sign-up__container__form__button"> SIGN-UP </button>
                 <hr />
             </form>
             <p> DO YOU HAVE AN ACCOUNT? THEN&nbsp;  
