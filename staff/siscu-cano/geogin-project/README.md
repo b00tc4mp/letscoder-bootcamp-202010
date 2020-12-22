@@ -45,10 +45,9 @@ The player earns 10 points when overcome an stage and  losses 2 point when uses 
 
 #### React components
 
+<img src="./geogin-doc/images/react-components.jpg" />
 
-
-
-
+#### React components (pages)
 
 ## 🔍 Technologies
 
