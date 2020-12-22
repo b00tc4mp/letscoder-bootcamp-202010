@@ -20,17 +20,35 @@ The player earns 10 points when overcome an stage and  losses 2 point when uses 
 
 <img src="./geogin-doc/images/mockups.jpg" />
 
+
+## Functional Description
+
+### 🔍 Use Cases
+
+<img src="./geogin-doc/images/use-case.jpg" />
+
+### 🔍 Activities
+
+<img src="./geogin-doc/images/activities.jpg" />
+
+## Technical Description
+
+### 🔍 Blocks
+
+<img src="./geogin-doc/images/packages.jpg" />
+
 ## 🔍 Data modeling
 
 ![](./geogin-doc/images/data-model.jpg)
 
-## 🔍 Use cases
+### 🔍 Packages
 
-<img src="./geogin-doc/images/use-case.jpg" />
+#### React components
 
-## 🔍 Activities
 
-<img src="./geogin-doc/images/activities.jpg" />
+
+
+
 
 ## 🔍 Technologies
 
