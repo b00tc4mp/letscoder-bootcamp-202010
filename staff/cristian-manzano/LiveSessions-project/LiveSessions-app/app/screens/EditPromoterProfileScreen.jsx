@@ -101,15 +101,15 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
 
                                     {user.role === "ARTIST" ?
                                         <TextInput
-                                            placeholder=' Music Tags (Rock, Jazz, punk, etc)'
+                                            placeholder=' Music Genre for example: Rock'
                                             style={styles.inputsSignUp}
                                             placeholderTextColor="#343a40"
-                                            onChangeText={tags => setTags(tags ? tags.split(',') : "")}
+                                            onChangeText={tags => setTags(tags)}
                                             defaultValue={user.tags ? user.tags : ''}
                                         >
                                         </TextInput>
                                         : <TextInput
-                                            onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
+                                            onChangeText={tags => setTags(tags)}
                                             defaultValue={user.tags ? ' ' + user.tags : ''}
                                         >
                                         </TextInput>}

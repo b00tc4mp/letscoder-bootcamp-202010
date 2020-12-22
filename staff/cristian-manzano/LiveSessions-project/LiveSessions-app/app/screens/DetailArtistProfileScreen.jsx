@@ -109,12 +109,14 @@ const styles = StyleSheet.create({
         marginLeft: "-15%",
         // marginBottom: "-1%",
         fontSize: 7,
+        fontFamily: "Roboto-Light",
         // borderBottomWidth: 2
     },
 
     artistName: {
         textAlign: "center",
         marginTop: "3%",
+        fontFamily: "Roboto-Light",
         fontSize: 10,
 
     },
@@ -134,6 +136,7 @@ const styles = StyleSheet.create({
 
     petitionsButton: {
         fontSize: 25,
+        fontFamily: "Roboto-Light",
         marginTop: "15%",
         textAlign: "center",
         height: 40,
@@ -191,7 +194,7 @@ const styles = StyleSheet.create({
 
     findMeText: {
         marginRight: "5%",
-
+        fontFamily: "Roboto_Regular400",
         fontSize: 25
     },
 

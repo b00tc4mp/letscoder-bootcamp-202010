@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
   titleActivity: {
     color: "black",
     fontSize: 18,
+    fontFamily: "Roboto_Regular400",
     // fontFamily: Platform.OS === "ios" ? "Roboto" : "Avenir",
   },
 
@@ -42,5 +43,6 @@ const styles = StyleSheet.create({
   subTitle: {
     color: "green",
     fontWeight: "bold",
+    fontFamily: "Roboto-Light",
   },
 });

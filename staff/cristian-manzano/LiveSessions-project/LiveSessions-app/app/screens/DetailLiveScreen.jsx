@@ -147,6 +147,7 @@ const styles = StyleSheet.create({
     // marginBottom: "10%",
     // marginRight: "30%",
     fontSize: 33,
+    fontFamily: "Roboto_Regular400",
     borderBottomWidth: 5,
     borderColor: "black",
     alignSelf: "center",
@@ -155,7 +156,8 @@ const styles = StyleSheet.create({
     // opacity: .2
   },
   buttonText: {
-    color: "white"
+    color: "white",
+    fontFamily: "Roboto-Light",
   },
 
 });

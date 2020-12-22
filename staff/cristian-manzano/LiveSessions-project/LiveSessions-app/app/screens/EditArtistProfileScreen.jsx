@@ -76,7 +76,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         placeholderTextColor="#343a40"
                                         onChangeText={fullname => setFullname(fullname)}
 
-                                        defaultValue={(user.fullname ? ' ' + user.fullname : '')}
+                                        defaultValue={(user.fullname ? user.fullname : '')}
                                     >
                                     </TextInput>
 
@@ -85,7 +85,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={artistName => setArtistName(artistName)}
-                                        defaultValue={user.artistName ? ' ' + user.artistName : ''}
+                                        defaultValue={user.artistName ? user.artistName : ''}
                                     >
                                     </TextInput>
 
@@ -94,23 +94,23 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={city => setCity(city)}
-                                        defaultValue={user.city ? ' ' + user.city : ''}
+                                        defaultValue={user.city ? user.city : ''}
                                     >
                                     </TextInput>
 
 
                                     {user.role === "ARTIST" ?
                                         <TextInput
-                                            placeholder=' Music Tags (Rock, Jazz, punk, etc)'
+                                            placeholder=' Music Genre for example: Rock'
                                             style={styles.inputsSignUp}
                                             placeholderTextColor="#343a40"
-                                            onChangeText={tags => setTags(tags ? tags.split(',') : "")}
+                                            onChangeText={tags => setTags(tags)}
                                             defaultValue={user.tags ? user.tags : ''}
                                         >
                                         </TextInput>
                                         : <TextInput
-                                            onChangeText={tags => setTags(tags.trim() ? tags.split(', ') : "")}
-                                            defaultValue={user.tags ? ' ' + user.tags : ''}
+                                            onChangeText={tags => setTags(tags)}
+                                            defaultValue={user.tags ? user.tags : ''}
                                         >
                                         </TextInput>}
 
@@ -121,7 +121,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
-                                        defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
+                                        defaultValue={user.youtubeLink ? user.youtubeLink : ""}
                                     >
                                     </TextInput>
 
@@ -130,7 +130,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
-                                        defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
+                                        defaultValue={user.bandcampLink ? user.bandcampLink : ""}
                                     >
                                     </TextInput>
 
@@ -139,7 +139,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
-                                        defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
+                                        defaultValue={user.spotifyLink ? user.spotifyLink : ""}
                                     >
                                     </TextInput>
 
@@ -150,7 +150,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.descriptionSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={description => setDescription(description)}
-                                        defaultValue={user.description ? ' ' + user.description : ""}
+                                        defaultValue={user.description ? user.description : ""}
                                     >
                                     </TextInput>
                                 </View>
@@ -205,6 +205,7 @@ const styles = StyleSheet.create({
         // marginTop: "-10%",
         marginBottom: "10%",
         fontSize: 35,
+        fontFamily: "Roboto_Regular400",
         borderBottomWidth: 5,
         borderColor: "purple",
         alignSelf: "center",
@@ -229,6 +230,7 @@ const styles = StyleSheet.create({
 
     inputsSignUp: {
         marginBottom: "10%",
+        fontFamily: "Roboto-Light300",
         fontSize: 20,
         width: "80%",
         height: "15%",
@@ -246,7 +248,8 @@ const styles = StyleSheet.create({
         width: "80%",
         borderWidth: 1,
         borderColor: "purple",
-        color: "#343a40"
+        color: "#343a40",
+        fontFamily: "Roboto-Light300",
     },
 
     buttonsContainer: {
@@ -272,7 +275,8 @@ const styles = StyleSheet.create({
     },
 
     buttonText: {
-        color: "white"
+        color: "white",
+        fontFamily: "Roboto-Light300",
     },
 
     logoutIcon: {

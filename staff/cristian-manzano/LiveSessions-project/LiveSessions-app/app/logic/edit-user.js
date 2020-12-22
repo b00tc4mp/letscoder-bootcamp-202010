@@ -8,7 +8,7 @@ export default function (email, fullname, artistName, city, tags, youtubeLink, b
     validateArtistName(artistName)
     validateCity(city)
     validateDescription(description)
-    validateTags(tags)
+    // validateTags(tags)
     validateCallback(callback)
 
 

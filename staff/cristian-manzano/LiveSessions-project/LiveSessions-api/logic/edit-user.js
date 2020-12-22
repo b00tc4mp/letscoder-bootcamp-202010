@@ -8,7 +8,7 @@ module.exports = function (email, fullname, artistName, city, tags, youtubeLink,
     validateFullname(fullname)
     validateArtistName(artistName)
     validateCity(city)
-    validateTags(tags)
+    // validateTags(tags)
     validateDescription(description)
 
     return semaphore(() => 

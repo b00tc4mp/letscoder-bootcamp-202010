@@ -33,8 +33,9 @@ export default function App() {
   
   
     const getFonts = () => Font.loadAsync ({
-      'Roboto-Bold': require('./app/assets/font/Roboto-Bold.ttf'),
-      'Roboto-Light': require('./app/assets/font/Roboto-Light.ttf')
+      'roboto-bold': require('./app/assets/font/RobotoBold.otf'),
+      'roboto-light300': require('./app/assets/font/Roboto-Light.ttf'),
+      'roboto-thin': require('./app/assets/font/Roboto-Thin.ttf')
     })
   const [view, setView] = useState('sign-up')
 

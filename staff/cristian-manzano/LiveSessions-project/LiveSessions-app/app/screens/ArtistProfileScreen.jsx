@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
 
     roleText: {
         textAlign: "center",
+        fontFamily: "Roboto-Light",
         marginTop: "6%",
         // marginLeft: "-15%",
         // marginBottom: "-1%",
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
     artistName: {
         textAlign: "center",
         marginTop: "3%",
+        fontFamily: "Roboto-Light",
         fontSize: 10,
 
     },
@@ -166,7 +168,7 @@ const styles = StyleSheet.create({
 
     findMeText: {
         marginRight: "5%",
-
+        fontFamily: "Roboto_Regular400",
         fontSize: 25
     },
 
