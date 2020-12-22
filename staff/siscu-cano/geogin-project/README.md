@@ -28,6 +28,10 @@ The player earns 10 points when overcome an stage and  losses 2 point when uses 
 
 <img src="./geogin-doc/images/use-case.jpg" />
 
+## 🔍 Activities
+
+<img src="./geogin-doc/images/activities.jpg" />
+
 ## 🔍 Technologies
 
 <img src="./geogin-doc/images/technologies.jpg" />
