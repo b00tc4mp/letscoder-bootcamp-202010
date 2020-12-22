@@ -41,9 +41,9 @@ If you want to support the minor commerce, go to the searching part and look for
 ![Alt Use MochaChai](./mochachai.png)
 ![Alt Use Bem](./bemsass.png)
 ![Alt Use Bem](./react.png)
+![Alt Use Bem](./mongo.png)
 
 ## TODO
-- Testing
 - Modify Product
 - Introduce second role, in which the user can register itself
 - Responsive
