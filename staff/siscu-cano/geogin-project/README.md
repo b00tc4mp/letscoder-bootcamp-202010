@@ -4,18 +4,17 @@
 
 ## 🔍 Description
 
-Geogin es un juego estilo "la búsqueda del tesoro" pero en este caso lo que deberemos encontrar
-son QRs que estarán escondidos y mediante una localización no exacta y una serie de explicaciones y pistas, deberemos ser capaces de encontrarlos.
+Geogin is a "treasure hunt" style game but in this case what we will have to find are hidden QRs and through a non-exact location and a series of explanations and clues, we must be able to find them.
 
-El juego nos permite crear nuevas búsquedas que a posteriori podremos compartir con la comunidad de Geogin, y también tendremos la posibilidad de participar en búsquedas creadas por otros jugadores.
+The game allows us to create new searches that we can later share with the Geogin community, and we will also have the possibility to participate in searches created by other players.
 
-Durante la partida existirán dos roles, el del "organizador", que será la persona encargada de crear la partida y esconder los QRs en los sitios establecidos y el rol del "jugador" que serán los participantes de la búsqueda.
+During the game there will be two roles, the "organizer", who will be the person in charge of creating the game and hiding the QRs in the established sites and the role of the "player" who will be the participants of the search.
 
-El juego transcurrirá en un tiempo limitado, que podremos configurar al crear la búsqueda y se podrá jugar tanto por equipos como de forma individual.
+The game will take place in a limited time, which we can configure when creating the search and can be played both by teams and individually.
 
-El ganador de la búsqueda será el jugador que encuentre primero todos los Qrs escondidos o si finaliza el juego antes por el tiempo, habrá ganado el jugador que obtenga más puntos.
+The winner of the search will be the player who first finds all the hidden Qrs or if the game ends earlier in time, the player who will get the most points will have won.
 
-Por cada prueba que superemos en las búsquedas el jugador obtendrá 10 puntos y por cada pista que utilicemos se nos restaran 2 puntos.
+For each test that we pass in the searches, the player thought 10 points and for each track that we use, 2 points will be deducted.
 
 ## 🔍 Mockups
 
