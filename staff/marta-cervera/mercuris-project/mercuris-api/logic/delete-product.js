@@ -7,6 +7,7 @@ const { models: { Product, User },mongoose: { Types: { ObjectId } } } = require(
  * Retrieves a product by its id
  * 
  * @param {string} productId 
+ * @param {string} ownerId 
  * 
  * @returns {Promise}
  */
@@ -24,7 +25,7 @@ module.exports = function (ownerId, productId) {
         })
         .then(product => {
             if (!product) throw new NotFoundError(`product with id ${productId} not found`)
-            if(product.owner.toString() !== ownerId) throw new ConflictError (`product with id ${productid} does not belong to user with id ${ownerId}`)
+            if(product.owner.toString() !== ownerId) throw new ConflictError (`product with id ${productId} does not belong to user with id ${ownerId}`)
 
             return Product
                 .deleteOne({ _id: ObjectId(productId)})

@@ -13,7 +13,7 @@ export default function SaveProduct({ onSaveProduct, name, error }) {
 
         } } = event
 
-        onSaveProduct(name, description, price, image.files[0])
+        onSaveProduct(name, description, Number(price), image.files[0])
         event.target.reset()
 
     }

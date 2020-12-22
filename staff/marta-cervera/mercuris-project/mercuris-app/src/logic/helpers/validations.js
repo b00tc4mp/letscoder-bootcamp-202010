@@ -23,12 +23,20 @@ module.exports = {
         if (!name.trim().length) throw new Error('name is empty or blank')
     },
     validateAddress(address) {
-        if (typeof address !== 'string') throw new TypeError(address + ' is not a name')
+        if (typeof address !== 'string') throw new TypeError(address + ' is not an address')
 
         if (!address.trim().length) throw new Error('address is empty or blank')
     },
-    
+    validateCompany(company) {
+        if (typeof company !== 'string') throw new TypeError(company + ' is not a company')
 
+        if (!company.trim().length) throw new Error('company is empty or blank')
+    },
+    validateProduct(product) {
+        if (typeof product !== 'string') throw new TypeError(product + ' is not a product')
+
+        if (!product.trim().length) throw new Error('product is empty or blank')
+    },
     validateId(id) {
         if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
 
@@ -54,7 +62,7 @@ module.exports = {
         if (!description.trim().length) throw new Error('description is empty or blank')
     },
     validatePrice(price) {
-        if (typeof price !== 'string') throw new TypeError(price + ' is not an id')
+        if (typeof price !== 'number') throw new TypeError(price + ' is not a number')
     },
     validateFile(file) {
         if (!(file instanceof File)) throw new TypeError(`${file} is not file`)

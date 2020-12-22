@@ -11,8 +11,7 @@ import { validateEmail, validatePassword, validateCallback, validateName, valida
  * @param {string} address user's address
  * @param {string} city user's city
  * @param {string} phone user's phone
- * @param {string} contact user's description
- * 
+ * @param {string} contact user's description * 
  * @returns {null} onsuccessful registration
  * 
  * @throws {Error} on server error or user registered already

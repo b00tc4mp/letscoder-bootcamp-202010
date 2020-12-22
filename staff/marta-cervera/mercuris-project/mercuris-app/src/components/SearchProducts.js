@@ -21,7 +21,7 @@ export default function ({ doGoToAccess }) {
 
         event.preventDefault()
 
-        const { target: {
+        let { target: {
             queryProduct: { value: queryProduct },
             price: { value: price },
             priceMin: { value: priceMin },
@@ -30,7 +30,7 @@ export default function ({ doGoToAccess }) {
 
         
 
-        //onSearch(queryCompany || undefined, queryProduct || undefined, price? Number(price) : undefined, priceMin? Number(priceMin) : undefined, priceMax? Number(priceMax) : undefined)
+        
                 
         if (event.target.queryCompany) {
             
@@ -38,8 +38,13 @@ export default function ({ doGoToAccess }) {
         
                                                                
         try {
-            
-            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, results) => {
+            queryCompany = queryCompany || undefined
+            queryProduct = queryProduct || undefined
+            price = price? Number(price) : undefined
+            priceMin = priceMin? Number(priceMin) : undefined
+            priceMax = priceMax? Number(priceMax) : undefined
+
+            findProducts(token, queryCompany, queryProduct , price, priceMin, priceMax, (error, results) => {
 
                 if (error) return alert(error.message)
 
@@ -80,7 +85,6 @@ export default function ({ doGoToAccess }) {
 
                 setResults(results)
                 setView(null)
-                setCriteria({ queryCompany, queryProduct, price, priceMin, priceMax});
                 setResult(null)
 
             })

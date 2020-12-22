@@ -10,20 +10,18 @@ import modifyUser from '../logic/modify-user'
 
 export default function Home({ onLogout }) {
 
-    const [error, setError] = useState(null)
+    const [feedback, setFeedback] = useState(null)
 
-    function feedbackError(error) {
-        setError(error)
+    function showFeedback(feedback) {
+        setFeedback(feedback)
         setTimeout(() => {
-            setError(null)
+            setFeedback(null)
         }, 10000)
     }
 
     const [view, setView] = useState(sessionStorage.token ? 'search-products' : 'access')
-    const [success, setSuccess] = useState()
     const [currentUser, setCurrentUser] = useState()
-    const [products, setProducts] = useState()
-    const [changes, setChanges] = useState()
+    
 
 
 
@@ -41,8 +39,6 @@ export default function Home({ onLogout }) {
             return alert(error.message)
         }
 
-
-
     }, [])
 
 
@@ -52,17 +48,17 @@ export default function Home({ onLogout }) {
 
         try {
             saveProduct(token,undefined, name, description, price, (error, productId) => {
-                if (error) return feedbackError(error.message)
+                if (error) return showFeedback(error.message)
 
                 saveProductImage(token,productId, image, error => {
-                    if (error) return feedbackError(error.message)
-                    setSuccess(true)
+                    if (error) return showFeedback(error.message)
+                    
 
                 })
             }
             )
         } catch (error) {
-            return feedbackError(error.message)
+            return showFeedback(error.message)
         }
     }
 
@@ -74,20 +70,6 @@ export default function Home({ onLogout }) {
         setView('home')
     }
 
-    const handleSearchProducts = (queryCompany, queryProduct, price, priceMin, priceMax) => {
-        try {
-            const { token } = sessionStorage
-            
-
-            findProducts(token, queryCompany, queryProduct, price, priceMin, priceMax, (error, products) => {
-                if (error) return feedbackError('could not find any product')
-                setProducts(products)
-            })
-
-        } catch (error) {
-            alert(error.message)
-        }
-    }
     const handleGoToSearchProducts = () => {
         setView('search-products')
     }
@@ -98,7 +80,7 @@ export default function Home({ onLogout }) {
             const { token } = sessionStorage
 
             modifyUser(token, { name, contact, address, city, phone }, (error, changes) => {
-                if (error) return feedbackError('could not find any changes')
+                if (error) return showFeedback('could not find any changes')
 
 
                 setCurrentUser({ name, contact, address, city, phone })
@@ -106,7 +88,7 @@ export default function Home({ onLogout }) {
 
             })
         } catch (error) {
-
+            showFeedback(error.message)
         }
     }
 
@@ -119,13 +101,13 @@ export default function Home({ onLogout }) {
             {<button className="home__div__btn" onClick={handleGoToHome}>REGISTER PRODUCT</button>}
             {<button className="home__div__btn1" onClick={() => {
                 setCurrentUser(null)
-                setError(null)
+                setFeedback(null)
                 onLogout()
             }}>LOGOUT</button>}
             </div>            
-            {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={currentUser && currentUser.name} error={error} />}
+            {view === 'home' && <SaveProduct onSaveProduct={handleSaveProduct} name={currentUser && currentUser.name} error={feedback} />}
             {view === 'profile' && <Profile currentUser={currentUser} onModify={handleModifyUser} />}
-            {view === 'search-products' && <SearchProducts onSearch={handleSearchProducts} />}
+            {view === 'search-products' && <SearchProducts />}
             
         </div >
     );

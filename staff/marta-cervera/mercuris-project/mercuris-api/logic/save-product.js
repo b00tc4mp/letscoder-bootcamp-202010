@@ -1,6 +1,6 @@
 const { validateId, validateDescription,validatePrice, validateName } = require('./helpers/validations')
 const { models: {Product, User }, mongoose: {Types:{ ObjectId}} } = require('mercuris-data')
-const { NotFoundError } = require('../errors')
+const { NotFoundError, ConflictError } = require('../errors')
 
 
 module.exports = function (ownerId, productId, name, description, price) {
@@ -8,7 +8,7 @@ module.exports = function (ownerId, productId, name, description, price) {
     if (typeof productId !== 'undefined') validateId(productId)
     validateName(name)
     validateDescription(description)
-    if ( typeof price !== 'undefined')validatePrice(price)
+    validatePrice(price)
 
     const _id = ObjectId(ownerId)
 
@@ -25,10 +25,11 @@ module.exports = function (ownerId, productId, name, description, price) {
                     .findOne({ _id })
                     .then(product => {
                         if (!product) throw NotFoundError(`product with id ${productId} not found`)
-
+                        if(product.owner.toString() !== ownerId) throw new ConflictError (`product with id ${productId} does not belong to user with id ${ownerId}`)
+                        
                         return Product
                             .updateOne({ _id }, { $set: { name, description, price } })
-                            .then(result => result.id)
+                            .then(() => productId)
                     })
             } else
                 return Product

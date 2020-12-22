@@ -2342,3 +2342,20 @@ info 2020-12-22T13:14:30.666Z - undefined
 info 2020-12-22T13:24:40.102Z - stopping server
 info 2020-12-22T13:26:34.752Z - starting server
 info 2020-12-22T13:26:34.914Z - undefined
+info 2020-12-22T15:12:00.287Z - stopping server
+info 2020-12-22T16:12:57.866Z - starting server
+info 2020-12-22T16:12:58.171Z - undefined
+error 2020-12-22T16:25:36.375Z - NotFoundError: product with id 5fe21b034acd4f19642eae18 not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\delete-product.js:27:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-22T16:38:36.219Z - stopping server
+info 2020-12-22T16:38:55.672Z - starting server
+info 2020-12-22T16:38:55.837Z - undefined
+error 2020-12-22T16:38:59.959Z - NotFoundError: user with id 5fe21b034acd4f19642eae12 not found
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\retrieve-user.js:10:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T16:48:33.261Z - AuthError: wrong credentials
+    at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\authenticate-user.js:32:34
+info 2020-12-22T16:50:04.620Z - stopping server
+info 2020-12-22T16:50:28.423Z - starting server
+info 2020-12-22T16:50:28.552Z - undefined

@@ -15,6 +15,7 @@ import { validateToken, validateCallback } from './helpers/validations'
 
 export default function (token, changes, callback) {
     validateToken(token)
+    //TODO VALIDATE CHANGES
     validateCallback(callback)
 
     call('POST', 'http://localhost:4000/api/users/edit', 
