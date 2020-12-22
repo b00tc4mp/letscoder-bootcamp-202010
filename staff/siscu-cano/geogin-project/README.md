@@ -1,6 +1,6 @@
 # 🕵️ GEOGIN (la búsqueda del QR) v0.0.0 🕵️
 
-![](./geogin-doc/images/data-model.jpg?s=200)
+<img src="./geogin-doc/images/logo.png" width="300" />
 
 ## 🔍 Description
 
@@ -16,6 +16,8 @@ El juego transcurrirá en un tiempo limitado, que podremos configurar al crear l
 El ganador de la búsqueda será el jugador que encuentre primero todos los Qrs escondidos o si finaliza el juego antes por el tiempo, habrá ganado el jugador que obtenga más puntos.
 
 Por cada prueba que superemos en las búsquedas el jugador obtendrá 10 puntos y por cada pista que utilicemos se nos restaran 2 puntos.
+
+## 🔍 Mockups
 
 ## 🔍 Data modeling
 
