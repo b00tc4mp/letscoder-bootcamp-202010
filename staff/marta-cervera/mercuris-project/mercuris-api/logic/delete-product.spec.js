@@ -13,7 +13,7 @@ describe('deleteProduct()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('on existing user', () => {
-        let name, email, password, address, phone, price, description, owner
+        let name, email, password, address, phone, price, description, ownerId
 
         beforeEach(async() => {
             name = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -26,26 +26,26 @@ describe('deleteProduct()', () => {
 
             name = randomStringWithPrefix('name')
             description = randomStringWithPrefix('description')
-            price = '' + randomInteger(10, 100)
-            owner= randomId()
+            price = randomInteger(10, 100)
+           
 
             const user = { name, email, password, address, city, phone}
 
             const newUser = await User.create(user)
-            owner = '' + newUser._id
+            ownerId = newUser._id.toString()
             
-            const product = {name, description, price, owner}
+            const product = {name, description, price, owner: ownerId}
 
             const newProduct = await Product.create(product)
-            productId = '' + newProduct._id
+            productId = newProduct._id.toString()
 
         })
 
         it('shoud succed on a existing product', () => {
-            return deleteProduct(productId)
+            return deleteProduct(ownerId,productId)
                 .then(result => {
-                    console.log()
-                    expect(result).to.be.an.instanceOf(Object)
+                    
+                    expect(result).to.be.undefined
         })
     })
 
@@ -56,16 +56,16 @@ describe('deleteProduct()', () => {
     })
 
     describe('on a non existing product', () => {
-        let productId
+        let productId, ownerId
 
         beforeEach(() => {
-            
+            ownerId = randomId()
             productId = randomId()
 
         })
 
         it('shoud fail when product does not exists', () => {
-            deleteProduct(productId)
+            deleteProduct(ownerId, productId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)
 
@@ -80,41 +80,43 @@ describe('deleteProduct()', () => {
         describe('when id is wrong', () => {
             
                 describe('when id is empty or blank', () => {
-                    let productId
+                    let productId, ownerId
             
-                    beforeEach(() => {
-            
+                    beforeEach(() => {            
                         productId = randomEmptyOrBlankString()
+                        ownerId = randomId()
                         
                     })
             
                     it('should fail on an empty or blank name', () => {
-                        expect(() => deleteProduct(productId, () => { })).to.throw(ContentError, 'id is empty or blank')
+                        expect(() => deleteProduct(ownerId, productId, () => { })).to.throw(ContentError, 'id is empty or blank')
                     })
                 })
                 describe('when id is not a string', () => {
-                    let productId
+                    let ownerId, productId 
             
                     beforeEach(() => {
+                        ownerId= randomId()
                         productId = randomNonString()
                         
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => deleteProduct(productId, () => { })).to.throw(TypeError, `${productId} is not an id`)
+                        expect(() => deleteProduct(ownerId, productId, () => { })).to.throw(TypeError, `${productId} is not an id`)
                     })
             
                 })
                 describe('when id lenght is not 24', () => {
-                    let productId
+                    let ownerId, productId
             
                     beforeEach(() => {
+                        ownerId= randomId()
                         productId = '5fbcd46c1cc24f9c7ce22db000'
                         
                     })
             
                     it('should fail when id is not an string', () => {
-                        expect(() => deleteProduct(productId, () => { })).to.throw(LengthError, `id length ${productId.length} is not 24`)
+                        expect(() => deleteProduct(ownerId, productId, () => { })).to.throw(LengthError, `id length ${productId.length} is not 24`)
                     })
                     
                 })

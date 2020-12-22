@@ -10,9 +10,9 @@ function DetailProduct({ result: {id, name, email, description, price, fullname,
     const { token } = sessionStorage
 
     const handleDeleteProduct = productId => {
-
+        debugger
         try {
-            deleteProduct(productId, (error) => {
+            deleteProduct(token,productId, (error) => {
 
                 if (error) return alert(error.message)
                 
@@ -39,11 +39,14 @@ function DetailProduct({ result: {id, name, email, description, price, fullname,
         <p className="result__p">{name}</p>
         <p className="result__p">{description}</p>
         <p className="result__price">{price} €</p>
+        <div className="result__company">
+        <h1 className="result__company__title">COMPANY INFO</h1>
         {!token && <p className="result__p">{fullname}</p>}
         {!token && <p className="result__p">{contact}</p>}
         {!token && <a className="result__p" href={`mailto:${email}`}>E-mail: {email}</a>}
         {!token && <p className="result__p">{city}</p>}
         {!token &&<a className="result__p" href={`tel:${phone}`}>Phone: {phone}</a>}
+        </div>
         {token && <button className="result__button" onClick={() => handleDeleteProduct(id)}>DELETE PRODUCT</button>}
     </article> 
 }

@@ -1,11 +1,12 @@
 import { call } from '../utils'
-import {  validateCallback, validateId } from './helpers/validations'
+import {  validateCallback, validateId, validateToken } from './helpers/validations'
 
-export default function ( id, callback) {
+export default function ( token, id, callback) {
+    validateToken(token)
     validateId(id)
     validateCallback(callback)
 
-    call('DELETE', `http://localhost:4000/api/products/${id}`, {},
+    call('DELETE', `http://localhost:4000/api/products/${id}`, { Authorization: `Bearer ${token}`},
     '',
         (status, response) => {
             if (status === 0)

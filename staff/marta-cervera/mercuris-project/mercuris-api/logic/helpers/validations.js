@@ -24,7 +24,17 @@ module.exports = {
 
         if (!name.trim().length) throw new ContentError('name is empty or blank')
     },
+    validateContact(contact) {
+        if (typeof contact !== 'string') throw new TypeError(contact + ' is not a name')
 
+        if (!contact.trim().length) throw new ContentError('contact is empty or blank')
+    },
+    validateCity(city) {
+        if (typeof city !== 'string') throw new TypeError(city + ' is not a name')
+
+        if (!city.trim().length) throw new ContentError('city is empty or blank')
+    },
+    
     validateId(id) {
         if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 

@@ -1,7 +1,7 @@
 require('dotenv').config()
 const { expect } = require('chai')
 const { models: { User, Product },  mongoose } = require('mercuris-data')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId, randomInteger } = require('../utils/random')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomId, randomInteger, randomWrongLengthId} = require('../utils/random')
 require('../utils/array-polyfills')
 const saveProductImage = require('./save-product-image')
 const fs = require('fs')
@@ -120,6 +120,8 @@ describe('saveProductImage()', () => {
                     })
 
                 })
+
+               
 
         })
 

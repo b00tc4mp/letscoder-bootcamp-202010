@@ -3,8 +3,7 @@ const { models: {Product, User }, mongoose: {Types:{ ObjectId}} } = require('mer
 const { NotFoundError } = require('../errors')
 
 
-module.exports = function (productId, ownerId, name, description, price) {
-    
+module.exports = function (ownerId, productId, name, description, price) {
     validateId(ownerId)
     if (typeof productId !== 'undefined') validateId(productId)
     validateName(name)

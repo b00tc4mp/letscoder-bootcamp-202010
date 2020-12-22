@@ -1,6 +1,6 @@
 require('dotenv').config()
 const { expect } = require('chai')
-const { randomStringWithPrefix,randomNotId, randomWithPrefixAndSuffix, randomInteger, randomId, randomNonString, randomEmptyOrBlankString , randomNotNumber} = require('../utils/random')
+const { randomStringWithPrefix,randomNotId, randomWithPrefixAndSuffix, randomId, randomNonString, randomInteger,randomEmptyOrBlankString , randomNotNumber, randomWrongLengthId} = require('../utils/random')
 const { models: { User, Product }, mongoose: { Types: { ObjectId } }, mongoose } = require('mercuris-data')
 const saveProduct = require('./save-product')
 const { ContentError, LengthError } = require('../errors')
@@ -31,12 +31,12 @@ describe('saveProduct()', () => {
             beforeEach(() => {
                 name = randomStringWithPrefix('name')
                 description = randomStringWithPrefix('description')
-                price = '' + randomInteger(10, 100)
+                price = randomInteger(10, 100).toString()
                 
             })
 
             it('should succeed creating a new product', () =>
-                saveProduct(undefined, ownerId, name, description, price)
+                saveProduct(ownerId, undefined, name, description, price)
                     .then(productId => {
                         expect(ObjectId.isValid(productId)).be.true
 
@@ -62,17 +62,17 @@ describe('saveProduct()', () => {
             beforeEach(() => {
                 name = randomStringWithPrefix('name')
                 description = randomStringWithPrefix('description')
-                price = '' + randomInteger(10, 100) 
+                price = randomInteger(10, 100).toString() 
              
             })
 
             it('should succeed uppdating the product', () => {
                 name = randomStringWithPrefix('name')
                 descrition = randomStringWithPrefix('description')
-                price = '' + randomInteger(10, 100)
+                price = randomInteger(10, 100).toString()
                 
                 //productId, ownerId, name, description, price)
-                return saveProduct(undefined, ownerId, name, description, price)
+                return saveProduct(ownerId, undefined, name, description, price)
                     .then(productId => {
                         expect(ObjectId.isValid(productId)).be.true
 
@@ -100,11 +100,11 @@ describe('saveProduct()', () => {
             beforeEach(() => {
                 productId = randomId()
                 description = randomStringWithPrefix('description')
-                price = '' + randomInteger(10, 100)                
+                price = randomInteger(10, 100).toString()                
             })
             //productId, ownerId, name, description, price)
             it('should fail on trying to update a product that does not exist any more', () =>
-                saveProduct(undefined, ownerId, name, description, price)
+                saveProduct(ownerId, undefined, name, description, price)
                     .catch(error => {
                         expect(error).to.be.instanceOf(Error)
 
@@ -123,11 +123,11 @@ describe('saveProduct()', () => {
             ownerId = randomId()
             name = randomStringWithPrefix('password')
             description = randomNonString()            
-            price = '' + randomInteger(-1, -100)
+            price = randomInteger(-1, -100).toString()
         })
 
         it('should fail on a non string description', () => {
-            expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(TypeError , `${description} is not a description`)
+            expect(() => saveProduct(ownerId, productId, name, description, price, () => { })).to.throw(TypeError , `${description} is not a description`)
         })
     })
 
@@ -139,11 +139,11 @@ describe('saveProduct()', () => {
             ownerId = randomId()
             name = randomStringWithPrefix('password')
             description = randomEmptyOrBlankString()            
-            price = '' + randomInteger(-1, -100)
+            price = randomInteger(-1, -100).toString()
         })
 
         it('should fail on non-string description', () => {
-            expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(ContentError, 'description is empty or blank')
+            expect(() => saveProduct(ownerId, productId, name, description, price, () => { })).to.throw(ContentError, 'description is empty or blank')
         })
     })
     
@@ -158,11 +158,11 @@ describe('saveProduct()', () => {
                 ownerId = randomId()
                 name = randomStringWithPrefix('password')
                 description = randomStringWithPrefix('description')            
-                price = '' + randomInteger(-1, -100)
+                price = randomInteger(-1, -100).toString()
             })
             
             it('should fail on a negative number for price', () => {
-                expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(ContentError, `${price} is a negative number`)
+                expect(() => saveProduct(ownerId, productId, name, description, price, () => { })).to.throw(ContentError, `${price} is a negative number`)
             })
         })
         
@@ -178,7 +178,7 @@ describe('saveProduct()', () => {
             })
             
             it('should fail on a non number price', () => {
-                expect(() => saveProduct(productId, ownerId, name, description, price, () => { })).to.throw(TypeError, `${price} is not a number`)
+                expect(() => saveProduct(ownerId, productId, name, description, price, () => { })).to.throw(TypeError, `${price} is not a number`)
             })
         })
     })
@@ -192,11 +192,11 @@ describe('saveProduct()', () => {
                         ownerId = randomId()
                         name = randomStringWithPrefix('name')
                         description = randomStringWithPrefix('password')
-                        price =  '' + randomInteger(1, 100)
+                        price = randomInteger(1, 100).toString()
                     ownerId = randomId()
                 })
                 it ('should fail when productId is not an id', () => {
-                    expect(() => saveProduct(productId, ownerId, name, description, price, () => {})).to.throw(TypeError, `${productId} is not an id`)
+                    expect(() => saveProduct(ownerId, productId, name, description, price, () => {})).to.throw(TypeError, `${productId} is not an id`)
                 })
             })
             
@@ -209,13 +209,45 @@ describe('saveProduct()', () => {
                 ownerId = randomNotId()             
                 description = randomStringWithPrefix('description')
                 name = randomStringWithPrefix('name')
-                price = '' + randomInteger(10, 100)                
+                price = randomInteger(10, 100).toString()                
             })
             //productId, ownerId, name, description, price)
             it('should fail on a non valid ownerId', () =>
-            expect (() => saveProduct(productId,ownerId, name, description, price, () => { })).to.throw(TypeError, `${ownerId} is not an id`)
+            expect (() => saveProduct(ownerId, productId, name, description, price, () => { })).to.throw(TypeError, `${ownerId} is not an id`)
             
             )
+        })
+
+        describe('when productId has an invalid length', () => {
+            let productId, name, description, price, ownerId
+            beforeEach(() => {
+
+                productId= randomWrongLengthId()
+                name= randomStringWithPrefix('name')
+                descritpion = randomStringWithPrefix('description')
+                price = randomInteger(1,100).toString()
+                ownerId = randomId()
+            })
+
+            it('should fail on a non valid productId length', () => {
+                expect (() => saveProduct(ownerId, productId, name, description, price, () => {})).to.throw(LengthError, `id length ${productId.length} is not 24`)
+            })
+        })
+        describe('when productId is not an Id', () => {
+            let productId, ownerId, name, description, price
+
+            beforeEach(() => {
+                productId= randomNotId()
+                ownerId = randomId()
+                name = randomStringWithPrefix('name')
+                description = randomStringWithPrefix('description')
+                price= randomInteger(1,100).toString()
+                ownerId = randomId()
+            })
+
+            it('should fail when productId is not an id', () => {
+                expect(() => saveProduct(ownerId, productId,name, description, price, () => { })).to.throw(TypeError, `${productId} is not an id`)
+            })
         })
 
     })

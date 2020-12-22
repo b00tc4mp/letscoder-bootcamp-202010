@@ -1,7 +1,13 @@
 import { call } from '../utils'
 import context from './context'
+import { validateEmail, validatePassword, validateCallback, validateName, validateAddress } from './helpers/validations'
 
 export default (function(name, email,password, contact, address, city, phone, callback)  {
+validateName(name)
+validateEmail(email)
+validatePassword(password)
+validateAddress(address)
+validateCallback(callback)
  
     const { API_URL } = this
     

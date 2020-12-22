@@ -51,7 +51,7 @@ export default function Home({ onLogout }) {
         const { token } = sessionStorage
 
         try {
-            saveProduct(undefined, token, name, description, price, (error, productId) => {
+            saveProduct(token,undefined, name, description, price, (error, productId) => {
                 if (error) return feedbackError(error.message)
 
                 saveProductImage(token,productId, image, error => {

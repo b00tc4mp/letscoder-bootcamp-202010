@@ -22,6 +22,12 @@ module.exports = {
 
         if (!name.trim().length) throw new Error('name is empty or blank')
     },
+    validateAddress(address) {
+        if (typeof address !== 'string') throw new TypeError(address + ' is not a name')
+
+        if (!address.trim().length) throw new Error('address is empty or blank')
+    },
+    
 
     validateId(id) {
         if (typeof id !== 'string') throw new TypeError(id + ' is not a id')

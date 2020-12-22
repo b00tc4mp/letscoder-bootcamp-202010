@@ -32,5 +32,9 @@ module.exports = {
     randomNotNumber() {
         return [2,5 , true, false, null, undefined, {}, [], new Date, new Array, new Object].random()
     },
+    randomWrongLengthId() {
+        return ['5fd60bf6f814a5s4cwf16e86db5', '5fd60bf6f814as4cwf16e86db5', '5fd6bf6f814as4cwf16e86db5', '5fd6bf6f814as4cwf16e86db5f3', '5fd6bf6f814as4cwf16e86db5f3f' ].random()
+    },
+
 
 }

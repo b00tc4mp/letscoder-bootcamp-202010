@@ -1,6 +1,6 @@
 const { validateId } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
-const { models: { Product } } =require('mercuris-data')
+const { NotFoundError, ConflictError } = require('../errors')
+const { models: { Product, User },mongoose: { Types: { ObjectId } } } = require('mercuris-data')
 
 
 /**
@@ -10,14 +10,24 @@ const { models: { Product } } =require('mercuris-data')
  * 
  * @returns {Promise}
  */
-module.exports = function (productId) {
+module.exports = function (ownerId, productId) {
+    validateId(ownerId)
     validateId(productId)
 
-    return Product.findByIdAndRemove(productId).lean()
+    return User
+        .findById(ownerId).lean()
+        .then(user => {
+            if (!user) throw new NotFoundError(`user with id ${ownerId} not found`)
+
+            return Product
+                .findById(productId)
+        })
         .then(product => {
             if (!product) throw new NotFoundError(`product with id ${productId} not found`)
+            if(product.owner.toString() !== ownerId) throw new ConflictError (`product with id ${productid} does not belong to user with id ${ownerId}`)
 
-
-            return {}
+            return Product
+                .deleteOne({ _id: ObjectId(productId)})
         })
+        .then(() => { })
 }
