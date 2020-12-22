@@ -2,6 +2,21 @@ import { call } from '../utils'
 import { validateId, validateFile, validateCallback, validateToken } from './helpers/validations'
 import context from './context'
 
+
+/**
+ *  Upload product's picture
+ * 
+ * @param {string} productId pet's identification number(ObjectId)
+ * @param {Stream} image data image
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 204
+ * 
+ * @returns {null} on successful upload 
+ * 
+ */
+
+
 export default (function (token,productId, image, callback) {
     validateToken(token)
     validateId(productId)

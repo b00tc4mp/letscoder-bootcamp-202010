@@ -2,6 +2,23 @@ import { call } from '../utils'
 import context from './context'
 import { validateEmail, validatePassword, validateCallback, validateName, validateAddress } from './helpers/validations'
 
+/**
+ * Registers a new user 
+ * 
+ * @param {string} userName user's fullname
+ * @param {string} email user's e-mail
+ * @param {string} password user's password
+ * @param {string} address user's address
+ * @param {string} city user's city
+ * @param {string} phone user's phone
+ * @param {string} contact user's description
+ * 
+ * @returns {null} onsuccessful registration
+ * 
+ * @throws {Error} on server error or user registered already
+ * @throws {Error} if status is not 201
+ */
+
 export default (function(name, email,password, contact, address, city, phone, callback)  {
 validateName(name)
 validateEmail(email)

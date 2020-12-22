@@ -2328,3 +2328,15 @@ error 2020-12-22T11:26:21.745Z - AuthError: wrong credentials
     at C:\Users\marta\bootcamp\collab\letscoder-bootcamp-202010\staff\marta-cervera\mercuris-project\mercuris-api\logic\authenticate-user.js:13:29
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-22T11:29:59.277Z - stopping server
+info 2020-12-22T11:35:56.650Z - starting server
+info 2020-12-22T11:35:56.853Z - undefined
+info 2020-12-22T11:38:40.575Z - stopping server
+info 2020-12-22T11:39:40.607Z - starting server
+info 2020-12-22T11:39:40.748Z - undefined
+info 2020-12-22T11:46:02.923Z - stopping server
+info 2020-12-22T11:49:10.491Z - starting server
+info 2020-12-22T11:49:10.643Z - undefined
+info 2020-12-22T13:14:25.660Z - stopping server
+info 2020-12-22T13:14:30.338Z - starting server
+info 2020-12-22T13:14:30.666Z - undefined
+info 2020-12-22T13:24:40.102Z - stopping server

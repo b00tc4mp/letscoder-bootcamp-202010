@@ -2,6 +2,19 @@ import { call } from '../utils'
 import { validateEmail, validatePassword, validateCallback } from './helpers/validations'
 import context from './context'
 
+/**
+ * Checks user credentials on the user's API
+ * 
+ * @param {string} email user's e-mail
+ * @param {string} password user's password
+ * 
+ * @returns {string} token
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ */
+
+
 export default (function (email, password, callback) {
     validateEmail(email)
     validatePassword(password)

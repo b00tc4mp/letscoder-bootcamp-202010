@@ -1,6 +1,18 @@
 import { call } from '../utils'
 import { validateToken, validateCallback } from './helpers/validations'
 
+/**
+ * Modify a user by its id
+ * 
+ * @param {string} token
+ * @param {string} changes
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ * 
+ * @returns {object} with user info 
+ */
+
 export default function (token, changes, callback) {
     validateToken(token)
     validateCallback(callback)

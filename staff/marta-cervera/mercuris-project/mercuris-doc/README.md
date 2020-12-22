@@ -12,20 +12,34 @@ Mercuris is an app based in marketplace framework, which it main aim is raising 
 
 ### Use Cases
 
-With tis app, companys and minor commerce  has the opportunity to raose the products and also this products, are going to be searched by the people. Those that are interested on the specific product can get in contact with the company. The Company can register all the products that they want in the Registration Product section. Also, the can search they product in case thay the want to delete the product. It also has a Profile Section if they want to update their details
+With this app, companys and minor commerce  has the opportunity to raose the products and also this products, are going to be searched by the people. Those that are interested on the specific product can get in contact with the company. The Company can register all the products that they want in the Registration Product section. Also, the can search they product in case thay the want to delete the product. It also has a Profile Section if they want to update their company details
+
+![Alt Use Cases](./mercuris-doc/diagram.png)
 
 ### Activities
 
-If you want to support the minor commerce, go to the searchin part and look for your favourite product. In case that you want to expand your product, sign up and register it
+If you want to support the minor commerce, go to the searching part and look for your favourite product. In case that you want to expand your product, sign up and register it
 
-## Technical Description
+![Alt Use Activities](./mercuris-doc/roluser.png)
 
-## Data Model
+# Technical Description
+
 ## Blocks
+
+![Alt Use Blocks](./mercuris-doc/block.png)
 ## React Components
+
+![Alt Use React Components](./mercuris-doc/components.png)
 ## Logic
+
+![Alt Use Logic](./mercuris-doc/logic.png)
+
 ## Testing
+![Alt Use Testing](./mercuris-doc/testing.png)
+
 ## Technologies
+![Alt Use MochaChai](./mercuris-doc/mochachai.png)
+![Alt Use React](./mercuris-doc/bemsass.png)
 
 ## TODO
 - Testing
@@ -33,4 +47,4 @@ If you want to support the minor commerce, go to the searchin part and look for 
 - Introduce second role, in which the user can register itself
 - Responsive
 - Add GEO
-- Pasarela de pago???
+- Pasarela de pago

@@ -1,8 +1,21 @@
 import { call } from '../utils'
 import {  validateCallback, validateId } from './helpers/validations'
 
-export default function (id, callback) {
-    
+
+/**
+ * Retrieves a product by its id
+ * 
+ * @param {string} productId 
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ * 
+ * @returns {object} with product info 
+ * 
+ */
+
+
+export default function (id, callback) {    
     validateId(id)
     validateCallback(callback)
 

@@ -2,6 +2,22 @@ import { call } from '../utils'
 import { validateToken, validateId, validateDescription, validatePrice, validateCallback, validateName } from './helpers/validations'
 import context from './context'
 
+/**
+ *  Save product
+ * 
+ * @param {string} token use to know company
+ * @param {string} productId product's identification number(ObjectId)
+ * @param {Stream} description product´s description
+ *  @param {Stream} price product´s price
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ * 
+ * @returns {array} returns array of objects with the pet info
+ */
+
+
+
 export default (function saveProduct(token, productId, name, description, price, callback) {
     validateToken(token)
     if (typeof productId !== 'undefined') validateId(productId)

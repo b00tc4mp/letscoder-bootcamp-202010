@@ -1,6 +1,24 @@
 import { call } from '../utils'
 import { validateCallback, validateToken } from './helpers/validations'
 import context from './context'
+/**
+ * Retrieves pets that match a query criteria
+ * 
+ * @param {String} token use to find the CompanyId
+ * @param {string} queryCompany query to find information about the company, with this criteria you can search by name, email and description
+ * * @param {string} queryProduct query to find information about the pet, with this criteria you can search by name and description
+ * @param {String} price productís price
+ * @param {String} priceMin productís price
+ * @param {String} priceMax productís price
+ * 
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ * 
+ * @returns {Array} Pets representing the pets matching the queries criteria. Otherwise, empty array.
+ * 
+ */
+
 
 export default (function (token, queryCompany, queryProduct, price, priceMin, priceMax, callback) {
     if (token !== undefined) validateToken(token) 
