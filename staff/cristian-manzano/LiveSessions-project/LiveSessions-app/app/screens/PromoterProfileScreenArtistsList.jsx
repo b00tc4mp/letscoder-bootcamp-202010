@@ -34,7 +34,7 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
 
                             <TextInput
                                 style={styles.artistName}
-                                placeholder={'@' + user.artistName.trim()}
+                                placeholder={'@' + user.artistName}
                                 placeholderTextColor={"purple"}
                                 editable={false}>
 

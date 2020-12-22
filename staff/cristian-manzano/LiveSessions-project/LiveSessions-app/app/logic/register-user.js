@@ -12,6 +12,7 @@ debugger
     call('POST', 'http://192.168.1.131:4000/api/users', { 'Content-type': 'application/json' }, 
     JSON.stringify({ fullname, email, password, role }),
     (status, response) => {
+        console.log(role)
         if (status === 0)
             return callback(new Error('server error'))
         else if (status !== 201) {

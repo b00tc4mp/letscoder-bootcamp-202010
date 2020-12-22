@@ -79,6 +79,15 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
                                 <TouchableOpacity onPress={() => Linking.openURL(user.youtubeLink)}>
                                     <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
                                 </TouchableOpacity>
+
+                                <TouchableOpacity onPress={() => Linking.openURL(user.bandcampLink)}>
+                                    <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
+                                </TouchableOpacity>
+
+                                <TouchableOpacity onPress={() => Linking.openURL(user.spotifyLink)}>
+                                    <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
+                                </TouchableOpacity>
+
                             </View>
                         </View>
 

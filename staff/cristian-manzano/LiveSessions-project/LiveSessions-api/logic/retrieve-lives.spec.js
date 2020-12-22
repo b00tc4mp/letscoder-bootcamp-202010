@@ -2,14 +2,14 @@ require('dotenv').config()
 
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
-const retrieveUser = require('./retrieve-user')
+const retrieveLives = require('./retrieve-lives')
 const mongoose = require('mongoose')
-const { User } = require('../models')
+const { User, Live } = require('../models')
 // const { LengthError, ContentError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
-describe('retrieveUser()', () => {
+describe('retrieveLives()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
     describe('when user already exists', () => {
@@ -27,7 +27,7 @@ describe('retrieveUser()', () => {
         })
 
         it('should succeed on correct user id', () =>
-            retrieveUser(userId)
+            retrieveLives(userId)
                 .then(user => {
                     expect(user).to.exist
                     expect(user.fullname).to.equal(fullname)
@@ -42,7 +42,7 @@ describe('retrieveUser()', () => {
             beforeEach(() => userId = ['5fc0efb540493de1f5a8948a', '5fc0efb540493de1f5a8940c', '5fc0efb540493de1f5a8941b'].random())
 
             it('should fail on wrong user id', () =>
-                retrieveUser(userId)
+                retrieveLives(userId)
                     .catch(error => {
                         expect(error).to.be.instanceOf(Error)
 
@@ -65,7 +65,7 @@ describe('retrieveUser()', () => {
             beforeEach(() => userId = [true, 123, null, undefined, {}, function () { }, []].random())
 
             it('should fail on non-string user id', () => {
-                expect(() => retrieveUser(userId, () => { })).to.throw(TypeError, `${userId} is not an id`)
+                expect(() => retrieveLives(userId, () => { })).to.throw(TypeError, `${userId} is not an id`)
             })
         })
 
@@ -75,7 +75,7 @@ describe('retrieveUser()', () => {
             beforeEach(() => userId = ['', ' ', '\t', '\t', '\r'].random())
 
             it('should fail on empty or blank user id', () => {
-                expect(() => retrieveUser(userId, () => { })).to.throw(Error, `id is empty or blank`)
+                expect(() => retrieveLives(userId, () => { })).to.throw(Error, `id is empty or blank`)
             })
         })
 
@@ -85,7 +85,7 @@ describe('retrieveUser()', () => {
             beforeEach(() => userId = ['a', 'b', 'c'].random().repeat(24 + (Math.random() > 0.5? 3 : 3)))
 
             it('should fail on user id length different from 24', () => {
-                expect(() => retrieveUser(userId, () => { })).to.throw(Error, `id length ${userId.length} is not 24`)
+                expect(() => retrieveLives(userId, () => { })).to.throw(Error, `id length ${userId.length} is not 24`)
             })
         })
     })

@@ -143,6 +143,7 @@ const styles = StyleSheet.create({
     registerTitle: {
         marginBottom: "10%",
         marginRight: "30%",
+        fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
         borderColor: "purple",
@@ -153,6 +154,7 @@ const styles = StyleSheet.create({
 
     logInTitle: {
         marginBottom: "10%",
+        fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
         borderColor: "black",
@@ -164,7 +166,7 @@ const styles = StyleSheet.create({
 
     inputsContainer: {
         width: "100%",
-
+        fontFamily: "Roboto_Light",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
@@ -174,6 +176,7 @@ const styles = StyleSheet.create({
 
     inputsSignUp: {
         marginBottom: "10%",
+        fontFamily: "Roboto_Light",
         fontSize: 20,
         width: "80%",
         height: "15%",
@@ -223,6 +226,7 @@ const styles = StyleSheet.create({
         height: 44
     },
     buttonText: {
+        fontFamily: "Roboto_Light",
         color: "white"
     },
 })

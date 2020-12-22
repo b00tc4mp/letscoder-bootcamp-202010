@@ -27,7 +27,7 @@ function DetailArtistProfileScreen({ onGoToPetitions, item }) {
 
                             <TextInput
                                 style={styles.artistName}
-                                placeholder={'@' + item.artistName.trim()}
+                                placeholder={'@' + item.artistName}
                                 placeholderTextColor={"green"}
                                 editable={false}>
 

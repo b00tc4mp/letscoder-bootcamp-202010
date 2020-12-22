@@ -25,7 +25,7 @@ import EditLiveScreen from './EditLiveScreen'
 import PromoterProfileScreenArtistsList from './PromoterProfileScreenArtistsList'
 
 
-export default function Home({ onHandleLogout }) {
+export default function Home({ onHandleLogout, fontsLoaded }) {
   const [user, setUser] = useState()
   const [item, setItem] = useState()
   const [users, setUsers] = useState()
@@ -369,7 +369,7 @@ export default function Home({ onHandleLogout }) {
       { view === 'artist-profile' && <ArtistProfileScreen user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail}/>}
       { view === 'edit-promoter-profile' && <EditPromoterProfileScreen user={user} onGoBack={handleGoBack} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} onLogOut={onHandleLogout}/>}
       { view === 'edit-artist-profile' && <EditArtistProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} onLogOut={onHandleLogout}/>}
-      { view === 'results' && <PromoterProfileScreenArtistsList user={user} users={users} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile} />}
+      { view === 'results' && <PromoterProfileScreenArtistsList user={user} users={users} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile} onSearch={handleSearch}/>}
       { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} onGoToProfile={handleGoToProfile} />}
       { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} onGoToProfile={handleGoToProfile} />}
       { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} onGoBack={handleGoBack} />}

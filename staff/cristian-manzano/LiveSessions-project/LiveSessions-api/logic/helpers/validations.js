@@ -49,11 +49,11 @@ module.exports = {
     },
 
     validateId(id) {
-        if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
+        if (typeof id !== 'string') throw new TypeError(id + ' is not an id')
 
         if (!id.trim().length) throw new Error('id is empty or blank')
 
-        if (id.length !== 24) throw new Error('id length is not 24')
+        if (id.length !== 24) throw new Error(`id length ${id.length} is not 24`)
     },
 
     validateToken(token) {

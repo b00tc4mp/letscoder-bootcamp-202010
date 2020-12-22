@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView, ImageBackground } from 'react-native';
 
 
-function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
+function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn, fontsLoaded }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
-
+    
 
     return (
         <SafeAreaView>
@@ -114,6 +113,7 @@ const styles = StyleSheet.create({
     registerTitle: {
         marginBottom: "10%",
         marginRight: "30%",
+        fontFamily: "Roboto-Regular",
         fontSize: 30,
         borderBottomWidth: 5,
         borderColor: "black",
@@ -125,6 +125,7 @@ const styles = StyleSheet.create({
 
     logInTitle: {
         marginBottom: "10%",
+        fontFamily: "Roboto-Regular",
         fontSize: 30,
         borderBottomWidth: 5,
         borderColor: "purple",
@@ -139,13 +140,13 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
-
     },
 
 
     inputsSignUp: {
         marginBottom: "10%",
         fontSize: 20,
+        fontFamily: "Roboto-Light",
         width: "80%",
         height: "15%",
         borderBottomWidth: .5,
@@ -193,7 +194,8 @@ const styles = StyleSheet.create({
     },
 
     buttonText: {
-        color: "white"
+        color: "white",
+        fontFamily: "Roboto-Light",
     },
 })
 
