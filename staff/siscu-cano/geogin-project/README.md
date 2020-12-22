@@ -1,7 +1,6 @@
 # 🕵️ GEOGIN (la búsqueda del QR) v0.0.0 🕵️
 
-![](./geogin-doc/images/data-model.jpg?s=200)
-<img src="./geogin-doc/images/data-model.jpg" width="200" />
+<img src="./geogin-doc/images/logo.png" width="300" />
 
 ## 🔍 Description
 
