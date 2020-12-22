@@ -29,7 +29,7 @@ If you want to support the minor commerce, go to the searching part and look for
 ![Alt Use Blocks](./block1.png)
 ## React Components
 
-![Alt Use React Components](./components.png)
+![Alt Use React Components](./components1.png)
 ## Logic
 
 ![Alt Use Logic](./logic.png)
