@@ -2,19 +2,29 @@ import './Profile.sass'
 import { deleteGame } from '../logic'
 import { BsPeopleCircle } from "react-icons/bs";
 import { BsTrashFill } from "react-icons/bs";
+import { useState, useEffect } from 'react'
 
 const API_URL = process.env.REACT_APP_API_URL
 
+
 function Profile({ name, onRetrieveUserGames, doRefreshGames, games, onModify, currentUser }) {
+    const [error, setError] = useState(null)
+    
+    function feedbackError(error) {
+        setError(error)
+        setTimeout(() => {
+            setError(null)
+        }, 8000)
+    }
 
     const handleDeleteGame = gameId => {
         try {
             deleteGame(gameId, error => {
-                if (error) return alert(error)
+                if (error) return feedbackError(error)
                 doRefreshGames()
             })
         } catch (error) {
-            alert(error.message)
+            feedbackError(error.message)
         }
     }
 
@@ -25,11 +35,10 @@ function Profile({ name, onRetrieveUserGames, doRefreshGames, games, onModify, c
             event.preventDefault()
 
             const { target: { fullname: { value: fullname }, contact: { value: contact }, city: { value: city }, phone: { value: phone } } } = event
-            console.log(fullname)
             try {
                 onModify(fullname, contact, city, phone)
             } catch (error) {
-                alert(error.message)
+                feedbackError(error.message)
             }
         })}>
             <input className="profile__input" type="text" name="fullname" placeholder="" defaultValue={currentUser.fullname}></input>

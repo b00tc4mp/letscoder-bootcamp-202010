@@ -1,3 +1,7 @@
+const {
+    ContentError,
+  } = require('gameloop-errors')
+
 module.exports = {
     validateFullname(fullname) {
         if (typeof fullname !== 'string') throw new TypeError(fullname + ' is not a fullname')
@@ -19,6 +23,12 @@ module.exports = {
         if (!description.trim().length) throw new Error('description is empty or blank')
     },
 
+    validateText(text) {
+        if (typeof text !== 'string') throw new TypeError(`${text} is not a text`)
+
+        if (!text.trim().length) throw new ContentError('text is empty or blank')
+    },
+
     validatePassword(password) {
         if (typeof password !== 'string') throw new TypeError(password + ' is not a password')
 
@@ -29,15 +39,30 @@ module.exports = {
         if (typeof callback !== 'function') throw new TypeError(callback + ' is not a callback')
     },
 
+    validateGameConsole(gameconsole) {
+        if (typeof gameconsole !== 'string') throw new TypeError(`${gameconsole} is not an string`)
+
+        if (!gameconsole.trim().length) throw new ContentError('gameconsole is empty or blank')
+
+        if (!gameconsole.includes('game boy') && !gameconsole.includes('nintendo') && !gameconsole.includes('wii') && !gameconsole.includes('play station') && !gameconsole.includes('xbox')) throw new TypeError(`${gameconsole} is not a valid gameconsole`)
+//                                 'game boy',   'game boy advance',   'game boy color',   'nintendo ds',   'nintendo 3ds',   'nintendo switch',   'wii',   'wii u',   'play station 1',   'play station 2',   'play station 3',   'play station 4',   'play station 5',   'xbox',   'xbox 360',   'xbox one'
+        if (!gameconsole.trim().length) throw new ContentError('gameconsole is empty or blank')
+    },
+
     validateToken(token) {
         if (typeof token !== 'string') throw new TypeError(token + ' is not a token')
 
         if (!token.trim().length) throw new Error('token is empty or blank')
     },
 
-    validatePrice(budget) {
-        if (typeof budget !== 'string') throw new TypeError(budget + 'is not a number')
+    validatePrice(price) {
+        if (typeof price !== 'number') throw new TypeError(`${price} is not a number`)
+
+        if (!price) throw new ContentError('price is empty or blank')
+        
+        if(price < 0) throw new ContentError(`${price} is a negative number`)
     },
+
 
     validateId(id) {
         if (typeof id !== 'string') throw new TypeError(id + ' is not a id')
@@ -49,5 +74,11 @@ module.exports = {
 
     validateFile(file) {
         if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
-    }
+    },
+
+    validateQuery(query) {
+        if (typeof query !== 'string') throw new TypeError(`${query} is not a query`)
+
+        if (!query.trim().length) throw new ContentError('query is empty or blank')
+    },
 }

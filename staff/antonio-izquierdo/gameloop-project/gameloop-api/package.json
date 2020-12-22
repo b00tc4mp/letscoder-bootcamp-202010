@@ -19,6 +19,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "gameloop-data": "file:../gameloop-data",
+    "gameloop-errors": "file:../gameloop-errors",
     "jsonwebtoken": "^8.5.1",
     "xmlhttprequest": "^1.8.0"
   },

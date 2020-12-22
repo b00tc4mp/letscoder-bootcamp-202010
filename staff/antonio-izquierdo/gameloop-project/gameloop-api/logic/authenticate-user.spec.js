@@ -6,7 +6,7 @@ const authenticateUser = require('./authenticate-user')
 //TODO CHANGE THIS BELLOW
 const { models: { User }, mongoose }  = require('gameloop-data')
 const bcrypt = require('bcryptjs')
-const { ContentError } = require('../errors')
+const { ContentError } = require('gameloop-error')
 
 const { env: { MONGODB_URL } } = process
 

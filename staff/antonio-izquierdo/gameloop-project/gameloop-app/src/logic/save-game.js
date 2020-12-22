@@ -1,13 +1,30 @@
 import { call } from '../utils'
 import context from './context'
-//import { validateId, validateName, validateDescription, validatePrice, validateCallback } from './helpers/validations'
+import { validateToken, validateId, validateText, validateGameConsole, validatePrice } from './helpers/validations'
 
-export default (function saveGame(gameId, name, description, gameconsole, budget, token, callback) {
-    //if (typeof gameId !== 'undefined') validateId(gameId)
-    /*    validateName(query)
-       validateDescription(description)
-       validatePrice(budget)
-       validateCallback(callback) */
+/**
+ *  Upload game
+ * 
+ * @param {string} token use to know userId
+ * @param {string} gameId game's identification number(ObjectId)
+ * @param {Stream} name game´s name
+ * @param {Stream} description game´s description
+ * @param {Stream} gameconsole game´s gameconsole
+ * @param {Stream} budget game´s budget
+ *
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ * 
+ * @returns {array} returns array of objects with the game info
+ */
+
+export default (function saveGame(token, gameId, name, description, gameconsole, budget, callback) {
+    validateToken(token)
+    if (typeof gameId !== 'undefined') validateId(gameId)
+    validateText(name)
+    validateText(description)
+    validateGameConsole(gameconsole)
+    validatePrice(budget)
 
     const { API_URL } = this
 

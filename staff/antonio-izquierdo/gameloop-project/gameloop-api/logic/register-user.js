@@ -2,6 +2,19 @@ const { validateEmail, validatePassword, validateFullname } = require('./helpers
 const semaphore = require('./helpers/semaphore')
 const { models: { User } }  = require('gameloop-data')
 const bcryptjs = require('bcryptjs')
+const { ConflictError } = require('gameloop-errors')
+
+/**
+ * Registers a new user to the user's API
+ * 
+ * @param {string} fullname user's fullname
+ * @param {string} email user's e-mail
+ * @param {string} password user's password
+ * 
+ * @returns {undefined} onsuccessful registration
+ * 
+ * @throws {ConflictError} on server error or user registered already
+ */
 
 module.exports = function (fullname, email, password) {
     validateFullname(fullname)
@@ -12,7 +25,7 @@ module.exports = function (fullname, email, password) {
     User 
         .findOne({ email })
         .then(user => {
-            if(user) throw new Error(`user with e-mail ${email} is already registered`)
+            if(user) throw new ConflictError(`user with e-mail ${email} is already registered`)
 
             return bcryptjs.hash(password, 10)
         })

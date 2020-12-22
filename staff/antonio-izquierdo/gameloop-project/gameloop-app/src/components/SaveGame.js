@@ -1,5 +1,6 @@
 import './SaveGame.sass'
 import { Feedback } from '.'
+import { useState, useEffect } from 'react'
 
 export default function SaveGame ({onSaveGame, error}) {
     const handleSubmitGame = event => {

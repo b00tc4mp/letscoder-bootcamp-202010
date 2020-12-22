@@ -5,7 +5,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const registerUser = require('./register-user')
 const { models: { User }, mongoose }  = require('gameloop-data')
 const bcrypt = require('bcryptjs')
-const { ContentError } = require('../errors')
+const { ContentError } = require('gameloop-errors')
 
 const { env: { MONGODB_URL } } = process
 

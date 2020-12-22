@@ -3,9 +3,11 @@ const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString, randomGameConsole, randomNotStringNumber, randomId, randomNotId, randomWrongLengthId, randomInteger } = require('../utils/randoms')
 const { models: { User, Game }, mongoose: { Types: { ObjectId } }, mongoose } = require('gameloop-data')
 const saveGame = require('./save-game')
-const { ContentError, LengthError } = require('../errors')
+const { ContentError, LengthError } = require('gameloop-errors')
 
 const { env: { MONGODB_URL } } = process
+
+//token, gameId, name, description, gameconsole, budget, callback
 
 describe('saveGame()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
@@ -34,7 +36,7 @@ describe('saveGame()', () => {
             })
 
             it('should succeed creating a new game', () => {
-                return saveGame(undefined, name, description, gameconsole, budget, userId)
+                return saveGame(userId, undefined, name, description, gameconsole, budget)
                     .then(gameId => {
 
                         expect(ObjectId.isValid(gameId)).be.true
@@ -78,10 +80,10 @@ describe('saveGame()', () => {
 
                 const user = { fullname, email, password }
 
-                User.create(user)
-                    .then(user => userId = user._id)
+                return User.create(user)
+                    .then(user => userId = user._id.toString())
                     .then(Game.create({ name, description, gameconsole, budget, owner: userId })
-                        .then(game => gameId = game._id))
+                        .then(game => gameId = game._id.toString()))
             })
 
             it('should succeed updating the game', () => {
@@ -91,7 +93,7 @@ describe('saveGame()', () => {
                 budget = '' + randomInteger(1, 100)
 
 
-                return saveGame(gameId, name, description, gameconsole, budget, userId)
+                return saveGame(userId, gameId, name, description, gameconsole, budget)
                     .then(gameId => {
                         expect(ObjectId.isValid(gameId)).be.true
 
@@ -118,7 +120,7 @@ describe('saveGame()', () => {
             })
 
             it('should fail on trying to update a game that does not exist any more', () => {
-                return saveGame(undefined, name, description, gameconsole, budget, userId)
+                return saveGame(userId, undefined, name, description, gameconsole, budget)
                     .catch(error => {
                         expect(error).to.be.instanceOf(Error)
 
@@ -140,7 +142,7 @@ describe('saveGame()', () => {
             })
 
             it('should fail alerting user with message: "id does not exist"', () => {
-                return saveGame(undefined, name, description, gameconsole, budget, userId)
+                return saveGame(userId, undefined, name, description, gameconsole, budget)
                     .catch(error => {
                         expect(error).to.be.instanceOf(Error)
 
@@ -168,7 +170,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non string name', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${name} is not a text`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(TypeError, `${name} is not a text`)
                 })
             })
 
@@ -185,7 +187,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on an empty or blank name', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(ContentError, 'text is empty or blank')
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(ContentError, 'text is empty or blank')
                 })
             })
         })
@@ -204,7 +206,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non string description', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${description} is not a text`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(TypeError, `${description} is not a text`)
                 })
             })
 
@@ -221,7 +223,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on non-string description', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(ContentError, 'text is empty or blank')
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(ContentError, 'text is empty or blank')
                 })
             })
         })
@@ -240,7 +242,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non string gameconsole', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${gameconsole} is not an string`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(TypeError, `${gameconsole} is not an string`)
                 })
             })
 
@@ -257,7 +259,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on an empty or blank gameconsole', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(ContentError, 'gameconsole is empty or blank')
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(ContentError, 'gameconsole is empty or blank')
                 })
             })
 
@@ -274,7 +276,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non valid gameconsole', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${gameconsole} is not a valid gameconsole`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(TypeError, `${gameconsole} is not a valid gameconsole`)
                 })
             })
         })
@@ -293,7 +295,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a negative number for budget', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(ContentError, `${budget} is a negative number`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(ContentError, `${budget} is a negative number`)
                 })
             })
 
@@ -310,7 +312,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non number budget', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${budget} is not a number`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(TypeError, `${budget} is not a number`)
                 })
             })
 
@@ -327,7 +329,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on an empty or blank budget', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(ContentError, 'price is empty or blank')
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(ContentError, 'price is empty or blank')
                 })
             })
         })
@@ -348,7 +350,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail when gameId is not an id', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${gameId} is not an id`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(TypeError, `${gameId} is not an id`)
                 })
             })
 
@@ -365,7 +367,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail when userId is not an id', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(TypeError, `${userId} is not an id`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(TypeError, `${userId} is not an id`)
                 })
             })
         })
@@ -384,7 +386,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non valid gameId length', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(LengthError, `id length ${gameId.length} is not 24`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(LengthError, `id length ${gameId.length} is not 24`)
                 })
             })
 
@@ -401,7 +403,7 @@ describe('saveGame()', () => {
                 })
 
                 it('should fail on a non valid userId length', () => {
-                    expect(() => saveGame(gameId, name, description, gameconsole, budget, userId, () => { })).to.throw(LengthError, `id length ${userId.length} is not 24`)
+                    expect(() => saveGame(userId, gameId, name, description, gameconsole, budget, () => { })).to.throw(LengthError, `id length ${userId.length} is not 24`)
                 })
             })
         })

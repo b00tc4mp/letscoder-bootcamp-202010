@@ -1,8 +1,8 @@
-import './FindGames.sass'
+import './GameResults.sass'
 //import logo from "../assets/img/logo.png"
 const API_URL = process.env.REACT_APP_API_URL
 
-function FindGames({ games, onRetrieveGame }) {
+function GameResults({ games, onRetrieveGame }) {
 
     const handleRetrieveGame = (id) => {
 
@@ -37,4 +37,4 @@ function FindGames({ games, onRetrieveGame }) {
     </section> : <> </>
 }
 
-export default FindGames
+export default GameResults

@@ -1,9 +1,17 @@
 const { validateId } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('gameloop-errors')
 const { models: { User } }  = require('gameloop-data')
 
+/**
+ * Retrieves a user by its id
+ * 
+ * @param {string} userId 
+ * 
+ * @returns {Promise}
+ */
+
 module.exports = function (userId) {
-    if (typeof userId !== 'undefined')validateId(userId)
+    validateId(userId)
 
     return User.findById(userId).lean()
         .then(user => {

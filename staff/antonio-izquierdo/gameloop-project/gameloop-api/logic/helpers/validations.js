@@ -1,4 +1,8 @@
-const { ContentError, LengthError, FormatError } = require('../../errors')
+const {
+    ContentError,
+    LengthError,
+    FormatError
+  } = require('gameloop-errors')
 
 module.exports = {
     
@@ -64,7 +68,7 @@ module.exports = {
         if (!query.trim().length) throw new ContentError('query is empty or blank')
     },
 
-    validateGameconsole(gameconsole) {
+    validateGameConsole(gameconsole) {
         if (typeof gameconsole !== 'string') throw new TypeError(`${gameconsole} is not an string`)
 
         if (!gameconsole.trim().length) throw new ContentError('gameconsole is empty or blank')
@@ -74,13 +78,13 @@ module.exports = {
         if (!gameconsole.trim().length) throw new ContentError('gameconsole is empty or blank')
     },
 
-    validatePrice(budget) {
+    validatePrice(price) {
         
-        if (typeof budget !== 'string' && (!(budget instanceof Number))) throw new TypeError(`${budget} is not a number`)
+        if (typeof price !== 'number') throw new TypeError(`${price} is not a number`)
 
-        if (!budget.trim().length) throw new ContentError('price is empty or blank')
+        if (!price) throw new ContentError('price is empty or blank')
         
-        if(budget < 0) throw new ContentError(`${budget} is a negative number`)
+        if (price < 0) throw new ContentError(`${price} is a negative number`)
     },
 
     validateFile(file) {

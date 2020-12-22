@@ -6,22 +6,31 @@ const API_URL = process.env.REACT_APP_API_URL
 
 function RetrieveGame({ gameId }) {
     const [game, setGame] = useState()
+    const [error, setError] = useState(null)
+
+    function feedbackError(error) {
+        setError(error)
+        setTimeout(() => {
+            setError(null)
+        }, 8000)
+    }
+
+    
+
     const [currentUser, setCurrentUser] = useState()
     useEffect(() => {
         try {
             retrieveGame(gameId, (error, game) => {
-                console.log(gameId)
 
-                if (error) return alert(error.message)
+                if (error) return feedbackError(error.message)
 
                 setGame(game)
-                console.log(game)
             })
             const { token } = sessionStorage
 
             retrieveUser(token, (error, user) => {
 
-            if (error) return alert(error.message)
+            if (error) return feedbackError(error.message)
 
             const { fullname, contact, phone, city } = user
 
@@ -29,7 +38,7 @@ function RetrieveGame({ gameId }) {
             
             })
         } catch (error) {
-            alert(error.message)
+            feedbackError(error.message)
         }
     }, [])
 

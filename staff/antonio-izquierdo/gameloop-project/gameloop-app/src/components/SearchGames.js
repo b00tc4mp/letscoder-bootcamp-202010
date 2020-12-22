@@ -1,12 +1,20 @@
 import './SearchGames.sass'
-import FindGames from './FindGames'
+import GameResults from './GameResults'
 import { useState } from 'react'
 import { withRouter } from 'react-router-dom'
 import { findGames } from '../logic'
 
 
-export default withRouter(({ onSearch, history }) => {
+export default withRouter(({ history }) => {
     const [games, setGames] = useState()
+    const [error, setError] = useState(null)
+
+    function feedbackError(error) {
+        setError(error)
+        setTimeout(() => {
+            setError(null)
+        }, 8000)
+    }
 
     const handleFindGames = event => {
         event.preventDefault()
@@ -19,27 +27,20 @@ export default withRouter(({ onSearch, history }) => {
             priceMax: { value: priceMax }
         } } = event
 
-        onSearch(query || undefined, gameconsole || undefined, budget ? Number(budget) : undefined, priceMin ? Number(priceMin) : undefined, priceMax ? Number(priceMax) : undefined)
-
         try {
-            findGames(query, gameconsole, budget, priceMin, priceMax, (error, games) => {
-
-                if (error) return alert(error.message)
+            findGames(query || undefined, gameconsole || undefined, budget ? Number(budget) : undefined, priceMin ? Number(priceMin) : undefined, priceMax ? Number(priceMax) : undefined, (error, games) => {
+                
+                if (error) return feedbackError(error.message)
 
                 setGames(games)
                 history.push('/')
-
-                //setView('find-games')
-
             })
         } catch (error) {
-            alert(error.message)
+            feedbackError(error.message)
         }
     }
-    //const { token } = sessionStorage
     const handleRetrieveGame = gameId => {
         history.push(`/game/${gameId}`)
-        console.log(gameId)
     }
 
 
@@ -47,11 +48,11 @@ export default withRouter(({ onSearch, history }) => {
         <> <div className="box">
                 <div class="container">
                     <form className="search-games" onSubmit={handleFindGames}>
-                        <input className="search-games__input" type="search" id="text" name="query" placeholder="name" />
-                        <input className="search-games__input" type="search" id="text" name="gameconsole" placeholder="console" />
-                        <input className="search-games__input" type="search" id="number" name="budget" placeholder="budget" />
-                        <input className="search-games__input" type="search" id="number" name="priceMin" placeholder="priceMin" />
-                        <input className="search-games__input" type="search" id="number" name="priceMax" placeholder="priceMax" />
+                        <input className="search-games__input" type="text" id="text" name="query" placeholder="name" />
+                        <input className="search-games__input" type="text" id="text" name="gameconsole" placeholder="console" />
+                        <input className="search-games__input" type="number" id="number" name="budget" placeholder="budget" />
+                        <input className="search-games__input" type="number" id="number" name="priceMin" placeholder="priceMin" />
+                        <input className="search-games__input" type="number" id="number" name="priceMax" placeholder="priceMax" />
                         <button className="search-games__button">SEARCH</button>
                     </form>
                 </div>
@@ -59,7 +60,7 @@ export default withRouter(({ onSearch, history }) => {
             </div>
 
 
-            { games && games.length > 0 && <FindGames onSearch={handleFindGames} games={games} onRetrieveGame={handleRetrieveGame} />}
+            { games && games.length > 0 && <GameResults games={games} onRetrieveGame={handleRetrieveGame} />}
         </>
     );
 })

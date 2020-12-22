@@ -4,7 +4,7 @@ const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomGameConsole, randomId, randomInteger, randomEmptyOrBlankString, randomNonString, randomWrongLengthId } = require('../utils/randoms')
 const retrieveUserGames = require('./retrieve-user-games')
 const { models: { User, Game }, mongoose } = require('gameloop-data')
-const { ContentError, LengthError } = require('../errors')
+const { ContentError, LengthError } = require('gameloop-errors')
 
 const { env: { MONGODB_URL } } = process
 

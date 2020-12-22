@@ -7,7 +7,7 @@ const { mongoose, models: { User, Game } } = require('gameloop-data')
 const fs = require('fs')
 const fsp = fs.promises
 const path = require('path')
-const { ContentError, LengthError, NotFoundError } = require('../errors')
+const { ContentError, LengthError, NotFoundError } = require('gameloop-errors')
 
 const { env: { MONGODB_URL } } = process
 

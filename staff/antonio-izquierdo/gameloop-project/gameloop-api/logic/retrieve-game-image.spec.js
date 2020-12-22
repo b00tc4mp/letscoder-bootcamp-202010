@@ -5,10 +5,20 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 require('../utils/array-polyfills')
 const retrieveGameImage = require('./retrieve-game-image')
 const { models: { User, Game }, mongoose } = require('gameloop-data')
-const { ContentError, LengthError } = require('../errors')
+const { ContentError, LengthError } = require('gameloop-errors')
 const fs = require('fs')
 const fsp = fs.promises
 const path = require('path')
+
+/**
+ * Retrieves a game image by its id
+ * 
+ * @param {string} gameId 
+ * 
+ * @returns {Promise} with game´s photo
+ * 
+ */
+
 
 const { env: { MONGODB_URL } } = process
 
@@ -63,7 +73,7 @@ describe('retrieveGameImage()', () => {
 
         })
 
-        it('shoud fail when pet does not exists', () => {
+        it('shoud fail when game does not exists', () => {
             return retrieveGameImage(gameId)
                 .catch(error => {
                     expect(error).to.be.instanceOf(Error)

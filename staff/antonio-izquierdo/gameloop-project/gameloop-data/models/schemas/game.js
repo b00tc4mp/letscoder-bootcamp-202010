@@ -33,6 +33,4 @@ module.exports = new Schema({
         type: ObjectId,
         required: true
     }
-
-  
 })

@@ -5,7 +5,7 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 require('../utils/array-polyfills')
 const retrieveUser = require('./retrieve-user')
 const { models: { User }, mongoose } = require('gameloop-data')
-const { ContentError, LengthError } = require('../errors')
+const { ContentError, LengthError } = require('gameloop-errors')
 
 const { env: { MONGODB_URL } } = process
 

@@ -11,68 +11,56 @@ import { BsBoxArrowInLeft, BsPeopleCircle, BsHouseFill } from "react-icons/bs";
 export default function Home({onLogout}) {
 
     const [name, setName] = useState()
-    const [criteria, setCriteria] = useState()
-    const [games, setGames] = useState()
     const [userGames, setUserGames] = useState()
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
-    const [error, setError] = useState(null)
+    const [feedback, setFeedback] = useState(null)
     const [currentUser, setCurrentUser] = useState()
 
-    function feedbackError(error) {
-        setError(error)
+    function showFeedback(error) {
+        setFeedback(error)
         setTimeout(() => {
-            setError(null)
+            setFeedback(null)
         }, 8000)
     }
 
     const { token } = sessionStorage
 
     useEffect(() => {
-        //const { token } = sessionStorage
+        const { token } = sessionStorage
         try {
             retrieveUser(token, (error, user) => {
-                if (error) return alert(error.message)
+                if (error) return showFeedback(error.message)
                 const { fullname, contact, phone, city } = user
                 setCurrentUser({fullname, contact, phone, city})
                 setName(fullname)
 
             })
         } catch (error) {
-            alert(error.message)
+            showFeedback(error.message)
         }
     }, [])
 
     const handleSaveGame = (name, description, gameconsole, budget, image) => {
 
-        //const { token } = sessionStorage
+        const { token } = sessionStorage
         try {
-            saveGame(undefined, name, description, gameconsole, budget, token, (error, gameId) => {
-                if (error) return feedbackError(error.message)
+            saveGame(token, undefined, name, description, gameconsole, budget, (error, gameId) => {
+                if (error) return showFeedback(error.message)
 
                 saveGameImage(token, gameId, image, error => {
-                    if (error) return feedbackError(error.message)
+                    if (error) return showFeedback(error.message)
                     try {
-                        alert('game saved')
+                        showFeedback('game saved')
                     } catch (error) {
-                        return feedbackError(error.message)
+                        return showFeedback(error.message)
                     }
                 })
             })
         } catch (error) {
-            return feedbackError(error.message)
+            return showFeedback(error.message)
         }
     }
 
-    const handleSearchGames = (query, gameconsole, budget, priceMin, priceMax) => {
-        try {
-            findGames(query, gameconsole, budget, priceMin, priceMax, (error, games) => {
-                if (error) return alert(error.message)
-                setGames(games)
-            })
-        } catch (error) {
-            alert(error.message)
-        }
-    }
 
     const handleGoToProfile = () => {
         setView('profile')
@@ -85,11 +73,11 @@ export default function Home({onLogout}) {
     const handleRetrieveUserGames = () => {
         try {
             retrieveUserGames(token, (error, games)=> {
-                if (error) return alert(error.message)
+                if (error) return showFeedback(error.message)
                 setUserGames(games)
             }) 
         } catch (error) {
-         alert(error.message)   
+            showFeedback(error.message)   
         }
     }
 
@@ -97,12 +85,12 @@ export default function Home({onLogout}) {
         try {
             retrieveUserGames(token, (error, games) => {
 
-                if (error) return alert(error.message)
+                if (error) return showFeedback(error.message)
 
                 setUserGames(games)
             })
         } catch (error) {
-            alert(error.message)
+            showFeedback(error.message)
         }
     }
 
@@ -111,14 +99,14 @@ export default function Home({onLogout}) {
             const { token } = sessionStorage
 
             modifyUser(token, { fullname, contact, phone, city }, (error, changes) => {
-                if (error) return feedbackError('could not find any changes')
+                if (error) return showFeedback('could not find any changes')
                 
                 setCurrentUser({fullname, contact, phone, city})
 
 
             })
         } catch (error) {
-            alert(error.message)
+            showFeedback(error.message)
         }
     }
         
@@ -128,14 +116,13 @@ export default function Home({onLogout}) {
         <BsHouseFill className="home__button-menu" size= {42} onClick={ handleGoToHome } />
         {<BsBoxArrowInLeft className="home__button-logout" size= {40} onClick={() => {
             setName(null)
-            setGames(null)
-            setError(null)
+            setFeedback(null)
             onLogout()
         } }/>}
         {view === 'home' && <BsPeopleCircle className="home__button-profile" size= {40} onClick={ handleGoToProfile } />}
         {view === 'profile' && <Profile name={name} currentUser={currentUser} onRetrieveUserGames={handleRetrieveUserGames} games={userGames} doRefreshGames={ handleRefreshGames } onModify={handleModifyUser}/>}
-        {view === 'profile' && <SaveGame onSaveGame={handleSaveGame} error={error}  />}
-        {view === 'home' && <SearchGames onSearch={handleSearchGames} />}
+        {view === 'profile' && <SaveGame onSaveGame={handleSaveGame} error={feedback}  />}
+        {view === 'home' && <SearchGames />}
         <div className= "home__container">
             <div className= "home__container__menu"></div>
         </div>

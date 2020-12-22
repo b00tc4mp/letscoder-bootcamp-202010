@@ -1,6 +1,19 @@
 import { call } from '../utils'
 import {  validateCallback, validateId } from './helpers/validations'
 
+/**
+ * Retrieves a game by its id
+ * 
+ * @param {string} gameId 
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 200
+ * 
+ * @returns {object} with game info 
+ * 
+ */
+
+
 export default function (id, callback) {
     validateId(id)
     validateCallback(callback)

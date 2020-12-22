@@ -1,14 +1,17 @@
 const { validateId } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('gameloop-errors')
 const { models: { Game } } =require('gameloop-data')
 
 /**
- * Retrieves a game by its id
+ * Delete a game by its id
  * 
  * @param {string} gameId 
+ *  
+ * @returns {Promise} with empty object
  * 
- * @returns {Promise}
+ * @throws {NotFoundError} if the gameId does not exist
  */
+
 module.exports = function (gameId) {
     validateId(gameId)
 

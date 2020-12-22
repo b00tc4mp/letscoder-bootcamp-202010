@@ -2,13 +2,21 @@ const { validateId } = require('./helpers/validations')
 const path = require('path')
 const fs = require('fs')
 const { models: { User, Game }, mongoose: { Types: { ObjectId } } } = require('gameloop-data')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('gameloop-errors')
+
+/**
+ *  Upload game's picture
+ * 
+ * @param {string} userId game's identification number(ObjectId)
+ * @param {string} gameId game's identification number(ObjectId)
+ * @param {Stream} stream data image
+ * @returns {Promise} empty promise on successful upload 
+ * 
+ */
 
 module.exports = (userId, gameId, stream) => {
-    if (typeof userId !== 'undefined') validateId(userId)
-    if (typeof gameId !== 'undefined') validateId(gameId)
-    //validateStream(stream)
-    // validateCallback(callback)
+    validateId(userId)
+    validateId(gameId)
 
     return User.findById(userId)
         .then(user => {

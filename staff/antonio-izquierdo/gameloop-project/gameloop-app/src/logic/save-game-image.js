@@ -2,6 +2,18 @@ import { call } from '../utils'
 import { validateId, validateFile, validateCallback, validateToken } from './helpers/validations'
 import context from './context'
 
+/**
+ *  Upload game's picture
+ * @param {string} token use to know userId
+ * @param {string} gameId game's identification number(ObjectId)
+ * @param {Stream} image data image
+ * 
+ * @throws {Error} on server error
+ * @throws {Error} if status is not 204
+ * 
+ * @returns {null} on successful upload 
+ * 
+ */
  
 export default (function (token, gameId, image, callback) {
     validateToken(token)
