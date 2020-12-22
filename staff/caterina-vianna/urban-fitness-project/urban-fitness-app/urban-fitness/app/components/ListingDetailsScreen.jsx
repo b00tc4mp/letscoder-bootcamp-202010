@@ -35,7 +35,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default function ListingDetailsScreen({
   checked,
-  item,
+  listingDetailsItem,
   onCloseProfile,
 }) {
   let [fontsLoaded] = useFonts({
@@ -47,7 +47,7 @@ export default function ListingDetailsScreen({
     return <AppLoading />;
   }
 
-  const image = item.id;
+  const image = listingDetailsItem.id;
   return (
     <View style={styles.backgroundColorListing}>
       <ImageBackground
@@ -69,12 +69,16 @@ export default function ListingDetailsScreen({
         </View>
       </ImageBackground>
       <View style={styles.detailsContainer}>
-        <Text style={styles.titleListing}>{item.title}🧘‍♀️</Text>
+        <Text style={styles.titleListing}>{listingDetailsItem.title}🧘‍♀️</Text>
         <Text style={styles.checkedEquipment}>
-          {item.checked ? "EQUIPMENT REQUIRED" : "NO EQUIPMENT REQUIRED"}
+          {listingDetailsItem.checked
+            ? "EQUIPMENT REQUIRED"
+            : "NO EQUIPMENT REQUIRED"}
         </Text>
-        <Text style={styles.descriptionListing}>{item.description}</Text>
-        <Text style={styles.priceListing}>{item.price}</Text>
+        <Text style={styles.descriptionListing}>
+          {listingDetailsItem.description}
+        </Text>
+        <Text style={styles.priceListing}>{listingDetailsItem.price}</Text>
         <DaysDetails />
         <DatesDetails />
       </View>

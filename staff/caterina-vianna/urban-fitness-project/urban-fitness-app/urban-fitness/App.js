@@ -27,6 +27,16 @@ export default function App() {
     try {
       registerUser(firstName, lastName, email, password, (error) => {
         if (error) return Alert.alert(error.message);
+
+        try {
+          debugger;
+          authenticateUser(email, password, (error, token) => {
+            if (error) return Alert.alert(error.message);
+            AsyncStorage.setItem("token", token).then(() => setView("home"));
+          });
+        } catch (error) {
+          Alert.alert(error.message);
+        }
       });
     } catch (error) {
       alert(error.message);

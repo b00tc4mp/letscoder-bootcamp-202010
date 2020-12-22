@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from "react-native";
-import ActivityCard from "./ActivityCard";
 
 export default function Listing({ activities, onListingDetails }) {
   console.log(activities);
@@ -20,7 +19,7 @@ export default function Listing({ activities, onListingDetails }) {
       renderItem={({ item }) => (
         <TouchableOpacity
           onPress={() => {
-            onListingDetails({ item });
+            onListingDetails({ listingDetailsItem: item });
           }}
         >
           <Card

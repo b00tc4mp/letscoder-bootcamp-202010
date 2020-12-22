@@ -7,7 +7,7 @@ export default function retrieveActivityOwner(token, callback) {
 
   call(
     "GET",
-    "http://192.168.0.11:4000/api/activity",
+    "http://192.168.0.11:4000/api/activity/owner",
     { Authorization: `Bearer ${token}` },
     "",
     (status, response) => {

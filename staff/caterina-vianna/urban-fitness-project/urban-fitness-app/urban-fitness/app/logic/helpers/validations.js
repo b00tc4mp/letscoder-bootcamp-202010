@@ -39,7 +39,7 @@ module.exports = {
       throw new TypeError(firstName + " is not a first name");
 
     if (!firstName.trim().length)
-      throw new ContentError("first name is empty or blank");
+      throw new ContentError("firstName is empty or blank");
   },
   validateLastName(lastName) {
     if (typeof lastName !== "string")

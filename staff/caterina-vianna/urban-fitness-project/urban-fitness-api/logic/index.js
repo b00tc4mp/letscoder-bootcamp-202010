@@ -8,4 +8,5 @@ module.exports = {
   saveActivityImage: require("./save-activity-image"),
   retrieveActivityImage: require("./retrieve-activity-image"),
   modifyActivity: require("./modify-activity"),
+  retrieveActivityOwner: require("./retrieve-activity-owner"),
 };

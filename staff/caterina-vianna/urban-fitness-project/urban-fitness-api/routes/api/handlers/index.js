@@ -8,4 +8,5 @@ module.exports = {
   handleSaveImage: require("./handle-save-image"),
   handleRetrieveActivityImage: require("./handle-retrieve-activity-image"),
   handleModifyActivity: require("./handle-modify-activity"),
+  handleRetrieveActivityOwner: require("./handle-retrieve-activity-owner"),
 };

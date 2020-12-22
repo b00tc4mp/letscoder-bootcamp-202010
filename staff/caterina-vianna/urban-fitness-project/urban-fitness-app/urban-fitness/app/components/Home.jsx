@@ -46,6 +46,7 @@ export default function Home({ token, handleLogOut }) {
   const [activityId, setActivityId] = useState();
   const [activity, setActivity] = useState();
   const [activitiesModified, setActivitiesModified] = useState();
+  const [listingDetailsItem, setListingDetailsItem] = useState();
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -151,8 +152,8 @@ export default function Home({ token, handleLogOut }) {
     setView("listing-detail");
   }; */
 
-  const handleChangeToListingDetails = ({ item }) => {
-    setItem(item);
+  const handleChangeToListingDetails = ({ listingDetailsItem }) => {
+    setListingDetailsItem(listingDetailsItem);
     setView("listing-details");
   };
 
@@ -175,8 +176,8 @@ export default function Home({ token, handleLogOut }) {
     }
   };
 
-  const handleChangeToListingDetailsResult = ({ item }) => {
-    setItem(item);
+  const handleChangeToListingDetailsResult = ({ listingDetailsItem }) => {
+    setListingDetailsItem(listingDetailsItem);
     setView("listing-details");
   };
 
@@ -330,7 +331,10 @@ export default function Home({ token, handleLogOut }) {
 
         {view === "listing-details" && (
           <View>
-            <ListingDetailsScreen item={item} onCloseProfile={handleListMode} />
+            <ListingDetailsScreen
+              listingDetailsItem={listingDetailsItem}
+              onCloseProfile={handleListMode}
+            />
           </View>
         )}
 

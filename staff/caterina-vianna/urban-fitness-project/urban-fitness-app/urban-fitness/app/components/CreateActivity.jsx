@@ -16,7 +16,7 @@ import {
   Screen,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
-import DateTimePicker from "@react-native-community/datetimepicker";
+
 import RNPickerSelect from "react-native-picker-select";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import MultiSelect from "react-native-multiple-select";

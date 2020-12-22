@@ -19,13 +19,16 @@ export default function ResultsList({ results, onListingDetails }) {
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => {
-              onListingDetails({ item });
+              onListingDetails({ listingDetailsItem: item });
             }}
           >
             <Card
               title={item.title}
               subTitle={"$" + item.price}
-              image={require("../assets/yoga.jpg")}
+              image={item.id}
+              location={item.address}
+              dates={item.selectedItems}
+              hour={item.duration}
             />
           </TouchableOpacity>
         )}

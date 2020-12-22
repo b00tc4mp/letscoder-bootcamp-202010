@@ -55,4 +55,5 @@ For students: Allows students to find activities nearby.
 - add logic attend to class
 - add toggle like
 - add location geocoding
+- error handling
 - testing
