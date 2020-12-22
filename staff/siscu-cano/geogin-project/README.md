@@ -1,4 +1,4 @@
-# 🕵️ GEOGIN (la búsqueda del QR) v0.0.0 🕵️
+# 🕵️ GeoGin v0.0.0 🕵️
 
 <img src="./geogin-doc/images/logo.png" width="300" />
 
@@ -18,6 +18,8 @@ El ganador de la búsqueda será el jugador que encuentre primero todos los Qrs 
 Por cada prueba que superemos en las búsquedas el jugador obtendrá 10 puntos y por cada pista que utilicemos se nos restaran 2 puntos.
 
 ## 🔍 Mockups
+
+<img src="./geogin-doc/images/mockups.jpg" />
 
 ## 🔍 Data modeling
 
