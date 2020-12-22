@@ -17,6 +17,8 @@ El ganador de la búsqueda será el jugador que encuentre primero todos los Qrs 
 
 Por cada prueba que superemos en las búsquedas el jugador obtendrá 10 puntos y por cada pista que utilicemos se nos restaran 2 puntos.
 
+## 🔍 Mockups
+
 ## 🔍 Data modeling
 
 ![](./geogin-doc/images/data-model.jpg)
