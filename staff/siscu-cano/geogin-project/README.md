@@ -23,3 +23,7 @@ For each test that we pass in the searches, the player thought 10 points and for
 ## 🔍 Data modeling
 
 ![](./geogin-doc/images/data-model.jpg)
+
+## 🔍 Technologies
+
+<img src="./geogin-doc/images/technologies.jpg" />
