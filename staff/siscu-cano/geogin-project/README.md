@@ -41,6 +41,9 @@ The player earns 10 points when overcome an stage and  losses 2 point when uses 
 
 ![](./geogin-doc/images/data-model.jpg)
 
+### 🔍 Packages
+
+#### React components
 
 
 
