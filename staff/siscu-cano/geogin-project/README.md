@@ -58,3 +58,19 @@ The player earns 10 points when overcome an stage and  losses 2 point when uses 
 ## 🔍 Technologies
 
 <img src="./geogin-doc/images/technologies.jpg" />
+
+## 🔍 TO DO
+
+- Favorites management
+- Game counter
+- Ranking
+- Search list
+- Rating and comments
+- Chat
+
+- Testing server and app
+- Socket IO
+- Custom hooks
+...
+
+
