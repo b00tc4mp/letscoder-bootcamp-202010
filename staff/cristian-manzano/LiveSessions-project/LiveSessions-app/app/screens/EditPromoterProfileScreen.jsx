@@ -94,7 +94,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={city => setCity(city)}
-                                        defaultValue={user.city ? ' ' + user.city : ''}
+                                        defaultValue={user.city ? user.city : ''}
                                     >
                                     </TextInput>
 
@@ -110,18 +110,18 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         </TextInput>
                                         : <TextInput
                                             onChangeText={tags => setTags(tags)}
-                                            defaultValue={user.tags ? ' ' + user.tags : ''}
+                                            defaultValue={user.tags ? user.tags : ''}
                                         >
                                         </TextInput>}
 
 
-
+                                        
                                     <TextInput
                                         placeholder=" Youtube Link"
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={youtubeLink => setYoutubeLink(youtubeLink)}
-                                        defaultValue={user.youtubeLink ? ' ' + user.youtubeLink : ""}
+                                        defaultValue={user.youtubeLink ? user.youtubeLink : ""}
                                     >
                                     </TextInput>
 
@@ -130,7 +130,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={bandcampLink => setBandcampLink(bandcampLink)}
-                                        defaultValue={user.bandcampLink ? ' ' + user.bandcampLink : ""}
+                                        defaultValue={user.bandcampLink ? user.bandcampLink : ""}
                                     >
                                     </TextInput>
 
@@ -139,7 +139,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         style={styles.inputsSignUp}
                                         placeholderTextColor="#343a40"
                                         onChangeText={spotifyLink => setSpotifyLink(spotifyLink)}
-                                        defaultValue={user.spotifyLink ? ' ' + user.spotifyLink : ""}
+                                        defaultValue={user.spotifyLink ? user.spotifyLink : ""}
                                     >
                                     </TextInput>
 
@@ -205,6 +205,7 @@ const styles = StyleSheet.create({
         // marginTop: "-10%",
         marginBottom: "10%",
         fontSize: 35,
+        fontFamily: "Roboto_Regular400",
         borderBottomWidth: 5,
         borderColor: "purple",
         alignSelf: "center",
@@ -213,7 +214,6 @@ const styles = StyleSheet.create({
     },
 
     imagecontainer: {
-        // marginRight: "90%",
         marginBottom: "40%",
         marginTop: "70%"
     },
@@ -229,7 +229,8 @@ const styles = StyleSheet.create({
 
     inputsSignUp: {
         marginBottom: "10%",
-        fontSize: 20,
+        fontFamily: "Roboto-Light",
+        fontSize: 15,
         width: "80%",
         height: "15%",
         borderBottomWidth: .5,
@@ -238,11 +239,12 @@ const styles = StyleSheet.create({
     },
 
     descriptionSignUp: {
-        // marginLeft: "5%",
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 10,
         paddingBottom: 50,
+        fontFamily: "Roboto-Light",
+        fontSize: 15,
         width: "80%",
         borderWidth: 1,
         borderColor: "purple",
@@ -272,7 +274,8 @@ const styles = StyleSheet.create({
     },
 
     buttonText: {
-        color: "white"
+        color: "white",
+        fontFamily: "Roboto-Light",
     },
 
     logoutIcon: {

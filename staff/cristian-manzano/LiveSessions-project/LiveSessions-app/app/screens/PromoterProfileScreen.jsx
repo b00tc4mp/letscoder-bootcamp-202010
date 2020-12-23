@@ -7,7 +7,7 @@ import { LogBox } from 'react-native';
 
 function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, user, lives }) {
     useEffect(() => {
-        LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+        LogBox.ignoreAllLogs()
     }, [])
 
     const [query, setQuery] = useState('')
@@ -89,6 +89,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, 
                                         payment={item.payment}
                                         description={item.description}
                                         image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
+                                        
                                     />
                                 </TouchableOpacity>
                             )}
@@ -114,8 +115,8 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, 
                 </KeyboardAvoidingView>
             </SafeAreaView>
         );
+        console.log(item._id)
 }
-
 const styles = StyleSheet.create({
 
     containerNavigation: {
@@ -137,6 +138,7 @@ const styles = StyleSheet.create({
         marginTop: "10%",
         // marginBottom: "10%",
         fontSize: 35,
+        fontFamily: "Roboto_Regular400",
         borderBottomWidth: 5,
         borderColor: "purple",
         alignSelf: "center",
@@ -174,36 +176,40 @@ const styles = StyleSheet.create({
     },
 
     searchIcon: {
-        width: 30,
-        height: 30,
+        width: 20,
+        height: 20,
         alignContent: "center",
         alignSelf: "center",
         justifyContent: "center"
     },
 
+
     profileAvatar: {
         width: 50,
         height: 50,
         borderRadius: 60 / 2,
-        marginLeft: "10%",
+        // marginLeft: "10%",
         borderWidth: 3,
-        borderColor: "purple"
+        borderColor: "purple",
+        alignSelf: "center"
     },
 
     roleText: {
         textAlign: "center",
+        fontFamily: "Roboto-Light",
         marginTop: "6%",
-        marginLeft: "-15%",
+        // marginLeft: "-15%",
         // marginBottom: "-1%",
         fontSize: 7,
+        alignSelf: "center"
         // borderBottomWidth: 2
     },
 
     artistName: {
         textAlign: "center",
         marginTop: "3%",
+        fontFamily: "Roboto-Light",
         fontSize: 10,
-
     },
 
 
@@ -217,6 +223,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "stretch",
+        marginLeft: 3
     },
 
     artistProfileBody: {
@@ -237,7 +244,7 @@ const styles = StyleSheet.create({
 
     findMeText: {
         marginRight: "5%",
-
+        fontFamily: "Roboto_Regular400",
         fontSize: 25
     },
 

@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect, Alert } from 'react';
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading';
+import { LogBox } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // import {
@@ -82,6 +83,7 @@ export default function App() {
     }
 
     useEffect(() => {
+      LogBox.ignoreAllLogs()
       try {
         AsyncStorage.getItem('token')
           .then(token => {

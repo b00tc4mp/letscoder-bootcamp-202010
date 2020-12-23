@@ -10,12 +10,10 @@ export default function LivesCard({ title, liveDate, duration, status, payment, 
       </View>
       <View style={styles.detailsContainer}>
         <View style={{margin: 15}}>
-          <Text>{title}</Text>
+          <Text style={styles.titleActivity}>{title}</Text>
           <Text style={styles.subTitleActivity}>Date: {liveDate}</Text>
           <Text style={styles.subTitleActivity}>Duration: {duration}</Text>
-          <Text style={styles.subTitleActivity}>Payment: {payment}</Text>
-          {/* <Text style={styles.subTitleActivity}>Description:</Text>
-          <Text style={styles.subTitleActivity}>{description}</Text> */}
+          <Text style={styles.subTitleActivity}>Payment: {payment + '$'}</Text>
 
           <Text style={styles.subTitleActivity}>Status: {status}</Text>
         </View>
@@ -41,7 +39,9 @@ const styles = StyleSheet.create({
 
   titleActivity: {
     color: "black",
-    fontSize: 18,
+    fontSize: 20,
+    fontWeight: "bold",
+    fontFamily: "Roboto_Regular400",
     // fontFamily: Platform.OS === "ios" ? "Roboto" : "Avenir",
   },
 
@@ -53,12 +53,12 @@ const styles = StyleSheet.create({
     width: "50%",
     height: 200,
   },
-  title: {
-    marginBottom: 7,
-  },
+
+
   subTitleActivity: {
     // color: "green",
     // fontWeight: "bold",
+    fontFamily: "Roboto-Light",
     marginRight: 20,
     marginTop: 10
   },

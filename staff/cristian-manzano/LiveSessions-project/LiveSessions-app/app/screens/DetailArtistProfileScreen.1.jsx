@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import LivesCard from "./LivesCard";
 import { View, StyleSheet, Image, Dimensions, FlatList, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
-import { Avatar } from 'react-native-paper';
 import { LogBox } from 'react-native';
 
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, lives }) {
+function DetailArtistProfileScreen({ onGoToPetitions, item }) {
     useEffect(() => {
-        LogBox.ignoreAllLogs()
+        LogBox.ignoreLogs(['Native splash screen is already hidden']);
     }, [])
 
-    
-    const userId = user.id
-    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
-    
+    const itemId = item._id
+    const imageURL = `http://192.168.1.131:4000/api/users/${itemId}/images`
 
-    if (user.role === 'ARTIST')
+    if (item.role === 'ARTIST')
         return (
 
             <SafeAreaView style={styles.artistProfileContainer}>
@@ -23,49 +19,32 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
                     behavior={Platform.OS == "ios" ? "padding" : "height"}
                 >
                     <View style={styles.artistProfileHeader}>
-                        <View style={{alignItems: "center", marginLeft: "3%"}}>
-                            <TouchableOpacity onPress={onGoToEditProfile}>
-                                <Image style={styles.profileAvatar}
-                                    source={{ uri: `${imageURL}` }}
-                                />
-                                <Text style={styles.roleText}>ARTIST</Text>
-                            </TouchableOpacity>
+                        <View>
+
+                            <Image style={styles.profileAvatar}
+                                source={{ uri: `${imageURL}` }}
+                            />
+                            <Text style={styles.roleText}>Artist</Text>
+
 
                             <TextInput
                                 style={styles.artistName}
-                                placeholder={'@' + user.artistName}
+                                placeholder={'@' + item.artistName}
                                 placeholderTextColor={"green"}
                                 editable={false}>
 
 
                             </TextInput>
-                        </View>                        
+                            <TouchableOpacity style={styles.petitionsButton} onPress={onGoToPetitions}>
+                                <Text style={styles.buttonText}>Send Live Petition</Text>
+                            </TouchableOpacity>
+                        </View>
+
+
+
                     </View>
 
                     <ScrollView showsVerticalScrollIndicator={false}>
-                    <View style={styles.livesListContainer}>
-                            
-                        <FlatList style={styles.livesList}
-                            // horizontal
-                            
-                            showsVerticalScrollIndicator={false}
-                            data={lives}
-                            keyExtractor={user._id}
-                            renderItem={({ item }) => (
-                                <TouchableOpacity onPress={() => { onGoToLiveDetail({ live: item }) }}>
-                                    <LivesCard
-                                        title={item.title}
-                                        liveDate={item.liveDate}
-                                        status={item.status}
-                                        duration={item.duration}
-                                        payment={item.payment}
-                                        description={item.description}
-                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
-                                    />
-                                </TouchableOpacity>
-                            )}
-                        />
-                    </View>
 
                         <View style={styles.artistProfileBody}>
 
@@ -76,18 +55,17 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, live
                                     <Image style={styles.instagramLogo} source={require('../assets/instagram-logo.png')} />
                                 </View>
 
-                                <TouchableOpacity onPress={() => Linking.openURL(user.youtubeLink)}>
+                                <TouchableOpacity onPress={() => Linking.openURL(item.youtubeLink)}>
                                     <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
                                 </TouchableOpacity>
 
-                                <TouchableOpacity onPress={() => Linking.openURL(user.bandcampLink)}>
+                                <TouchableOpacity onPress={() => Linking.openURL(item.bandcampLink)}>
                                     <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
                                 </TouchableOpacity>
 
-                                <TouchableOpacity onPress={() => Linking.openURL(user.spotifyLink)}>
+                                <TouchableOpacity onPress={() => Linking.openURL(item.spotifyLink)}>
                                     <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
                                 </TouchableOpacity>
-
                             </View>
                         </View>
 
@@ -105,6 +83,15 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         // backgroundColor: "black",
         marginTop: 15,
+        marginRight: 5
+
+    },
+
+    PetitionsIcon: {
+        backgroundColor: "gray",
+        marginTop: "30%",
+        width: 40,
+        height: 40
 
     },
 
@@ -137,6 +124,36 @@ const styles = StyleSheet.create({
 
     },
 
+    petitionsButtonContainer: {
+        marginTop: "43%",
+        borderTopWidth: 4,
+        width: "100%",
+        height: 44,
+        alignContent: "center",
+        alignSelf: "center",
+        justifyContent: "center",
+
+    },
+
+
+    petitionsButton: {
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: "15%",
+        borderRadius: 5,
+        borderWidth: 3,
+        borderColor: "black",
+        backgroundColor: "black",
+        width: 132,
+        height: 44
+    },
+
+    buttonText: {
+        color: "white",
+        fontFamily: "Roboto-Light",
+      },
+
 
     artistProfileContainer: {
         justifyContent: "flex-start",
@@ -155,12 +172,22 @@ const styles = StyleSheet.create({
         alignItems: "center",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
+        // shadowColor: "gray",
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 12,
+        // },
+        // shadowOpacity: 0.58,
+        // shadowRadius: 16.00,
+
+        // elevation: 24,
     },
 
     linkContainer: {
         marginTop: "30%",
         alignItems: "center",
     },
+
 
     findMeContainer: {
         flexDirection: "row"
@@ -185,22 +212,22 @@ const styles = StyleSheet.create({
 
     livesListContainer: {
         height: "70%",
-        
-        
-      },
-    
-      livesListHeader: {
+        width: Dimensions.get("window").width,
+    },
+
+    livesListHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "stretch",
-      },
-    
-      livesList: {
+        marginTop: "15%"
+    },
+
+    livesList: {
         marginTop: "10%",
         width: "90%",
-        height: "80%",
-      }
+        height: "80%"
+    }
 
 })
 
-export default PromoterProfileScreen;
+export default DetailArtistProfileScreen;

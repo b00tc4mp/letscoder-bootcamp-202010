@@ -40,7 +40,7 @@ export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeni
             source={{ uri: `${imageURL}` }}
           />
           <View style={styles.detailsContainer}>
-            <Text style={{ fontSize: 20 }}>{title}</Text>
+            <Text style={styles.title}>{title}</Text>
             <Text style={styles.subTitleActivity}>Date: {liveDate}</Text>
             <Text style={styles.subTitleActivity}>Duration: {duration}</Text>
             <Text style={styles.subTitleActivity}>Payment: {payment}</Text>
@@ -99,6 +99,20 @@ const styles = StyleSheet.create({
     marginTop: "-5%"
   },
 
+  title: {
+    marginBottom: 7,
+    fontSize: 25,
+    fontFamily: "Roboto_Regular400",
+  },
+
+  subTitleActivity: {
+    // color: "green",
+    fontWeight: "bold",
+    fontFamily: "Roboto-Light",
+    marginRight: 20,
+    marginTop: 10
+  },
+
   liveImage: {
     width: "100%",
     height: 200,
@@ -146,7 +160,7 @@ const styles = StyleSheet.create({
   registerTitle: {
     // marginBottom: "10%",
     // marginRight: "30%",
-    fontSize: 33,
+    fontSize: 32,
     fontFamily: "Roboto_Regular400",
     borderBottomWidth: 5,
     borderColor: "black",

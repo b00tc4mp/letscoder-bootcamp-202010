@@ -104,6 +104,8 @@ export default function PetitionScreen({ onModifyLive, onGoBack, live }) {
                                 <TextInput
                                     placeholder=' Description'
                                     style={styles.descriptionLive}
+                                    multiline={true}
+                                    maxLength={200}
                                     placeholderTextColor="#343a40"
                                     onChangeText={description => setDescription(description)}
 
@@ -144,7 +146,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 20,
         // marginTop: "-5%"
-      },
+    },
 
     liveEditForm: {
         marginTop: "30%",
@@ -159,6 +161,7 @@ const styles = StyleSheet.create({
         // marginTop: "-10%",
         // marginBottom: "10%",
         fontSize: 35,
+        fontFamily: "Roboto_Regular400",
         borderBottomWidth: 5,
         borderColor: "purple",
         alignSelf: "center",
@@ -184,6 +187,7 @@ const styles = StyleSheet.create({
     livesInputs: {
         marginBottom: "10%",
         fontSize: 20,
+        fontFamily: "Roboto-Light",
         width: "80%",
         height: "15%",
         borderBottomWidth: .5,
@@ -199,7 +203,8 @@ const styles = StyleSheet.create({
         paddingBottom: 50,
         borderWidth: 1,
         borderColor: "purple",
-        color: "#343a40"
+        color: "#343a40",
+        fontFamily: "Roboto-Light",
     },
 
     buttonsContainer: {
@@ -225,7 +230,8 @@ const styles = StyleSheet.create({
     },
 
     buttonText: {
-        color: "white"
+        color: "white",
+        fontFamily: "Roboto-Light",
     },
 })
 

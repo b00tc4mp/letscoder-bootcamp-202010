@@ -5,7 +5,7 @@ import { Avatar } from 'react-native-paper';
 import { LogBox } from 'react-native';
 
 
-function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, users, onGoToArtistProfile }) {
+function PromoterProfileScreenArtistsList({ onSearch, user, users, onGoToArtistProfile, onGoBack }) {
     useEffect(() => {
         LogBox.ignoreLogs(['VirtualizedList: missing keys for items']);
     }, [])
@@ -25,7 +25,7 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
                 >
                     <View style={styles.artistProfileHeader}>
                         <View>
-                            <TouchableOpacity onPress={onGoToEditProfile}>
+                            <TouchableOpacity onPress={onGoBack}>
                                 <Image style={styles.profileAvatar}
                                     source={{ uri: `${imageURL}` }}
                                 />
@@ -69,6 +69,9 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
 
                     <ScrollView showsVerticalScrollIndicator={false}>
                         <View style={styles.livesListContainer}>
+                        <TextInput style={styles.registerTitle}
+                                editable={false}
+                            >Artists</TextInput>
 
                             <FlatList
                                 style={styles.ArtistList}
@@ -102,6 +105,12 @@ function PromoterProfileScreenArtistsList({ onGoToEditProfile, onSearch, user, u
                                 </TouchableOpacity>
                             </View>
                         </View>
+                            <TouchableOpacity onPress={onGoBack}>
+                            <Image
+                                style={styles.goBackIcon}
+                                source={require("../assets/Arrow_Back.png")}
+                            />
+                        </TouchableOpacity>
 
                     </ScrollView>
                 </KeyboardAvoidingView>
@@ -132,6 +141,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "purple",
         borderRightColor: "white",
+        fontFamily: "Roboto-Light",
         height: 48,
         width: 200,
         paddingLeft: 20,
@@ -141,6 +151,19 @@ const styles = StyleSheet.create({
         width: 48,
         height: 48,
     },
+
+    registerTitle: {
+        marginTop: "10%",
+        marginBottom: "5%",
+        fontSize: 35,
+        fontFamily: "Roboto_Regular400",
+        borderBottomWidth: 5,
+        borderColor: "purple",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
     searchContainer: {
         backgroundColor: "white",
         width: 50,
@@ -156,8 +179,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     searchIcon: {
-        width: 30,
-        height: 30,
+        width: 20,
+        height: 20,
         alignContent: "center",
         alignSelf: "center",
         justifyContent: "center"
@@ -179,6 +202,7 @@ const styles = StyleSheet.create({
         marginLeft: "-15%",
         // marginBottom: "-1%",
         fontSize: 7,
+        fontFamily: "Roboto-Light",
         // borderBottomWidth: 2
     },
 
@@ -186,7 +210,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginTop: "3%",
         fontSize: 10,
-
+        fontFamily: "Roboto-Light",
     },
 
 
@@ -263,7 +287,7 @@ const styles = StyleSheet.create({
 
     findMeText: {
         marginRight: "5%",
-
+        fontFamily: "Roboto_Regular400",
         fontSize: 25
     },
 
@@ -294,7 +318,13 @@ const styles = StyleSheet.create({
         marginTop: "10%",
         width: "90%",
         height: "80%"
-    }
+    },
+
+    goBackIcon: {
+        width: 40,
+        height: 20,
+        marginTop: "5%",
+    },
 
 })
 
