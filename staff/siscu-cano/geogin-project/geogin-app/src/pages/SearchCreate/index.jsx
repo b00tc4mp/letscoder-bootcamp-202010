@@ -238,7 +238,7 @@ export const SearchCreate = () => {
       token,
       undefined,
       questIdAdded,
-      'http://localhost:4000/game/id_game',
+      `${URL_BASE}/game/id_game`,
       undefined,
       undefined,
       undefined,

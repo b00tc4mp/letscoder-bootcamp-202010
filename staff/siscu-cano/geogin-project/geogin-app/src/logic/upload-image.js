@@ -1,4 +1,6 @@
 import { call } from 'geogin-utils'
+import { API_URL } from '../config'
+
 // import { validatePicture } from './helpers/validations'
 
 export default function (picture, callback) {
@@ -16,7 +18,7 @@ export default function (picture, callback) {
 
     imageBase64Wrapper = imageBase64Wrapper.replace(/(\r\n|\n|\r)/gm, '')
 
-    call('POST', 'http://localhost:4000/api/image-upload',
+    call('POST', `${API_URL}/image-upload`,
       { 'Content-type': 'application/json' },
       JSON.stringify({ data: imageBase64Wrapper }),
       (status, response) => {

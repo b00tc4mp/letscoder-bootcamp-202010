@@ -1,5 +1,6 @@
 import { call } from 'geogin-utils'
 import { validateFullname, validateEmail, validatePassword, validateCallback } from './helpers/validations'
+import { API_URL } from '../config'
 
 export default function (fullname, email, password, callback) {
   validateFullname(fullname)
@@ -7,7 +8,7 @@ export default function (fullname, email, password, callback) {
   validatePassword(password)
   validateCallback(callback)
 
-  call('POST', 'http://localhost:4000/api/users', { 'Content-type': 'application/json' },
+  call('POST', `${API_URL}/users`, { 'Content-type': 'application/json' },
     JSON.stringify({ fullname, email, password }),
     (status, response) => {
       if (status === 0) { return callback(new Error('server error')) } else if (status !== 201) {

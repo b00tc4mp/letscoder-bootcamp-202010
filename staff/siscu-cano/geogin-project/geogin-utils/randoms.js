@@ -13,6 +13,10 @@ module.exports = {
         return [1, true, null, undefined, {}, [], function () { }, new Date].random()
     },
 
+    randomNonArray() {
+        return [1, true, null, undefined, {}, function () { }, new Date].random()
+    },
+
     randomEmptyOrBlankString() { 
         return ['', ' ', '\t', '\r', '\n'].random() 
     },

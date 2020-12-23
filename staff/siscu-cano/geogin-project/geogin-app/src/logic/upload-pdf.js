@@ -1,11 +1,13 @@
 import { call } from 'geogin-utils'
 import { validateCallback } from './helpers/validations'
+import { API_URL } from '../config'
+
 
 export default function (doc, callback) {
   // validateDoc(doc)
   validateCallback(callback)
 
-  call('POST', 'http://localhost:4000/api/pdf-upload',
+  call('POST', `${API_URL}/pdf-upload`,
     { 'Content-type': 'application/json' },
     JSON.stringify({ doc }),
     (status, response) => {

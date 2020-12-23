@@ -1,4 +1,5 @@
 import { call } from 'geogin-utils'
+import { API_URL } from '../config'
 
 const {
   validateToken,
@@ -40,7 +41,7 @@ export default (function saveGame (token, fullname, email, password, image, scor
   Object.keys(data).forEach((key) => (data[key] == null) && delete data[key])
   delete data.token
 
-  call('PATCH', 'http://localhost:4000/api/users', {
+  call('PATCH', `${API_URL}/users`, {
     'Content-type': 'application/json',
     Authorization: `Bearer ${token}`
   },

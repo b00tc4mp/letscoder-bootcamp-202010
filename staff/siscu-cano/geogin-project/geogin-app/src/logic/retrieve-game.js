@@ -1,11 +1,12 @@
 import { call } from 'geogin-utils'
 import { validateId, validateCallback } from './helpers/validations'
+import { API_URL } from '../config'
 
 export default function (gameId, callback) {
   validateId(gameId)
   validateCallback(callback)
 
-  call('GET', `http://localhost:4000/api/game/${gameId}`, {},
+  call('GET', `${API_URL}/game/${gameId}`, {},
     '',
     (status, response) => {
       if (status === 0) {

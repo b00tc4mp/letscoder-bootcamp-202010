@@ -1,4 +1,5 @@
 import { call } from 'geogin-utils'
+import { API_URL } from '../config'
 
 const {
   validateTitle,
@@ -62,7 +63,7 @@ export default (function saveQuest (
   if (typeof tests !== 'undefined') { validateTest(tests) }
   validateCallback(callback)
 
-  call('POST', 'http://localhost:4000/api/quest', {
+  call('POST', `${API_URL}/quest`, {
     'Content-type': 'application/json',
     Authorization: `Bearer ${token}`
   },

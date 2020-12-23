@@ -50,7 +50,7 @@ module.exports = {
       throw new LengthError(`${id} length ${id.length} is not 24`)
 
     if (!id.match(/^[0-9a-fA-F]{24}$/))
-      throw new TypeError(id + ' is not a valid id')
+      throw new TypeError(id + 'is not a valid id')
   },
 
   validateText (text) {
@@ -153,7 +153,7 @@ module.exports = {
   },
   validateQrCode (qrCode) {
     if (typeof qrCode !== 'string')
-      throw new TypeError(qrCode + ' is not a qrCode')
+      throw new TypeError(`${qrCode} is not a qrCode`)
     if (!qrCode.match(/^(https:|http:)\S*/))
       throw new TypeError(`${qrCode} is not a valid qrCode miising: http/s`)
     if (!qrCode.includes('id_game'))
@@ -165,7 +165,7 @@ module.exports = {
   },
   validatePlayers (players) {
     if (!(players instanceof Array))
-      throw new TypeError(`${players} is not an players`)
+      throw new TypeError(`${players} is not a players`)
   },
   validateProgress (progress) {
     if (!(progress instanceof Object))

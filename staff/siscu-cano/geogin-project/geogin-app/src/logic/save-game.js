@@ -1,4 +1,5 @@
 import { call } from 'geogin-utils'
+import { API_URL } from '../config'
 
 const {
   validateQrCode,
@@ -35,7 +36,7 @@ export default (function saveGame (token, gameId, questId, qrCode, teams, player
   if (typeof progress !== 'undefined') { validateProgress(progress) }
   validateCallback(callback)
 
-  call('POST', 'http://localhost:4000/api/game', {
+  call('POST', `${API_URL}/game`, {
     'Content-type': 'application/json',
     Authorization: `Bearer ${token}`
   },
