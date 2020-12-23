@@ -39,8 +39,6 @@ Artist: recieve petitions for live sessions, accept or denie them.
 
 ### Testing (QA)
 
-<!-- TODO Testing -->
-
 
 ![Alt Testing](https://media.giphy.com/media/1ken0zzzL79NPy3QZj/giphy.gif)
 
