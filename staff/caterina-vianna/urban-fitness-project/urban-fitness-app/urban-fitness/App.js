@@ -59,7 +59,6 @@ export default function App() {
     AsyncStorage.removeItem("token");
     setView("sign-up");
   };
-
   useEffect(() => {
     try {
       AsyncStorage.getItem("token").then((token) => {
