@@ -313,6 +313,8 @@ export default function Home({ token, handleLogOut }) {
               style={{
                 backgroundColor: "#f8f4f4",
                 paddingHorizontal: 20,
+                height: Dimensions.get("window").height,
+                width: Dimensions.get("window").width,
               }}
             >
               <ResultsList

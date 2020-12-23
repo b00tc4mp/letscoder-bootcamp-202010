@@ -1,4 +1,4 @@
-# Urban Fitness App
+# Urban Fitness App v.0
 
 ![Alt Urban-Fitness-App](./readme/urban-fitness_lowQ.jpg)
 
@@ -38,6 +38,7 @@ For students: Allows students to find activities nearby.
 
 ### Technologies
 
+![Alt Figma](https://i0.wp.com/publicmediastack.com/wp-content/uploads/2020/04/FIGMA.png?fit=1200%2C675&ssl=1)
 ![Alt React Native](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
 
 ![Alt MongoDB](https://nakedsecurity.sophos.com/wp-content/uploads/sites/2/2017/01/mongodb.png?resize=780,408)
@@ -45,6 +46,8 @@ For students: Allows students to find activities nearby.
 ![Alt Node](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
 
 ![Alt Node](https://miro.medium.com/max/648/1*iDvsmUwzZQxJSKdL0xzwIA.png)
+
+![Alt MochaChai](https://miro.medium.com/max/2400/0*gV7fEaDKRGwpprdj.png)
 
 ### TODO
 
@@ -56,4 +59,4 @@ For students: Allows students to find activities nearby.
 - add toggle like
 - add location geocoding
 - error handling
-- testing
+- terminar testing

@@ -49,7 +49,7 @@ export default function EditProfile({ onCloseProfile, onTrainMode, onLogOut }) {
           <TouchableOpacity style={styles.avatarImg} onPress={() => {}}>
             <Avatar.Image
               size={200}
-              source={require("../assets/avatarEj.jpg")}
+              source={require("../assets/avatar-user.jpg")}
             />
           </TouchableOpacity>
           <TouchableOpacity>
@@ -66,7 +66,7 @@ export default function EditProfile({ onCloseProfile, onTrainMode, onLogOut }) {
             <Text style={styles.profileOptions}>TRAINER MODE</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.profileOptions}>HISTORY</Text>
+            <Text style={styles.profileOptions}>FAVORITES</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {

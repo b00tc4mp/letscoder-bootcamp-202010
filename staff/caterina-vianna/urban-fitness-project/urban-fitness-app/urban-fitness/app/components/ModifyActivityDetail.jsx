@@ -149,7 +149,7 @@ export default function ModifyActivityDetail({
               placeholder="Title"
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setTitle(text)}
-              defaultValue={activity.title}
+              defaultValue={activity.title ? activity.title : ""}
             ></TextInput>
             <View style={styles.textInputFormDescriptionContainer}>
               <TextInput
@@ -159,7 +159,7 @@ export default function ModifyActivityDetail({
                 numberOfLines={10}
                 placeholderTextColor="#9c9c9c"
                 onChangeText={(text) => setDescription(text)}
-                defaultValue={activity.description}
+                defaultValue={activity.description ? activity.description : ""}
               ></TextInput>
             </View>
             <TextInput
@@ -167,7 +167,7 @@ export default function ModifyActivityDetail({
               placeholder="from 00h to 00h"
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setDuration(text)}
-              defaultValue={activity.duration}
+              defaultValue={activity.duration ? activity.duration : ""}
             ></TextInput>
             <TextInput
               style={styles.textInputForm}
@@ -175,14 +175,14 @@ export default function ModifyActivityDetail({
               placeholder="Price"
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setPrice(text)}
-              defaultValue={activity.price}
+              defaultValue={activity.price ? activity.price : ""}
             ></TextInput>
             <TextInput
               style={styles.textInputForm}
               placeholder="Address"
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setAddress(text)}
-              defaultValue={activity.address}
+              defaultValue={activity.address ? activity.address : ""}
             ></TextInput>
             <TextInput
               style={styles.textInputForm}
@@ -190,7 +190,7 @@ export default function ModifyActivityDetail({
               placeholder="Spots Available"
               placeholderTextColor="#9c9c9c"
               onChangeText={(text) => setSpots(text)}
-              defaultValue={activity.spots}
+              defaultValue={activity.spots ? activity.spots : ""}
             ></TextInput>
             <View style={styles.containerChecked}>
               <Text style={styles.textMaterialRequired}>Material required</Text>
@@ -224,7 +224,9 @@ export default function ModifyActivityDetail({
                   { label: "Pilates", value: "pilates" },
                   { label: "Running", value: "running" },
                   { label: "Skating", value: "skating" },
+                  { label: "Skate", value: "skate" },
                   { label: "Yoga", value: "yoga" },
+                  { label: "Golf", value: "golf" },
                 ]}
               />
             </View>

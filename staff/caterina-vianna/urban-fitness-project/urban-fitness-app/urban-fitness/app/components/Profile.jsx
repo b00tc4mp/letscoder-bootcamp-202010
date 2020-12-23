@@ -101,6 +101,22 @@ export default function Profile({ onAvatar, onListMode, onSearch }) {
             coordinate={{ latitude: 41.4, longitude: 2.15 }}
             image={require("../assets/pin.png")}
           />
+          <Marker
+            coordinate={{ latitude: 41.39, longitude: 2.18 }}
+            image={require("../assets/pin.png")}
+          />
+          <Marker
+            coordinate={{ latitude: 41.41, longitude: 2.15 }}
+            image={require("../assets/pin.png")}
+          />
+          <Marker
+            coordinate={{ latitude: 41.34, longitude: 2.16 }}
+            image={require("../assets/pin.png")}
+          />
+          <Marker
+            coordinate={{ latitude: 41.39, longitude: 2.17 }}
+            image={require("../assets/pin.png")}
+          />
         </MapView>
       </View>
     </View>
