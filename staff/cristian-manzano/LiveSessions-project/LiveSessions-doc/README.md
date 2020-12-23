@@ -44,7 +44,18 @@ Artist: recieve petitions for live sessions, accept or denie them.
 
 ### Technologies
 
-<!-- TODO ADD used Technologies pictures -->
+![Alt React](https://hackernoon.com/hn-images/1*IVVbWt2gfpV0rpDqN5z4tg.png "React, IOS, JS, ReactNative")
+
+![Alt Mocha](https://cdn.worldvectorlogo.com/logos/mocha-1.svg "Mocha")
+
+![Alt NodeJS](https://anthoncode.com/wp-content/uploads/2019/01/nodejs-logo-png.png "NodeJs")
+
+![Alt MongoDB](https://img2.freepng.es/20180702/bgt/kisspng-mongodb-database-nosql-postgresql-mongo-5b39f9e3445fa6.5652746415305261792801.jpg "MongoDB")
+
+![Alt Mongoose](https://cdn-images-1.medium.com/fit/t/1600/480/1*iDvsmUwzZQxJSKdL0xzwIA.png "Mongoose")
+
+![Alt Express](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmkNxS1Dd02trVYYE79SqnhgC_ZbpwretOg&usqp=CAU"Express")
+
 
 ### TODO 
 
