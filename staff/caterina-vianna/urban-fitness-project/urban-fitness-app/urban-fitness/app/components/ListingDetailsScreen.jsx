@@ -27,6 +27,7 @@ export default function ListingDetailsScreen({
   checked,
   listingDetailsItem,
   onCloseProfile,
+  refresh,
 }) {
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
@@ -44,7 +45,7 @@ export default function ListingDetailsScreen({
         <ImageBackground
           style={styles.image}
           source={{
-            uri: `http://192.168.0.11:4000/api/activity/${image}/images`,
+            uri: `http://192.168.0.11:4000/api/activity/${image}/images?refresh=${refresh}`,
           }}
         >
           <View>

@@ -7,7 +7,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 
-export default function Listing({ activities, onListingDetails }) {
+export default function Listing({ activities, onListingDetails, refresh }) {
   return (
     <FlatList
       showsVerticalScrollIndicator={false}
@@ -23,7 +23,9 @@ export default function Listing({ activities, onListingDetails }) {
           <Card
             title={item.title}
             subTitle={"$" + item.price}
-            image={item.id}
+            image={{
+              uri: `http://192.168.0.11:4000/api/activity/${item.id}/images?refresh=${refresh}`,
+            }}
             location={item.address}
             dates={item.selectedItems}
             hour={item.duration}

@@ -162,6 +162,7 @@ export default function Home({ token, handleLogOut }) {
           console.log(results);
           if (error) return alert(error.message);
           setResults(results);
+          setRefresh(Date.now());
           setView("results");
         });
       });
@@ -278,6 +279,7 @@ export default function Home({ token, handleLogOut }) {
               <Listing
                 activities={activities}
                 onListingDetails={handleChangeToListingDetails}
+                refresh={refresh}
               />
             </View>
           </>
@@ -320,6 +322,7 @@ export default function Home({ token, handleLogOut }) {
               <ResultsList
                 results={results}
                 onListingDetails={handleChangeToListingDetailsResult}
+                refresh={refresh}
               />
             </View>
           </>
@@ -330,6 +333,7 @@ export default function Home({ token, handleLogOut }) {
             <ListingDetailsScreen
               listingDetailsItem={listingDetailsItem}
               onCloseProfile={handleListMode}
+              refresh={refresh}
             />
           </View>
         )}

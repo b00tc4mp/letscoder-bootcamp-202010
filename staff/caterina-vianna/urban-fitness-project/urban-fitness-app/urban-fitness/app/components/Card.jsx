@@ -15,6 +15,7 @@ export default function Card({
   location,
   dates,
   hour,
+  refresh,
 }) {
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
@@ -27,12 +28,7 @@ export default function Card({
 
   return (
     <View style={styles.card}>
-      <Image
-        style={styles.image}
-        source={{
-          uri: `http://192.168.0.11:4000/api/activity/${image}/images`,
-        }}
-      />
+      <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
         <Text style={styles.titleActivity}>{title}</Text>
         <Text style={styles.addressActivity}>Location: {location}</Text>

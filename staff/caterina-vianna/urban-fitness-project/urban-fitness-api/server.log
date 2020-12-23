@@ -3241,3 +3241,54 @@ error 2020-12-23T09:23:12.300Z - ConflictError: user with e-mail cat@gmail.com a
     at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\register-user.js:22:17
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-23T15:20:47.972Z - LengthError: id length 15 is not 24
+    at validateId (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\helpers\validations.js:66:13)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\retrieve-activity-image.js:7:3)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity-image.js:9:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+error 2020-12-23T15:20:52.127Z - LengthError: id length 15 is not 24
+    at validateId (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\helpers\validations.js:66:13)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\retrieve-activity-image.js:7:3)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity-image.js:9:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+error 2020-12-23T15:20:54.574Z - LengthError: id length 15 is not 24
+    at validateId (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\helpers\validations.js:66:13)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\logic\retrieve-activity-image.js:7:3)
+    at module.exports (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\handlers\handle-retrieve-activity-image.js:9:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Benditas\bootcamp\collab\letscoder-bootcamp-202010\staff\caterina-vianna\urban-fitness-project\urban-fitness-api\node_modules\express\lib\router\layer.js:95:5)
