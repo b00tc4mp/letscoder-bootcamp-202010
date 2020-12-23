@@ -3,7 +3,7 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 
 
 function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
-    const [role, setRole] = useState('ARTIST')
+    const [role, setRole] = useState('')
     const [email, setEmail] = useState('')
     const [fullname, setFullname] = useState('')
     const [password, setPassword] = useState('')
