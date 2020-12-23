@@ -1,132 +1,163 @@
-import React from 'react';
-import { View, StyleSheet, Image, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
-import { Avatar } from 'react-native-paper';
+import React from "react";
+import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions, Linking, ScrollView, SafeAreaView } from "react-native";
+import { TextInput } from "react-native-paper";
 
-function ArtistProfileScreen({ onGoToEditProfile, onGoToPetitions, onLogOut, onGoToProfile, item }) {
+const {env: {API_URL}} = process
+
+export default function DetailLivesScreen({ onGoToPetitions, onGoBack, item }) {
+    const artistName = item.artistName
+    const email = item.email
+    const city = item.city
+    const tags = item.tags
+    const description = item.description
+
+    const itemId = item._id
+    const imageURL = `${API_URL}/users/${itemId}/images`
 
     return (
-
         <SafeAreaView style={styles.artistProfileContainer}>
-            <KeyboardAvoidingView
-                behavior={Platform.OS == "ios" ? "padding" : "height"}
-            >
-                <ScrollView>
-                    
-                    <View style={styles.artistProfileHeader}>
-                        <TouchableOpacity onPress={onGoToProfile}>
-                        <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
+
+            <ScrollView>
+                <View style={{
+                    // backgroundColor: "#f8f4f4",
+                    paddingHorizontal: 20,
+
+                }}>
+
+                    <View style={{ marginTop: 20 }}>
+                        <TouchableOpacity onPress={onGoBack}>
+                            <Image
+                                style={styles.goBackIcon}
+                                source={require("../assets/Arrow_Back.png")}
+                            />
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={onGoToPetitions}>
-                            <Image style={styles.PetitionsIcon} source={require('../assets/petitions-image.png')} />
-                        </TouchableOpacity>
+                        <View style={{ borderBottomWidth: "4", borderBottomColor: "purple", width: 200, alignSelf: "center", fontFamily: "Roboto_Regular400" }}>
+                            <Text style={styles.registerTitle}>Artist Detail</Text>
+                        </View>
+                        <View style={styles.card}>
+                            <Image style={styles.liveImage}
+                                source={{ uri: `${imageURL}` }}
+                            />
+                            <View style={styles.detailsContainer}>
 
-                        <TouchableOpacity onPress={onLogOut}>
-                            <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
-                        </TouchableOpacity>
-                    </View>
+                                <Text style={styles.subTitleActivity}>Name: {artistName}</Text>
+                                <Text style={styles.subTitleActivity}>email: {email}</Text>
+                                <Text style={styles.subTitleActivity}>city: {city}</Text>
+                                <Text style={styles.subTitleActivity}>Genre: {tags}</Text>
+                                <Text style={styles.subTitleActivity}>Description:</Text>
+                                <Text style={styles.subTitleActivity}>{description}</Text>
 
-                    <View style={styles.artistProfileBody}>
 
-                        <TouchableOpacity onPress={onGoToEditProfile}>
-                            <Avatar.Image style={styles.profileAvatar} size={120} source={require('../assets/default-profile-image.png')} />
-                            <Text style={styles.artistName}>@{item.artistName}</Text>
-                        </TouchableOpacity>
+                                <View style={styles.linkContainer}>
 
-                        <View style={styles.linkContainer}>
+                                    <View style={styles.findMeContainer}>
+                                        <Text style={styles.findMeText}>Find me on: </Text>
 
-                            <View style={styles.findMeContainer}>
-                                <Text style={styles.findMeText}>Find me on: </Text>
-                                <Image style={styles.instagramLogo} source={require('../assets/instagram-logo.png')} />
+                                    </View>
+                                    <View style={{ flexDirection: "row", marginTop: "3%" }}>
+
+                                        <TouchableOpacity onPress={() => Linking.openURL(`https://www.instagram.com/${item.artistName}/`)}>
+                                            <Image style={styles.instagramLogo} source={require('../assets/instagram-logo.png')} />
+                                        </TouchableOpacity>
+
+                                        <TouchableOpacity onPress={() => Linking.openURL(item.youtubeLink)}>
+                                            <Image style={styles.links} source={require('../assets/youtube-logo.png')} />
+                                        </TouchableOpacity>
+                                    </View>
+                                    <View style={{ flexDirection: "row", marginTop: "3%" }}>
+                                        <TouchableOpacity onPress={() => Linking.openURL(item.bandcampLink)}>
+                                            <Image style={styles.links} source={require('../assets/bandcamp-logo.png')} />
+                                        </TouchableOpacity>
+
+                                        <TouchableOpacity onPress={() => Linking.openURL(item.spotifyLink)}>
+                                            <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
+
+                                <TouchableOpacity style={styles.petitionsButton} onPress={onGoToPetitions}>
+                                    <Text style={styles.buttonText}>Send Live Petition</Text>
+                                </TouchableOpacity>
                             </View>
-
-                            <TouchableOpacity onPress={() => Linking.openURL(item.youtubeLink)}>
-                                <Image style={styles.links} source={require('../assets/youtube-icon_2.png')} />
-                            </TouchableOpacity>
-
-                            <TouchableOpacity onPress={() => Linking.openURL(item.bandcampLink)}>
-                                <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
-                            </TouchableOpacity>
-
-                            <TouchableOpacity onPress={() => Linking.openURL(item.spotifyLink)}>
-                                <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
-                            </TouchableOpacity>
-
                         </View>
 
                     </View>
-
-                </ScrollView>
-            </KeyboardAvoidingView>
+                </View>
+                <View style={{ paddingBottom: 50 }}></View>
+            </ScrollView>
         </SafeAreaView>
+
     );
 }
 
 const styles = StyleSheet.create({
-    logo: {
-        width: 60,
-        height: 60
-    },
-
-    PetitionsIcon: {
-        backgroundColor: "gray",
-        marginTop: "30%",
-        width: 40,
-        height: 40
-
-    },
-
-    logoutIcon: {
-        marginTop: "30%",
-        width: 40,
-        height: 40
-    },
-
-    profileAvatar: {
-        backgroundColor: "gray"
-    },
-
-    petitionsButton: {
-        fontSize: 25,
-        marginTop: "15%",
-        alignSelf: "stretch",
-        textAlign: "center",
-        height: 40,
-        borderRadius: 50,
-        justifyContent: "flex-end",
-        color: "#343a40",
-        shadowRadius: 50,
-        borderWidth: 1
-    },
-
     artistProfileContainer: {
         justifyContent: "flex-start",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
     },
 
-    artistProfileHeader: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignSelf: "stretch"
+    card: {
+        borderRadius: 15,
+        backgroundColor: "#fff",
+        marginTop: 38,
+        marginBottom: 10,
+        overflow: "hidden",
+        width: "80%",
+        alignSelf: "center"
+
+        // flexDirection: "row"
     },
 
-    artistProfileBody: {
-        marginTop: "8%",
+    goBackIcon: {
+        width: 40,
+        height: 20,
+        marginTop: "-5%"
+    },
+
+    registerTitle: {
+        marginTop: "10%",
+        marginBottom: "5%",
+        fontSize: 20,
+        fontFamily: "Roboto_Regular400",
+        borderBottomWidth: 5,
+        borderColor: "purple",
+        alignSelf: "center",
+        justifyContent: "center",
         alignItems: "center",
+    },
+
+    title: {
+        marginBottom: 7,
+        fontSize: 25,
+        fontFamily: "Roboto_Regular400",
+    },
+
+    subTitleActivity: {
+        // color: "green",
+        fontWeight: "bold",
+        fontFamily: "Roboto-Light",
+        marginRight: 20,
+        marginTop: 10
+    },
+
+    liveImage: {
+        width: "100%",
+        height: 200,
+    },
+
+    detailsContainer: {
+        padding: 20
     },
 
     linkContainer: {
         marginTop: "10%",
         alignItems: "center",
 
+        paddingBottom: 100
     },
 
-    artistName: {
-        textAlign: "center",
-        marginTop: "3%",
-        fontSize: 30
-    },
 
     findMeContainer: {
         flexDirection: "row"
@@ -134,21 +165,90 @@ const styles = StyleSheet.create({
 
     findMeText: {
         marginRight: "5%",
-
+        fontFamily: "Roboto_Regular400",
         fontSize: 25
     },
 
     instagramLogo: {
-        width: 30,
-        height: 30,
+        width: 50,
+        height: 50,
+        marginTop: "5%",
+        marginLeft: "27%"
     },
 
     links: {
-        marginTop: "15%",
-        width: 200,
-        height: 60,
-    }
+        marginLeft: "25%",
+        marginTop: "5%",
+        flexDirection: "row",
+        width: 60,
+        height: 50,
 
-})
+    },
 
-export default ArtistProfileScreen;
+    acceptAndDenieButtons: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignSelf: "stretch"
+    },
+
+    livesButtons: {
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        // marginTop: "15%",
+        marginLeft: "5%",
+        marginRight: "5%",
+        borderRadius: 5,
+        borderWidth: 3,
+        borderColor: "black",
+        backgroundColor: "black",
+        width: 88,
+        height: 38
+    },
+
+    modifyLivesButtons: {
+        // marginLeft: "20%",
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        // marginTop: "15%",
+        borderRadius: 5,
+        borderWidth: 3,
+        borderColor: "black",
+        backgroundColor: "black",
+        width: 132,
+        height: 44
+    },
+
+    registerTitle: {
+        // marginBottom: "10%",
+        // marginRight: "30%",
+        fontSize: 32,
+        fontFamily: "Roboto_Regular400",
+        borderBottomWidth: 5,
+        borderColor: "black",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        // opacity: .2
+    },
+
+    petitionsButton: {
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: "-30%",
+        borderRadius: 5,
+        borderWidth: 3,
+        borderColor: "black",
+        backgroundColor: "black",
+        width: 132,
+        height: 44
+    },
+
+    buttonText: {
+        color: "white",
+        fontFamily: "Roboto-Light",
+    },
+
+});

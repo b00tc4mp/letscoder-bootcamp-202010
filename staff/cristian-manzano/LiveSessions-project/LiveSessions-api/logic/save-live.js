@@ -5,7 +5,7 @@ const {
   //TODO VALIDATIONS
 
   const { ObjectId } = require("mongodb");
-  const { NotFoundError } = require("../routes/api/helpers/with-error-handling");
+  const { NotFoundError } = require("../errors");
   const { User, Live } = require("../models");
   
   module.exports = (
@@ -20,19 +20,20 @@ const {
     description,
   ) => {
     debugger;
-    validateId(promoterId);
+    // validateId(promoterId);
+    if (typeof promoterId !== "undefined") validateId(promoterId);
     if (typeof _id !== "undefined") validateId(_id);
     //TODO validations
   
     return User.findById(promoterId).then((user) => {
-      if (!user) throw new NotFoundError(`user with id ${ownerId} not found`);
+      if (!user) throw new Error(`user with id ${promoterId} not found`);
       debugger;
       if (_id) {
         debugger;
         return Live.findById({_id})
           .then((live) => {
             if (!live)
-              throw new NotFoundError(`live with id ${_id} not found`);
+              throw new Error(`live with id ${_id} not found`);
   
             _id.title = title;
             _id.description = description;

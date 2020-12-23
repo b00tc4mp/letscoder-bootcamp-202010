@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { View, StyleSheet, Image, Alert, Dimensions, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import LivesCard from "./LivesCard";
+import { View, StyleSheet, Image, Dimensions, FlatList, ScrollView, Text, TextInput, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { Avatar } from 'react-native-paper';
+import { LogBox } from 'react-native';
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToLives, onLogOut, onGoToProfile, user }) {
+const {env: {API_URL}} = process
 
-debugger
+function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, user, lives, refresh }) {
+    useEffect(() => {
+        LogBox.ignoreAllLogs()
+    }, [])
+
+    
     const userId = user.id
-    // const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
+    const imageURL = `${API_URL}/users/${userId}/images?refresh=${refresh}`
+    
 
     if (user.role === 'ARTIST')
         return (
@@ -16,43 +23,53 @@ debugger
                 <KeyboardAvoidingView
                     behavior={Platform.OS == "ios" ? "padding" : "height"}
                 >
-                        <View style={styles.artistProfileHeader}>
-                            <TouchableOpacity onPress={onGoToProfile}>
-                                <Image style={styles.logo} source={require('../assets/artist-role-image.png')} />
-                            </TouchableOpacity>
-
-                            <TouchableOpacity onPress={onLogOut}>
-                                <Image style={styles.logoutIcon} source={require('../assets/logout-icon.png')} />
-                            </TouchableOpacity>
-                        </View>
-                    <ScrollView>
-
-
-                        <View style={styles.containerNavigation}>
+                    <View style={styles.artistProfileHeader}>
+                        <View style={{alignItems: "center", marginLeft: "3%"}}>
                             <TouchableOpacity onPress={onGoToEditProfile}>
                                 <Image style={styles.profileAvatar}
-                                    source={{ uri: `http://192.168.1.131:4000/api/users/${user.id}/images` }}
-                                    style={{ width: 50, height: 50, borderRadius: 60 / 2 }} />
-                            </TouchableOpacity>
-                            
-                            <TouchableOpacity 
-                            style={styles.petitionsButtonContainer}
-                            onPress={onGoToLives}>
-                                <Text style={styles.petitionsButton}>Lives</Text>
+                                    source={{ uri: `${imageURL}` }}
+                                />
+                                <Text style={styles.roleText}>ARTIST</Text>
                             </TouchableOpacity>
 
-                        </View>
-
-
-
-
-                        <View style={styles.artistProfileBody}>
                             <TextInput
                                 style={styles.artistName}
                                 placeholder={'@' + user.artistName}
+                                placeholderTextColor={"green"}
                                 editable={false}>
 
+
                             </TextInput>
+                        </View>                        
+                    </View>
+
+                    <ScrollView showsVerticalScrollIndicator={false}>
+                    <View style={styles.livesListContainer}>
+                            
+                        <FlatList style={styles.livesList}
+                            // horizontal
+                            
+                            showsVerticalScrollIndicator={false}
+                            data={lives}
+                            keyExtractor={user._id}
+                            renderItem={({ item }) => (
+                                <TouchableOpacity onPress={() => { onGoToLiveDetail({ live: item }) }}>
+                                    <LivesCard
+                                        title={item.title}
+                                        liveDate={item.liveDate}
+                                        status={item.status}
+                                        duration={item.duration}
+                                        payment={item.payment}
+                                        description={item.description}
+                                        image= {{uri:`${API_URL}/lives/${item._id}/images?refresh=${refresh}`}}
+                                    />
+                                </TouchableOpacity>
+                            )}
+                        />
+                    </View>
+
+                        <View style={styles.artistProfileBody}>
+
                             <View style={styles.linkContainer}>
 
                                 <View style={styles.findMeContainer}>
@@ -65,16 +82,14 @@ debugger
                                 </TouchableOpacity>
 
                                 <TouchableOpacity onPress={() => Linking.openURL(user.bandcampLink)}>
-                                        <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
-                                    </TouchableOpacity>
+                                    <Image style={styles.links} source={require('../assets/bandcamp-icon_2.png')} />
+                                </TouchableOpacity>
 
-                                    <TouchableOpacity onPress={() => Linking.openURL(user.spotifyLink)}>
-                                        <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
-                                    </TouchableOpacity>
+                                <TouchableOpacity onPress={() => Linking.openURL(user.spotifyLink)}>
+                                    <Image style={styles.links} source={require('../assets/spotify-icon_2.png')} />
+                                </TouchableOpacity>
+
                             </View>
-
-                            
-
                         </View>
 
                     </ScrollView>
@@ -84,78 +99,43 @@ debugger
 }
 
 const styles = StyleSheet.create({
-    logo: {
-        width: 60,
-        height: 60
-    },
-
-
 
     containerNavigation: {
-        marginTop: "5%",
-        padding: "5%",
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
         // backgroundColor: "black",
-        marginBottom: 20,
-        shadowColor: "gray",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
+        marginTop: 15,
 
-        elevation: 24,
     },
-
-
-
-    
-    logoutIcon: {
-        marginTop: "20%",
-        width: 48,
-        height: 48,
-    },
-    
-
 
     profileAvatar: {
-        borderRadius: 50
+        width: 50,
+        height: 50,
+        borderRadius: 60 / 2,
+        // marginLeft: "10%",
+        borderWidth: 3,
+        borderColor: "green",
+        alignSelf: "center"
     },
 
-    petitionsButtonContainer: {
-        width: "100%",
-        height: 44,
-        alignContent: "center",
-        alignSelf: "center",
-        justifyContent: "center",
-        
-    },
-
-
-    petitionsButton: {
-        fontSize: 25,
-        width: "50%",
-        alignSelf: "center",
+    roleText: {
         textAlign: "center",
-        height: 40,
-        borderRadius: 50,
-        borderWidth: 1,
+        fontFamily: "Roboto-Light",
+        marginTop: "6%",
+        // marginLeft: "-15%",
+        // marginBottom: "-1%",
+        fontSize: 7,
+        alignSelf: "center"
+        // borderBottomWidth: 2
+    },
 
-        color: "#343a40",
-    
-        shadowColor: "gray",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
+    artistName: {
+        textAlign: "center",
+        marginTop: "3%",
+        fontFamily: "Roboto-Light",
+        fontSize: 10,
 
-        elevation: 24,
-        
     },
 
 
@@ -166,12 +146,9 @@ const styles = StyleSheet.create({
     },
 
     artistProfileHeader: {
-        // position: fixed,
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "stretch",
-        borderBottomWidth: 4,
-        borderBottomColor: "#343a40"
     },
 
     artistProfileBody: {
@@ -179,31 +156,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         height: Dimensions.get("window").height,
         width: Dimensions.get("window").width,
-        shadowColor: "gray",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
-
-        elevation: 24,
     },
 
     linkContainer: {
         marginTop: "30%",
         alignItems: "center",
-
-
-    },
-
-    artistName: {
-        textAlign: "center",
-        marginTop: "10%",
-        // marginBottom: "-1%",
-        fontSize: 38,
-        // borderBottomWidth: 2
-
     },
 
     findMeContainer: {
@@ -212,7 +169,7 @@ const styles = StyleSheet.create({
 
     findMeText: {
         marginRight: "5%",
-
+        fontFamily: "Roboto_Regular400",
         fontSize: 25
     },
 
@@ -225,7 +182,25 @@ const styles = StyleSheet.create({
         marginTop: "8%",
         width: 200,
         height: 60,
-    }
+    },
+
+    livesListContainer: {
+        height: "70%",
+        
+        
+      },
+    
+      livesListHeader: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignSelf: "stretch",
+      },
+    
+      livesList: {
+        marginTop: "10%",
+        width: "90%",
+        height: "80%",
+      }
 
 })
 

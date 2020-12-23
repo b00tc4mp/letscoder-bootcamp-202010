@@ -7,6 +7,8 @@ module.exports = {
     saveUserImage: require('./save-user-image'),
     retrieveUserImage: require('./retrieve-user-image'),
     saveLive: require('./save-live'),
+    saveLiveImage: require('./save-live-image'),
+    retrieveLiveImage: require('./retrieve-live-image'),
     retrieveLives: require('./retrieve-lives'),
     modifyLive: require('./modify-live')
 }

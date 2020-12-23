@@ -5,8 +5,7 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
-
+    
 
     return (
         <SafeAreaView>
@@ -56,14 +55,11 @@ function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
                                     onChangeText={password => setPassword(password)}
                                     value={password} >
                                 </TextInput>
+                                
                             </View>
-
-
-                            
-
                             <TouchableOpacity style={styles.signUpButton}
                                 onPress={() => { onSignIn({ email, password }) }}>
-                                <Text style={styles.buttonText}>Sign Up!</Text>
+                                <Text style={styles.buttonText}>Sign In!</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -90,7 +86,7 @@ const styles = StyleSheet.create({
     },
 
     SignUpForm: {
-        marginTop: "30%",
+        marginTop: "5%",
         width: "75%",
         height: "50%",
         alignSelf: "center",
@@ -117,16 +113,19 @@ const styles = StyleSheet.create({
     registerTitle: {
         marginBottom: "10%",
         marginRight: "30%",
+        fontFamily: "Roboto-Regular",
         fontSize: 30,
         borderBottomWidth: 5,
-        borderColor: "purple",
+        borderColor: "black",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
+        opacity: .2
     },
 
     logInTitle: {
         marginBottom: "10%",
+        fontFamily: "Roboto-Regular",
         fontSize: 30,
         borderBottomWidth: 5,
         borderColor: "purple",
@@ -141,13 +140,13 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
-
     },
 
 
     inputsSignUp: {
         marginBottom: "10%",
         fontSize: 20,
+        fontFamily: "Roboto-Light",
         width: "80%",
         height: "15%",
         borderBottomWidth: .5,
@@ -188,11 +187,16 @@ const styles = StyleSheet.create({
         marginTop: "15%",
         borderRadius: 5,
         borderWidth: 3,
-        borderColor: "purple",
-        backgroundColor: "lightgray",
+        borderColor: "black",
+        backgroundColor: "black",
         width: 132,
-        height: 44
-    }
+        height: 44,
+    },
+
+    buttonText: {
+        color: "white",
+        fontFamily: "Roboto-Light",
+    },
 })
 
 export default SignInScreen;

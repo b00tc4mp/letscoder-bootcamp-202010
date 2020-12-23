@@ -3,7 +3,7 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 
 
 function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
-    const [role, setRole] = useState('')
+    const [role, setRole] = useState('ARTIST')
     const [email, setEmail] = useState('')
     const [fullname, setFullname] = useState('')
     const [password, setPassword] = useState('')
@@ -71,8 +71,8 @@ function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
                             <View style={styles.roleContainer}>
                                 <TouchableOpacity style={role === 'ARTIST' ? styles.roleImageClicked : styles.roleImage} onPress={(event) => {
                                     event.preventDefault();
-
-                                    setRole('ARTIST')
+                                    
+                                    role !== 'ARTIST' && setRole('ARTIST')
                                 }}>
                                     <Image style={styles.logo} source={require('../assets/artist-role-image.png')}
                                         value={role}
@@ -80,7 +80,7 @@ function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
                                 </TouchableOpacity>
                                 <TouchableOpacity style={role === 'PROMOTER' ? styles.roleImageClicked : styles.roleImage} onPress={(event) => {
                                     event.preventDefault();
-                                    setRole('PROMOTER')
+                                    role !== 'PROMOTER' && setRole('PROMOTER')
                                 }}>
                                     <Image style={styles.logo} source={require('../assets/promoter-role-image.png')}
                                         value={role} />
@@ -143,6 +143,7 @@ const styles = StyleSheet.create({
     registerTitle: {
         marginBottom: "10%",
         marginRight: "30%",
+        fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
         borderColor: "purple",
@@ -153,17 +154,19 @@ const styles = StyleSheet.create({
 
     logInTitle: {
         marginBottom: "10%",
+        fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
-        borderColor: "purple",
+        borderColor: "black",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
+        opacity: .2
     },
 
     inputsContainer: {
         width: "100%",
-
+        fontFamily: "Roboto_Light",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
@@ -173,6 +176,7 @@ const styles = StyleSheet.create({
 
     inputsSignUp: {
         marginBottom: "10%",
+        fontFamily: "Roboto_Light",
         fontSize: 20,
         width: "80%",
         height: "15%",
@@ -205,7 +209,7 @@ const styles = StyleSheet.create({
         marginRight: "10%",
         width: 70,
         height: 70,
-        opacity: 0.9,
+        opacity: 1,
         color: "green"
     },
 
@@ -216,11 +220,15 @@ const styles = StyleSheet.create({
         marginTop: "15%",
         borderRadius: 5,
         borderWidth: 3,
-        borderColor: "purple",
-        backgroundColor: "lightgray",
+        borderColor: "black",
+        backgroundColor: "black",
         width: 132,
         height: 44
-    }
+    },
+    buttonText: {
+        fontFamily: "Roboto_Light",
+        color: "white"
+    },
 })
 
 export default SignUpScreen;

@@ -1,7 +1,9 @@
 import { call } from "../../utils";
 
+const {env: {API_URL}} = process
+
 export default function saveLive(
-    promoterId,
+    token,
     artistId,
     liveId,
     title, 
@@ -12,16 +14,13 @@ export default function saveLive(
     description,
     callback
 ) {
-  //TODO VALIDATIONS
+
 
   call(
     "POST",
-    "http://192.168.1.131:4000/api/lives",
-    {
-      "Content-type": "application/json",
-    },
+    `${API_URL}/lives`,
+    { 'Content-type': 'application/json',  Authorization: `Bearer ${token}`  }, 
     JSON.stringify({
-        promoterId,
         artistId,
         liveId,
         title, 

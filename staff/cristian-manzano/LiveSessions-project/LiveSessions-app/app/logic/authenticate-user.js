@@ -5,6 +5,8 @@ import {
   validateCallback,
 } from "./helpers/validations";
 
+const {env: {API_URL}} = process
+
 export default function (email, password, callback) {
   debugger;
   validateEmail(email);
@@ -13,7 +15,7 @@ export default function (email, password, callback) {
 
   call(
     "POST",
-    "http://192.168.1.131:4000/api/users/auth",
+    `${API_URL}/users/auth`,
     { "Content-type": "application/json" },
     JSON.stringify({ email, password }),
     (status, response) => {

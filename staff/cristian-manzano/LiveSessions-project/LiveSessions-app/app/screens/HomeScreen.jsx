@@ -9,19 +9,20 @@ import { editUser } from '../logic';
 import { searchArtists } from '../logic';
 import { saveUserImage } from '../logic';
 import { saveLive } from '../logic';
-import { retrieveLives } from '../logic'
-import { modifyLive } from '../logic'
+import { saveLiveImage } from '../logic';
+import { retrieveLives } from '../logic';
+import { modifyLive } from '../logic';
 
 //Screens
 import ArtistProfileScreen from './ArtistProfileScreen'
 import PromoterProfileScreen from './PromoterProfileScreen'
-import EditProfileScreen from './EditProfileScreen'
-import ArtistsMap from './ArtistsMap'
+import EditPromoterProfileScreen from './EditPromoterProfileScreen'
+import EditArtistProfileScreen from './EditArtistProfileScreen'
 import DetailArtistProfileScreen from './DetailArtistProfileScreen'
 import PetitionScreen from './PetitionScreen'
-import LivesMap from './LivesMap'
 import DetailLiveScreen from './DetailLiveScreen'
 import EditLiveScreen from './EditLiveScreen'
+import PromoterProfileScreenArtistsList from './PromoterProfileScreenArtistsList'
 
 
 export default function Home({ onHandleLogout }) {
@@ -32,17 +33,22 @@ export default function Home({ onHandleLogout }) {
   const [live, setLive] = useState()
   const [view, setView] = useState('')
 
+  const [refresh, setRefresh] = useState()
+
 
 
 
   useEffect(() => {
     AsyncStorage.getItem('token')
       .then(token => {
-        try {
-          retrieveUser(token, (error, user) => {
-            if (error) return Alert.alert(error.message)
+        retrieveUser(token, (error, user) => {
+          if (error) return Alert.alert(error.message)
 
-            setUser(user)
+          setUser(user)
+
+          retrieveLives(token, (error, lives) => {
+            if (error) return alert(error.message);
+            setLives(lives);
             if (user.role === 'ARTIST') {
               setView('artist-profile')
             }
@@ -50,17 +56,26 @@ export default function Home({ onHandleLogout }) {
 
               setView('promoter-profile')
             }
-          })
-        } catch (error) {
-          AsyncStorage.removeItem('token')
-          setView('sign-in')
-        }
-
+            // setView("lives");
+          });
+        })
       })
+      .catch(error => {
+        Alert.alert(error.message)
+        AsyncStorage.removeItem('token')
+        setView('sign-in')
+      })
+
+
   }, [])
 
   const handleGoToEditProfile = () => {
-    setView('edit-profile')
+    if (user.role === 'ARTIST') {
+      setView('edit-artist-profile')
+    }
+    else {
+      setView('edit-promoter-profile')
+    }
   }
 
   const handleCancelEditProfile = () => {
@@ -74,52 +89,49 @@ export default function Home({ onHandleLogout }) {
 
 
   const handleEditProfile = ({ fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, imageUri }) => {
-    console.log(user.email, fullname, artistName, city, description, tags)
-    debugger
-    try {
-      editUser(user.email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, error => {
-        if (error) return Alert.alert(error.message)
-        AsyncStorage.getItem('token')
-          .then(token => {
-            try {
-              if (imageUri)
-                saveUserImage(user.id, imageUri, (error) => {
-                  if (error) return alert(error.message);
-                  try {
-                    retrieveUser(token, (error, user) => {
-                      if (error) return Alert.alert(error.message)
 
-                      setUser(user)
-                    })
-                  } catch (error) {
-                    Alert.alert(error.message)
-                  }
-                })
-              try {
-                if (!imageUri)
-                  retrieveUser(token, (error, user) => {
-                    if (error) return Alert.alert(error.message)
+    AsyncStorage.getItem('token')
+      .then(token => {
 
-                    setUser(user)
-                  })
-              } catch (error) {
-                Alert.alert(error.message)
+        editUser(token, user.email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, error => {
+          if (error) return Alert.alert(error.message)
+
+          if (imageUri)
+            saveUserImage(user.id, imageUri, (error) => {
+              if (error) return alert(error.message);
+
+              retrieveUser(token, (error, user) => {
+                if (error) return Alert.alert(error.message)
+
+                setUser(user)
+                setRefresh(Date.now())
+                if (user.role === 'ARTIST') {
+                  setView('artist-profile')
+                }
+                else {
+                  setView('promoter-profile')
+                }
+              })
+            })
+
+          else
+            retrieveUser(token, (error, user) => {
+              if (error) return Alert.alert(error.message)
+
+              setUser(user)
+              setRefresh(Date.now())
+              if (user.role === 'ARTIST') {
+                setView('artist-profile')
               }
-            } catch (error) {
-              Alert.alert(error.message)
-
-            }
-            if (user.role === 'ARTIST') {
-              setView('artist-profile')
-            }
-            else {
-              setView('promoter-profile')
-            }
+              else {
+                setView('promoter-profile')
+              }
+            })
+        })
+          .cath(error => {
+            Alert.alert(error.message)
           })
       })
-    } catch (error) {
-      Alert.alert(error.message)
-    }
   }
 
 
@@ -150,77 +162,87 @@ export default function Home({ onHandleLogout }) {
     setView('petitions')
   }
 
-  const handleSubmitPetition = ({ title, date, status, duration, payment, description }) => {
-    debugger
-    const promoterId = user.id
+  const handleSubmitPetition = ({ title, liveDate, status, duration, payment, description }) => {
+
     const artistId = item._id
     try {
-      saveLive(promoterId, artistId, undefined, title, date, status, duration, payment, description, (error) => {
-        if (error) return Alert.alert(error.message)
+      AsyncStorage.getItem('token')
+        .then(token => {
+          saveLive(token, artistId, undefined, title, liveDate, status, duration, payment, description, (error) => {
+            if (error) return Alert.alert(error.message)
 
-        setView('promoter-profile')
+            retrieveLives(token, (error, lives) => {
+              if (error) return alert(error.message);
+              setLives(lives);
 
-      })
+              if (user.role === 'ARTIST') {
+                setView('artist-profile')
+              }
+              else {
+                setView('promoter-profile')
+              }
+            });
+          })
+        })
     } catch (error) {
       Alert.alert(error.message)
     }
   }
 
-  const handleAcceptPetition = ({ promoterId, artistId, liveId, title, liveDate, duration, payment, description }) => {
+  const handleAcceptPetition = ({ liveId, title, liveDate, duration, payment, description }) => {
     const statusAccepted = 'ACCEPTED'
-    console.log(liveId)
-    try {
-      saveLive(promoterId, artistId, liveId, title, liveDate, statusAccepted, duration, payment, description, (error) => {
-        debugger
-        if (error) return Alert.alert(error.message)
-        AsyncStorage.getItem('token')
-          .then(token => {
-            try {
-              debugger
-              retrieveLives(token, (error, lives) => {
-                if (error) return alert(error.message);
-                setLives(lives);
+    AsyncStorage.getItem('token')
+      .then(token => {
+        modifyLive(token, liveId, title, liveDate, duration, statusAccepted, payment, description, (error) => {
+          if (error) return Alert.alert(error.message)
 
-                setView("lives");
-              });
-            } catch (error) {
-              alert(error.message);
+          retrieveLives(token, (error, lives) => {
+            if (error) return Alert.alert(error.message)
+
+            setLives(lives)
+            setRefresh(Date.now())
+
+            if (user.role === 'ARTIST') {
+              setView('artist-profile')
+            }
+            else {
+
+              setView('promoter-profile')
             }
           })
-        setView('lives')
-
+        })
+          .catch(error => {
+            Alert.alert(error.message)
+          })
       })
-    } catch (error) {
-      Alert.alert(error.message)
-    }
   }
 
   const handleDeniePetition = ({ promoterId, artistId, liveId, title, liveDate, duration, payment, description }) => {
     const statusAccepted = 'DENIED'
-    console.log(liveId)
-    try {
-      saveLive(promoterId, artistId, liveId, title, liveDate, statusAccepted, duration, payment, description, (error) => {
-        debugger
-        if (error) return Alert.alert(error.message)
-        AsyncStorage.getItem('token')
-          .then(token => {
-            debugger
-            try {
-              debugger
-              retrieveLives(token, (error, lives) => {
-                if (error) return alert(error.message);
-                setLives(lives);
+    AsyncStorage.getItem('token')
+      .then(token => {
+        modifyLive(token, liveId, title, liveDate, duration, statusAccepted, payment, description, (error) => {
+          if (error) return Alert.alert(error.message)
 
-                setView("lives");
-              });
-            } catch (error) {
-              alert(error.message);
+          retrieveLives(token, (error, lives) => {
+            if (error) return Alert.alert(error.message)
+
+            setLives(lives)
+            setRefresh(Date.now())
+
+            if (user.role === 'ARTIST') {
+              setView('artist-profile')
+            }
+            else {
+
+              setView('promoter-profile')
             }
           })
+        })
+          .catch(error => {
+            Alert.alert(error.message)
+          })
       })
-    } catch (error) {
-      Alert.alert(error.message)
-    }
   }
 
   const handleGoToLiveDetail = ({ live }) => {
@@ -251,29 +273,54 @@ export default function Home({ onHandleLogout }) {
     setView('edit-live')
   }
 
-  const handleModifyLive = ({ liveId, title, liveDate, duration, payment, description }) => {
-    debugger
-    try {
-      modifyLive(liveId, title, liveDate, duration, payment, description, (error) => {
-        if (error) return Alert.alert(error.message)
-        AsyncStorage.getItem('token')
-          .then(token => {
-            try {
-              debugger
-              retrieveLives(token, (error, lives) => {
-                if (error) return alert(error.message);
-                setLives(lives);
+  const handleModifyLive = ({ imageUri, liveId, title, liveDate, duration, status, payment, description }) => {
 
-                setView("lives");
-              });
-            } catch (error) {
-              alert(error.message);
-            }
+    AsyncStorage.getItem('token')
+      .then(token => {
+        modifyLive(token, liveId, title, liveDate, duration, status, payment, description, (error) => {
+          if (error) return Alert.alert(error.message)
+
+          if (imageUri)
+            saveLiveImage(liveId, imageUri, (error) => {
+              if (error) return alert(error.message);
+
+              retrieveLives(token, (error, lives) => {
+                if (error) return Alert.alert(error.message)
+
+                setLives(lives)
+                setRefresh(Date.now())
+
+                if (user.role === 'ARTIST') {
+                  setView('artist-profile')
+                }
+                else {
+
+                  setView('promoter-profile')
+                }
+
+              })
+
+            })
+          else
+            retrieveLives(token, (error, lives) => {
+              if (error) return Alert.alert(error.message)
+
+              setLives(lives)
+              setRefresh(Date.now())
+
+              if (user.role === 'ARTIST') {
+                setView('artist-profile')
+              }
+              else {
+
+                setView('promoter-profile')
+              }
+            })
+        })
+          .catch(error => {
+            Alert.alert(error.message)
           })
       })
-    } catch (error) {
-      Alert.alert(error.message)
-    }
   }
 
   const handleGoToProfile = () => {
@@ -285,28 +332,30 @@ export default function Home({ onHandleLogout }) {
     }
   }
 
+  const handleGoBack = () => {
+    if (user.role === 'ARTIST') {
+      setView('artist-profile')
+    }
+    else {
+      setView('promoter-profile')
+    }
+  }
+
+
+
 
   return (
 
     <View>
-      { view === 'promoter-profile' && <PromoterProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile} />}
-      { view === 'artist-profile' && <ArtistProfileScreen user={user} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} />}
-      { view === 'edit-profile' && <EditProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} />}
-      { view === 'results' && <View style={{
-        backgroundColor: "#f8f4f4",
-        paddingHorizontal: 20,
-      }}><ArtistsMap users={users} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile} />
-      </View>}
-
-      { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onLogOut={onHandleLogout} onGoToPetitions={handleGoToPetitions} onGoToProfile={handleGoToProfile} />}
-      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} onGoToProfile={handleGoToProfile} />}
-      { view === 'lives' && <View style={{
-        backgroundColor: "#f8f4f4",
-        paddingHorizontal: 20,
-      }}><LivesMap lives={lives} user={user} onGoToLiveDetail={handleGoToLiveDetail} onGoToProfile={handleGoToProfile} />
-      </View>}
-      { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} onGoToProfile={handleGoToProfile} />}
-      { view === 'edit-live' && <EditLiveScreen live={live} onModifyLive={handleModifyLive} onGoToProfile={handleGoToProfile} />}
+      { view === 'promoter-profile' && <PromoterProfileScreen refresh={refresh} user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail} />}
+      { view === 'artist-profile' && <ArtistProfileScreen user={user} lives={lives} refresh={refresh} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail} />}
+      { view === 'edit-promoter-profile' && <EditPromoterProfileScreen user={user} refresh={refresh} onGoBack={handleGoBack} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} onLogOut={onHandleLogout} />}
+      { view === 'edit-artist-profile' && <EditArtistProfileScreen user={user} refresh={refresh} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoBack={handleGoBack} onLogOut={onHandleLogout} />}
+      { view === 'results' && <PromoterProfileScreenArtistsList user={user} users={users} onGoBack={handleGoBack} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile} onSearch={handleSearch} />}
+      { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onGoBack={handleGoBack} onGoToPetitions={handleGoToPetitions} onGoToProfile={handleGoToProfile} />}
+      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} item={item} onGoToProfile={handleGoToProfile} user={user} onGoBack={handleGoBack} />}
+      { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} onGoBack={handleGoBack} />}
+      { view === 'edit-live' && <EditLiveScreen live={live} onGoBack={handleGoBack} onModifyLive={handleModifyLive} onGoToProfile={handleGoToProfile} />}
     </View>
   );
 }
