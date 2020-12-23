@@ -25,13 +25,15 @@ import EditLiveScreen from './EditLiveScreen'
 import PromoterProfileScreenArtistsList from './PromoterProfileScreenArtistsList'
 
 
-export default function Home({ onHandleLogout, fontsLoaded }) {
-  let [user, setUser] = useState()
-  let [item, setItem] = useState()
-  let [users, setUsers] = useState()
-  let [lives, setLives] = useState()
-  let [live, setLive] = useState()
-  let [view, setView] = useState('')
+export default function Home({ onHandleLogout }) {
+  const [user, setUser] = useState()
+  const [item, setItem] = useState()
+  const [users, setUsers] = useState()
+  const [lives, setLives] = useState()
+  const [live, setLive] = useState()
+  const [view, setView] = useState('')
+
+  const [refresh, setRefresh] = useState()
 
 
 
@@ -39,21 +41,14 @@ export default function Home({ onHandleLogout, fontsLoaded }) {
   useEffect(() => {
     AsyncStorage.getItem('token')
       .then(token => {
-        try {
-          retrieveUser(token, (error, user) => {
-            if (error) return Alert.alert(error.message)
+        retrieveUser(token, (error, user) => {
+          if (error) return Alert.alert(error.message)
 
-            setUser(user)
-            try {
-              retrieveLives(token, (error, lives) => {
-                if (error) return alert(error.message);
-                setLives(lives);
+          setUser(user)
 
-                // setView("lives");
-              });
-            } catch (error) {
-              alert(error.message);
-            }
+          retrieveLives(token, (error, lives) => {
+            if (error) return alert(error.message);
+            setLives(lives);
             if (user.role === 'ARTIST') {
               setView('artist-profile')
             }
@@ -61,14 +56,17 @@ export default function Home({ onHandleLogout, fontsLoaded }) {
 
               setView('promoter-profile')
             }
-          })
-
-        } catch (error) {
-          AsyncStorage.removeItem('token')
-          setView('sign-in')
-        }
-
+            // setView("lives");
+          });
+        })
       })
+      .catch(error => {
+        Alert.alert(error.message)
+        AsyncStorage.removeItem('token')
+        setView('sign-in')
+      })
+
+
   }, [])
 
   const handleGoToEditProfile = () => {
@@ -168,16 +166,28 @@ export default function Home({ onHandleLogout, fontsLoaded }) {
   }
 
   const handleSubmitPetition = ({ title, liveDate, status, duration, payment, description }) => {
-    debugger
+    
     const promoterId = user.id
     const artistId = item._id
     try {
-      saveLive(promoterId, artistId, undefined, title, liveDate, status, duration, payment, description, (error) => {
-        if (error) return Alert.alert(error.message)
+      AsyncStorage.getItem('token')
+        .then(token => {
+          saveLive(promoterId, artistId, undefined, title, liveDate, status, duration, payment, description, (error) => {
+            if (error) return Alert.alert(error.message)
+            
+            retrieveLives(token, (error, lives) => {
+              if (error) return alert(error.message);
+              setLives(lives);
 
-        setView('promoter-profile')
-
-      })
+              if (user.role === 'ARTIST') {
+                setView('artist-profile')
+              }
+              else {
+                setView('promoter-profile')
+              }
+            });
+          })
+        })
     } catch (error) {
       Alert.alert(error.message)
     }
@@ -209,12 +219,12 @@ export default function Home({ onHandleLogout, fontsLoaded }) {
               alert(error.message);
             }
           })
-          if (user.role === 'ARTIST') {
-            setView('artist-profile')
-          }
-          else {
-            setView('promoter-profile')
-          }
+        if (user.role === 'ARTIST') {
+          setView('artist-profile')
+        }
+        else {
+          setView('promoter-profile')
+        }
 
       })
     } catch (error) {
@@ -249,14 +259,14 @@ export default function Home({ onHandleLogout, fontsLoaded }) {
               alert(error.message);
             }
           })
-              if (user.role === 'ARTIST') {
-                setView('artist-profile')
-              }
-              else {
-                setView('promoter-profile')
-              }
+        if (user.role === 'ARTIST') {
+          setView('artist-profile')
+        }
+        else {
+          setView('promoter-profile')
+        }
       })
-      
+
     } catch (error) {
       Alert.alert(error.message)
     }
@@ -290,56 +300,55 @@ export default function Home({ onHandleLogout, fontsLoaded }) {
     setView('edit-live')
   }
 
-  const handleModifyLive = ({imageUri, liveId, title, liveDate, duration, payment, description }) => {
+  const handleModifyLive = ({ imageUri, liveId, title, liveDate, duration, payment, description }) => {
     debugger
-    try {
-      modifyLive(liveId, title, liveDate, duration, payment, description, (error) => {
-        if (error) return Alert.alert(error.message)
-        AsyncStorage.getItem('token')
-          .then(token => {
-            try {
-              if (imageUri)
-                saveLiveImage(liveId, imageUri, (error) => {
-                  if (error) return alert(error.message);
-                  try {
-                    retrieveLives(token, (error, lives) => {
-                      if (error) return Alert.alert(error.message)
 
-                      setLives(lives)
-                      
-                    })
-                  } catch (error) {
-                    Alert.alert(error.message)
-                  }
-                })
-              try {
-                if (!imageUri)
-                  retrieveLives(token, (error, lives) => {
-                    if (error) return Alert.alert(error.message)
+    AsyncStorage.getItem('token')
+      .then(token => {
+        modifyLive(liveId, title, liveDate, duration, payment, description, (error) => {
+          if (error) return Alert.alert(error.message)
 
-                    setLives(lives)
-                  })
-              } catch (error) {
-                Alert.alert(error.message)
+          if (imageUri)
+            saveLiveImage(liveId, imageUri, (error) => {
+              if (error) return alert(error.message);
+
+              retrieveLives(token, (error, lives) => {
+                if (error) return Alert.alert(error.message)
+
+                setLives(lives)
+                setRefresh(Date.now())
+
+                if (user.role === 'ARTIST') {
+                  setView('artist-profile')
+                }
+                else {
+
+                  setView('promoter-profile')
+                }
+
+              })
+
+            })
+          else
+            retrieveLives(token, (error, lives) => {
+              if (error) return Alert.alert(error.message)
+
+              setLives(lives)
+              setRefresh(Date.now())
+
+              if (user.role === 'ARTIST') {
+                setView('artist-profile')
               }
-            } catch (error) {
-              Alert.alert(error.message)
+              else {
 
-            }
-
-            if (user.role === 'ARTIST') {
-              setView('artist-profile')
-            }
-            else {
-
-              setView('promoter-profile')
-            }
-            
+                setView('promoter-profile')
+              }
+            })
+        })
+          .catch(error => {
+            Alert.alert(error.message)
           })
       })
-    } catch (error) {
-      Alert.alert(error.message)
-    }
   }
 
   const handleGoToProfile = () => {
@@ -360,19 +369,19 @@ export default function Home({ onHandleLogout, fontsLoaded }) {
     }
   }
 
-  
+
 
 
   return (
 
     <View>
-      { view === 'promoter-profile' && <PromoterProfileScreen user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail}/>}
-      { view === 'artist-profile' && <ArtistProfileScreen user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail}/>}
-      { view === 'edit-promoter-profile' && <EditPromoterProfileScreen user={user} onGoBack={handleGoBack} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} onLogOut={onHandleLogout}/>}
-      { view === 'edit-artist-profile' && <EditArtistProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoBack={handleGoBack} onLogOut={onHandleLogout}/>}
-      { view === 'results' && <PromoterProfileScreenArtistsList user={user} users={users} onGoBack={handleGoBack} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile} onSearch={handleSearch}/>}
+      { view === 'promoter-profile' && <PromoterProfileScreen refresh={refresh} user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onSearch={handleSearch} onGoToLives={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail} />}
+      { view === 'artist-profile' && <ArtistProfileScreen user={user} lives={lives} onGoToEditProfile={handleGoToEditProfile} onLogOut={onHandleLogout} onGoToLivePetitions={handleRetrieveLives} onGoToProfile={handleGoToProfile} onGoToLiveDetail={handleGoToLiveDetail} />}
+      { view === 'edit-promoter-profile' && <EditPromoterProfileScreen user={user} onGoBack={handleGoBack} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoToProfile={handleGoToProfile} onLogOut={onHandleLogout} />}
+      { view === 'edit-artist-profile' && <EditArtistProfileScreen user={user} onEditProfile={handleEditProfile} onCancelEditProfile={handleCancelEditProfile} onGoBack={handleGoBack} onLogOut={onHandleLogout} />}
+      { view === 'results' && <PromoterProfileScreenArtistsList user={user} users={users} onGoBack={handleGoBack} onGoToArtistProfile={handleGoToArtistProfile} onGoToProfile={handleGoToProfile} onSearch={handleSearch} />}
       { view === 'detail-artist-profile' && <DetailArtistProfileScreen item={item} onGoBack={handleGoBack} onGoToPetitions={handleGoToPetitions} onGoToProfile={handleGoToProfile} />}
-      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} item={item} onGoToProfile={handleGoToProfile} user={user} onGoBack={handleGoBack}/>}
+      { view === 'petitions' && <PetitionScreen onSubmitPetition={handleSubmitPetition} item={item} onGoToProfile={handleGoToProfile} user={user} onGoBack={handleGoBack} />}
       { view === 'live-detail' && <DetailLiveScreen live={live} user={user} onAcceptPetition={handleAcceptPetition} onDeniePetition={handleDeniePetition} onModifyLive={handleGoToModifyLive} onGoBack={handleGoBack} />}
       { view === 'edit-live' && <EditLiveScreen live={live} onGoBack={handleGoBack} onModifyLive={handleModifyLive} onGoToProfile={handleGoToProfile} />}
     </View>

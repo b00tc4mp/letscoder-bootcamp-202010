@@ -1,4 +1,5 @@
 //modules
+import env from './.env'
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect, Alert } from 'react';
 import * as Font from 'expo-font'

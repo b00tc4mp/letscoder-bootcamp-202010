@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linking, TouchableOpacity, KeyboardAvoidingView, SafeAreaView, ImageBackground } from 'react-native';
 
 
-function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn, fontsLoaded }) {
+function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     

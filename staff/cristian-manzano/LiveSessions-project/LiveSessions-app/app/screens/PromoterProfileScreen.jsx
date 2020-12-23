@@ -4,20 +4,21 @@ import { View, StyleSheet, Image, Dimensions, FlatList, ScrollView, Text, TextIn
 import { Avatar } from 'react-native-paper';
 import { LogBox } from 'react-native';
 
+const {env: {API_URL}} = process
+debugger
 
-function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, user, lives }) {
+function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, user, lives, refresh }) {
     useEffect(() => {
         LogBox.ignoreAllLogs()
     }, [])
 
     const [query, setQuery] = useState('')
     const userId = user.id
-    const imageURL = `http://192.168.1.131:4000/api/users/${userId}/images`
+    const imageURL = `${API_URL}/users/${userId}/images?refresh=${refresh}`
     
 
     if (user.role === 'PROMOTER')
         return (
-
             <SafeAreaView style={styles.artistProfileContainer}>
                 <KeyboardAvoidingView
                     behavior={Platform.OS == "ios" ? "padding" : "height"}
@@ -88,7 +89,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, 
                                         duration={item.duration}
                                         payment={item.payment}
                                         description={item.description}
-                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images`}}
+                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images?refresh=${refresh}` }}
                                         
                                     />
                                 </TouchableOpacity>
@@ -110,7 +111,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, 
                                 </TouchableOpacity>
                             </View>
                         </View>
-
+                            
                     </ScrollView>
                 </KeyboardAvoidingView>
             </SafeAreaView>
