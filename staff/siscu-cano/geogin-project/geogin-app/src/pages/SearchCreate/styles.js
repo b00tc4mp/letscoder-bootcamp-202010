@@ -166,6 +166,7 @@ export const DefaultLayout = styled.div`
     gap: 10px;
     border: 1px solid #d8d8d8;
     padding: 4px;
+    word-break: break-all;
     img {
       max-width: 150px;
     }

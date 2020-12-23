@@ -3,6 +3,7 @@ import { QrReaderWrapper } from './styles'
 import QrReader from 'react-qr-reader'
 import { toast } from 'react-toastify'
 import { FcHighPriority } from 'react-icons/fc'
+import { Expire } from '../Expire'
 
 const ICON_SIZE = '22px'
 
@@ -42,8 +43,8 @@ export const QrScanner = ({ game }) => {
           onError={handleError}
           onScan={handleScan}
         />
-        {winner === true && <p className='winner'>Has superador la prueba!!!!</p>}
-        {winner === false && <p className='looser'>Sigue buscando 'my friend', este QR va a ser que no es el bueno!!!!</p>}
+        {winner === true && <Expire delay="5000"><p className='winner'>Has superador la prueba!!!!</p></Expire>}
+        {winner === false && <Expire delay="5000"><p className='looser'>Sigue buscando 'my friend', este QR va a ser que no es el bueno!!!!</p></Expire>}
       </QrReaderWrapper>
     </>
   )

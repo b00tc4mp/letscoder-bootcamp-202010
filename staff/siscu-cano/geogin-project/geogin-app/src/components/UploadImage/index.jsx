@@ -41,8 +41,8 @@ export const UploadImage = ({ onUploadImage, className, preview = true, previewI
         buttonText='Subir imagen'
         label='Imagen de portada en la búsqueda'
         imgExtension={['.jpg', '.png', '.gif']}
-        maxFileSize={5242880}
-        fileSizeError='La imagen no debe exceder los 5 megas'
+        maxFileSize={3242880}
+        fileSizeError='La imagen no debe exceder los 3 megas'
       />
       {preview &&
         <div className='preview'>

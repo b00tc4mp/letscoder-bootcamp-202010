@@ -176,4 +176,13 @@ textarea {
   }
 }
 
+.to-do {
+
+  color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 `
