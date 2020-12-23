@@ -4618,3 +4618,6 @@ error 2020-12-23T16:58:18.667Z - Error: ENOENT: no such file or directory, open 
 error 2020-12-23T16:58:50.747Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/lives/default-profile-image.jpg'
 error 2020-12-23T16:58:51.636Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/lives/default-profile-image.jpg'
 info 2020-12-23T17:00:56.109Z - stopping server
+info 2020-12-23T17:01:52.897Z - starting server
+info 2020-12-23T17:01:53.783Z - server running on port 4000
+info 2020-12-23T17:02:10.453Z - stopping server
