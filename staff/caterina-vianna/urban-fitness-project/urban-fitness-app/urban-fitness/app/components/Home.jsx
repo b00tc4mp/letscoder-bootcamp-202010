@@ -47,6 +47,7 @@ export default function Home({ token, handleLogOut }) {
   const [activity, setActivity] = useState();
   const [activitiesModified, setActivitiesModified] = useState();
   const [listingDetailsItem, setListingDetailsItem] = useState();
+  const [refresh, setRefresh] = useState();
 
   useEffect((token) => {
     AsyncStorage.getItem("token").then((token) => {
@@ -107,8 +108,9 @@ export default function Home({ token, handleLogOut }) {
     duration,
   }) => {
     debugger;
-    try {
-      AsyncStorage.getItem("token").then((token) => {
+
+    AsyncStorage.getItem("token")
+      .then((token) => {
         saveActivity(
           token,
           undefined,
@@ -124,29 +126,23 @@ export default function Home({ token, handleLogOut }) {
           duration,
           (error, activityId) => {
             if (error) return alert(error.message);
-            try {
-              saveActivityImage(activityId, imageUri, (error) => {
+
+            saveActivityImage(activityId, imageUri, (error) => {
+              if (error) return alert(error.message);
+
+              retrieveActivityOwner(token, (error, activitiesModified) => {
                 if (error) return alert(error.message);
-                try {
-                  retrieveActivity(token, (error, activities) => {
-                    if (error) return alert(error.message);
-                    debugger;
-                    setActivities(activities);
-                    setView("list-mode");
-                  });
-                } catch (error) {
-                  alert(error.message);
-                }
+                setActivitiesModified(activitiesModified);
+
+                setView("trainer-profile");
               });
-            } catch (error) {
-              alert(error.message);
-            }
+            });
           }
         );
+      })
+      .catch((error) => {
+        Alert.alert(error.message);
       });
-    } catch (error) {
-      alert(error.message);
-    }
   };
   /* const handleListingDetailsScreen = () => {
     setView("listing-detail");
@@ -158,8 +154,6 @@ export default function Home({ token, handleLogOut }) {
   };
 
   const handleSearch = (query) => {
-    console.log(query);
-    debugger;
     try {
       AsyncStorage.getItem("token").then((token) => {
         debugger;
@@ -204,25 +198,24 @@ export default function Home({ token, handleLogOut }) {
     duration,
   }) => {
     try {
-      saveActivityImage(activityId, imageUri, (error) => {
-        if (error) return alert(error.message);
-
-        try {
-          modifyActivity(
-            activityId,
-            title,
-            description,
-            price,
-            checked,
-            address,
-            sport,
-            repeat,
-            spots,
-            selectedItems,
-            duration,
-            (error) => {
-              if (error) return Alert.alert(error.message);
+      modifyActivity(
+        activityId,
+        title,
+        description,
+        price,
+        checked,
+        address,
+        sport,
+        repeat,
+        spots,
+        selectedItems,
+        duration,
+        (error) => {
+          try {
+            saveActivityImage(activityId, imageUri, (error) => {
+              if (error) return alert(error.message);
               AsyncStorage.getItem("token").then((token) => {
+                if (error) return Alert.alert(error.message);
                 try {
                   debugger;
                   retrieveActivityOwner(token, (error, activitiesModified) => {
@@ -235,12 +228,12 @@ export default function Home({ token, handleLogOut }) {
                   alert(error.message);
                 }
               });
-            }
-          );
-        } catch (error) {
-          Alert.alert(error.message);
+            });
+          } catch (error) {
+            alert(error.message);
+          }
         }
-      });
+      );
     } catch (error) {
       Alert.alert(error.message);
     }
@@ -302,6 +295,7 @@ export default function Home({ token, handleLogOut }) {
               activities={activitiesModified}
               onModifyActivityDetail={handleGoToModifyActivity}
               onCloseProfile={handleChangeToEditProfile}
+              refresh={refresh}
             />
             <AddActivityButton
               onCreateActivity={handleChangeToCreateActivity}

@@ -25,6 +25,7 @@ export default function TrainerMode({
   activities,
   onModifyActivityDetail,
   onCloseProfile,
+  refresh,
 }) {
   debugger;
   let [fontsLoaded] = useFonts({

@@ -8,8 +8,6 @@ import {
 } from "react-native";
 
 export default function Listing({ activities, onListingDetails }) {
-  console.log(activities);
-
   return (
     <FlatList
       showsVerticalScrollIndicator={false}

@@ -16,22 +16,12 @@ import DaysDetails from "./DaysDetails";
 
 import {
   useFonts,
-  Nunito_200ExtraLight,
-  Nunito_200ExtraLight_Italic,
-  Nunito_300Light,
-  Nunito_300Light_Italic,
-  Nunito_400Regular,
-  Nunito_400Regular_Italic,
   Nunito_600SemiBold,
-  Nunito_600SemiBold_Italic,
   Nunito_700Bold,
-  Nunito_700Bold_Italic,
-  Nunito_800ExtraBold,
-  Nunito_800ExtraBold_Italic,
   Nunito_900Black,
-  Nunito_900Black_Italic,
 } from "@expo-google-fonts/nunito";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { ScrollView } from "react-native";
 
 export default function ListingDetailsScreen({
   checked,
@@ -50,38 +40,40 @@ export default function ListingDetailsScreen({
   const image = listingDetailsItem.id;
   return (
     <View style={styles.backgroundColorListing}>
-      <ImageBackground
-        style={styles.image}
-        source={{
-          uri: `http://192.168.0.11:4000/api/activity/${image}/images`,
-        }}
-      >
-        <View>
-          <TouchableOpacity
-            onPress={() => {
-              {
-                onCloseProfile();
-              }
-            }}
-          >
-            <Icon style={styles.closeIcon} name="close" size={25} />
-          </TouchableOpacity>
+      <ScrollView>
+        <ImageBackground
+          style={styles.image}
+          source={{
+            uri: `http://192.168.0.11:4000/api/activity/${image}/images`,
+          }}
+        >
+          <View>
+            <TouchableOpacity
+              onPress={() => {
+                {
+                  onCloseProfile();
+                }
+              }}
+            >
+              <Icon style={styles.closeIcon} name="close" size={25} />
+            </TouchableOpacity>
+          </View>
+        </ImageBackground>
+        <View style={styles.detailsContainer}>
+          <Text style={styles.titleListing}>{listingDetailsItem.title}</Text>
+          <Text style={styles.checkedEquipment}>
+            {listingDetailsItem.checked
+              ? "EQUIPMENT REQUIRED"
+              : "NO EQUIPMENT REQUIRED"}
+          </Text>
+          <Text style={styles.descriptionListing}>
+            {listingDetailsItem.description}
+          </Text>
+          <Text style={styles.priceListing}>${listingDetailsItem.price}</Text>
+          <DaysDetails />
+          <DatesDetails />
         </View>
-      </ImageBackground>
-      <View style={styles.detailsContainer}>
-        <Text style={styles.titleListing}>{listingDetailsItem.title}🧘‍♀️</Text>
-        <Text style={styles.checkedEquipment}>
-          {listingDetailsItem.checked
-            ? "EQUIPMENT REQUIRED"
-            : "NO EQUIPMENT REQUIRED"}
-        </Text>
-        <Text style={styles.descriptionListing}>
-          {listingDetailsItem.description}
-        </Text>
-        <Text style={styles.priceListing}>{listingDetailsItem.price}</Text>
-        <DaysDetails />
-        <DatesDetails />
-      </View>
+      </ScrollView>
     </View>
   );
 }

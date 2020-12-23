@@ -14,8 +14,8 @@ module.exports = (mySports) => {
         new NotFoundError(`sports with these genres ${mySports} not found`);
 
       activities.forEach((activity) => {
-        // const {_id} = activity
-        // activity.id =_id.toString()
+        const { _id } = activity;
+        activity.id = _id.toString();
 
         delete activity._id;
         delete activity.password;
