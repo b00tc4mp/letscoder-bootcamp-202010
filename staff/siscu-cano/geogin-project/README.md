@@ -16,6 +16,8 @@ The winner will be the player who first finds all the hidden QRs or if the game 
 
 The player earns 10 points when overcome an stage and  losses 2 point when uses a clue.
 
+<img src="https://i.giphy.com/media/wfOe7SdZ3XyHm/giphy.webp" />
+
 ## 🔍 Mockups
 
 <img src="./geogin-doc/images/mockups.jpg" />
