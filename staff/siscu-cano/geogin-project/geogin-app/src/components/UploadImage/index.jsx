@@ -3,9 +3,12 @@ import { UploadImageWrapper } from './styles'
 import ImageUploader from 'react-images-upload'
 import { toast } from 'react-toastify'
 import NoImage from '../../assets/images/no-image.png'
+import { FcHighPriority } from 'react-icons/fc'
 
 // Test
 import { uploadImage } from '../../logic'
+
+const ICON_SIZE = '22px'
 
 export const UploadImage = ({ onUploadImage, className, preview = true, previewImage, withIcon = true, withLabel = true }) => {
   const [pictures, setPictures] = useState([])
@@ -16,28 +19,14 @@ export const UploadImage = ({ onUploadImage, className, preview = true, previewI
     try {
       uploadImage(picture, (error, response) => {
         if (error) {
-          toast.error(`⛔️ a${error.message}!`, {
-            position: 'top-center',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: false
-          })
+          return toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
         } else {
           setCloudinaryPicture(response)
           onUploadImage(response)
         }
       })
     } catch (error) {
-      toast.error(`⛔️ b${error.message}!`, {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false
-      })
+      toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
     }
   }
 

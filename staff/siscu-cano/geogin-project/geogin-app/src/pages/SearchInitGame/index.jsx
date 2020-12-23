@@ -5,6 +5,10 @@ import { ButtonToggle } from '../../components/ButtonToggle'
 import { SearchInitGameWrapper } from './styles'
 import { QrScanner } from '../../components/QrScanner'
 import { retrieveGame } from '../../logic'
+import { toast } from 'react-toastify'
+import { FcHighPriority } from 'react-icons/fc'
+
+const ICON_SIZE = '22px'
 
 export const SearchInitGame = ({ gameId }) => {
   const [view, setView] = useState()
@@ -16,13 +20,13 @@ export const SearchInitGame = ({ gameId }) => {
   const setGameState = () => {
     try {
       retrieveGame(gameId, (error, game) => {
-        if (error) return window.alert(error.message)
+        if (error) return toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
         setGame({ game })
         const { quest: { tests } = {} } = game
         setTests(tests)
       })
     } catch (error) {
-      window.alert(error.message)
+      toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
     }
   }
 

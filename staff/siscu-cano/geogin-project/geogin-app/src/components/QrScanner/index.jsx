@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { QrReaderWrapper } from './styles'
 import QrReader from 'react-qr-reader'
+import { toast } from 'react-toastify'
+import { FcHighPriority } from 'react-icons/fc'
+
+const ICON_SIZE = '22px'
 
 export const QrScanner = ({ game }) => {
   const [result, setResult] = useState()
@@ -12,8 +16,8 @@ export const QrScanner = ({ game }) => {
     }
   }
 
-  const handleError = err => {
-    console.error(err)
+  const handleError = error => {
+    toast.error(<span><FcHighPriority size={ICON_SIZE} />{error}</span>)
   }
 
   const some = (object, property, value) => {

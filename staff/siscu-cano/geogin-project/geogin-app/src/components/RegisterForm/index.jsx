@@ -4,6 +4,9 @@ import { Title, Form, Input, Button } from './styles'
 import { navigate } from '@reach/router'
 import { registerUser } from '../../logic'
 import { toast } from 'react-toastify'
+import { FcHighPriority } from 'react-icons/fc'
+
+const ICON_SIZE = '22px'
 
 export const RegisterForm = () => {
   const fullname = useInputValue('')
@@ -16,26 +19,12 @@ export const RegisterForm = () => {
     try {
       registerUser(fullname.value, email.value, password.value, error => {
         if (error) {
-          return toast.error(`⛔️ ${error.message}!`, {
-            position: 'top-center',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: false
-          })
+          return toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
         }
         navigate('/login')
       })
     } catch (error) {
-      toast.error(`⛔️ ${error.message}!`, {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false
-      })
+      toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
     }
   }
 

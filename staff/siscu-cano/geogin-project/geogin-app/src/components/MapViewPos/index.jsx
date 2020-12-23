@@ -3,6 +3,10 @@ import ReactDOMServer from 'react-dom/server'
 import * as L from 'leaflet'
 import { MapViewPosWrapper } from './styles'
 import { markerGame, markerUser } from './iconMarker.js'
+import { toast } from 'react-toastify'
+import { FcHighPriority } from 'react-icons/fc'
+
+const ICON_SIZE = '22px'
 
 const CustomReactPopup = ({ item }) => {
   console.log('game', item)
@@ -37,8 +41,8 @@ export const MapViewPos = ({ gameTests }) => {
   }
 
   // Error en geoposicionamiento
-  function onLocationError (e) {
-    window.alert(e.message)
+  function onLocationError (error) {
+    toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
   }
 
   // Fix zoom

@@ -14,7 +14,8 @@ import { TextArea } from '../../components/TextArea'
 import { RiAddCircleLine } from 'react-icons/ri'
 import { IoIosSave } from 'react-icons/io'
 import { saveQuest, saveGame } from '../../logic'
-
+import { toast } from 'react-toastify'
+import { FcHighPriority } from 'react-icons/fc'
 import { navigate } from '@reach/router'
 
 import uuid from 'uuid'
@@ -207,7 +208,7 @@ export const SearchCreate = () => {
       tests,
       (error, questId) => {
         setQuestIdAdded(questId)
-        if (error) return window.alert(error.message)
+        if (error) return toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
       }
     )
   }
@@ -242,7 +243,7 @@ export const SearchCreate = () => {
       undefined,
       undefined,
       (error, gameId) => {
-        if (error) return window.alert(error.message)
+        if (error) return toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
         navigate(`/search-create-menu/${gameId}`)
       }
     )

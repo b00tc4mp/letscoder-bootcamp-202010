@@ -4,6 +4,9 @@ import Context from '../../Context'
 import { Title, Anchor, Form, Input, Button } from './styles'
 import { authenticateUser } from '../../logic'
 import { toast } from 'react-toastify'
+import { FcHighPriority } from 'react-icons/fc'
+
+const ICON_SIZE = '22px'
 
 export const LoginForm = () => {
   const email = useInputValue('')
@@ -14,26 +17,12 @@ export const LoginForm = () => {
     try {
       authenticateUser(email.value, password.value, (error, token) => {
         if (error) {
-          return toast.error(`⛔️ ${error.message}!`, {
-            position: 'top-center',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: false
-          })
+          return toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
         }
         activateAuth(token)
       })
     } catch (error) {
-      toast.error(`⛔️ ${error.message}!`, {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false
-      })
+      toast.error(<span><FcHighPriority size={ICON_SIZE} />{error.message}</span>)
     }
   }
 

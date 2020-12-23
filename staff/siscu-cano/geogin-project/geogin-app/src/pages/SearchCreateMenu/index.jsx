@@ -6,10 +6,13 @@ import { RiPrinterFill, RiGamepadLine } from 'react-icons/ri'
 import { SocialShare } from '../../components/SocialShare'
 import PrintItem from '../../components/PrintItem'
 import { retrieveGame } from '../../logic'
+import { toast } from 'react-toastify'
+import { FcHighPriority } from 'react-icons/fc'
 
 const QRCode = require('qrcode.react')
 
 const ICON_SIZE = '14px'
+const ICON_SIZE_TOAST = '22px'
 
 export class SearchCreateMenu extends React.Component {
   constructor (props) {
@@ -27,7 +30,7 @@ export class SearchCreateMenu extends React.Component {
 
     try {
       retrieveGame(this.props.questId, (error, game) => {
-        if (error) return window.alert(error.message)
+        if (error) return toast.error(<span><FcHighPriority size={ICON_SIZE_TOAST} />{error.message}</span>)
         // Data to print
         qrPrint.title = game.quest.title
         game.quest.tests.map(({ title, description, qr }) => qrPrint.quest.push({
@@ -39,7 +42,7 @@ export class SearchCreateMenu extends React.Component {
         this.setState({ qrPrint })
       })
     } catch (error) {
-      window.alert(error.message)
+      toast.error(<span><FcHighPriority size={ICON_SIZE_TOAST} />{error.message}</span>)
     }
   }
 
