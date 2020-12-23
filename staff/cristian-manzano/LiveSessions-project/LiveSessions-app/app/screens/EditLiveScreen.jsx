@@ -12,6 +12,7 @@ export default function PetitionScreen({ onModifyLive, onGoBack, live }) {
     const [liveDate, setLiveDate] = useState(live.liveDate)
     const [duration, setDuration] = useState(live.duration)
     const [description, setDescription] = useState(live.description)
+    const [status, setStatus] = useState(live.status)
     const [payment, setPayment] = useState(live.payment)
     const liveId = live._id
 
@@ -116,12 +117,12 @@ export default function PetitionScreen({ onModifyLive, onGoBack, live }) {
 
                                 <View style={styles.buttonsContainer}>
                                     <TouchableOpacity style={styles.submitPetitionButton}
-                                        onPress={() => { onCancelEditProfile() }}>
+                                        onPress={() => { onGoBack() }}>
                                         <Text style={styles.buttonText}>Cancel!</Text>
                                     </TouchableOpacity>
 
                                     <TouchableOpacity style={styles.submitPetitionButton}
-                                        onPress={() => { onModifyLive({ imageUri, liveId, title, liveDate, duration, payment, description }) }}>
+                                        onPress={() => { onModifyLive({ imageUri, liveId, title, liveDate, duration, status, payment, description }) }}>
                                         <Text style={styles.buttonText}>Save!</Text>
                                     </TouchableOpacity>
                                 </View>

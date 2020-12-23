@@ -53,14 +53,14 @@ export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeni
             <View style={styles.buttonsContainer}>
               {user.role === "ARTIST" ? <View style={styles.acceptAndDenieButtons}>
                 <TouchableOpacity style={styles.livesButtons}
-                  onPress={() => { onAcceptPetition({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
+                  onPress={() => { onAcceptPetition({ liveId, title, status, liveDate, duration, payment, description }) }}>
                   <Text style={styles.buttonText}
                   >Accept
             </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.livesButtons}
-                  onPress={() => { onDeniePetition({ artistId, promoterId, liveId, title, liveDate, duration, payment, description }) }}>
+                  onPress={() => { onDeniePetition({ liveId, title, liveDate, duration, status, payment, description }) }}>
                   <Text style={styles.buttonText}
                   >Denie
             </Text>

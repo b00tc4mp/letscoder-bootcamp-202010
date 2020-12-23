@@ -41,12 +41,20 @@ Artist: recieve petitions for live sessions, accept or denie them.
 
 <!-- TODO Testing -->
 
+
+![Alt Testing](https://media.giphy.com/media/1ken0zzzL79NPy3QZj/giphy.gif)
+
 ### Technologies
 
 <!-- TODO ADD used Technologies pictures -->
 
 ### TODO 
 
+- TESTING!!!!
+- Add Artist Name to the cards
 - like artist
 - unregister user
-- 
+- use better semanthic
+- add chat
+- add search promoter
+- improve styles

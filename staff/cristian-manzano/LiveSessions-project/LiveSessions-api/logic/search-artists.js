@@ -3,14 +3,10 @@ const { NotFoundError } = require('../errors')
 const { User } = require('../models')
 
 module.exports = myTags => {
-    //validateTags(myTags)
 
-    debugger
     return User
     .find({ tags: myTags }).lean()
     .then(users=>{
-        debugger
-        console.log(myTags)
         if(!users) new NotFoundError(`artists with these genres ${myTags} not found`)
 
             users.forEach(user =>{

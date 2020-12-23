@@ -3,14 +3,14 @@ const semaphore = require('./helpers/semaphore')
 const { ConflictError } = require('../errors')
 const { Live } = require('../models')
 debugger
-module.exports = function (liveId, title, liveDate, duration, payment, description) {
+module.exports = function (liveId, title, liveDate, duration, status, payment, description) {
 debugger
     return semaphore(() => 
         Live
             .findOne({ _id: liveId }).lean()
             .then(live => {
                 if (!live) throw new ConflictError(`live with id ${liveId} does not exists`)
-                Live.updateOne({ _id: liveId }, {$set: { title, liveDate, duration, payment, description } })
+                Live.updateOne({ _id: liveId }, {$set: { title, liveDate, duration, status, payment, description } })
                 .then(result => '')
             })
     )

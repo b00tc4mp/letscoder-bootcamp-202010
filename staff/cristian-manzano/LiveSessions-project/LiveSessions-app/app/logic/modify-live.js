@@ -2,11 +2,11 @@ import { call } from '../../utils'
 
 const {env: {API_URL}} = process
 
-export default function (liveId, title, liveDate, duration, payment, description, callback) {
+export default function (token, liveId, title, liveDate, duration, status, payment, description, callback) {
 
 
-    call('POST', `${API_URL}/lives/edit`, { 'Content-type': 'application/json' }, 
-    JSON.stringify({ liveId, title, liveDate, duration, payment, description }),
+    call('POST', `${API_URL}/lives/edit`, { 'Content-type': 'application/json',  Authorization: `Bearer ${token}`  }, 
+    JSON.stringify({ liveId, title, liveDate, duration, status, payment, description }),
     (status, response) => {
         debugger
         if (status === 0)

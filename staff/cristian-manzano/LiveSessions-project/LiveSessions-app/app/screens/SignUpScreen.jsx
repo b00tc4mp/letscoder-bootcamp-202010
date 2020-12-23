@@ -3,7 +3,7 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 
 
 function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
-    const [role, setRole] = useState('')
+    const [role, setRole] = useState('ARTIST')
     const [email, setEmail] = useState('')
     const [fullname, setFullname] = useState('')
     const [password, setPassword] = useState('')
@@ -71,8 +71,8 @@ function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
                             <View style={styles.roleContainer}>
                                 <TouchableOpacity style={role === 'ARTIST' ? styles.roleImageClicked : styles.roleImage} onPress={(event) => {
                                     event.preventDefault();
-
-                                    setRole('ARTIST')
+                                    
+                                    role !== 'ARTIST' && setRole('ARTIST')
                                 }}>
                                     <Image style={styles.logo} source={require('../assets/artist-role-image.png')}
                                         value={role}
@@ -80,7 +80,7 @@ function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
                                 </TouchableOpacity>
                                 <TouchableOpacity style={role === 'PROMOTER' ? styles.roleImageClicked : styles.roleImage} onPress={(event) => {
                                     event.preventDefault();
-                                    setRole('PROMOTER')
+                                    role !== 'PROMOTER' && setRole('PROMOTER')
                                 }}>
                                     <Image style={styles.logo} source={require('../assets/promoter-role-image.png')}
                                         value={role} />
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
         marginRight: "10%",
         width: 70,
         height: 70,
-        opacity: 0.9,
+        opacity: 1,
         color: "green"
     },
 
