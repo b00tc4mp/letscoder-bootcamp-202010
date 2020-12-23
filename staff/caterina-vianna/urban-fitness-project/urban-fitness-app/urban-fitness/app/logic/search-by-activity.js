@@ -7,7 +7,7 @@ export default (function (token, querySports, callback) {
 
   const queryParams = {};
 
-  if (querySports) queryParams.querySports = querySports;
+  if (querySports) queryParams.querySports = querySports.toLowerCase();
 
   const queryString = Object.keys(queryParams)
     .map((key) => `${key}=${queryParams[key]}`)

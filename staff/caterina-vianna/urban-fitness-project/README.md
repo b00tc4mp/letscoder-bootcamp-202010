@@ -36,6 +36,10 @@ For students: Allows students to find activities nearby.
 
 ![Alt Collections](./readme/collections.jpg)
 
+### Testing (Quality Assurance)
+
+![Alt Work in progress](https://media.giphy.com/media/tvsEQu92AfJoq7hS16/giphy.gif)
+
 ### Technologies
 
 ![Alt Figma](https://i0.wp.com/publicmediastack.com/wp-content/uploads/2020/04/FIGMA.png?fit=1200%2C675&ssl=1)
@@ -48,6 +52,8 @@ For students: Allows students to find activities nearby.
 ![Alt Node](https://miro.medium.com/max/648/1*iDvsmUwzZQxJSKdL0xzwIA.png)
 
 ![Alt MochaChai](https://miro.medium.com/max/2400/0*gV7fEaDKRGwpprdj.png)
+
+![Alt Express](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmkNxS1Dd02trVYYE79SqnhgC_ZbpwretOg&usqp=CAU)
 
 ### TODO
 
