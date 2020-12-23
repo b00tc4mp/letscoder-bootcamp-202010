@@ -1,13 +1,15 @@
 import { call } from "../../utils";
 import { validateToken, validateCallback } from "./helpers/validations";
 
+const {env: {API_URL}} = process
+
 export default function retrieveLives(token, callback) {
   validateToken(token);
   validateCallback(callback);
 
   call(
     "GET",
-    "http://192.168.1.131:4000/api/lives",
+    `${API_URL}/lives`,
     { Authorization: `Bearer ${token}` },
     "",
     (status, response) => {

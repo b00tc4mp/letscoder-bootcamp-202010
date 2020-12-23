@@ -5,6 +5,7 @@ import {
   validateCallback,
 } from "./helpers/validations";
 
+const {env: {API_URL}} = process
 
 export default (function (liveId, imageUri, callback) {
   validateId(liveId);
@@ -17,7 +18,7 @@ export default (function (liveId, imageUri, callback) {
 
   call(
     "POST",
-    `http://192.168.1.131:4000/api/lives/${liveId}/images`,
+    `${API_URL}/lives/${liveId}/images`,
     {'Content-Type': 'image/jpeg',
     'Content-Type': 'multipart/form-data'},
     formData,

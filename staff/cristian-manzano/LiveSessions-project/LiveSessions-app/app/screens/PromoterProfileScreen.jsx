@@ -89,7 +89,7 @@ function PromoterProfileScreen({ onGoToEditProfile, onGoToLiveDetail, onSearch, 
                                         duration={item.duration}
                                         payment={item.payment}
                                         description={item.description}
-                                        image= {{uri:`http://192.168.1.131:4000/api/lives/${item._id}/images?refresh=${refresh}` }}
+                                        image= {{uri:`${API_URL}/lives/${item._id}/images?refresh=${refresh}` }}
                                         
                                     />
                                 </TouchableOpacity>

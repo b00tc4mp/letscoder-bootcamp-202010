@@ -1,6 +1,8 @@
 import { call } from '../../utils'
 import { validateCallback, validateToken } from './helpers/validations'
 
+const {env: {API_URL}} = process
+
 export default (function (token, queryTags, callback) {
     validateToken(token) 
     validateCallback(callback)
@@ -14,7 +16,7 @@ export default (function (token, queryTags, callback) {
     console.log(queryString)
 
 
-    call('GET', `http://192.168.1.131:4000/api/artists/?${queryString}`,
+    call('GET', `${API_URL}/artists/?${queryString}`,
         { Authorization: `Bearer ${token}` },
         '',
         (status, response) => {

@@ -1,6 +1,8 @@
 import { call } from '../../utils'
 import { validateFullname, validateTags, validateCallback, validateCity, validateArtistName, validateDescription, validateEmail } from './helpers/validations'
 
+const {env: {API_URL}} = process
+
 export default function (email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description, callback) {
 
     validateEmail(email)
@@ -12,7 +14,7 @@ export default function (email, fullname, artistName, city, tags, youtubeLink, b
     validateCallback(callback)
 
 
-    call('POST', 'http://192.168.1.131:4000/api/users/edit', { 'Content-type': 'application/json' }, 
+    call('POST', `${API_URL}/users/edit`, { 'Content-type': 'application/json' }, 
     JSON.stringify({ email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description }),
     (status, response) => {
         debugger

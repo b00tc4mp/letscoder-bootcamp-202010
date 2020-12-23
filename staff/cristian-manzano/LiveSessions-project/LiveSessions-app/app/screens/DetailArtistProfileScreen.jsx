@@ -2,6 +2,8 @@ import React from "react";
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions, Linking, ScrollView, SafeAreaView } from "react-native";
 import { TextInput } from "react-native-paper";
 
+const {env: {API_URL}} = process
+
 export default function DetailLivesScreen({ onGoToPetitions, onGoBack, item }) {
     const artistName = item.artistName
     const email = item.email
@@ -10,7 +12,7 @@ export default function DetailLivesScreen({ onGoToPetitions, onGoBack, item }) {
     const description = item.description
 
     const itemId = item._id
-    const imageURL = `http://192.168.1.131:4000/api/users/${itemId}/images`
+    const imageURL = `${API_URL}/users/${itemId}/images`
 
     return (
         <SafeAreaView style={styles.artistProfileContainer}>

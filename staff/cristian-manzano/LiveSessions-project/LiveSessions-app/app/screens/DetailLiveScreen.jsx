@@ -2,6 +2,8 @@ import React from "react";
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions, ScrollView } from "react-native";
 import { TextInput } from "react-native-paper";
 
+const {env: {API_URL}} = process
+
 export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeniePetition, onModifyLive, onGoBack }) {
   const title = live.title
   const liveDate = live.liveDate
@@ -13,7 +15,7 @@ export default function DetailLivesScreen({ live, user, onAcceptPetition, onDeni
   const liveId = live._id
   const status = live.status
 
-  const imageURL = `http://192.168.1.131:4000/api/lives/${liveId}/images`
+  const imageURL = `${API_URL}/lives/${liveId}/images`
 
   return (
 

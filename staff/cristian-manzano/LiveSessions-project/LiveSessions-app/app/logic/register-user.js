@@ -1,6 +1,8 @@
 import { call } from '../../utils'
 import { validateEmail, validatePassword, validateCallback, validateFullname } from './helpers/validations'
 
+const {env: {API_URL}} = process
+
 export default function (fullname, email, password, role, callback) {
 debugger
     validateEmail(email)
@@ -9,7 +11,7 @@ debugger
     validateCallback(callback)
 
 
-    call('POST', 'http://192.168.1.131:4000/api/users', { 'Content-type': 'application/json' }, 
+    call('POST', `${API_URL}/users`, { 'Content-type': 'application/json' }, 
     JSON.stringify({ fullname, email, password, role }),
     (status, response) => {
         console.log(role)

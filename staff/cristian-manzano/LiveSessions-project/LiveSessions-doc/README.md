@@ -10,7 +10,7 @@ App for promoters they can hired artists for lives sessions.
 
 ### Use Cases
 
-<!-- TODO useCases squema -->
+![Alt Use Cases](useCases.png)
 
 ### Activities
 
@@ -19,23 +19,23 @@ Register as an artist or as a promoter and do live Sessions for the people.
 Promoter: Find artists and submit petitions for live sessions
 Artist: recieve petitions for live sessions, accept or denie them.
 
-<!-- TODO opActivity squema -->
+![Alt Operate Activity](opActivity.png)
 
 ## Technical Description
 
 ### Blocks
 
-<!-- TODO blocks schema -->
+![Alt Blocks](blocks.png)
 
 ### Packages
 
 #### React components
 
-<!-- TODO React components schema -->
+![Alt React comonents](componentsReact.png)
 
 #### Logic function
 
-<!-- TODO logic schema -->
+![Alt Logic function](logic.png)
 
 ### Testing (QA)
 

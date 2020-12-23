@@ -5,6 +5,7 @@ import {
   validateCallback,
 } from "./helpers/validations";
 
+const {env: {API_URL}} = process
 
 export default (function (userId, imageUri, callback) {
   validateId(userId);
@@ -17,7 +18,7 @@ export default (function (userId, imageUri, callback) {
 
   call(
     "POST",
-    `http://192.168.1.131:4000/api/users/${userId}/images`,
+    `${API_URL}/users/${userId}/images`,
     {'Content-Type': 'image/jpeg',
     'Content-Type': 'multipart/form-data'},
     formData,

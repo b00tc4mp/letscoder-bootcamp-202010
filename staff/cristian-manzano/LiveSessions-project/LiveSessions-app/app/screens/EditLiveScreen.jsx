@@ -4,6 +4,7 @@ import * as ImagePicker from "expo-image-picker";
 
 import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
+const {env: {API_URL}} = process
 
 export default function PetitionScreen({ onModifyLive, onGoBack, live }) {
 
@@ -53,7 +54,7 @@ export default function PetitionScreen({ onModifyLive, onGoBack, live }) {
                                         source={
                                             imageUri
                                                 ? { uri: imageUri.localUri }
-                                                : require("../assets/default-profile-image.png")
+                                                : { uri: `${API_URL}/lives/${liveId}/images` }
                                         }
                                         style={{ width: 150, height: 150 }}
                                     />

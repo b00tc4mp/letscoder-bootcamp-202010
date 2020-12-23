@@ -4,8 +4,9 @@ import * as ImagePicker from "expo-image-picker";
 
 import { Alert, Button, View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, TouchableOpacity, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
+const {env: {API_URL}} = process
 
-function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, onLogOut, onGoBack }) {
+function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, onLogOut, onGoBack, refresh }) {
     const [fullname, setFullname] = useState(user.fullname)
     const [artistName, setArtistName] = useState(user.artistName)
     const [city, setCity] = useState(user.city)
@@ -15,6 +16,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
     const [spotifyLink, setSpotifyLink] = useState(user.spotifyLink)
     const [description, setDescription] = useState(user.description)
 
+    const userId = user.id
     const [imageUri, setImageUri] = useState();
 
     const requestPermission = async () => {
@@ -59,7 +61,7 @@ function EditPromoterProfileScreen({ onCancelEditProfile, onEditProfile, user, o
                                         source={
                                             imageUri
                                                 ? { uri: imageUri.localUri }
-                                                : require("../assets/default-profile-image.png")
+                                                : { uri: `${API_URL}/users/${userId}/images?refresh=${refresh}`}
                                         }
                                         style={{ width: 70, height: 70 }}
                                     />

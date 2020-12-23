@@ -1,15 +1,14 @@
-// const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 const { saveLive } = require("../../../logic");
 
-// const {
-//   env: { JWT_SECRET },
-// } = process;
+const {
+  env: { JWT_SECRET },
+} = process;
 
 module.exports = (req, res, handleError) => {
   const {
-    // headers: { authorization },
+    headers: { authorization },
     body: {
-        promoterId,
         artistId,
         liveId,
         title, 
@@ -21,12 +20,10 @@ module.exports = (req, res, handleError) => {
     },
   } = req;
 
-  // Bearer <token>
-//   const token = authorization.replace("Bearer ", "");
-
+  
   try {
-    // const { sub: ownerId } = jwt.verify(token, JWT_SECRET);
-    debugger;
+    const token = authorization.replace("Bearer ", "");
+    const { sub: promoterId } = jwt.verify(token, JWT_SECRET);
     saveLive(
         promoterId,
         artistId,
