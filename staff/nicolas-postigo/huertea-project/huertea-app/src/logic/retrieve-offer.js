@@ -1,6 +1,15 @@
 import { call } from '../utils'
 import { validateToken, validateCallback } from './helpers/validations'
 import context from './context'
+/**
+ * Retrieves a offer by ownerId
+ * 
+ * @param {string} ownerId 
+ * 
+ * @returns {Promise} offer and user info
+ * 
+ * @throws {NotFoundError} if the ownerId does not exist
+ */
 
 export default (function (token, callback) {
     validateToken(token)

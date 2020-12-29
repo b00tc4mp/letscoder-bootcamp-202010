@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react'
 import './Hub.sass'
 import { useState } from 'react'
-//import { retrieveUser } from '../logic'
 import ListOffersRetrieve from './ListOffersRetrieve'
 import SearchOffers from './SearchOffers'
-import FindOffer from './FindOffer'
 import Detail from './Detail'
-import { retrieveOffer } from './../logic'
 import Useroffers from './Useroffers'
-import { Link } from 'react-router-dom'
-import { deleteOffer } from './../logic'
-import { retrieveUser, retrieveUserOffer } from './../logic'
+import { retrieveUser, retrieveUserOffer, retrieveOffer, deleteOffer } from './../logic'
 import Modifyoffer from './Modifyoffer'
 import modifyOffer from '../logic/modify-offer'
 import Home from './Home'
+import OfferResults from './OfferResults'
 
 function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffers, onGoHome }) {
     const [results, setResults] = useState()
@@ -22,7 +18,6 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
     const [offers, setOffers] = useState([])
     const [offeruser, setOfferuser] = useState(useroffers || [])
     const [name, setName] = useState(fullname)
-    // const [effectOffers, setEffectOffers]=useState(offers)
     const { token } = sessionStorage
 
     useEffect(() => {
@@ -107,7 +102,6 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
 
 
     const handleModify = (offer) => {
-        //offerId: offer.id, offername, titleoffer, price, pic: pic.files[0], offeraddress, phonecontact, emailcontact
         const { offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact } = offer
         modifyOffer(sessionStorage.token, offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact, (error, user) => {
             if (error) return alert(error.message)
@@ -131,7 +125,6 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
 
     return <sections className="wrap">
         <div>
-            {/* <button onClick={(evento)=>onRetrieveUserOffers(evento)} className="retrieve-offer">mis ofertas &#127806;</button> */}
             <button onClick={() => { onRetrieveUserOffers(); handleGoUserOffers() }} className="retrieve-offer">mis ofertas &#127806;</button>
         </div>
         <div>
@@ -144,17 +137,18 @@ function Hub({ fullname, onHub, onGoCreateoffer, onRetrieveUserOffers, useroffer
         }}>
         </form>
         <div>
-            <button onClick={onGoHome} className="log-out-button">🔚</button>
+            <button onClick={onGoHome} className="log-out-button">salir</button>
         </div>
         <h3>Hola {name}, ¿Qué alimento quieres hoy?</h3>
 
 
         <SearchOffers onGoSearcher={handleGoSearcher} />
-        {/* <Link to ='/register'>tu</Link> */}
-        {view === 'offersfound' && <FindOffer results={results} onGoDetail={handleGoDetail} onGoHub={handleGoHub} />}
+
+
+
+        {view === 'offersfound' && <OfferResults results={results} onGoDetail={handleGoDetail} onGoHub={handleGoHub} />}
         {view === 'default' && <ListOffersRetrieve offers={offers} onGoDetail={handleGoDetail} />}
         {view === 'user-offers' && <Useroffers useroffers={offeruser} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete} onGoModify={handleGoModify} onGoHub={handleGoHub} />}
-        {/* {view === 'user-offers' && <Useroffers useroffers={useroffers} onGoDetail={handleGoDetail} onGoDelete={handleGoDelete} onGoModify={handleGoModify}/>} */}
         {view === 'detail' && <Detail offer={offer} useroffers={offeruser} results={results} onGoHub={handleGoHub} />}
         {view === 'modify' && <Modifyoffer offer={offer} onModifyoffer={handleModify} />}
         {view === 'home' && <Home />}

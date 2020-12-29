@@ -1,37 +1,12 @@
 import React, { useEffect } from 'react'
 import './Home.sass'
-import {retrieveOffer} from './../logic'
 import { useState } from 'react'
 
 
 function Home({ onHome, onGoRegister, onGoLogin }) {
     const [offers, setOffers] = useState([])
     
-/*     useEffect(()=>{
-
-      try {
-  
-      retrieveOffer(sessionStorage.token, (error, offersResult) => {
-        if (error) return alert(error.message)
-  
-        setOffers(offersResult)
-  
-  
-      })
-  
-  
-    } catch (error) {
-      alert(error.message)
-    } 
-
-    },[]) */
-
-
-      
-  
-  
-          
-
+        
 
     return <sections>
 
@@ -41,7 +16,6 @@ function Home({ onHome, onGoRegister, onGoLogin }) {
             onHome(product)
         }}>
 
-          {/* <img width="100" height="200" src="./default.jpg"></img> */}
             <div className="slogan">
             <h5>yo huerteo,
             </h5>
@@ -57,10 +31,7 @@ function Home({ onHome, onGoRegister, onGoLogin }) {
             </div>
             <button className="homebuttons" onClick={onGoRegister}>Regístrate</button>
             <button className="homebuttons" onClick={onGoLogin}>Entra</button>
-{/*             <nav className="searcherProducts">
-            <input className="searcher" type="text" name="query" placeholder="🔍 Busca en huertea" />
-            </nav>
- */}        </form>
+        </form>
         
 
     </sections>

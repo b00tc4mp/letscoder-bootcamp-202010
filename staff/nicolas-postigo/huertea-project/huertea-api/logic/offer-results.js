@@ -1,6 +1,14 @@
-const { Offer } = require('../../huertea-data/models')
+const { Offer } = require('huertea-data/models')
 
 
+/**
+ * Retrieves offers that match a query criteria
+ * 
+ * @param {string} offername offers description
+ * 
+ * @returns {Array} 
+ * 
+ */
 module.exports = function (titleoffer, offername, price) {
 
     const criteria = {}
@@ -13,6 +21,7 @@ module.exports = function (titleoffer, offername, price) {
 
     if (price >= 0)
     criteria.price = price
+
 
     return Offer.find(criteria).lean()
         

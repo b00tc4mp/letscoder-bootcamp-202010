@@ -28,7 +28,6 @@ describe('retrieveOffer()', () => {
 
             await Offer.create(offer)
                 .then(offer => offerId = offer.id)
-                .catch(error=> console.log(error))
         })
 
         it('should succeed on correct offer id', () =>

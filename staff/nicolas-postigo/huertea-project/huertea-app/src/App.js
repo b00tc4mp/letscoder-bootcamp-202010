@@ -1,16 +1,14 @@
 import './App.css';
 import { Register, Login, Hub, Home, Createoffer, Useroffers, Feedback } from './components'
 import { useState } from 'react'
-// import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer, saveOfferImage } from './logic'
 import { registerUser, authenticateUser, retrieveUser, createOffer, retrieveOffer, retrieveUserOffer, saveOfferImage } from './logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import { BrowserRouter as Switch } from "react-router-dom";
 import { AuthError } from 'offers-errors'
 
 
-// function App() {
 function App(props) {
-  console.log(props)
+  
   const [fullname, setFullname] = useState('text')
   const [view, setView] = useState('')
   const [offers, setOffers] = useState([])
@@ -22,18 +20,16 @@ function App(props) {
 
 
   const handleGoToRegister = () => {
-    console.log('fue bien')
+   
 
 
-    // setView('register')
     props.history.push('/register')
   }
 
   const handleGoToLogin = () => {
-    console.log('fue bien')
+    
 
 
-    // setView('login')
     props.history.push('/login')
   }
 
@@ -81,8 +77,8 @@ function App(props) {
 
     } catch (error) {
       if (error instanceof AuthError)
-        return setError({ message: error.message, level: 'warning'})
-        setError({ message: error.message, level:'error'})
+        return setError({ message: error.message, level: 'warning' })
+      setError({ message: error.message, level: 'error' })
     }
 
   }
@@ -96,71 +92,42 @@ function App(props) {
 
 
   const handleGoHub = () => {
-    console.log('fue bien')
+    
 
 
 
     props.history.push('/hub')
   }
 
-  /*   const handleCreateOffer = (offername, titleoffer, price, , pic) => {
-      const { token } = sessionStorage
-  
-      try {
-        createOffer(token, undefined, offername, titleoffer, price, , pic, (error, offerId) => {
-          if (error) return alert(error.message)
-  
-           saveOfferImage(offerId, , pic, error => {
-            if (error) return alert(error.message) 
-  
-            try {
-              retrieveOffer(token, (error, offersResult) => {
-                if (error) return alert(error.message)
-  
-                setOffers(offersResult)
-                setView('hub')
-  
-              })
-            } catch (error) {
-              alert(error.message)
-            }
-  
-          })
-  
-         })
-       } catch (error) {
-        alert(error.message)
-      }
-    } */
 
   const handleCreateOffer = ({ offername, titleoffer, price, pic, offeraddress, phonecontact, emailcontact }) => {
-    
+
     const { token } = sessionStorage
     try {
       createOffer(token, undefined, offername, titleoffer, price, offeraddress, phonecontact, emailcontact, (error, offerId) => {
         if (error) return alert(error.message)
-        
-        if(pic) { 
 
-        saveOfferImage(offerId, pic, error => {
-          if (error) return alert(error.message)
+        if (pic) {
 
-          try {
-            retrieveOffer(token, (error, offersResult) => {
+          saveOfferImage(offerId, pic, error => {
+            if (error) return alert(error.message)
+
+            try {
+              retrieveOffer(token, (error, offersResult) => {
                 if (error) return alert(error.message)
 
                 setOffers(offersResult)
-            })
-        } catch (error) {
-            alert(error.message)
+              })
+            } catch (error) {
+              alert(error.message)
+            }
+
+
+          })
+        } else {
+
+
         }
-
-
-        })
-      } else {
-
-
-      }
       })
       props.history.push('/hub')
 
@@ -172,7 +139,7 @@ function App(props) {
 
 
   const handleRetrieveUserOffers = () => {
-    
+
     try {
 
       retrieveUserOffer(sessionStorage.token, (error, offersResult) => {
@@ -198,7 +165,7 @@ function App(props) {
     props.history.push('/')
 
 
-}
+  }
 
   return (
     <div className="App">
@@ -209,16 +176,8 @@ function App(props) {
         <Route exact path='/hub' render={() => token ? <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} useroffers={useroffers} onRetrieveUserOffers={handleRetrieveUserOffers} onGoHome={handleGoHome} onGoHome={handleGoHome} /> : <Redirect to='/' />} />
         <Route exact path='/createoffer' render={() => <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} onGoHub={handleGoHub} />} />
 
-
-        {/**          {view === 'home' && <Home onGoRegister={handleGoToRegister} onGoLogin={handleGoToLogin} onHome={handleShowOffers} />}
-        {view === 'register' && <Register onRegister={handleRegister} />}
-        {view === 'login' && <Login onLogin={handleLogin} />}
-        {view === 'hub' && <Hub onGoCreateoffer={handleGoCreateoffer} fullname={fullname} offers={offers} useroffers={useroffers} onRetrieveUserOffers={handleRetrieveUserOffers} />}
-        {view === 'createoffer' && <Createoffer backHub={handleGoHub} onCreateoffer={handleCreateOffer} />}
- */}
       </header>
     </div>
   );
 }
-// export default App
 export default withRouter(App);

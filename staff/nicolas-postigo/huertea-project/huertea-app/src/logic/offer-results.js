@@ -1,9 +1,19 @@
 import { call } from '../utils'
-import { validateCallback } from './helpers/validations'
+import { validateCallback, validateOffer, validateTitleoffer } from './helpers/validations'
 import context from './context'
-
+/**
+ * Retrieves offers that match a query criteria
+ * 
+ * @param {string} offername offers description
+ * 
+ * @returns {Array} 
+ * 
+ */
 export default (function ( titleoffer, offername, price, callback) {
+    validateOffer(offername)
+    validateCallback(callback)
 
+    
     const { API_URL } = this
 
     call('POST', `${API_URL}/offers/find`, {'Content-type': 'application/json' },

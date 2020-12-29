@@ -4,6 +4,17 @@ const { ConflictError } = require('../errors')
 const { models: { User } } = require('huertea-data')
 const bcryptjs = require('bcryptjs')
 
+/**
+ * Registers a new user to the user's API
+ * 
+ * @param {string} fullname user's fullname
+ * @param {string} email user's e-mail
+ * @param {string} password user's password
+ * 
+ * @returns {undefined} onsuccessful registration
+ * 
+ * @throws {ConflictError} on server error or user registered already
+ */
 
 module.exports = function (fullname, email, password) {
     validateFullname(fullname)

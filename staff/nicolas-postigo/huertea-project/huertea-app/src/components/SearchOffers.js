@@ -1,6 +1,6 @@
 
-import {findOffer} from '../logic'
-import './FindOffer'
+import {offerResult} from '../logic'
+import './OfferResults'
 import './SearchOffers.sass'
 
 function SearchOffers({onGoSearcher}){
@@ -12,7 +12,7 @@ function SearchOffers({onGoSearcher}){
 
 
         try {
-            findOffer( titleoffer, offername, price, (error, offers) => {
+            offerResult( titleoffer, offername, price, (error, offers) => {
 
                 if (error) return alert(error.message)
 
@@ -28,28 +28,16 @@ function SearchOffers({onGoSearcher}){
             <>
                 <form className="searchhub" onSubmit={(event) => event.preventDefault()}>
                     <input
-                        className="searcher" type="text" name="query" placeholder="🔎Busca en huertea"
+                        className="searcher" type="text" name="query" placeholder="Busca en huertea"
                         onChange={(event) => (query = event.target.value)}
                     />
     
-{/*                     <button
-                        className="searchByName__button"
-                        onClick={() => handleFindOffers(query, undefined, undefined)}
-                    >
-                        titleoffer
-                </button> */}
                 <button
                         className="searchByName__button"
                         onClick={() => handleFindOffers( undefined, query, undefined)}
                     >
                         🔍 
                 </button>
-{/*                 <button
-                        className="searchByName__button"
-                        onClick={() => handleFindOffers( undefined, undefined, query)}
-                    >
-                        price
-                </button> */}
 
      
                 </form>

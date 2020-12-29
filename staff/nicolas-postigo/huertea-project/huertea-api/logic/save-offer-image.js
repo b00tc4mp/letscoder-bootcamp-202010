@@ -2,6 +2,15 @@ const { validateId } = require('./helpers/validations')
 const path = require('path')
 const fs = require('fs')
 
+/**
+ *  Upload offerId's picture
+ * 
+ * @param {string} offerId offer's identification number(ObjectId)
+ * @param {Stream} stream data image
+ * @returns {Promise} empty promise on successful upload 
+ * 
+ */
+
 module.exports = (offerId, stream) => {
     
     validateId(offerId)

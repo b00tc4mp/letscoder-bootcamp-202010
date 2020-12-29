@@ -2,7 +2,13 @@ const fs = require('fs')
 const path = require('path')
 const { validateId } = require('./helpers/validations')
 const { promises: fsp } = fs
-
+/**
+ * Retrieves offer image 
+ * 
+ * @param {string} offerId 
+ * 
+ * @returns {Promise}
+ */
 module.exports = offerId => {
     validateId(offerId)
 

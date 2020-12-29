@@ -3,10 +3,23 @@ const { AuthError } = require('offers-errors')
 const { models: { User } } = require('huertea-data')
 const bcryptjs = require('bcryptjs')
 
+/**
+ * Checks user credentials on the user's API
+ * 
+ * @param {string} email user's e-mail
+ * @param {string} password user's password
+ * 
+ * @returns {string} token
+ * 
+ * @throws {AuthError} on wrong credentials
+ * @throws {AuthError} password does not match with hash
+ */
 
 module.exports = function (email, password) {
     validateEmail(email)
     validatePassword(password)
+
+
 
     return  User.findOne({ email }).lean()
         .then(user => {

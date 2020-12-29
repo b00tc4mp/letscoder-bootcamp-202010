@@ -3,8 +3,8 @@
 
 Huertea is an app that facilitates a new way of buying food products. huertea helps vegetable and fruit producers from orchards to sell their surplus. Huertea helps consumers buy organic products. This is our mission: that food is produced in conditions that respect the environment. And that these products are accessible to responsible consumers.
 
-https://media.giphy.com/media/5xtDarL5aYPR2TjSMvu/giphy.gif
 
+![Alt Huertea](https://media.giphy.com/media/5xtDarL5aYPR2TjSMvu/giphy.gif "huertea")
 
 ## Functional Description
 
@@ -26,26 +26,30 @@ These are the main features of our application:
 
 ### Activities
 
-![Alt Use Cases](./activity-diagram.jpg "Use Cases")
+![Alt Activities](./activity-diagram.jpg "Activities")
 
 ### Blocks
 
-![Alt Use Cases](./blocks.jpg "Use Cases")
+![Alt Blocks](./blocks.jpg "Blocks")
 
 #### React components
 
-![Alt Use Cases](./components.jpg "Use Cases")
+![Alt React components](./components.jpg "React components")
 
 #### Logic functions
 
-![Alt Use Cases](./logic.jpg "Use Cases")
+![Alt Logic functions](./logic.jpg "Logic functions")
 
 ### Data Model
 
-
+![Alt Models](./models.jpg)
 
 ### Testing (QA)
 
 ![Alt Testing](./testing-coverage.png "Testing server side")
 
 ### TODO
+
+- Let users modify users
+- Geolocalitation of offers
+- Chat

@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const { expect } = require('chai')
 const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('../utils/randoms')
-const retrieveUserOffers = require('./retrieve-offer-by-owner')
+const retrieveUserOffers = require('./retrieve-user-offers')
 require('../utils/array-polyfills')
 const { mongoose, mongoose: { Types: { ObjectId } }, models: { User, Offer } } = require('huertea-data')
 
@@ -32,7 +32,8 @@ describe('retrieveUserOffers()', () => {
 
         it('should succeed on correct offer id', () =>
             retrieveUserOffers("5fd8eb2668bd3140d8153bcc")
-                .then(offer => {
+                .then(offers => {
+                    const [offer] = offers
                     expect(offer).to.exist
                     expect(offer.offername).to.equal(offername)
                     expect(offer.titleoffer).to.equal(titleoffer)

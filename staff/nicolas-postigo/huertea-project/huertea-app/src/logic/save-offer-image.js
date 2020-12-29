@@ -1,10 +1,10 @@
 import { call } from '../utils'
-import { validateFile, validateCallback } from './helpers/validations'
+import { validateFile, validateCallback, validateId } from './helpers/validations'
 import context from './context'
 
 
 export default (function (offerId, pic, callback) {
-
+    if (typeof offerId !== 'undefined') validateId(offerId)
     validateCallback(callback)
     validateFile(pic)
 

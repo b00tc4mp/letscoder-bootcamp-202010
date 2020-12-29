@@ -4,9 +4,10 @@ import './Detail.sass'
 const API_URL = process.env.REACT_APP_API_URL
 
 function Detail ({ offer, onGoHub }) {
+    
     return <section className="list-offers">
         <div>
-            <button onClick={onGoHub} className="log-out-button">🔙</button>
+            <button onClick={onGoHub} className="log-out-button">atrás</button>
         </div>
 {/*offers ? <p>{offers.titleoffer}</p> : <p>no definido</p>*/}
            {offer &&  
@@ -19,9 +20,6 @@ function Detail ({ offer, onGoHub }) {
                 <p>Dirección: {offer.offeraddress}</p>
                 <p>Tlfn. contacto: {offer.phonecontact}</p>
                 <p>Email contacto: {offer.emailcontact}</p>
-                {/* <a onClick={onGoDetail} href="#" className="button_detail_offer">Detalle Oferta</a> */}
-                {/* hacer boton que reciba logia de hub para volver a ver la lista default */ }   
-                {/* <div className="mapview_component"><MapView></MapView></div>         */}
             
             </li>}  
                 </section>

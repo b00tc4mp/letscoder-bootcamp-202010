@@ -5,6 +5,18 @@ const { NotFoundError } = require('../errors')
 const semaphore = require('./helpers/semaphore')
 const { ObjectID } = require('mongodb')
 
+/**
+ * Delete a offer by its id
+ * 
+ * @param {string} ownerId 
+ * @param {string} offerId 
+ * 
+ * @returns {Promise} with empty object
+ * 
+ * @throws {NotFoundError} if the offerId does not exist
+ */
+
+
 module.exports = function (ownerId, offerId) {
     validateId(ownerId)
 

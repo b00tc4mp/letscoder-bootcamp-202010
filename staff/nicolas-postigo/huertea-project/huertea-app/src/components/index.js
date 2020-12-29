@@ -3,7 +3,7 @@ import Login from './Login'
 import Home from './Home'
 import Hub from './Hub'
 import Createoffer from './CreateOffer'
-import FindOffer from './FindOffer'
+import OfferResults from './OfferResults'
 import ListOffersRetrieve from './ListOffersRetrieve'
 import Useroffers from './Useroffers'
 import MapView from './MapView'
@@ -17,7 +17,7 @@ export {
     Home,
     Hub,
     Createoffer,
-    FindOffer,
+    OfferResults,
     ListOffersRetrieve,
     Useroffers,
     MapView,

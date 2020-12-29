@@ -40,7 +40,6 @@ describe('createOffer()', () => {
 
             it('should succeed creating a new offer', () =>
                 createOffer(ownerId, undefined, offername, titleoffer, price, offeraddress, phonecontact, emailcontact)
-                .then(console.log(price))
                     .then(offerId => {
                         expect(ObjectId.isValid(offerId)).be.true
 

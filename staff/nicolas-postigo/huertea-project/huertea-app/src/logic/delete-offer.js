@@ -1,14 +1,24 @@
 import { call } from '../utils'
-import { validateCallback, validateOffer, validateId, validateToken, validateTitleoffer } from './helpers/validations'
+import { validateCallback, validateId, validateToken } from './helpers/validations'
 import context from './context'
+/**
+ * Delete a offer by its id
+ * 
+ * @param {string} ownerId 
+ * @param {string} offerId 
+ * 
+ * @returns {Promise} with empty object
+ * 
+ * @throws {NotFoundError} if the offerId does not exist
+ */
 
 export default (function (token, offerId, callback) {
     validateToken(token)
-
     if (typeof offerId !== 'undefined') validateId(offerId)
-
     validateCallback(callback)
 
+
+    
     const { API_URL } = this
 
     call('DELETE', `${API_URL}/offer`, { 'Content-type': 'application/json', 

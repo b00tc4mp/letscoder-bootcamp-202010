@@ -4,6 +4,16 @@ const { Offer } = require('../../huertea-data/models')
 const { NotFoundError } = require('../errors')
 const { ObjectID } = require('mongodb')
 
+/**
+ * Retrieves a offer by ownerId
+ * 
+ * @param {string} ownerId 
+ * 
+ * @returns {Promise} offer and user info
+ * 
+ * @throws {NotFoundError} if the ownerId does not exist
+ */
+
 module.exports = function (ownerId) {
     validateId(ownerId)
 

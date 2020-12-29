@@ -68,7 +68,22 @@ module.exports = {
 
         if (!titleoffer.trim().length) throw new Error('titleoffer is empty or blank')
     },
-    
+    validateOfferAddress(offeraddress) {
+        if (typeof offeraddress !== 'string') throw new TypeError(offeraddress + ' is not a offeraddress')
+
+        if (!offeraddress.trim().length) throw new Error('offeraddress is empty or blank')
+    },
+
+    validatePhoneContact(phonecontact) {
+        if (typeof phonecontact !== 'string') throw new TypeError(phonecontact + ' is not a phonecontact')
+
+        if (!phonecontact.trim().length) throw new Error('phonecontact is empty or blank')
+    },
+    validateEmailContact(emailcontact) {
+        if (typeof emailcontact !== 'string') throw new TypeError(emailcontact + ' is not a emailcontact')
+
+        if (!emailcontact.trim().length) throw new Error('emailcontact is empty or blank')
+    },
     validateFile(file) {
         if (!(file instanceof File)) throw new TypeError(`${file} is not file`)
     }

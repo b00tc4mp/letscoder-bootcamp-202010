@@ -8,7 +8,7 @@ const {
     handleRetrieveUser,
     handleCreateOffer,
     handleRetrieveOffer,
-    handleFindOffer,
+    handleOfferResults,
     handleSaveOfferImage,
     handleRetrieveOfferImage,
     handleDeleteOffer,
@@ -31,7 +31,7 @@ router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthentic
 
 router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
-router.post('/api/offers/find', jsonBodyParser, withErrorHandling(handleFindOffer))
+router.post('/api/offers/find', jsonBodyParser, withErrorHandling(handleOfferResults))
 
 router.post('/api/offers/:offerId/pics', withErrorHandling(handleSaveOfferImage))
 

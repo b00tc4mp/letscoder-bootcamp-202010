@@ -1508,3 +1508,410 @@ info 2020-12-20T11:05:33.720Z - starting server
 info 2020-12-20T11:05:35.186Z - server running on port 4000
 info 2020-12-20T11:09:42.039Z - starting server
 info 2020-12-20T11:09:42.999Z - server running on port 4000
+info 2020-12-21T07:55:49.880Z - starting server
+info 2020-12-21T07:55:50.880Z - server running on port 4000
+info 2020-12-21T09:05:09.143Z - stopping server
+info 2020-12-21T09:05:50.993Z - starting server
+info 2020-12-21T09:05:54.741Z - server running on port 4000
+info 2020-12-21T09:08:32.490Z - starting server
+info 2020-12-21T09:08:38.234Z - server running on port 4000
+info 2020-12-21T09:45:05.702Z - stopping server
+info 2020-12-21T09:45:48.689Z - starting server
+info 2020-12-21T09:45:49.892Z - server running on port 4000
+error 2020-12-21T09:46:21.378Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:46:28.552Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:46:30.982Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:47:06.278Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-21T09:47:08.339Z - stopping server
+info 2020-12-21T09:47:22.486Z - starting server
+info 2020-12-21T09:47:23.371Z - server running on port 4000
+info 2020-12-21T09:47:31.668Z - stopping server
+info 2020-12-21T09:49:20.310Z - starting server
+info 2020-12-21T09:49:21.900Z - server running on port 4000
+error 2020-12-21T09:50:56.691Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:218
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:51:07.081Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:218
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-21T09:52:20.487Z - stopping server
+info 2020-12-21T09:52:58.485Z - starting server
+error 2020-12-21T09:52:59.790Z - C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, price, offeraddress, phonecontact, emailcontact, price, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, offeraddress, phonecontact, emailcontact, price, owner }))
+                                                                                                                                                ^
+
+SyntaxError: Duplicate parameter name not allowed in this context
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:11:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-21T09:52:59.805Z - stopping server
+info 2020-12-21T09:53:55.720Z - starting server
+error 2020-12-21T09:53:56.280Z - C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, price, offeraddress, phonecontact, emailcontact, price, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, offeraddress, phonecontact, emailcontact, price, owner }))
+                                                                                                                                                ^
+
+SyntaxError: Duplicate parameter name not allowed in this context
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:11:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-21T09:53:56.301Z - stopping server
+info 2020-12-21T09:55:17.070Z - starting server
+error 2020-12-21T09:55:19.153Z - C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, price, offeraddress, phonecontact, emailcontact, price, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, offeraddress, phonecontact, emailcontact, price, owner }))
+                                                                                                                                                ^
+
+SyntaxError: Duplicate parameter name not allowed in this context
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:11:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-21T09:55:19.193Z - stopping server
+info 2020-12-21T09:56:24.993Z - starting server
+info 2020-12-21T09:56:25.828Z - server running on port 4000
+info 2020-12-21T09:59:08.962Z - stopping server
+info 2020-12-21T09:59:23.148Z - starting server
+info 2020-12-21T09:59:23.996Z - server running on port 4000
+info 2020-12-21T10:19:36.603Z - stopping server
+info 2020-12-21T10:20:32.408Z - starting server
+info 2020-12-21T10:20:33.834Z - server running on port 4000
+info 2020-12-21T10:24:15.777Z - stopping server
+info 2020-12-21T10:24:22.005Z - starting server
+info 2020-12-21T10:24:23.008Z - server running on port 4000
+info 2020-12-21T10:26:21.437Z - stopping server
+info 2020-12-21T10:26:28.056Z - starting server
+info 2020-12-21T10:26:28.835Z - server running on port 4000
+info 2020-12-21T10:26:34.394Z - stopping server
+info 2020-12-21T10:26:40.757Z - starting server
+info 2020-12-21T10:26:41.548Z - server running on port 4000
+info 2020-12-21T10:39:21.272Z - starting server
+info 2020-12-21T10:39:22.865Z - server running on port 4000
+info 2020-12-22T07:29:33.763Z - stopping server
+info 2020-12-22T07:29:58.256Z - starting server
+info 2020-12-22T07:30:00.254Z - server running on port 4000
+info 2020-12-22T09:33:06.741Z - stopping server
+info 2020-12-22T09:33:42.411Z - starting server
+error 2020-12-22T09:33:43.527Z - Error: Cannot find module 'offers-errors'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:2:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T09:33:43.638Z - stopping server
+info 2020-12-22T09:35:40.701Z - starting server
+error 2020-12-22T09:35:40.942Z - Error: Cannot find module 'offers-errors'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:2:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T09:35:40.980Z - stopping server
+info 2020-12-22T09:38:06.509Z - starting server
+error 2020-12-22T09:38:06.628Z - Error: Cannot find module 'offers-errors'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:2:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T09:38:06.638Z - stopping server
+info 2020-12-22T09:39:22.535Z - starting server
+info 2020-12-22T09:39:24.909Z - server running on port 4000
+info 2020-12-22T10:10:53.597Z - starting server
+info 2020-12-22T10:10:56.342Z - server running on port 4000
+info 2020-12-22T10:37:32.691Z - stopping server
+info 2020-12-22T10:37:51.257Z - starting server
+info 2020-12-22T10:37:52.779Z - server running on port 4000
+info 2020-12-22T12:11:08.903Z - stopping server
+info 2020-12-22T14:26:55.181Z - starting server
+info 2020-12-22T14:26:57.391Z - server running on port 4000
+error 2020-12-22T14:36:01.821Z - TypeError: findOffer is not a function
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-find-offer.js:9:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-22T14:39:52.649Z - stopping server
+info 2020-12-22T14:40:53.341Z - starting server
+info 2020-12-22T14:40:54.069Z - server running on port 4000
+info 2020-12-22T14:54:22.752Z - starting server
+info 2020-12-22T14:54:23.663Z - server running on port 4000
+info 2020-12-22T15:05:01.813Z - stopping server
+info 2020-12-22T15:05:14.332Z - starting server
+error 2020-12-22T15:05:15.078Z - Error: Cannot find module './find-offer.js'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:7:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T15:05:15.106Z - stopping server
+info 2020-12-22T15:06:06.551Z - starting server
+info 2020-12-22T15:06:07.451Z - server running on port 4000
+error 2020-12-22T15:21:24.218Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T15:21:31.643Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T15:21:35.915Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T15:28:20.414Z - ValidationError: Offer validation failed: emailcontact: Path `emailcontact` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-22T16:16:16.928Z - stopping server
+info 2020-12-22T16:21:34.554Z - starting server
+info 2020-12-22T16:21:36.287Z - server running on port 4000
+info 2020-12-22T16:34:05.308Z - stopping server
+info 2020-12-22T16:35:09.269Z - starting server
+info 2020-12-22T16:35:10.915Z - server running on port 4000
+info 2020-12-22T16:38:12.467Z - stopping server
+info 2020-12-22T16:41:24.560Z - starting server
+info 2020-12-22T16:41:25.706Z - server running on port 4000
+error 2020-12-22T16:54:45.516Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T16:54:47.222Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T16:55:03.608Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T16:55:47.127Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:26:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T16:55:56.100Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:26:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T17:16:42.156Z - ConflictError: user with e-mail juan@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:28:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-24T10:35:04.578Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user.js:12:37)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:04.589Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-offer.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:04.599Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user-offers.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:20.579Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user.js:12:37)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:20.581Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-offer.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:20.629Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user-offers.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+info 2020-12-24T10:38:51.867Z - starting server
+info 2020-12-24T10:38:57.183Z - server running on port 4000

@@ -15,4 +15,3 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
     )
     .catch(console.error)
     .then(() => mongoose.disconnect())
-    .then(() => console.log('ended'))

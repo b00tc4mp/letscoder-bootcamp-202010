@@ -1,14 +1,17 @@
 import { call } from '../utils'
-import { validateCallback, validateOffer, validateId, validateToken, validateTitleoffer } from './helpers/validations'
+import { validateOffer, validateId, validateToken, validateTitleoffer, validateCallback, validateOfferAddress, validatePhoneContact, validateEmailContact } from './helpers/validations'
 import context from './context'
 
 export default (function (token, offerId, offername, titleoffer, price, offeraddress, phonecontact, emailcontact, callback) {
     validateToken(token)
-    validateOffer(offername)
     if (typeof offerId !== 'undefined') validateId(offerId)
+    validateOffer(offername)
     validateTitleoffer(titleoffer)
     validateCallback(callback)
-
+    validateOfferAddress(offeraddress)
+    validatePhoneContact(phonecontact)
+    validateEmailContact(emailcontact)
+    
     const { API_URL } = this
 
 
