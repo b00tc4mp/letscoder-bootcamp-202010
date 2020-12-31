@@ -1,5 +1,5 @@
 const { logger } = require('../../../utils')
-const { ContentError, LengthError, ValueError, FormatError, NotFoundError, AuthError, ConflictError } = require('../../../errors/index')
+const { ContentError, LengthError, ValueError, FormatError, NotFoundError, AuthError, ConflictError } = require('martachisfit-errors')
 
 module.exports = handler =>
     (req, res) =>

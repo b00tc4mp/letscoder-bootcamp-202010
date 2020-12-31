@@ -1,7 +1,7 @@
 require('dotenv').config()
 const { mongoose } = require('martachisfit-data')
 const express = require('express')
-const logger = require('./utils/logger')
+const { logger } = require('./utils')
 
 const cors = require('./middlewares/cors')
 

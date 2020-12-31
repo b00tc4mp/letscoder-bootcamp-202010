@@ -1,5 +1,5 @@
 const { validateMuscularGroup } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('martachisfit-errors')
 const { models: { Movement } } = require('martachisfit-data')
 
 /**

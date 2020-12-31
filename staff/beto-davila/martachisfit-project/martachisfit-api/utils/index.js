@@ -1,5 +1,3 @@
-module.exports =  {
-    call: require('./call'),
-    randoms: require('./randoms'),
+module.exports = {
     logger: require('./logger')
 }

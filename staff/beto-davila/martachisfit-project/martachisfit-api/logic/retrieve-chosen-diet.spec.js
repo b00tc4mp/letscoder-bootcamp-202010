@@ -1,8 +1,8 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString } = require('../utils/randoms')
-require('../utils/array-polyfills')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString } = require('martachisfit-utils').randoms
+require('martachisfit-utils/array-polyfills')
 const retrieveChosenDiet = require('./retrieve-chosen-diet')
 const { models: {User, Diet}, mongoose } = require('martachisfit-data')
 

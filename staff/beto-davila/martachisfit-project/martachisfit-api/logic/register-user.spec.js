@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('../utils/randoms')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix } = require('martachisfit-utils').randoms
 const registerUser = require('./register-user')
 const { models: { User }, mongoose } = require('martachisfit-data')
 

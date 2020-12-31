@@ -1,5 +1,5 @@
 const { validateId, validateLevel } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('martachisfit-errors')
 const { models: { Workout, User }, mongoose: { Types: { ObjectId } } } = require('martachisfit-data')
 
 

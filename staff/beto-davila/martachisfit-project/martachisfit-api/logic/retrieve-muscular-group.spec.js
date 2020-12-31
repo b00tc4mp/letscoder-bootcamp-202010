@@ -1,8 +1,8 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix } = require('../utils/randoms')
-require('../utils/array-polyfills')
+const { randomStringWithPrefix } = require('martachisfit-utils').randoms
+require('martachisfit-utils/array-polyfills')
 const retrieveMuscularGroup = require('./retrieve-muscular-group')
 const { models: { Movement }, mongoose } = require('martachisfit-data')
 

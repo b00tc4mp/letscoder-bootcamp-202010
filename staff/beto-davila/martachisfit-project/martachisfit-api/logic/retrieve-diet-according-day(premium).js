@@ -1,5 +1,5 @@
 const { validateId } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('martachisfit-errors')
 const { models: { User, Diet } } = require('martachisfit-data')
 
 // this is a not-finished logic for a forseeable 'premium' version of the app

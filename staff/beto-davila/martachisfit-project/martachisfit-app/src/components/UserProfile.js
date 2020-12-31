@@ -6,7 +6,7 @@ import mancuerna from './icons/mancuerna.png'
 import bascula from './icons/bascula.png'
 
 
-export default function UserProfile({ user, avatar, onSaved, feedbackImage, feedbackWeight, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture, onSaveWeight, onDelete }) {
+export default function UserProfile({ user, avatar, onSaved, feedbackWeight, onLogout, savedArticles, savedRecipes, onGoToRecipe, onGoToChosenArticle, onGoToMyWorkout, myWorkouts, onSavePicture, onSaveWeight, onDelete }) {
     const [userChosenFoods, setUserChosenFoods] = useState()
     const [message, setMessage] = useState()
 
@@ -15,10 +15,6 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
     const { token } = sessionStorage
 
     const { fullname, weightHistory, id } = user
-
-    const timeElapsed = Date.now();
-    const today = new Date(timeElapsed);
-    const newToday = today.toLocaleDateString()
 
     useEffect(() => {
         try {
@@ -76,30 +72,29 @@ export default function UserProfile({ user, avatar, onSaved, feedbackImage, feed
                     <button className="user-profile__logout" onClick={onLogout}>Logout</button>
                 </div>
                 <div className="user-profile__name-weight-desktop">
-                <div className="user-profile__question-btn">
-                    {fullname && <p className="user-profile__user">¡Hola, <span className="user-profile__user--name">{fullname}</span>!</p>}
-                    {avatar ? <img className="user-profile__pic" src={`${API_URL}/users/${id}/uploads`} /> : <img className="user-profile__pic" src='https://st3.depositphotos.com/4111759/13425/v/380/depositphotos_134255626-stock-illustration-avatar-male-profile-gray-person.jpg' width='90' />}
-                    <div className="user-profile__progression">
-                        <form className="user-profile__avatar-form" onSubmit={handleSubmitPicture}>
-                            <input className="user-profile__progression-input" type="file" id="image" name="image" />
-                            <button className="user-profile__progression-btn">Guardar</button>
-                            {/* {feedbackImage && <p className="user-profile__feedback">Imagen guardada correctamente</p>} */}
+                    <div className="user-profile__question-btn">
+                        {fullname && <p className="user-profile__user">¡Hola, <span className="user-profile__user--name">{fullname}</span>!</p>}
+                        {avatar ? <img className="user-profile__pic" src={`${API_URL}/users/${id}/uploads`} /> : <img className="user-profile__pic" src='https://st3.depositphotos.com/4111759/13425/v/380/depositphotos_134255626-stock-illustration-avatar-male-profile-gray-person.jpg' width='90' />}
+                        <div className="user-profile__progression">
+                            <form className="user-profile__avatar-form" onSubmit={handleSubmitPicture}>
+                                <input className="user-profile__progression-input" type="file" id="image" name="image" />
+                                <button className="user-profile__progression-btn">Guardar</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div className="user-profile__weights-container">
+                        <img src={bascula} className="user-profile__scale-img" alt="bascula"></img>
+                        {weightHistory.length > 1 ? <p className="user-profile__before">Previo: {weightHistory[weightHistory.length - 2].weight} Kg ({weightHistory[weightHistory.length - 2].modifiedAt})</p> : <p className="user-profile__before">Peso anterior: Sin registro</p>}
+                        {weightHistory.length ? <p className="user-profile__current"><span className="bold">Actual: {weightHistory[weightHistory.length - 1].weight} Kg ({weightHistory[weightHistory.length - 1].modifiedAt}) </span></p> : <p className="user-profile__current">Peso actual: Sin registro</p>}
+                        {/* <Chart /> */}
+                        <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
+                            <input type="text" name="weight" placeholder="Tu peso actual"></input>
+                            <button className="user-profile__weight-btn">Guardar</button>
                         </form>
                     </div>
-                </div>
-
-
-                <div className="user-profile__weights-container">
-                    <img src={bascula} className="user-profile__scale-img" alt="bascula"></img>
-                    {weightHistory.length > 1 ? <p className="user-profile__before">Previo: {weightHistory[weightHistory.length - 2]} Kg ({today.toLocaleDateString()})</p> : <p className="user-profile__before">Peso anterior: Sin registro</p>}
-                    {weightHistory.length ? <p className="user-profile__current"><span className="bold">Actual: {weightHistory[weightHistory.length - 1]} Kg </span>({newToday})</p> : <p className="user-profile__current">Peso actual: Sin registro</p>}
-                    {/* <Chart /> */}
-                    <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
-                        <input type="text" name="weight" placeholder="Tu peso actual"></input>
-                        <button className="user-profile__weight-btn">Guardar</button>
-                    </form>
-                </div>
-                {feedbackWeight && <p className="user-profile__feedback">Peso actualizado</p>}
+                    {feedbackWeight && <p className="user-profile__feedback">Peso actualizado</p>}
                 </div>
 
                 <div className="user-profile__container">

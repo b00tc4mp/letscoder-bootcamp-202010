@@ -1,7 +1,7 @@
 // require('dotenv').config()
 
 // const { expect } = require('chai')
-// const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('../utils/randoms')
+// const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, randomEmptyOrBlankString } = require('martachisfit-utils').randoms
 // const deleteUser = require('./delete-user')
 // const { models: { User }, mongoose } = require('martachisfit-data')
 

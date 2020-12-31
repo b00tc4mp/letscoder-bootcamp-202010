@@ -1,4 +1,4 @@
-const createCustomError = require('./create-custom-error')
+const createCustomError = require('./create-custom-errors')
 
 module.exports = {
     ContentError: createCustomError('ContentError'),

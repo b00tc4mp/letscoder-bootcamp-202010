@@ -1554,3 +1554,95 @@ error 2020-12-18T13:53:58.732Z - AuthError: wrong credentials
     at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-18T15:57:40.299Z - stopping server
+info 2020-12-22T08:47:38.825Z - starting server
+error 2020-12-22T08:48:08.842Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-22T08:48:08.846Z - stopping server
+info 2020-12-22T08:53:03.261Z - starting server
+info 2020-12-22T08:53:03.383Z - server running on port 4000
+error 2020-12-22T09:00:03.906Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-22T09:39:39.973Z - stopping server
+info 2020-12-22T12:19:16.569Z - starting server
+info 2020-12-22T12:19:16.732Z - server running on port 4000
+error 2020-12-22T12:32:57.912Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:33:08.904Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-articles.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:33:48.971Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-articles.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:34:05.997Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:53:41.268Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-22T15:05:15.269Z - stopping server
+info 2020-12-22T15:14:50.701Z - starting server
+info 2020-12-22T15:14:50.872Z - server running on port 4000
+info 2020-12-22T15:22:37.021Z - stopping server
+info 2020-12-22T15:23:10.327Z - starting server
+info 2020-12-22T15:23:10.481Z - server running on port 4000
+info 2020-12-22T15:25:09.821Z - stopping server
+info 2020-12-22T15:25:28.771Z - starting server
+info 2020-12-22T15:25:28.922Z - server running on port 4000
+info 2020-12-22T15:29:27.345Z - stopping server
+info 2020-12-22T15:29:54.293Z - starting server
+info 2020-12-22T15:29:54.363Z - server running on port 4000
+info 2020-12-22T15:54:44.574Z - stopping server
+info 2020-12-24T17:57:36.660Z - starting server
+info 2020-12-24T17:57:36.853Z - server running on port 4000
+info 2020-12-24T18:02:26.486Z - stopping server
+info 2020-12-24T18:02:40.077Z - starting server
+info 2020-12-24T18:02:40.147Z - server running on port 4000
+info 2020-12-24T18:28:32.455Z - stopping server
+info 2020-12-24T18:28:45.258Z - starting server
+info 2020-12-24T18:28:45.443Z - server running on port 4000
+info 2020-12-24T18:30:20.288Z - starting server
+info 2020-12-24T18:30:20.533Z - server running on port 4000
+info 2020-12-24T18:36:18.575Z - starting server
+info 2020-12-24T18:36:18.643Z - server running on port 4000
+error 2020-12-25T16:19:29.867Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-28T16:49:37.257Z - stopping server
+info 2020-12-31T16:09:34.389Z - starting server
+error 2020-12-31T16:10:04.408Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-31T16:10:04.413Z - stopping server
+info 2020-12-31T16:27:05.169Z - starting server
+info 2020-12-31T16:27:05.344Z - server running on port 4000
+error 2020-12-31T16:39:28.779Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-31T16:39:50.311Z - stopping server

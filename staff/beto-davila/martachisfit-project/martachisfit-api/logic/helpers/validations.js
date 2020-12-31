@@ -1,4 +1,4 @@
-const { ContentError, LengthError, ValueError, FormatError } = require('../../errors')
+const { ContentError, LengthError, ValueError, FormatError } = require('martachisfit-errors')
 
 module.exports = {
     validateEmail(email) {

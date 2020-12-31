@@ -1,5 +1,5 @@
 const { validateId } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('martachisfit-errors')
 const { models: { Food } } = require('martachisfit-data')
 
 /**

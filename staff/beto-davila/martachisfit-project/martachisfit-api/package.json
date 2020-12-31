@@ -23,6 +23,8 @@
     "file-system": "^2.2.2",
     "jsonwebtoken": "^8.5.1",
     "martachisfit-data": "file:../martachisfit-data",
+    "martachisfit-errors": "file:../martachisfit-errors",
+    "martachisfit-utils": "file:../martachisfit-utils",
     "path": "^0.12.7",
     "xmlhttprequest": "^1.8.0"
   },

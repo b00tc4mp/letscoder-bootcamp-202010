@@ -1,6 +1,6 @@
 const { validateId, validateName, validateNumber } = require('./helpers/validations')
 const { models: { User, Food }, mongoose: { Types: { ObjectId } } } = require('martachisfit-data')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('martachisfit-errors')
 
 /**
  * Adds a food item to the db (admin only version)

@@ -1,14 +1,14 @@
 const { validateId, validateNumber } = require('./helpers/validations')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('martachisfit-errors')
 const { models: { User } } = require('martachisfit-data')
 
 /**
  *  Saves and updates the user's historic weight
  * 
- * @param {string} userId user's fullname
- * @param {number} weight the user's weight
+ * @param {string} userId user's id
+ * @param {number} weight the user's most current weight
  * 
- * @returns {Promise} returns a promise with the user info
+ * @returns {Promise} returns an empty promise on successful update
  */
 
 module.exports = (userId, weight) => {
@@ -20,10 +20,13 @@ module.exports = (userId, weight) => {
 
             if (!user) throw new NotFoundError(`user with id ${userId} not found`)
 
-            user.weightHistory.push(weight)
+            const newWeight = { weight: weight, modifiedAt: new Date().toLocaleDateString('en-GB') }
 
-            return user.save().then(user => user)
+            user.weightHistory.push(newWeight)
+
+            return user.save()
 
         })
+        .then(() => { })
 
 }

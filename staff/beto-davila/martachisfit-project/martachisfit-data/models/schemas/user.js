@@ -32,7 +32,9 @@ module.exports = new Schema({
         enum: ['hombre', 'mujer']
     },
 
-    weightHistory: [{ type: Number, date: Date }],
+    weightHistory: [
+        { type: Object, weight: Number, modifiedAt: new Date }
+    ],
 
     vegan: {
         type: Boolean

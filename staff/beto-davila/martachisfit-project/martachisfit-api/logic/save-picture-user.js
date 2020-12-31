@@ -1,6 +1,4 @@
 const { validateId } = require('./helpers/validations')
-// const { NotFoundError } = require('../errors')
-// const { models: { User } } = require('martachisfit-data')
 const fs = require('fs')
 const path = require('path')
 

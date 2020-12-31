@@ -1,5 +1,5 @@
 const { validateLevel } = require('./helpers/validations')
-// const { NotFoundError } = require('../errors')
+// const { NotFoundError } = require('martachisfit-errors')
 const { models: { Workout } } = require('martachisfit-data')
 
 /**

@@ -1,6 +1,6 @@
 const { validateQuery } = require('./helpers/validations')
 const { models: { Food } } = require('martachisfit-data')
-const { NotFoundError } = require('../errors')
+const { NotFoundError } = require('martachisfit-errors')
 
 /**
  * Retrieves food that match a query criteria
