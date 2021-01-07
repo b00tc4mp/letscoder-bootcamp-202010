@@ -1,27 +1,31 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('notes-utils/randoms')
-require('notes-utils/array-polyfills')
-const saveNoteImage = require('./save-note-image')
-const { mongoose, mongoose: { Types: { ObjectId } }, models: { User, Note } } = require('notes-data')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('../utils/randoms')
+
+const saveliveImage = require('./save-live-image')
+const mongoose = require('mongoose')
+const { Types: { ObjectId } } = mongoose
+const { User, Live } = require('../models')
 const fs = require('fs')
 const fsp = fs.promises
 const path = require('path')
-const { NotFoundError } = require('notes-errors')
+const live = require('../models/schemas/live')
+
+// const { NotFoundError } = require('lives-errors')
 
 
 const { env: { MONGODB_URL } } = process
 
-describe('saveNoteImage()', () => {
+describe('saveliveImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
-    let noteImage
+    let liveImage
 
-    beforeEach(() => noteImage = fs.createReadStream(path.join(__dirname, '../data/notes/default.jpg')))
+    beforeEach(() => liveImage = fs.createReadStream(path.join(__dirname, '../data/lives/default-profile-image.png')))
 
     describe('when user already exists', () => {
-        let fullname, email, password, ownerId
+        let fullname, email, password, userId
 
         beforeEach(() => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
@@ -31,11 +35,11 @@ describe('saveNoteImage()', () => {
             const user = { fullname, email, password }
 
             return User.create(user)
-                .then(user => ownerId = user.id)
+                .then(user => userId = user.id)
         })
 
-        describe('when user already has notes', () => {
-            let text, tags, visibility, noteId
+        describe('when user already has lives', () => {
+            let text, tags, visibility, liveId
 
             beforeEach(() => {
                 text = randomStringWithPrefix('text')
@@ -46,38 +50,38 @@ describe('saveNoteImage()', () => {
 
                 visibility = ['public', 'private'].random()
 
-                return Note.create({ text, tags, visibility, owner: ownerId, date: new Date })
-                    .then(note => noteId = note.id)
+                return live.create({ text, tags, visibility, user: userId, date: new Date })
+                    .then(live => liveId = live.id)
             })
 
-            it('should succeed saving the note image', () =>
-                saveNoteImage(ownerId, noteId, noteImage)
+            it('should succeed saving the live image', () =>
+                saveliveImage(userId, liveId, liveImage)
                     .then(result => {
                         expect(result).to.be.undefined
 
-                        return fsp.access(path.join(__dirname, `../data/notes/${noteId}.jpg`), fs.F_OK)
+                        return fsp.access(path.join(__dirname, `../data/lives/${liveId}.jpg`), fs.F_OK)
                     })
             )
 
             afterEach(() => Promise.all([
-                Note.deleteMany(),
-                fsp.unlink(path.join(__dirname, `../data/notes/${noteId}.jpg`))
+                live.deleteMany(),
+                fsp.unlink(path.join(__dirname, `../data/lives/${liveId}.jpg`))
             ]))
         })
 
-        describe('when note does not exist', () => {
-            let noteId
+        describe('when live does not exist', () => {
+            let liveId
 
             beforeEach(() => {
-                noteId = new ObjectId().toString()
+                liveId = new ObjectId().toString()
             })
 
-            it('should fail alerting note not found', () =>
-                saveNoteImage(ownerId, noteId, noteImage)
+            it('should fail alerting live not found', () =>
+                saveliveImage(userId, liveId, liveImage)
                     .catch(error => {
                         expect(error).to.be.instanceOf(NotFoundError)
 
-                        expect(error.message).to.equal(`note with id ${noteId} not found`)
+                        expect(error.message).to.equal(`live with id ${liveId} not found`)
                     })
             )
         })
@@ -86,19 +90,19 @@ describe('saveNoteImage()', () => {
     })
 
     describe('when user does not exist', () => {
-        let ownerId, noteId
+        let userId, liveId
 
         beforeEach(() => {
-            ownerId = new ObjectId().toString()
-            noteId = new ObjectId().toString()
+            userId = new ObjectId().toString()
+            liveId = new ObjectId().toString()
         })
 
         it('should fail alerting user not found', () =>
-            saveNoteImage(ownerId, noteId, noteImage)
+            saveliveImage(userId, liveId, liveImage)
                 .catch(error => {
                     expect(error).to.be.instanceOf(NotFoundError)
 
-                    expect(error.message).to.equal(`user with id ${ownerId} not found`)
+                    expect(error.message).to.equal(`user with id ${userId} not found`)
                 })
         )
     })

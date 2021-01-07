@@ -25,10 +25,9 @@ describe('retrieveUser()', () => {
             return User.create(user)
                 .then(user => userId = user.id)
         })
-
         it('should succeed on correct user id', () =>
-            retrieveUser(userId)
-                .then(user => {
+        retrieveUser(userId)
+        .then(user => {
                     expect(user).to.exist
                     expect(user.fullname).to.equal(fullname)
                     expect(user.email).to.equal(email)

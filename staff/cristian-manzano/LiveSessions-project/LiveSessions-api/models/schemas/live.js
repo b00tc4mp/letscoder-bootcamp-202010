@@ -45,7 +45,7 @@ module.exports = new Schema({
     },
 
     payment: {
-        type: Number,
+        type: String,
         required: true
     }
 })

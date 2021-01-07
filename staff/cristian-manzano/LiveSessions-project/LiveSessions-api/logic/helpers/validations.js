@@ -62,10 +62,34 @@ module.exports = {
         if (!token.trim().length) throw new Error('token is empty or blank')
     },
 
-    validateText(text) {
-        if (typeof text !== 'string') throw new TypeError(text + ' is not a text')
+    validateTitle(title) {
+        if (typeof title !== 'string') throw new TypeError(title + ' is not a title')
 
-        if (!text.trim().length) throw new Error('text is empty or blank')
+        if (!title.trim().length) throw new Error('title is empty or blank')
+    },
+
+    validateLiveDate(liveDate) {
+        if (typeof liveDate !== 'string') throw new TypeError(liveDate + ' is not a liveDate')
+
+        if (!liveDate.trim().length) throw new Error('liveDate is empty or blank')
+    },
+
+    validateStatus(status) {
+        if (typeof status !== 'string') throw new TypeError(status + ' is not a status')
+
+        if (!status.trim().length) throw new Error('status is empty or blank')
+    },
+
+    validateDuration(duration) {
+        if (typeof duration !== 'string') throw new TypeError(duration + ' is not a duration')
+
+        if (!duration.trim().length) throw new Error('duration is empty or blank')
+    },
+
+    validatePayment(payment) {
+        if (typeof payment !== 'string') throw new TypeError(payment + ' is not a payment')
+
+        if (!payment.trim().length) throw new Error('payment is empty or blank')
     },
 
     validateTags(tags) {
@@ -78,11 +102,5 @@ module.exports = {
         })
     },
 
-    validateVisibility(visibility) {
-        if (typeof visibility !== 'string') throw new TypeError(visibility + ' is not a visibility')
-
-        if (!visibility.trim().length) throw new Error('visibility is empty or blank')
-
-        if (visibility !== 'public' && visibility !== 'private') throw new Error('visibility is not public or private')
-    }
+    
 }

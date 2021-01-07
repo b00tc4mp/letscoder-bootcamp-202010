@@ -1,8 +1,13 @@
 
 const {
     validateId,
+    validateDescription,
+    validateTitle,
+    validateLiveDate,
+    validateStatus,
+    validateDuration,
+    validatePayment
   } = require("./helpers/validations");
-  //TODO VALIDATIONS
 
   const { ObjectId } = require("mongodb");
   const { NotFoundError } = require("../errors");
@@ -18,15 +23,22 @@ const {
     duration, 
     payment, 
     description,
-  ) => {
-    debugger;
+    ) => {
     // validateId(promoterId);
     if (typeof promoterId !== "undefined") validateId(promoterId);
     if (typeof _id !== "undefined") validateId(_id);
-    //TODO validations
-  
+    validateId(artistId)
+    validateTitle(title)
+    validateLiveDate(liveDate)
+    validateStatus(status)
+    validateDuration(duration)
+    validatePayment(payment)
+    validateDescription(description)
+
+
+
     return User.findById(promoterId).then((user) => {
-      if (!user) throw new Error(`user with id ${promoterId} not found`);
+      if (!user) throw new Error(`promoter with id ${promoterId} not found`);
       debugger;
       if (_id) {
         debugger;
