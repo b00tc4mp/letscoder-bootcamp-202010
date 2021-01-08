@@ -83,12 +83,12 @@ export default function UserProfile({ user, avatar, onSaved, feedbackWeight, onL
                         </div>
                     </div>
 
+                    {weightHistory && <Chart weightHistory={weightHistory} />}
 
                     <div className="user-profile__weights-container">
                         <img src={bascula} className="user-profile__scale-img" alt="bascula"></img>
                         {weightHistory.length > 1 ? <p className="user-profile__before">Previo: {weightHistory[weightHistory.length - 2].weight} Kg ({weightHistory[weightHistory.length - 2].modifiedAt})</p> : <p className="user-profile__before">Peso anterior: Sin registro</p>}
                         {weightHistory.length ? <p className="user-profile__current"><span className="bold">Actual: {weightHistory[weightHistory.length - 1].weight} Kg ({weightHistory[weightHistory.length - 1].modifiedAt}) </span></p> : <p className="user-profile__current">Peso actual: Sin registro</p>}
-                        {/* <Chart /> */}
                         <form className="user-profile__weight-form" onSubmit={handleSubmitWeight}>
                             <input type="text" name="weight" placeholder="Tu peso actual"></input>
                             <button className="user-profile__weight-btn">Guardar</button>

@@ -1646,3 +1646,9 @@ error 2020-12-31T16:39:28.779Z - AuthError: wrong credentials
     at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-31T16:39:50.311Z - stopping server
+info 2020-12-31T16:43:57.819Z - starting server
+info 2020-12-31T16:43:57.980Z - server running on port 4000
+info 2020-12-31T17:38:10.514Z - stopping server
+info 2021-01-05T16:42:48.180Z - starting server
+info 2021-01-05T16:42:48.342Z - server running on port 4000
+info 2021-01-08T11:06:40.171Z - stopping server

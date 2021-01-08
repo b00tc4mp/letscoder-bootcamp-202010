@@ -2,15 +2,24 @@ import { Line, defaults } from 'react-chartjs-2'
 
 defaults.global.tooltips.enabled = true
 
-export default function Chart() {
+export default function Chart({ weightHistory }) {
+
+    let dates = []
+    let weights = []
+
+    weightHistory.forEach(({ modifiedAt, weight }) => {
+        dates.push(modifiedAt)
+        weights.push(weight)
+    })
+
     return <div>
         <Line
             data={{
-                labels: ['01/01/20', '01/02/20', '01/03/20', '01/04/20', '01/05/20', '01/06/20', '01/07/20', '01/08/20', '01/09/20'],
+                labels: dates,
                 datasets: [
                     {
                         label: 'peso (Kg)',
-                        data: [65, 66, 65, 65, 63.5, 62, 61, 60.5, 61],
+                        data: weights,
                         backgroundColor: 'rgba(192, 192, 192, 0.4)',
                         borderColor: 'rgba(176, 224, 230, 1)',
                     }
@@ -20,7 +29,7 @@ export default function Chart() {
             height={150}
             width={250}
             options={{
-                defaultFontSize: '7',
+                defaultFontSize: '8',
                 maintainAspectRatio: false,
                 scales: {
                     yAxes: [
