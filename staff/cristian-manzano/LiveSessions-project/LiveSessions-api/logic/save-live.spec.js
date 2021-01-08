@@ -7,7 +7,6 @@ const saveLive = require('./save-live')
 const mongoose = require('mongoose')
 const { Types: { ObjectId } } = mongoose
 const { User, Live } = require('../models')
-// const {ContentError, NotFoundError} = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -18,27 +17,38 @@ describe('saveLive()', () => {
         let fullname, email, password, userId
 
         beforeEach(() => {
-            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+            fullname = randomStringWithPrefix('fullname')
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
             role = ['ARTIST', 'PROMOTER'].random()
 
+            title = randomStringWithPrefix('title')
+            liveDate = randomStringWithPrefix('liveDate')
+            status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
+            duration = randomStringWithPrefix('duration')
+            payment = randomStringWithPrefix('1')
+            description = randomStringWithPrefix('description')
+            artistId = userId
+
             const user = { fullname, email, password, role }
 
             return User.create(user)
-                .then(user => userId = user.id)
-        })
+            .then(user => userId = user._id.toString())
+            .then(Live.create({ userId, artistId, title, liveDate, status, duration, payment, description })
+                .then(live => liveId = live._id.toString()))
+            })
+
         describe('when user doesn\'t have lives', () => {
-            let userId, artistId, title, liveDate, status, duration, payment, description
+            let artistId, title, liveDate, status, duration, payment, description
 
             beforeEach(() => {
                 title = randomStringWithPrefix('title')
                 liveDate = randomStringWithPrefix('liveDate')
                 status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
                 duration = randomStringWithPrefix('duration')
-                payment = randomInteger(1, 1000)
+                payment = randomStringWithPrefix('1')
                 description = randomStringWithPrefix('description')
-                artistId = (userId)
+                artistId = randomId()
             })
 
             it('should succeed creating a new live', () => {
@@ -59,121 +69,42 @@ describe('saveLive()', () => {
                         expect(live.status).to.equal(status)
                         expect(live.duration).to.equal(duration)
                         expect(live.payment).to.equal(payment)
-                        expect(live.descrption).to.equal(description)
-                        expect(live.artistId).to.equal(artistId)
+                        // expect(live.descrption).to.equal(description)
+                        expect(live.artistId.toString()).to.equal(artistId)
 
                         expect(live.date).to.be.instanceOf(Date)
                     })
             })
-            afterEach(() => Live.deleteMany())
         })
-
-        describe('when user already has lives', () => {
-            let userId, artistId, title, liveDate, status, duration, payment, description
-
-            beforeEach(() => {
-                fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
-                email = randomWithPrefixAndSuffix('email', '@mail.com')
-                password = randomStringWithPrefix('password')
-                role = ['ARTIST', 'PROMOTER'].random()
-
-                title = randomStringWithPrefix('title')
-                liveDate = randomStringWithPrefix('liveDate')
-                status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
-                duration = randomStringWithPrefix('duration')
-                payment = randomInteger(1, 1000)
-                description = randomStringWithPrefix('description')
-                artistId = (userId)
-
-                const user = { fullname, email, password, role }
-
-                return User.create(user)
-                    .then(user => userId = user._id.toString())
-                    .then(Live.create({ userId, artistId, title, liveDate, status, duration, payment, description })
-                        .then(live => liveId = live._id.toString()))
-            })
-
-            it('should succeed updating live', () => {
-                title = randomStringWithPrefix('title')
-                liveDate = randomStringWithPrefix('liveDate')
-                status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
-                duration = randomStringWithPrefix('duration')
-                payment = randomStringWithPrefix('1')
-                description = randomStringWithPrefix('description')
-                artistId = (userId)
-
-
-                return saveLive(userId, artistId, undefined, title, liveDate, status, duration, payment, description)
-                    .then(liveId => {
-                        expect(ObjectId.isValid(liveId)).be.true
-
-                        return Live.findById({ _id: liveId })
-                            .then(live => {
-                                expect(live.title).to.equal(title)
-                                expect(live.liveDate).to.equal(liveDate)
-                                expect(live.status).to.equal(status)
-                                expect(live.duration).to.equal(duration)
-                                expect(live.payment).to.equal(payment)
-                                expect(live.descrption).to.equal(description)
-                                expect(live.artistId).to.equal(artistId)
-
-                                expect(live.date).to.be.instanceOf(Date)
-                            })
-                    })
-            })
-        })
-
-        describe('when user`s live does not exist (it was removed from db)', () => {
-            let userId, artistId, title, liveDate, status, duration, payment, description
-
-            beforeEach(() => {
-                title = randomStringWithPrefix('title')
-                liveId = randomId()
-                liveDate = randomStringWithPrefix('liveDate')
-                status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
-                duration = randomStringWithPrefix('duration')
-                payment = randomStringWithPrefix('1')
-                description = randomStringWithPrefix('description')
-                artistId = (userId)
-            })
-
-            it('should fail on trying to update a live that does not exist any more', () => {
-                return saveLive(userId, artistId, undefined, title, liveDate, status, duration, payment, description)
-                    .catch(error => {
-                        expect(error).to.be.instanceOf(Error)
-
-                        expect(error.message).to.equal(`live with id ${liveId} not found`)
-                    })
-            })
-
-            afterEach(() => Live.deleteMany())
-        })
-        describe('when user does not exist', () => {
-            let userId, artistId, title, liveDate, status, duration, payment, description
-
-            beforeEach(() => {
-                userId = randomId()
-                title = randomStringWithPrefix('title')
-                liveDate = randomStringWithPrefix('liveDate')
-                status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
-                duration = randomStringWithPrefix('duration')
-                payment = randomStringWithPrefix('1')
-                description = randomStringWithPrefix('description')
-                artistId = (userId)
-            })
-
-            it('should fail alerting user with message: "promoter with id not found"', () => {
-                return saveLive(userId, artistId, undefined, title, liveDate, status, duration, payment, description)
-                    .catch(error => {
-                        expect(error).to.be.instanceOf(Error)
-
-                        expect(error.message).to.equal(`promoter with id ${userId} not found`)
-                    })
-            })
-        })
-
-        afterEach(() => User.deleteMany())
+        afterEach(() =>
+            User.deleteMany().then(() => { Live.deleteMany().then(() => { }) })
+        )
     })
+    describe('when user does not exist', () => {
+        let userId, artistId, title, liveDate, status, duration, payment, description
+
+        beforeEach(() => {
+            userId = randomId()
+            title = randomStringWithPrefix('title')
+            liveDate = randomStringWithPrefix('liveDate')
+            status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
+            duration = randomStringWithPrefix('duration')
+            payment = randomStringWithPrefix('1')
+            description = randomStringWithPrefix('description')
+            artistId = randomId()
+        })
+
+        it('should fail alerting user with message: "promoter with id not found"', () => {
+            return saveLive(userId, artistId, undefined, title, liveDate, status, duration, payment, description)
+                .catch(error => {
+                    expect(error).to.be.instanceOf(Error)
+
+                    expect(error.message).to.equal(`promoter with id ${userId} not found`)
+                })
+        })
+    })
+
+
 
 
     describe('when any parameter is wrong', () => {
@@ -249,7 +180,7 @@ describe('saveLive()', () => {
                     payment = randomStringWithPrefix('1')
                     description = randomEmptyOrBlankString()
                     artistId = randomId()
-                    
+
                 })
 
                 it('should fail on non-string description', () => {
@@ -290,7 +221,7 @@ describe('saveLive()', () => {
                     payment = randomStringWithPrefix('1')
                     description = randomStringWithPrefix('description')
                     artistId = randomId()
-                    
+
                 })
 
                 it('should fail on non-string description', () => {
@@ -340,7 +271,7 @@ describe('saveLive()', () => {
         })
 
         describe('when payment is wrong', () => {
-            
+
             describe('when payment is not a string', () => {
                 let userId, artistId, title, liveDate, status, duration, payment, description
 

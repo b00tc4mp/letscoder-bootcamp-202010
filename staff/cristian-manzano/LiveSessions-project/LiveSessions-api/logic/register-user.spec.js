@@ -5,8 +5,6 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const registerUser = require('./register-user')
 const mongoose = require('mongoose')
 const { User } = require('../models')
-const bcrypt = require('bcryptjs')
-// const {ContentError} = require('../errors')
 
 
 
@@ -22,7 +20,7 @@ describe('registerUser()', () => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
-            role = ['public', 'private'].random()
+            role = ['ARTIST', 'PROMOTER'].random()
         })
 
         it('should succeed on new user', () =>
@@ -33,10 +31,11 @@ describe('registerUser()', () => {
                 .then(user => {
                     expect(user).to.exist
                     expect(user.fullname).to.equal(fullname)
+                    expect(user.email).to.equal(email)
+                    expect(user.role).to.equal(role)
+                    expect(user.password).to.equal(password)
 
-                    return bcrypt.compare(password, user.password)
                 })
-                .then(match => expect(match).to.be.true)
         )
 
         afterEach(() =>
@@ -53,7 +52,7 @@ describe('registerUser()', () => {
             fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
-            role = ['public', 'private'].random()
+            role = ['ARTIST', 'PROMOTER'].random()
 
             const user = { fullname, email, password }
 
@@ -85,7 +84,7 @@ describe('registerUser()', () => {
                     fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomNonString()
                     password = randomStringWithPrefix('password')
-                    role = ['public', 'private'].random()
+                    role = ['ARTIST', 'PROMOTER'].random()
                     
                 })
 
@@ -101,7 +100,7 @@ describe('registerUser()', () => {
                     fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomEmptyOrBlankString()
                     password = randomStringWithPrefix('password')
-                    role = ['public', 'private'].random()
+                    role = ['ARTIST', 'PROMOTER'].random()
                     
                 })
 
@@ -135,7 +134,7 @@ describe('registerUser()', () => {
                     fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
                     email = randomWithPrefixAndSuffix('email', '@mail.com')
                     password = randomNonString()
-                    role = ['public', 'private'].random()
+                    role = ['ARTIST', 'PROMOTER'].random()
                     
                 })
 
@@ -153,7 +152,7 @@ describe('registerUser()', () => {
                     fullname = randomEmptyOrBlankString()
                     email = randomWithPrefixAndSuffix('email', '@mail.com')
                     password = randomStringWithPrefix('password')
-                    role = ['public', 'private'].random()
+                    role = ['ARTIST', 'PROMOTER'].random()
                     
                 })
 
@@ -169,7 +168,7 @@ describe('registerUser()', () => {
                     fullname = randomNonString()
                     email = randomWithPrefixAndSuffix('email', '@mail.com')
                     password = randomStringWithPrefix('password')
-                    role = ['public', 'private'].random()
+                    role = ['ARTIST', 'PROMOTER'].random()
                     
                 })
 

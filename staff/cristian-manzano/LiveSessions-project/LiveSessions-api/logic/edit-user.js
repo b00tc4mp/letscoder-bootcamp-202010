@@ -1,6 +1,5 @@
 const { validateEmail, validateCity, validateDescription, validateTags, validateArtistName, validateFullname } = require('./helpers/validations')
 const semaphore = require('./helpers/semaphore')
-const { ConflictError } = require('../errors')
 const { User } = require('../models')
 
 module.exports = function (email, fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description) {
@@ -12,9 +11,8 @@ module.exports = function (email, fullname, artistName, city, tags, youtubeLink,
 
     return semaphore(() => 
         User
-            .findOne({ email })
-            .then(user => {
-                if (!user) throw new ConflictError(`user with email ${email} does not exists`)
+        .findOne({ email })
+        .then(user => {
                 User.updateOne({ email }, {$set: { fullname, artistName, city, tags, youtubeLink, bandcampLink, spotifyLink, description } })
                 .then(result => undefined)
             })

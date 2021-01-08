@@ -5,7 +5,6 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const retrieveUser = require('./retrieve-user')
 const mongoose = require('mongoose')
 const { User } = require('../models')
-// const { LengthError, ContentError } = require('../errors')
 
 const { env: { MONGODB_URL } } = process
 
@@ -16,7 +15,7 @@ describe('retrieveUser()', () => {
         let fullname, email, password
 
         beforeEach(() => {
-            fullname = `${randomStringWithPrefix('name')} ${randomStringWithPrefix('surname')}`
+            fullname = randomStringWithPrefix('name')
             email = randomWithPrefixAndSuffix('email', '@mail.com')
             password = randomStringWithPrefix('password')
 

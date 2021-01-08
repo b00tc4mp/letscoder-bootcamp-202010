@@ -5,12 +5,11 @@ const { User, Live } = require("../models");
 module.exports = (userId) => {
   validateId(userId);
 
+
   return User.findById(userId)
-    .lean()
-    .then((user) => {
-      if (!user) new NotFoundError(`user with id ${promoterId} not found`);
-debugger
-        if (user.role === 'ARTIST') {
+  .lean()
+  .then((user) => {
+      if (user.role === 'ARTIST') {
             const artistId = userId
             return Live.find({ artistId: artistId }, null, {
                 sort: { date: -1 },

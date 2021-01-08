@@ -1,24 +1,24 @@
 require('dotenv').config()
 
 const { expect } = require('chai')
-const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger } = require('notes-utils/randoms')
-require('notes-utils/array-polyfills')
-const saveNoteImage = require('./save-note-image')
-const { mongoose, mongoose: { Types: { ObjectId } }, models: { User, Note } } = require('notes-data')
+const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomInteger, randomNonString, randomId, randomNotId, randomEmptyOrBlankString, randomWrongLengthId } = require('../utils/randoms')
+require('../utils/array-polyfills')
+const mongoose = require('mongoose')
+const { Types: { ObjectId } } = mongoose
+const { User, Live } = require('../models')
+const saveUserImage = require('./save-user-image')
 const fs = require('fs')
 const fsp = fs.promises
 const path = require('path')
-const { NotFoundError } = require('notes-errors')
-
 
 const { env: { MONGODB_URL } } = process
 
-describe('saveNoteImage()', () => {
+describe('saveUserImage()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))
 
-    let noteImage
+    let userImage
 
-    beforeEach(() => noteImage = fs.createReadStream(path.join(__dirname, '../data/notes/default.jpg')))
+    beforeEach(() => userImage = fs.createReadStream(path.join(__dirname, '../data/users/default-profile-image.png')))
 
     describe('when user already exists', () => {
         let fullname, email, password, ownerId
@@ -46,8 +46,8 @@ describe('saveNoteImage()', () => {
 
                 visibility = ['public', 'private'].random()
 
-                return Note.create({ text, tags, visibility, owner: ownerId, date: new Date })
-                    .then(note => noteId = note.id)
+                return User.create({ text, tags, visibility, owner: ownerId, date: new Date })
+                    .then(user => userId = user._id)
             })
 
             it('should succeed saving the note image', () =>
