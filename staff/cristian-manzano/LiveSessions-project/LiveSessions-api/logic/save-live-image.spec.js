@@ -39,23 +39,24 @@ describe('saveliveImage()', () => {
         })
 
         describe('when user already has lives', () => {
-            let text, tags, visibility, liveId
+            let artistId, title, liveDate, status, duration, payment, description
 
             beforeEach(() => {
-                text = randomStringWithPrefix('text')
-                tags = new Array(randomInteger(10, 100))
 
-                for (let i = 0; i < tags.length; i++)
-                    tags[i] = randomStringWithPrefix('tag')
+                title = randomStringWithPrefix('title')
+                liveDate = randomStringWithPrefix('liveDate')
+                status = ['ACCEPTED', 'DENIED', 'PENDING'].random()
+                duration = randomStringWithPrefix('duration')
+                payment = randomStringWithPrefix('1')
+                description = randomStringWithPrefix('description')
+                artistId = userId
 
-                visibility = ['public', 'private'].random()
-
-                return live.create({ text, tags, visibility, user: userId, date: new Date })
+                return Live.create({ userId, artistId, title, liveDate, status, duration, payment, description })
                     .then(live => liveId = live.id)
             })
 
             it('should succeed saving the live image', () =>
-                saveliveImage(userId, liveId, liveImage)
+                saveliveImage(liveId, liveImage)
                     .then(result => {
                         expect(result).to.be.undefined
 
@@ -64,7 +65,7 @@ describe('saveliveImage()', () => {
             )
 
             afterEach(() => Promise.all([
-                live.deleteMany(),
+                Live.deleteMany(),
                 fsp.unlink(path.join(__dirname, `../data/lives/${liveId}.jpg`))
             ]))
         })
@@ -77,7 +78,7 @@ describe('saveliveImage()', () => {
             })
 
             it('should fail alerting live not found', () =>
-                saveliveImage(userId, liveId, liveImage)
+                saveliveImage(liveId, liveImage)
                     .catch(error => {
                         expect(error).to.be.instanceOf(NotFoundError)
 
@@ -98,7 +99,7 @@ describe('saveliveImage()', () => {
         })
 
         it('should fail alerting user not found', () =>
-            saveliveImage(userId, liveId, liveImage)
+            saveliveImage(liveId, liveImage)
                 .catch(error => {
                     expect(error).to.be.instanceOf(NotFoundError)
 
