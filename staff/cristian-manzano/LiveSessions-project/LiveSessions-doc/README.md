@@ -59,7 +59,6 @@ Artist: recieve petitions for live sessions, accept or denie them.
 
 ### TODO 
 
-- TESTING!!!!
 - Add Artist Name to the cards
 - like artist
 - unregister user
