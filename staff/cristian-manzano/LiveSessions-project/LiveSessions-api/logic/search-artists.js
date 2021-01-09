@@ -3,7 +3,7 @@ const { NotFoundError } = require('../errors')
 const { User } = require('../models')
 
 module.exports = myTags => {
-
+validateTags(myTags)
     return User
     .find({ tags: myTags }).lean()
     .then(users=>{

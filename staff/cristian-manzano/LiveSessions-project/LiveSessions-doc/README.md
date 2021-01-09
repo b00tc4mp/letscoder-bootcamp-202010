@@ -40,7 +40,7 @@ Artist: recieve petitions for live sessions, accept or denie them.
 ### Testing (QA)
 
 
-![Alt Testing](https://media.giphy.com/media/USyNBChzC51vFkZ3nn/giphy.gif)
+![Alt Testing](live-sessions-app-specs.png)
 
 ### Technologies
 

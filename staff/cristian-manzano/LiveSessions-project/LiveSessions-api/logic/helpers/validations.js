@@ -93,13 +93,7 @@ module.exports = {
     },
 
     validateTags(tags) {
-        if (!(tags instanceof Array)) throw new TypeError(`${tags} is not an array`)
-
-        tags.forEach(tag => {
-            if (typeof tag !== 'string') throw new TypeError(tag + ' is not a tag')
-
-            if (!tag.trim().length) throw new Error('tag is empty or blank')
-        })
+            if (typeof tags !== 'string') throw new TypeError(tags + ' is not a tag')
     },
 
     
