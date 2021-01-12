@@ -1,0 +1,6 @@
+{
+    "name": "martachisfit-api-server",
+    "scripts": {
+      "start": "cd martachisfit-api; npm start"
+    }
+  }

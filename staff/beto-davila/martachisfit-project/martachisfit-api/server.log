@@ -1652,3 +1652,15 @@ info 2020-12-31T17:38:10.514Z - stopping server
 info 2021-01-05T16:42:48.180Z - starting server
 info 2021-01-05T16:42:48.342Z - server running on port 4000
 info 2021-01-08T11:06:40.171Z - stopping server
+info 2021-01-12T17:32:55.212Z - starting server
+info 2021-01-12T17:32:56.784Z - server running on port 4000
+error 2021-01-12T17:37:04.586Z - TypeError: Cannot destructure property 'name' of 'workout' as it is null.
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-workout.js:37:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2021-01-12T17:37:37.535Z - NotFoundError: article with id 5fd349f009fad36464c97c74 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-articles.js:29:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2021-01-12T17:37:52.173Z - ReferenceError: dietId is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-chosen-diet.js:117:81
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2021-01-12T17:48:06.418Z - stopping server
