@@ -1,3 +1,3 @@
 const { processColor } = require("react-native");
 
-process.env.API_URL = 'http://192.168.1.129:4000/api'
+process.env.API_URL = 'mongodb://localhost:27017/lives-db'
