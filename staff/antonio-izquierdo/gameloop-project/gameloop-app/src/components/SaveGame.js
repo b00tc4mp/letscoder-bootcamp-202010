@@ -14,7 +14,7 @@ export default function SaveGame ({onSaveGame, error}) {
             image       
         }} =event
 
-        onSaveGame(name, description, gameconsole, budget, image.files[0])
+        onSaveGame(name, description, gameconsole, Number(budget), image.files[0])
     }
  
     return <section className="save-game">

@@ -4,7 +4,8 @@ const { randomStringWithPrefix, randomWithPrefixAndSuffix, randomNonString, rand
 const { models: { User, Game }, mongoose: { Types: { ObjectId } }, mongoose } = require('gameloop-data')
 const modifyUser = require('./modify-user')
 const { env: { MONGODB_URL } } = process
-const { ContentError, LengthError } = require('../errors')
+const { ContentError } = require('gameloop-errors')
+
 
 describe('modifyUser()', () => {
     before(() => mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }))

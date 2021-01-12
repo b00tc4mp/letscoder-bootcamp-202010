@@ -4982,3 +4982,5 @@ error 2020-12-22T15:42:32.735Z - AuthError: wrong credentials
     at C:\Users\valet\bootcamp\collab\letscoder-bootcamp-202010\staff\antonio-izquierdo\gameloop-project\gameloop-api\logic\authenticate-user.js:25:30
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2020-12-22T16:49:14.026Z - stopping server
+info 2020-12-22T16:53:44.797Z - server running on port 4000
+info 2020-12-22T17:24:41.836Z - stopping server

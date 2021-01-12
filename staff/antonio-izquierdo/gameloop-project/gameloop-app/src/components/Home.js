@@ -9,7 +9,6 @@ import { BsBoxArrowInLeft, BsPeopleCircle, BsHouseFill } from "react-icons/bs";
 //import FindGames from './FindGames'
 
 export default function Home({onLogout}) {
-
     const [name, setName] = useState()
     const [userGames, setUserGames] = useState()
     const [view, setView] = useState(sessionStorage.token ? 'home' : 'access')
