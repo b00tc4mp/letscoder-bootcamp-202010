@@ -1,0 +1,6 @@
+{
+    "name": "notes-api-server",
+    "scripts": {
+        "start": "cd notes-api; npm start;"
+    }
+}
