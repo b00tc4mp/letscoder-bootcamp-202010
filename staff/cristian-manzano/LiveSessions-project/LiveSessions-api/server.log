@@ -4849,3 +4849,118 @@ info 2021-01-12T22:04:44.485Z - starting server
 info 2021-01-12T22:05:11.224Z - server running on port 4000
 info 2021-01-12T22:34:02.011Z - stopping server
 info 2021-01-12T22:34:02.140Z - stopping server
+info 2021-01-12T23:03:28.265Z - starting server
+info 2021-01-12T23:05:30.528Z - starting server
+info 2021-01-12T23:14:44.150Z - starting server
+info 2021-01-12T23:14:46.470Z - server running on port 4000
+info 2021-01-12T23:15:37.265Z - starting server
+info 2021-01-12T23:15:57.010Z - starting server
+error 2021-01-12T23:35:02.071Z - TokenExpiredError: jwt expired
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:152:21
+    at getSecret (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:90:14)
+    at Object.module.exports [as verify] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/jsonwebtoken/verify.js:94:10)
+    at module.exports (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/handlers/handle-retrieve-user.js:13:37)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/routes/api/helpers/with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/express/lib/router/index.js:317:13)
+error 2021-01-12T23:36:38.477Z - MongoError: Database name lives-database--usernamejaime--passwordjaimito is too long.  Max database name length is 38 bytes.
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at TLSSocket.ondata (_stream_readable.js:719:22)
+    at TLSSocket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at TLSSocket.Readable.push (_stream_readable.js:214:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2021-01-12T23:37:10.828Z - stopping server
+info 2021-01-12T23:37:23.704Z - starting server
+info 2021-01-12T23:37:24.551Z - server running on port 4000
+error 2021-01-12T23:37:42.092Z - MongoError: user is not allowed to do action [find] on [lives-database.users]
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at TLSSocket.ondata (_stream_readable.js:719:22)
+    at TLSSocket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at TLSSocket.Readable.push (_stream_readable.js:214:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2021-01-12T23:38:52.089Z - stopping server
+info 2021-01-12T23:38:55.382Z - starting server
+error 2021-01-12T23:38:56.881Z - MongoError: Authentication failed.
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at TLSSocket.ondata (_stream_readable.js:719:22)
+    at TLSSocket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at TLSSocket.Readable.push (_stream_readable.js:214:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2021-01-12T23:38:56.884Z - stopping server
+info 2021-01-12T23:39:17.940Z - starting server
+error 2021-01-12T23:39:18.489Z - MongoError: Authentication failed.
+    at MessageStream.messageHandler (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at TLSSocket.ondata (_stream_readable.js:719:22)
+    at TLSSocket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at TLSSocket.Readable.push (_stream_readable.js:214:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2021-01-12T23:39:18.491Z - stopping server
+info 2021-01-13T09:24:18.645Z - starting server
+info 2021-01-13T09:24:21.545Z - server running on port 4000
+info 2021-01-13T09:26:10.292Z - stopping server
+info 2021-01-13T09:34:55.418Z - starting server
+info 2021-01-13T09:34:57.747Z - server running on port 4000
+error 2021-01-13T10:10:43.489Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T10:10:49.723Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T10:11:23.759Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:35:41.693Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:35:53.006Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:35:53.839Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:35:56.655Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:36:42.014Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:36:49.463Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:37:26.748Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:37:28.412Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:37:41.278Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:37:56.769Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:38:37.294Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:38:37.367Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/lives/default-profile-image.jpg'
+error 2021-01-13T11:38:42.192Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/lives/default-profile-image.jpg'
+error 2021-01-13T11:38:43.483Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/lives/default-profile-image.jpg'
+error 2021-01-13T11:38:50.193Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:38:56.433Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:39:11.553Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:39:17.799Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+error 2021-01-13T11:39:20.795Z - Error: ENOENT: no such file or directory, open '/Users/CRIS/bootcamp/collab/letscoder-bootcamp-202010/staff/cristian-manzano/LiveSessions-project/LiveSessions-api/data/users/default-profile-image.jpg'
+info 2021-01-13T14:46:37.366Z - stopping server

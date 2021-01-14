@@ -1,6 +1,6 @@
 {
     "name": "livesessions-api-server",
     "scripts": {
-        "start": "cd LiveSessions-api; npm start"
+        "start": "cd LiveSessions-api; npm start;"
     }
 }

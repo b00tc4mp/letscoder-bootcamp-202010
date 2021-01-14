@@ -17,16 +17,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.crisappletree.LiveSessionsapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.crisappletree.LiveSessionsapp"
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "description": "Hi there!\n\nThere is my native app as a final bootcamp project\n\nHere you can register a user as an ARTIST or as a PROMOTER, do login, once you are already autneticate as an Artist you can edit your profile, add links to youtube, bandcamp, spotify, and select a profile picture also if you have some live sessions proposals you can accept or denied it. As a promoter you can also edit your profile, select a profile picture and you can search artist by genre (Rock) for example, and then submit a live petition, then you can edit the live petition if you did any mistake and you can also select a picture for the live petition, after that if the artist accepts or denies the petition you will see how the STATE of the petition change from \"pending\" ´to \"accepted\" or \"denied\".\n\nAny doubt or question you might have don't doubt to reach me at: \n\nhttps://www.linkedin.com/in/cristian-manzano/\n\nand also Have a nice day! :)",
+    "githubUrl": "https://github.com/Crisappletree"
   }
 }

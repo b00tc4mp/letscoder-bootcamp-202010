@@ -83,18 +83,18 @@ export default function App() {
       setView('sign-in')
     }
 
-    useEffect(() => {
-      LogBox.ignoreAllLogs()
-      try {
-        AsyncStorage.getItem('token')
-          .then(token => {
-            token && setView('home')
-          })
-      } catch {
-        AsyncStorage.removeItem('token')
-        setView('sign-in')
-      }
-    }, [])
+    // useEffect(() => {
+    //   LogBox.ignoreAllLogs()
+    //   try {
+    //     AsyncStorage.getItem('token')
+    //       .then(token => {
+    //         token && setView('home')
+    //       })
+    //   } catch {
+    //     AsyncStorage.removeItem('token')
+    //     setView('sign-in')
+    //   }
+    // }, [])
 
     
     if(fontsLoaded){
