@@ -24,14 +24,18 @@ function SignUpScreen({ onSignUp, onGoToSignUp, onGoToSignIn }) {
                         <View style={styles.SignUpForm}>
                             <View style={styles.signUpHeader}>
                             <TouchableOpacity onPress={onGoToSignUp}>
-                            <TextInput style={styles.registerTitle}
+                            <View style={{borderBottomWidth: 5, borderBottomColor: "purple", borderBottomRightRadius: 10, borderBottomLeftRadius: 10, marginRight: "17%", marginLeft: "15%", borderBottomWidth: 5, borderTopColor: "purple", borderTopRightRadius: 10, borderTopLeftRadius: 10, borderTopWidth: 5}}>
+                            <Text style={styles.registerTitle}
                                 editable={false}
-                            >Register</TextInput>
+                            >Sign Up</Text>
+                            </View>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={onGoToSignIn}>
-                            <TextInput style={styles.logInTitle}
+                                <View style={{borderBottomWidth: 5, borderBottomColor: "purple", borderBottomRightRadius: 10, borderBottomLeftRadius: 10, marginLeft: "20%", marginRight: "15%", borderTopColor: "purple", borderTopRightRadius: 10, borderTopLeftRadius: 10, borderTopWidth: 5}}>
+                            <Text style={styles.logInTitle}
                                 editable={false}
-                            >Log in</TextInput>
+                            >Log in</Text>
+                                </View>
                             </TouchableOpacity>
                             </View>
 
@@ -110,7 +114,6 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-        // marginTop: "5%",
         width: 40,
         height: 40,
     },
@@ -121,7 +124,6 @@ const styles = StyleSheet.create({
         height: "50%",
         alignSelf: "center",
         justifyContent: "center",
-        // backgroundColor: "white",
         shadowColor: "gray",
         shadowOffset: {
             width: 0,
@@ -141,19 +143,16 @@ const styles = StyleSheet.create({
     },
 
     registerTitle: {
-        marginBottom: "10%",
-        marginRight: "30%",
         fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
-        borderColor: "purple",
+        borderColor: "black",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
     },
 
     logInTitle: {
-        marginBottom: "10%",
         fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
@@ -186,7 +185,6 @@ const styles = StyleSheet.create({
     },
 
     roleContainer: {
-        // marginTop: "60%",
         marginBottom: "10%",
         display: "flex",
         flexDirection: "row",
@@ -199,7 +197,6 @@ const styles = StyleSheet.create({
         width: 70,
         height: 70,
         opacity: 0.4,
-        // opacity: 50,
         color: "red"
 
     },

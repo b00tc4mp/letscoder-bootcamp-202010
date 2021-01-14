@@ -5,7 +5,7 @@ import { View, StyleSheet, Image, TextInput, Dimensions, ScrollView, Text, Linki
 function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    
+
 
     return (
         <SafeAreaView>
@@ -20,16 +20,20 @@ function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
 
                         <View style={styles.SignUpForm}>
                             <View style={styles.signUpHeader}>
-                            <TouchableOpacity onPress={onGoToSignUp}>
-                            <TextInput style={styles.registerTitle}
-                                editable={false}
-                            >Register</TextInput>
-                            </TouchableOpacity>
-                            <TouchableOpacity onPress={onGoToSignIn}>
-                            <TextInput style={styles.logInTitle}
-                                editable={false}
-                            >Log in</TextInput>
-                            </TouchableOpacity>
+                                <TouchableOpacity onPress={onGoToSignUp}>
+                                    <View style={{ borderBottomWidth: 5, borderBottomColor: "purple", borderBottomRightRadius: 10, borderBottomLeftRadius: 10, marginRight: "20%", marginLeft: "15%", borderBottomWidth: 5, borderTopColor: "purple", borderTopRightRadius: 10, borderTopLeftRadius: 10, borderTopWidth: 5 }}>
+                                        <Text style={styles.registerTitle}
+                                            editable={false}
+                                        >Sign Up</Text>
+                                    </View>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={onGoToSignIn}>
+                                    <View style={{borderBottomWidth: 5, borderBottomColor: "purple", borderBottomRightRadius: 10, borderBottomLeftRadius: 10, marginRight: "20%", marginLeft: "15%", borderBottomWidth: 5, borderTopColor: "purple", borderTopRightRadius: 10, borderTopLeftRadius: 10, borderTopWidth: 5}}>
+                                        <Text style={styles.logInTitle}
+                                            editable={false}
+                                        >Log in</Text>
+                                    </View>
+                                </TouchableOpacity>
                             </View>
 
                             <View style={styles.inputsContainer}>
@@ -55,7 +59,7 @@ function SignInScreen({ onSignIn, onGoToSignUp, onGoToSignIn }) {
                                     onChangeText={password => setPassword(password)}
                                     value={password} >
                                 </TextInput>
-                                
+
                             </View>
                             <TouchableOpacity style={styles.signUpButton}
                                 onPress={() => { onSignIn({ email, password }) }}>
@@ -111,9 +115,7 @@ const styles = StyleSheet.create({
     },
 
     registerTitle: {
-        marginBottom: "10%",
-        marginRight: "30%",
-        fontFamily: "Roboto-Regular",
+        fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
         borderColor: "black",
@@ -124,14 +126,14 @@ const styles = StyleSheet.create({
     },
 
     logInTitle: {
-        marginBottom: "10%",
-        fontFamily: "Roboto-Regular",
+        fontFamily: "Roboto_Regular",
         fontSize: 30,
         borderBottomWidth: 5,
-        borderColor: "purple",
+        borderColor: "black",
         alignSelf: "center",
         justifyContent: "center",
         alignItems: "center",
+        // opacity: .2
     },
 
     inputsContainer: {

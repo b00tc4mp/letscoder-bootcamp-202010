@@ -6,7 +6,7 @@
 
 # cp -r ./LiveSessions-api ~/Desktop/LiveSessions-api-deploy
 
-cd ~/Desktop/LiveSessions-api-deploy
+# cd ~/Desktop/LiveSessions-api-deploy
 
 # heroku create livesessions
 
@@ -14,4 +14,4 @@ cd ~/Desktop/LiveSessions-api-deploy
 
 # git add --all; git commit -m 'initial deploy'; git push heroku master 
 
-heroku logs --tail
+# heroku logs --tail
