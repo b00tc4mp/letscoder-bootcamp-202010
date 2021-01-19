@@ -1,14 +1,22 @@
 const Busboy = require('busboy')
 const { saveNoteImage } = require('../../../logic')
+const jwt = require('jsonwebtoken')
 
-module.exports = (req, res, next, handleError) => {
+const { env: { JWT_SECRET } } = process
+
+module.exports = (req, res, handleError) => {
+    const { headers: { authorization }, params: { noteId } } = req
+
     try {
-        const { userId, params: { noteId } } = req
+        // Bearer <token>
+        const token = authorization.replace('Bearer ', '')
 
         const busboy = new Busboy({ headers: req.headers })
 
         busboy.on('file', (fieldname, file, filename, encoding, mimetype) => {
             try {
+                const { sub: userId } = jwt.verify(token, JWT_SECRET)
+
                 saveNoteImage(userId, noteId, file)
                     .then(() => res.status(204).send())
                     .catch(handleError)
@@ -16,10 +24,9 @@ module.exports = (req, res, next, handleError) => {
                 handleError(error)
             }
         })
-
-        req.pipe(busboy)
     } catch (error) {
         handleError(error)
     }
 
+    req.pipe(busboy)
 }

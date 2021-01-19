@@ -2,8 +2,8 @@ const { logger } = require('../../../utils')
 const { ContentError, LengthError, ValueError, FormatError, NotFoundError, AuthError, ConflictError } = require('notes-errors')
 
 module.exports = handler =>
-    (req, res, next) =>
-        handler(req, res, next, error => {
+    (req, res) =>
+        handler(req, res, error => {
             logger.log(error, 'error')
 
             let status = 500

@@ -1,17 +1,9 @@
 const { retrieveNotes } = require('../../../logic')
-const jwt = require('jsonwebtoken')
 
-const { env: { JWT_SECRET } } = process
-
-module.exports = (req, res, handleError) => {
-    const { headers: { authorization } } = req
-
-    // Bearer <token>
-    const token = authorization.replace('Bearer ', '')
-
+module.exports = (req, res, next, handleError) => {
     try {
-        const { sub: userId } = jwt.verify(token, JWT_SECRET)
-
+        const { userId } = req
+    
         retrieveNotes(userId)
             .then(notes => res.status(200).json(notes))
             .catch(handleError)

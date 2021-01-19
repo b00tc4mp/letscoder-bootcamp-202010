@@ -1,8 +1,8 @@
 const { Router } = require('express')
 const { jsonBodyParser } = require('notes-middlewares')
-const jwtParser = require('./middlewares/jwt-parser')
 
 const {
+    handleAcceptCookies,
     handleRegisterUser,
     handleAuthenticateUser,
     handleRetrieveUser,
@@ -22,13 +22,26 @@ router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
 
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))
 
-router.get('/api/users', withErrorHandling(jwtParser), withErrorHandling(handleRetrieveUser))
+router.get('/api/users', withErrorHandling(handleRetrieveUser))
 
-router.post('/api/notes', withErrorHandling(jwtParser), jsonBodyParser, withErrorHandling(handleSaveNote))
+router.post('/api/notes', jsonBodyParser, withErrorHandling(handleSaveNote))
 
-router.get('/api/notes', withErrorHandling(jwtParser), withErrorHandling(handleRetrieveNotes))
+router.get('/api/notes', withErrorHandling(handleRetrieveNotes))
 
-router.post('/api/notes/:noteId/images', withErrorHandling(jwtParser), withErrorHandling(handleSaveNoteImage))
+router.post('/api/notes/:noteId/images', withErrorHandling(handleSaveNoteImage))
+
+// const fs = require('fs')
+// const path = require('path')
+
+// router.get('/api/notes/:noteId/images', (req, res) => {
+//     const { params: { noteId } } = req
+
+//     const file = fs.createReadStream(path.join(__dirname, `../../data/notes/${noteId}.jpg`))
+
+//     res.setHeader('Content-type', 'image/jpeg')
+
+//     file.pipe(res)
+// })
 
 router.get('/api/notes/:noteId/images', withErrorHandling(handleRetrieveNoteImage))
 

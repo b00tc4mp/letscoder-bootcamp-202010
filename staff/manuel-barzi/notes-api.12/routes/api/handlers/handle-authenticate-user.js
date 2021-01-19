@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 
 const { env: { JWT_SECRET, JWT_EXP } } = process
 
-module.exports = (req, res, next, handleError) => {
+module.exports = (req, res, handleError) => {
     const { body: { email, password } } = req
 
     try {

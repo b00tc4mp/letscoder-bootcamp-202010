@@ -1,6 +1,6 @@
 const { retrieveNoteImage } = require('../../../logic')
 
-module.exports = (req, res, next, handleError) => {
+module.exports = (req, res, handleError) => {
     const { params: { noteId } } = req
 
     try {
