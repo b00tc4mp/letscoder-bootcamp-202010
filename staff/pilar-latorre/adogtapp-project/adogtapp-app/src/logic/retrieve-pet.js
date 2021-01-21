@@ -1,5 +1,6 @@
 import { call } from '../utils'
 import {  validateCallback, validateId } from './helpers/validations'
+import context from './context'
 
 /**
  * Retrieves a pet by its id
@@ -13,11 +14,13 @@ import {  validateCallback, validateId } from './helpers/validations'
  * 
  */
 
-export default function (id, callback) {
+export default (function (id, callback) {
     validateId(id)
     validateCallback(callback)
 
-    call('GET', `http://localhost:4000/api/pets/${id}`, {'Content-type': 'application/json'},
+    const { API_URL } = this
+
+    call('GET', `${API_URL}/pets/${id}`, {'Content-type': 'application/json'},
         null,
         (status, response) => {
             if (status === 0)
@@ -32,4 +35,4 @@ export default function (id, callback) {
 
             callback(null, pet)
         })
-}
+}).bind(context)

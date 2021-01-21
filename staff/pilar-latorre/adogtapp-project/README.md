@@ -69,3 +69,4 @@ If you are a shelter sign in & sing up,create, update and delete info about the 
 - Change to Promisse App part
 - URL friendly
 - Responsive desktop
+- Geo

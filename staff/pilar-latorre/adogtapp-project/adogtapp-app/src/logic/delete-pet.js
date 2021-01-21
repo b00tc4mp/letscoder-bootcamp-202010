@@ -1,4 +1,5 @@
 import { call } from '../utils'
+import context from './context'
 import {  validateCallback, validateId } from './helpers/validations'
 
 /**
@@ -12,11 +13,14 @@ import {  validateCallback, validateId } from './helpers/validations'
  * @throws {Error} if status is not 200
  */
 
-export default function ( token, id, callback) {
+export default (function ( token, id, callback) {
     validateId(id)
     validateCallback(callback)
 
-    call('DELETE', `http://localhost:4000/api/pets/${id}`, {Authorization: `Bearer ${token}`},
+
+    const { API_URL } = this
+
+    call('DELETE', `${API_URL}/pets/${id}`, {Authorization: `Bearer ${token}`},
     '',
         (status, response) => {
             if (status === 0)
@@ -30,4 +34,4 @@ export default function ( token, id, callback) {
 
             callback(null)
         })
-}
+}).bind(context)

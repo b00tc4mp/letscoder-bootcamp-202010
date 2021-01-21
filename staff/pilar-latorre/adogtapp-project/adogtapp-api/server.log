@@ -2405,3 +2405,34 @@ info 2020-12-21T13:03:02.552Z - stopping server
 info 2020-12-21T13:04:32.044Z - starting server
 info 2020-12-21T13:04:32.190Z - server running on port 4000
 info 2020-12-21T14:10:38.215Z - stopping server
+info 2020-12-21T14:20:55.880Z - starting server
+info 2020-12-21T14:20:56.211Z - server running on port 4000
+info 2020-12-21T22:24:57.291Z - starting server
+info 2020-12-21T22:24:57.716Z - server running on port 4000
+info 2020-12-25T07:31:10.244Z - starting server
+info 2020-12-25T07:31:10.441Z - server running on port 4000
+info 2021-01-08T19:13:22.394Z - starting server
+info 2021-01-08T19:13:22.639Z - server running on port 4000
+info 2021-01-12T17:53:17.205Z - starting server
+info 2021-01-12T17:53:18.088Z - server running on port 4000
+info 2021-01-15T18:40:18.788Z - starting server
+info 2021-01-21T12:14:38.424Z - starting server
+error 2021-01-21T12:15:08.452Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\connection.js:832:32)
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\index.js:345:10
+    at C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\index.js:1135:10)
+    at Mongoose.connect (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-data\node_modules\mongoose\lib\index.js:344:20)
+    at Object.<anonymous> (C:\Users\pi-la\Documents\bootcamp\collab\letscoder-bootcamp-202010\staff\pilar-latorre\adogtapp-project\adogtapp-api\index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+info 2021-01-21T12:15:08.455Z - stopping server
+info 2021-01-21T12:23:10.271Z - starting server
+info 2021-01-21T12:23:10.476Z - server running on port 4000
+info 2021-01-21T12:25:29.878Z - stopping server

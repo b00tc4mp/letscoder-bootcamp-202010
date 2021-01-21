@@ -1,4 +1,5 @@
 import { call } from '../utils'
+import context from './context'
 import { validateuserName, validateEmail, validatePassword, validateAddress, validateCity, validatePhone, validateCallback } from './helpers/validations'
 
 /**
@@ -18,7 +19,7 @@ import { validateuserName, validateEmail, validatePassword, validateAddress, val
  * @throws {Error} if status is not 201
  */
 
-export default function (userName, email, password, address, city, phone, description, callback) {
+export default (function (userName, email, password, address, city, phone, description, callback) {
     validateuserName(userName)
     validateEmail(email)
     validatePassword(password)
@@ -27,8 +28,9 @@ export default function (userName, email, password, address, city, phone, descri
     validatePhone(phone)
     validateCallback(callback)
 
+    const { API_URL } = this
 
-    call('POST', 'http://localhost:4000/api/users', { 'Content-type': 'application/json' },
+    call('POST', `${API_URL}/users`, { 'Content-type': 'application/json' },
         JSON.stringify({ userName, email, password, address, city, phone, description }),
         (status, response) => {
             if (status === 0)
@@ -41,4 +43,4 @@ export default function (userName, email, password, address, city, phone, descri
 
             callback(null)
         })
-}
+}).bind(context)

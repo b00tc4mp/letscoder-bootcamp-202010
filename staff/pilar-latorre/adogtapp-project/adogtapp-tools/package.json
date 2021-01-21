@@ -1,0 +1,7 @@
+{
+    "name": "adogtapp-api-server",
+    "scripts": {
+        "start": "cd adogtapp-api; npm start;"
+    }
+
+}
