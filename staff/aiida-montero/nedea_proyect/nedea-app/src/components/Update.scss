@@ -77,10 +77,11 @@
       }
       
       .login-title, .login-description {
-        border-radius: 50px;
-        background: transparent;
+        border-radius: 10px;
+        padding: 10px;
         border: 0 solid;
         border-bottom: 1px solid rgba(white, .5);
+  
   
         color: white;
         display: block;

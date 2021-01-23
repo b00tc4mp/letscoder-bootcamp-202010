@@ -27,13 +27,13 @@ export default function ({ onSavePictogram, pictograms,onDeletePictogram }) {
   return <section className="update-image">
     <h1>MIS PICTOGRAMAS</h1>
     <Link className="link_profile" to='/profile'><button class ="form_favorite">Mis pictogramas favoritos</button></Link>
-    {!showForm && <button className = "form_update" onClick = {handleShowForm}>Sube tu pictograma</button>}
+    {!showForm && <button className = "form_update" onClick = {handleShowForm}>Crea tu pictograma</button>}
     {showForm && <> <form onSubmit={handleSubmit} className="update" >
       <p class="login-text"></p>
       <input type="text" name="title" class="login-title" placeholder="Title" />
       <input type="text" name="description" class="login-description" required="true" placeholder="Description" />
       <input type="file" id="image" name="image" />
-      <button class="send-submit" >Sube tu pictograma</button>
+      <button class="send-submit" >Crea tu pictograma</button>
     </form>
     <button className = "form" onClick = {handleShowForm}>Ocultar formulario</button>
     </>}
