@@ -1,0 +1,29 @@
+header {}
+h1 {font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}
+body {font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bolder}
+
+header, section, footer, aside {border: 1px solid black; }
+
+body {text-align: center;}
+
+.agrupar{
+    width: 960px;
+    border:1px solid black;
+    background: burlywood;
+    margin:auto;
+    margin-top:30px;
+    padding:  60px; 
+    
+}
+
+.head li{
+    list-style: none;   
+    padding: 5px;
+}
+
+.section {
+
+margin: 20px;
+}

@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* calculator spacial organisation*/
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+/* display styles*/
+.display {
+    border: 0px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30px;
+    background:#F4F4F4 ;
+    border: 3px solid white;
+    text-align: center;
+    font-size: 8vw;
+    color: #E70000;
+    font-weight: bold;
+    width: 50vw;
+    height: 13vw; 
+}
+
+.display span {
+  margin-top: 2vw;
+}
+
+/* botonera styles*/
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 13vw 13vw 13vw 13vw;
+    width:50vw;
+}
+
+.grid button  {
+    border: 0 px;
+    background: #E9E9E9;
+    text-align: center;
+    font-size: 7vw;
+    color: #E70000;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 5vw auto;
+}
+
+.grid button:hover {
+    border: 3px solid #E70000;
+    background: #FFDCDC;
+    text-align: center;  
+}
+
+.grid button:active {
+    border: 0px;
+    color:white;
+    background: #E70000;
+}
+
+/* Equal styles */
+
+.igual {
+    display: grid;
+}
+.igual button {
+    grid-template-columns: 100%;
+    grid-template-rows: 30px;
+    background: #E9E9E9;
+    text-align: center;
+    font-size: 8vw;
+    color: #E70000;
+    font-weight: bold;
+    border: 3px solid white;
+    width: 50vw;
+    height: 10vw;
+}
+
+.igual button:hover {
+    border: 3px solid #E70000;
+    background: #FFDCDC;
+    text-align: center;
+}
+
+.igual button:active{
+    border:0px;
+    color:white;
+    background: #E70000;
+}

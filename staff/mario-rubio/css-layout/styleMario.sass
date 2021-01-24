@@ -1,0 +1,137 @@
+body 
+    margin: 0 auto
+    padding: 0px
+    background-color: #666060 
+    max-width: 1080px
+
+header
+    
+    .fijo
+        height: 50px
+        background-color: orange
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+        &__etiquetas
+            border: 2px solid red
+            background: blue
+            &:hover
+                height: 300px
+    
+
+
+        
+.carrusel
+    
+    position: relative
+    &__imagen
+        max-width: 100%
+    &__fi
+        position: absolute
+        top: 50% //truco para que lo situe a la mitad//
+        left: 0
+        transform: translateY(-50%) // para centrar a la altura del texto de la imgagen//
+    &__fd
+        position: absolute
+        top: 50%
+        right: 0%
+        transform: translateY(-50%)
+.puntos
+    text-align: center
+
+.container 
+    max-width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: repeat (6, 1fr)
+    text-align: center
+    gap: 1px
+    border: 1px solid black
+    height: 600px
+    
+  
+
+@mixin secciones1
+    background-color:#464343  
+    border: 2px solid black
+
+.item1 
+    @include secciones1
+    grid-area: 1/1/3/2
+
+.item2 
+    @include secciones1
+    grid-area: 1/2/2/4
+    
+.item3 
+    @include secciones1
+    grid-area: 2/2/3/4
+  
+.item4 
+    @include secciones1
+    grid-area: 3/1/4/3
+
+.item5 
+    @include secciones1
+    grid-area: 4/1/5/3
+
+.item6 
+    @include secciones1
+    grid-area: 3/3/5/4
+
+.item7 
+    @include secciones1
+    grid-area: 5/1/7/2
+
+.item8 
+    @include secciones1
+    grid-area: 5/2/6/4
+
+.item9 
+    @include secciones1
+    grid-area: 6/2/7/4
+
+
+@mixin secciones2
+    background-color:#b80a0a  
+    border: 2px solid black
+
+.item10 
+    @include secciones2
+    grid-area: 1/1/3/2
+
+.item11 
+    @include secciones2
+    grid-area: 1/2/2/4
+    
+.item12 
+    @include secciones2
+    grid-area: 2/2/3/4
+  
+.item13 
+    @include secciones2
+    grid-area: 3/1/4/3
+
+.item14 
+    @include secciones2
+    grid-area: 4/1/5/3
+
+.item15 
+    @include secciones2
+    grid-area: 3/3/5/4
+
+.item16 
+    @include secciones2
+    grid-area: 5/1/7/2
+
+.item17 
+    @include secciones2
+    grid-area: 5/2/6/4
+
+.item18 
+    @include secciones2
+    grid-area: 6/2/7/4
+
+
+@media screen and ( max-width:600px  )

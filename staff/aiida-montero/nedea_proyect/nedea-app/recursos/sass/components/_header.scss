@@ -1,0 +1,39 @@
+header {
+  position: relative;
+  flex: none;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  background: #fefffb;
+  cursor: pointer;
+  border: 1px solid black;
+
+  &__logouno {
+    font-size: 2rem;
+    color: #3e6aac;
+    font-weight: 100;
+    margin-left: 20px;
+  }
+  &__logout {
+    position: absolute;
+    right: 60px;
+    padding: 4px 6px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 21px;
+    cursor: pointer;
+    &:hover {
+      color: #c0d9ed;
+    }
+  }
+  .avatar {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  
+}
+

@@ -1,0 +1,141 @@
+/* html {
+  font-size: 62.5%;
+  background-image: url("../imagenes/autismo.png"); 
+  background-size: cover;
+}  */
+
+* {
+  font-family: "Mada";
+
+}
+header {
+  background-color: #2d6ba8;
+  border: none;
+}
+body {
+  background-color: none;
+}
+
+h1 {
+  width: 100%;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: #939393;
+}
+.initial {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.863);
+  min-height: 55vh;
+  &_form {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.863);
+    flex-direction: column;
+  }
+  &_body {
+    min-width: 100%;
+    background-color: transparent;
+    font-size: 62.5%;
+    background-image: url("../imagenes/autismo.png");
+    background-size: cover;
+  }
+}
+
+.logo_central_initial {
+  max-height: 65vh;
+}
+.flecha {
+  background-color: #ffffff00;
+  color: #939393;
+  border: 3px solid;
+  padding: 10px;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.link  {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+a  {
+  text-decoration: none;
+    margin: 0 auto;
+    color: black;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+@media (max-width: 600px) {
+  body {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .logo_central_initial {
+    margin: auto;
+    width: 45vh;
+  }
+  .flecha {
+    margin-top: auto;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 10px;
+  }
+  .initial_body {
+    background-image: none;
+  }
+
+  .registrate {
+    text-decoration: none;
+    margin: 0 auto;
+    color: #fdfdfd;
+    font-size: 18px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border: 7px solid #727377 ;
+    width: 16rem;
+    height: 2.5rem;
+    background-color: #727377;
+    
+  }
+}
+
+.identificate {
+  text-decoration: none;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border: 7px solid black;
+    width: 16rem;
+    height: 2.5rem;
+    background-color: black;
+}
+
+.entra {
+  text-decoration: none;
+  margin: 0 auto;
+  color: #fffdfd;
+  font-size: 18px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  border: 7px solid #ee4949;
+  width: 16rem;
+  height: 2.5rem;
+  background-color: #ee4949;
+}

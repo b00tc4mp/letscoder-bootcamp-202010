@@ -1,0 +1,69 @@
+*{
+box-sizing: border-box;
+font-weight: normal;
+font-family: sans-serif;
+}
+body{
+    background:linear-gradient(to right, white, rgba(109, 109, 109, 0.795));
+    margin: 0;
+    padding:0;   
+}
+.calculadora {
+    border: 2px solid black;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(to left, white, rgba(109, 109, 109, 0.438));
+    min-height: 100vh;
+    justify-content: center;
+    /*grid stuff*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: repeat(5,1fr); 
+}
+.calculadora > button {
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 5px;
+    background: grey;
+    border: 2px solid #111;
+    padding: 20px;
+    color: black;
+
+}
+.calculadora > button:hover {
+    background-color: rgba(128, 128, 128, 0.6);
+}
+.display {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #111;
+    text-align: right;
+   
+    grid-area: 1 / 1 / 1 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.display .numero-actual {
+    font-size:  40px;
+    align-items: end;
+    color: black;
+}
+.display .numero-anterior{
+    font-size: 20px;
+    color: rgba(0,0,0,0.7);
+}
+.igual {
+    grid-column: span 3 ;
+}
+.back {
+    font-size: 5px;
+}

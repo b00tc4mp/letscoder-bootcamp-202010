@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+.dialog {
+  border: 0.2rem solid #0091ff;
+  border-radius: 1rem;
+  background-color: #b0e6fc;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 30vw;
+  text-align: right;
+  box-shadow: 0 0 0.5rem slategray;
+}
+.dialog__title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0091ff;
+  text-align: left;
+}
+.dialog__body {
+  font-family: Oswald;
+  text-align: justify;
+}
+.dialog--danger {
+  border-color: tomato;
+  background-color: #fabbb0;
+}
+.dialog--danger > .dialog__title {
+  color: tomato;
+}
+.dialog--danger > .dialog__button {
+  background-color: tomato;
+}
+.dialog--success {
+  border-color: #8ce900;
+  background-color: #defcb0;
+}
+.dialog--success > .dialog__title {
+  color: #8ce900;
+}
+.dialog--success > .dialog__button {
+  background-color: #8ce900;
+}
+
+.button {
+  background-color: #0091ff;
+  color: white;
+  border: 0 none transparent;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.button--cancel {
+  background-color: white;
+  color: black;
+}
+.button--success {
+  background-color: #8ce900;
+}
+.button--danger {
+  background-color: tomato;
+}
+
+/*# sourceMappingURL=style.css.map */

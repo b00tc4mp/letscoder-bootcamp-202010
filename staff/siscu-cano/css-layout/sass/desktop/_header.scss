@@ -1,0 +1,30 @@
+.header {
+    @media (min-width: $breakpoint-desktop) {
+        & {
+            max-width: 1080px;
+        }
+        &-fixed {
+            position: fixed;
+            max-width: inherit;
+            width: 100%;
+            z-index: 10;
+            background: #fff;
+            &>div {
+                justify-content: flex-end;
+            }
+            &__login {
+                display: flex;
+                align-items: center;
+                color: #ccc;
+                text-decoration-line: none;
+            }
+            &__nav-mobile {
+                display: none;
+            }
+        }
+        &__nav-desktop {
+            padding-top: 72px;
+            text-align: right;
+        }
+    }
+}

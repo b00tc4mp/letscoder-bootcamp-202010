@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    background-color: yellow;
+    grid-gap: 10px;
+}
+
+.board__card {
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: transform 2s;
+}
+
+.board__card-front {
+    position: absolute;
+    transform: translateZ(1px);
+}
+
+.board__card-back {
+    position: absolute;
+}
+
+.board__card--flip {
+    transform: rotateY(0deg)
+}
+
+.board__button {
+    background-color: rgb(0, 145, 255);
+    color: white;
+    border-radius: .5rem;
+    border-style: none;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.board__button--cancel {
+    background-color: white;
+    color: black;
+}
+
+.board__button--success {
+    background-color: rgb(140, 233, 0);
+}
+
+.board__button--danger {
+    background-color: tomato;
+}

@@ -1,0 +1,6 @@
+.hide-mobile {
+    display: none;
+    @media (min-width: $breakpoint-desktop) {
+        display: block;
+    }
+}

@@ -1,0 +1,79 @@
+
+.header_home {
+  position: relative;
+    flex: none;
+    display: flex;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    background: #00000000;
+    direction: rtl;
+  
+    border-bottom: 4px solid #9E9E9E;
+    background-color: white;
+
+
+  &__logouno {
+    font-size: 2rem;
+    color: #3e6aac;
+    font-weight: 100;
+    margin-left: 20px;
+  }
+  &__logout {
+    position: absolute;
+    right: 60px;
+    padding: 4px 6px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 21px;
+    cursor: pointer;
+    &:hover {
+      color: #c0d9ed;
+    }
+  }
+  .avatar {
+    margin-right: 10px;
+    gap: 10px;
+    color: white;
+    
+  .exit{
+    border: none;
+    background-color: #ffffff;
+    color: #ee4949;
+    outline: none;
+    padding-left: 15px;
+  }
+    
+  }
+
+  .avatar__initials{
+    margin: 0px;
+    color: black;
+    background-color: #ffffff;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .logo_puzzle {
+    color: white;
+    background-color: #ffffff;
+
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    cursor: pointer;
+  .logo_button{
+    max-width: 6vh;
+  }
+    
+
+  }
+
+}
+
+@media (min-width: 600px) {
+  
+}

@@ -1,0 +1,75 @@
+.body {
+    background-attachment: black;
+    
+}
+
+.mostrador {
+    grid-column: 1/4;
+    padding: 1.5vw;
+    background-color: skyblue;
+    text-align:center;
+    margin-left: 39.5vw;
+    margin-right: 50vw;
+    width:22vw;
+    margin-top:1.5vw;
+    font-size:2vw;
+}
+#resultado  {
+    grid-column: 1/4;
+    padding: 1.5vw;
+    text-align:center;
+    margin-left: 40vw;
+    width: 50vw;
+    
+
+}
+
+
+    
+
+
+.botones button {
+    display: block;
+
+}
+
+.blu {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10vw 10vw 10vw 10vw;
+    gap: 1vw;
+    margin: 39vw;   
+    text-align:center;
+    margin-top: 1vw;
+
+
+
+}
+
+
+.button {
+    border: 3vw solid;
+    gap: 1vw;
+    padding: 20vw;
+    height: -500vw;
+    border-style: double;
+}
+
+.boton-igual {
+    grid-column: 1/5;
+    padding: 1vw;
+
+    
+}
+
+.titulos {
+    padding: 50vw;
+    margin: 25vw;
+    margin-top: 10vw;
+    height: 30vw;
+    font-size:2vw;
+    font-weight: 1000;
+    color:black;
+    margin-left: -5vw;
+    height: -50vw;
+}

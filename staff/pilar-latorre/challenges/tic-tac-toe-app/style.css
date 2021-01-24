@@ -1,0 +1,53 @@
+body{
+    background: url(imagen2.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+.board{
+    
+    border: 2vw solid rgb(150, 44, 109);
+    background-color: rgb(150, 44, 109);
+    display: grid;
+    grid-template-columns: 31% 31% 31%; 
+    grid-template-rows: 7vw 7vw 7vw;
+    gap: 0.5vw;
+    margin-top: 5vw;
+    margin-left: 60vw;
+    width: 25vw;
+    height: 25vw;   
+
+}
+
+.board button{
+    
+    font-size: 3vw;
+    border-radius: 25%;
+}
+
+.display{
+
+    margin-top: 5vw;
+    margin-left: 64vw;
+    width: 20vw;
+    height: 4vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30px;
+    text-align: center;
+    font-size: 5vw;
+    color: palevioletred;
+}
+
+
+.start{
+
+
+    width: 24vw;
+    height: 4vw;
+    background-color: indigo;
+    font-weight: bold;
+    color: lavender;
+    grid-column: 1/4;
+   
+}    

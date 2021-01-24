@@ -1,0 +1,194 @@
+.update-image {
+      min-height: 50vw;
+      h2{
+          text-align: center;
+          color: black;
+          font-size: 30px;
+          font-family: 'Mada' ;
+          margin-top: 10px;
+      }
+      body {
+        font-family: 'Mada';
+        font-weight: 100;
+        display: flex;
+        overflow: hidden;
+        background-color: #939393;
+      }
+      input {
+        ::-webkit-input-placeholder {
+           color: rgba(255,255,255,0.7);
+        }
+        ::-moz-placeholder {
+           color: rgba(255,255,255,0.7);  
+        }
+        :-ms-input-placeholder {  
+           color: rgba(255,255,255,0.7);  
+        }
+        &:focus {
+          outline: 0 transparent solid;
+          ::-webkit-input-placeholder {
+           color: rgba(0,0,0,0.7);
+          }
+          ::-moz-placeholder {
+             color: rgba(0,0,0,0.7);  
+          }
+          :-ms-input-placeholder {  
+             color: rgba(0,0,0,0.7);  
+          }
+        }
+      }
+      
+      .update{
+        display: grid;
+        background: #222;
+        box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+        min-height: 10rem;
+        margin: auto;
+        max-width: 80%;
+        padding: .5rem;
+        background-color:#9e9e9e;
+        border-radius: 15px;
+        margin-top: 15px;
+        margin-bottom:25px;
+        #image{
+          border: 1px solid #000000;
+          border-radius: 15px;
+          color: #ffffff;
+          cursor: pointer;
+          background-color: #ee4949;
+          
+        }
+  
+        
+      }
+      .login-text {
+        //background: hsl(40,30,60);
+        //border-bottom: .5rem solid white;
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        max-width: 50%;
+        padding: .5rem;
+        text-align: center;
+        //text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
+        .fa-stack-1x {
+          color: black;
+        }
+      }
+      
+      .login-title, .login-description {
+        border-radius: 10px;
+        padding: 10px;
+        border: 0 solid;
+        border-bottom: 1px solid rgba(white, .5);
+  
+  
+        color: white;
+        display: block;
+        margin: 1rem;
+        padding: .5rem;
+        transition: 250ms background ease-in;
+        width: calc(100% - 3rem);
+        &:focus {
+          background: white;
+          color: black;
+          transition: 250ms background ease-in;
+        }
+      }
+      .send-submit {
+        border: 7px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #080808;
+        color: white;
+        display: block;
+        margin: 1rem auto;
+        padding: .25rem;
+        height: 2.5rem;
+        width: 16rem;
+        font-size: 18px;
+        &:hover, &:focus {
+          background: white;
+          color: black;
+        
+        }
+      }
+      h4{
+      font-size: 15px;
+      margin-top: 10px;
+      }
+      h3{
+        margin-top: 15px;
+        text-align: center;
+      }
+}
+
+.link_profile{
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+#image{
+margin: 0;
+}
+
+.form_favorite{
+    margin: 0 auto;
+    width: 16rem;
+    height: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    padding: 6px;
+    background-color: #ee4949;
+    color: white;
+    border-radius: 10px;
+    border: 7px solid #ee4949;
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+.form_update{
+  margin: 0 auto;
+  width: 16rem;
+  height: 2.5rem;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  padding: 6px;
+  background-color: #040404;
+  color: white;
+  border-radius: 10px;
+  border: 7px solid #090909;
+  margin-bottom: 15px;
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.form{
+  margin: 0 auto;
+  width: 16rem;
+  height: 2.5rem;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  padding: 6px;
+  background-color: #ee4949;
+  color: white;
+  border-radius: 10px;
+  border: 7px solid #ee4949;
+  margin-bottom: 15px;
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+}

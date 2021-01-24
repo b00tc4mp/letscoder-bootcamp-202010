@@ -1,0 +1,30 @@
+.u-box {
+  padding: 20px 30px;
+  background: #93939375;
+  border: 20px solid #fff;
+  & > h1 {
+    font-family: 'Mada';
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #939393;
+  }
+}
+
+%box {
+  position: relative;
+  background: #f2f2f2;
+  border: 1px solid #8ebed2;
+  box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+  border-radius: 3px/6px;
+  padding: 20px;
+  &:before {
+    content: "";
+    /* box-shadow: rgba(142, 193, 218, 41%) 0 5px 3px; */
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}

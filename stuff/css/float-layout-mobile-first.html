@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- WARN this layout is obsolote and it does not respect the real purpose of the float -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    header
+    nav | main | aside
+    footer
+-->
+
+<body>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-color: thistle;
+            height: 100%;
+        }
+
+        .header,
+        .footer {
+            width: 100%;
+            height: 10%;
+            background-color: tomato;
+        }
+
+        .nav,
+        .main,
+        .aside {
+            float: none;
+            width: 100%;
+        }
+
+        .nav,
+        .aside {
+            height: 10%;
+        }
+
+        .main {
+            height: 60%;
+        }
+
+        .nav,
+        .aside {
+            background-color: greenyellow;
+        }
+
+        .main {
+            background-color: skyblue;
+        }
+
+        @media screen and (min-width: 600px) {
+            .main {
+                width: 80%;
+            }
+            
+            .nav,
+            .main,
+            .aside {
+                height: 80%;
+            }
+
+            .nav, .aside {
+                width: 10%;
+            }
+
+            .nav,
+            .main {
+                float: left;
+            }
+
+            .aside {
+                float: right;
+            }
+        }
+    </style>
+
+    <div class="header">header</div>
+    <div class="nav">nav</div>
+    <div class="main">main</div>
+    <div class="aside">aside</div>
+    <div style="clear: both;"></div>
+    <div class="footer">footer</div>
+</body>
+
+</html>

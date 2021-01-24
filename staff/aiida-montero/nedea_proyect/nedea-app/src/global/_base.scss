@@ -1,0 +1,47 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 15px;
+  background-color: #939393ba;
+  font-family: 'Mada';
+}
+ body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'Mada';
+  font-weight: 100;
+  color: #5b5b5b;
+  border-bottom: 4px solid #939393;
+  border-top: 4px solid #939393;
+  display: flex;
+  flex-direction: column;
+  min-width: 70vw; 
+
+  
+  & > main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+} 
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: stretch;
+  background-color: white
+
+} 
+@media (min-width: 600px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

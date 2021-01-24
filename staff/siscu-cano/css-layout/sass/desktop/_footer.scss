@@ -1,0 +1,18 @@
+.footer {
+    @media (min-width: $breakpoint-desktop) {
+        &__info {
+            flex-wrap: nowrap;
+        }
+        &__contact {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            >div:first-child {
+                border: none;
+            }
+        }
+        &__newsletter {
+            border: none;
+        }
+    }
+}
