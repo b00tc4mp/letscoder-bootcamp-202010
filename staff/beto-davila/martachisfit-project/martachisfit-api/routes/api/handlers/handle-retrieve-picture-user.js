@@ -2,9 +2,9 @@ const { retrievePictureUser } = require('../../../logic')
 
 module.exports = (req, res, handleError) => {
 
-    const { params: { userId } } = req
-
     try {
+        const { params: { userId } } = req
+
         retrievePictureUser(userId)
             .then(stream => {
                 res.setHeader('Content-type', 'image/jpeg')

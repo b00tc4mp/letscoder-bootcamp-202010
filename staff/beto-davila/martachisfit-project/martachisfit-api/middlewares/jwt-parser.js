@@ -1,21 +1,21 @@
-const { retrieveSavedWorkouts } = require('../../../logic')
+const handleRetrieveChosenArticle = require("../routes/api/handlers/handle-retrieve-chosen-article")
 
 const jwt = require('jsonwebtoken')
-
 const { env: { JWT_SECRET } } = process
 
-module.exports = (req, res, handleError) => {
-
+module.exports = (req, res, next) => {
     try {
         const { headers: { authorization } } = req
 
+        // Bearer <Token>
         const token = authorization.replace('Bearer ', '')
 
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
-        retrieveSavedWorkouts(userId)
-            .then(result => res.status(200).json(result))
-            .catch(handleError)
+
+        req.userId = userId
+        next()
     } catch (error) {
-        handleError(error)
+        //handleError(error)
+        console.error(error)
     }
 }

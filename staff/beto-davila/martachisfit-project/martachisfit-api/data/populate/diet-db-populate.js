@@ -1,15 +1,14 @@
 require('dotenv').config()
 
-const mongoose = require('mongoose')
-// const { User } = require('martachisfit-data')
-const { Diet } = require('martachisfit-data') 
+const { models: { Diet }, mongoose } = require('martachisfit-data')
 
 const { env: { MONGODB_URL } } = process
 
 mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
         Diet.insertMany([
-            {type: "keto", calories: 1500, 
+            {
+                type: "keto", calories: 1500,
                 meals: {
                     meal1: "Tortilla (2 huevos) + queso curado (25gr), espinacas y aceitunas negras (30gr)",
                     meal2: "Ensalada grande variada con 1/2 aguacate, nueces (40gr) y pollo a la plancha (100gr)",
@@ -17,12 +16,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                 },
                 macros: {
                     carbs: "10%",
-                    fats:  "75%",
+                    fats: "75%",
                     protein: "15%"
                 },
             },
 
-            {type: "keto", calories: 2000, 
+            {
+                type: "keto", calories: 2000,
                 meals: {
                     meal1: "Yogur griego (150gr) + almendras (50gr) + arándanos (50gr)",
                     meal2: "125g cabecero de lomo (embutido) + 200gr de espinacas al vapor",
@@ -30,12 +30,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                 },
                 macros: {
                     carbs: "10%",
-                    fats:  "70%",
+                    fats: "70%",
                     protein: "20%"
                 },
             },
 
-            {type: "keto", calories: 2500, 
+            {
+                type: "keto", calories: 2500,
                 meals: {
                     meal1: "Tortilla (3 huevos) talla L + queso curado (35gr), espinacas al vapor (200gr) y aceitunas negras (50gr)",
                     meal2: "Salmón (150gr), brócoli al vapor (200gr), tomate (50gr) y 15ml de aceite de oliva",
@@ -43,12 +44,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                 },
                 macros: {
                     carbs: "5%",
-                    fats:  "70%",
+                    fats: "70%",
                     protein: "25%"
                 },
             },
 
-            {type: "mediterranean", calories: 1500, 
+            {
+                type: "mediterranean", calories: 1500,
                 meals: {
                     meal1: "Leche desnatada (200ml) + Cereales sin azúcar (tipo copo de maíz) (30g)+ Fruta (150g)",
                     meal2: "Pan (60g) + Jamón york o pavo (2 lonchas =30g) o atún al natural (60g)",
@@ -57,12 +59,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                 },
                 macros: {
                     carbs: "40%",
-                    fats:  "35%",
+                    fats: "35%",
                     protein: "25%"
                 },
             },
 
-            {type: "mediterranean", calories: 2000, 
+            {
+                type: "mediterranean", calories: 2000,
                 meals: {
                     meal1: "Leche semidesnatada (250ml)+ Tostada de pan de barra (50g)+ Aceite de oliva virgen (5g)+ Tomate natural (30g) + Fruta (100g)",
                     meal2: "Fruta (120g) + Yogur natural (125g)",
@@ -71,12 +74,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                 },
                 macros: {
                     carbs: "35%",
-                    fats:  "30%",
+                    fats: "30%",
                     protein: "35%"
                 },
             },
 
-            {type: "mediterranean", calories: 2500, 
+            {
+                type: "mediterranean", calories: 2500,
                 meals: {
                     meal1: "2 yogures natural (250g)+ Copos de avena (50g)+ Fruta (150g)+ Frutos secos al natural (15g)",
                     meal2: "Pan de barra (60g)+ Jamón york o pavo (50g).",
@@ -85,12 +89,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                 },
                 macros: {
                     carbs: "40%",
-                    fats:  "25%",
+                    fats: "25%",
                     protein: "35%"
                 },
             },
 
-            {type: "vegan", calories: 1500, 
+            {
+                type: "vegan", calories: 1500,
                 meals: {
                     meal1: "200 ml de bebida vegetal, 30gr de cereles de maíz y una pieza de fruta mediana",
                     meal2: "Your de soja (125gr) y pieza de fruta mediana",
@@ -99,12 +104,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
                 },
                 macros: {
                     carbs: "55%",
-                    fats:  "20%",
+                    fats: "20%",
                     protein: "25%"
                 },
             },
 
-            {type: "vegan", calories: 2000, 
+            {
+                type: "vegan", calories: 2000,
                 meals: {
                     meal1: "Leche vegetal (250ml) con café y tostadas de pan integral (60g) con aguacate (50g) y tomate (50g), pieza de fruta (150g)",
                     meal2: "Yogur entero natural (125g) con frutos secos (almendras/nueces) (50g).",
@@ -114,12 +120,13 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
 
                 macros: {
                     carbs: "45%",
-                    fats:  "25%",
+                    fats: "25%",
                     protein: "30%"
                 },
             },
 
-            {type: "vegan", calories: 2500, 
+            {
+                type: "vegan", calories: 2500,
                 meals: {
                     meal1: "Leche vegetal (300ml), copos de avena (75gr), 1 pieza de fruta grande (+200gr)",
                     meal2: "1 plátano grande + 50gr de alguna crema de frutos secos (cacahuete, almendra...).",
@@ -129,12 +136,12 @@ mongoose.connect(MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true 
 
                 macros: {
                     carbs: "45%",
-                    fats:  "25%",
+                    fats: "25%",
                     protein: "30%"
                 },
             }
 
-            ])
+        ])
             .then(() => console.log('Diets inserted'))
             .catch(error => console.error('There was an error: ', error))
     })

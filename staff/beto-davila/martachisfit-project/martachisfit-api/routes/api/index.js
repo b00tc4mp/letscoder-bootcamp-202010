@@ -1,5 +1,6 @@
 const { Router } = require('express')
 const jsonBodyParser = require('../../middlewares/json-body-parser')
+const jwtParser = require('../../middlewares/jwt-parser')
 
 const {
     handleRegisterUser,
@@ -38,7 +39,7 @@ const withErrorHandling = require('./helpers/handle-error')
 router.post('/api/users', jsonBodyParser, withErrorHandling(handleRegisterUser))
 
 // retrieve user
-router.get('/api/users', withErrorHandling(handleRetrieveUser))
+router.get('/api/users', jwtParser, withErrorHandling(handleRetrieveUser))
 
 // authenticate user
 router.post('/api/users/auth', jsonBodyParser, withErrorHandling(handleAuthenticateUser))

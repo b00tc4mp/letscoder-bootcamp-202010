@@ -5,11 +5,11 @@ const { env: { JWT_SECRET } } = process
 
 module.exports = (req, res, handleError) => {
 
-    const { headers: { authorization }} = req
-
-    const token = authorization.replace('Bearer ', '')
-
     try {
+        const { headers: { authorization } } = req
+
+        const token = authorization.replace('Bearer ', '')
+
         const { sub: userId } = jwt.verify(token, JWT_SECRET)
         deleteUser(userId)
             .then(() => res.status(200).send())

@@ -1664,3 +1664,14 @@ error 2021-01-12T17:37:52.173Z - ReferenceError: dietId is not defined
     at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-chosen-diet.js:117:81
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 info 2021-01-12T17:48:06.418Z - stopping server
+info 2021-01-13T15:22:34.477Z - starting server
+info 2021-01-13T15:22:36.089Z - server running on port 4000
+info 2021-01-13T15:22:47.872Z - stopping server
+info 2021-01-13T18:21:37.054Z - starting server
+info 2021-01-13T18:21:37.239Z - server running on port 4000
+info 2021-01-13T18:24:42.097Z - stopping server
+info 2021-01-21T10:41:52.418Z - starting server
+info 2021-01-21T10:41:52.591Z - server running on port 4000
+info 2021-01-21T10:47:54.227Z - stopping server
+info 2021-01-28T14:09:47.289Z - starting server
+info 2021-01-28T14:09:47.446Z - server running on port 4000
