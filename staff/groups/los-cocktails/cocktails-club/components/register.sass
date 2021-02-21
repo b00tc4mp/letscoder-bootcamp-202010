@@ -1,0 +1,133 @@
+.register
+    background-color: white
+    border: 2px solid white
+    border-radius: .7rem
+    padding: 20px
+    padding-top: 5px
+
+    &__h2
+        margin: 0
+        padding: 20px
+        padding-top: 10px
+        font-weight: 600
+    &__input
+        width: 60vw
+        height: 7vw
+        background-color: #efeff4
+        margin-left: 0
+        margin-right: 0
+        border-radius: .5rem
+        &::placeholder
+            color: black
+            font-weight: 550
+    &__p
+        display: flex
+        padding-left: 2vw
+        margin-bottom: 2px
+        font-size: .8rem
+        color: #8e8e93
+    &__button
+        width: 60vw
+        height: 7.5vw
+        background-color: black
+        color: white
+        border-radius: 10px
+        margin-top: 25px
+        font-size: 1.2rem
+        transition: all 200ms ease
+        &:hover
+            background-color: #fc8823
+            color: white
+    &__span
+        color: black
+        transition: all 200ms ease
+        &:hover
+            color: black
+            text-decoration: underline
+.login
+    background-color: white
+    border: 2px solid white
+    border-radius: .7rem
+    padding: 20px
+    padding-top: 5px
+
+    &__h2
+        margin: 0
+        padding: 20px
+        padding-top: 10px
+        font-weight: 600
+    &__input
+        width: 60vw
+        height: 7vw
+        background-color: #efeff4
+        margin-left: 0
+        margin-right: 0
+        border-radius: .5rem
+        &::placeholder
+            color: black
+            font-weight: 550
+    &__p
+        display: flex
+        padding-left: 2vw
+        margin-bottom: 2px
+        font-size: .8rem
+        color: #8e8e93
+    &__button
+        width: 60vw
+        height: 7.5vw
+        background-color: black
+        color: white
+        border-radius: 10px
+        margin-top: 25px
+        font-size: 1.2rem
+        transition: all 200ms ease
+        &:hover
+            background-color: #fc8823
+            color: white
+    &__span
+        color: black
+        transition: all 200ms ease
+        &:hover
+            color: black
+            text-decoration: underline
+
+@media (min-width: 1000px)
+    .login
+        width: 25vw
+        &__input
+            width: 23vw
+            height: 3vw
+        &__button
+            width: 23vw
+            height: 3vw
+    .register
+        width: 25vw
+        &__input
+            width: 23vw
+            height: 3vw
+        &__button
+            width: 23vw
+            height: 3vw
+@media (max-width: 999px) and (min-width: 550px)
+    .login
+        width: 28vw
+        &__input
+            width: 25vw
+            height: 4vw
+        &__button
+            width: 25vw
+            height: 4vw
+        &__span
+            color: black
+            transition: all 200ms ease
+            &:hover
+                color: black
+                text-decoration: underline
+    .register
+        width: 28vw
+        &__input
+            width: 25vw
+            height: 4vw
+        &__button
+            width: 25vw
+            height: 4vw
