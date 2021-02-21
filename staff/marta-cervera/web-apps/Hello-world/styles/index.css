@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+* {
+  font-family: "Franklin Gothic Medium";
+}
+
+body {
+  background-image: url(./foto1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Architects Daughter", cursive;
+}
+
+button {
+  border-style: none;
+}
+button:focus {
+  outline: 0;
+}
+
+.off {
+  display: none;
+}
+
+.access {
+  border: 5px solid;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: #E59EF3;
+}
+.access__register {
+  background-color: #4e9cb6;
+  color: white;
+  border-radius: 5px;
+  padding: 0.4rem;
+  font-size: 25px;
+}
+.access__register:hover {
+  background-color: #F0A8DD;
+}
+.access__login {
+  border-style: solid;
+  border-color: #FFB6C1;
+  background-color: #F48DD8;
+  border-radius: 5px;
+  padding: 0.4rem;
+  font-size: 25px;
+}
+.access__login:hover {
+  background-color: #E9F6FD;
+}
+
+.title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.register {
+  background-color: #F08080;
+}
+
+.register-confirm {
+  background-color: #E9F6FD;
+}
+
+.login {
+  background-color: salmon;
+}
+
+.welcome {
+  background-color: plum;
+}
+
+/*# sourceMappingURL=index.css.map */
