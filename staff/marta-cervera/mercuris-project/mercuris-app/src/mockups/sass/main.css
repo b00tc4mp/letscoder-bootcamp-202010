@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+body {
+  background-image: url("./neon.jpg");
+  background-position: center;
+  min-height: 100vh;
+  opacity: 0.6;
+  display: block;
+}
+
+.register__title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 5vw;
+  color: #f321d0;
+  justify-content: center;
+}
+.register__btn {
+  font-family: unset;
+  text-align: center;
+  justify-content: center;
+  margin-left: 40vw;
+}
+
+.search__title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 5vw;
+  color: #f132d8;
+}
+.search__btn {
+  font-family: unset;
+  text-align: center;
+  justify-content: center;
+  margin-left: 40vw;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

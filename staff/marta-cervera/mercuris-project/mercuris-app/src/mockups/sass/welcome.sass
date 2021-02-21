@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap')
+
+$base-color: linear-gradient(to right, rgba(255,0,0,0), #d9f573)
+$font-color: #bdb9b9
+$font-main: 'Permanent Marker', cursive
+
+@media only screen and (max-width: 600px)
+
+body     
+    background-image: url("./neon.jpg")
+    background-position: center
+    min-height: 100vh
+    opacity: 0.6
+    display: block
+    
+.register
+
+        &__title
+            font-family: $font-main
+            font-size: 5vw
+            color: #f321d0
+            justify-content: center
+            
+        &__btn
+            font-family: unset
+            text-align: center
+            justify-content: center        
+            margin-left: 40vw
+            
+
+.search
+
+    &__title
+        font-family: $font-main
+        font-size: 5vw
+        color: #f132d8
+    &__btn
+        font-family: unset
+        text-align: center
+        justify-content: center        
+        margin-left: 40vw
+
+@media only screen and (min-width: 600px)
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0

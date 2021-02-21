@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+$Bebas: 'Bebas Neue', cursive
+.search
+    &__title
+
+.gotoaccess
+    text-align: center            
+    font-size: 15px            
+    color: white   
+    max-height: 9vh
+    background-color: #58a5d1
+    line-height: 30px
+    margin: 5px auto
+    font-family: $Bebas
+.searching         
+    height: 100%
+    padding: 5%
+    text-align: justify
+    background-repeat: no-repeat    
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: center
+    align-content: center
+    color: #58a5d1
+    font-weight: 900
+    &__title
+        color: #d158b7
+        
+    &__form
+        display: grid
+        padding: 1rem
+               
+        width: 55vw    
+        &__input
+            background-color: #d158b7           
+            color: white
+            font-size: 3vw
+            height: 5vh
+            margin: 2vh
+            color:#d158b7
+                     
+
+@media (max-width: 700px)// minwidth
+    .search
+        display: flex
+        padding: 4px
+        &__title            
+            color: #58a5d1
+            font-family: $Bebas
+            font-size: 10vw
+        &__logo
+            height: 15vh
+            width: 60vw
+            margin: 0 auto
+            margin-top: 30px
+
+    .searching       
+        display: flex
+        flex-direction: column
+        flex-wrap: nowrap
+        justify-content: center
+        align-items: center
+        align-content: center
+        
+        &__form
+            background-color:#d158b7                     
+            &__input
+                background-color: white        
+                font-family: $Bebas
+                font-size: 5vw
+                height: 5vh
+                margin: 2vh  
+                color:#d158b7
+            &__btn
+                text-align: center            
+                font-size: 15px            
+                color: white
+                width: 40vw
+                max-height: 6vh
+                background-color: #58a5d1                
+                line-height: 30px
+                margin: 5px auto
+                font-family: $Bebas
+
+
+        
+        
+
+   
+
+       
