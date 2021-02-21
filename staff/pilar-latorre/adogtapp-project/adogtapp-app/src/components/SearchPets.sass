@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap')
+
+$fontmain: Nerko One, cursive
+
+
+.search
+    margin-top: 2vw
+    display: grid
+    
+    &__title
+        font-family: $fontmain
+        color: purple
+        width: 90%
+    &__img
+        max-width: 100%
+        height: 30vh
+        margin-top: 2vw
+    &__input, &__select, &__option
+        margin: auto
+        height: auto
+        border-radius: 20px
+        outline: none
+        border: .5px solid purple
+        margin-bottom: 2vw
+        font-family: $fontmain
+        font-size: 1.2rem
+        width: 90%
+        &::placeholder
+            padding-left: 5px
+   
+    &__button
+        border-radius: 20px
+        background-color: purple
+        height: auto
+        font-size: 1.2rem
+        font-weight: bold
+        outline: none
+        color: white
+        font-family: $fontmain
+        margin-left: 1vw
+        width: 90%
+        margin: auto
+    
+    &__logout
+        border-radius: 20px
+        background-color: purple
+        height: auto
+        font-size: 1.2rem
+        font-weight: bold
+        outline: none
+        color: white
+        font-family: $fontmain
+        margin-left: 1vw
+        width: auto
+        margin: auto
+        margin-top: 20px
+
+    &__sorry
+        color: purple
+        font-family: $fontmain
+        font-size: 1.2em
+     
+
+    
+
+@media (min-width: 1000px)
+    .search
+        &__input
+            height: 4vh
+            margin: 0.2vw
+        &__img
+            width: 60vw
+            height: 40vh
+            margin-top: 2vw
+        &__button
+            margin: 0.2vw
+            height: 2.5vw
+
+        
+
+            
+
+
+
