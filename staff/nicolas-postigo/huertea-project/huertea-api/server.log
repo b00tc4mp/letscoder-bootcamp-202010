@@ -1,0 +1,1917 @@
+info 2020-12-08T15:54:21.386Z - starting server
+error 2020-12-08T15:54:21.627Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-save-image.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-save-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\index.js:11:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-08T15:54:21.646Z - stopping server
+info 2020-12-08T15:56:18.848Z - starting server
+info 2020-12-08T15:56:19.158Z - server running on port 4000
+info 2020-12-08T16:02:46.099Z - stopping server
+info 2020-12-08T16:02:51.791Z - starting server
+error 2020-12-08T16:02:51.973Z - Error: Cannot find module 'busboy'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-save-image.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\handle-save-image.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\routes\api\handlers\index.js:11:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-08T16:02:51.986Z - stopping server
+info 2020-12-08T16:03:45.585Z - starting server
+info 2020-12-08T16:03:45.948Z - server running on port 4000
+info 2020-12-08T16:05:13.020Z - stopping server
+info 2020-12-08T16:05:22.230Z - starting server
+info 2020-12-08T16:05:22.537Z - server running on port 4000
+info 2020-12-08T16:05:56.277Z - stopping server
+info 2020-12-08T16:06:03.909Z - starting server
+info 2020-12-08T16:06:04.207Z - server running on port 4000
+info 2020-12-08T16:08:22.049Z - stopping server
+info 2020-12-08T16:09:48.719Z - starting server
+info 2020-12-08T16:09:49.010Z - server running on port 4000
+error 2020-12-08T16:11:37.510Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "prueba1" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-08T16:29:36.401Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "potate" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-08T16:33:55.537Z - stopping server
+info 2020-12-08T16:34:04.339Z - starting server
+info 2020-12-08T16:34:04.618Z - server running on port 4000
+info 2020-12-08T16:41:08.521Z - stopping server
+info 2020-12-08T16:41:14.792Z - starting server
+info 2020-12-08T16:41:15.040Z - server running on port 4000
+info 2020-12-08T16:54:44.583Z - stopping server
+info 2020-12-08T16:54:50.866Z - starting server
+info 2020-12-08T16:54:51.086Z - server running on port 4000
+info 2020-12-08T17:07:03.154Z - stopping server
+info 2020-12-08T17:07:13.956Z - starting server
+info 2020-12-08T17:07:14.539Z - server running on port 4000
+info 2020-12-08T17:23:14.862Z - stopping server
+info 2020-12-08T17:23:34.366Z - starting server
+info 2020-12-08T17:23:34.914Z - server running on port 4000
+info 2020-12-08T17:26:30.657Z - stopping server
+info 2020-12-08T17:28:22.913Z - starting server
+info 2020-12-08T17:28:23.182Z - server running on port 4000
+error 2020-12-08T17:34:21.053Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "wefefe" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-08T18:08:04.637Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\data\offers\default.jpg'
+info 2020-12-08T18:11:30.185Z - stopping server
+info 2020-12-08T18:11:36.725Z - starting server
+info 2020-12-08T18:11:37.088Z - server running on port 4000
+info 2020-12-08T18:11:53.554Z - stopping server
+info 2020-12-08T18:12:00.510Z - starting server
+info 2020-12-08T18:12:00.736Z - server running on port 4000
+error 2020-12-08T18:12:04.628Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\data\offers\default.jpg'
+error 2020-12-08T18:12:05.492Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\data\offers\default.jpg'
+info 2020-12-08T18:12:31.920Z - stopping server
+info 2020-12-08T18:12:57.357Z - starting server
+info 2020-12-08T18:12:57.572Z - server running on port 4000
+error 2020-12-08T18:13:07.991Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\data\offers\default.jpg'
+error 2020-12-08T18:13:09.072Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\data\offers\default.jpg'
+error 2020-12-08T18:13:09.620Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\data\offers\default.jpg'
+error 2020-12-08T18:13:09.780Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\data\offers\default.jpg'
+info 2020-12-08T18:13:26.408Z - stopping server
+info 2020-12-08T18:13:34.430Z - starting server
+info 2020-12-08T18:13:34.706Z - server running on port 4000
+error 2020-12-08T18:13:38.580Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\data\offers\default.jpg'
+error 2020-12-08T18:13:39.606Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\data\offers\default.jpg'
+error 2020-12-08T18:13:40.095Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\data\offers\default.jpg'
+error 2020-12-08T18:13:40.270Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\data\offers\default.jpg'
+error 2020-12-08T18:13:46.160Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\data\offers\default.jpg'
+info 2020-12-08T18:13:48.541Z - stopping server
+info 2020-12-08T18:13:53.772Z - starting server
+info 2020-12-08T18:13:53.982Z - server running on port 4000
+error 2020-12-08T18:14:06.787Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:14:07.441Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:14:07.619Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:14:10.406Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:14:13.698Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+info 2020-12-08T18:15:25.382Z - stopping server
+info 2020-12-08T18:15:31.705Z - starting server
+info 2020-12-08T18:15:31.960Z - server running on port 4000
+error 2020-12-08T18:15:32.152Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:15:32.876Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:15:33.046Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:15:33.505Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:15:33.695Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:15:38.338Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:17:36.515Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:17:37.278Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:17:45.004Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:26:16.378Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+error 2020-12-08T18:26:17.166Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\data\offers\default.jpg'
+info 2020-12-08T18:26:55.861Z - starting server
+info 2020-12-08T18:26:56.351Z - server running on port 4000
+info 2020-12-08T18:39:20.472Z - stopping server
+info 2020-12-08T18:39:27.720Z - starting server
+info 2020-12-08T18:39:27.959Z - server running on port 4000
+info 2020-12-08T18:46:10.288Z - stopping server
+info 2020-12-08T18:46:22.353Z - starting server
+info 2020-12-08T18:46:22.677Z - server running on port 4000
+info 2020-12-08T19:07:59.860Z - stopping server
+info 2020-12-08T19:08:15.707Z - starting server
+info 2020-12-08T19:08:15.974Z - server running on port 4000
+info 2020-12-08T19:13:15.067Z - stopping server
+info 2020-12-08T19:13:21.048Z - starting server
+info 2020-12-08T19:13:21.458Z - server running on port 4000
+info 2020-12-08T19:16:31.469Z - stopping server
+info 2020-12-08T19:16:42.966Z - starting server
+info 2020-12-08T19:16:43.218Z - server running on port 4000
+info 2020-12-08T19:33:37.123Z - starting server
+info 2020-12-08T19:33:37.340Z - server running on port 4000
+info 2020-12-08T19:40:19.448Z - stopping server
+info 2020-12-08T19:40:32.050Z - starting server
+info 2020-12-08T19:40:32.312Z - server running on port 4000
+info 2020-12-08T19:43:20.217Z - stopping server
+info 2020-12-08T19:43:31.624Z - starting server
+info 2020-12-08T19:43:31.894Z - server running on port 4000
+info 2020-12-09T07:55:35.749Z - starting server
+info 2020-12-09T07:55:36.559Z - server running on port 4000
+info 2020-12-09T09:26:45.093Z - stopping server
+info 2020-12-09T09:26:56.577Z - starting server
+info 2020-12-09T09:26:56.958Z - server running on port 4000
+info 2020-12-09T09:28:25.110Z - stopping server
+info 2020-12-09T09:29:18.514Z - starting server
+info 2020-12-09T09:29:18.830Z - server running on port 4000
+info 2020-12-09T09:51:30.306Z - stopping server
+info 2020-12-09T09:51:38.687Z - starting server
+info 2020-12-09T09:51:38.938Z - server running on port 4000
+info 2020-12-09T10:34:28.406Z - starting server
+info 2020-12-09T10:34:28.779Z - server running on port 4000
+info 2020-12-09T10:35:26.956Z - stopping server
+info 2020-12-09T10:35:40.142Z - starting server
+info 2020-12-09T10:35:40.414Z - server running on port 4000
+error 2020-12-09T10:47:03.789Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "{}" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\create-offer.js:38:34
+error 2020-12-09T10:50:19.922Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "{}" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\create-offer.js:38:34
+info 2020-12-09T10:50:45.204Z - stopping server
+info 2020-12-09T10:51:03.232Z - starting server
+info 2020-12-09T10:51:03.612Z - server running on port 4000
+error 2020-12-09T10:54:13.028Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "{}" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\create-offer.js:38:34
+error 2020-12-09T10:56:51.741Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "fwwfsf" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-09T10:57:36.478Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "potatess" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-09T10:59:16.835Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "2 kilos de potato" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-09T11:00:11.179Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "patasss" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-09T11:09:38.631Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "poteadfrr" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-09T11:19:16.841Z - stopping server
+info 2020-12-09T11:19:30.203Z - starting server
+info 2020-12-09T11:19:30.498Z - server running on port 4000
+error 2020-12-09T11:25:39.805Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "oijfmeowj" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-09T11:25:49.435Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "oijfmeowj" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+error 2020-12-09T11:25:59.561Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "oijfmeowj" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-09T12:20:47.023Z - starting server
+info 2020-12-09T12:20:47.514Z - server running on port 4000
+info 2020-12-09T12:25:26.081Z - stopping server
+info 2020-12-09T12:25:34.458Z - starting server
+info 2020-12-09T12:25:34.714Z - server running on port 4000
+error 2020-12-09T12:26:25.388Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "referf" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-09T12:45:53.849Z - stopping server
+info 2020-12-09T12:52:29.188Z - starting server
+info 2020-12-09T12:52:29.561Z - server running on port 4000
+error 2020-12-09T12:56:04.227Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "chouchou" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-09T14:42:03.477Z - stopping server
+info 2020-12-09T14:42:17.430Z - starting server
+info 2020-12-09T14:42:17.940Z - server running on port 4000
+info 2020-12-09T15:01:50.784Z - stopping server
+info 2020-12-09T15:02:00.716Z - starting server
+info 2020-12-09T15:02:00.986Z - server running on port 4000
+error 2020-12-09T16:57:47.900Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "jndfijj" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-09T19:15:30.881Z - stopping server
+info 2020-12-09T19:15:46.370Z - starting server
+info 2020-12-09T19:15:46.936Z - server running on port 4000
+info 2020-12-09T20:00:26.360Z - starting server
+info 2020-12-09T20:00:27.022Z - server running on port 4000
+error 2020-12-09T20:01:31.550Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "2 kilos de tomates" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-10T09:25:24.623Z - starting server
+info 2020-12-10T09:25:25.059Z - server running on port 4000
+info 2020-12-10T09:37:26.200Z - starting server
+info 2020-12-10T09:37:26.541Z - server running on port 4000
+info 2020-12-10T09:38:06.592Z - stopping server
+info 2020-12-10T09:38:17.799Z - starting server
+info 2020-12-10T09:38:18.072Z - server running on port 4000
+info 2020-12-10T09:45:07.124Z - stopping server
+info 2020-12-10T09:45:21.906Z - starting server
+info 2020-12-10T09:45:22.202Z - server running on port 4000
+error 2020-12-10T10:38:14.315Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-10T10:40:46.921Z - stopping server
+info 2020-12-10T10:46:31.451Z - starting server
+info 2020-12-10T10:46:31.843Z - server running on port 4000
+info 2020-12-10T10:49:21.543Z - starting server
+info 2020-12-10T10:49:22.175Z - server running on port 4000
+info 2020-12-10T11:19:09.917Z - stopping server
+info 2020-12-10T11:19:17.262Z - starting server
+info 2020-12-10T11:19:17.566Z - server running on port 4000
+info 2020-12-10T11:54:36.298Z - stopping server
+info 2020-12-10T11:54:43.521Z - starting server
+info 2020-12-10T11:54:44.108Z - server running on port 4000
+info 2020-12-10T12:47:49.141Z - stopping server
+info 2020-12-10T12:48:03.994Z - starting server
+info 2020-12-10T12:48:04.360Z - server running on port 4000
+info 2020-12-10T14:33:55.242Z - starting server
+info 2020-12-10T14:33:55.673Z - server running on port 4000
+info 2020-12-10T14:54:45.615Z - stopping server
+info 2020-12-10T14:54:57.933Z - starting server
+info 2020-12-10T14:54:58.297Z - server running on port 4000
+info 2020-12-10T14:57:42.146Z - stopping server
+info 2020-12-10T14:57:53.569Z - starting server
+info 2020-12-10T14:57:53.862Z - server running on port 4000
+info 2020-12-10T15:11:20.594Z - stopping server
+info 2020-12-10T15:11:33.992Z - starting server
+info 2020-12-10T15:11:34.251Z - server running on port 4000
+info 2020-12-11T09:01:41.327Z - stopping server
+info 2020-12-11T09:01:52.052Z - starting server
+info 2020-12-11T09:01:52.848Z - server running on port 4000
+info 2020-12-11T09:13:39.248Z - stopping server
+info 2020-12-11T09:14:01.080Z - starting server
+info 2020-12-11T09:14:01.342Z - server running on port 4000
+info 2020-12-11T09:26:04.384Z - stopping server
+info 2020-12-11T09:26:28.207Z - starting server
+info 2020-12-11T09:26:29.505Z - server running on port 4000
+info 2020-12-11T09:27:08.468Z - stopping server
+info 2020-12-11T09:27:51.671Z - starting server
+info 2020-12-11T09:27:52.204Z - server running on port 4000
+info 2020-12-11T09:30:34.675Z - starting server
+info 2020-12-11T09:30:35.000Z - server running on port 4000
+info 2020-12-11T09:47:50.251Z - stopping server
+info 2020-12-11T09:57:54.970Z - starting server
+info 2020-12-11T09:57:55.470Z - server running on port 4000
+error 2020-12-11T09:58:14.760Z - NotFoundError: offer with id 5fc68d6789f23b16f416e24f not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T10:47:16.977Z - NotFoundError: offer with id 5fd1ea12886cde1f04f61e20 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-11T11:06:34.989Z - stopping server
+info 2020-12-11T11:06:44.212Z - starting server
+info 2020-12-11T11:06:44.750Z - server running on port 4000
+error 2020-12-11T11:07:22.697Z - NotFoundError: offer with id 5fc7630bc8e0b520b46d68a8 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-11T15:14:09.650Z - starting server
+info 2020-12-11T15:14:11.889Z - server running on port 4000
+info 2020-12-12T08:33:38.558Z - starting server
+info 2020-12-12T08:33:39.164Z - server running on port 4000
+info 2020-12-12T08:43:39.393Z - stopping server
+info 2020-12-12T08:43:51.483Z - starting server
+info 2020-12-12T08:43:51.812Z - server running on port 4000
+info 2020-12-12T08:46:32.761Z - stopping server
+info 2020-12-12T08:46:46.069Z - starting server
+info 2020-12-12T08:46:46.441Z - server running on port 4000
+info 2020-12-12T08:57:01.835Z - stopping server
+info 2020-12-12T08:57:17.337Z - starting server
+info 2020-12-12T08:57:17.813Z - server running on port 4000
+info 2020-12-12T09:19:38.475Z - stopping server
+info 2020-12-12T09:19:47.212Z - starting server
+info 2020-12-12T09:19:47.963Z - server running on port 4000
+info 2020-12-12T15:54:36.899Z - stopping server
+info 2020-12-12T15:54:57.128Z - starting server
+info 2020-12-12T15:54:57.826Z - server running on port 4000
+info 2020-12-12T16:13:42.631Z - stopping server
+info 2020-12-12T16:13:54.683Z - starting server
+info 2020-12-12T16:13:54.932Z - server running on port 4000
+error 2020-12-12T16:14:48.612Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-12T16:26:58.053Z - starting server
+info 2020-12-12T16:26:58.276Z - server running on port 4000
+error 2020-12-12T16:41:02.754Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-12T17:13:37.035Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "armando" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-12T17:21:06.153Z - stopping server
+info 2020-12-12T17:21:13.640Z - starting server
+info 2020-12-12T17:21:14.131Z - server running on port 4000
+info 2020-12-12T17:25:16.387Z - starting server
+info 2020-12-12T17:25:16.635Z - server running on port 4000
+info 2020-12-12T17:25:21.657Z - stopping server
+info 2020-12-12T17:25:49.900Z - starting server
+info 2020-12-12T17:25:50.181Z - server running on port 4000
+info 2020-12-12T17:29:53.489Z - stopping server
+info 2020-12-12T17:30:16.232Z - starting server
+info 2020-12-12T17:30:16.887Z - server running on port 4000
+info 2020-12-12T17:32:42.915Z - stopping server
+info 2020-12-12T17:36:24.186Z - starting server
+info 2020-12-12T17:36:24.389Z - server running on port 4000
+error 2020-12-12T18:20:36.035Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-12T18:21:01.633Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "5,25" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:2622:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1286:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:4689:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\index.js:1129:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\create-offer.js:38:34
+info 2020-12-13T08:41:16.686Z - stopping server
+info 2020-12-13T08:41:37.943Z - starting server
+info 2020-12-13T08:41:38.794Z - server running on port 4000
+error 2020-12-13T09:02:59.991Z - ConflictError: user with e-mail nicolas@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\register-user.js:17:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-13T09:03:08.260Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-13T09:03:27.255Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-13T10:18:20.098Z - stopping server
+info 2020-12-13T10:18:33.664Z - starting server
+info 2020-12-13T10:18:34.147Z - server running on port 4000
+error 2020-12-13T10:26:15.210Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-13T11:01:34.444Z - NotFoundError: offer with id 5fd509a2f044ad0fccacea84 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-13T15:22:45.028Z - stopping server
+info 2020-12-14T10:10:09.725Z - starting server
+error 2020-12-14T10:10:09.954Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\create-offer.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\create-offer.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:10:09.985Z - stopping server
+info 2020-12-14T10:10:29.255Z - starting server
+error 2020-12-14T10:10:29.655Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\create-offer.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\create-offer.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:10:29.668Z - stopping server
+info 2020-12-14T10:11:55.227Z - starting server
+error 2020-12-14T10:11:55.960Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-all-offers.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-all-offers.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:6:20)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:11:55.988Z - stopping server
+info 2020-12-14T10:12:52.615Z - starting server
+error 2020-12-14T10:12:54.809Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\find-offer.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\find-offer.js:1:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:7:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:12:54.834Z - stopping server
+info 2020-12-14T10:13:26.664Z - starting server
+error 2020-12-14T10:13:28.745Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:10:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:13:28.755Z - stopping server
+info 2020-12-14T10:13:53.587Z - starting server
+error 2020-12-14T10:13:55.347Z - Error: Cannot find module '../models'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:3:19)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:11:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-14T10:13:55.358Z - stopping server
+info 2020-12-14T10:14:23.180Z - starting server
+info 2020-12-14T10:14:25.831Z - server running on port 4000
+info 2020-12-14T10:15:01.866Z - stopping server
+info 2020-12-14T10:15:49.356Z - starting server
+info 2020-12-14T10:15:51.627Z - server running on port 4000
+error 2020-12-14T10:18:56.434Z - ConflictError: user with e-mail ines@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T10:23:29.863Z - stopping server
+info 2020-12-14T18:26:43.084Z - starting server
+info 2020-12-14T18:26:45.198Z - server running on port 4000
+info 2020-12-14T18:27:05.722Z - starting server
+error 2020-12-14T18:33:35.851Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-14T18:33:56.480Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T18:33:59.960Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T18:34:08.797Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T18:34:19.051Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T18:42:27.964Z - stopping server
+info 2020-12-14T18:42:36.136Z - starting server
+info 2020-12-14T18:42:38.228Z - server running on port 4000
+info 2020-12-14T18:43:19.205Z - stopping server
+info 2020-12-14T18:43:26.136Z - starting server
+info 2020-12-14T18:43:27.146Z - server running on port 4000
+error 2020-12-14T18:45:15.123Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-14T18:45:19.858Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T18:54:51.563Z - stopping server
+info 2020-12-15T10:15:56.030Z - starting server
+info 2020-12-15T10:15:57.948Z - server running on port 4000
+error 2020-12-15T10:17:25.864Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T10:17:33.865Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T10:17:39.441Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T10:17:44.224Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T10:17:51.652Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T10:18:51.421Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T10:19:23.314Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T10:19:52.152Z - stopping server
+info 2020-12-15T10:19:58.879Z - starting server
+info 2020-12-15T10:19:59.705Z - server running on port 4000
+info 2020-12-15T10:20:12.019Z - stopping server
+info 2020-12-15T10:25:55.606Z - starting server
+info 2020-12-15T10:25:56.794Z - server running on port 4000
+error 2020-12-15T10:26:27.122Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T10:35:23.369Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T10:49:37.082Z - stopping server
+info 2020-12-15T10:49:50.808Z - starting server
+info 2020-12-15T10:49:52.142Z - server running on port 4000
+error 2020-12-15T11:04:31.253Z - ValidationError: Offer validation failed: Emailcontact: Path `Emailcontact` is required., Phonecontact: Path `Phonecontact` is required., Offeraddress: Path `Offeraddress` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-15T11:05:40.826Z - stopping server
+info 2020-12-15T11:05:47.878Z - starting server
+info 2020-12-15T11:05:49.072Z - server running on port 4000
+error 2020-12-15T11:06:17.916Z - ValidationError: Offer validation failed: Emailcontact: Path `Emailcontact` is required., Phonecontact: Path `Phonecontact` is required., Offeraddress: Path `Offeraddress` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-15T11:06:59.207Z - ValidationError: Offer validation failed: Emailcontact: Path `Emailcontact` is required., Phonecontact: Path `Phonecontact` is required., Offeraddress: Path `Offeraddress` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-15T11:07:03.833Z - stopping server
+info 2020-12-15T11:07:57.850Z - starting server
+info 2020-12-15T11:07:59.732Z - server running on port 4000
+info 2020-12-15T11:19:00.282Z - stopping server
+info 2020-12-15T11:19:52.552Z - starting server
+info 2020-12-15T11:19:54.590Z - server running on port 4000
+info 2020-12-15T14:59:30.737Z - stopping server
+info 2020-12-15T14:59:52.158Z - starting server
+info 2020-12-15T14:59:53.726Z - server running on port 4000
+info 2020-12-15T15:00:06.496Z - stopping server
+info 2020-12-15T16:12:58.330Z - starting server
+info 2020-12-15T16:12:59.384Z - server running on port 4000
+error 2020-12-15T16:13:03.785Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T16:13:08.505Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T16:14:55.468Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T16:25:24.580Z - stopping server
+info 2020-12-15T16:46:14.597Z - starting server
+info 2020-12-15T16:46:15.413Z - server running on port 4000
+error 2020-12-15T16:46:18.118Z - ConflictError: user with e-mail diego@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T16:46:26.019Z - ConflictError: user with e-mail diego@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T16:49:01.461Z - stopping server
+info 2020-12-15T16:54:38.327Z - starting server
+info 2020-12-15T16:54:39.151Z - server running on port 4000
+info 2020-12-15T16:55:54.098Z - stopping server
+info 2020-12-15T16:57:57.332Z - starting server
+info 2020-12-15T16:57:58.734Z - server running on port 4000
+info 2020-12-15T16:59:04.308Z - stopping server
+info 2020-12-15T17:11:41.825Z - starting server
+info 2020-12-15T17:11:44.690Z - server running on port 4000
+error 2020-12-15T17:20:09.658Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T17:26:06.373Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T17:26:46.988Z - stopping server
+info 2020-12-15T17:31:33.650Z - starting server
+info 2020-12-15T17:31:35.163Z - server running on port 4000
+error 2020-12-15T17:33:42.022Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T17:36:08.565Z - stopping server
+info 2020-12-15T17:36:15.342Z - starting server
+info 2020-12-15T17:36:16.324Z - server running on port 4000
+error 2020-12-15T17:36:32.878Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-15T17:37:30.124Z - stopping server
+info 2020-12-15T17:37:38.102Z - starting server
+info 2020-12-15T17:37:39.538Z - server running on port 4000
+error 2020-12-15T17:38:01.064Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-15T17:38:28.716Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T09:26:42.352Z - starting server
+info 2020-12-16T09:26:43.901Z - server running on port 4000
+error 2020-12-16T09:27:41.151Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T09:40:42.733Z - stopping server
+info 2020-12-16T09:42:17.263Z - starting server
+info 2020-12-16T09:42:20.645Z - server running on port 4000
+info 2020-12-16T09:42:57.194Z - stopping server
+info 2020-12-16T09:43:08.536Z - starting server
+info 2020-12-16T09:43:09.320Z - server running on port 4000
+info 2020-12-16T09:46:08.007Z - stopping server
+info 2020-12-16T09:46:18.205Z - starting server
+info 2020-12-16T09:46:20.065Z - server running on port 4000
+info 2020-12-16T09:46:35.286Z - stopping server
+info 2020-12-16T09:50:51.588Z - starting server
+info 2020-12-16T09:50:54.448Z - server running on port 4000
+error 2020-12-16T11:30:49.196Z - NotFoundError: offer with id 5fd8eb4c68bd3140d8153bcd not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-16T11:31:11.805Z - NotFoundError: offer with id 5fd8eb61ec20a63ee8234830 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-16T11:42:53.795Z - starting server
+info 2020-12-16T11:42:55.088Z - server running on port 4000
+error 2020-12-16T12:21:55.115Z - LengthError: id length 9 is not 24
+    at validateId (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\helpers\validations.js:33:37)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-image.js:7:5)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-image.js:7:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+error 2020-12-16T12:26:35.500Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-16T15:52:19.888Z - stopping server
+info 2020-12-16T15:52:53.034Z - starting server
+info 2020-12-16T15:52:56.383Z - server running on port 4000
+info 2020-12-16T16:31:41.858Z - stopping server
+info 2020-12-16T16:31:53.387Z - starting server
+info 2020-12-16T16:31:54.533Z - server running on port 4000
+error 2020-12-16T16:32:47.158Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-16T16:33:53.576Z - MongoError: E11000 duplicate key error collection: huertea-app.offers index: offername_1 dup key: { offername: "2 kilos de tomates" }
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\utils.js:123:22)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at handler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\core\sdam\topology.js:942:24)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\cmap\connection.js:277:5)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+info 2020-12-16T16:44:03.779Z - stopping server
+info 2020-12-16T16:44:11.089Z - starting server
+info 2020-12-16T16:44:12.167Z - server running on port 4000
+info 2020-12-16T16:52:48.428Z - stopping server
+info 2020-12-16T16:52:58.455Z - starting server
+info 2020-12-16T16:53:00.908Z - server running on port 4000
+info 2020-12-16T16:53:58.290Z - stopping server
+info 2020-12-16T16:54:53.431Z - starting server
+info 2020-12-16T16:54:54.811Z - server running on port 4000
+info 2020-12-16T18:06:03.888Z - stopping server
+info 2020-12-16T18:06:22.472Z - starting server
+info 2020-12-16T18:06:25.070Z - server running on port 4000
+info 2020-12-17T08:03:39.108Z - starting server
+info 2020-12-17T08:03:41.475Z - server running on port 4000
+info 2020-12-17T08:51:39.839Z - stopping server
+info 2020-12-17T08:52:26.915Z - starting server
+info 2020-12-17T08:52:27.806Z - server running on port 4000
+info 2020-12-17T08:58:12.482Z - starting server
+info 2020-12-17T08:58:13.669Z - server running on port 4000
+error 2020-12-17T09:00:06.260Z - NotFoundError: offer with id 5fd8ec6279db0233f86af087 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T09:48:53.483Z - stopping server
+info 2020-12-17T09:50:10.709Z - starting server
+info 2020-12-17T09:50:12.339Z - server running on port 4000
+info 2020-12-17T10:40:58.349Z - stopping server
+info 2020-12-17T10:41:45.001Z - starting server
+info 2020-12-17T10:41:46.191Z - server running on port 4000
+error 2020-12-17T10:52:28.653Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-17T11:03:19.502Z - stopping server
+info 2020-12-17T11:04:18.466Z - starting server
+info 2020-12-17T11:04:19.985Z - server running on port 4000
+info 2020-12-17T11:14:19.132Z - stopping server
+info 2020-12-17T11:14:26.294Z - starting server
+info 2020-12-17T11:14:27.060Z - server running on port 4000
+error 2020-12-17T11:18:12.429Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T11:26:48.612Z - stopping server
+info 2020-12-17T11:30:57.840Z - starting server
+info 2020-12-17T11:31:00.002Z - server running on port 4000
+info 2020-12-17T11:33:54.749Z - stopping server
+info 2020-12-17T11:34:08.464Z - starting server
+info 2020-12-17T11:34:09.450Z - server running on port 4000
+info 2020-12-17T11:35:58.718Z - stopping server
+info 2020-12-17T11:36:05.681Z - starting server
+info 2020-12-17T11:36:06.384Z - server running on port 4000
+info 2020-12-17T12:02:13.340Z - stopping server
+info 2020-12-17T12:02:23.964Z - starting server
+info 2020-12-17T12:02:24.984Z - server running on port 4000
+info 2020-12-17T12:33:41.462Z - stopping server
+info 2020-12-17T12:33:51.408Z - starting server
+info 2020-12-17T12:33:54.320Z - server running on port 4000
+info 2020-12-17T12:48:42.760Z - starting server
+info 2020-12-17T12:48:43.690Z - server running on port 4000
+error 2020-12-17T12:49:42.040Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T12:49:45.137Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T12:49:52.239Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T13:57:19.196Z - stopping server
+info 2020-12-17T13:59:10.905Z - starting server
+info 2020-12-17T13:59:11.955Z - server running on port 4000
+error 2020-12-17T15:06:54.415Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:56.314Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:57.768Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.396Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.553Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.716Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:06:58.891Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:01.656Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:01.858Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:02.022Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:11.221Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:13.140Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:13.750Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:13.916Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T15:07:14.072Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T16:21:40.047Z - NotFoundError: offer with id 5fda37561f3641179c3536df not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T16:28:25.186Z - NotFoundError: offer with id 5fda37131f3641179c3536dd not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T16:59:43.311Z - NotFoundError: offer with id 5fdb8da0088b993fc007d216 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T17:00:15.023Z - ValidationError: Offer validation failed: price: Cast to Number failed for value "frefreer" at path "price"
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:1301:12)
+    at model.$set (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:1010:16)
+    at model.Document (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:150:12)
+    at model.Model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:105:12)
+    at new model (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:4693:15)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3055:22
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3091:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3090:15
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\index.js:1135:10)
+    at Function.create (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\model.js:3025:23)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\create-offer.js:38:34
+error 2020-12-17T17:17:47.911Z - NotFoundError: offer with id 5fdb8ead088b993fc007d219 not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T17:34:37.486Z - NotFoundError: offer with id 5fdb95e1088b993fc007d21b not found
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\delete-offer.js:27:47
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T17:35:16.365Z - stopping server
+info 2020-12-17T17:36:39.559Z - starting server
+info 2020-12-17T17:36:41.062Z - server running on port 4000
+info 2020-12-17T17:39:26.622Z - stopping server
+info 2020-12-17T17:39:39.977Z - starting server
+info 2020-12-17T17:39:40.680Z - server running on port 4000
+error 2020-12-17T18:05:27.700Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T18:05:33.184Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T18:05:37.831Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+info 2020-12-17T18:07:57.706Z - stopping server
+info 2020-12-17T18:08:11.853Z - starting server
+info 2020-12-17T18:08:13.898Z - server running on port 4000
+info 2020-12-17T18:28:53.412Z - stopping server
+info 2020-12-17T18:30:02.201Z - starting server
+info 2020-12-17T18:30:03.512Z - server running on port 4000
+error 2020-12-17T18:31:08.454Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:18:39
+error 2020-12-17T18:43:23.197Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:25.153Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:27.873Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:28.937Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:28.951Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:29.120Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:32.098Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:32.603Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:32.799Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:32.992Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:43:33.137Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T18:45:34.295Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T19:05:29.657Z - stopping server
+info 2020-12-17T19:05:45.251Z - starting server
+info 2020-12-17T19:05:46.782Z - server running on port 4000
+error 2020-12-17T19:08:36.277Z - LengthError: id length 9 is not 24
+    at validateId (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\helpers\validations.js:33:37)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-image.js:7:5)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-image.js:7:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+error 2020-12-17T19:08:47.209Z - LengthError: id length 9 is not 24
+    at validateId (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\helpers\validations.js:33:37)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-image.js:7:5)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-image.js:7:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+error 2020-12-17T19:09:08.383Z - LengthError: id length 9 is not 24
+    at validateId (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\helpers\validations.js:33:37)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-image.js:7:5)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-image.js:7:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+info 2020-12-17T19:32:42.824Z - starting server
+info 2020-12-17T19:32:44.783Z - server running on port 4000
+info 2020-12-17T19:35:03.951Z - stopping server
+info 2020-12-17T19:36:33.846Z - starting server
+info 2020-12-17T19:36:34.727Z - server running on port 4000
+error 2020-12-17T20:26:34.669Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T20:26:38.228Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T20:32:26.137Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-18T07:21:14.719Z - starting server
+info 2020-12-18T07:21:16.821Z - server running on port 4000
+error 2020-12-18T07:30:31.130Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T07:40:25.776Z - ConflictError: user with e-mail diana@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:17:33
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T07:50:11.066Z - ValidationError: Offer validation failed: offeraddress: Path `offeraddress` is required., phonecontact: Path `phonecontact` is required., emailcontact: Path `emailcontact` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+error 2020-12-18T12:33:18.415Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T12:48:11.827Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T12:53:54.329Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T12:54:44.139Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T13:01:59.753Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:08:44.769Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:17:33.339Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:18:49.445Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:50.788Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:54.712Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:55.672Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:55.842Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:56.338Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:56.482Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:56.632Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:57.162Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:57.356Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:57.837Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:58.022Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:18:58.198Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:13:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T15:19:06.484Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:27:03.430Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:27:34.692Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:28:09.433Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:28:43.613Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T15:57:27.128Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:10:25.655Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:10:31.169Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:10:39.344Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:12:44.124Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:13:13.637Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:18:01.993Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:21:54.498Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:22:12.653Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:22:16.411Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:22:57.250Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:23:00.323Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:23:04.673Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:23:31.180Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:27:11.814Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:27:16.378Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:30:43.297Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:30:47.327Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:30:48.009Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:31:59.828Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:35:25.261Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:35:40.793Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:36:27.201Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:43:28.052Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:43:33.969Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:43:35.818Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:48:01.119Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:48:32.354Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:48:38.074Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:49:26.827Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:49:52.645Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:50:12.675Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:50:28.767Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:50:32.891Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:50:41.850Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:50:50.360Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:51:33.415Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T16:53:22.641Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:06:06.096Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:06:51.449Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:07:04.829Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:07:47.092Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:08:18.017Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:09:03.948Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:09:31.103Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:10:15.607Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:14:41.339Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:22:28.594Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:23:19.334Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:23:21.828Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:24:14.387Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:29:50.637Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:30:20.815Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:30:33.502Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:30:42.735Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:30:58.236Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:33:42.085Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-18T17:38:05.927Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+info 2020-12-20T10:19:56.289Z - starting server
+info 2020-12-20T10:19:58.715Z - server running on port 4000
+info 2020-12-20T11:05:19.411Z - stopping server
+info 2020-12-20T11:05:33.720Z - starting server
+info 2020-12-20T11:05:35.186Z - server running on port 4000
+info 2020-12-20T11:09:42.039Z - starting server
+info 2020-12-20T11:09:42.999Z - server running on port 4000
+info 2020-12-21T07:55:49.880Z - starting server
+info 2020-12-21T07:55:50.880Z - server running on port 4000
+info 2020-12-21T09:05:09.143Z - stopping server
+info 2020-12-21T09:05:50.993Z - starting server
+info 2020-12-21T09:05:54.741Z - server running on port 4000
+info 2020-12-21T09:08:32.490Z - starting server
+info 2020-12-21T09:08:38.234Z - server running on port 4000
+info 2020-12-21T09:45:05.702Z - stopping server
+info 2020-12-21T09:45:48.689Z - starting server
+info 2020-12-21T09:45:49.892Z - server running on port 4000
+error 2020-12-21T09:46:21.378Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:46:28.552Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:46:30.982Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:47:06.278Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:171
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-21T09:47:08.339Z - stopping server
+info 2020-12-21T09:47:22.486Z - starting server
+info 2020-12-21T09:47:23.371Z - server running on port 4000
+info 2020-12-21T09:47:31.668Z - stopping server
+info 2020-12-21T09:49:20.310Z - starting server
+info 2020-12-21T09:49:21.900Z - server running on port 4000
+error 2020-12-21T09:50:56.691Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:218
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-21T09:51:07.081Z - ReferenceError: offeraddress is not defined
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:218
+    at Array.map (<anonymous>)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22:54
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-21T09:52:20.487Z - stopping server
+info 2020-12-21T09:52:58.485Z - starting server
+error 2020-12-21T09:52:59.790Z - C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, price, offeraddress, phonecontact, emailcontact, price, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, offeraddress, phonecontact, emailcontact, price, owner }))
+                                                                                                                                                ^
+
+SyntaxError: Duplicate parameter name not allowed in this context
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:11:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-21T09:52:59.805Z - stopping server
+info 2020-12-21T09:53:55.720Z - starting server
+error 2020-12-21T09:53:56.280Z - C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, price, offeraddress, phonecontact, emailcontact, price, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, offeraddress, phonecontact, emailcontact, price, owner }))
+                                                                                                                                                ^
+
+SyntaxError: Duplicate parameter name not allowed in this context
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:11:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-21T09:53:56.301Z - stopping server
+info 2020-12-21T09:55:17.070Z - starting server
+error 2020-12-21T09:55:19.153Z - C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\retrieve-offer-by-owner.js:22
+                            return _offers = _offers.map(({ _id, offername, titleoffer, image, price, offeraddress, phonecontact, emailcontact, price, owner }) => ({ id: _id.toHexString(), offername, titleoffer, image, offeraddress, phonecontact, emailcontact, price, owner }))
+                                                                                                                                                ^
+
+SyntaxError: Duplicate parameter name not allowed in this context
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:11:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-21T09:55:19.193Z - stopping server
+info 2020-12-21T09:56:24.993Z - starting server
+info 2020-12-21T09:56:25.828Z - server running on port 4000
+info 2020-12-21T09:59:08.962Z - stopping server
+info 2020-12-21T09:59:23.148Z - starting server
+info 2020-12-21T09:59:23.996Z - server running on port 4000
+info 2020-12-21T10:19:36.603Z - stopping server
+info 2020-12-21T10:20:32.408Z - starting server
+info 2020-12-21T10:20:33.834Z - server running on port 4000
+info 2020-12-21T10:24:15.777Z - stopping server
+info 2020-12-21T10:24:22.005Z - starting server
+info 2020-12-21T10:24:23.008Z - server running on port 4000
+info 2020-12-21T10:26:21.437Z - stopping server
+info 2020-12-21T10:26:28.056Z - starting server
+info 2020-12-21T10:26:28.835Z - server running on port 4000
+info 2020-12-21T10:26:34.394Z - stopping server
+info 2020-12-21T10:26:40.757Z - starting server
+info 2020-12-21T10:26:41.548Z - server running on port 4000
+info 2020-12-21T10:39:21.272Z - starting server
+info 2020-12-21T10:39:22.865Z - server running on port 4000
+info 2020-12-22T07:29:33.763Z - stopping server
+info 2020-12-22T07:29:58.256Z - starting server
+info 2020-12-22T07:30:00.254Z - server running on port 4000
+info 2020-12-22T09:33:06.741Z - stopping server
+info 2020-12-22T09:33:42.411Z - starting server
+error 2020-12-22T09:33:43.527Z - Error: Cannot find module 'offers-errors'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:2:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T09:33:43.638Z - stopping server
+info 2020-12-22T09:35:40.701Z - starting server
+error 2020-12-22T09:35:40.942Z - Error: Cannot find module 'offers-errors'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:2:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T09:35:40.980Z - stopping server
+info 2020-12-22T09:38:06.509Z - starting server
+error 2020-12-22T09:38:06.628Z - Error: Cannot find module 'offers-errors'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:2:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:3:23)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T09:38:06.638Z - stopping server
+info 2020-12-22T09:39:22.535Z - starting server
+info 2020-12-22T09:39:24.909Z - server running on port 4000
+info 2020-12-22T10:10:53.597Z - starting server
+info 2020-12-22T10:10:56.342Z - server running on port 4000
+info 2020-12-22T10:37:32.691Z - stopping server
+info 2020-12-22T10:37:51.257Z - starting server
+info 2020-12-22T10:37:52.779Z - server running on port 4000
+info 2020-12-22T12:11:08.903Z - stopping server
+info 2020-12-22T14:26:55.181Z - starting server
+info 2020-12-22T14:26:57.391Z - server running on port 4000
+error 2020-12-22T14:36:01.821Z - TypeError: findOffer is not a function
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-find-offer.js:9:9)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at IncomingMessage.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\middlewares\json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-22T14:39:52.649Z - stopping server
+info 2020-12-22T14:40:53.341Z - starting server
+info 2020-12-22T14:40:54.069Z - server running on port 4000
+info 2020-12-22T14:54:22.752Z - starting server
+info 2020-12-22T14:54:23.663Z - server running on port 4000
+info 2020-12-22T15:05:01.813Z - stopping server
+info 2020-12-22T15:05:14.332Z - starting server
+error 2020-12-22T15:05:15.078Z - Error: Cannot find module './find-offer.js'
+Require stack:
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\index.js
+- C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\index.js:7:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-register-user.js:1:26)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-22T15:05:15.106Z - stopping server
+info 2020-12-22T15:06:06.551Z - starting server
+info 2020-12-22T15:06:07.451Z - server running on port 4000
+error 2020-12-22T15:21:24.218Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T15:21:31.643Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T15:21:35.915Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T15:28:20.414Z - ValidationError: Offer validation failed: emailcontact: Path `emailcontact` is required.
+    at model.Document.invalidate (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2688:32)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\document.js:2508:17
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-data\node_modules\mongoose\lib\schematype.js:1260:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+info 2020-12-22T16:16:16.928Z - stopping server
+info 2020-12-22T16:21:34.554Z - starting server
+info 2020-12-22T16:21:36.287Z - server running on port 4000
+info 2020-12-22T16:34:05.308Z - stopping server
+info 2020-12-22T16:35:09.269Z - starting server
+info 2020-12-22T16:35:10.915Z - server running on port 4000
+info 2020-12-22T16:38:12.467Z - stopping server
+info 2020-12-22T16:41:24.560Z - starting server
+info 2020-12-22T16:41:25.706Z - server running on port 4000
+error 2020-12-22T16:54:45.516Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T16:54:47.222Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T16:55:03.608Z - Error: ENOENT: no such file or directory, open 'C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\data\offers\default.jpg'
+error 2020-12-22T16:55:47.127Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:26:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T16:55:56.100Z - AuthError: wrong credentials
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\authenticate-user.js:26:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T17:16:42.156Z - ConflictError: user with e-mail juan@mail.com already registered
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\logic\register-user.js:28:33
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-24T10:35:04.578Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user.js:12:37)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:04.589Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-offer.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:04.599Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user-offers.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:20.579Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user.js:12:37)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:20.581Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-offer.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+error 2020-12-24T10:35:20.629Z - TokenExpiredError: jwt expired
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\jsonwebtoken\verify.js:94:10)
+    at module.exports (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\handlers\handle-retrieve-user-offers.js:13:38)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\routes\api\helpers\with-error-handling.js:6:9
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Nicolas\bootcamp\collab\letscoder-bootcamp-202010\staff\nicolas-postigo\huertea-project\huertea-api\node_modules\express\lib\router\index.js:317:13)
+info 2020-12-24T10:38:51.867Z - starting server
+info 2020-12-24T10:38:57.183Z - server running on port 4000

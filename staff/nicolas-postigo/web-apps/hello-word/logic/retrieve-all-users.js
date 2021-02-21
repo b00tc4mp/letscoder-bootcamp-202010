@@ -1,9 +1,0 @@
-function retrieveAllusers(token, callback) {
-
-
-
-
-
-
-    
-}
