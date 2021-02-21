@@ -1,0 +1,125 @@
+.article
+    max-width: 500px
+    margin: 0 auto 1rem auto
+    padding: .2rem
+    min-height: 100vh
+
+    &__read-already-feedback
+        background-color: #eaf0f0
+        width: 15%
+        margin: auto
+        font-weight: bold
+        position: relative
+
+    &__title-general
+        margin: 0
+        text-align: center
+        font-size: 2rem
+
+    &__title-article
+        font-size: 1rem
+
+    &__btns
+        width: 95%
+        display: flex
+        justify-content: space-around
+        margin: auto
+        outline: none
+
+    
+    &__btn
+        border: none
+        padding: .2rem
+        cursor: pointer
+        margin: .3rem 1rem
+        background-color: #e8ebeb
+        border-radius: .3rem
+        outline: none
+
+    &__btn:hover
+        background-color: #cdd1d1
+    
+    &__added
+        font-size: 1rem
+        margin-left: .4rem
+
+    &__added:focus
+        outline: none
+
+    &__read-later-btn
+        float: left
+        margin-top: 1rem
+
+    &__read-later-btn:focus
+        outline: none
+
+    &__read-other-btn
+        margin-top: 1rem
+
+    &__read-other-btn:focus
+        outline: none
+
+.article > h3
+    text-align: center
+    margin: .7rem
+
+.article > h4
+    text-align: center
+    margin: .7rem
+    color: #4b4e4e
+    font-style: italic
+
+.article > img
+    box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.5)
+
+.article > p
+    text-align: left
+    width: 95%
+    margin: 1rem auto
+    font-size: 1.1rem
+
+.article > ul
+    list-style-type: circle
+    margin: 0
+
+ul > li
+    text-align: left
+
+.article-pseudo
+    display: block
+    position: relative
+    height: 95vh
+    
+.article-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-article.jpg")
+    background-repeat: no-repeat
+    opacity: .2
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+
+p > strong
+    color: #0bb1ba
+
+@media only screen and (min-width: 1000px)
+
+    .article-pseudo
+        display: block
+        position: relative
+        
+    .article-pseudo::after
+        content: ""
+        background-image: url("../images/back-img-article.jpg")
+        background-repeat: no-repeat
+        background-position: center
+        opacity: .3
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1

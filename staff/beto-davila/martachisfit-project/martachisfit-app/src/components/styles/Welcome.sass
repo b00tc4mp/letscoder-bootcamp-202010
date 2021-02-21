@@ -1,0 +1,152 @@
+@media only screen and (max-width: 1050px)    
+    .welcome
+
+        &__title
+            text-align: center
+            margin: 0
+
+        &__container
+            max-width: 300px
+            margin: auto
+
+        &__subtitle
+            font-size: 1rem
+
+        &__recipes
+            background-color: #eef5f5
+            padding: .3rem 1rem
+            margin: 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
+            cursor: pointer
+
+        &__workouts
+            background-color: #eef5f5
+            padding: .3rem 1rem
+            margin: 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
+            cursor: pointer
+
+        &__diets
+            background-color: #eef5f5
+            padding: .3rem 1rem
+            margin: 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
+            cursor: pointer
+
+        &__tips
+            background-color: #eef5f5
+            padding: .3rem 1rem
+            margin: 2rem 0
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
+            cursor: pointer
+
+        &__marta-img:hover
+            -webkit-filter: brightness(50%)
+            -webkit-transition: all 1s ease
+            -moz-transition: all 1s ease
+            -o-transition: all 1s ease
+            -ms-transition: all 1s ease
+            transition: all 1s ease
+
+    .welcome-pseudo
+        min-height: 100vh
+        display: block
+        position: relative
+
+    .welcome-pseudo::after
+        content: ""
+        background-image: url("../images/background-img.png")
+        background-repeat: no-repeat
+        opacity: .2
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+
+@media only screen and (min-width: 1050px)
+
+    .welcome
+        // min-height: 100vh
+        padding: 1rem
+
+        &__instagram-title
+            margin-top: 0
+
+        &__dietsdesign-link
+            font-size: .9rem
+            cursor: pointer
+            color: #0bb1ba
+            font-weight: bold
+
+        &__title
+            text-align: center
+            margin: 0
+
+        &__container
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr
+
+        &__subtitle
+            font-size: 1rem
+
+        &__recipes
+            background-color: #eef5f5
+            padding: .3rem 1rem
+            width: 275px
+            margin: 2rem auto
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+            cursor: pointer
+
+        &__workouts
+            background-color: #eef5f5
+            padding: .3rem 1rem
+            width: 275px
+            margin: 2rem auto
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,.4)
+            cursor: pointer
+
+        &__diets
+            background-color: #eef5f5
+            width: 275px
+            padding: .3rem 1rem
+            margin: 2rem auto
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+            cursor: pointer
+
+        &__tips
+            background-color: #eef5f5
+            width: 275px
+            height: 150px
+            padding: .3rem 1rem
+            margin: 2rem auto
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+            cursor: pointer
+            grid-column-start: 2
+            grid-row-start: 2
+
+        &__marta-img:hover
+            -webkit-filter: brightness(50%)
+            -webkit-transition: all 1s ease
+            -moz-transition: all 1s ease
+            -o-transition: all 1s ease
+            -ms-transition: all 1s ease
+            transition: all 1s ease
+
+    .welcome-pseudo
+        min-height: 100vh
+        display: block
+        position: relative
+
+    .welcome-pseudo::after
+        content: ""
+        background-image: url("../images/background-img.png")
+        opacity: .1
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1

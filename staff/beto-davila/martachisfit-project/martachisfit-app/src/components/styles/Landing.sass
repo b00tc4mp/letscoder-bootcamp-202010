@@ -1,0 +1,54 @@
+.landing 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100vh
+
+    &__title
+        font-size: 3rem
+
+    &__p
+        font-size: 1.1rem   
+
+    &__buttons
+        margin: auto
+        display: flex
+        flex-direction: column
+        text-align: center
+        font-size: 1.2rem
+    
+    &__log-btn
+        width: 175px
+        margin: auto
+
+    &__reg-btn
+        width: 175px
+        margin: auto
+
+    &__subtitle
+        font-size: 1.4rem
+
+
+.landing-pseudo
+    display: block
+    position: relative
+    min-height: 100vh
+    
+.landing-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-landing.jpg")
+    opacity: .2
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+
+.btn
+    background-color: #b1ebee
+    padding: .5rem
+    border-radius: 1rem 
+    text-decoration: none
+    cursor: pointer

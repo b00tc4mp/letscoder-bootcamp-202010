@@ -1,0 +1,77 @@
+.navbar
+    border-bottom: 1px solid #d6d6da
+    text-align: right
+    height: 70px
+    line-height: 70px
+
+.menu
+    margin: 0 10px 0 0
+
+    &__profile
+        color: #0bb1ba
+
+.menu .menu__link
+    clear: right
+    text-decoration: none
+    color: gray
+    line-height: 70px
+    background-color: transparent
+
+.menu__link
+    padding: 0 .4rem
+    position: relative
+
+.toggle__btn
+    margin: 0 1rem 0 0
+    font-size: 2rem
+    line-height: 70px
+    display: none
+    width: 30px
+    float: right
+
+
+@media only screen and (max-width: 650px)
+
+    .toggle__btn
+        cursor: pointer
+        display: block
+        border: none
+        background-color: transparent
+        outline: none
+
+        &__input:checked + .menu
+            display: block
+            z-index: 999
+
+    .menu
+        position: absolute
+        text-align: center
+        width: 100%
+        margin: auto
+        display: none
+        background-color: #eaf0f0
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        z-index: 1
+        overflow: auto
+
+    .menu .menu__link
+        display: block
+        margin: 0
+        z-index: 1
+
+    .menu__link
+        border-top: .5px solid #d4d4da
+
+        &--profile:hover
+            background-color: #a8a8ad
+    
+    .dropdown
+        position: relative
+
+
+    .menu__link:hover
+        background-color: #b5b9b9
+        color: white
+    
+    .show 
+        display: block

@@ -1,0 +1,87 @@
+@media only screen and (max-width: 1000px)
+    .diets
+        &__title
+            width: 75%
+            margin: auto
+            font-size: 1.1rem
+
+        &__calories
+            color: #96989c
+
+        &__type
+            cursor: pointer
+            width: 300px
+            background-color: #eef5f5
+            padding: .7rem
+            margin: 2rem auto
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.4)
+
+        &__type-title
+            margin: 0
+
+        &__description
+            font-size: 1rem
+
+    .diets-pseudo
+        display: block
+        position: relative
+        min-height: 100vh
+
+    .diets-pseudo::after
+        content: ""
+        background-image: url("../images/back-img-diets.jpg")
+        opacity: .2
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+
+@media only screen and (min-width: 1000px)
+    .diets
+        &__container
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            margin-top: 5rem
+
+        &__title
+            width: 75%
+            margin: auto
+            font-size: 1.1rem
+            padding-top: 1.5rem
+
+        &__calories
+            color: #96989c
+
+        &__type
+            cursor: pointer
+            width: 300px
+            background-color: #e2e7e7
+            padding: .7rem
+            margin: 1rem auto
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+
+        &__type-title
+            margin: 0
+
+        &__description
+            font-size: .9rem
+
+    .diets-pseudo
+        display: block
+        position: relative
+        min-height: 100vh
+
+    .diets-pseudo::after
+        content: ""
+        background-image: url("../images/back-img-diets.jpg")
+        background-position: center
+        background-repeat: no-repeat
+        opacity: .3
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1

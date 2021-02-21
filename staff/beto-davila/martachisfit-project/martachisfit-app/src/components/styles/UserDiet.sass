@@ -1,0 +1,74 @@
+.user-diet
+    min-height: 100vh
+
+    &__back
+        font-size: 1rem
+        margin-left: 1.5rem
+        margin-top: .2rem
+        cursor: pointer
+        background-color: #d7e0e0
+        border-radius: .5rem
+        padding: .2rem
+        align-self: center
+        float: left
+        text-decoration: none
+    
+    &__title
+        text-align: center
+        margin: 0
+
+    &__time
+        font-size: 1rem
+        color: #686a6d
+        margin-left: .5rem
+
+    &__description
+        width: 90%
+        margin: 1rem auto
+        text-align: center
+
+    &__cal-type
+        margin: 1rem auto
+        display: flex
+        justify-content: space-evenly
+
+    &__macros
+        text-align: center
+
+    &__meals
+        width: 360px
+        margin: 1.5rem auto
+        text-align: center
+        background-color: #eef5f5
+        padding: .2rem
+        border-radius: 1rem
+
+    &__meal
+        font-size: 1rem
+
+    &__random
+        width: 95%
+        margin: 1rem auto
+        text-align: center
+
+    &__line
+        border-bottom: 1px solid #0bb1ba
+        width: 300px
+        margin: 1.5rem auto
+
+.user-diet-pseudo
+    display: block
+    position: relative
+    min-height: 100vh
+    
+.user-diet-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-userdiet.jpg")
+    background-repeat: no-repeat
+    opacity: .2
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1

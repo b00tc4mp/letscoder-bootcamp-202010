@@ -1,0 +1,114 @@
+.bold
+    font-weight: bold
+
+.workout-pseudo
+    display: block
+    position: relative
+    height: 130vh
+    
+.workout-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-workout.jpg")
+    background-repeat: no-repeat
+    opacity: .1
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+    
+.workout
+    &__mov-title-heart
+        display: flex
+        justify-content: space-between
+        width: 100%
+
+    &__feedback
+        padding: .2rem 0
+        margin-right: .7rem
+
+    &__feedback > p
+        margin: 0
+        font-size: 1rem
+
+    &__name
+        text-align: center
+        margin: 0
+        font-size: 1.1rem
+        padding: .5rem 0
+
+    &__heart-btn
+        padding: 0
+        background-color: transparent
+        border: none
+        cursor: pointer
+    
+    &__heart-btn:focus
+        outline: none
+
+    &__to-workouts
+        font-size: 1rem
+        margin-left: 1.5rem
+        margin-top: .2rem
+        cursor: pointer
+        background-color: #d7e0e0
+        border-radius: .5rem
+        padding: .2rem
+        align-self: center
+
+    &__header
+        display: flex
+        justify-content: space-evenly
+        margin: 1rem
+        overflow: auto
+
+    &__header > p
+        font-size: 1rem
+
+    &__description
+        width: 85%
+        margin: auto
+        text-align: left
+        
+    &__description > p
+        color: #282929
+        font-size: 1rem
+
+    &__layout
+        width: 300px
+        text-align: left
+        margin: 1rem auto
+        background-color: #eef5f5
+        padding: 1rem
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.4)
+    
+    &__layout > p
+        font-size: 1rem
+
+
+    &__layout > h4
+        margin: .5rem 0    
+
+@media only screen and (min-width: 800px)
+
+    .workout-pseudo::after
+        content: ""
+        background-image: url("../images/back-img-workout.jpg")
+        background-repeat: no-repeat
+        background-position: center
+        opacity: .1
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+
+    .workout
+        &__layout
+            width: 400px
+
+        &__mov-title-heart
+            display: flex
+            justify-content: space-around

@@ -1,0 +1,47 @@
+.sign-in
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    height: 100vh
+
+    &__title
+        font-size: 3rem
+
+    &__btn
+        border: none
+        background-color: #b1ebee
+        padding: .5rem
+        border-radius: 1rem
+        margin: .5rem auto
+        cursor: pointer
+        width: 150px
+
+    &__form
+        display: flex
+        flex-direction: column
+        justify-content: center 
+
+    &__input
+        border: none
+        border-bottom: 1px solid #0bb1ba
+        line-height: 1.5rem
+        background-color: transparent
+        width: 200px
+        margin: .8rem auto
+
+.sign-in-pseudo
+    display: block
+    position: relative
+    min-height: 100vh
+    
+.sign-in-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-signin.jpg")
+    opacity: .1
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1

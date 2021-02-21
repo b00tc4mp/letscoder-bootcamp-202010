@@ -1,0 +1,101 @@
+.bold
+    font-weight: bold
+
+.workouts-pseudo
+    display: block
+    position: relative
+    min-height: 100vh
+    
+.workouts-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-workouts.jpg")
+    background-repeat: no-repeat
+    opacity: .1
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+    
+.workouts
+
+    &__warn
+        font-size: 1rem
+        width: 90%
+        margin: auto
+        text-align: left
+
+    &__pre
+        margin-bottom: 3rem
+        background-color: #eef5f5
+        width: 300px
+        margin: auto
+        padding: .5rem
+        border-radius: 3rem
+
+    &__movements:hover
+        color: #858a8a
+
+    &__pre-question
+        font-size: 1rem
+        color: #858a8a
+
+    &__title
+        // margin: 0
+        text-align: center
+        
+    &__level
+        cursor: pointer
+        background-color: #eef5f5
+        width: 300px
+        margin: 1rem auto
+        padding: .5rem
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.4)
+
+    &__level-description
+        text-align: left
+        font-size: 1rem
+
+    &__pre-title
+        margin: 0 auto 1rem auto
+
+    &__pre-question
+        margin: 0 auto 1rem auto
+
+@media only screen and (min-width: 1100px)
+
+    .workouts-pseudo
+        display: block
+        position: relative
+        min-height: 100vh
+        
+    .workouts-pseudo::after
+        content: ""
+        background-image: url("../images/back-img-workouts.jpg")
+        background-repeat: no-repeat
+        background-position: center
+        opacity: .1
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+
+    .workouts
+
+        &__container
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+
+        &__title
+            margin: 2rem
+
+        &__level
+            cursor: pointer
+            background-color: #eef5f5
+            width: 350px
+            margin: 1rem auto
+            padding: .5rem
+            box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.4)

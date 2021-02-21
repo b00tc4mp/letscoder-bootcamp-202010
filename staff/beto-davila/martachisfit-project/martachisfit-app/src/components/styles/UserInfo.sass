@@ -1,0 +1,77 @@
+.user-info
+
+    &__title
+        text-align: center
+        margin: 0 auto 3rem auto
+        font-size: 1.6rem
+        padding-top: .5rem
+
+    &__gender
+        width: 60%
+        margin: auto
+
+    &__goal
+        width: 300px
+        margin: auto
+
+    &__numbers
+        width: 200px
+        margin: 1.5rem auto
+        display: grid
+        grid-template-columns: 1fr 130px
+        grid-template-rows: 35px 35px 35px
+        grid-row-gap: 1rem
+
+    &__activity
+        width: 275px
+        display: flex
+        margin: 2rem auto
+        justify-content: space-between
+
+    &__p
+        width: 90%
+        margin: 4.5rem auto
+        font-size: 1.2rem
+
+    &__next
+        border: none
+        background-color: #b1ebee
+        padding: .5rem
+        border-radius: 1rem
+        cursor: pointer
+        margin-top: 1rem
+
+    
+    &__back
+        margin: 1rem
+        border: none
+        background-color: transparent
+        float: left
+        cursor: pointer
+
+.user-info > h3
+    margin: 0
+
+.user-info > input, label, select
+    background-color: transparent
+    font-size: 1.3rem
+
+.user-info > input, input::-webkit-input-placeholder
+    font-size: 1.2rem
+
+.user-info-pseudo
+    display: block
+    position: relative
+    height: 100vh
+    
+.user-info-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-userinfo.jpg")
+    opacity: .1
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+        

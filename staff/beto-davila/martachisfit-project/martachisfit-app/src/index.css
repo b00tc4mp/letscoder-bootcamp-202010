@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eaf0f0;
+  padding: 0;
+}
+
+h1, h2, h3, a, button {
+  font-family: "Oswald", sans-serif;
+  color: #0bb1ba;
+}
+
+button {
+  font-size: 1.2rem;
+}
+
+p,
+h4,
+input,
+label,
+select {
+  font-family: "Josefin Sans", sans-serif;
+  color: #303236;
+}
+
+input, label, select {
+  margin: .3rem;
+  background-color: #f8fafa;
+}
+
+input[type="email"], input[type="text"], input[type="number"]
+{
+  font-size: 1.1rem;
+}

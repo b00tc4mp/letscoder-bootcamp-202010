@@ -1,0 +1,53 @@
+.diet-design
+
+    &__title
+        text-align: center
+        font-size: 1.3rem
+        margin: 0 auto 1rem auto
+
+    &__input
+        border: none
+        border-bottom: 2px solid #0bb1ba
+        line-height: 1.5rem
+        width: 175px
+        background-color: transparent
+        outline: none
+
+    &__input:hover
+        background-color: #ebeeee
+
+    &__search
+        border: none
+        background-color: transparent
+        outline: none
+        cursor: pointer
+
+    &__search-form
+        padding: 1.5rem
+
+    &__description
+        width: 275px
+        margin: auto
+        line-height: 1.8rem
+        background-color: #eef5f5
+        padding: 1rem
+        box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2)
+        font-size: 1rem
+
+.diet-design-pseudo
+    display: block
+    position: relative
+    height: 100vh
+    
+.diet-design-pseudo::after
+    content: ""
+    background-image: url("../images/back-img-dietdesign.jpg")
+    opacity: .2
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: -1
+
+    

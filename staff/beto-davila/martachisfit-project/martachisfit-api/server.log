@@ -1,0 +1,1677 @@
+info 2020-11-30T12:45:49.221Z - stopping server
+info 2020-11-30T12:48:57.534Z - stopping server
+info 2020-11-30T12:52:06.199Z - stopping server
+info 2020-11-30T13:02:03.028Z - starting server
+info 2020-11-30T13:02:03.098Z - server running on port 4000
+info 2020-11-30T13:02:30.985Z - stopping server
+info 2020-11-30T13:02:33.185Z - starting server
+info 2020-11-30T13:02:33.239Z - server running on port 4000
+info 2020-11-30T13:03:22.592Z - stopping server
+info 2020-11-30T13:03:33.039Z - starting server
+info 2020-11-30T13:03:33.089Z - server running on port 4000
+info 2020-11-30T13:04:41.742Z - stopping server
+info 2020-11-30T13:07:08.481Z - starting server
+info 2020-11-30T13:07:08.537Z - server running on port 4000
+info 2020-11-30T13:07:14.667Z - stopping server
+info 2020-11-30T13:22:57.587Z - starting server
+info 2020-11-30T13:22:57.642Z - server running on port 4000
+info 2020-11-30T13:24:18.012Z - stopping server
+info 2020-11-30T13:45:42.795Z - starting server
+info 2020-11-30T13:45:42.875Z - server running on port 4000
+info 2020-11-30T13:47:10.714Z - stopping server
+info 2020-11-30T13:48:44.995Z - starting server
+info 2020-11-30T13:48:45.111Z - server running on port 4000
+info 2020-11-30T13:52:59.943Z - stopping server
+info 2020-11-30T14:18:57.770Z - starting server
+info 2020-11-30T14:18:57.861Z - server running on port 4000
+info 2020-11-30T14:18:59.940Z - stopping server
+info 2020-11-30T14:54:22.287Z - starting server
+info 2020-11-30T14:54:22.434Z - server running on port 4000
+info 2020-11-30T14:54:25.871Z - stopping server
+info 2020-11-30T14:54:25.872Z - stopping server
+info 2020-11-30T15:44:31.261Z - starting server
+error 2020-11-30T15:44:31.358Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:44:31.362Z - stopping server
+info 2020-11-30T15:44:41.168Z - starting server
+error 2020-11-30T15:44:41.221Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:44:41.225Z - stopping server
+info 2020-11-30T15:45:31.517Z - starting server
+error 2020-11-30T15:45:31.566Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:45:31.570Z - stopping server
+info 2020-11-30T15:45:43.262Z - starting server
+error 2020-11-30T15:45:43.317Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:45:43.320Z - stopping server
+info 2020-11-30T15:47:12.300Z - starting server
+error 2020-11-30T15:47:12.349Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-app/src/logic/index.js:1
+import caloriesCalc from './calories-calc'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-user.js:1:30)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:4:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-11-30T15:47:12.353Z - stopping server
+info 2020-11-30T15:48:58.505Z - starting server
+info 2020-11-30T15:48:58.575Z - server running on port 4000
+info 2020-11-30T15:52:33.889Z - stopping server
+info 2020-11-30T15:53:17.731Z - starting server
+info 2020-11-30T15:53:17.830Z - server running on port 4000
+info 2020-11-30T15:55:42.063Z - stopping server
+info 2020-11-30T15:55:53.573Z - starting server
+info 2020-11-30T15:55:53.658Z - server running on port 4000
+info 2020-12-01T04:23:33.876Z - stopping server
+info 2020-12-01T06:39:57.372Z - starting server
+info 2020-12-01T06:39:57.503Z - server running on port 4000
+info 2020-12-01T06:49:13.908Z - starting server
+info 2020-12-01T06:49:14.000Z - server running on port 4000
+info 2020-12-01T07:39:33.087Z - starting server
+info 2020-12-01T07:39:33.192Z - server running on port 4000
+info 2020-12-01T10:35:54.631Z - stopping server
+info 2020-12-01T11:32:29.654Z - starting server
+info 2020-12-01T11:32:29.748Z - server running on port 4000
+info 2020-12-01T12:04:29.535Z - stopping server
+info 2020-12-01T12:12:09.016Z - starting server
+info 2020-12-01T12:12:09.115Z - server running on port 4000
+info 2020-12-01T12:55:27.371Z - stopping server
+info 2020-12-01T15:04:49.756Z - starting server
+info 2020-12-01T15:04:49.848Z - server running on port 4000
+info 2020-12-01T15:08:54.348Z - stopping server
+info 2020-12-01T15:08:57.541Z - starting server
+info 2020-12-01T15:08:57.646Z - server running on port 4000
+info 2020-12-01T15:13:23.708Z - stopping server
+info 2020-12-01T16:01:26.534Z - starting server
+info 2020-12-01T16:01:26.617Z - server running on port 4000
+info 2020-12-01T16:47:10.086Z - stopping server
+info 2020-12-01T18:35:14.341Z - starting server
+info 2020-12-01T18:35:14.457Z - server running on port 4000
+info 2020-12-01T19:09:35.911Z - stopping server
+info 2020-12-02T06:17:06.116Z - starting server
+info 2020-12-02T06:17:06.217Z - server running on port 4000
+info 2020-12-02T07:54:25.855Z - stopping server
+info 2020-12-02T08:00:49.141Z - starting server
+info 2020-12-02T08:00:49.248Z - server running on port 4000
+info 2020-12-02T08:10:54.790Z - stopping server
+info 2020-12-02T08:10:56.816Z - starting server
+info 2020-12-02T08:10:56.927Z - server running on port 4000
+info 2020-12-02T08:11:37.856Z - stopping server
+info 2020-12-02T08:20:19.263Z - starting server
+info 2020-12-02T08:20:19.362Z - server running on port 4000
+info 2020-12-02T09:07:50.756Z - stopping server
+info 2020-12-02T09:09:43.884Z - starting server
+info 2020-12-02T09:09:43.996Z - server running on port 4000
+info 2020-12-02T09:14:38.580Z - stopping server
+info 2020-12-02T09:14:40.472Z - starting server
+info 2020-12-02T09:14:40.578Z - server running on port 4000
+info 2020-12-02T09:16:42.283Z - stopping server
+info 2020-12-02T09:17:46.834Z - starting server
+info 2020-12-02T09:17:46.939Z - server running on port 4000
+info 2020-12-02T09:21:20.017Z - stopping server
+info 2020-12-02T09:21:26.361Z - starting server
+info 2020-12-02T09:21:26.464Z - server running on port 4000
+info 2020-12-02T09:23:23.408Z - stopping server
+info 2020-12-02T09:23:29.018Z - starting server
+info 2020-12-02T09:23:29.125Z - server running on port 4000
+info 2020-12-02T09:23:58.175Z - stopping server
+info 2020-12-02T09:26:56.888Z - starting server
+info 2020-12-02T09:26:56.990Z - server running on port 4000
+info 2020-12-02T09:30:17.943Z - stopping server
+info 2020-12-02T09:31:57.136Z - starting server
+info 2020-12-02T09:31:57.237Z - server running on port 4000
+info 2020-12-02T09:32:52.378Z - stopping server
+info 2020-12-02T10:01:05.519Z - starting server
+info 2020-12-02T10:01:05.636Z - server running on port 4000
+info 2020-12-02T10:02:13.432Z - stopping server
+info 2020-12-02T10:03:57.569Z - starting server
+info 2020-12-02T10:03:57.676Z - server running on port 4000
+info 2020-12-02T10:06:36.781Z - stopping server
+info 2020-12-02T10:12:25.233Z - starting server
+info 2020-12-02T10:12:25.335Z - server running on port 4000
+info 2020-12-02T10:15:31.370Z - stopping server
+info 2020-12-02T10:15:38.154Z - starting server
+info 2020-12-02T10:15:38.273Z - server running on port 4000
+info 2020-12-02T10:20:04.400Z - stopping server
+info 2020-12-02T10:25:19.491Z - starting server
+info 2020-12-02T10:25:19.598Z - server running on port 4000
+info 2020-12-02T10:28:46.855Z - stopping server
+info 2020-12-02T10:29:33.105Z - starting server
+info 2020-12-02T10:30:09.982Z - server running on port 4000
+info 2020-12-02T10:30:58.904Z - starting server
+info 2020-12-02T10:31:04.178Z - server running on port 4000
+info 2020-12-02T10:43:23.490Z - starting server
+info 2020-12-02T10:43:24.053Z - server running on port 4000
+info 2020-12-02T11:15:12.165Z - starting server
+info 2020-12-02T11:15:12.536Z - server running on port 4000
+info 2020-12-02T11:17:36.271Z - starting server
+info 2020-12-02T11:17:36.626Z - server running on port 4000
+info 2020-12-02T11:33:50.541Z - starting server
+info 2020-12-02T11:33:51.066Z - server running on port 4000
+info 2020-12-02T11:41:24.938Z - starting server
+info 2020-12-02T11:41:25.388Z - server running on port 4000
+info 2020-12-02T11:42:12.294Z - starting server
+info 2020-12-02T11:42:12.771Z - server running on port 4000
+info 2020-12-02T11:52:16.176Z - starting server
+info 2020-12-02T11:52:16.447Z - server running on port 4000
+info 2020-12-02T11:53:56.347Z - starting server
+info 2020-12-02T11:53:56.629Z - server running on port 4000
+info 2020-12-02T11:55:10.237Z - starting server
+info 2020-12-02T11:55:10.526Z - server running on port 4000
+info 2020-12-02T12:01:56.335Z - starting server
+info 2020-12-02T12:01:56.441Z - server running on port 4000
+info 2020-12-02T12:03:00.128Z - stopping server
+info 2020-12-02T12:10:03.830Z - starting server
+info 2020-12-02T12:10:04.056Z - server running on port 4000
+info 2020-12-02T12:20:04.706Z - starting server
+info 2020-12-02T12:20:04.992Z - server running on port 4000
+info 2020-12-02T12:25:59.941Z - starting server
+info 2020-12-02T12:26:00.050Z - server running on port 4000
+info 2020-12-02T12:33:33.682Z - stopping server
+info 2020-12-02T12:33:36.458Z - starting server
+info 2020-12-02T12:33:36.564Z - server running on port 4000
+info 2020-12-02T12:57:51.886Z - stopping server
+info 2020-12-02T12:58:11.056Z - starting server
+info 2020-12-02T12:58:11.348Z - server running on port 4000
+info 2020-12-02T13:02:42.521Z - starting server
+error 2020-12-02T13:02:42.766Z - Error: Cannot find module './handle-retrieve-food'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:9:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:13:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-02T13:02:42.791Z - stopping server
+info 2020-12-02T13:03:17.258Z - starting server
+error 2020-12-02T13:03:17.508Z - Error: Cannot find module './handle-retrieve-food'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:9:25)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:13:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-02T13:03:17.524Z - stopping server
+info 2020-12-02T13:06:25.794Z - starting server
+info 2020-12-02T13:06:37.821Z - server running on port 4000
+info 2020-12-02T13:15:01.901Z - starting server
+info 2020-12-02T13:15:02.011Z - server running on port 4000
+info 2020-12-02T13:17:09.085Z - stopping server
+info 2020-12-02T13:17:35.982Z - starting server
+info 2020-12-02T13:17:36.278Z - server running on port 4000
+info 2020-12-02T13:34:49.651Z - starting server
+info 2020-12-02T13:34:49.757Z - server running on port 4000
+info 2020-12-02T13:35:58.545Z - stopping server
+info 2020-12-02T13:36:00.422Z - starting server
+info 2020-12-02T13:36:00.520Z - server running on port 4000
+info 2020-12-02T13:49:59.224Z - stopping server
+info 2020-12-02T13:50:06.264Z - starting server
+info 2020-12-02T13:50:06.368Z - server running on port 4000
+info 2020-12-02T13:50:46.007Z - stopping server
+info 2020-12-02T14:06:58.333Z - starting server
+info 2020-12-02T14:06:58.435Z - server running on port 4000
+info 2020-12-02T15:04:54.183Z - stopping server
+info 2020-12-02T15:05:25.974Z - starting server
+info 2020-12-02T15:05:26.237Z - server running on port 4000
+info 2020-12-02T15:13:17.758Z - starting server
+info 2020-12-02T15:13:17.871Z - server running on port 4000
+info 2020-12-02T15:14:53.334Z - stopping server
+info 2020-12-02T15:14:55.853Z - starting server
+info 2020-12-02T15:14:55.949Z - server running on port 4000
+info 2020-12-02T15:18:40.728Z - stopping server
+info 2020-12-02T15:18:42.741Z - starting server
+info 2020-12-02T15:18:42.852Z - server running on port 4000
+info 2020-12-02T16:46:37.456Z - stopping server
+info 2020-12-02T16:47:54.611Z - starting server
+info 2020-12-02T16:47:54.720Z - server running on port 4000
+info 2020-12-03T05:41:10.102Z - stopping server
+info 2020-12-03T05:49:38.288Z - starting server
+info 2020-12-03T05:49:38.389Z - server running on port 4000
+info 2020-12-03T06:18:31.315Z - stopping server
+info 2020-12-03T06:44:04.541Z - starting server
+info 2020-12-03T06:44:04.649Z - server running on port 4000
+info 2020-12-03T07:58:05.164Z - stopping server
+info 2020-12-03T08:16:28.494Z - starting server
+error 2020-12-03T08:16:28.520Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:14
+    handleRetrieveAllDiets
+    ^
+
+SyntaxError: Identifier 'handleRetrieveAllDiets' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-03T08:16:28.521Z - stopping server
+info 2020-12-03T08:17:21.218Z - starting server
+info 2020-12-03T08:17:21.324Z - server running on port 4000
+info 2020-12-03T09:02:49.930Z - stopping server
+info 2020-12-03T09:19:18.449Z - starting server
+info 2020-12-03T09:19:18.559Z - server running on port 4000
+info 2020-12-03T09:21:51.264Z - stopping server
+info 2020-12-03T09:22:00.404Z - starting server
+info 2020-12-03T09:22:00.507Z - server running on port 4000
+info 2020-12-03T09:44:13.359Z - stopping server
+info 2020-12-03T10:02:36.686Z - starting server
+info 2020-12-03T10:02:36.795Z - server running on port 4000
+info 2020-12-03T10:03:40.174Z - stopping server
+info 2020-12-03T10:03:49.425Z - starting server
+info 2020-12-03T10:03:49.535Z - server running on port 4000
+info 2020-12-03T10:05:55.513Z - stopping server
+info 2020-12-03T10:07:32.594Z - starting server
+info 2020-12-03T10:07:32.703Z - server running on port 4000
+info 2020-12-03T10:19:33.277Z - stopping server
+info 2020-12-03T10:20:49.371Z - starting server
+info 2020-12-03T10:20:49.486Z - server running on port 4000
+info 2020-12-03T10:20:59.518Z - stopping server
+info 2020-12-03T10:22:04.544Z - starting server
+info 2020-12-03T10:22:04.826Z - server running on port 4000
+info 2020-12-03T10:24:24.078Z - stopping server
+info 2020-12-03T10:34:20.682Z - starting server
+info 2020-12-03T10:34:20.789Z - server running on port 4000
+info 2020-12-03T12:58:59.711Z - stopping server
+info 2020-12-03T12:59:02.493Z - starting server
+info 2020-12-03T12:59:02.605Z - server running on port 4000
+info 2020-12-03T13:12:12.232Z - stopping server
+info 2020-12-03T13:12:14.332Z - starting server
+info 2020-12-03T13:12:14.434Z - server running on port 4000
+info 2020-12-03T13:16:47.083Z - stopping server
+info 2020-12-03T13:16:49.266Z - starting server
+info 2020-12-03T13:16:49.380Z - server running on port 4000
+info 2020-12-03T13:21:21.217Z - stopping server
+info 2020-12-03T13:21:35.763Z - starting server
+info 2020-12-03T13:21:36.142Z - server running on port 4000
+info 2020-12-03T13:28:31.455Z - starting server
+info 2020-12-03T13:28:31.560Z - server running on port 4000
+info 2020-12-03T13:29:22.656Z - stopping server
+info 2020-12-03T13:30:25.347Z - starting server
+info 2020-12-03T13:30:25.456Z - server running on port 4000
+info 2020-12-03T13:32:39.775Z - stopping server
+info 2020-12-03T13:32:50.272Z - starting server
+info 2020-12-03T13:32:50.648Z - server running on port 4000
+info 2020-12-03T13:38:57.255Z - starting server
+info 2020-12-03T13:38:57.360Z - server running on port 4000
+info 2020-12-03T13:48:29.648Z - stopping server
+info 2020-12-03T13:48:43.328Z - starting server
+info 2020-12-03T13:48:43.749Z - server running on port 4000
+info 2020-12-03T14:00:09.862Z - starting server
+info 2020-12-03T14:00:09.972Z - server running on port 4000
+info 2020-12-03T14:00:50.424Z - stopping server
+info 2020-12-03T14:01:22.727Z - starting server
+info 2020-12-03T14:01:22.833Z - server running on port 4000
+info 2020-12-03T14:01:40.097Z - stopping server
+info 2020-12-03T14:02:07.827Z - starting server
+info 2020-12-03T14:02:07.915Z - server running on port 4000
+info 2020-12-03T14:20:20.116Z - stopping server
+info 2020-12-03T14:20:39.585Z - starting server
+info 2020-12-03T14:20:39.690Z - server running on port 4000
+info 2020-12-03T15:59:00.779Z - stopping server
+info 2020-12-04T06:42:53.113Z - starting server
+error 2020-12-04T06:42:53.150Z - Error: Cannot find module './create-custom-error'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/errors/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-register-user.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/errors/index.js:1:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:1:64)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-04T06:42:53.151Z - stopping server
+info 2020-12-04T06:44:53.852Z - starting server
+info 2020-12-04T06:44:53.963Z - server running on port 4000
+error 2020-12-04T06:45:22.998Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:45:45.846Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:46:20.464Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:46:27.837Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T06:48:53.678Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T06:51:15.102Z - stopping server
+info 2020-12-04T06:51:17.245Z - starting server
+error 2020-12-04T06:51:17.351Z - ReferenceError: query is not defined
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:36:29)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js:2:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:18:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-04T06:51:17.355Z - stopping server
+info 2020-12-04T06:52:45.573Z - starting server
+info 2020-12-04T06:52:45.686Z - server running on port 4000
+info 2020-12-04T07:11:14.837Z - stopping server
+info 2020-12-04T07:21:54.549Z - starting server
+info 2020-12-04T07:21:54.669Z - server running on port 4000
+info 2020-12-04T07:25:12.481Z - stopping server
+info 2020-12-04T07:25:14.312Z - starting server
+info 2020-12-04T07:25:14.423Z - server running on port 4000
+info 2020-12-04T07:59:35.474Z - stopping server
+info 2020-12-04T08:04:42.980Z - starting server
+info 2020-12-04T08:04:43.103Z - server running on port 4000
+info 2020-12-04T09:01:10.738Z - stopping server
+info 2020-12-04T09:02:55.044Z - starting server
+info 2020-12-04T09:02:55.163Z - server running on port 4000
+error 2020-12-04T09:57:42.105Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-04T10:17:15.759Z - stopping server
+info 2020-12-04T10:21:32.734Z - starting server
+error 2020-12-04T10:21:32.837Z - Error: Cannot find module '/handle-add-user-articles'
+Require stack:
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/index.js
+- /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:13:28)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:16:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+info 2020-12-04T10:21:32.841Z - stopping server
+info 2020-12-04T10:23:14.857Z - starting server
+info 2020-12-04T10:23:14.968Z - server running on port 4000
+info 2020-12-04T12:29:56.229Z - stopping server
+info 2020-12-04T12:58:56.614Z - starting server
+info 2020-12-04T12:58:56.790Z - server running on port 4000
+info 2020-12-04T13:24:16.725Z - stopping server
+info 2020-12-04T13:34:44.147Z - starting server
+info 2020-12-04T13:34:44.324Z - server running on port 4000
+error 2020-12-04T13:35:10.610Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:36:09.234Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:37:18.662Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:37:43.424Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+error 2020-12-04T13:39:54.490Z - TypeError: retrieveSavedArticles is not a function
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-retrieve-saved-articles.js:15:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:317:13)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/index.js:275:10)
+info 2020-12-04T13:43:01.877Z - stopping server
+info 2020-12-04T13:43:54.899Z - starting server
+info 2020-12-04T13:43:55.067Z - server running on port 4000
+info 2020-12-04T13:54:43.295Z - stopping server
+info 2020-12-04T14:23:06.091Z - starting server
+info 2020-12-04T14:23:06.291Z - server running on port 4000
+error 2020-12-04T14:23:23.191Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:23:40.549Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:26:08.452Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:26:13.950Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:27:19.128Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:28:18.303Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:35:07.330Z - stopping server
+info 2020-12-04T14:35:09.708Z - starting server
+info 2020-12-04T14:35:09.869Z - server running on port 4000
+error 2020-12-04T14:35:21.627Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:35:55.475Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:36:10.328Z - stopping server
+info 2020-12-04T14:36:15.741Z - starting server
+info 2020-12-04T14:36:15.985Z - server running on port 4000
+error 2020-12-04T14:36:18.643Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:38:39.281Z - stopping server
+info 2020-12-04T14:38:41.421Z - starting server
+info 2020-12-04T14:38:41.602Z - server running on port 4000
+error 2020-12-04T14:39:06.736Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:39:25.982Z - stopping server
+info 2020-12-04T14:39:47.851Z - starting server
+info 2020-12-04T14:39:48.617Z - server running on port 4000
+error 2020-12-04T14:40:32.767Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:41:32.916Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:42:45.260Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:43:25.415Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:44:55.996Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+error 2020-12-04T14:47:43.126Z - TypeError: undefined is not an id
+    at validateId (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/helpers/validations.js:29:43)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/add-food.js:23:5)
+    at module.exports (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-add-food.js:7:9)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/helpers/handle-error.js:6:9
+    at Layer.handle [as handle_request] (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/express/lib/router/route.js:137:13)
+    at IncomingMessage.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/middlewares/json-body-parser.js:21:13)
+    at IncomingMessage.emit (events.js:314:20)
+    at endReadableNT (_stream_readable.js:1223:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+info 2020-12-04T14:47:52.272Z - starting server
+info 2020-12-04T14:47:52.472Z - server running on port 4000
+info 2020-12-04T14:48:53.563Z - stopping server
+info 2020-12-04T14:48:55.643Z - starting server
+info 2020-12-04T14:48:55.834Z - server running on port 4000
+info 2020-12-04T14:50:40.999Z - stopping server
+info 2020-12-04T14:50:52.845Z - starting server
+info 2020-12-04T14:50:53.919Z - server running on port 4000
+info 2020-12-04T16:11:18.453Z - starting server
+info 2020-12-04T16:11:18.584Z - server running on port 4000
+info 2020-12-05T04:20:00.087Z - stopping server
+info 2020-12-05T05:57:30.448Z - starting server
+info 2020-12-05T05:57:30.587Z - server running on port 4000
+info 2020-12-05T06:01:51.664Z - stopping server
+info 2020-12-05T06:07:45.408Z - starting server
+info 2020-12-05T06:07:45.542Z - server running on port 4000
+info 2020-12-05T06:17:23.292Z - stopping server
+info 2020-12-05T06:17:32.596Z - starting server
+info 2020-12-05T06:17:32.706Z - server running on port 4000
+info 2020-12-05T06:19:04.955Z - stopping server
+info 2020-12-05T06:19:30.831Z - starting server
+info 2020-12-05T06:19:30.943Z - server running on port 4000
+info 2020-12-05T06:30:34.945Z - stopping server
+info 2020-12-05T06:30:48.026Z - starting server
+info 2020-12-05T06:30:48.167Z - server running on port 4000
+info 2020-12-05T09:06:13.663Z - stopping server
+info 2020-12-05T11:17:48.294Z - starting server
+error 2020-12-05T11:17:48.347Z - TypeError: Invalid schema configuration: `True` is not a valid type at path `img.required`. See http://bit.ly/mongoose-schematypes for a list of valid schema types.
+    at Schema.interpretAsType (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:998:11)
+    at Schema.path (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:674:27)
+    at Schema.add (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:496:12)
+    at Schema.add (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:507:12)
+    at new Schema (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongoose/lib/schema.js:127:10)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/models/schemas/recipe-img.js:3:18)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/models/schemas/index.js:6:16)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+info 2020-12-05T11:17:48.349Z - stopping server
+info 2020-12-05T11:18:43.319Z - starting server
+info 2020-12-05T11:18:43.456Z - server running on port 4000
+error 2020-12-05T12:20:52.813Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:22:26.283Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:23:06.029Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:23:39.242Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:27:41.567Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T12:29:02.410Z - stopping server
+info 2020-12-05T12:29:13.186Z - starting server
+info 2020-12-05T12:29:13.685Z - server running on port 4000
+info 2020-12-05T12:31:46.411Z - starting server
+info 2020-12-05T12:31:46.864Z - server running on port 4000
+error 2020-12-05T12:36:27.426Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T12:39:20.811Z - starting server
+info 2020-12-05T12:39:21.236Z - server running on port 4000
+error 2020-12-05T12:40:47.362Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T12:40:52.761Z - TypeError: Cannot read property 'map' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-food.js:24:42
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T12:41:01.995Z - starting server
+info 2020-12-05T12:41:02.117Z - server running on port 4000
+info 2020-12-05T13:37:15.488Z - stopping server
+info 2020-12-05T13:38:38.885Z - starting server
+info 2020-12-05T13:38:39.009Z - server running on port 4000
+error 2020-12-05T13:38:56.453Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T15:26:33.970Z - stopping server
+info 2020-12-05T15:26:36.516Z - starting server
+info 2020-12-05T15:26:36.646Z - server running on port 4000
+info 2020-12-05T16:56:43.530Z - stopping server
+info 2020-12-05T16:56:45.275Z - starting server
+info 2020-12-05T16:56:45.398Z - server running on port 4000
+error 2020-12-05T16:57:32.009Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T16:57:53.514Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T16:58:21.277Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-05T16:59:12.612Z - TypeError: Cannot read property 'length' of undefined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/toggle-food-user-diet.js:27:27
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-05T17:43:54.829Z - stopping server
+info 2020-12-05T17:44:09.130Z - starting server
+info 2020-12-05T17:44:09.492Z - server running on port 4000
+info 2020-12-05T17:47:40.385Z - starting server
+info 2020-12-05T17:47:40.499Z - server running on port 4000
+info 2020-12-05T18:13:16.522Z - stopping server
+info 2020-12-05T18:13:20.421Z - starting server
+info 2020-12-05T18:13:20.557Z - server running on port 4000
+info 2020-12-05T18:38:47.369Z - stopping server
+info 2020-12-05T18:44:56.380Z - starting server
+info 2020-12-05T18:44:56.508Z - server running on port 4000
+info 2020-12-06T16:42:02.854Z - stopping server
+info 2020-12-06T18:53:07.799Z - starting server
+info 2020-12-06T18:53:07.922Z - server running on port 4000
+error 2020-12-06T18:54:10.252Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:55:42.998Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:55:53.643Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:56:29.630Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:57:38.147Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:58:46.371Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T18:59:22.350Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T19:00:04.066Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:01:40.076Z - stopping server
+info 2020-12-06T19:02:55.042Z - starting server
+info 2020-12-06T19:02:55.376Z - server running on port 4000
+error 2020-12-06T19:26:09.065Z - NotFoundError: recipeImg with id 5fcd20ba43cee43e7ac83f69 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:29:43
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:42:16.982Z - starting server
+info 2020-12-06T19:42:17.103Z - server running on port 4000
+error 2020-12-06T19:42:30.874Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T19:42:39.695Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-06T19:43:46.599Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:43:51.892Z - stopping server
+info 2020-12-06T19:43:59.666Z - starting server
+info 2020-12-06T19:44:00.033Z - server running on port 4000
+error 2020-12-06T19:45:18.702Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:34:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:46:53.583Z - starting server
+info 2020-12-06T19:46:54.018Z - server running on port 4000
+info 2020-12-06T19:48:15.243Z - starting server
+info 2020-12-06T19:48:15.636Z - server running on port 4000
+info 2020-12-06T19:50:44.667Z - starting server
+info 2020-12-06T19:50:44.798Z - server running on port 4000
+error 2020-12-06T19:52:11.627Z - ReferenceError: recipeId is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:36:47
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T19:52:58.342Z - stopping server
+info 2020-12-06T19:53:00.201Z - starting server
+info 2020-12-06T19:53:00.323Z - server running on port 4000
+info 2020-12-06T19:57:17.788Z - stopping server
+info 2020-12-06T20:02:20.052Z - starting server
+info 2020-12-06T20:02:20.179Z - server running on port 4000
+info 2020-12-06T20:06:38.283Z - stopping server
+info 2020-12-06T20:06:40.052Z - starting server
+info 2020-12-06T20:06:40.183Z - server running on port 4000
+error 2020-12-06T20:06:46.354Z - TypeError: Assignment to constant variable.
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-recipes-img.js:33:26
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-06T20:07:29.394Z - stopping server
+info 2020-12-06T20:07:31.415Z - starting server
+info 2020-12-06T20:07:31.538Z - server running on port 4000
+info 2020-12-06T20:08:45.712Z - stopping server
+info 2020-12-07T04:30:21.586Z - starting server
+info 2020-12-07T04:30:21.729Z - server running on port 4000
+info 2020-12-07T09:02:52.851Z - stopping server
+info 2020-12-07T09:11:47.167Z - starting server
+info 2020-12-07T09:11:47.305Z - server running on port 4000
+info 2020-12-07T10:20:20.053Z - stopping server
+info 2020-12-07T11:03:21.280Z - starting server
+info 2020-12-07T11:03:21.429Z - server running on port 4000
+info 2020-12-07T13:48:40.304Z - stopping server
+info 2020-12-07T14:15:13.793Z - starting server
+info 2020-12-07T14:15:13.929Z - server running on port 4000
+info 2020-12-07T14:20:06.033Z - stopping server
+info 2020-12-07T14:26:57.278Z - starting server
+info 2020-12-07T14:26:57.409Z - server running on port 4000
+info 2020-12-07T14:54:29.521Z - stopping server
+info 2020-12-07T15:26:29.832Z - starting server
+info 2020-12-07T15:26:29.974Z - server running on port 4000
+info 2020-12-07T18:42:28.386Z - stopping server
+info 2020-12-08T06:14:04.828Z - starting server
+info 2020-12-08T06:14:04.965Z - server running on port 4000
+info 2020-12-08T07:08:30.577Z - stopping server
+info 2020-12-08T07:25:02.999Z - starting server
+info 2020-12-08T07:25:03.136Z - server running on port 4000
+info 2020-12-08T08:00:18.891Z - stopping server
+info 2020-12-08T08:06:22.340Z - starting server
+info 2020-12-08T08:06:22.474Z - server running on port 4000
+info 2020-12-08T08:07:58.573Z - stopping server
+info 2020-12-08T08:11:56.390Z - starting server
+info 2020-12-08T08:11:56.524Z - server running on port 4000
+info 2020-12-08T08:14:06.332Z - stopping server
+info 2020-12-08T08:14:08.283Z - starting server
+info 2020-12-08T08:14:08.397Z - server running on port 4000
+info 2020-12-08T08:44:41.964Z - stopping server
+info 2020-12-08T09:09:45.684Z - starting server
+info 2020-12-08T09:09:45.822Z - server running on port 4000
+info 2020-12-08T09:18:33.171Z - stopping server
+info 2020-12-08T09:19:49.891Z - starting server
+info 2020-12-08T09:19:50.027Z - server running on port 4000
+info 2020-12-08T09:21:35.951Z - stopping server
+info 2020-12-08T09:25:21.045Z - starting server
+info 2020-12-08T09:25:21.178Z - server running on port 4000
+info 2020-12-08T09:25:40.105Z - stopping server
+info 2020-12-08T09:25:49.924Z - starting server
+info 2020-12-08T09:25:50.052Z - server running on port 4000
+info 2020-12-08T09:42:19.222Z - stopping server
+info 2020-12-08T09:47:47.495Z - starting server
+info 2020-12-08T09:47:47.625Z - server running on port 4000
+info 2020-12-08T09:53:49.946Z - stopping server
+info 2020-12-08T09:54:31.968Z - starting server
+info 2020-12-08T09:54:32.068Z - server running on port 4000
+info 2020-12-08T10:32:57.680Z - stopping server
+info 2020-12-08T10:33:00.470Z - starting server
+info 2020-12-08T10:33:00.607Z - server running on port 4000
+info 2020-12-08T15:54:19.092Z - stopping server
+info 2020-12-08T15:55:57.046Z - starting server
+info 2020-12-08T15:55:57.191Z - server running on port 4000
+info 2020-12-08T15:57:47.867Z - stopping server
+info 2020-12-08T16:54:09.921Z - starting server
+info 2020-12-08T16:54:10.049Z - server running on port 4000
+info 2020-12-09T04:49:40.113Z - stopping server
+info 2020-12-09T04:49:55.514Z - starting server
+info 2020-12-09T04:49:55.887Z - server running on port 4000
+info 2020-12-09T05:00:41.819Z - starting server
+info 2020-12-09T05:00:41.957Z - server running on port 4000
+info 2020-12-09T14:54:19.291Z - stopping server
+info 2020-12-09T17:40:41.167Z - starting server
+info 2020-12-09T17:40:41.340Z - server running on port 4000
+info 2020-12-10T08:47:52.264Z - stopping server
+info 2020-12-10T08:49:12.099Z - starting server
+info 2020-12-10T08:49:12.274Z - server running on port 4000
+info 2020-12-10T09:05:42.682Z - stopping server
+info 2020-12-10T09:06:07.407Z - starting server
+info 2020-12-10T09:06:07.557Z - server running on port 4000
+info 2020-12-10T09:26:17.700Z - stopping server
+info 2020-12-10T09:26:39.699Z - starting server
+info 2020-12-10T09:26:39.833Z - server running on port 4000
+info 2020-12-10T09:28:58.116Z - stopping server
+info 2020-12-10T09:28:59.826Z - starting server
+info 2020-12-10T09:28:59.963Z - server running on port 4000
+info 2020-12-10T12:37:24.758Z - stopping server
+info 2020-12-10T14:31:14.599Z - starting server
+info 2020-12-10T14:31:14.763Z - server running on port 4000
+info 2020-12-10T15:37:00.974Z - stopping server
+info 2020-12-10T15:37:12.518Z - starting server
+info 2020-12-10T15:37:12.999Z - server running on port 4000
+error 2020-12-10T15:43:08.076Z - ReferenceError: id is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-workout.js:32:62
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-10T15:49:16.046Z - starting server
+info 2020-12-10T15:49:16.209Z - server running on port 4000
+info 2020-12-10T16:23:18.092Z - stopping server
+info 2020-12-10T16:23:21.028Z - starting server
+info 2020-12-10T16:23:21.185Z - server running on port 4000
+info 2020-12-10T16:31:16.302Z - stopping server
+info 2020-12-10T16:40:49.554Z - starting server
+info 2020-12-10T16:40:49.712Z - server running on port 4000
+info 2020-12-10T17:48:04.697Z - stopping server
+info 2020-12-10T17:48:07.534Z - starting server
+info 2020-12-10T17:48:07.666Z - server running on port 4000
+info 2020-12-10T17:49:46.140Z - stopping server
+info 2020-12-10T17:49:49.213Z - starting server
+info 2020-12-10T17:49:49.350Z - server running on port 4000
+info 2020-12-10T17:50:31.277Z - stopping server
+info 2020-12-10T17:50:42.124Z - starting server
+info 2020-12-10T17:50:42.493Z - server running on port 4000
+info 2020-12-10T18:02:51.541Z - starting server
+info 2020-12-10T18:02:51.676Z - server running on port 4000
+info 2020-12-10T18:12:45.415Z - stopping server
+info 2020-12-10T18:12:58.526Z - starting server
+info 2020-12-10T18:12:58.800Z - server running on port 4000
+info 2020-12-11T06:07:43.839Z - stopping server
+info 2020-12-11T07:53:10.371Z - starting server
+info 2020-12-11T07:53:10.515Z - server running on port 4000
+info 2020-12-11T10:20:33.565Z - stopping server
+info 2020-12-11T10:43:58.647Z - starting server
+info 2020-12-11T10:43:58.784Z - server running on port 4000
+info 2020-12-11T11:47:57.070Z - stopping server
+info 2020-12-11T11:47:59.469Z - starting server
+info 2020-12-11T11:47:59.630Z - server running on port 4000
+info 2020-12-11T11:49:50.978Z - stopping server
+info 2020-12-11T11:49:53.685Z - starting server
+info 2020-12-11T11:49:53.837Z - server running on port 4000
+error 2020-12-11T13:46:14.499Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T13:46:27.830Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T13:49:59.309Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T13:50:41.833Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:02:34.006Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T14:04:52.767Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T14:36:23.236Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-11T14:36:48.884Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:37:49.910Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:42:08.630Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:44:38.858Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:18:39
+error 2020-12-11T14:47:32.501Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:12:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-11T16:19:39.452Z - stopping server
+info 2020-12-12T09:53:28.256Z - starting server
+info 2020-12-12T09:53:28.410Z - server running on port 4000
+info 2020-12-12T11:59:07.681Z - stopping server
+info 2020-12-12T13:02:27.353Z - starting server
+info 2020-12-12T13:02:27.491Z - server running on port 4000
+info 2020-12-12T14:37:19.637Z - stopping server
+info 2020-12-12T15:05:06.563Z - starting server
+info 2020-12-12T15:05:06.707Z - server running on port 4000
+info 2020-12-12T15:15:37.631Z - stopping server
+info 2020-12-12T15:26:23.838Z - starting server
+info 2020-12-12T15:26:23.982Z - server running on port 4000
+info 2020-12-12T15:41:12.621Z - stopping server
+info 2020-12-12T15:49:03.712Z - starting server
+info 2020-12-12T15:49:03.831Z - server running on port 4000
+info 2020-12-12T15:56:42.924Z - stopping server
+info 2020-12-12T15:56:55.568Z - starting server
+info 2020-12-12T15:56:55.705Z - server running on port 4000
+info 2020-12-12T16:31:56.879Z - stopping server
+info 2020-12-12T16:36:56.948Z - starting server
+info 2020-12-12T16:36:57.090Z - server running on port 4000
+info 2020-12-12T16:47:56.016Z - stopping server
+info 2020-12-12T16:48:02.516Z - starting server
+info 2020-12-12T16:48:02.659Z - server running on port 4000
+info 2020-12-12T16:49:30.690Z - stopping server
+info 2020-12-12T16:59:38.981Z - starting server
+info 2020-12-12T16:59:39.124Z - server running on port 4000
+info 2020-12-12T17:12:23.819Z - stopping server
+info 2020-12-12T17:13:16.761Z - starting server
+info 2020-12-12T17:13:16.895Z - server running on port 4000
+info 2020-12-12T17:20:08.597Z - stopping server
+info 2020-12-12T17:20:25.252Z - starting server
+info 2020-12-12T17:20:25.405Z - server running on port 4000
+info 2020-12-12T17:24:47.052Z - stopping server
+info 2020-12-12T17:25:04.829Z - starting server
+info 2020-12-12T17:25:04.961Z - server running on port 4000
+info 2020-12-12T17:33:23.763Z - stopping server
+info 2020-12-12T17:42:08.416Z - starting server
+info 2020-12-12T17:42:08.583Z - server running on port 4000
+info 2020-12-12T21:24:11.983Z - stopping server
+info 2020-12-13T06:16:26.763Z - starting server
+info 2020-12-13T06:16:26.879Z - server running on port 4000
+info 2020-12-13T12:22:22.625Z - stopping server
+info 2020-12-13T12:23:06.436Z - starting server
+info 2020-12-13T12:23:06.588Z - server running on port 4000
+info 2020-12-13T13:47:27.564Z - starting server
+info 2020-12-13T13:47:27.723Z - server running on port 4000
+info 2020-12-13T14:14:28.808Z - stopping server
+info 2020-12-13T14:21:05.333Z - starting server
+info 2020-12-13T14:21:05.479Z - server running on port 4000
+info 2020-12-13T14:55:46.083Z - stopping server
+info 2020-12-13T14:55:48.569Z - starting server
+info 2020-12-13T14:55:48.711Z - server running on port 4000
+error 2020-12-13T14:55:55.295Z - MongoError: unknown top level operator: $diacriticSensitive
+    at MessageStream.messageHandler (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-12-13T14:57:21.372Z - stopping server
+info 2020-12-13T14:57:23.903Z - starting server
+info 2020-12-13T14:57:24.037Z - server running on port 4000
+error 2020-12-13T14:57:28.150Z - MongoError: unknown top level operator: $diacriticSensitive
+    at MessageStream.messageHandler (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+error 2020-12-13T14:58:15.307Z - MongoError: unknown top level operator: $diacriticSensitive
+    at MessageStream.messageHandler (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/connection.js:268:20)
+    at MessageStream.emit (events.js:314:20)
+    at processIncomingData (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at MessageStream.Writable.write (_stream_writable.js:318:11)
+    at Socket.ondata (_stream_readable.js:719:22)
+    at Socket.emit (events.js:314:20)
+    at addChunk (_stream_readable.js:298:12)
+    at readableAddChunk (_stream_readable.js:273:9)
+    at Socket.Readable.push (_stream_readable.js:214:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+info 2020-12-13T14:58:19.803Z - stopping server
+info 2020-12-13T14:58:22.557Z - starting server
+info 2020-12-13T14:58:22.699Z - server running on port 4000
+info 2020-12-13T17:12:40.135Z - stopping server
+info 2020-12-13T18:33:01.211Z - starting server
+info 2020-12-13T18:34:36.436Z - starting server
+info 2020-12-13T18:43:05.392Z - starting server
+info 2020-12-13T18:44:31.619Z - starting server
+info 2020-12-14T08:42:56.372Z - starting server
+info 2020-12-14T08:42:56.528Z - server running on port 4000
+info 2020-12-14T08:45:13.645Z - stopping server
+info 2020-12-14T09:46:51.409Z - starting server
+info 2020-12-14T09:46:51.534Z - server running on port 4000
+error 2020-12-14T09:47:03.388Z - NotFoundError: user with id 5fcb8e8b5ba966fcbe148dc1 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-14T10:01:00.643Z - stopping server
+info 2020-12-14T11:09:56.213Z - starting server
+info 2020-12-14T11:09:56.337Z - server running on port 4000
+info 2020-12-14T11:22:25.355Z - stopping server
+info 2020-12-14T11:22:29.151Z - starting server
+info 2020-12-14T11:22:29.421Z - server running on port 4000
+info 2020-12-14T11:41:59.399Z - stopping server
+info 2020-12-14T12:31:11.632Z - starting server
+info 2020-12-14T12:31:11.759Z - server running on port 4000
+info 2020-12-14T14:00:02.846Z - stopping server
+info 2020-12-14T14:02:17.556Z - starting server
+info 2020-12-14T14:02:17.694Z - server running on port 4000
+info 2020-12-14T15:27:05.245Z - stopping server
+info 2020-12-14T17:09:35.399Z - starting server
+info 2020-12-14T17:09:35.533Z - server running on port 4000
+info 2020-12-14T17:11:23.855Z - stopping server
+info 2020-12-14T17:54:50.637Z - starting server
+info 2020-12-14T17:54:50.742Z - server running on port 4000
+info 2020-12-14T18:06:21.333Z - stopping server
+info 2020-12-14T18:16:54.326Z - starting server
+info 2020-12-14T18:16:54.434Z - server running on port 4000
+info 2020-12-14T18:25:45.597Z - stopping server
+info 2020-12-14T18:27:30.514Z - starting server
+info 2020-12-14T18:27:30.616Z - server running on port 4000
+info 2020-12-14T18:29:38.560Z - stopping server
+info 2020-12-14T18:39:58.387Z - starting server
+info 2020-12-14T18:39:58.502Z - server running on port 4000
+info 2020-12-15T04:37:55.087Z - stopping server
+info 2020-12-15T04:38:46.987Z - starting server
+info 2020-12-15T04:38:47.112Z - server running on port 4000
+info 2020-12-15T04:40:19.709Z - stopping server
+info 2020-12-15T04:41:20.983Z - starting server
+info 2020-12-15T04:41:21.116Z - server running on port 4000
+info 2020-12-15T04:47:21.700Z - stopping server
+info 2020-12-15T04:47:29.509Z - starting server
+info 2020-12-15T04:47:29.645Z - server running on port 4000
+info 2020-12-15T04:54:54.043Z - stopping server
+info 2020-12-15T04:55:02.793Z - starting server
+info 2020-12-15T04:55:02.895Z - server running on port 4000
+info 2020-12-15T04:59:50.759Z - stopping server
+info 2020-12-15T04:59:58.214Z - starting server
+info 2020-12-15T04:59:58.333Z - server running on port 4000
+info 2020-12-15T05:29:57.482Z - stopping server
+info 2020-12-15T06:46:12.478Z - starting server
+info 2020-12-15T06:46:12.607Z - server running on port 4000
+info 2020-12-15T07:16:19.865Z - stopping server
+info 2020-12-15T07:53:00.319Z - starting server
+info 2020-12-15T07:53:00.446Z - server running on port 4000
+info 2020-12-15T10:37:37.176Z - stopping server
+info 2020-12-15T10:38:28.049Z - starting server
+info 2020-12-15T10:38:28.172Z - server running on port 4000
+info 2020-12-15T14:41:50.935Z - stopping server
+info 2020-12-15T14:42:40.670Z - starting server
+info 2020-12-15T14:42:40.821Z - server running on port 4000
+info 2020-12-16T10:21:51.269Z - stopping server
+info 2020-12-16T11:40:12.076Z - starting server
+info 2020-12-16T11:40:12.237Z - server running on port 4000
+info 2020-12-16T11:43:12.068Z - stopping server
+info 2020-12-16T11:43:15.360Z - starting server
+info 2020-12-16T11:43:15.521Z - server running on port 4000
+info 2020-12-16T12:03:44.331Z - stopping server
+info 2020-12-16T12:03:59.781Z - starting server
+info 2020-12-16T12:04:00.516Z - server running on port 4000
+info 2020-12-16T12:09:46.748Z - starting server
+info 2020-12-16T12:09:46.923Z - server running on port 4000
+info 2020-12-16T14:06:31.943Z - stopping server
+info 2020-12-16T14:06:34.771Z - starting server
+info 2020-12-16T14:06:34.940Z - server running on port 4000
+info 2020-12-16T14:29:37.506Z - stopping server
+info 2020-12-16T14:29:40.068Z - starting server
+info 2020-12-16T14:29:40.213Z - server running on port 4000
+error 2020-12-16T15:49:31.760Z - Error: ENOENT: no such file or directory, open '/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/data/uploads/default.png'
+info 2020-12-16T15:56:34.767Z - stopping server
+info 2020-12-16T16:09:40.987Z - starting server
+info 2020-12-16T16:09:41.148Z - server running on port 4000
+info 2020-12-17T06:24:10.881Z - stopping server
+info 2020-12-17T06:25:22.395Z - starting server
+info 2020-12-17T06:25:22.555Z - server running on port 4000
+info 2020-12-17T06:56:56.538Z - stopping server
+info 2020-12-17T09:10:57.329Z - starting server
+error 2020-12-17T09:10:57.468Z - /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/handle-save-weight-user.js:2
+const { saveWeightUser } = require('../../../logic')
+        ^
+
+SyntaxError: Identifier 'saveWeightUser' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:931:16)
+    at Module._compile (internal/modules/cjs/loader.js:979:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/handlers/index.js:26:27)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Module.require (internal/modules/cjs/loader.js:903:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/routes/api/index.js:30:5)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+info 2020-12-17T09:10:57.470Z - stopping server
+info 2020-12-17T09:11:38.157Z - starting server
+info 2020-12-17T09:11:38.267Z - server running on port 4000
+info 2020-12-17T11:52:21.896Z - stopping server
+info 2020-12-17T11:56:24.514Z - starting server
+info 2020-12-17T11:56:24.671Z - server running on port 4000
+info 2020-12-17T13:13:12.813Z - stopping server
+info 2020-12-17T13:13:15.507Z - starting server
+info 2020-12-17T13:13:15.650Z - server running on port 4000
+error 2020-12-17T13:20:28.308Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T13:31:31.455Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T13:31:39.516Z - stopping server
+info 2020-12-17T13:40:04.093Z - starting server
+info 2020-12-17T13:40:04.259Z - server running on port 4000
+info 2020-12-17T14:46:32.428Z - stopping server
+info 2020-12-17T14:50:52.213Z - starting server
+info 2020-12-17T14:50:52.372Z - server running on port 4000
+info 2020-12-17T19:46:52.521Z - stopping server
+info 2020-12-17T19:46:55.892Z - starting server
+info 2020-12-17T19:46:56.072Z - server running on port 4000
+error 2020-12-17T19:47:31.244Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T19:47:40.402Z - stopping server
+info 2020-12-17T19:47:43.076Z - starting server
+info 2020-12-17T19:47:43.208Z - server running on port 4000
+error 2020-12-17T19:47:46.573Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-articles.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T19:48:07.735Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T19:48:46.846Z - stopping server
+info 2020-12-17T19:48:49.455Z - starting server
+info 2020-12-17T19:48:49.588Z - server running on port 4000
+error 2020-12-17T19:48:52.683Z - NotFoundError: user with id 5fdb7a29fe7b5b3505e493c7 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T19:49:12.298Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-17T20:01:40.717Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-17T20:17:07.128Z - stopping server
+info 2020-12-18T04:12:39.807Z - starting server
+info 2020-12-18T04:12:39.964Z - server running on port 4000
+info 2020-12-18T04:54:55.174Z - stopping server
+info 2020-12-18T04:55:03.250Z - starting server
+info 2020-12-18T04:55:03.403Z - server running on port 4000
+info 2020-12-18T06:48:59.109Z - stopping server
+info 2020-12-18T07:08:03.383Z - starting server
+error 2020-12-18T07:08:33.405Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-18T07:08:33.409Z - stopping server
+info 2020-12-18T07:08:44.164Z - starting server
+error 2020-12-18T07:09:14.180Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-18T07:09:14.185Z - stopping server
+info 2020-12-18T07:20:42.495Z - starting server
+info 2020-12-18T07:20:42.636Z - server running on port 4000
+error 2020-12-18T07:32:19.515Z - ConflictError: user with e-mail dagoman19@gmail.com already registered
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js:27:29
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-18T08:22:12.600Z - stopping server
+info 2020-12-18T08:27:02.819Z - starting server
+info 2020-12-18T08:27:02.987Z - server running on port 4000
+info 2020-12-18T12:18:21.149Z - stopping server
+info 2020-12-18T12:20:34.622Z - starting server
+info 2020-12-18T12:20:34.780Z - server running on port 4000
+info 2020-12-18T12:22:30.522Z - stopping server
+info 2020-12-18T12:24:28.698Z - starting server
+info 2020-12-18T12:24:28.844Z - server running on port 4000
+error 2020-12-18T13:34:28.193Z - ConflictError: user with e-mail pepigri@gmail.com already registered
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js:27:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-18T13:39:09.358Z - ConflictError: user with e-mail pepigri@gmail.com already registered
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/register-user.js:27:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-18T13:42:47.646Z - stopping server
+info 2020-12-18T13:44:06.502Z - starting server
+info 2020-12-18T13:44:06.661Z - server running on port 4000
+error 2020-12-18T13:53:58.732Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-18T15:57:40.299Z - stopping server
+info 2020-12-22T08:47:38.825Z - starting server
+error 2020-12-22T08:48:08.842Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-22T08:48:08.846Z - stopping server
+info 2020-12-22T08:53:03.261Z - starting server
+info 2020-12-22T08:53:03.383Z - server running on port 4000
+error 2020-12-22T09:00:03.906Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-22T09:39:39.973Z - stopping server
+info 2020-12-22T12:19:16.569Z - starting server
+info 2020-12-22T12:19:16.732Z - server running on port 4000
+error 2020-12-22T12:32:57.912Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:33:08.904Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-articles.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:33:48.971Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-saved-articles.js:19:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:34:05.997Z - NotFoundError: user with id 5fdcbaee8754d915d5990732 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-user.js:17:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2020-12-22T12:53:41.268Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-22T15:05:15.269Z - stopping server
+info 2020-12-22T15:14:50.701Z - starting server
+info 2020-12-22T15:14:50.872Z - server running on port 4000
+info 2020-12-22T15:22:37.021Z - stopping server
+info 2020-12-22T15:23:10.327Z - starting server
+info 2020-12-22T15:23:10.481Z - server running on port 4000
+info 2020-12-22T15:25:09.821Z - stopping server
+info 2020-12-22T15:25:28.771Z - starting server
+info 2020-12-22T15:25:28.922Z - server running on port 4000
+info 2020-12-22T15:29:27.345Z - stopping server
+info 2020-12-22T15:29:54.293Z - starting server
+info 2020-12-22T15:29:54.363Z - server running on port 4000
+info 2020-12-22T15:54:44.574Z - stopping server
+info 2020-12-24T17:57:36.660Z - starting server
+info 2020-12-24T17:57:36.853Z - server running on port 4000
+info 2020-12-24T18:02:26.486Z - stopping server
+info 2020-12-24T18:02:40.077Z - starting server
+info 2020-12-24T18:02:40.147Z - server running on port 4000
+info 2020-12-24T18:28:32.455Z - stopping server
+info 2020-12-24T18:28:45.258Z - starting server
+info 2020-12-24T18:28:45.443Z - server running on port 4000
+info 2020-12-24T18:30:20.288Z - starting server
+info 2020-12-24T18:30:20.533Z - server running on port 4000
+info 2020-12-24T18:36:18.575Z - starting server
+info 2020-12-24T18:36:18.643Z - server running on port 4000
+error 2020-12-25T16:19:29.867Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-28T16:49:37.257Z - stopping server
+info 2020-12-31T16:09:34.389Z - starting server
+error 2020-12-31T16:10:04.408Z - MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.Connection.openUri (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/connection.js:832:32)
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:345:10
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/helpers/promiseOrCallback.js:30:10)
+    at Mongoose._promiseOrCallback (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:1135:10)
+    at Mongoose.connect (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-data/node_modules/mongoose/lib/index.js:344:20)
+    at Object.<anonymous> (/Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/index.js:12:10)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+info 2020-12-31T16:10:04.413Z - stopping server
+info 2020-12-31T16:27:05.169Z - starting server
+info 2020-12-31T16:27:05.344Z - server running on port 4000
+error 2020-12-31T16:39:28.779Z - AuthError: wrong credentials
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/authenticate-user.js:24:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2020-12-31T16:39:50.311Z - stopping server
+info 2020-12-31T16:43:57.819Z - starting server
+info 2020-12-31T16:43:57.980Z - server running on port 4000
+info 2020-12-31T17:38:10.514Z - stopping server
+info 2021-01-05T16:42:48.180Z - starting server
+info 2021-01-05T16:42:48.342Z - server running on port 4000
+info 2021-01-08T11:06:40.171Z - stopping server
+info 2021-01-12T17:32:55.212Z - starting server
+info 2021-01-12T17:32:56.784Z - server running on port 4000
+error 2021-01-12T17:37:04.586Z - TypeError: Cannot destructure property 'name' of 'workout' as it is null.
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-workout.js:37:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2021-01-12T17:37:37.535Z - NotFoundError: article with id 5fd349f009fad36464c97c74 not found
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-articles.js:29:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+error 2021-01-12T17:37:52.173Z - ReferenceError: dietId is not defined
+    at /Users/betodav/Bootcamp/collab/letscoder-bootcamp-202010/staff/beto-davila/martachisfit-project/martachisfit-api/logic/retrieve-chosen-diet.js:117:81
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+info 2021-01-12T17:48:06.418Z - stopping server
+info 2021-01-13T15:22:34.477Z - starting server
+info 2021-01-13T15:22:36.089Z - server running on port 4000
+info 2021-01-13T15:22:47.872Z - stopping server
+info 2021-01-13T18:21:37.054Z - starting server
+info 2021-01-13T18:21:37.239Z - server running on port 4000
+info 2021-01-13T18:24:42.097Z - stopping server
+info 2021-01-21T10:41:52.418Z - starting server
+info 2021-01-21T10:41:52.591Z - server running on port 4000
+info 2021-01-21T10:47:54.227Z - stopping server
+info 2021-01-28T14:09:47.289Z - starting server
+info 2021-01-28T14:09:47.446Z - server running on port 4000
