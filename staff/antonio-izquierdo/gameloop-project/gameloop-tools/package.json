@@ -1,0 +1,6 @@
+{
+    "name": "gameloop-api-server",
+    "scripts": {
+        "start": "cd gameloop-api; npm start;"
+    }
+}
